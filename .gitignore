@@ -1,5 +1,8 @@
 *.pre
 *.aux
+*.log
+*.out
+*.toc
 *.synctex.gz
 *.synctex
 .vscode/
