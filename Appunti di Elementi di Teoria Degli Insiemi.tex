@@ -36,6 +36,28 @@
 % DEALINGS IN THE SOFTWARE.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% I don't like to have an inconsistent leading because of math
+% On the other hand, that's just plain dangerous...
+\def\mathshift{$}
+\catcode`$=13
+\def${\ifinner\expandafter\mathshift\else\expandafter\myshift\fi}
+\def\myshift#1${\raisebox{0ex}[0ex][0ex]{\mathshift#1\mathshift}}
+% Override this xypic, if you can! (\iffalse is for the syntax highliting of vim)
+\AtBeginDocument{\catcode`$=13\iffalse$\fi}
+
+% This is a sad sad hack
+\let\oldparen\{
+\let\oldvert|
+\let\oldleft\left
+\let\oldright\right
+\catcode`|=13
+\let|\oldvert
+\def\renewvert{\def|{\;\oldvert\;}}
+\def\{#1\}{{\renewvert\oldparen#1\}}}
+\def\newleft#1\right\}{{\renewvert\oldleft\oldparen#1\right\}}}
+\def\left#1{\ifx#1\{\newleft\else\ifx#1|\oldleft\oldvert\else\oldleft#1\fi\fi}
+\def\right#1{\ifx#1|\oldright\oldvert\else\oldright#1\fi}
+
 \parindent 0pt
 \def\drkgrn#1{\textcolor{green!40!black}{#1}}
 
