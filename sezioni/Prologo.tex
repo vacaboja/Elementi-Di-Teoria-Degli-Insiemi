@@ -1,6 +1,6 @@
 \section{Prologo nel XIX secolo}
 La nascita della teoria degli insiemi è una storia complicata di cui so pochissimo. Però, persone che ne sanno molto più di me hanno sostenuto l'opinione che il problema seguente
-abbia avuto un ruolo. Come che sia, è almeno un'introduzione possibile.
+abbia avuto un ruolo. Come che sia, è almeno un'introduzione passabile.
 
 \begin{problem}
 Data una serie trigonometrica:
@@ -29,28 +29,37 @@ vale la seguente implicazione:
 \end{problem}
 
 \begin{fact}[Criterio per gli insiemi di unicità]
-Dato $X \subseteq \RR$ se (ma non solo se) \textcolor{purple}{ogni funzione continua $f : \RR \to \RR$ che soddisfi:
+$X \subseteq \RR$ è di unicità se (ma non solo se) gode della seguente\\
+\textbf{proprietà ($\star$):}
+ogni funzione continua $f\colon\RR \to \RR$ che soddisfi le ipotesi seguenti
+è necessariamente lineare 
+\drkgrn{($f(x) = ax+b$):}
 \begin{itemize}
-	\item per ogni intervallo aperto $\left]a,b\right[$ con $]a,b[ \,\cap\, X = \emptyset$, $f_{| \, ]a,b[}$ è lineare.
-	\item per ogni $x \in \RR$, se $f$ ha derivate destre e sinistre in $x$, allora queste coincidono\footnote{Ovvero $f$ non ha punti angolosi.}.
+	\item per ogni intervallo aperto $\left]a,b\right[$ con $]a,b[
+\,\cap\, X = \emptyset$, $f_{| \, ]a,b[}$ è lineare;
+	\item per ogni $x \in \RR$, se $f$ ha derivate destre e sinistre in $x$, allora queste coincidono
+\drkgrn{``$f$ non ha punti angolosi''.}
 \end{itemize}
-è lineare}\footnote{$f(x) = \alpha x + \beta$.}, allora $X$ è di unicità.
 \end{fact}
 
-\textcolor{MidnightBlue}{D'ora in avanti diremo che un insieme rispetta le ipotesi criterio, o ha la proprietà $(\star)$, se soddisfa il fatto in \textcolor{purple}{viola}, e quindi è di unicità per il fatto sopra.}
-
 \begin{example}
-	$X = \{\ldots,a_{-2},a_{-1},a_0,a_1,a_2,\ldots\} = \{a_i | i \in \ZZ\}$ con $\ldots < a_{-2} < a_{-1} < a_0 < a_1 < a_2 <\ldots$, $\lim_{i \to +\infty} a_i = +\infty$, $\lim_{i \to -\infty} a_i = -\infty$ ha la 
-	proprietà data dal \hyperref[unicità]{Fatto 1.5}, quindi è di unicità.
+\[X = \{\ldots,a_{-2},a_{-1},a_0,a_1,a_2,\ldots\} = \{a_i | i \in \ZZ\}\]
+con
+\[\ldots < a_{-2} < a_{-1} < a_0 < a_1 < a_2 <\ldots
+\quad\quad \lim_{i \to +\infty} a_i = +\infty
+\quad\quad \lim_{i \to -\infty} a_i = -\infty\]
+ha la proprietà ($\star$) quindi è di unicità.
 \end{example}
 
 \begin{notexample}
-L'intervallo $[0,1]$ o $\RR$ non hanno la proprietà espressa dall'\hyperref[unicità]{Fatto 1.5}.
+L'intervallo $[0,1]$ e $\QQ$ non hanno la proprietà ($\star$).
 \end{notexample}
 
 \begin{notexampleb}
-Per l'\vocab{insieme di Cantor} non vale il \hyperref[unicità]{Fatto 1.5}.
+L'\vocab{insieme di Cantor} non ha la proprietà ($\star$).
 \end{notexampleb}
+
+% M2
 
 Possiamo costruire l'insieme di Cantor a partire dall'intervallo $C_0 = [0,1]$ nel seguente modo:
 

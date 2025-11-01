@@ -6,3 +6,4 @@
 *.synctex.gz
 *.synctex
 .vscode/
+*.swp
