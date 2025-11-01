@@ -614,6 +614,13 @@
       \declaretheoremstyle[spaceabove=6pt,spacebelow=6pt]{basehead}
     \fi
 
+      \declaretheoremstyle[
+        headfont=\color{green!40!black}\normalfont\bfseries,
+        spaceabove=8pt,
+        spacebelow=8pt,
+        bodyfont=\color{green!40!black}\normalfont
+      ]{drkgrntheo}
+
     \declaretheorem[style=basehead,name=Answer,sibling=theorem]{answer}
     \declaretheorem[style=basehead,name=Answer,numbered=no]{answer*}
     \declaretheorem[style=basehead,name=Conjecture,sibling=theorem]{conjecture}
@@ -621,6 +628,7 @@
     \declaretheorem[style=basehead,name=Definizione,sibling=theorem]{definition}
     \declaretheorem[style=basehead,name=Definizione,numbered=no]{definition*}
     \declaretheorem[style=basehead,name=Esercizio,sibling=theorem]{exercise}
+    \declaretheorem[style=drkgrntheo,name=Esercizio,sibling=theorem]{drkgrnexe}
     \declaretheorem[style=basehead,name=Esercizio,numbered=no]{exercise*}
     \declaretheorem[style=basehead,name=Fatto,sibling=theorem]{fact}
     \declaretheorem[style=basehead,name=Fatto,numbered=no]{fact*}
@@ -660,7 +668,7 @@
         {\color{purple}\S\thesubsection\enskip}
       \renewcommand*{\subsubsectionformat}%
         {\color{purple}\S\thesubsubsection\enskip}
-      \addtokomafont{paragraph}{\color{orange!35!black}\P\ }
+      \addtokomafont{paragraph}{\color{orange!35!black}}
       \KOMAoptions{numbers=noenddot}
       %\usetocstyle{KOMAlike}
     }
