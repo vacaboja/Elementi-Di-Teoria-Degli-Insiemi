@@ -1,13 +1,5 @@
-% If you don't know how to use this file, read:
-% +--------------------------------------------+
-% | https://web.evanchen.cc/faq-latex.html#L-4 |
-% +--------------------------------------------+
-%
-% TL;DR of the Boost license conditions are as follows:
-%
-% 1. Any SOURCE VERSIONS must cite evan.sty and the Boost license below.
-% 2. For COMPILED PDF OUTPUT, attribution of evan.sty is OPTIONAL (but nice).
-% 3. NO OTHER REQUIREMENTS; you may modify, redistribute, sell freely.
+% Based on evan.sty. Here comes the original license.
+% This will go away as soon as I am done gutting this mess.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -42,92 +34,12 @@
 % DEALINGS IN THE SOFTWARE.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesPackage{evan}
-%%fakesection Argument processing
-% Default Arguments
-% We include "Evan" in all of these to make sure
-% that they don't collide with anything in external packages
-\newif\ifevanfancy\evanfancytrue
-\newif\ifevanhdr\evanhdrtrue
-\newif\ifevanhref\evanhreftrue
-\newif\ifevansetup\evansetuptrue
-\newif\ifevanthm\evanthmtrue
-\newif\ifevansecthm\evansecthmfalse
-\newif\ifevanpkg\evanpkgtrue
-\newif\ifevanpdf\evanpdftrue
-\newif\ifevanauthor\evanauthortrue
-\newif\ifevanchinese\evanchinesefalse
-\newif\ifevanmdthm\evanmdthmfalse
-\newif\ifevanpatchasy\evanpatchasyfalse
-\newif\ifevanhints\evanhintsfalse
-\newif\ifevanasy\evanasytrue
-\newif\ifevancolorsec\evancolorsecfalse
-\newif\ifevantitlemark\evantitlemarktrue
-\newif\ifevanvonenabled\evanvonenabledfalse
-\newif\ifevanbritish\evanbritishtrue
-\newif\ifevanbib\evanbibfalse
-
-%Receive Arguments
-\DeclareOption{chinese}{\evanchinesetrue} % Chinese support
-% allow href to override this one
-
-\DeclareOption{sexy}{\evansecthmtrue\evanmdthmtrue\evancolorsectrue} % long docs
-
-\DeclareOption{fancy}{\evanfancytrue}
-\DeclareOption{nofancy}{\evanfancyfalse}
-\DeclareOption{hdr}{\evanhdrtrue}
-\DeclareOption{nohdr}{\evanhdrfalse}
-\DeclareOption{href}{\evanhreftrue}
-\DeclareOption{nohref}{\evanhreffalse}
-
-\DeclareOption{nosetup}{\evansetupfalse}
-\DeclareOption{thm}{\evanthmtrue}
-\DeclareOption{nothm}{\evanthmfalse}
-\DeclareOption{secthm}{\evansecthmtrue}
-\DeclareOption{nosecthm}{\evansecthmfalse}
-
-\DeclareOption{nopdf}{\evanpdffalse}
-\DeclareOption{nopkg}{\evanpkgfalse}
-\DeclareOption{noauthor}{\evanauthorfalse}
-\DeclareOption{titlemark}{\evantitlemarktrue} % Sets title in ohead, not \rightmark
-\DeclareOption{sectionmark}{\evantitlemarkfalse} % Uses \rightmark not title in ohead
-
-\DeclareOption{mdthm}{\evanmdthmtrue}
-\DeclareOption{nomdthm}{\evanmdthmfalse}
-\DeclareOption{colorsec}{\evancolorsectrue}
-\DeclareOption{nocolorsec}{\evancolorsecfalse}
-
-\DeclareOption{patchasy}{\evanpatchasytrue}
-\DeclareOption{noasy}{\evanasyfalse}
-\DeclareOption{hints}{\evanhintstrue}
-\DeclareOption{von}{\evanvonenabledtrue}
-
-\DeclareOption{british}{\evanbritishtrue}
-\DeclareOption{american}{\evanbritishfalse}
-
-\DeclareOption{bib}{\evanbibtrue}
-
-% legacy diagrams option, for backwards compatibility
-\DeclareOption{diagrams}{}
-\DeclareOption{nodiagrams}{}
-
-\ProcessOptions\relax
-
-% if packages not loaded, turn off mdthm and asy
-\ifevanpkg\else\evanmdthmfalse\fi
-\ifevanpkg\else\evanasyfalse\fi
-
-% If no setup, turn off theorems
-\ifevansetup\else\evanthmfalse\fi
-
 %%fakesection Some macros
 %Small commands
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
-\ifevanpkg
   \usepackage[minimal]{yhmath}
   \usepackage{derivative}
-\fi
 \newcommand{\cbrt}[1]{\sqrt[3]{#1}}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceiling}[1]{\left\lceil #1 \right\rceil}
@@ -160,12 +72,6 @@
 \newenvironment{soln}{\begin{proof}[Soluzione]}{\end{proof}}
 \newenvironment{parlist}{\begin{inparaenum}[(i)]}{\end{inparaenum}}
 \newenvironment{gobble}{\setbox\z@\vbox\bgroup}{\egroup}
-
-%Inequalities
-\newcommand{\cycsum}{\sum_{\mathrm{cyc}}}
-\newcommand{\symsum}{\sum_{\mathrm{sym}}}
-\newcommand{\cycprod}{\prod_{\mathrm{cyc}}}
-\newcommand{\symprod}{\prod_{\mathrm{sym}}}
 
 %From H113 "Introduction to Abstract Algebra" at UC Berkeley
 \newcommand{\CC}{\mathbb C}
@@ -211,11 +117,6 @@
 \begin{proof}[#1] \renewcommand{\qedsymbol}{$\blacksquare$}}%
 {\end{proof}}
 
-\newcommand{\liff}{\leftrightarrow}
-\newcommand{\lthen}{\rightarrow}
-\newcommand{\opname}{\operatorname}
-\newcommand{\surjto}{\twoheadrightarrow}
-\newcommand{\injto}{\hookrightarrow}
 \newcommand{\On}{\mathrm{On}} % ordinals
 \DeclareMathOperator{\img}{im} % Image
 \DeclareMathOperator{\Img}{Im} % Image
@@ -234,156 +135,16 @@
 \DeclareMathOperator{\Mor}{Mor} % morphisms
 \DeclareMathOperator{\End}{End} % endomorphism
 
-% Things Lie
-\newcommand{\kb}{\mathfrak b}
-\newcommand{\kg}{\mathfrak g}
-\newcommand{\kh}{\mathfrak h}
-\newcommand{\kn}{\mathfrak n}
-\newcommand{\ku}{\mathfrak u}
-\newcommand{\kz}{\mathfrak z}
-\DeclareMathOperator{\Ext}{Ext} % Ext functor
-\DeclareMathOperator{\Tor}{Tor} % Tor functor
-\newcommand{\gl}{\opname{\mathfrak{gl}}} % frak gl group
-\def\sl{\opname{\mathfrak{sl}}} % frak sl group chktex 6
 
-% More script letters etc.
-\newcommand{\SA}{\mathcal A}
-\newcommand{\SB}{\mathcal B}
-\newcommand{\SC}{\mathcal C}
-\newcommand{\SF}{\mathcal F}
-\newcommand{\SG}{\mathcal G}
-\newcommand{\SH}{\mathcal H}
-\newcommand{\OO}{\mathcal O}
-
-\newcommand{\SCA}{\mathscr A}
-\newcommand{\SCB}{\mathscr B}
-\newcommand{\SCC}{\mathscr C}
-\newcommand{\SCD}{\mathscr D}
-\newcommand{\SCE}{\mathscr E}
-\newcommand{\SCF}{\mathscr F}
-\newcommand{\SCG}{\mathscr G}
-\newcommand{\SCH}{\mathscr H}
-
-% Mathfrak primes
-\newcommand{\km}{\mathfrak m}
-\newcommand{\kp}{\mathfrak p}
-\newcommand{\kq}{\mathfrak q}
-
-%%fakesection Asymptote setup
-\ifevanasy
-  \ifevanpatchasy
-    \usepackage{patchasy}
-  \else
-    \usepackage{asymptote}
-  \fi
-  \begin{asydef}
-    defaultpen(fontsize(10pt));
-    size(8cm); // set a reasonable default
-    usepackage("amsmath");
-    usepackage("amssymb");
-    settings.tex="pdflatex";
-    settings.outformat="pdf";
-    // Replacement for olympiad+cse5 which is not standard
-    import geometry;
-    // recalibrate fill and filldraw for conics
-    void filldraw(picture pic = currentpicture, conic g, pen fillpen=defaultpen, pen drawpen=defaultpen)
-      { filldraw(pic, (path) g, fillpen, drawpen); }
-    void fill(picture pic = currentpicture, conic g, pen p=defaultpen)
-      { filldraw(pic, (path) g, p); }
-    // some geometry
-    pair foot(pair P, pair A, pair B) { return foot(triangle(A,B,P).VC); }
-    pair centroid(pair A, pair B, pair C) { return (A+B+C)/3; }
-    // cse5 abbreviations
-    path CP(pair P, pair A) { return circle(P, abs(A-P)); }
-    path CR(pair P, real r) { return circle(P, r); }
-    pair IP(path p, path q) { return intersectionpoints(p,q)[0]; }
-    pair OP(path p, path q) { return intersectionpoints(p,q)[1]; }
-    path Line(pair A, pair B, real a=0.6, real b=a) { return (a*(A-B)+A)--(b*(B-A)+B); }
-    // cse5 more useful functions
-    picture CC() {
-      picture p=rotate(0)*currentpicture;
-      currentpicture.erase();
-      return p;
-    }
-    pair MP(Label s, pair A, pair B = plain.S, pen p = defaultpen) {
-      Label L = s;
-      L.s = "$"+s.s+"$";
-      label(L, A, B, p);
-      return A;
-    }
-    pair Drawing(Label s = "", pair A, pair B = plain.S, pen p = defaultpen) {
-      dot(MP(s, A, B, p), p);
-      return A;
-    }
-    path Drawing(path g, pen p = defaultpen, arrowbar ar = None) {
-      draw(g, p, ar);
-      return g;
-    }
-  \end{asydef}
-\fi
-
-%%fakesection BEGIN MAIN SETUP
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\ifevansetup
-  %%fakesection Set up author and date
-  \ifevanauthor
-    \title{} % empty title to avoid crashes
-    \ifluatex
-      \author{Evan Chen《陳誼廷》}
-    \else
-      \author{Evan Chen}
-    \fi
-    \date{\today}
-  \fi
-  %%fakesection Hyperref
-  \ifevanpkg
     \PassOptionsToPackage{svgnames,dvipsnames,table}{xcolor}
     \usepackage{xcolor}
-    \ifevanbib
-      \usepackage[backend=biber,backref=true,style=alphabetic]{biblatex}
-      \DeclareFieldFormat{labelalpha}{\textbf{\small #1}} % citation ID's in small-bold
-      \DefineBibliographyStrings{english}{%
-        backrefpage  = {cited p.}, % for single page number
-        backrefpages = {cited pp.} % for multiple page numbers
-      }
-      \DeclareFieldFormat{journaltitle}{\mkbibemph{#1},} % italic journal title with comma
-      \DeclareFieldFormat[inbook,thesis]{title}{\mkbibemph{#1}\addperiod} % italic title with period
-      \DeclareFieldFormat[article]{title}{#1} % title of journal article is printed as normal text
-      \DeclareFieldFormat[article]{volume}{\textbf{#1}\addcolon\space} % bold volume numbers
-      % Separate ISBN-13 field
-      \DeclareSourcemap{\maps[datatype=bibtex]{\map{\step[fieldsource=ISBN-13,fieldtarget=ISBN]}}}
-      % Evan likes small caps for bibliography author names
-      \renewcommand{\mkbibnamegiven}[1]{\textsc{#1}}
-      \renewcommand{\mkbibnamefamily}[1]{\textsc{#1}}
-      \renewcommand{\mkbibnameprefix}[1]{\textsc{#1}}
-      \renewcommand{\mkbibnamesuffix}[1]{\textsc{#1}}
-      % Drop trailing punctuation in bibliography names
-      \renewcommand{\finentrypunct}{}
-    \fi
-    \ifevanhref
       \usepackage[colorlinks=true,pdfusetitle]{hyperref}
-%      \hypersetup{pdfkeywords={evan.sty},pdfsubject={web.evanchen.cc}}
       \hypersetup{urlcolor=RubineRed,linkcolor=RoyalBlue,citecolor=ForestGreen}
-    \fi
     \usepackage[nameinlink]{cleveref}
-  \fi
 
-  %%fakesection New theorem styles
-  \ifevanthm
     \usepackage{amsthm}
     \usepackage{thmtools}
     \hypersetup{hypertexnames=false}
-  \fi
-  \ifevanmdthm
-    \ifevanthm
-      %% theorem packages loaded already
-    \else
-      \usepackage{amsthm}
-      \usepackage{thmtools}
-      \hypersetup{hypertexnames=false}
-    \fi
     \usepackage[framemethod=TikZ]{mdframed}
     \usetikzlibrary{shadows}
     % https://tex.stackexchange.com/a/292090/76888
@@ -526,18 +287,11 @@
       frametitlerule=true,
     }
     \newcommand{\listhack}{$\empty$\vspace{-2em}}
-  \fi
 
   %%fakesection Theorem setup
-  \ifevanthm
     \theoremstyle{definition}
     %Branching here: the option secthm changes theorems to be labelled by section
-    \ifevanmdthm
-      \ifevansecthm
         \declaretheorem[style=thmbluebox,name=Teorema,numberwithin=section]{theorem}
-      \else
-        \declaretheorem[style=thmbluebox,name=Teorema]{theorem}
-      \fi
       \declaretheorem[style=thmrosebox,name=Assioma,sibling=theorem]{axiom}
       \declaretheorem[style=thmbluebox,name=Lemma,sibling=theorem]{lemma}
       \declaretheorem[style=thmbluebox,name=Proposizione,sibling=theorem]{proposition}
@@ -548,36 +302,12 @@
       \declaretheorem[style=thmbluebox,name=Proposizione,numbered=no]{proposition*}
       \declaretheorem[style=thmbluebox,name=Corollario,numbered=no]{corollary*}
       \declaretheorem[style=thmbluebox,name=Assunzione,numbered=no]{assume*}
-    \else
-      \ifevansecthm
-        \declaretheorem[name=Teorema,numberwithin=section]{theorem}
-      \else
-        \declaretheorem[name=Teorema]{theorem}
-      \fi
-      \declaretheorem[name=Lemma,sibling=theorem]{lemma}
-      \declaretheorem[name=Proposizione,sibling=theorem]{proposition}
-      \declaretheorem[name=Corollario,sibling=theorem]{corollary}
-      \declaretheorem[name=Assunzione,sibling=theorem]{assume}
-      \declaretheorem[name=Teorema,numbered=no]{theorem*}
-      \declaretheorem[name=Lemma,numbered=no]{lemma*}
-      \declaretheorem[name=Proposizione,numbered=no]{proposition*}
-      \declaretheorem[name=Corollario,numbered=no]{corollary*}
-      \declaretheorem[name=Assunzione,numbered=no]{assume*}
-    \fi
 
-    \ifevanmdthm
       \declaretheorem[style=thmgreenbox,name=Algorithm,sibling=theorem]{algorithm}
       \declaretheorem[style=thmgreenbox,name=Algorithm,numbered=no]{algorithm*}
       \declaretheorem[style=thmgreenbox,name=Claim,sibling=theorem]{claim}
       \declaretheorem[style=thmgreenbox,name=Claim,numbered=no]{claim*}
-    \else
-      \declaretheorem[name=Algorithm,sibling=theorem]{algorithm}
-      \declaretheorem[name=Algorithm,numbered=no]{algorithm*}
-      \declaretheorem[name=Claim,sibling=theorem]{claim}
-      \declaretheorem[name=Claim,numbered=no]{claim*}
-    \fi
 
-    \ifevanmdthm
       \declaretheorem[style=thmredbox,name=Esempio,sibling=theorem]{example}
       \declaretheorem[style=thmredbox,name=Esempio,numbered=no]{example*}
       \declaretheorem[style=thmredbox,name=Esempio buffo,sibling=theorem]{exampleb}
@@ -585,34 +315,19 @@
 			\declaretheorem[style=thmredbox,name=Esempio più buffo,sibling=theorem]{examplebb}
 			\declaretheorem[style=thmredbox,name=NON Esempio,sibling=theorem]{notexample}
 			\declaretheorem[style=thmredbox,name=NON Esempio buffo,sibling=theorem]{notexampleb}
-    \else
-      \declaretheorem[name=Esempio,sibling=theorem]{example}
-      \declaretheorem[name=Esempio,numbered=no]{example*}
-    \fi
 
     % Osservazione-style theorems
-    \ifevanmdthm
       \declaretheorem[style=thmgreenbox,name=Osservazione,sibling=theorem]{remark}
       \declaretheorem[style=thmgreenbox,name=Osservazione,numbered=no]{remark*}
       \declaretheorem[style=thmgreenbox,name=Nota,sibling=theorem]{note}
       \declaretheorem[style=thmorangebox,name=Notazione,sibling=theorem]{notation}
-    \else
-      \declaretheorem[name=Osservazione,sibling=theorem]{remark}
-      \declaretheorem[name=Osservazione,numbered=no]{remark*}
-      \declaretheorem[name=Note,sibling=theorem]{note}
-      \declaretheorem[name=Notazione,sibling=theorem]{notation}
-    \fi
 
-    \ifevanmdthm
       \declaretheoremstyle[
         headfont=\color{blue!40!black}\normalfont\bfseries,
         spaceabove=8pt,
         spacebelow=8pt,
         bodyfont=\normalfont
       ]{basehead}
-    \else
-      \declaretheoremstyle[spaceabove=6pt,spacebelow=6pt]{basehead}
-    \fi
 
       \declaretheoremstyle[
         headfont=\color{green!40!black}\normalfont\bfseries,
@@ -637,7 +352,6 @@
     \declaretheorem[style=basehead,name=Question,sibling=theorem]{ques}
     \declaretheorem[style=basehead,name=Question,numbered=no]{ques*}
 
-    \ifevanpkg
       \Crefname{answer}{Answer}{Answers}
       \Crefname{assume}{Assumption}{Assumptions}
       \Crefname{claim}{Claim}{Claims}
@@ -646,22 +360,10 @@
       \Crefname{fact}{Fact}{Facts}
       \Crefname{problem}{Problem}{Problems}
       \Crefname{ques}{Question}{Questions}
-    \fi
-  \fi
 
   %%fakesection Fancy section and chapter heads
-  \ifevancolorsec
-    \@ifundefined{KOMAClassName}{}{
-      \@ifundefined{chapter}{}{
-        \addtokomafont{partprefix}{\rmfamily}
-        \renewcommand*{\partformat}{\color{purple}
-          \scalebox{2.5}{\thepart}\enlargethispage{2em}}
-        \addtokomafont{chapterprefix}{\raggedleft}
-        \RedeclareSectionCommand[beforeskip=0.5em]{chapter}
-        \renewcommand*{\chapterformat}{\mbox{%
-          \scalebox{1.5}{\chapappifchapterprefix{\nobreakspace}}%
-          \scalebox{2.718}{\color{purple}\thechapter}\enskip}}
-      }
+{
+
       \renewcommand*{\sectionformat}%
         {\color{purple}\S\thesection\enskip}
       \renewcommand*{\subsectionformat}%
@@ -672,13 +374,8 @@
       \KOMAoptions{numbers=noenddot}
       %\usetocstyle{KOMAlike}
     }
-  \fi
 
   %%fakesection Loads a bunch of useful packages (but allow disabling)
-  \ifevanpkg
-    \ifevanvonenabled
-      \IfFileExists{von.sty}{\usepackage{von}}{}
-    \fi
     \usepackage{listings}
     \usepackage{mathrsfs}
     \usepackage{textcomp}
@@ -731,7 +428,7 @@
     \usepackage{microtype}
     \usepackage{xstring}
     \usepackage{wrapfig}
-    \ifevanbritish\usepackage[cleanlook,british]{isodate}\fi % day-first date
+    \usepackage[cleanlook,british]{isodate} % day-first date
     \usepackage{tikz-cd}
     \usetikzlibrary{decorations.pathmorphing}
     \allowdisplaybreaks
@@ -751,114 +448,32 @@
     \newlist{rubric}{enumerate}{2}
     \setlist[rubric,1]{label=\Roman*.}
     \setlist[rubric,2]{label=(\Roman{rubrici}.\alph*)}
-  \fi
 
   %%fakesection \maketitle configuration
-  \@ifundefined{KOMAClassName}%
-    {} % do nothing outside KOMA class
     {% If KOMA exists. . .
     \addtokomafont{subtitle}{\Large}
     \setkomafont{author}{\Large\scshape}
     \setkomafont{date}{\Large\normalsize}
     }
+
+\makeatletter 
   \providecommand{\thetitle}{\@title}
   \providecommand{\theauthor}{\@author}
   \providecommand{\thedate}{\@date}
+\makeatother
 
   %%fakesection Page setup
-  \ifevanfancy
-    \@ifundefined{KOMAClassName}
-    {
-      \usepackage{fancyhdr}
-      \setlength{\headheight}{0.75in}
-      \setlength{\oddsidemargin}{0in}
-      \setlength{\evensidemargin}{0in}
-      \setlength{\voffset}{-1.0in}
-      \setlength{\headsep}{10pt}
-      \setlength{\textwidth}{6.5in}
-      \setlength{\headwidth}{6.5in}
-      \setlength{\textheight}{8.75in}
-      \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
-      \setlength{\footskip}{0.3in}
-      \ifevanhdr
-        \renewcommand{\headrulewidth}{0.5pt}
-        \renewcommand{\footrulewidth}{0.0pt}
-        \pagestyle{fancy}
-        \lhead{Evan Chen}
-        \chead{}
-        \rhead{\nouppercase{\leftmark}}
-        \lfoot{}
-        \cfoot{\thepage}
-        \rfoot{}
-      \fi
-    }
-    {
-      \usepackage[headsepline]{scrlayer-scrpage}
-      \renewcommand{\headfont}{}
-      \addtolength{\textheight}{3.14cm}
-      \setlength{\footskip}{0.5in}
-      \setlength{\headsep}{10pt}
-      \ihead{\footnotesize\textbf{\theauthor} --- \thedate}
-      \automark{section}
-      \chead{}
-      \ohead{\footnotesize\textbf{\thetitle}}
-      \cfoot{\pagemark}
-    }
-  \fi
-
-  %%fakesection Unicode
-  \ifevanpkg
-    \ifluatex
-      \ifevanchinese
-        \usepackage{luatexja-fontspec}
-      \else
-        \usepackage{fontspec}
-      \fi
-      % https://tex.stackexchange.com/a/572220/76888
-      \directlua{luaotfload.add_fallback
-        ("evans_fallbacks",
-          {
-            "NotoColorEmoji:mode=harf;",
-            "Source Han Sans TW:style=Regular;",
-            "Noto Serif CJK SC:style=Regular;",
-          }
-        )}
-      \setmainfont{Latin Modern Roman}[
-        SlantedFont={Latin Modern Roman Slanted},
-        RawFeature={fallback=evans_fallbacks}
-      ]
-      \setsansfont{Latin Modern Sans}[
-        RawFeature={fallback=evans_fallbacks}
-      ]
-      \ifevanchinese
-        \setmainjfont{Source Han Sans TW}[RawFeature={fallback=evans_fallbacks}]
-        \setsansjfont{Source Han Sans TW}[RawFeature={fallback=evans_fallbacks}]
-      \fi
-    \else
-      \ifevanchinese
-        \usepackage{babel}
-        \usepackage[encapsulated]{CJK}
-        \usepackage{ucs}
-        \usepackage[utf8x]{inputenc}
-        \newenvironment{bsmi}{\begin{CJK}{UTF8}{bsmi}}{\end{CJK}}
-        \newcommand{\cn}[1]{\begin{bsmi}#1\end{bsmi}}
-        \AtBeginDocument{\begin{CJK}{UTF8}{bsmi}}
-        \AtEndDocument{\end{CJK}}
-      \fi
-    \fi
-  \fi
-
-  %%fakesection Hints
-  \ifevanhints
-    \usepackage{answers}
-    \Newassociation{hint}{hintitem}{hints}
-    \renewcommand{\solutionextension}{out}
-    \Opensolutionfile{hints}
-    \newcommand{\makehints}{\Closesolutionfile{hints}\input{hints.out}} % chktex 27
-  \fi
-%%fakesection END MAIN SETUP
-\fi
-
+      %\usepackage{scrlayer-scrpage}
+	\pagestyle{headings}
+%      \renewcommand{\headfont}{}
+      \addtolength{\textheight}{5\baselineskip}
+%      \setlength{\footskip}{0.5in}
+%      \setlength{\headsep}{10pt}
+%      \ihead{\footnotesize\textbf{\theauthor} --- \thedate}
+%      \automark{section}
+%      \chead{}
+%      \ohead{\footnotesize\textbf{\thetitle}}
+%      \cfoot{\pagemark}
 
 %BijectiveSymbol
 \newcommand{\widesim}[2][1.5]{
@@ -868,7 +483,6 @@
 \let\longleftrightarrow\relax % undefine the command to avoid a warning
 \DeclareRobustCommand{\longleftrightarrow}{\leftarrow\bigjoinrel\rightarrow}
 \newcommand\bigjoinrel{\mathrel{\mkern-7mu}}
-
 
 %Other Stuff
 \usepackage{leftidx}
@@ -889,7 +503,6 @@
 \newcommand{\myMod}[1]{\allowbreak \if@display \mkern 18mu \else \mkern 0mu\fi {\operator@font mod}\,\,#1} % 0mu was 12mu for the math mode in the orignial defintion
 \newcommand{\myPMod}[1]{\allowbreak \if@display \mkern 18mu\else \mkern 8mu\fi \left({{\operator@font mod}\mkern 6mu #1}\right)} % replaced () by \left(\right) in respect to the original definiont
 \makeatother 
-
 
 %Z/nZ and F_p
 \newcommand{\Z}[1]{\mathbb{Z}/{#1}\mathbb{Z}}
