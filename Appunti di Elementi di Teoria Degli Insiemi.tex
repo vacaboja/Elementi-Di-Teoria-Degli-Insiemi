@@ -1,51 +1,23 @@
-\documentclass[11pt,headheight=35pt]{scrartcl}
-\usepackage[italian]{babel}
-
 \include{style}
 
-\usepackage{parskip}[skip=\baselineskip]
-
-% I don't like to have an inconsistent leading because of math
-% On the other hand, that's just plain dangerous...
-\def\mathshift{$}
-\catcode`$=13
-\def${\ifinner\expandafter\mathshift\else\expandafter\myshift\fi}
-\def\myshift#1${\raisebox{0ex}[0ex][0ex]{\mathshift#1\mathshift}}
-% Override this xypic, if you can! (\iffalse is for the syntax highliting of vim)
-\AtBeginDocument{\catcode`$=13\iffalse$\fi}
-
-% This is a sad sad hack
-\let\oldparen\{
-\let\oldvert|
-\let\oldleft\left
-\let\oldright\right
-\catcode`|=13
-\let|\oldvert
-\def\renewvert{\def|{\;\oldvert\;}}
-\def\{#1\}{{\renewvert\oldparen#1\}}}
-\def\newleft#1\right\}{{\renewvert\oldleft\oldparen#1\right\}}}
-\def\left#1{\ifx#1\{\newleft\else\ifx#1|\oldleft\oldvert\else\oldleft#1\fi\fi}
-\def\right#1{\ifx#1|\oldright\oldvert\else\oldright#1\fi}
-
-%\parindent 0pt
-%\parskip\baselineskip
-\def\drkgrn#1{\textcolor{green!40!black}{#1}}
-\def\drkred#1{\textcolor{red!40!black}{#1}}
-\def\drkppl#1{\textcolor{purple!60!black}{#1}}
-
 \begin{document}
-\title{Elementi Di Teoria Degli Insiemi}
-\subtitle{\large\normalfont\rmfamily\scshape APPUNTI DEL CORSO DI ELEMENTI DI TEORIA DEGLI INSIEMI \\ TENUTO DAL PROF. MARCELLO MAMINO}
-\author{Diego Monaco \\ \textnormal{\href{d.monaco2@studenti.unipi.it}{d.monaco2@studenti.unipi.it}} \\ Università di Pisa}
-\date{Anno Accademico 2022-23}
+
+\title{Elementi di Teoria degli Insiemi}
+\author{Marcello Mamino \and Diego Monaco}
+
 \maketitle
+
 \begin{center}
     \includegraphics[scale=4.0]{immagini/Cantor-like_Column_Capital_Ile_de_Philae_Description_d'Egypte_1809.jpg}
 \end{center}
-\newpage
+
+\thispagestyle{empty}
+
+\vfill\pagebreak
 
 \tableofcontents
-\newpage
+
+\vfill\pagebreak
 
 \section*{Premessa}
 Queste dispense sono la quasi esatta trascrizione in \LaTeX\,delle dispense del corso di Elementi di Teoria degli Insiemi \cite{mamino_eti_22_23}, tenuto dal prof. Marcello Mamino nell'anno accademico 2022-23 presso l'Università di Pisa.

@@ -6,7 +6,7 @@ abbia avuto un ruolo. Come che sia, è almeno un'introduzione passabile.
 Data una serie trigonometrica:
 \[ S(x) = c_0 + \sum_{i=1}^{+\infty}a_i\sin{(ix)}+b_i\cos{(ix)}
 	\]
-se, per ogni $x \in \RR$, sappiamo che $S(x)$ converge a~$0$, possiamo dire che i coefficienti $c_0,a_i,b_i$ sono tutti 0?
+se, per ogni $x \in \RR$, sappiamo che $S(x)$ converge a~$0$, possiamo dire che i coefficienti $c_0,a_i,b_i$ sono tutti~$0$?
 
 \drkgrn{In altri termini, se sappiamo che una serie trigonometrica converge
 puntualmente a una certa funzione~$f$, i coefficienti della serie sono
@@ -24,7 +24,7 @@ Diciamo che $X \subseteq \RR$ è un \vocab{insieme di unicità} se, per ogni ser
 \[ S(x) = c_0 + \sum_{i=1}^{+\infty}a_i\sin{(ix)}+b_i\cos{(ix)}
 	\]
 vale la seguente implicazione:
-\[ \text{$S(x)$ converge a 0 per tutti gli $x\not\in X$} \implies \text{tutti i coefficienti $c_0,a_i,b_i$ sono nulli}
+\[ \text{$S(x)$ converge a~$0$ per tutti gli $x\not\in X$} \implies \text{tutti i coefficienti $c_0,a_i,b_i$ sono nulli}
 	\]
 \end{definition}
 
@@ -69,10 +69,10 @@ L'intervallo $[0,1]$ e $\QQ$ non hanno la proprietà ($\star$).
 \end{notexample}
 
 \begin{notexampleb}
-L'\vocab{insieme di Cantor} non ha la proprietà ($\star$).
+L'insieme di Cantor non ha la proprietà ($\star$).
 \end{notexampleb}
 
-L'insieme di Cantor si costruisce a partire dall'intervallo chiuso~$C_0 = [0,1]$ così:
+L'\vocab{insieme di Cantor} si costruisce a partire dall'intervallo chiuso~$C_0 = [0,1]$ così:
 
 \begin{figure}[H]
 	\centering
@@ -150,6 +150,7 @@ come nell'esempio precedente, per cui concludiamo che $f$ è lineare.
 \end{proof}
 
 \subsection{Digressione: insiemi numerabili}
+\vskip\baselineskip
 \begin{definition}
 Un insieme $X$ è \vocab{numerabile} se è il supporto di una successione,
 $X = \{a_0,a_1,a_2,\ldots\} = \{a_i | i \in \NN\}$, con $a_i \ne a_j$ per
@@ -192,7 +193,7 @@ Un sottoinsieme infinito di un insieme numerabile è, a sua volta, numerabile.
 Sia $Y \subseteq X$ con $Y$ infinito e $X = \{a_i | i \in \NN\}$. La
 sottosuccessione $b_j = a_{i_j}$ degli $a_*$ che appartengono a $Y$
 enumera $Y$.
-\drkppl{A essere precisi 
+\drkred{A essere precisi 
 bisognerebbe dire esattamente chi sono gli indici $i_j$. Per ricorsione:
 \[ i_0 = \min\{i | a_i \in Y\} \qquad i_{j+1} = \min\{i > i_j | a_i \in Y\} \]
 dove i minimi esistono perché $Y$ non è finito.}
@@ -417,7 +418,7 @@ tutti i numeri primi non è un numero primo. Però ci sono anche collezioni che 
 ossia la collezione delle collezioni che non sono membri di se stesse -- la
 $N$ sta per collezioni normali.\\
 \drkred{$N \in N$ oppure no?}\\
-$N \in N$ se e solo se, per definizione, $N \not \in N\;\;\lightning$\\
+$N \in N$ se e solo se, per definizione, $N \not \in N\;\;\lightning$
 
 Il paradosso di Russell ci dice che, del principio di collezione -- ossia
 l'idea che data una proprietà ben definita~$P$ si possa costruire la
