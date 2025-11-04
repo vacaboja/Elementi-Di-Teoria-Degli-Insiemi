@@ -1,36 +1,38 @@
 \section{Il linguaggio della teoria degli insiemi}
 Per non incorrere in contraddizione, accettiamo che le sole proposizioni ad avere senso siano quelle esprimibili mediante \vocab{formule insiemistiche}. Le formule si costruiscono ricorsivamente.
+\def\explain#1{\above{\color{blue}``#1''\\$\downarrow$}}
 \begin{itemize}
 	\item Le lettere $a,b,c,\ldots,A,B,C,\ldots,\alpha,\beta,\gamma,\ldots$ rappresentano \vocab{variabili}. I valori delle variabili sono sempre insiemi, e non ci sono altri oggetti salvo gli insiemi.
 	\item Le \vocab{formule atomiche} sono:
-	\[ \text{variabile = variabile} \qquad \qquad \text{variabile $\in$ variabile}\footnote{\,``appartiene a".}
-		\]
-	sono formule atomiche $x=y$, $x=x$, $\alpha = C$, e anche $x \in y$, $x \in x$, $\alpha \in C$.
+	\begin{align*}
+	\text{variabile} &= \text{variabile} & \text{variabile} &\explain{appartiene a}\in \text{variabile}\\
+	&\mathclap{\text{\drkgrn{es.\ $x=y$, $x=x$, $\alpha = C$}}}  & &\mathclap{\text{\drkgrn{es.\ $x \in y$, $x \in x$, $\alpha \in C$}}}
+	\end{align*}
 	\item Le formule atomiche si combinano tra loro mediante:
 	\begin{itemize}
-		\item \vocab{connettivi logici} ovvero il ``non'' la ``e'' e la ``o'' (inclusiva):
-		\[ \text{$\neg$ formula} \qquad \text{formula $\land$ formula} \qquad \text{formula $\lor$ formula}
+		\item \vocab{connettivi logici}
+		\[ \text{\color{blue}``non'' $\rightarrow$\ }\neg\text{formula} \qquad \text{formula}\explain{e}\land\text{formula} \qquad \text{formula}\explain{o}\lor\text{formula}
 			\]
-		quindi ad esempio:
-		\begin{flalign*}
-			&\neg\Phi \equiv \text{``$\Phi$ è falsa''} &\\
-			&\Phi \land \psi \equiv \text{``$\Phi$ e $\psi$ sono entrambe vere''} &\\
-			&\Phi \lor \psi \equiv \text{``almeno una fra $\Phi$ e $\psi$ è vera''}
-		\end{flalign*}
-		\item \vocab{quantificatori} ovvero quello universale ``per ogni'' e quello esistenziale ``esiste'':
-		\[ \forall x \, \text{formula} \qquad \exists x \, \text{formula}
+		\vskip-2\baselineskip
+		\drkgrn{\begin{flalign*}
+			\text{es:\ \ \ \ }\neg\phi \;\;&\equiv\;\; \text{``$\phi$ è falsa''} &\\
+			\phi \land \psi \;\;&\equiv\;\; \text{``$\phi$ e $\psi$ sono entrambe vere''} \\
+			\phi \lor \psi \;\;&\equiv\;\; \text{``almeno una fra $\phi$ e $\psi$ è vera''}
+		\end{flalign*}}
+		\vskip-2.5\baselineskip\ 
+		\item \vocab{quantificatori}
+		\[ \explain{per ogni $x$}{\forall x} \, \text{formula} \qquad \explain{esiste $x$}{\exists x} \, \text{formula}
 			\]
-		ad esempio:
-		\begin{flalign*}
-			&\forall x \, \Phi \equiv \text{``$\Phi$ è vera qualunque sia l'insieme $x$''} &\\
-			&\exists x \, \Phi \equiv \text{``c'è un insieme $x$ che fa si che $\Phi$ sia vera''}
-		\end{flalign*}
+		\vskip-2\baselineskip
+		\drkgrn{\begin{flalign*}
+			\text{es:\ \ }\forall x \, \phi \;\;&\equiv\;\; \text{``$\phi$ è vera qualunque sia l'insieme $x$''} &\\
+			\exists x \, \phi \;\;&\equiv\;\; \text{``c'è un insieme $x$ che fa sì che $\phi$ sia vera''}
+		\end{flalign*}}
+	\end{itemize}
+\end{itemize}
 		\begin{exercise}
 			Chiaramente varranno $\forall x \, x = x,$ $ \forall x \, \exists y \, x = y,$ $ \neg (\exists x \, \forall y \, x = y)$.
 		\end{exercise}
-	\end{itemize}
-\end{itemize}
-
 \textbf{\underline{L'intuizione}} è che l'universo insiemistico sia un gigantesco \href{https://it.wikipedia.org/wiki/Digrafo_aciclico}{\textcolor{purple}{grafo diretto aciclico}} i cui vertici sono gli insiemi,
 ed in cui le frecce rappresentano la relazione di appartenenza.
 

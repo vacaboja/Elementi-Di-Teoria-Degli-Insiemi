@@ -280,3 +280,16 @@
 
 \def\drkgrn#1{\textcolor{green!40!black}{#1}}
 \def\drkred#1{\textcolor{red!60!black}{#1}}
+
+\def\above#1{\overset{\smash{\mathclap{\parbox{10cm}{\centering\normalsize\vbox to 0pt{\vss{#1}}}}}}}
+\def\below#1{\underset{\smash{\mathclap{\parbox{10cm}{\centering\normalsize\vbox to 0pt{{#1}\vss}}}}}}
+
+\def\eat#1{}
+\def\addold#1{\csname old\expandafter\eat\string#1\endcsname}
+\def\redef#1{\expandafter\expandafter\expandafter\let\addold#1#1\def#1}
+
+\redef\forall#1{\oldforall\,#1\,}
+\redef\exists#1{\oldexists\,#1\,}
+\redef\land{\,\oldland\,}
+\redef\lor{\,\oldlor\,}
+\redef\neg{\oldneg\,}
