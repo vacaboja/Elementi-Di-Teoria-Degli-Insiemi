@@ -6,7 +6,7 @@ Per non incorrere in contraddizione, accettiamo che le sole proposizioni ad aver
 	\item Le \vocab{formule atomiche} sono:
 	\begin{align*}
 	\text{variabile} &= \text{variabile} & \text{variabile} &\explain{appartiene a}\in \text{variabile}\\
-	&\mathclap{\text{\drkgrn{es.\ $x=y$, $x=x$, $\alpha = C$}}}  & &\mathclap{\text{\drkgrn{es.\ $x \in y$, $x \in x$, $\alpha \in C$}}}
+	&\mathclap{\text{{\drkgrn es.\ $x=y$, $x=x$, $\alpha = C$}}}  & &\mathclap{\text{{\drkgrn es.\ $x \in y$, $x \in x$, $\alpha \in C$}}}
 	\end{align*}
 	\item Le formule atomiche si combinano tra loro mediante:
 	\begin{itemize}
@@ -14,27 +14,24 @@ Per non incorrere in contraddizione, accettiamo che le sole proposizioni ad aver
 		\[ \text{\color{blue}``non'' $\rightarrow$\ }\neg\text{formula} \qquad \text{formula}\explain{e}\land\text{formula} \qquad \text{formula}\explain{o}\lor\text{formula}
 			\]
 		\vskip-2\baselineskip
-		\drkgrn{\begin{flalign*}
-			\text{es:\ \ \ \ }\neg\phi \;\;&\equiv\;\; \text{``$\phi$ è falsa''} &\\
-			\phi \land \psi \;\;&\equiv\;\; \text{``$\phi$ e $\psi$ sono entrambe vere''} \\
-			\phi \lor \psi \;\;&\equiv\;\; \text{``almeno una fra $\phi$ e $\psi$ è vera''}
+		{\drkgrn \begin{flalign*}
+			\text{es:\ \ \ \ }\neg\Phi \;\;&\equiv\;\; \text{``$\Phi$ è falsa''} &\\
+			\Phi \land \Psi \;\;&\equiv\;\; \text{``$\Phi$ e $\Psi$ sono entrambe vere''} \\
+			\Phi \lor \Psi \;\;&\equiv\;\; \text{``almeno una fra $\Phi$ e $\Psi$ è vera''}
 		\end{flalign*}}
 		\vskip-2.5\baselineskip\ 
 		\item \vocab{quantificatori}
 		\[ \explain{per ogni $x$}{\forall x} \, \text{formula} \qquad \explain{esiste $x$}{\exists x} \, \text{formula}
 			\]
 		\vskip-2\baselineskip
-		\drkgrn{\begin{flalign*}
-			\text{es:\ \ }\forall x \, \phi \;\;&\equiv\;\; \text{``$\phi$ è vera qualunque sia l'insieme $x$''} &\\
-			\exists x \, \phi \;\;&\equiv\;\; \text{``c'è un insieme $x$ che fa sì che $\phi$ sia vera''}
+		{\drkgrn \begin{flalign*}
+			\text{es:\ \ }\forall x \, \Phi \;\;&\equiv\;\; \text{``$\Phi$ è vera qualunque sia l'insieme $x$''} &\\
+			\exists x \, \Phi \;\;&\equiv\;\; \text{``c'è un insieme $x$ che fa sì che $\Phi$ sia vera''}
 		\end{flalign*}}
 	\end{itemize}
 \end{itemize}
-		\begin{exercise}
-			Chiaramente varranno $\forall x \, x = x,$ $ \forall x \, \exists y \, x = y,$ $ \neg (\exists x \, \forall y \, x = y)$.
-		\end{exercise}
 \textbf{\underline{L'intuizione}} è che l'universo insiemistico sia un gigantesco \href{https://it.wikipedia.org/wiki/Digrafo_aciclico}{\textcolor{purple}{grafo diretto aciclico}} i cui vertici sono gli insiemi,
-ed in cui le frecce rappresentano la relazione di appartenenza.
+e in cui le frecce rappresentano la relazione di appartenenza.
 
 \begin{center}
 	\begin{figure}[h]
@@ -44,32 +41,60 @@ ed in cui le frecce rappresentano la relazione di appartenenza.
 \end{center}
 
 Possiamo solo fare affermazioni a proposito di vertici e frecce di questo grafo. Per esempio:
-\[ \text{``$a$ è un elemento di un certo $b$''} \equiv \text{``c'è un percorso di due frecce fra $a$ e $b$''} 
-	\]
-che corrisponde mediante formule insiemistiche a $ \exists x (a \in x \land x \in b)$. E ancora:
-\[\text{``$a$ è un sottoinsieme di $b$''} \equiv \text{``ogni elemento di $a$ è elemento di $b$''} \equiv \]\[
-		\equiv\text{``non c'è un insieme che è elemento di $a$ e non di $b$''}\equiv\]\[
-	 \equiv \text{``non c'è un vertice con una freccia verso $a$ e non una verso $b$''}
-	\]
-che corrisponde mediante formule insiemistiche a $\neg\exists x (x \in a \land \neg x \in b)$ (tutto ciò che raggiunge $a$ deve raggiungere anche $b$).\\
+\begin{flalign*}
+\hskip3em&{\drkgrn \text{``$a$ è un elemento di un elemento di $b$''} \equiv} &\\ 
+&\qquad{\drkred \text{``c'è un percorso di due frecce fra $a$ e $b$''} \equiv}\\
+&\qquad\qquad\exists x (a \in x \land x \in b)
+\end{flalign*}
+\begin{flalign*}
+\hskip3em&{\drkgrn \text{``$a$ è un sottoinsieme di $b$''} \equiv} &\\
+&{\drkgrn \text{``ogni elemento di $a$ è elemento di $b$''} \equiv}\\
+&{\drkgrn \text{``non c'è un insieme che è elemento di $a$ e non di $b$''}\equiv}\\
+&\qquad{\drkred \text{``non c'è un vertice con una freccia verso $a$ e non una verso $b$''}\equiv}\\
+&\qquad\qquad\neg\exists x (x \in a \land \neg x \in b)
+\end{flalign*}
+\vskip0pt
+\begin{exercise}
+Non abbiamo ancora descritto l'interpretazione delle formule. Ciò
+nonostante, ragionando intuitivamente, renditi conto della validità
+delle seguenti
+\[\forall x x = x \qquad \forall x \exists y x = y \qquad \neg \exists y
+\forall x x = y\]
+\[\forall x \exists y x\in y \qquad \neg\exists x \forall y 
+\bigl((y\in x \lor y \in y) \land \neg (y\in x \land y\in y)\bigr)\]
+Tre di queste formule sono \vocab{logicamente valide,} ossia sarebbero
+vere qualunque fosse la relazione rappresentata dal simbolo~$\in$. Di
+queste formule, si può dire che non contengono alcuna informazione a proposito
+dell'universo insiemistico. Sai capire quali sono?
+\end{exercise}
+
 \textbf{\underline{Parentesi}} Ad essere precisi, avremmo dovuto definire le formule includendo un mucchio di parentesi, allo scopo di eliminare ogni possibilità
-di formare una combinazione di simboli ambigua. Per esempio $\textcolor{red}{\Phi_1 \land \Phi_2 \lor \Phi_3}$ è ambigua, perché si potrebbe leggere $(\Phi_1 \land \Phi_2) \lor \Phi_3$
+di formare una combinazione di simboli ambigua. Per esempio ${\drkred \Phi_1 \land \Phi_2 \lor \Phi_3}$ è ambigua, perché si potrebbe leggere $(\Phi_1 \land \Phi_2) \lor \Phi_3$
 o $\Phi_1 \land (\Phi_2 \lor \Phi_3)$. In una notazione completamente parentesizzata, per esempio, la formula per ``$a$ è un sottoinsieme di $b$'' sarebbe:
 \[ \neg(\exists x((x \in a)\land(\neg(x \in b))))
 	\]
-Non useremo, in generale, questa notazione, ma useremo le parentesi selettivamente per evitare ambiguità. \footnote{In questo caso si useranno più parentesi, qualora alcune formule risultassero più leggibili in tal modo.}\\
-\textbf{\underline{Abbreviazioni}} Le formule appena descritte costituiscono il linguaggio della teoria degli insiemi \textbf{puro}. Durante il corso estenderemo
+Queste formule sono certamente precise, ma spesso illeggibili. Noi useremo le parentesi
+selettivamente per evitare le ambiguità preservando al meglio la leggibilità
+delle formule.
+
+\def\dohboxm#1#2{\hbox #1{$\displaystyle #2$\hss}}
+\def\hboxm#1#{\dohboxm{#1}}
+\textbf{\underline{Abbreviazioni}}
+Le formule appena descritte costituiscono il linguaggio della teoria degli
+insiemi {\drkred puro}. Durante il corso estenderemo
 più volte questo linguaggio mediante abbreviazioni, che semplicemente rimpiazzano formule più lunghe con scritture convenzionali più compatte, e quindi non alterano 
 la potenza espressiva del linguaggio. Vediamo le prime abbreviazioni:
-\[ x \ne y \Mydef \neg x = y \footnote{Cioè ``non è vero che $x$ è uguale a $y$''.} \qquad x \not\in y \Mydef \neg x \in y \qquad \not\exists x \,\Phi \Mydef \neg \exists x \, \Phi
-	\]\[ \Phi \rightarrow \psi \Mydef \psi \lor \neg \Phi \qquad \Phi \leftrightarrow \psi \Mydef (\Phi \rightarrow \psi) \land (\psi \rightarrow \Phi)
-		\]\[ \exists x \in y \; \Phi \Mydef \exists x (x \in y \land \Phi) \qquad \forall x \in A \; \Phi \Mydef \forall x (x \in A \rightarrow \Phi)
-			\]\[ \exists !\, x\, \Phi(x) \Mydef \exists x (\Phi(x) \land \forall y(\Phi(y) \rightarrow y = x))
-				\]\[ \exists !\, x \in A \,\Phi(x) \Mydef \exists! \, x(x \in A \land \Phi(x))
-					\]\[ A \subseteq B \Mydef \forall x (x \in A \rightarrow x \in B) \qquad A \subsetneq B \Mydef( A \subseteq B) \land (A \ne B)
-						\]\[ C = A \cup B \Mydef \forall x \, x \in C \leftrightarrow (x \in A \lor x \in B)
-							\]\[ C = A \cap B \Mydef \forall x \, x \in C \leftrightarrow (x \in A \land x \in B)
-								\]
+\def\pippo{\;\;\Mydef\;\;}
+\begin{align*}
+{\prpl {\prpl \Phi \rightarrow \Psi} }&\pippo \Psi \lor \neg \Phi  &{\prpl  \Phi \leftrightarrow \Psi }&\pippo (\Phi \rightarrow \Psi) \land (\Psi \rightarrow \Phi) \\
+{\prpl x \ne y }&\pippo \neg x = y  &{\prpl  x \not\in y }&\pippo \neg x \in y  \\
+{\prpl \exists {x \in y} \Phi }&\pippo \exists x (x \in y \land \Phi) & {\prpl \forall {x \in y} \Phi} &\pippo \forall x (x \in y \rightarrow \Phi) \\
+{\prpl \exists {!\,x} \Phi(x) }&\pippo \mathrlap{\exists x (\Phi(x) \land \forall y(\Phi(y) \rightarrow y = x))} \\
+{\prpl \exists {!\,x \in y} \Phi(x) }&\pippo \exists {!\,x} (x \in y \land \Phi(x)) \\
+{\prpl A \subseteq B }&\pippo \forall {x \in A} x \in B) &{\prpl  A \subsetneq B }&\pippo( A \subseteq B) \land (A \ne B) \\
+{\prpl C = A \cup B }&\pippo \mathrlap{\forall x \, x \in C \leftrightarrow (x \in A \lor x \in B)} \\
+{\prpl C = A \cap B }&\pippo \mathrlap{\forall x \, x \in C \leftrightarrow (x \in A \land x \in B)}
+\end{align*}
 \begin{note}
 	Il fatto che possiamo dire $C = A \cup B$ o $C = A \cap B$ non significa né che questi oggetti esistano né che siano unici. Dimostreremo fra poco l'esistenza e unicità 
 	di unione e intersezione.
@@ -78,54 +103,105 @@ la potenza espressiva del linguaggio. Vediamo le prime abbreviazioni:
 \begin{exercise}
 Esprimi queste proposizioni mediante formule insiemistiche pure:
 \begin{itemize}
-	\item gli elementi degli elementi di $A$ sono elementi di $A$;
-	\item $B$ è l'insieme dei sottoinsiemi di $A$;
-	\item l'unione degli elementi di $A$ è l'intersezione di quelli di $B$\footnote{Qui assumi che l'unione e intersezione esistano e siano uniche.}
+	\item gli elementi degli elementi di $A$ sono elementi di $A$
+	\item $B$ è l'insieme dei sottoinsiemi di $A$
+	\item unione degli elementi di $A$ è l'intersezione di quelli di $B$\\
+\textcolor{blue}{(qui assumi che unione e intersezione esistano e siano uniche)}
+	\item ogni insieme è disgiunto da uno dei suoi elementi
 \end{itemize}
 \end{exercise}
 
 \subsection{Le regole di inferenza}
 La teoria assiomatica degli insiemi si compone di tre parti: il linguaggio formale che abbiamo appena descritto, gli assiomi della teoria che studieremo durante il corso, 
-ed un sistema di regole che specificano precisamente quali passaggi sono leciti nelle dimostrazioni. Possiamo immaginare questa ultima componente come una specie di algebra dei ragionamenti,
-che permette di verificare i passaggi di una dimostrazione in maniera puramente meccanica, come se fossero semplici manipolazioni algebrica. Noi non vedremo le regole di inferenza, e voglio spiegare qui il perché.
+ed un sistema di regole formali che specificano precisamente quali passaggi siano leciti nelle dimostrazioni. Possiamo immaginare questa ultima componente come una specie di algebra dei ragionamenti,
+che permette di verificare i passaggi di una dimostrazione in maniera puramente meccanica, come se fossero semplici manipolazioni algebriche. Noi non vedremo le regole di inferenza, e voglio spiegare qui il perché.
 \begin{enumerate}[1]
 	\item Sono argomento del corso di logica.
-	\item In realtà, scrivere le dimostrazioni in maniera formale, le renderebbe lunghissime e particolarmente incomprensibili.
-	\item In pratica, non si sbaglia facendo ragionamenti che non reggono, si sbaglia dicendo cose fumose che non possono essere espresse nel linguaggio della teoria. Per esempio, le parole ``e così via'' sono pericolose.
-	\item Conoscere le regole - fidatevi - non aiuta né a trovare né a capire le dimostrazioni.
+	\item In realtà, scrivere le dimostrazioni in maniera formale le renderebbe lunghissime e praticamente incomprensibili.
+	\item In pratica, non si sbaglia facendo ragionamenti che non
+reggono, si sbaglia dicendo cose fumose che non possono essere espresse
+nel linguaggio della teoria. Per esempio, le parole {\drkred e così via}
+sono assai pericolose.
+	\item Conoscere le regole -- fidatevi -- non aiuta né a trovare né a capire le dimostrazioni.
 \end{enumerate}
-Pur senza dare un sistema completo di regole, vediamo qualche manipolazione formale che potrebbe servire.\\
-\textbf{\underline{Tavole di verità}} Due combinazioni mediante connettivi logici ($\neg$, $\land$, $\lor$, $\rightarrow$, $\leftrightarrow$)
-delle stesse formule - ``\vocab{combinazioni booleane}'' - alle volte, dicono la stessa cosa. Per esempio, $\neg \Phi \lor \neg \psi \equiv\footnote{\,``equivale a''.} \neg (\Phi \land \psi)$.
-Per verificare questo fatto basta considerare tutte le possibili combinazioni di valori di verità che possono assumere le formule combinate - nell'esempio $\Phi$ e $\psi$ - compilando una ``\vocab{tabella di verità}''.
+Pur senza dare un sistema completo di regole, vediamo qualche manipolazione formale che potrebbe servire.
+
+\textbf{\underline{Tavole di verità}} Combinazioni diverse ottenute mediante connettivi logici ($\neg$, $\land$, $\lor$, $\rightarrow$, $\leftrightarrow$)
+a partire dalle stesse formule -- diverse \vocab{combinazioni booleane} --
+possono essere logicamente equivalenti. Per esempio, $\neg \Phi \lor \neg \Psi \equiv \neg (\Phi \land \Psi)$.
+Equivalenze di questo tipo si possono sempre verificare considerando tutte le possibili
+combinazioni di valori di verità che possono assumere le formule combinate
+-- nell'esempio $\Phi$ e $\Psi$ -- e calcolando i corrispondenti valori di
+verità delle due combinazioni booleane. È comodo rappresentare questo
+procedimento per mezzo di una \vocab{tavola di verità.}
 \begin{center}
-	\begin{tabular}{>{$}l<{$}>{$}l<{$}|*{7}{>{$}l<{$}}}
-	\Phi & \psi & \neg\Phi   & \neg\psi   & \neg\Phi \lor \neg\psi   & \Phi \land \psi & \neg(\Phi \land \psi)    \\
+	\begin{tabular}{>{$}c<{$}>{$}c<{$}|*{2}{>{\drkgrn$}c<{$}}>{\drkred$}c<{$}>{\drkgrn$}c<{$}>{\drkred$}c<{$}}
+	\Phi & \Psi & \neg\Phi   & \neg\Psi   & {\drkred \neg\Phi \lor
+\neg\Psi}   & \Phi \land \Psi & \neg(\Phi \land \Psi)    \\
 	\hline\vrule height 14pt width 0pt
-	V & V & F & F & \textcolor{red}{F} & V & \textcolor{red}{F}\\
-	V & F & F & V & \textcolor{red}{V} & F & \textcolor{red}{V}\\
-	F & V & V & F & \textcolor{red}{V} & F & \textcolor{red}{V}\\
-	F & F & V & V & \textcolor{red}{V} & F & \textcolor{red}{V}
+	V & V & F & F & F & V & F\\
+	V & F & F & V & V & F & V\\
+	F & V & V & F & V & F & V\\
+	F & F & V & V & \below{$\color{blue}\uparrow$}V &
+\below{\vskip\baselineskip\color{blue}Queste
+due colonne coincidono!}F & \below{$\color{blue}\uparrow$}V
 	\end{tabular} 
 \end{center}
-Come si osserva le due colonne corrispondenti ai valori di verità delle nostre formule iniziali hanno gli stessi valori di verità in ogni caso.\\
-Conviene tenere a mente alcune delle equivalenze elementari:
-\[ \neg\neg \Phi \equiv \Phi \qquad \Phi \land (\psi \lor \Theta) \equiv (\Phi \land \psi) \lor (\Phi \land \Theta) \qquad \Phi \lor (\psi \land \Theta) \equiv (\Phi \lor \psi) \land (\Phi \lor \Theta)
-	\]\[ \neg(\Phi \land \psi) \equiv \neg \Phi \lor \neg \psi \qquad \neg(\Phi \lor \psi) = \neg \Phi \land \neg \psi \, \footnote{\href{https://it.wikipedia.org/wiki/Leggi_di_De_Morgan}{\textcolor{purple}{Leggi di De Morgan}}.}
-		\]\[ \Phi \rightarrow \neg \psi \equiv \psi \rightarrow \neg \Phi \qquad \Phi \rightarrow \psi \equiv \neg \psi \rightarrow \neg \Phi
-			\]
-
+\vskip2\baselineskip
+Alcune equivalenze elementari sono così comuni, che conviene tenerle a
+mente:
+\def\pippo{\;\;\equiv\;\;}
+\begin{align*}
+&\neg\neg \Phi \pippo \Phi & {\drkgrn \Phi \land (\Psi \lor \Theta) \pippo (\Phi
+\land \Psi) \lor (\Phi \land \Theta)} & \\
+&& {\drkgrn \Phi \lor (\Psi \land \Theta) \pippo (\Phi \lor \Psi) \land (\Phi \lor
+\Theta)} &\\
+& {\prpl
+\above{\scriptsize\href{https://it.wikipedia.org/wiki/Leggi_di_De_Morgan}{\prpl
+``leggi di De Morgan''}\\\vskip-4pt$\downarrow$}{\neg(\Phi \land \Psi)
+\pippo \neg \Phi \lor \neg \Psi}} & {\drkblu \Phi \rightarrow
+\neg \Psi \pippo \phantom{\neg} \Psi \rightarrow \neg \Phi} &\\
+& {\prpl \neg(\Phi \lor \Psi) \pippo \neg \Phi \land \neg \Psi}  &
+{\drkblu \Phi \rightarrow
+\phantom{\neg} \Psi \pippo \neg \Psi \rightarrow \neg \Phi} &
+\end{align*}
 \begin{exercise}
-Dimostrare le equivalenze delle formule elencate sopra.
+Dimostrare le equivalenze precedenti.
 \end{exercise}
 
-Per quanto riguarda i quantificatori ricordiamo le regole seguenti, che tuttavia non sono esaustive.
-\[ \neg\forall x \, \Phi \equiv \exists x \, \neg\Phi \qquad \neg\forall x \, \neg \Phi \equiv \exists x \, \Phi
-	\]\[ \neg\exists x \, \Phi \equiv \forall x \, \neg \Phi \qquad \neg \exists x \, \neg \Phi \equiv \forall x \, \Phi
-		\]
+\textbf{\underline{Implicazioni}} Per {\drkred dimostrare} un'implicazione $\Phi
+\rightarrow \Psi$ spesso conviene assumere $\Phi$ e, a partire da questo
+assunto, cercare una dimostrazione di~$\Psi$. L'implicazione
+$\Phi \rightarrow \Psi$ si può {\drkgrn usare} per dedurre $\Psi$ se si sa che
+$\Phi$ è vera.
+
+\textbf{\underline{Quantificatori}} {\drkred Dimostrare} una formula universale
+$\forall x \Phi(x)$ significa semplicemente dimostrare $\Phi$ senza fare
+alcuna assunzione sul valore di~$x$. {\drkred Dimostrare} $\forall {x\in
+y}
+\Phi(x)$ significa dedurre $\Phi(x)$ dall'ipotesi~$x\in y$.
+La formula $\forall x \Phi(x)$
+{\drkgrn si usa} per dedurre che vale $\Phi(\text{\drkblu qualcosa})$. La
+formula $\forall {x\in y} \Phi(x)$ {\drkgrn si può usare} se si sa
+che~$\text{\drkblu qualcosa}\in y$ per dedurre che vale $\Phi(\text{\drkblu qualcosa})$.
+
+TODO: esistenziale
+
+Potrebbe far comodo ricordare le equivalenze seguenti.
+\begin{align*}
+\neg\forall x \, \Phi &\pippo \exists x \, \neg\Phi & \neg\forall x \,
+\neg \Phi &\pippo \exists x \, \Phi\\
+\neg\exists x \, \Phi &\pippo \forall x \, \neg \Phi & \neg \exists x \,
+\neg \Phi &\pippo \forall x \, \Phi
+\end{align*}
+Inoltre cambiare nome alle variabili mute è sempre lecito
+\begin{align*}
+\forall x \Phi(x) &\pippo \forall \xi \Phi(\xi) & \exists x \Phi(x)
+&\pippo \exists G \Phi(G)
+\end{align*}
 
 \begin{exercise}
-Convinciti della validità delle equivalenze precedenti.
+Convinciti della validità delle equivalenze.
 \end{exercise}
 
 \begin{exercise}

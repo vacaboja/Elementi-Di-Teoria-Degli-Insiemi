@@ -156,7 +156,6 @@
 
 \mdfdefinestyle{mdblackbox}{
   linewidth=2pt,
-  skipabove=\baselineskip,
   rightline=false,
   leftline=true,
   topline=false,
@@ -171,7 +170,6 @@
 
 \mdfdefinestyle{mddrkgrnbx}{
   linewidth=2pt,
-  skipabove=\baselineskip,
   rightline=false,
   leftline=true,
   topline=false,
@@ -278,8 +276,10 @@
 \def\left#1{\ifx#1\{\newleft\else\ifx#1|\oldleft\oldvert\else\oldleft#1\fi\fi}
 \def\right#1{\ifx#1|\oldright\oldvert\else\oldright#1\fi}
 
-\def\drkgrn#1{\textcolor{green!40!black}{#1}}
-\def\drkred#1{\textcolor{red!60!black}{#1}}
+\def\drkgrn{\color{green!40!black}}
+\def\drkred{\color{red!60!black}}
+\def\drkblu{\color{blue!60!black}}
+\def\prpl{\color{purple}}
 
 \def\above#1{\overset{\smash{\mathclap{\parbox{10cm}{\centering\normalsize\vbox to 0pt{\vss{#1}}}}}}}
 \def\below#1{\underset{\smash{\mathclap{\parbox{10cm}{\centering\normalsize\vbox to 0pt{{#1}\vss}}}}}}

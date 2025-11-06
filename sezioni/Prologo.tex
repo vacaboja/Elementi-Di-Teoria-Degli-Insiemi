@@ -8,7 +8,7 @@ Data una serie trigonometrica:
 	\]
 se, per ogni $x \in \RR$, sappiamo che $S(x)$ converge a~$0$, possiamo dire che i coefficienti $c_0,a_i,b_i$ sono tutti~$0$?
 
-\drkgrn{In altri termini, se sappiamo che una serie trigonometrica converge
+{\drkgrn In altri termini, se sappiamo che una serie trigonometrica converge
 puntualmente a una certa funzione~$f$, i coefficienti della serie sono
 univocamente determinati da~$f$?}
 \end{problem}
@@ -43,12 +43,12 @@ $X \subseteq \RR$ è di unicità se (ma non solo se) gode della seguente\\
 \textbf{proprietà ($\star$):}
 ogni funzione continua $f\colon\RR \to \RR$ che soddisfi le ipotesi seguenti
 è necessariamente lineare 
-\drkgrn{($f(x) = ax+b$):}
+{\drkgrn ($f(x) = ax+b$):}
 \begin{itemize}
 	\item per ogni intervallo aperto $\left]a,b\right[$ con $]a,b[
 \,\cap\, X = \emptyset$, $f_{| \, ]a,b[}$ è lineare;
 	\item per ogni $x \in \RR$, se $f$ ha derivate destre e sinistre in $x$, allora queste coincidono
-\drkgrn{``$f$ non ha punti angolosi''.}
+{\drkgrn ``$f$ non ha punti angolosi''.}
 \end{itemize}
 \end{fact}
 
@@ -116,13 +116,13 @@ Consideriamo una funzione~$f$ come nell'ipotesi di~($\star$). Siccome $f$
 è lineare in $]-\infty, a_0[$, $]a_0,a_1[$, $]a_1,a_2[$, $\ldots$, abbiamo
 che nei punti $a_0,a_1,a_2,\ldots$ essa ammette derivata destra e sinistra.
 Per ipotesi, quindi, questi punti non possono essere angolosi, per cui
-\[ \drkred{f_{-}'(a_0)} = \drkgrn{f_{+}'(a_0)}\, \phantom{=}\,
-\drkred{f_{-}'(a_1)} =
-\drkgrn{f_{+}(a_1)}
+\[ {\drkred f_{-}'(a_0)} = {\drkgrn f_{+}'(a_0)}\, \phantom{=}\,
+{\drkred f_{-}'(a_1)} =
+{\drkgrn f_{+}(a_1)}
 \,\phantom{= f_{-}(a_2)}\,\;\;\dotsc \]
 D'altro canto, per la linearità in $]a_0,a_1[$, $]a_1,a_2[$, $\ldots$
-\[ \phantom{f_{-}'(a_0) =}\, \drkgrn{f_{+}'(a_0)} = \drkred{f_{-}'(a_1)}\,
-\phantom{=}\, \drkgrn{f_{+}(a_1)} = \drkred{f_{-}(a_2)}
+\[ \phantom{f_{-}'(a_0) =}\, {\drkgrn f_{+}'(a_0)} = {\drkred f_{-}'(a_1)}\,
+\phantom{=}\, {\drkgrn f_{+}(a_1)} = {\drkred f_{-}(a_2)}
 \;\;\dotsc \]
 Quindi $f'$ è costante sulla semiretta~$x < l$, ossia $f$ è lineare
 in questa semiretta. Per ipotesi $f$ è lineare anche nella semiretta~$l<x$.
@@ -154,21 +154,21 @@ come nell'esempio precedente, per cui concludiamo che $f$ è lineare.
 \begin{definition}
 Un insieme $X$ è \vocab{numerabile} se è il supporto di una successione,
 $X = \{a_0,a_1,a_2,\ldots\} = \{a_i | i \in \NN\}$, con $a_i \ne a_j$ per
-ogni $i \ne j$. \drkgrn{In altre parole, $X$ è numerabile se esiste $f
+ogni $i \ne j$. {\drkgrn In altre parole, $X$ è numerabile se esiste $f
 \colon \NN \to X$ biunivoca.}
 \end{definition}
 
 \begin{example}
 	\begin{tabular}{llll}
 I seguenti insiemi sono numerabili
-& \drkgrn{perché li elenco così} & \drkred{cioè così}\\
+& {\drkgrn perché li elenco così} & {\drkred cioè così}\\
 \hline
-\hskip 7em $\NN$ & \drkgrn{$0,1,2,3\ldots$} & \drkred{$a_i = i$}\\
-\hskip 7em $\{\text{numeri dispari}\}$ & \drkgrn{$1,3,5,7\ldots$} & \drkred{$a_i = 2i +
+\hskip 7em $\NN$ & {\drkgrn $0,1,2,3\ldots$} & {\drkred $a_i = i$}\\
+\hskip 7em $\{\text{numeri dispari}\}$ & {\drkgrn $1,3,5,7\ldots$} & {\drkred $a_i = 2i +
 1$}\\
-\hskip 7em $\{\text{numeri primi}\}$ & \drkgrn{$2,3,5,7\ldots$} & \drkred{$a_i =
+\hskip 7em $\{\text{numeri primi}\}$ & {\drkgrn $2,3,5,7\ldots$} & {\drkred $a_i =
 \text{boh?} \; p_i \, \text{?}$}\\
-\hskip 7em $\ZZ$ & \drkgrn{$0, -1, 1, -2, 2\ldots$} &  \drkred{$a_i =  (-1)^i
+\hskip 7em $\ZZ$ & {\drkgrn $0, -1, 1, -2, 2\ldots$} &  {\drkred $a_i =  (-1)^i
 \left\lceil\frac{i}{2}\right\rceil$}
 	\end{tabular}
 \end{example}
@@ -182,7 +182,7 @@ La funzione
 \begin{align*} f \colon \NN \times \NN & \to \NN\\
 	 (x,y) &\mapsto 2^x(1+2y) - 1
 \end{align*}
-è biunivoca \drkgrn{(perché?),} quindi $a_i = f^{-1}(i)$ enumera $\NN \times \NN$.
+è biunivoca {\drkgrn (perché?),} quindi $a_i = f^{-1}(i)$ enumera $\NN \times \NN$.
 \end{proof}
 
 \begin{proposition}
@@ -193,7 +193,7 @@ Un sottoinsieme infinito di un insieme numerabile è, a sua volta, numerabile.
 Sia $Y \subseteq X$ con $Y$ infinito e $X = \{a_i | i \in \NN\}$. La
 sottosuccessione $b_j = a_{i_j}$ degli $a_*$ che appartengono a $Y$
 enumera $Y$.
-\drkred{A essere precisi 
+{\drkred A essere precisi 
 bisognerebbe dire esattamente chi sono gli indici $i_j$. Per ricorsione:
 \[ i_0 = \min\{i | a_i \in Y\} \qquad i_{j+1} = \min\{i > i_j | a_i \in Y\} \]
 dove i minimi esistono perché $Y$ non è finito.}
@@ -216,7 +216,7 @@ $\QQ$ è numerabile.
 $\QQ$ è in corrispondenza biunivoca con
 \[\{(\textrm{num},\textrm{den}) | \textrm{num} \in \ZZ \wedge \textrm{den}
 \in\NN_{>0} \wedge \textrm{MCD}(\textrm{num},\textrm{den}) = 1\} \quad
-\subseteq \quad \ZZ \times \NN\]
+\subseteq \quad \ZZ \times \NN \qedhere\]
 \end{proof}
 
 \begin{notexample}
@@ -233,7 +233,7 @@ definita per ricorrenza da:
 		\centering
 		\includegraphics[width=10.5cm]{immagini/RRnum.png}
 	\end{figure}
-Si vede facilmente \drkgrn{(esercizio!)} che la successione $\{a_{i_{2k}}\}_k$ è crescente, $\{a_{i_{2k+1}}\}_k$ è decrescente 
+Si vede facilmente {\drkgrn (esercizio!)} che la successione $\{a_{i_{2k}}\}_k$ è crescente, $\{a_{i_{2k+1}}\}_k$ è decrescente 
 e
 \[l_{\textrm{pari}}=\lim_{k \to +\infty} a_{i_{2k}} \;\; \leq \;\; \lim_{k \to
 +\infty}a_{i_{2k+1}} = l_{\textrm{dispari}}\]
@@ -278,9 +278,9 @@ soddisfa~($\star$).
 \end{remark}
 
 \begin{proof}
-Occorre dimostrare che \drkred{se} $f\colon \RR \to \RR$ è continua, lineare
+Occorre dimostrare che {\drkred se} $f\colon \RR \to \RR$ è continua, lineare
 quando ristretta agli intervalli aperti che non intersecano $X$, e non ha
-punti angolosi, \drkred{allora} $f$ è lineare quando ristretta agli intervalli
+punti angolosi, {\drkred allora} $f$ è lineare quando ristretta agli intervalli
 aperti che non intersecano $X'$.
 Fatto questo, usando l'ipotesi su~$X'$, deduciamo che $f$ è lineare -- abbiamo
 quindi mostrato che $X$ gode della proprietà~($\star$).
@@ -290,7 +290,7 @@ lineare. Ci basta dire che per ogni $\varepsilon > 0$, $f_{|[a+\varepsilon,
 b-\varepsilon]}$ è lineare.
 Siccome $]a,b[ \, \cap \, X' = \emptyset$, allora $]a,b[ \,\cap\, X \subseteq
 \{\text{punti isolati di $X$}\}$. Quindi $[a+\varepsilon, b-\varepsilon] \cap
-X$ è finito, \drkgrn{se così non fosse, avrebbe un punto di accumulazione
+X$ è finito, {\drkgrn se così non fosse, avrebbe un punto di accumulazione
 che, quindi, sarebbe un punto di accumulazione anche per~$X$, e non un punto
 isolato~$\lightning$} Per cui $f_{|[a+\varepsilon, b-\varepsilon]}$ è lineare
 a tratti, e, siccome per ipotesi non ha punti angolosi, è lineare.
@@ -360,7 +360,7 @@ Perché $X_\omega$ è numerabile?
 
 Ora potremmo pensare che, pazienza se $X_\omega$ non si smonta a furia di
 derivati, sarà un caso partologico. Alla fine, non si potrà fare di molto
-peggio, \drkred{vero?} Per esempio, possiamo fare una successione di insiemi
+peggio, {\drkred vero?} Per esempio, possiamo fare una successione di insiemi
 come~$X_\omega$, chiamiamola~$X_{\omega+1}$, e una successione di insiemi
 come~$X_{\omega+1}$, che chiamiamo~$X_{\omega+2}$, etc.
 
@@ -417,7 +417,7 @@ tutti i numeri primi non è un numero primo. Però ci sono anche collezioni che 
 	\]
 ossia la collezione delle collezioni che non sono membri di se stesse -- la
 $N$ sta per collezioni normali.\\
-\drkred{$N \in N$ oppure no?}\\
+{\drkred $N \in N$ oppure no?}\\
 $N \in N$ se e solo se, per definizione, $N \not \in N\;\;\lightning$
 
 Il paradosso di Russell ci dice che, del principio di collezione -- ossia
