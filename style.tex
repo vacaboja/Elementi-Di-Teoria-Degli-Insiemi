@@ -289,8 +289,8 @@
 \def\redef#1{\expandafter\expandafter\expandafter\let\addold#1#1\def#1}
 
 \redef\forall#1{\oldforall\,#1\,}
-\redef\exists#1{\ifx#1\textcolor\expandafter\funnyexists\else\oldexists\,#1\,\fi}
-\def\funnyexists#1#2{\if#2!\existrun\else\KABOOOOM\fi}
+\redef\exists#1{\ifx\textcolor#1\expandafter\funnyexists\else\if!#1\expandafter\existsun\else\oldexists\,#1\,\fi\fi}
+\def\funnyexists#1#2{\if!#2\existrun\else\KABOOOOM\fi}
 \def\existsun#1{\oldexists !\,#1\,}
 \def\existrun#1{\oldexists {\drkred !}\,#1\,}
 \redef\land{\,\oldland\,}
