@@ -40,7 +40,7 @@
 \newcommand{\wt}{\widetilde}
 \newcommand{\wh}{\widehat}
 \newcommand{\eps}{\varepsilon}
-\newcommand{\vocab}[1]{\textbf{\color{purple} #1}}
+\newcommand{\vocab}[1]{\textbf{\prpl{#1}}}
 
 \newcommand{\CC}{\mathbb C}
 \newcommand{\FF}{\mathbb F}
@@ -276,10 +276,10 @@
 \def\left#1{\ifx#1\{\newleft\else\ifx#1|\oldleft\oldvert\else\oldleft#1\fi\fi}
 \def\right#1{\ifx#1|\oldright\oldvert\else\oldright#1\fi}
 
-\def\drkgrn{\color{green!40!black}}
-\def\drkred{\color{red!60!black}}
-\def\drkblu{\color{blue!60!black}}
-\def\prpl{\color{purple}}
+\def\drkgrn{\color{green!40!black!95}}
+\def\drkred{\color{red!60!black!90!yellow}}
+\def\drkblu{\color{blue!60!black!90!green}}
+\def\prpl{\color{violet}}
 
 \def\above#1{\overset{\smash{\mathclap{\parbox{10cm}{\centering\normalsize\vbox to 0pt{\vss{#1}}}}}}}
 \def\below#1{\underset{\smash{\mathclap{\parbox{10cm}{\centering\normalsize\vbox to 0pt{{#1}\vss}}}}}}
@@ -293,3 +293,5 @@
 \redef\land{\,\oldland\,}
 \redef\lor{\,\oldlor\,}
 \redef\neg{\oldneg\,}
+
+\def\emptyset{\rotatebox[origin=c]{22}{$\varnothing$}}

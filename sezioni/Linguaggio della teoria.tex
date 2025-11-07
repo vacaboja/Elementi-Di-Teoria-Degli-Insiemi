@@ -68,14 +68,15 @@ queste formule, si può dire che non contengono alcuna informazione a proposito
 dell'universo insiemistico. Sai capire quali sono?
 \end{exercise}
 
-\textbf{\underline{Parentesi}} Ad essere precisi, avremmo dovuto definire le formule includendo un mucchio di parentesi, allo scopo di eliminare ogni possibilità
+\textbf{\underline{Parentesi}} Ad essere precisi, avremmo dovuto definire
+le formule includendo parentesi attorno ad ogni sottoformula, allo scopo di eliminare ogni possibilità
 di formare una combinazione di simboli ambigua. Per esempio ${\drkred \Phi_1 \land \Phi_2 \lor \Phi_3}$ è ambigua, perché si potrebbe leggere $(\Phi_1 \land \Phi_2) \lor \Phi_3$
 o $\Phi_1 \land (\Phi_2 \lor \Phi_3)$. In una notazione completamente parentesizzata, per esempio, la formula per ``$a$ è un sottoinsieme di $b$'' sarebbe:
-\[ \neg(\exists x((x \in a)\land(\neg(x \in b))))
-	\]
-Queste formule sono certamente precise, ma spesso illeggibili. Noi useremo le parentesi
-selettivamente per evitare le ambiguità preservando al meglio la leggibilità
-delle formule.
+\[ \neg(\exists x((x \in a)\land(\neg(x \in b)))) \]
+Questo modo di scrivere le formule è certamente preciso, ma spesso
+illeggibile. Noi useremo le parentesi
+selettivamente per evitare le ambiguità preservando al meglio la
+leggibilità.
 
 \def\dohboxm#1#2{\hbox #1{$\displaystyle #2$\hss}}
 \def\hboxm#1#{\dohboxm{#1}}
@@ -91,7 +92,7 @@ la potenza espressiva del linguaggio. Vediamo le prime abbreviazioni:
 {\prpl \exists {x \in y} \Phi }&\pippo \exists x (x \in y \land \Phi) & {\prpl \forall {x \in y} \Phi} &\pippo \forall x (x \in y \rightarrow \Phi) \\
 {\prpl \exists {!\,x} \Phi(x) }&\pippo \mathrlap{\exists x (\Phi(x) \land \forall y(\Phi(y) \rightarrow y = x))} \\
 {\prpl \exists {!\,x \in y} \Phi(x) }&\pippo \exists {!\,x} (x \in y \land \Phi(x)) \\
-{\prpl A \subseteq B }&\pippo \forall {x \in A} x \in B) &{\prpl  A \subsetneq B }&\pippo( A \subseteq B) \land (A \ne B) \\
+{\prpl A \subseteq B }&\pippo \forall {x \in A} x \in B &{\prpl  A \subsetneq B }&\pippo( A \subseteq B) \land (A \ne B) \\
 {\prpl C = A \cup B }&\pippo \mathrlap{\forall x \, x \in C \leftrightarrow (x \in A \lor x \in B)} \\
 {\prpl C = A \cap B }&\pippo \mathrlap{\forall x \, x \in C \leftrightarrow (x \in A \land x \in B)}
 \end{align*}
@@ -100,8 +101,18 @@ la potenza espressiva del linguaggio. Vediamo le prime abbreviazioni:
 	di unione e intersezione.
 \end{note}
 
+È importante rendersi conto del fatto che le formule insiemistiche non
+sono una specie di stenografia. Scrivere $\exists$ dove in italiano
+diremmo ``esiste'', etc.\ può essere un modo efficace di prendere
+appunti, però, quando si vuole scrivere nel linguaggio formale della
+teoria degli insiemi \textbf{\drkred facendo così si sbaglia.} Al
+contrario, le formule insiemistiche sono una lingua che ha la sua
+grammatica. Come si traduce dall'italiano all'inglese riscrivendo frasi o
+paragrafi nella nuova lingua -- non parola per parola -- così bisogna fare
+per tradurre dall'italiano al formalismo insiemistico.
+
 \begin{exercise}
-Esprimi queste proposizioni mediante formule insiemistiche pure:
+Esprimi queste proposizioni mediante formule insiemistiche \textbf{pure:}
 \begin{itemize}
 	\item gli elementi degli elementi di $A$ sono elementi di $A$
 	\item $B$ è l'insieme dei sottoinsiemi di $A$
@@ -172,20 +183,77 @@ Dimostrare le equivalenze precedenti.
 \textbf{\underline{Implicazioni}} Per {\drkred dimostrare} un'implicazione $\Phi
 \rightarrow \Psi$ spesso conviene assumere $\Phi$ e, a partire da questo
 assunto, cercare una dimostrazione di~$\Psi$. L'implicazione
-$\Phi \rightarrow \Psi$ si può {\drkgrn usare} per dedurre $\Psi$ se si sa che
+$\Phi \rightarrow \Psi$ si può {\drkblu usare} per dedurre $\Psi$ se si sa che
 $\Phi$ è vera.
 
 \textbf{\underline{Quantificatori}} {\drkred Dimostrare} una formula universale
-$\forall x \Phi(x)$ significa semplicemente dimostrare $\Phi$ senza fare
-alcuna assunzione sul valore di~$x$. {\drkred Dimostrare} $\forall {x\in
+$\forall x \Phi(x)$ significa semplicemente dimostrare $\Phi(x)$ senza fare
+alcuna assunzione sul valore di~$x$: solitamente si dice che si dimostra
+$\Phi(x)$ per un x {\prpl arbitrario,} e si conclude che vale $\forall x
+\Phi(x)$ per l'arbirtarietà di~$x$. {\drkred Dimostrare} $\forall {x\in
 y}
 \Phi(x)$ significa dedurre $\Phi(x)$ dall'ipotesi~$x\in y$.
 La formula $\forall x \Phi(x)$
-{\drkgrn si usa} per dedurre che vale $\Phi(\text{\drkblu qualcosa})$. La
-formula $\forall {x\in y} \Phi(x)$ {\drkgrn si può usare} se si sa
-che~$\text{\drkblu qualcosa}\in y$ per dedurre che vale $\Phi(\text{\drkblu qualcosa})$.
+{\drkblu si usa} per dedurre che vale $\Phi(\text{qualcosa})$. La
+formula $\forall {x\in y} \Phi(x)$ {\drkblu si può usare}, se si sa
+che~$\text{qualcosa}\in y$, per dedurre che vale
+$\Phi(\text{qualcosa})$.
 
-TODO: esistenziale
+\begin{example}
+Dimostriamo in maniera dettagliatissima questa formula
+\[ \forall A \bigl((\forall B B \not\in A) \rightarrow (\forall C A \subseteq
+C)\bigr) \]
+che dice che un insieme vuoto è sottoinsieme di qualunque insieme.
+\end{example}
+
+\begin{note}
+Al momento non possiamo né dimostrare che esiste un insieme vuoto, né,
+ammesso che esista, dimostrare che è unico. Per queste cose serviranno gli
+assiomi della teoria degli insiemi. Il fatto che un insieme vuoto (se c'è)
+è sottoinsieme di qualunque cosa, però, è una mera validità logica.
+\end{note}
+
+\begin{proof}
+{\drkgrn Il ragionamento che vogliamo formalizzare è come segue. L'insieme
+$A$, per ipotesi, non ha elementi. Dobbiamo dire che è sottoinsieme di
+qualunque~$C$, ossia che non ci sono elementi di $A$ che non siano
+elementi di~$C$. Questa, però, è vera a fortiori, perché non ci sono
+elementi di $A$ tout court.}
+
+Consideriamo un $\overline A$ arbitrario, dobbiamo dimostrare
+$\drkred (\forall B B \not\in \overline A) \rightarrow (\forall C \overline A
+\subseteq C).$
+Questo significa che, assumendo $\drkblu \forall B B \not\in \overline A$ dobbiamo
+dimostrare $\drkred \forall C \overline A \subseteq C.$ Fissiamo quindi un $\overline C$
+arbitrario: dobbiamo dimostrare $\drkred \overline A \subseteq \overline C.$ Per
+definizione questa formula equivale a
+$ \drkred \forall x x\in \overline A \rightarrow x\in \overline C.$
+Fissiamo ora un $\overline x$ arbitrario: dobbiamo dimostrare
+$ \drkred \overline x\in \overline A \rightarrow \overline x\in \overline C.$ Ossia, dobbiamo
+dimostrare $ \drkred \neg \overline x \in \overline C \rightarrow \neg \overline x\in \overline
+A.$ Assumiamo quindi $\drkblu \neg \overline x \in \overline C$ e
+dimostriamo~$\drkred\neg
+\overline x\in \overline A.$ Ricapitolando:
+\begin{flalign*}
+\text{\drkblu assumendo:}&\drkblu\qquad \neg \overline x \in \overline C \qquad \forall B
+B \not\in \overline A &\\
+\text{\drkred dobbiamo dimostrare:}&\drkred\qquad \neg \overline x\in \overline A
+\end{flalign*}
+Usando la seconda assunzione con $B = \overline x$ otteniamo $\drkblu \overline x \not\in
+\overline A,$ che equivale per definizione alla tesi.
+\end{proof}
+
+La maniera diretta di {\drkred dimostrare} una formula esistenziale
+$\exists x \Phi(x)$ è esibire un insieme~Giorgio e una dimostrazione del fatto
+che vale~$\Phi(\text{Giorgio})$. Allo stesso modo, per {\drkred dimostrare}
+$\exists {x\in y} \Phi(x)$, possiamo esibite un insieme $K$, una
+dimostrazione di $K \in y$, e una di~$\Phi(K)$. La formula
+$\exists x \Phi(x)$ {\drkblu si usa} introducendo una nuova
+variabile~$\alpha$ e assumendo l'ipotesi~$\Phi(\alpha)$. Se non abbiamo
+fatto nessuna ipotesi sulla variabile~$x$, nulla vieta di usare il
+simbolo~$x$ stesso come nuova variabile. La formula
+$\exists {x\in y} \Phi(x)$ {\drkblu si usa} introducendo una nuova
+variabile~$\alpha$ e assumendo simultaneamente le ipotesi $\alpha\in y$ e~$\Phi(\alpha)$.
 
 Potrebbe far comodo ricordare le equivalenze seguenti.
 \begin{align*}
@@ -206,13 +274,14 @@ Convinciti della validità delle equivalenze.
 
 \begin{exercise}
 Dimostra che:
-\[ \neg \forall x \in A \, \Phi \equiv \exists x \in A \, \neg \Phi \qquad \neg \exists x \in A \, \Phi \equiv \forall x \in A \, \Phi
+\[ \neg \forall x \in A \, \Phi(x) \pippo \exists x \in A \, \neg \Phi(x)
+\qquad \neg \exists x \in A \, \Phi(x) \pippo \forall x \in A \, \Phi(x)
 	\]
 \end{exercise}
 
 \begin{exercise}
 Dimostra che:
-\[ \forall x (x \in A \rightarrow x \in B) \equiv \neg \exists x (x \in A \land \neg x \in B)
+\[ \forall x (x \in A \rightarrow x \in B) \pippo \neg \exists x (x \in A \land \neg x \in B)
 	\]
 \end{exercise}
 
@@ -222,5 +291,14 @@ Secondo te, la seguente formula è vera?
 	\]
 \end{exercise}
 
-Infine vi sono regole per la relazione di uguaglianza, che dicono, in sostanza, che se $x = y$ allora $x$ e $y$ non sono distinguibili, ossia vale $\Phi(x) \leftrightarrow \Phi(y)$ qualunque sia $\Phi$.
-Per quanto ci riguarda, \textbf{se $x = y$ allora $x$ e $y$ sono nomi della stessa cosa}.
+\textbf{\underline{Relazione di uguaglianza}}
+Vi sono regole per la relazione di uguaglianza, che dicono, in sostanza,
+che se $x = y$ allora $x$ e $y$ non sono distinguibili. Più precisamente
+valgono due cose: $x = x$; e $x = y \rightarrow (\Phi(x)
+\leftrightarrow \Phi(y))$ qualunque sia $\Phi$.
+Per quanto ci riguarda, \textbf{se $\mathbf{x = y}$ allora $\mathbf x$ e
+$\mathbf y$ sono nomi della stessa cosa}.
+
+\textbf{\underline{Dimostrazione per assurdo}}
+È un procedimento già implicito nelle osservazioni qua sopra, ma sarebbe
+assurdo non menzionarlo.
