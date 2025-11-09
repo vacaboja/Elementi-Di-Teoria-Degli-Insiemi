@@ -1,11 +1,11 @@
 \section{I primi assiomi}
 \subsection{Assiomi dell'insieme vuoto e di estensionalità}
+\vskip\baselineskip
 \begin{axiom}
 [Assioma dell'insieme vuoto]
 \label{ax1}
-Esiste un insieme vuoto.
-\[ \exists x \; \forall y \; y \not\in x
-		\]
+``Esiste un insieme vuoto.''$\color{blue}\;\;\longleftarrow\text{informalmente}$
+\[ {\color{blue}\mathllap{\text{questo è l'assioma}\longrightarrow\;\;}} \exists x \; \forall y \; y \not\in x \]
 \end{axiom}
 
 \begin{note}
@@ -16,13 +16,17 @@ Tuttavia è bello poter partire avendo per le mani almeno un insieme.
 \begin{axiom}
 [Assioma di estensionalità]
 \label{ax2}
-Un insieme è determinato dalla collezione dei suoi elementi. Due insiemi coincidono se e solo se hanno i medesimi elementi.
+``Un insieme è determinato dalla collezione dei suoi elementi.''\\
+\hbox to 2em{\hss}{\drkgrn o anche}\\
+``Due insiemi coincidono se e solo se hanno i medesimi elementi.''
 \[ \forall a \; \forall b \; a = b \leftrightarrow \forall x (x \in a \leftrightarrow x \in b)
 	\]
 \end{axiom}
 
 \begin{exercise}
-Dimostra che la freccia $a = b \rightarrow \forall x (x \in a \leftrightarrow x \in b)$, in realtà, segue dal fatto che se $a = b$ allora $a$ e $b$ sono indistinguibili\footnote{Nel senso che abbiamo descritto in precedenza, cioè sono nomi della stessa cosa.}.
+Dimostra che la freccia $a = b \rightarrow \forall x (x \in a
+\leftrightarrow x \in b)$, in realtà, è una semplice conseguenza dalle
+regole per l'uguaglianza date alla sezione precedente.
 \end{exercise}
 
 \textbf{\underline{Convenzione}} Le variabili libere (= non quantificate), se non specificato altrimenti, si intendono quantificate universalmente all'inizio della formula. Per cui possiamo scrivere
@@ -32,47 +36,68 @@ l'assioma di estensionalità semplicemente nella forma:
 
 \begin{proposition}[Unicità dell'insieme vuoto]
 C'è un unico insieme vuoto.
-\[ \exists ! \, x \; \forall y \; y \not \in x
+\[ \exists ! x \forall y y \not \in x
 	\]
 \end{proposition}
 
 \begin{proof}
-Consideriamo due insiemi vuoti $x_1$ e $x_2$, ossia supponiamo $\forall y \, y \not\in x_1$, e $\forall y \, y \not \in x_2$. Allora:
-\[ \forall y (y \in x_1 \leftrightarrow y \in x_2)
-	\]
-[sono coimplicate logicamente] perché $y \in x_1$ e $y \in x_2$ sono entrambe necessariamente false (quindi la proposizione così com'è scritta è sempre vera). Per \hyperref[ax2]{estensionalità}, la proposizione sopra (sempre vera) è equivalente a $x_1 = x_2$ (che quindi a sua volta sarà sempre vera), e quindi abbiamo la tesi.
+L'esistenza è l'\hyperref[ax1]{assioma del vuoto.} Per dimostrare
+l'unicità,
+consideriamo due insiemi vuoti $x_1$ e $x_2$, ossia supponiamo $\forall y \, y \not\in x_1$, e $\forall y \, y \not \in x_2$. Allora
+\[ \forall y (y \in x_1 \leftrightarrow y \in x_2) \]
+perché $y \in x_1$ e $y \in x_2$ sono entrambe necessariamente false.
+Quindi, per \hyperref[ax2]{estensionalità,} $x_1 = x_2$, che è la tesi.
 \end{proof}
 
-\emph{Dimostrazione formale.} Questo livello di pedanteria non è necessario, ma, per una volta, proviamo a dimostrare in ogni dettaglio la formula $\exists ! x (\forall y (y \not \in x))$. Per definizione di $\exists !$, ciò equivale a:
-\[ \exists x_1 ((\forall y \, y \not \in x_1) \land \forall x_2 ((\forall y \, y \not \in x_2) \rightarrow x_2 = x_1))
+\begin{proof}[Dimostrazione formale.] Questo livello di pedanteria non è
+necessario, ma, per una volta, proviamo a dimostrare in ogni dettaglio la
+formula $\exists ! x (\forall y (y \not \in x))$. Per definizione di
+$\oldexists!$, questa formula equivale a
+\[ \exists {x_1} \Bigl((\forall y \, y \not \in x_1) \land
+\forall {x_2} \bigl((\forall y \, y \not \in x_2) \rightarrow x_2 =
+x_1\bigr)\Bigr)
 	\]
-Per l'\hyperref[ax1]{assioma del vuoto}, $\exists x_1 \, \forall y \, y \not \in x_1$: fissiamo questo $x_1$. Resta da dimostrare che:
-\[ (\forall y \, y \not \in x_1) \land \forall x_2(\forall y \, y \not \in x_2) \rightarrow x_2 = x_1
+Per l'\hyperref[ax1]{assioma del vuoto,} $\exists {x_1} \forall y \, y \not \in x_1$: fissiamo questo $x_1$. Resta da dimostrare che
+\[ (\forall y \, y \not \in x_1) \land \forall {x_2} \bigl((\forall y \, y
+\not \in x_2) \rightarrow x_2 = x_1\bigr) \]
+Per costruzione, $\forall y  y \not\in x_1$ è vera, quindi resta da
+dimostrare
+\[ \forall {x_2} \bigl((\forall y \, y \not \in x_2) \rightarrow x_2 =
+x_1\bigr)
 	\]
-Per costruzione, $\forall y \, y \not\in x_1$, è vera (avendo fissato $x_1$), quindi resta:
-\[ \forall x_2 (\forall y \, y \not \in x_2) \rightarrow x_2 = x_1
+Ora prendiamo un $x_2$ arbitrario, dobbiamo dimostrare
+\[ \forall y \bigl((y \not \in x_2) \rightarrow x_2 = x_1\bigr) \tag{$\star$}
 	\]
-Ora prendiamo un $x_2$ qualunque, dobbiamo dimostrare:
-\[ \forall y (y \not \in x_2) \rightarrow x_2 = x_1
+Si danno due casi: o $\forall y (y \not \in x_2)$ è vera o è falsa. Nel
+secondo caso, l'implicazione~($\star$) è vera per via della tabella di verità. Nel primo abbiamo sia $\forall y y \not \in x_1$, per
+costruzione, sia $\forall y y \not \in x_2$, per ipotesi. Quindi, preso un
+$y$ arbitrario, $y \in x_2$ e $y \in x_1$ sono entrambe false. La tabella di verità di $\leftrightarrow$ ci dice quindi che vale $y \in x_2 \leftrightarrow y \in x_1$, e, per 
+l'arbitrarietà di $y$
+\[ \forall y (y \in x_2 \leftrightarrow y \in x_1)
 	\]
-Si danno due casi: o $\forall y (y \not \in x_2)$ è vera o è falsa. Nel secondo caso, l'implicazione è vera per via della tabella di verità. Nel primo abbiamo sia $\forall y \, y \not \in x_1$, [vera] per
-costruzione, sia $\forall y \, y \not \in x_2$, [vera] per ipotesi. Quindi, preso un qualunque $y$, $y \in x_1$ e $y \in x_2$ sono entrambe false. La tabella di verità di $\leftrightarrow$ ci dice quindi che vale $y \in x_1 \leftrightarrow y \in x_2$, e, per 
-l'arbitrarietà di $y$:
-\[ \forall y (y \in x_1 \leftrightarrow y \in x_2)
+Dall'\hyperref[ax2]{assioma di estensionalità}
+\[ \forall y (y \in x_2 \leftrightarrow y \in x_1) \rightarrow x_2 = x_1
 	\]
-Dall'\hyperref[ax2]{assioma di estensionalità}:
-\[ \forall y (y \in x_1 \leftrightarrow y \in x_2) \rightarrow x_1 = x_2
-	\]
-Abbiamo quindi $x_1 = x_2$, da cui segue la verità dell'implicazione iniziale. $\hfill\square$
+Abbiamo quindi $x_2 = x_1$, da cui segue la verità
+dell'implicazione~($\star$).
+\end{proof}
 
-
-Chiaramente, ho voluto scrivere questa dimostrazione delirante per convincervi che NON È UNA BUONA IDEA.
+\begin{note}
+Questa è la seconda e ultima dimostrazione ``formale'' (= delirante) di queste dispense.
+Vi sarete convinti che scrivere a un simile livello di dettaglio, in
+realtà, nasconde il nocciolo dell'argomento, per cui \textbf{non è una buona idea.}
+\end{note}
 
 \begin{notation}
 L'unicità dell'insieme vuoto ci giustifica ad introdurre delle nuove abbreviazioni:
-\[ x = \emptyset \Mydef \forall y \, y \not\in x \qquad \emptyset \in x \Mydef \exists z (z = \emptyset \land z \in x)
+\[ {\prpl x = \emptyset} \;\; \Mydef \;\; \forall y \, y \not\in x \qquad {\prpl
+\emptyset \in x} \;\; \Mydef \;\; \exists z (z = \emptyset \land z \in x)
+\qquad {\prpl x \in \emptyset} \;\; \Mydef \;\; \above{\footnotesize\color{blue}=
+``falso''\\\vskip-.4\baselineskip$\downarrow$}\bot
 	\]
 \end{notation}
+
+TODO: continue from here
 
 \subsection{Assioma di separazione}
 \begin{axiom}

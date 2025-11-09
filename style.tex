@@ -4,11 +4,13 @@
 
 \usepackage[sc,osf]{mathpazo}
 \usepackage[scaled=.95]{helvet} 
+\usepackage[euler-digits]{eulervm}
 \usepackage[italian]{babel}
 \usepackage{microtype}
-\usepackage{mathtools}
 \usepackage{amssymb}
+\usepackage{mathtools}
 \usepackage{amsthm}
+\usepackage{marvosym}
 \usepackage[svgnames,dvipsnames]{xcolor}
 \usepackage[colorlinks=true,pdfusetitle]{hyperref}
 \hypersetup{urlcolor=RubineRed,linkcolor=RoyalBlue,citecolor=ForestGreen,hypertexnames=false}
@@ -199,7 +201,7 @@
 \declaretheorem[style=thmbluebox,name=Fatto,sibling=theorem]{fact}
 \declaretheorem[style=thmbluebox,name=Fatto,numbered=no]{fact*}
 
-\declaretheorem[style=thmrosebox,name=Assioma,sibling=theorem]{axiom}
+\declaretheorem[style=thmrosebox,name=Assioma]{axiom}
 
 \declaretheorem[style=thmredbox,name=Esempio,sibling=theorem]{example}
 \declaretheorem[style=thmredbox,name=Esempio,numbered=no]{example*}
@@ -244,7 +246,6 @@
 
 \linespread{1.05}
 \DeclareTextFontCommand{\textsl}{\fontfamily{ppl}\fontshape{sl}\selectfont}
-\usepackage[euler-digits]{eulervm}
 \let\mathbf\mathbold
 \let\oldscshape\scshape
 \AtBeginDocument{
@@ -289,8 +290,8 @@
 \def\redef#1{\expandafter\expandafter\expandafter\let\addold#1#1\def#1}
 
 \redef\forall#1{\oldforall\,#1\,}
-\redef\exists#1{\ifx\textcolor#1\expandafter\funnyexists\else\if!#1\expandafter\existsun\else\oldexists\,#1\,\fi\fi}
-\def\funnyexists#1#2{\if!#2\existrun\else\KABOOOOM\fi}
+\redef\exists#1{\ifx\textcolor#1\expandafter\funnyexists\else\if#1!\expandafter\expandafter\expandafter\existsun\else\oldexists\,#1\,\fi\fi}
+\def\funnyexists#1#2{\if#2!\existrun\else\KABOOOOM\fi}
 \def\existsun#1{\oldexists !\,#1\,}
 \def\existrun#1{\oldexists {\drkred !}\,#1\,}
 \redef\land{\,\oldland\,}
@@ -298,3 +299,6 @@
 \redef\neg{\oldneg\,}
 
 \def\emptyset{\rotatebox[origin=c]{22}{$\varnothing$}}
+
+\def\mvchr#1{\mbox{\mvs\symbol{#1}}}
+\let\lightning\Lightning

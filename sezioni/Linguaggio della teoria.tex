@@ -90,8 +90,8 @@ la potenza espressiva del linguaggio. Vediamo le prime abbreviazioni:
 {\prpl {\prpl \Phi \rightarrow \Psi} }&\pippo \Psi \lor \neg \Phi  &{\prpl  \Phi \leftrightarrow \Psi }&\pippo (\Phi \rightarrow \Psi) \land (\Psi \rightarrow \Phi) \\
 {\prpl x \ne y }&\pippo \neg x = y  &{\prpl  x \not\in y }&\pippo \neg x \in y  \\
 {\prpl \exists {x \in y} \Phi }&\pippo \exists x (x \in y \land \Phi) & {\prpl \forall {x \in y} \Phi} &\pippo \forall x (x \in y \rightarrow \Phi) \\
-{\prpl \exists {!\,x} \Phi(x) }&\pippo \mathrlap{\exists x (\Phi(x) \land \forall y(\Phi(y) \rightarrow y = x))} \\
-{\prpl \exists {!\,x \in y} \Phi(x) }&\pippo \exists {!\,x} (x \in y \land \Phi(x)) \\
+{\prpl \exists ! x \Phi(x) }&\pippo \mathrlap{\exists x (\Phi(x) \land \forall y(\Phi(y) \rightarrow y = x))} \\
+{\prpl \exists ! {x \in y} \Phi(x) }&\pippo \exists ! x (x \in y \land \Phi(x)) \\
 {\prpl A \subseteq B }&\pippo \forall {x \in A} x \in B &{\prpl  A \subsetneq B }&\pippo( A \subseteq B) \land (A \ne B) \\
 {\prpl C = A \cup B }&\pippo \mathrlap{\forall x \, x \in C \leftrightarrow (x \in A \lor x \in B)} \\
 {\prpl C = A \cap B }&\pippo \mathrlap{\forall x \, x \in C \leftrightarrow (x \in A \land x \in B)}
@@ -177,7 +177,12 @@ mente:
 \phantom{\neg} \Psi \pippo \neg \Psi \rightarrow \neg \Phi} &
 \end{align*}
 \begin{exercise}
-Dimostrare le equivalenze precedenti.
+Ricava, dalle definizioni dei connettivi, le tavole di verità di $\Phi\,
+\text{\ding{167}}\, \Psi$ con $\text{\ding{167}}\, =\,
+\oldneg,\,\oldland,\,\oldlor,\,\rightarrow,\,\leftrightarrow$.
+\end{exercise}
+\begin{exercise}
+Dimostra le equivalenze precedenti.
 \end{exercise}
 
 \textbf{\underline{Implicazioni}} Per {\drkred dimostrare} un'implicazione $\Phi
