@@ -97,45 +97,61 @@ L'unicità dell'insieme vuoto ci giustifica ad introdurre delle nuove abbreviazi
 	\]
 \end{notation}
 
-TODO: continue from here
+\begin{note}
+Questo procedimento è generico: ogniqualvolta dimostreremo che esiste un
+unico insieme~$\alpha$ con una certa proprietà $\Phi(\alpha)$, potremo associare un
+nuovo simbolo~$\Leo$ a questo~$\alpha$. Formalmente, l'operazione si compie
+definendo tre abbreviazioni:
+\[ {\prpl x = \Leo} \; \Mydef \; \Phi(x) \quad {\prpl
+\Leo \in x} \; \Mydef \; \exists y (\Phi(y) \land y\in x) \quad
+{\prpl x \in \Leo} \; \Mydef \; \exists y (\Phi(y) \land x\in y) \;\; \]
+Stante che il procedimento è meccanico, ci limiteremo ad enunciare
+esplicitamente la prima di queste definizioni.
+\end{note}
 
 \subsection{Assioma di separazione}
+\vskip\baselineskip
 \begin{axiom}
 [Assioma di separazione]
 \label{ax3}
-Se $A$ è un insieme, e $\psi(x)$ una formula insiemistica qualunque, allora $\{x \in A | \psi (x)\}$\footnote{Stiamo usando già questa notazione, ma la definiremo a breve.} è un insieme.
-\[ \forall A \; \exists B \; \forall x \; x \in B \leftrightarrow (x \in A \land \psi (x))
+``Se $A$ è un insieme, e $\Phi(x)$ una formula insiemistica, allora $\{x \in
+A | \Phi (x)\}$ è un insieme.''
+\[ \forall A \; \exists B \; \forall x \; x \in B \leftrightarrow (x \in A
+\land \Phi (x))
 	\]
 \end{axiom}
 
 \begin{note}
-Tecnicamente l'assioma di separazione è uno \vocab{schema di assiomi}, ossia una regola che, per ogni possibile formula $\psi$, ci permette di scrivere un assioma.
+Tecnicamente l'assioma di separazione è uno \vocab{schema di assiomi},
+ossia una regola che, per ogni possibile formula $\Phi$, ci permette di scrivere un assioma.
 \end{note}
 
 \begin{proposition}
-Fissati $A$ e $\psi(x)$, l'insieme $\{x \in A | \psi(x)\}$ è univocamente definito. Ossia:
-\[ \forall A \; \exists \textcolor{red}{!} B \; \forall x \; x \in B \leftrightarrow (x \in A \land \psi(x))
+Fissati $A$ e $\Phi(x)$, l'insieme $\{x \in A | \Phi(x)\}$ è univocamente definito. Ossia:
+\[ \forall A \; \exists \textcolor{red}{!} B \; \forall x \; x \in B
+\leftrightarrow (x \in A \land \Phi(x))
 	\]
 \end{proposition}
 
 \begin{proof}
 Come per l'unicità dell'insieme vuoto, supponiamo di avere $B_1$ e $B_2$ tali che:
-\[ \forall x \, x \in B_1 \leftrightarrow (x \in A \land \psi(x)) \qquad \forall x \, x \in B_2 \leftrightarrow (x \in A \land \psi(x))
+\[ \forall x \, x \in B_1 \leftrightarrow (x \in A \land \Phi(x)) \qquad
+\forall x \, x \in B_2 \leftrightarrow (x \in A \land \Phi(x))
 	\]
-Allora, $\forall x \, x \in B_1 \leftrightarrow (x \in A \land \psi(x)) \leftrightarrow x \in B_2$, quindi ciò coimplica, per \hyperref[ax2]{estensionalità}, che $B_1 = B_2$.
+Allora $x \in B_1 \leftrightarrow (x \in A \land \Phi(x))
+\leftrightarrow x \in B_2$, quindi, per \hyperref[ax2]{estensionalità}, $B_1 = B_2$.
 \end{proof}
-
-\begin{exercise}[Transitività della coimplicazione]
-Verificare che se $\psi \leftrightarrow \Phi$ e $\Phi \leftrightarrow \Theta$, allora $\psi \leftrightarrow \Theta$.
-\end{exercise}
 
 \begin{notation}
 Vista l'unicità, possiamo introdurre una nuova abbreviazione:
-\[ B = \{x \in A | \psi(x)\} \Mydef \forall x \, x \in B \leftrightarrow (x \in A \land \psi(x))
+\[ {\prpl B = \{x \in A | \Phi(x)\}} \;\;\Mydef\;\; \forall x \, x \in B
+\leftrightarrow (x \in A \land \Phi(x))
 	\]
 \end{notation}
 
-Osserviamo che l'assioma di separazione è una forma indebolita del principio di collezione\footnote{Quel principio che definisce gli insiemi come tutte le cose che soddisfano una certa formula.}. Rimpiazzando il principio con questo assioma, il Paradosso di Russell diventa una proposizione.
+Osserviamo che l'assioma di separazione è una forma indebolita del
+principio di collezione. Riducendo in questo modo il principio di
+collezione, si ottiene che il Paradosso di Russell diventa una proposizione.
 
 \begin{proposition}[Insieme di tutti gli inisemi]
 Non esiste l'insieme di tutti gli insiemi.
@@ -144,25 +160,38 @@ Non esiste l'insieme di tutti gli insiemi.
 \end{proposition}
 
 \begin{proof}
-Supponiamo, per assurdo, che esista questo $V$. Allora, per \hyperref[ax3]{separazione} con la formula $\psi (x) \equiv x \not \in x$, esiste l'insieme:
+Supponiamo, per assurdo, che esista questo $V$. Allora, per
+\hyperref[ax3]{separazione} con la formula $\Phi(x) \equiv x \not \in x$, esiste l'insieme
 \[ N = \{x \in V | x \not\in x\}
 	\]
-che, per definizione (via separazione), ha la proprietà:
+che, per definizione, ha la proprietà
 \[ \forall x \, x \in N \leftrightarrow (x \in V \land x \not \in x)
 	\]
-Per ipotesi assurda, $x \in V$ è sempre vera (stiamo considerando l'insieme di tutti gli insiemi), quindi quanto scritto si riduce a:
+Per ipotesi assurda, $x \in V$ è sempre vera, quindi
 \[ \forall x \, x \in N \leftrightarrow x \not\in x
 	\]
-prendendo ora come insieme $N$: $x = N$, abbiamo $N \in N \leftrightarrow N \not\in N$, assurdo.
+prendendo, ora, $x = N$, abbiamo $N \in N \leftrightarrow N \not\in N$, assurdo.
 \end{proof}
 
 \subsection{Classi e classi proprie}
-Sebbene, abbiamo detto che gli unici oggetti della teoria degli insiemi sono gli insiemi, usualmente ci si riferisce alla collezione di tutti gli insiemi 
-che soddisfano una certa formula come ad una specie di insieme: una \vocab{classe}. Più precisamente, data una formula $\psi(x)$, se diciamo: ``sia $C$ la classe degli insiemi $x$ tali che $\psi(x)$''
-intendiamo dire che useremo la scrittura $x \in C$ come una semplice abbreviazione per la formula $\psi(x)$.\footnote{Ovvero per tutti gli oggetti (solo gli insiemi in questo caso) che soddisfano una tale formula $\psi(x)$.} \\
-Non avrebbe senso scrivere \textcolor{red}{$C \in$ qualcosa}, perché il simbolo $\in$ in $x \in C$ non ha senso (ha senso solo tra oggetti di tipo insieme), se non nel tutt'uno $\in C$. In altri termini, se scriviamo $x \in C$ in luogo di $\psi(x)$ è solo come ausilio dell'intuizione (per comodità insomma, senza intendere qualcosa di formale all'interno della teoria degli insiemi):
-avremmo potuto decidere di scrivere $x$\ding{168}, o nient'altro che $\psi(x)$.
+Sebbene, abbiamo detto, gli unici oggetti della teoria degli insiemi sono gli insiemi, usualmente ci si riferisce alla collezione di tutti gli insiemi 
+che soddisfano una certa formula come ad una specie di insieme: una
+\vocab{classe}. Più precisamente, data una formula $\Phi(x)$, se diciamo:
+``sia $C$ la classe degli insiemi $x$ tali che $\Phi(x)$''
+intendiamo dire che useremo la scrittura $x \in C$ come una semplice
+abbreviazione per la formula $\Phi(x)$. Si capisce che il glifo~$C$,
+qui, non ha un senso proprio: si tratta semplicemente di una parte del
+simbolo $\drkred \in C$ che è un tutt'uno inscindibile.
+Non avrebbe senso, per esempio, scrivere $C \in \text{qualcosa}$. In altri
+termini, se scriviamo $x \in C$ in luogo di $\Phi(x)$ è solo come ausilio
+all'intuizione -- per comodità insomma -- e sarebbe stato ugualmente
+lecito
+decidere di scrivere $x\,\IroningII$, o nient'altro
+che~$\Phi(x)$. Per caso, il simbolo che abbiamo scelto, $\drkred \in C,$
+assomiglia graficamente a un simbolo di appartenenza applicato al
+glifo~$C$.
 
+%TODO: from here
 \begin{definition}[Classe universale]
 La classe $V$ si dice \vocab{classe universale} ed è la classe di tutti gli insiemi.
 \[ x \in V \Mydef x = x \footnote{Cioè la classe degli insiemi che soddisfano il predicato $\psi(x): x = x$ (ovvero tutti gli insiemi per quanto assunto all'inizio della teoria), $V = \{x | \psi(x)\} = \{x | x = x\}$ (dove naturalmente non sto usando separazione ma il principio di collezione perché stiamo definendo una classe).}
