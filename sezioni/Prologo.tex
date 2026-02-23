@@ -1,6 +1,6 @@
 \section{Prologo nel XIX secolo}
-La nascita della teoria degli insiemi è una storia complicata di cui so pochissimo. Però, persone che ne sanno molto più di me hanno sostenuto l'opinione che il problema seguente
-abbia avuto un ruolo. Come che sia, è almeno un'introduzione passabile.
+La nascita della teoria degli insiemi \`e una storia complicata di cui so pochissimo. Per\`o, persone che ne sanno molto pi\`u di me hanno sostenuto l'opinione che il problema seguente
+abbia avuto un ruolo. Come che sia, \`e almeno un'introduzione passabile.
 
 \begin{problem}
 Data una serie trigonometrica:
@@ -15,12 +15,12 @@ univocamente determinati da~$f$?}
 
 Risolto positivamente da
 \href{https://it.wikipedia.org/wiki/Georg_Cantor}{\textcolor{purple}{Georg
-Cantor}} nel 1870. Ottenuto questo risultato, Cantor nota che è possibile
-indebolire l'ipotesi: può assumere la convergenza a~$0$ solo su un opportuno
+Cantor}} nel 1870. Ottenuto questo risultato, Cantor nota che \`e possibile
+indebolire l'ipotesi: pu\`o assumere la convergenza a~$0$ solo su un opportuno
 sottoinsieme di~$\RR$.
 
 \begin{definition}
-Diciamo che $X \subseteq \RR$ è un \vocab{insieme di unicità} se, per ogni serie trigonometrica:
+Diciamo che $X \subseteq \RR$ \`e un \vocab{insieme di unicit\`a} se, per ogni serie trigonometrica:
 \[ S(x) = c_0 + \sum_{i=1}^{+\infty}a_i\sin{(ix)}+b_i\cos{(ix)}
 	\]
 vale la seguente implicazione:
@@ -29,31 +29,31 @@ vale la seguente implicazione:
 \end{definition}
 
 \begin{example}
-	Per il risultato di Cantor, $\emptyset$ è di unicità.
+	Per il risultato di Cantor, $\emptyset$ \`e di unicit\`a.
 \end{example}
 
 \begin{problem}
-	Quali sottoinsiemi di $\RR$ sono di unicità?
+	Quali sottoinsiemi di $\RR$ sono di unicit\`a?
 \end{problem}
 
-Cantor può estrarre dalla sua dimostrazione il seguente criterio.
+Cantor pu\`o estrarre dalla sua dimostrazione il seguente criterio.
 
-\begin{fact}[Criterio per gli insiemi di unicità]
-$X \subseteq \RR$ è di unicità se (ma non solo se) gode della seguente\\
-\textbf{proprietà ($\star$):}
+\begin{fact}[Criterio per gli insiemi di unicit\`a]
+$X \subseteq \RR$ \`e di unicit\`a se (ma non solo se) gode della seguente\\
+\textbf{propriet\`a ($\star$):}
 ogni funzione continua $f\colon\RR \to \RR$ che soddisfi le ipotesi seguenti
-è necessariamente lineare 
+\`e necessariamente lineare 
 {\drkgrn ($f(x) = ax+b$):}
 \begin{itemize}
 	\item per ogni intervallo aperto $\left]a,b\right[$ con $]a,b[
-\,\cap\, X = \emptyset$, $f_{| \, ]a,b[}$ è lineare;
+\,\cap\, X = \emptyset$, $f_{| \, ]a,b[}$ \`e lineare;
 	\item per ogni $x \in \RR$, se $f$ ha derivate destre e sinistre in $x$, allora queste coincidono
 {\drkgrn ``$f$ non ha punti angolosi''.}
 \end{itemize}
 \end{fact}
 
-Questa non è una caratterizzazione, ma ugualmente si pone il problema di
-capire quali insiemi godano della proprietà~($\star$).
+Questa non \`e una caratterizzazione, ma ugualmente si pone il problema di
+capire quali insiemi godano della propriet\`a~($\star$).
 
 \begin{example}
 \[X = \{\ldots,a_{-2},a_{-1},a_0,a_1,a_2,\ldots\} = \{a_i | i \in \ZZ\}\]
@@ -61,18 +61,18 @@ con
 \[\ldots < a_{-2} < a_{-1} < a_0 < a_1 < a_2 <\ldots
 \quad\quad \lim_{i \to +\infty} a_i = +\infty
 \quad\quad \lim_{i \to -\infty} a_i = -\infty\]
-ha la proprietà ($\star$) quindi è di unicità.
+ha la propriet\`a ($\star$) quindi \`e di unicit\`a.
 \end{example}
 
 \begin{notexample}
-L'intervallo $[0,1]$ e $\QQ$ non hanno la proprietà ($\star$).
+L'intervallo $[0,1]$ e $\QQ$ non hanno la propriet\`a ($\star$).
 \end{notexample}
 
 \begin{notexampleb}
-L'insieme di Cantor non ha la proprietà ($\star$).
+L'insieme di Cantor non ha la propriet\`a ($\star$).
 \end{notexampleb}
 
-L'\vocab{insieme di Cantor} si costruisce a partire dall'intervallo chiuso~$C_0 = [0,1]$ così:
+L'\vocab{insieme di Cantor} si costruisce a partire dall'intervallo chiuso~$C_0 = [0,1]$ cos\`i:
 
 \begin{figure}[H]
 	\centering
@@ -81,8 +81,8 @@ L'\vocab{insieme di Cantor} si costruisce a partire dall'intervallo chiuso~$C_0 
 
 Si divide~$C_0 = [0,1]$ in terzi, e poi si rimuove il terzo
 centrale~$\left]\frac 13, \frac 23\right[$, ottenendo un insieme~$C_1$.
-Questo è costituito da due segmenti chiusi a ciascuno dei quali si applica
-il medesimo procedimento: il risultato è un insieme~$C_2$ costituito da
+Questo \`e costituito da due segmenti chiusi a ciascuno dei quali si applica
+il medesimo procedimento: il risultato \`e un insieme~$C_2$ costituito da
 quattro segmenti chiusi. Continuando a ripetere si ottengono
 $C_3$, $C_4$, etc. A questo punto, definiamo l'insieme di Cantor~$C$ come:
 \[ C := \bigcap_{i \in \NN}C_i \]
@@ -95,16 +95,16 @@ $f'(x) = 0$ per $x \not\in C$.
 	\includegraphics[width=13.5cm]{immagini/scalacantor.png}
 \end{figure}
 
-Si vede subito che una primitiva di questa funzione è un controesempio
+Si vede subito che una primitiva di questa funzione \`e un controesempio
 a~($\star$).
 
 \begin{note}
-$\QQ$ e $C$ non hanno ($\star$) ma, in realtà, sono di unicità.
+$\QQ$ e $C$ non hanno ($\star$) ma, in realt\`a, sono di unicit\`a.
 \end{note}
 
 \begin{exampleb}[Una successione crescente col suo limite]
 L'insieme costituito dagli elementi di una successione crescente limitata, e dal
-limite della successione stessa, è di unicità.
+limite della successione stessa, \`e di unicit\`a.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.35]{immagini/succunic.png}
@@ -113,19 +113,19 @@ limite della successione stessa, è di unicità.
 
 \begin{proof}
 Consideriamo una funzione~$f$ come nell'ipotesi di~($\star$). Siccome $f$
-è lineare in $]-\infty, a_0[$, $]a_0,a_1[$, $]a_1,a_2[$, $\ldots$, abbiamo
+\`e lineare in $]-\infty, a_0[$, $]a_0,a_1[$, $]a_1,a_2[$, $\ldots$, abbiamo
 che nei punti $a_0,a_1,a_2,\ldots$ essa ammette derivata destra e sinistra.
 Per ipotesi, quindi, questi punti non possono essere angolosi, per cui
 \[ {\drkred f_{-}'(a_0)} = {\drkgrn f_{+}'(a_0)}\, \phantom{=}\,
 {\drkred f_{-}'(a_1)} =
 {\drkgrn f_{+}(a_1)}
 \,\phantom{= f_{-}(a_2)}\,\;\;\dotsc \]
-D'altro canto, per la linearità in $]a_0,a_1[$, $]a_1,a_2[$, $\ldots$
+D'altro canto, per la linearit\`a in $]a_0,a_1[$, $]a_1,a_2[$, $\ldots$
 \[ \phantom{f_{-}'(a_0) =}\, {\drkgrn f_{+}'(a_0)} = {\drkred f_{-}'(a_1)}\,
 \phantom{=}\, {\drkgrn f_{+}(a_1)} = {\drkred f_{-}(a_2)}
 \;\;\dotsc \]
-Quindi $f'$ è costante sulla semiretta~$x < l$, ossia $f$ è lineare
-in questa semiretta. Per ipotesi $f$ è lineare anche nella semiretta~$l<x$.
+Quindi $f'$ \`e costante sulla semiretta~$x < l$, ossia $f$ \`e lineare
+in questa semiretta. Per ipotesi $f$ \`e lineare anche nella semiretta~$l<x$.
 Concludiamo osservando che i coefficienti angolari delle restrizioni
 di~$f$ alle due semirette sono le derivate sinistra e destra di~$f$
 in~$l$, e devono quindi coincidere.
@@ -134,7 +134,7 @@ in~$l$, e devono quindi coincidere.
 \begin{examplebb}[Successione di successioni crescenti]
 Costruiamo una successione crescente di successioni crescenti, ciascuna
 col suo limite, e aggiungiamo a questo insieme il limite dei limiti.
-L'insieme così ottenuto è di unicità.
+L'insieme cos\`i ottenuto \`e di unicit\`a.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=12.5cm]{immagini/succunic2.png}
@@ -144,24 +144,24 @@ L'insieme così ottenuto è di unicità.
 \begin{proof}
 Consideriamo la successione dei limiti~$a'_i = a_{i0}$. In ciascuno degli
 intervalli~$]a'_i, a'_{i+1}[$ possiamo ragionare come nell'esempio
-precedente, per cui, in ciascuno di questi intervalli, la funzione~$f$ è
+precedente, per cui, in ciascuno di questi intervalli, la funzione~$f$ \`e
 lineare. Ora, $f$ e i punti~$a'_i\uparrow l$ sono -- di nuovo --
-come nell'esempio precedente, per cui concludiamo che $f$ è lineare.
+come nell'esempio precedente, per cui concludiamo che $f$ \`e lineare.
 \end{proof}
 
 \subsection{Digressione: insiemi numerabili}
 \vskip\baselineskip
 \begin{definition}
-Un insieme $X$ è \vocab{numerabile} se è il supporto di una successione,
+Un insieme $X$ \`e \vocab{numerabile} se \`e il supporto di una successione,
 $X = \{a_0,a_1,a_2,\ldots\} = \{a_i | i \in \NN\}$, con $a_i \ne a_j$ per
-ogni $i \ne j$. {\drkgrn In altre parole, $X$ è numerabile se esiste $f
+ogni $i \ne j$. {\drkgrn In altre parole, $X$ \`e numerabile se esiste $f
 \colon \NN \to X$ biunivoca.}
 \end{definition}
 
 \begin{example}
 	\begin{tabular}{llll}
 I seguenti insiemi sono numerabili
-& {\drkgrn perché li elenco così} & {\drkred cioè così}\\
+& {\drkgrn perch\'e li elenco cos\`i} & {\drkred cio\`e cos\`i}\\
 \hline
 \hskip 7em $\NN$ & {\drkgrn $0,1,2,3\ldots$} & {\drkred $a_i = i$}\\
 \hskip 7em $\{\text{numeri dispari}\}$ & {\drkgrn $1,3,5,7\ldots$} & {\drkred $a_i = 2i +
@@ -174,7 +174,7 @@ I seguenti insiemi sono numerabili
 \end{example}
 
 \begin{examplem}
-L'insieme $\NN \times \NN = \{(x,y)|x,y \in \NN\}$ è numerabile.
+L'insieme $\NN \times \NN = \{(x,y)|x,y \in \NN\}$ \`e numerabile.
 \end{examplem}
 
 \begin{proof}
@@ -182,11 +182,11 @@ La funzione
 \begin{align*} f \colon \NN \times \NN & \to \NN\\
 	 (x,y) &\mapsto 2^x(1+2y) - 1
 \end{align*}
-è biunivoca {\drkgrn (perché?),} quindi $a_i = f^{-1}(i)$ enumera $\NN \times \NN$.
+\`e biunivoca {\drkgrn (perch\'e?),} quindi $a_i = f^{-1}(i)$ enumera $\NN \times \NN$.
 \end{proof}
 
 \begin{proposition}
-Un sottoinsieme infinito di un insieme numerabile è, a sua volta, numerabile.
+Un sottoinsieme infinito di un insieme numerabile \`e, a sua volta, numerabile.
 \end{proposition}
 
 \begin{proof}
@@ -196,51 +196,51 @@ enumera $Y$.
 {\drkred A essere precisi 
 bisognerebbe dire esattamente chi sono gli indici $i_j$. Per ricorsione:
 \[ i_0 = \min\{i | a_i \in Y\} \qquad i_{j+1} = \min\{i > i_j | a_i \in Y\} \]
-dove i minimi esistono perché $Y$ non è finito.}
+dove i minimi esistono perch\'e $Y$ non \`e finito.}
 \end{proof}
 
 \begin{proposition}
-Se $X$ e $Y$ sono numerabili $X \times Y = \{(a,b) | a \in X, b \in Y\}$ è anch'esso numerabile.
+Se $X$ e $Y$ sono numerabili $X \times Y = \{(a,b) | a \in X, b \in Y\}$ \`e anch'esso numerabile.
 \end{proposition}
 
 \begin{proof}
-Fissiamo $X = \{a_i | i \in \NN\}$, $Y = \{b_j | j \in \NN\}$. Siccome $\NN \times \NN$ è numerabile, $\NN \times \NN = \{(i_t,j_t)|t \in \NN\}$.
+Fissiamo $X = \{a_i | i \in \NN\}$, $Y = \{b_j | j \in \NN\}$. Siccome $\NN \times \NN$ \`e numerabile, $\NN \times \NN = \{(i_t,j_t)|t \in \NN\}$.
 Quindi $X \times Y = \{(a_{i_t}, a_{j_t}) | t \in \NN\}$.
 \end{proof}
 
 \begin{example}
-$\QQ$ è numerabile.
+$\QQ$ \`e numerabile.
 \end{example}
 
 \begin{proof}
-$\QQ$ è in corrispondenza biunivoca con
+$\QQ$ \`e in corrispondenza biunivoca con
 \[\{(\textrm{num},\textrm{den}) | \textrm{num} \in \ZZ \wedge \textrm{den}
 \in\NN_{>0} \wedge \textrm{MCD}(\textrm{num},\textrm{den}) = 1\} \quad
 \subseteq \quad \ZZ \times \NN \qedhere\]
 \end{proof}
 
 \begin{notexample}
-$\RR$ non è numerabile.
+$\RR$ non \`e numerabile.
 \end{notexample}
 
 \begin{proof}
 Supponendo, per assurdo, che $\RR = \{a_i | i \in \NN\}$, cerchiamo un $x \in \RR$ che non compare fra gli $a_i$. Allo scopo, costruiamo la sottosuccessione $a_{i_j}$
 definita per ricorrenza da:
 \[ i_0 = 0 \qquad i_1 = \min\{i | a_i > a_0\} \qquad i_{j+1} = \min\{i |
-\, \text{$a_i$ è compreso tra $a_{i_{j-1}}$ e $a_{i_j}$}\}
+\, \text{$a_i$ \`e compreso tra $a_{i_{j-1}}$ e $a_{i_j}$}\}
 	\]
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=10.5cm]{immagini/RRnum.png}
 	\end{figure}
-Si vede facilmente {\drkgrn (esercizio!)} che la successione $\{a_{i_{2k}}\}_k$ è crescente, $\{a_{i_{2k+1}}\}_k$ è decrescente 
+Si vede facilmente {\drkgrn (esercizio!)} che la successione $\{a_{i_{2k}}\}_k$ \`e crescente, $\{a_{i_{2k+1}}\}_k$ \`e decrescente 
 e
 \[l_{\textrm{pari}}=\lim_{k \to +\infty} a_{i_{2k}} \;\; \leq \;\; \lim_{k \to
 +\infty}a_{i_{2k+1}} = l_{\textrm{dispari}}\]
 Fissiamo $x$ tale che $
 l_{\textrm{pari}} \leq x \leq l_{\textrm{dispari}}$.
-Chiaramente $x$ non è nessuno degli $a_{i_j}$, perché $a_{i_2k} < x < a_{i_{2k+1}}$. Supponiamo $x = a_n$, allora ci sarà $j$ tale che $i_j < n < i_{j+1}$, ma 
-questo è assurdo perché allora $x = a_n$ è compreso fra $a_{i_{j-1}}$ e $a_{i_j}$, però $n < i_{j+1}$ contro la minimalità di quest'ultimo.
+Chiaramente $x$ non \`e nessuno degli $a_{i_j}$, perch\'e $a_{i_2k} < x < a_{i_{2k+1}}$. Supponiamo $x = a_n$, allora ci sar\`a $j$ tale che $i_j < n < i_{j+1}$, ma 
+questo \`e assurdo perch\'e allora $x = a_n$ \`e compreso fra $a_{i_{j-1}}$ e $a_{i_j}$, per\`o $n < i_{j+1}$ contro la minimalit\`a di quest'ultimo.
 \end{proof}
 
 \begin{drkgrnexe}
@@ -248,59 +248,59 @@ Hai notato che ho trascurato il caso $n < i_1$?
 \end{drkgrnexe}
 
 \begin{exercise}
-Dimostra che l'insieme di Cantor $C$ non è numerabile.
+Dimostra che l'insieme di Cantor $C$ non \`e numerabile.
 \end{exercise}
 
 %\pagebreak
-\subsection{Tornando agli insiemi di unicità}
+\subsection{Tornando agli insiemi di unicit\`a}
 
-Il concetto di numerabilità ci permette di enunciare un risultato importante
-nello studio degli insiemi di unicità.
+Il concetto di numerabilit\`a ci permette di enunciare un risultato importante
+nello studio degli insiemi di unicit\`a.
 
 \begin{theorem}
 [Cantor-Lebesgue]
 \label{CL}
-Se $X \subseteq \RR$ è chiuso e numerabile, allora $X$ soddisfa $(\star)$, e quindi è di unicità.
+Se $X \subseteq \RR$ \`e chiuso e numerabile, allora $X$ soddisfa $(\star)$, e quindi \`e di unicit\`a.
 \end{theorem}
 
 La strategia di dimostrazione passa attraverso una definizione.
 
 \begin{definition}
-Dato $X \subseteq \RR$, il \vocab{derivato di Cantor-Bendixson} di $X$ è:
+Dato $X \subseteq \RR$, il \vocab{derivato di Cantor-Bendixson} di $X$ \`e:
 \[ X^{\prime} = X \setminus\{\text{punti isolati di $X$}\}
 	\]
 dove $a \in X$ si dice \vocab{punto isolato} se $\exists \varepsilon > 0 :\, ]a - \varepsilon, a + \varepsilon[ \,\cap\, X = \{a\}$.
 \end{definition}
 
 \begin{remark}
-Se $X$ è chiuso e $X'$ soddisfa~($\star$), allora anche $X$
+Se $X$ \`e chiuso e $X'$ soddisfa~($\star$), allora anche $X$
 soddisfa~($\star$).
 \end{remark}
 
 \begin{proof}
-Occorre dimostrare che {\drkred se} $f\colon \RR \to \RR$ è continua, lineare
+Occorre dimostrare che {\drkred se} $f\colon \RR \to \RR$ \`e continua, lineare
 quando ristretta agli intervalli aperti che non intersecano $X$, e non ha
-punti angolosi, {\drkred allora} $f$ è lineare quando ristretta agli intervalli
+punti angolosi, {\drkred allora} $f$ \`e lineare quando ristretta agli intervalli
 aperti che non intersecano $X'$.
-Fatto questo, usando l'ipotesi su~$X'$, deduciamo che $f$ è lineare -- abbiamo
-quindi mostrato che $X$ gode della proprietà~($\star$).
+Fatto questo, usando l'ipotesi su~$X'$, deduciamo che $f$ \`e lineare -- abbiamo
+quindi mostrato che $X$ gode della propriet\`a~($\star$).
 
-Sia $]a,b[ \,\cap\, X' = \emptyset$, dobbiamo verificare che $f_{|\,]a,b[}$ è
+Sia $]a,b[ \,\cap\, X' = \emptyset$, dobbiamo verificare che $f_{|\,]a,b[}$ \`e
 lineare. Ci basta dire che per ogni $\varepsilon > 0$, $f_{|[a+\varepsilon,
-b-\varepsilon]}$ è lineare.
+b-\varepsilon]}$ \`e lineare.
 Siccome $]a,b[ \, \cap \, X' = \emptyset$, allora
 \[ ]a,b[ \,\cap\, X \subseteq
 \{\text{punti isolati di $X$}\} \]
 Quindi $[a+\varepsilon, b-\varepsilon] \cap
-X$ è finito, {\drkgrn se così non fosse, avrebbe un punto di accumulazione
+X$ \`e finito, {\drkgrn se cos\`i non fosse, avrebbe un punto di accumulazione
 che, quindi, sarebbe un punto di accumulazione anche per~$X$, e non un punto
-isolato~$\lightning$} Per cui $f_{|[a+\varepsilon, b-\varepsilon]}$ è lineare
-a tratti, e, siccome per ipotesi non ha punti angolosi, è lineare.
+isolato~$\lightning$} Per cui $f_{|[a+\varepsilon, b-\varepsilon]}$ \`e lineare
+a tratti, e, siccome per ipotesi non ha punti angolosi, \`e lineare.
 \end{proof}
 
 \begin{corollary}
 Sia $X^{(n)}$ il derivato $n$-esimo di $X$, se $X^{(n)} = \emptyset$ per
-qualche $n \in \NN$, allora $X$ gode della proprietà~($\star$).
+qualche $n \in \NN$, allora $X$ gode della propriet\`a~($\star$).
 \end{corollary}
 
 \begin{proof}
@@ -308,14 +308,14 @@ Induzione su~$n$.
 \end{proof}
 
 Ora si potrebbe sperare che un numero finito di derivati sia sufficiente per
-smantellare qualsiasi chiuso numerabile; se fosse così potremmo dimostrare il
+smantellare qualsiasi chiuso numerabile; se fosse cos\`i potremmo dimostrare il
 teorema di Cantor-Lebesgue invocando semplicemente questo corollario.
-Il guaio è che ci sono chiusi numerabili per cui $X^{(n)} \ne \emptyset$
+Il guaio \`e che ci sono chiusi numerabili per cui $X^{(n)} \ne \emptyset$
 qualunque sia $n$ -- per cui il corollario non basta.
 
 \begin{example}
 Vogliamo costruire $X$ chiuso e numerabile tale che $X^{(n)} \ne \emptyset$
-per ogni $n \in \NN$. Cominciamo col richiamare alcuni esempi già visti.
+per ogni $n \in \NN$. Cominciamo col richiamare alcuni esempi gi\`a visti.
 \end{example}
 
 \begin{figure}[H]
@@ -342,26 +342,26 @@ Chiamiamo la \textit{successione di successioni} $X_2$. Abbiamo $X_2' = \{a_{10}
 a_{20}, \ldots, l\}$, per cui $X_2'' = \{l\}$ e $X_2''' = \emptyset$.
 
 Si vede che possiamo proseguire in questo modo. All'$n$-esimo passo otteniamo
-un insieme $X_n$ che è una \textit{successione di successioni di successioni
+un insieme $X_n$ che \`e una \textit{successione di successioni di successioni
 etc}.~ripetuto $n$~volte. Per cui $X_n^{(n)} \ne \emptyset$ ma $X_n^{(n+1)} =
-\emptyset$. Ora costruiamo l'insieme $X_{\omega}$ fatto così:
+\emptyset$. Ora costruiamo l'insieme $X_{\omega}$ fatto cos\`i:
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale = 0.3]{immagini/esomega.png}
 \end{figure}
 
-È chiaro che, per ogni $n$, $X_\omega^{(n)} \ne \emptyset$. D'altro canto,
+\`E chiaro che, per ogni $n$, $X_\omega^{(n)} \ne \emptyset$. D'altro canto,
 $X_\omega$ soddisfa ($\star$). Basta infatti osservare che una $f$ che
 soddisfi l'ipotesi di~($\star$) deve essere lineare in ciascuno degli intervalli
-$[a_n,a_{n+1}]$, perché $X_{n+1}$ soddisfa~($\star$). Quindi ci si riduce al caso della successione.
+$[a_n,a_{n+1}]$, perch\'e $X_{n+1}$ soddisfa~($\star$). Quindi ci si riduce al caso della successione.
 
 \begin{exercise}
-Perché $X_\omega$ è numerabile?
+Perch\'e $X_\omega$ \`e numerabile?
 \end{exercise}
 
 Ora potremmo pensare che, pazienza se $X_\omega$ non si smonta a furia di
-derivati, sarà un caso partologico. Alla fine, non si potrà fare di molto
+derivati, sar\`a un caso partologico. Alla fine, non si potr\`a fare di molto
 peggio, {\drkred vero?} Per esempio, possiamo fare una successione di insiemi
 come~$X_\omega$, chiamiamola~$X_{\omega+1}$, e una successione di insiemi
 come~$X_{\omega+1}$, che chiamiamo~$X_{\omega+2}$, etc.
@@ -369,7 +369,7 @@ come~$X_{\omega+1}$, che chiamiamo~$X_{\omega+2}$, etc.
 Al diavolo, serve un nuovo corollario!
 
 \begin{corollary}
-Se $X^{(n)}$ è di ``tipo $X_\omega$'' per qualche~$n\in\NN$, allora $X$
+Se $X^{(n)}$ \`e di ``tipo $X_\omega$'' per qualche~$n\in\NN$, allora $X$
 ha~($\star$).
 \end{corollary}
 
@@ -383,27 +383,27 @@ Ok, questo corollario copre $X_\omega$, $X_{\omega + 1}$, $X_{\omega + 2}$, ma c
 No. Occorre un nuovo corollario.
 
 \begin{corollary}
-Se $X^{(n)}$ è di ``tipo $X_{\omega\cdot 2}$'' per qualche~$n\in\NN$, allora $X$
+Se $X^{(n)}$ \`e di ``tipo $X_{\omega\cdot 2}$'' per qualche~$n\in\NN$, allora $X$
 ha~($\star$).
 \end{corollary}
 
-E poi un altro per $X_{\omega \cdot 3}$, che ormai si è capito come si
+E poi un altro per $X_{\omega \cdot 3}$, che ormai si \`e capito come si
 costruisce, e un altro per $X_{\omega \cdot 4}$, etc. E va bene che sono
-infiniti corollari, ma almeno, adesso, abbiamo finito? No, perché possiamo costruire una nuova successione con $X_{\omega},X_{\omega \cdot 2},X_{\omega \cdot 3}$, etc.
+infiniti corollari, ma almeno, adesso, abbiamo finito? No, perch\'e possiamo costruire una nuova successione con $X_{\omega},X_{\omega \cdot 2},X_{\omega \cdot 3}$, etc.
 Se chiamiamo questa follia $X_{\omega \cdot \omega}$, ecco che si riparte a
 fare successioni di copie di questo arnese qua.
 %
 Si intuisce che stiamo definendo una specie di aritmetica di questi pedici,
 che certamente annovera numeri improbabili come $\omega^\omega$, $\omega^{\omega^{\omega}}$, etc.
-È questa quindi la soluzione che ci permetterà di scrivere il corollario dei
+\`E questa quindi la soluzione che ci permetter\`a di scrivere il corollario dei
 corollari?
 %
-No, ogni sforzo di trovare l'induzione a capo delle induzioni è vano. Se ho $X_{\omega}$, $X_{\omega^\omega}$, $X_{\omega^{\omega^{\omega}}}$, etc., allora
+No, ogni sforzo di trovare l'induzione a capo delle induzioni \`e vano. Se ho $X_{\omega}$, $X_{\omega^\omega}$, $X_{\omega^{\omega^{\omega}}}$, etc., allora
 inesorabilmente faccio una successione con queste cose, la battezzo in qualche
 modo -- ad esempio, $X_{\varepsilon_0}$ -- e si riparte!
 %
-Per smontare ogni possibile insieme chiuso e numerabile occorre un \textbf{nuovo tipo di induzione}, l'\vocab{induzione transfinita}, che è strettamente più potente dell'induzione aritmetica.
-Questa tecnica è stata sviluppata da Cantor, forse prendendo le mosse dal problema degli insiemi di unicità, e sarà uno degli argomenti centrali del corso.
+Per smontare ogni possibile insieme chiuso e numerabile occorre un \textbf{nuovo tipo di induzione}, l'\vocab{induzione transfinita}, che \`e strettamente pi\`u potente dell'induzione aritmetica.
+Questa tecnica \`e stata sviluppata da Cantor, forse prendendo le mosse dal problema degli insiemi di unicit\`a, e sar\`a uno degli argomenti centrali del corso.
 
 \begin{exercise}[per la fine del corso]
 Dimostrare il teorema di \hyperref[CL]{Cantor-Lebesgue}.
@@ -412,9 +412,9 @@ Dimostrare il teorema di \hyperref[CL]{Cantor-Lebesgue}.
 \subsection{Giochi di parole}
 Descrivere un oggetto matematico non basta per crearlo. Se bastasse, si incorrerebbe in contraddizioni come queste.
 \paragraph*{Paradosso di Russell}\mbox{}\\
-Tipicamente le collezioni -- uso questa parola perché daremo, al termine
+Tipicamente le collezioni -- uso questa parola perch\'e daremo, al termine
 ``insieme'', un senso tecnico preciso -- non sono membro di se stesse: la collezione di 
-tutti i numeri primi non è un numero primo. Però ci sono anche collezioni che sono membri di se stessi: per esempio la collezione di tutte le collezioni. Consideriamo:
+tutti i numeri primi non \`e un numero primo. Per\`o ci sono anche collezioni che sono membri di se stessi: per esempio la collezione di tutte le collezioni. Consideriamo:
 \[ N = \{\text{collezioni $X$}\, | X \not\in X \}
 	\]
 ossia la collezione delle collezioni che non sono membri di se stesse -- la
@@ -423,32 +423,32 @@ $N$ sta per collezioni normali.\\
 $N \in N$ se e solo se, per definizione, $N \not \in N\;\;\lightning$
 
 Il paradosso di Russell ci dice che, del \vocab{principio di collezione} -- ossia
-l'idea che data una proprietà ben definita~$P$ si possa costruire la
-collezione~$\{X | P(X)\}$ -- non ci si può fidare.
+l'idea che data una propriet\`a ben definita~$P$ si possa costruire la
+collezione~$\{X | P(X)\}$ -- non ci si pu\`o fidare.
 
 \paragraph*{Paradosso di Berry}\mbox{}\\
-L'italiano annovera un numero finito di parole, è quindi possibile formare solo un numero finito di frasi di meno di cento parole. Alcune di queste descrivono un numero naturale, altre no. Comunque, solo un numero 
-finito di numeri naturali può essere descritto con meno di cento parole. Per il principio del minimo, esiste:
+L'italiano annovera un numero finito di parole, \`e quindi possibile formare solo un numero finito di frasi di meno di cento parole. Alcune di queste descrivono un numero naturale, altre no. Comunque, solo un numero 
+finito di numeri naturali pu\`o essere descritto con meno di cento parole. Per il principio del minimo, esiste:
 \begin{align*}
-	h = \text{``il più piccolo numero naturale che l'italiano non può} \\ 
+	h = \text{``il pi\`u piccolo numero naturale che l'italiano non pu\`o} \\ 
  \text{descrivere con meno di cento parole"}
 \end{align*}
-Il guaio, chiaramente, è che lo abbiamo appena descritto con sedici parole.
-Quindi non ci si può fidare troppo neppure dell'italiano, o meglio, non è possibile descrivere precisamente cosa sia una descrizione precisa.
+Il guaio, chiaramente, \`e che lo abbiamo appena descritto con sedici parole.
+Quindi non ci si pu\`o fidare troppo neppure dell'italiano, o meglio, non \`e possibile descrivere precisamente cosa sia una descrizione precisa.
 
 In conclusione, occorre fissare un linguaggio formale in cui si esprimono le proposizioni della teoria degli insiemi, e occorre fissare un sistema di assiomi, espressi in questo linguaggio, che 
-dicano quali costruzioni sono lecite: quali insiemi esistono. Il ruolo della teoria degli insiemi è, poi, di fondare l'edificio della matematica. L'ambizione, quindi, è che il linguaggio e gli assiomi della teoria degli insiemi siano, in realtà, il linguaggio e gli assiomi della matematica.
+dicano quali costruzioni sono lecite: quali insiemi esistono. Il ruolo della teoria degli insiemi \`e, poi, di fondare l'edificio della matematica. L'ambizione, quindi, \`e che il linguaggio e gli assiomi della teoria degli insiemi siano, in realt\`a, il linguaggio e gli assiomi della matematica.
 
 \subsection{Scopi del corso}
 Questo corso persegue due obiettivi:
 \begin{enumerate}[(1)]
-	\item Studiare i \textbf{fondamenti della matematica}, nella forma più comunemente accettata nel XX secolo e fino ad ora, la teoria degli insiemi di 
+	\item Studiare i \textbf{fondamenti della matematica}, nella forma pi\`u comunemente accettata nel XX secolo e fino ad ora, la teoria degli insiemi di 
 	\href{https://it.wikipedia.org/wiki/Ernst_Zermelo}{\textcolor{purple}{Zermelo}}-\href{https://it.wikipedia.org/wiki/Adolf_Abraham_Halevi_Fraenkel}{\textcolor{purple}{Fraenkel}} con l'assioma della scelta (ZFC).
-	\item Studiare tecniche e strumenti che sono stati sviluppati grazie alla teoria degli insiemi, per esempio: la teoria delle cardinalità, la teoria dei numeri ordinali, l'induzione e la ricorsione transfinita.
+	\item Studiare tecniche e strumenti che sono stati sviluppati grazie alla teoria degli insiemi, per esempio: la teoria delle cardinalit\`a, la teoria dei numeri ordinali, l'induzione e la ricorsione transfinita.
 \end{enumerate}
 
 In questo corso non ci occupiamo dei modelli della teoria degli insiemi. Mi spiego. Per esempio, in teoria dei gruppi si assiomatizza cosa sia un gruppo, e poi si studia come possano essere fatti i diversi gruppi. In 
-teoria degli insiemi si assiomatizza l'universo di tutti gli insiemi, però, per il teorema di incompletezza di \href{https://it.wikipedia.org/wiki/Kurt_G%C3%B6del}{\textcolor{purple}{Gödel}}, questa assiomatizzazione non 
-può essere completa. Quindi esistono tanti universi insiemistici,
+teoria degli insiemi si assiomatizza l'universo di tutti gli insiemi, per\`o, per il teorema di incompletezza di \href{https://it.wikipedia.org/wiki/Kurt_G%C3%B6del}{\textcolor{purple}{Gödel}}, questa assiomatizzazione non 
+pu\`o essere completa. Quindi esistono tanti universi insiemistici,
 non diversamente da come ci sono tanti gruppi.
-Indagare le tecniche per costruire e manipolare queste strutture -- i modelli della teoria degli insiemi -- è argomento di corsi più avanzati.
+Indagare le tecniche per costruire e manipolare queste strutture -- i modelli della teoria degli insiemi -- \`e argomento di corsi pi\`u avanzati.

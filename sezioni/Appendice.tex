@@ -1,9 +1,9 @@
 \section{Appendice}
-\subsection{Cardinalità note}
-In questa sezione risolviamo gli esercizi lasciati nel foglio di esercizi \cite{mamino_eti_22_23_esercizi}, proposto a metà del corso dal prof. Mamino (le note aggiunte sono quelle del prof. stesso alle soluzioni da lui proposte \cite{mamino_eti_22_23_sol_esercizi}).
+\subsection{Cardinalit\`a note}
+In questa sezione risolviamo gli esercizi lasciati nel foglio di esercizi \cite{mamino_eti_22_23_esercizi}, proposto a met\`a del corso dal prof. Mamino (le note aggiunte sono quelle del prof. stesso alle soluzioni da lui proposte \cite{mamino_eti_22_23_sol_esercizi}).
 
-\begin{exercise}[Cardinalità di base]
-	Determinare le seguenti cardinalità.
+\begin{exercise}[Cardinalit\`a di base]
+	Determinare le seguenti cardinalit\`a.
 \end{exercise}
 
 \begin{itemize}
@@ -12,13 +12,13 @@ In questa sezione risolviamo gli esercizi lasciati nel foglio di esercizi \cite{
 
 \begin{soln}
 	(Senza AC)\\
-	Poiché $\RR$ è continuo e $\QQ$ numerabile, per il \hyperref[continuo-numerabile]{lemma}, la differenza rimane continua e quindi $|\RR \setminus \QQ| = 2^{\aleph_0}$.
+	Poich\'e $\RR$ \`e continuo e $\QQ$ numerabile, per il \hyperref[continuo-numerabile]{lemma}, la differenza rimane continua e quindi $|\RR \setminus \QQ| = 2^{\aleph_0}$.
 \end{soln}
 
-\begin{note}[Sulla sottrazione di cardinalità]
-	In sostanza $2^{\aleph_0} - \aleph_0 = 2^{\aleph_0}$, ma scrivere questa sottrazione sarebbe \textcolor{red}{SBAGLIATO}, perché, in generale, la differenza di cardinalità non è definita. Sarebbe anche \textcolor{red}{SBAGLIATO PENSARE}
+\begin{note}[Sulla sottrazione di cardinalit\`a]
+	In sostanza $2^{\aleph_0} - \aleph_0 = 2^{\aleph_0}$, ma scrivere questa sottrazione sarebbe \textcolor{red}{SBAGLIATO}, perch\'e, in generale, la differenza di cardinalit\`a non \`e definita. Sarebbe anche \textcolor{red}{SBAGLIATO PENSARE}
 	che stiamo usando il fatto che $2^{\aleph_0} + \aleph_0 = 2^{\aleph_0}$, infatti, da questa uguaglianza, \textbf{non} si deduce che se $|X| + \aleph_0 = 2^{\aleph_0}$ allora $|X| = 2^{\aleph_0}$.
-	In realtà stiamo usando un \hyperref[continuo-numerabile]{lemma} visto a lezione (dimostrato senza AC):
+	In realt\`a stiamo usando un \hyperref[continuo-numerabile]{lemma} visto a lezione (dimostrato senza AC):
 	\[ |A| = 2^{\aleph_0} \land B \subseteq A \land |B| \leq \aleph_0 \rightarrow |A \setminus B| = 2^{\aleph_0}
  		\]
 	e la soluzione cita esattamente le ipotesi del lemma.
@@ -30,7 +30,7 @@ In questa sezione risolviamo gli esercizi lasciati nel foglio di esercizi \cite{
 
 \begin{soln}
 	(Senza AC)\\
-	Abbiamo già dimostrato che $|\mathbb A_\RR| = \aleph_0$, quindi per il \hyperref[continuo-numerabile]{lemma}, si ha $|\RR \setminus \mathbb{A}_{\RR}| = 2^{\aleph_0}$.
+	Abbiamo gi\`a dimostrato che $|\mathbb A_\RR| = \aleph_0$, quindi per il \hyperref[continuo-numerabile]{lemma}, si ha $|\RR \setminus \mathbb{A}_{\RR}| = 2^{\aleph_0}$.
 \end{soln}
 
 \begin{itemize}
@@ -43,25 +43,25 @@ In questa sezione risolviamo gli esercizi lasciati nel foglio di esercizi \cite{
 \end{soln}
 
 \begin{itemize}
-	\item \textcolor{purple}{$|$sottoinsiemi finiti di $\RR|$ $= |\psf(\RR)|$}\footnote{È banale con AC, poiché lo abbiamo \hyperref[parti_finite_generale]{dimostrato in generale}, che $|\psf(\RR)| = |\RR| = 2^{\aleph_0}$.}
+	\item \textcolor{purple}{$|$sottoinsiemi finiti di $\RR|$ $= |\psf(\RR)|$}\footnote{\`E banale con AC, poich\'e lo abbiamo \hyperref[parti_finite_generale]{dimostrato in generale}, che $|\psf(\RR)| = |\RR| = 2^{\aleph_0}$.}
 \end{itemize}
 
-\textcolor{MidnightBlue}{\underline{Idea}: Va da sé che i sottoinsiemi finiti di $\RR$ sono almeno tanti quanti i reali stessi. D'altro canto, se avessimo l'assioma della scelta,
-potremmo dimostrare, che, fatto per altro intuitivo, l'immagine di una funzione ha cardinalità al più pari al dominio: $|f[X]| \leq |X|$.\footnote{In realtà abbiamo dimostrato per \hyperref[disuguaglianze_senza_AC1]{esercizio} che questa cosa è vera anche senza AC nel caso in cui l'insieme sia finito, ma la dimostrazione si adatta subito al caso al più numerabile (assieme anche al fatto che le disuguaglianze di surgettività, sempre nel caso di insiemi al più numerabili, sono \hyperref[disuguaglianze_senza_AC2]{valide} anche senza AC).}
-Siccome ogni insieme finito di reali è immagine di una successione di reali, considerando la funzione $f$ che manda una successione nella sua immagine avremmo $|\text{sottoinsiemi finite dei reali}| \leq |\text{successioni di reali}| = (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0}$.
+\textcolor{MidnightBlue}{\underline{Idea}: Va da s\'e che i sottoinsiemi finiti di $\RR$ sono almeno tanti quanti i reali stessi. D'altro canto, se avessimo l'assioma della scelta,
+potremmo dimostrare, che, fatto per altro intuitivo, l'immagine di una funzione ha cardinalit\`a al pi\`u pari al dominio: $|f[X]| \leq |X|$.\footnote{In realt\`a abbiamo dimostrato per \hyperref[disuguaglianze_senza_AC1]{esercizio} che questa cosa \`e vera anche senza AC nel caso in cui l'insieme sia finito, ma la dimostrazione si adatta subito al caso al pi\`u numerabile (assieme anche al fatto che le disuguaglianze di surgettivit\`a, sempre nel caso di insiemi al pi\`u numerabili, sono \hyperref[disuguaglianze_senza_AC2]{valide} anche senza AC).}
+Siccome ogni insieme finito di reali \`e immagine di una successione di reali, considerando la funzione $f$ che manda una successione nella sua immagine avremmo $|\text{sottoinsiemi finite dei reali}| \leq |\text{successioni di reali}| = (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0}$.
 Per aggirare il lemma vietato $|f[X]|\leq |X|$, possiamo lavorare al contrario, cercando una funzione iniettiva che manda i sottoinsiemi finiti di $\RR$ nella successioni.}
 
 \begin{soln}
-	È facile vedere la funzione $\RR \hookrightarrow \psf(\RR) : x \mapsto \{x\}$ è iniettiva e ci dà la disuguaglianza dal basso $2^{\aleph_0} \leq|\psf(\RR)|$. Viceversa, dato $A \in \psf(\RR)$, per definizione esiste $n \in \omega$ tale che $n = |A|$,
+	\`E facile vedere la funzione $\RR \hookrightarrow \psf(\RR) : x \mapsto \{x\}$ \`e iniettiva e ci d\`a la disuguaglianza dal basso $2^{\aleph_0} \leq|\psf(\RR)|$. Viceversa, dato $A \in \psf(\RR)$, per definizione esiste $n \in \omega$ tale che $n = |A|$,
 	quindi possiamo definire la funzione $\psf(\RR) \to {}^\omega(\RR \cup \{\spadesuit\}) : A \mapsto a_i$, dove:
 	\[ a_{i} = \begin{cases}
 		\min_{<_{\RR|A}}(A\setminus\Imm(a_{|i}))&\text{se $i < n$} \\
 		\spadesuit &\text{se $i \geq n$}
 	\end{cases}
 		\]
-	in tal modo si ha che $\Imm(a_{|i}) \cap \RR = A$. Quindi segue facilmente che questa mappa è iniettiva (due successioni con la stessa immagine, per la proprietà appena menzionata, danno lo stesso insieme usato in partenza) e ci dà la disuguaglianza dall'alto 
-	$|\psf(\RR)| \leq |\RR \cup \{\spadesuit\}| \leq 2^{\aleph_0}$ (dove l'ultima uguaglianza è inclusione-esclusione).\footnote{Osservare che questa identica dimostrazione funziona per tutte le parti finite di un insieme in cui abbiamo un modo per scegliere un elemento da un suo sottoinsieme, mentre fallisce su $\omega$ [nonostante qui il modo di scegliere lo abbiamo] in 
-	quanto qualsiasi insieme di successioni su un insieme infinito ha almeno sempre cardinalità $\aleph_0^{\aleph_0} = 2^{\aleph_0}$.}
+	in tal modo si ha che $\Imm(a_{|i}) \cap \RR = A$. Quindi segue facilmente che questa mappa \`e iniettiva (due successioni con la stessa immagine, per la propriet\`a appena menzionata, danno lo stesso insieme usato in partenza) e ci d\`a la disuguaglianza dall'alto 
+	$|\psf(\RR)| \leq |\RR \cup \{\spadesuit\}| \leq 2^{\aleph_0}$ (dove l'ultima uguaglianza \`e inclusione-esclusione).\footnote{Osservare che questa identica dimostrazione funziona per tutte le parti finite di un insieme in cui abbiamo un modo per scegliere un elemento da un suo sottoinsieme, mentre fallisce su $\omega$ [nonostante qui il modo di scegliere lo abbiamo] in 
+	quanto qualsiasi insieme di successioni su un insieme infinito ha almeno sempre cardinalit\`a $\aleph_0^{\aleph_0} = 2^{\aleph_0}$.}
 \end{soln}
 
 \begin{soln}
@@ -69,7 +69,7 @@ Per aggirare il lemma vietato $|f[X]|\leq |X|$, possiamo lavorare al contrario, 
 	La funzione $g : \psf(\RR) \to {}^\omega\RR : X \mapsto g(X)$ definita da:
 	\[ g(X) : n \mapsto \sum_{x \in X} \text e^{n \cdot x}
 		\]
-	è iniettiva.
+	\`e iniettiva.
 \end{soln}
 
 \begin{itemize}
@@ -82,33 +82,33 @@ Per aggirare il lemma vietato $|f[X]|\leq |X|$, possiamo lavorare al contrario, 
 	quindi abbiamo almeno una bigezione $g$ tra i due insiemi, da questa possiamo definire:
 	\[ \ps(\RR) \to \psinf(\RR) : X \mapsto g[X] \, \cup \, ]1,2[
 		\]
-	essendo $g$ una mappa bigettiva preserva la cardinalità degli insiemi, e unendo $(1,2)$ alla fine otteniamo necessariamente insiemi tutti infiniti [il problema si poneva solo per insiemi finiti in partenza], per cui la mappa è ben definita.
-	Inoltre la funzione è anche iniettiva in quanto due insiemi in arrivo, $g[X] \,\cup\, ]1,2[$ e $g[Y] \,\cup \,]1,2[$, sono uguali se e solo se $g[X] = g[Y]$, ma $g$ è una bigezione,
-	quindi questa cosa equivale a $X = Y$. Abbiamo così ottenuto che $2^{2^{\aleph_0}} \leq |\psinf(\RR)|$. Un'alternativa per quest'ultima disuguaglianza, osservando che $|\ps(]0,1[)| = 2^{2^{\aleph_0}}$ può essere:
+	essendo $g$ una mappa bigettiva preserva la cardinalit\`a degli insiemi, e unendo $(1,2)$ alla fine otteniamo necessariamente insiemi tutti infiniti [il problema si poneva solo per insiemi finiti in partenza], per cui la mappa \`e ben definita.
+	Inoltre la funzione \`e anche iniettiva in quanto due insiemi in arrivo, $g[X] \,\cup\, ]1,2[$ e $g[Y] \,\cup \,]1,2[$, sono uguali se e solo se $g[X] = g[Y]$, ma $g$ \`e una bigezione,
+	quindi questa cosa equivale a $X = Y$. Abbiamo cos\`i ottenuto che $2^{2^{\aleph_0}} \leq |\psinf(\RR)|$. Un'alternativa per quest'ultima disuguaglianza, osservando che $|\ps(]0,1[)| = 2^{2^{\aleph_0}}$ pu\`o essere:
 	\[ \ps(]0,1[) \to \psinf(\RR) : X \mapsto \begin{cases}
-		X &\text{se $X$ è infinito} \\
-		\RR \setminus X &\text{se $X$ è finito}
+		X &\text{se $X$ \`e infinito} \\
+		\RR \setminus X &\text{se $X$ \`e finito}
 	\end{cases}
 		\]
-	che è iniettiva perché dati $X,Y \in \ps(]0,1[)$ in partenza, se sono entrambi infiniti o finiti è banale che se sono uguali vanno in cose uguali, mentre se sono uno finito e l'altro infinito, in arrivo l'infinito è contenuto in $]0,1[$ mentre il finito diventa un sottoinsieme di $\RR$ che comprende anche punti al di fuori di $]0,1[$ (in tal modo sono distinti e l'iniettività è preservata).
+	che \`e iniettiva perch\'e dati $X,Y \in \ps(]0,1[)$ in partenza, se sono entrambi infiniti o finiti \`e banale che se sono uguali vanno in cose uguali, mentre se sono uno finito e l'altro infinito, in arrivo l'infinito \`e contenuto in $]0,1[$ mentre il finito diventa un sottoinsieme di $\RR$ che comprende anche punti al di fuori di $]0,1[$ (in tal modo sono distinti e l'iniettivit\`a \`e preservata).
 \end{soln}
 
 \begin{soln}
 	(Soluzione alternativa, senza AC)\\
-	La stima dall'alto è sempre la stessa, mentre dal basso, osservando che $|\RR \cup \{\spadesuit\}| = |\RR|$, possiamo definire la mappa:
+	La stima dall'alto \`e sempre la stessa, mentre dal basso, osservando che $|\RR \cup \{\spadesuit\}| = |\RR|$, possiamo definire la mappa:
 	\[ f : \ps(\RR) \to \psinf(\RR \cup \{\spadesuit\}) : A \mapsto \begin{cases}
-		A &\text{se $A$ è infinito} \\
-		(\RR \setminus A) \cup \{\spadesuit\} &\text{se $A$ è finito}
+		A &\text{se $A$ \`e infinito} \\
+		(\RR \setminus A) \cup \{\spadesuit\} &\text{se $A$ \`e finito}
 	\end{cases}
 		\]
-	tale mappa è iniettiva, infatti preso $B \in \Imm(f)$ possiamo definire (la funzione inversa che quindi ci assicura che quella iniziale è una bigezione tra $\ps(\RR)$ e l'immagine di $f$ in $B$, in tal modo $f$ è iniettiva quando in arrivo consideriamo tutto l'insieme):
+	tale mappa \`e iniettiva, infatti preso $B \in \Imm(f)$ possiamo definire (la funzione inversa che quindi ci assicura che quella iniziale \`e una bigezione tra $\ps(\RR)$ e l'immagine di $f$ in $B$, in tal modo $f$ \`e iniettiva quando in arrivo consideriamo tutto l'insieme):
 	\[ B \mapsto \begin{cases}
 		B &\text{se $\{\spadesuit\} \not \in B$} \\
 		\RR \setminus (B \setminus \{\spadesuit\}) &\text{se $\{\spadesuit\} \in B$}
 	\end{cases}
 		\]
-	da cui si ha $|\psinf(\RR)| = |\psinf(\RR \cup \{\spadesuit\})| \geq |\ps(\RR)| = 2^{2^{\aleph_0}}$.\footnote{Un'ultima osservazione degna di nota, senza AC sappiamo che $|X \cup \{\spadesuit\}| \geq |X|$ (infatti basta immergere $X$ in $X \cup \{\spadesuit\}$), ma la disuguaglianza dal basso NON è sufficiente per concludere nella nostra soluzione senza AC.
-	Per l'uguaglianza ci serve anche la disuguaglianza dall'alto, per inclusione-esclusione sappiamo che $|X \cup \{\spadesuit\}| \leq |X| + 1$, ma non possiamo dire che [per $X$ infinito] $|X| = |X| + 1$ senza AC. Fondamentalmente abbiamo bisogno di costruire una bigezione tra i due, ma questa cosa la si fa considerando il fatto che (per AC) $\omega \hookrightarrow X$ [per ogni insieme infinito]. Tuttavia, possiamo concludere lo stesso in questo caso senza AC, perché abbiamo visto nella costruzione di $\RR$ che $\omega \hookrightarrow \RR$ senza bisogno di scelta.}
+	da cui si ha $|\psinf(\RR)| = |\psinf(\RR \cup \{\spadesuit\})| \geq |\ps(\RR)| = 2^{2^{\aleph_0}}$.\footnote{Un'ultima osservazione degna di nota, senza AC sappiamo che $|X \cup \{\spadesuit\}| \geq |X|$ (infatti basta immergere $X$ in $X \cup \{\spadesuit\}$), ma la disuguaglianza dal basso NON \`e sufficiente per concludere nella nostra soluzione senza AC.
+	Per l'uguaglianza ci serve anche la disuguaglianza dall'alto, per inclusione-esclusione sappiamo che $|X \cup \{\spadesuit\}| \leq |X| + 1$, ma non possiamo dire che [per $X$ infinito] $|X| = |X| + 1$ senza AC. Fondamentalmente abbiamo bisogno di costruire una bigezione tra i due, ma questa cosa la si fa considerando il fatto che (per AC) $\omega \hookrightarrow X$ [per ogni insieme infinito]. Tuttavia, possiamo concludere lo stesso in questo caso senza AC, perch\'e abbiamo visto nella costruzione di $\RR$ che $\omega \hookrightarrow \RR$ senza bisogno di scelta.}
 \end{soln}
 
 \begin{itemize}
@@ -117,7 +117,7 @@ Per aggirare il lemma vietato $|f[X]|\leq |X|$, possiamo lavorare al contrario, 
 
 \begin{soln}
 	(Senza AC)\\
-	Per definizione di esponenziazione di cardinalità: $|{}^\omega \omega| = |\omega|^{|\omega|} = \aleph_0^{\aleph_0}$, e come abbiamo visto tante volte, essendo l'esponenziale di cardinalità debolmente crescente in entrambe le componenti, si ha:
+	Per definizione di esponenziazione di cardinalit\`a: $|{}^\omega \omega| = |\omega|^{|\omega|} = \aleph_0^{\aleph_0}$, e come abbiamo visto tante volte, essendo l'esponenziale di cardinalit\`a debolmente crescente in entrambe le componenti, si ha:
 	\[ 2 \leq \aleph_0 \leq 2^{\aleph_0} \implies 2^{\aleph_0} \leq \aleph_0^{\aleph_0} \leq (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0 \cdot \aleph_0} = 2^{\aleph_0} \implies \aleph_0^{\aleph_0} = 2^{\aleph_0}
 		\]
 \end{soln}
@@ -131,22 +131,22 @@ Per aggirare il lemma vietato $|f[X]|\leq |X|$, possiamo lavorare al contrario, 
 	Iniziamo osservando in primis che:
 	\[ \{f \in {}^{\omega}\omega | \; \text{$f$ strett. crescente}\} \subseteq \{f \in {}^{\omega}\omega | \; \text{$f$ debolm. crescente}\} \subseteq {}^{\omega}\omega
 		\]
-	da cui si ottiene la stima dall'alto con $2^{\aleph_0}$ per entrambe le cardinalità. Viceversa, possiamo considerare la funzione:
+	da cui si ottiene la stima dall'alto con $2^{\aleph_0}$ per entrambe le cardinalit\`a. Viceversa, possiamo considerare la funzione:
 	\[ f : {}^{\omega}\omega \to \{f \in {}^{\omega}\omega | \; \text{$f$ strett. crescente}\} : (a_i)_{i \in \omega} \mapsto \left(i + \sum_{n = 0}^i a_n\right)_{i \in \omega}
 		\]
-	ovvero la funzione che associa ogni successione alla successione delle sue somme parziali traslata in ogni termine di $\frac{i(i+1)}{2}$. La mappa $f$ è ben definita, perché grazie alla traslazione la successione in arrivo è in particolare strettamente
-	crescente (in particolare la differenza di due termini successivi è proprio $a_{i+1} + 1 > 0$), ed inoltre è iniettiva, in quanto $f((a_i)_{i \in \omega})(i+1) - f((a_i)_{i \in \omega})(i) - 1 = a_{i+1}$, dunque se in arrivo abbiamo due successioni uguali,
+	ovvero la funzione che associa ogni successione alla successione delle sue somme parziali traslata in ogni termine di $\frac{i(i+1)}{2}$. La mappa $f$ \`e ben definita, perch\'e grazie alla traslazione la successione in arrivo \`e in particolare strettamente
+	crescente (in particolare la differenza di due termini successivi \`e proprio $a_{i+1} + 1 > 0$), ed inoltre \`e iniettiva, in quanto $f((a_i)_{i \in \omega})(i+1) - f((a_i)_{i \in \omega})(i) - 1 = a_{i+1}$, dunque se in arrivo abbiamo due successioni uguali,
 	ricaviamo che i termini iniziali sono uguali e [dalla relazione appena vista che] le successioni in partenza sono a loro volta necessariamente uguali.\\
-	Abbiamo così ottenuto che:
+	Abbiamo cos\`i ottenuto che:
 	\[ 2^{\aleph_0} \leq |\{f \in {}^{\omega}\omega | \; \text{$f$ strett. crescente}\}| \leq |\{f \in {}^{\omega}\omega | \; \text{$f$ debolm. crescente}\}| \leq 2^{\aleph_0}
 		\] 
-	(dove l'ultima disuguaglianza è il contenimento iniziale), che ci permettono di concludere la cardinalità in entrambi i casi.
+	(dove l'ultima disuguaglianza \`e il contenimento iniziale), che ci permettono di concludere la cardinalit\`a in entrambi i casi.
 \end{soln}
 
 \begin{soln}
 	(Soluzione alternativa buffa (idea))\\
-	Basta trovare una funzione $g : \RR_{>0} = \{x \in \RR | x > 0\} \to \{\text{succ. strett. crescenti}\}$. Poniamo $(g(x))_{i} = \lfloor i \cdot x\rfloor$, tale successione è naturalmente strettamente crescente, ed è la successione che approssima ogni reale come limite di razionali,
-	infatti si ha $kx - 1 < \lfloor kx \rfloor \leq kx$, da cui segue che $\lim_{k \to +\infty} \frac{\lfloor kx \rfloor}{k} = x$, $\forall x \in \RR$. Abbiamo quindi che $(\lfloor i \cdot x \rfloor)_{i \in \omega}$ determina univocamente $x$, pertanto $g$ è iniettiva.
+	Basta trovare una funzione $g : \RR_{>0} = \{x \in \RR | x > 0\} \to \{\text{succ. strett. crescenti}\}$. Poniamo $(g(x))_{i} = \lfloor i \cdot x\rfloor$, tale successione \`e naturalmente strettamente crescente, ed \`e la successione che approssima ogni reale come limite di razionali,
+	infatti si ha $kx - 1 < \lfloor kx \rfloor \leq kx$, da cui segue che $\lim_{k \to +\infty} \frac{\lfloor kx \rfloor}{k} = x$, $\forall x \in \RR$. Abbiamo quindi che $(\lfloor i \cdot x \rfloor)_{i \in \omega}$ determina univocamente $x$, pertanto $g$ \`e iniettiva.
 \end{soln}
 
 \begin{itemize}
@@ -155,7 +155,7 @@ Per aggirare il lemma vietato $|f[X]|\leq |X|$, possiamo lavorare al contrario, 
 
 \begin{soln}
 	(Senza AC)\\
-	Per definizione di esponenziale di cardinalità $|{}^\omega \RR| = |\RR|^{|\omega|} = (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0 \cdot \aleph_0} = 2^{\aleph_0}$.
+	Per definizione di esponenziale di cardinalit\`a $|{}^\omega \RR| = |\RR|^{|\omega|} = (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0 \cdot \aleph_0} = 2^{\aleph_0}$.
 \end{soln}
 
 \begin{itemize}
@@ -167,63 +167,63 @@ Per aggirare il lemma vietato $|f[X]|\leq |X|$, possiamo lavorare al contrario, 
 	Iniziamo osservando in primis che:
 	\[ \{f \in {}^{\omega}\RR | \; \text{$f$ strett. crescente}\} \subseteq \{f \in {}^{\omega}\RR | \; \text{$f$ debolm. crescente}\} \subseteq {}^{\omega}\RR
 		\]
-	e quindi abbiamo una disuguaglianza dall'alto per entrambi gli insiemi. D'altra parte, si ha che $\RR \to {}^{\omega}\RR : r \mapsto f_r$, con $f_r(x) = r$, $\forall r \in \RR$ è ben definita (perché le funzioni costanti sono debolmente crescenti) ed è iniettiva, quindi concludiamo che 
-	$|\{f \in {}^{\omega}\RR | \; \text{$f$ debolm. crescente}\}| = 2^{\aleph_0}$. Questa cosa naturalmente non ci dà nessuna nuova stima per le strettamente crescenti, tuttavia anche in questo caso è facile costruirle esplicitamente come segue:
+	e quindi abbiamo una disuguaglianza dall'alto per entrambi gli insiemi. D'altra parte, si ha che $\RR \to {}^{\omega}\RR : r \mapsto f_r$, con $f_r(x) = r$, $\forall r \in \RR$ \`e ben definita (perch\'e le funzioni costanti sono debolmente crescenti) ed \`e iniettiva, quindi concludiamo che 
+	$|\{f \in {}^{\omega}\RR | \; \text{$f$ debolm. crescente}\}| = 2^{\aleph_0}$. Questa cosa naturalmente non ci d\`a nessuna nuova stima per le strettamente crescenti, tuttavia anche in questo caso \`e facile costruirle esplicitamente come segue:
 	\[ \RR \times \omega \to \{f \in {}^{\omega}\RR | \; \text{$f$ strett. crescente}\} : (x,n) \mapsto (a_i)_{i \in \omega}
 		\]
-	dove $(a_i)$ è definita per ricorsione numerabile da:
+	dove $(a_i)$ \`e definita per ricorsione numerabile da:
 	\[ \begin{cases}
 		a_0 = x \\
 		a_{i+1} = a_i + n
 	\end{cases}
 		\]
-	e naturalmente la mappa è iniettiva (l'uguaglianza di due successioni in arrivo ci assicura l'uguaglianza dei termini iniziali, e quindi della prima componente in partenza, mentre l'uguaglianza di tutti gli altri ci dà l'uguaglianza degli incrementi). A questo punto, avendo visto (senza AC\footnote{Bastano Cantor e le disuguaglianze tra cardinalità.}) che $|\RR \times \omega| = 2^{\aleph_0} \cdot \aleph_0 = 2^{\aleph_0}$,
+	e naturalmente la mappa \`e iniettiva (l'uguaglianza di due successioni in arrivo ci assicura l'uguaglianza dei termini iniziali, e quindi della prima componente in partenza, mentre l'uguaglianza di tutti gli altri ci d\`a l'uguaglianza degli incrementi). A questo punto, avendo visto (senza AC\footnote{Bastano Cantor e le disuguaglianze tra cardinalit\`a.}) che $|\RR \times \omega| = 2^{\aleph_0} \cdot \aleph_0 = 2^{\aleph_0}$,
 	abbiamo la disuguaglianza dal basso, e possiamo concludere che $|\{f \in {}^{\omega}\RR | \; \text{$f$ strett. crescente}\}| = 2^{\aleph_0}$.
 \end{soln}
 
 \begin{note}[Variante per la disuguaglianza dal basso]
-	Per la cardinalità precedente avremmo anche potuto utilizzare la funzione:
-	\[ f : \RR \to \{\text{succ. strett. crescente}\} : x \mapsto (i \cdot \text e^x)_{i \in \omega}\footnote{L'idea di usare ``rette'' con coefficiente angolare $>0$ tornerà anche dopo per funzioni strettamente crescenti da $\NN$ in $\RR$ e da $\RR$ in $\RR$ allo stesso identico modo.}
+	Per la cardinalit\`a precedente avremmo anche potuto utilizzare la funzione:
+	\[ f : \RR \to \{\text{succ. strett. crescente}\} : x \mapsto (i \cdot \text e^x)_{i \in \omega}\footnote{L'idea di usare ``rette'' con coefficiente angolare $>0$ torner\`a anche dopo per funzioni strettamente crescenti da $\NN$ in $\RR$ e da $\RR$ in $\RR$ allo stesso identico modo.}
 		\]
-	che manda ogni reale $x$ nella successione $0,\e^x,2\e^x,3\e^x,\ldots$, che è iniettiva per l'iniettività della funzione esponenziale (la verifica dell'iniettività avviene in $\RR$ quindi si possono usare tutte le proprietà usuali di quest'ultimo).
+	che manda ogni reale $x$ nella successione $0,\e^x,2\e^x,3\e^x,\ldots$, che \`e iniettiva per l'iniettivit\`a della funzione esponenziale (la verifica dell'iniettivit\`a avviene in $\RR$ quindi si possono usare tutte le propriet\`a usuali di quest'ultimo).
 \end{note}
 
 \begin{itemize}
 	\item \textcolor{purple}{$|$successioni definitivamente costanti di naturali$|$ $= |\{f \in {}^\omega \omega | \exists n_0 \in \omega \; \forall n \geq n_0 \; \text{$f(n) =$ cost.}\}|$}
 \end{itemize}
 
-\textcolor{MidnightBlue}{\underline{Idea}: La disuguaglianza dal basso con $\aleph_0$ è immediata. La disuguaglianza opposta deve basarsi sul fatto che $|$sequenze finite di naturali$|=\aleph_0$, perché, tutto sommato, una successione definitivamente costante è una sequenza finita il cui ultimo elemento si ripete incessantemente.
-Attenzione però che la stessa successione, es. $1,2,3,3,3,\ldots$ può essere rappresentata in più di un modo, es. $(1,2,3,3),(1,2,3,3,3)$.}
+\textcolor{MidnightBlue}{\underline{Idea}: La disuguaglianza dal basso con $\aleph_0$ \`e immediata. La disuguaglianza opposta deve basarsi sul fatto che $|$sequenze finite di naturali$|=\aleph_0$, perch\'e, tutto sommato, una successione definitivamente costante \`e una sequenza finita il cui ultimo elemento si ripete incessantemente.
+Attenzione per\`o che la stessa successione, es. $1,2,3,3,3,\ldots$ pu\`o essere rappresentata in pi\`u di un modo, es. $(1,2,3,3),(1,2,3,3,3)$.}
 
 \begin{soln}
 	(Con AC)\\
 	Sia $X$ l'insieme delle successioni da $\omega$ in $\omega$ definitivamente costanti, naturalmente tutte le successioni costanti sono nell'insieme ed abbiamo quindi $\aleph_0 \leq |X|$.\\
 	Per la disuguaglianza opposta esibiamo $f : X \to \bigcup\{\omega^i | i \in \omega\setminus\{0\}\} \subseteq \psf(\omega \times \omega)$\footnote{Sono tutte le funzioni da un numero finito ad $\omega$, e quindi possono essere pensate come parti finite (unione di tutti i $\ps^{n}(\omega^2)$) di $\omega^2$ (e si identificano con le funzioni a supporto 
-	finito da $\omega$ in $\omega$). Inoltre per dire che le parti finite di un insieme numerabile sono numerabili abbiamo comunque usato scelta nella teoria, per cui questa soluzione non può farne a meno.} iniettive. A questo scopo, per $a \in X$ (una fissata funzione definitivamente costante), sia $I(a)$ il minimo $i \in \omega$ tale che $\forall j > i \; a_j = a_i$ (cioè il primo termine costante della successione), che esiste perché $a$ è definitivamente costane (quindi prendiamo il minimo su un insieme non vuoto etc.).\\
-	Sia $f(a) = a_{|1+I(a)}$ (cioè tronchiamo la successione $a$ al primo termine $I(a)$ (incluso) in cui è costante\footnote{Notare che abbiamo preso $a_{|m+1}$ quindi tutti i valori della successione da $a_0$ ad $a_m$ escludendo l'ultimo perché è lo stesso insieme a cui ci siamo ristretti.}), ossia rimappiamo la successione usando in arrivo un sottoinsieme finito in arrivo (e quindi troncandola ad un numero finito di termini):
+	finito da $\omega$ in $\omega$). Inoltre per dire che le parti finite di un insieme numerabile sono numerabili abbiamo comunque usato scelta nella teoria, per cui questa soluzione non pu\`o farne a meno.} iniettive. A questo scopo, per $a \in X$ (una fissata funzione definitivamente costante), sia $I(a)$ il minimo $i \in \omega$ tale che $\forall j > i \; a_j = a_i$ (cio\`e il primo termine costante della successione), che esiste perch\'e $a$ \`e definitivamente costane (quindi prendiamo il minimo su un insieme non vuoto etc.).\\
+	Sia $f(a) = a_{|1+I(a)}$ (cio\`e tronchiamo la successione $a$ al primo termine $I(a)$ (incluso) in cui \`e costante\footnote{Notare che abbiamo preso $a_{|m+1}$ quindi tutti i valori della successione da $a_0$ ad $a_m$ escludendo l'ultimo perch\'e \`e lo stesso insieme a cui ci siamo ristretti.}), ossia rimappiamo la successione usando in arrivo un sottoinsieme finito in arrivo (e quindi troncandola ad un numero finito di termini):
 	\[  f(a) : 1 + I(a) \to \omega : i \mapsto a_i
 		\]
-	Per verificare l'iniettività osserviamo che $I(a) = \max(\Dom(f(a)))$ (per come l'abbiamo costruita), quindi $f(a)$ determina $I(a)$, inoltre se $i \leq I(a)$, $a_i = (f(a))_i$, altrimenti, $a_i = a_{I(a)} = (f(a))_{I(a)}$ (cioè il termine indicizzato da $I(a)$ in arrivo). Per cui $a$ è determinata da $f(a)$.
+	Per verificare l'iniettivit\`a osserviamo che $I(a) = \max(\Dom(f(a)))$ (per come l'abbiamo costruita), quindi $f(a)$ determina $I(a)$, inoltre se $i \leq I(a)$, $a_i = (f(a))_i$, altrimenti, $a_i = a_{I(a)} = (f(a))_{I(a)}$ (cio\`e il termine indicizzato da $I(a)$ in arrivo). Per cui $a$ \`e determinata da $f(a)$.
 \end{soln}
 
 \begin{soln}
 	(Soluzioni alternative, con AC)\\
-	Detto $S := \{\text{successioni definitivamente costanti di naturali}\}$, osserviamo che $\omega \to S : m \mapsto f_m$, con $f_m(n) = m$, $\forall m \in \omega$, è iniettiva e dà la prima disuguaglianza, ovvero $\aleph_0 \leq |S|$.
+	Detto $S := \{\text{successioni definitivamente costanti di naturali}\}$, osserviamo che $\omega \to S : m \mapsto f_m$, con $f_m(n) = m$, $\forall m \in \omega$, \`e iniettiva e d\`a la prima disuguaglianza, ovvero $\aleph_0 \leq |S|$.
 	Viceversa, la funzione:
 	\[ \omega \times \omega \times \omega^{<\omega} \to S : (n_0,k,(\alpha_i)) \mapsto a_i = \begin{cases}
 		\alpha_i &\text{se $i < n_0$} \\
 		k &\text{se $i \geq n_0$}
 	\end{cases}
 		\]
-	è surgettiva, in quanto, per ogni successione definitivamente costante, per definizione, $\exists n_0 \in \omega \; \forall n \geq n_0 \; a_n = k$, inoltre i valori assunti in precedenza sono in numero finito (precisamente $n_0$, quindi abbiamo la $n_0$-upla in $\omega^{n_0}$ che salva i primi termini).\\
-	Se usassimo AC, avremmo già finito, tuttavia non lo stiamo usando, ma possiamo comunque provare a salvare questa soluzione in due modi.
-	Il primo è osservare che le disuguaglianze di cardinalità con le funzioni surgettive valgono anche senza AC per gli insiemi al più numerabili (per l'\hyperref[disuguaglianze_senza_AC2]{esercizio visto}), il problema è in questo caso dimostrare che $\omega^{<\omega}$ è numerabile, infatti abbiamo:
+	\`e surgettiva, in quanto, per ogni successione definitivamente costante, per definizione, $\exists n_0 \in \omega \; \forall n \geq n_0 \; a_n = k$, inoltre i valori assunti in precedenza sono in numero finito (precisamente $n_0$, quindi abbiamo la $n_0$-upla in $\omega^{n_0}$ che salva i primi termini).\\
+	Se usassimo AC, avremmo gi\`a finito, tuttavia non lo stiamo usando, ma possiamo comunque provare a salvare questa soluzione in due modi.
+	Il primo \`e osservare che le disuguaglianze di cardinalit\`a con le funzioni surgettive valgono anche senza AC per gli insiemi al pi\`u numerabili (per l'\hyperref[disuguaglianze_senza_AC2]{esercizio visto}), il problema \`e in questo caso dimostrare che $\omega^{<\omega}$ \`e numerabile, infatti abbiamo:
 	\[ \omega^{<\omega} = \bigcup_{n \in \omega} \omega^n
 		\]
-	e per dimostrare che la cardinalità di questa cosa è ancora $\aleph_0$ (o almeno la disuguaglianza dall'alto), abbiamo inevitabilmente bisogno di AC. L'ultima possibilità che ci rimane è definire allora funziona al contrario, cioè:
+	e per dimostrare che la cardinalit\`a di questa cosa \`e ancora $\aleph_0$ (o almeno la disuguaglianza dall'alto), abbiamo inevitabilmente bisogno di AC. L'ultima possibilit\`a che ci rimane \`e definire allora funziona al contrario, cio\`e:
 	\[ S \hookrightarrow \omega \times \omega \times \omega^{<\omega} : a_i \mapsto (n_0,k,(\alpha_i))
 		\]
-	che è ben definita e iniettiva come la precedente. A questo punto la disuguaglianza la abbiamo, cioè $|S| \leq |\omega \times \omega \times \omega^{<\omega}| = \aleph_0 \cdot \aleph_0 \cdot |\omega^{<\omega}|$, ma di nuovo incappiamo nel problema di determinare la cardinalità di $\omega^{<\omega}$ senza usare AC. Morale della favola:
+	che \`e ben definita e iniettiva come la precedente. A questo punto la disuguaglianza la abbiamo, cio\`e $|S| \leq |\omega \times \omega \times \omega^{<\omega}| = \aleph_0 \cdot \aleph_0 \cdot |\omega^{<\omega}|$, ma di nuovo incappiamo nel problema di determinare la cardinalit\`a di $\omega^{<\omega}$ senza usare AC. Morale della favola:
 	tutte e tre le soluzioni che abbiamo trovato funzionano perfettamente assumendo AC.
 \end{soln}
 
@@ -234,10 +234,10 @@ Attenzione però che la stessa successione, es. $1,2,3,3,3,\ldots$ può essere r
 \begin{soln}
 	(Con AC)\\
 	Sia $X$ l'insieme delle successioni periodiche di naturali. Le successioni costanti sono periodiche e danno la disuguaglianza dal basso con $\aleph_0$. Per la disuguaglianza dall'alto esibiamo una funzione iniettiva da $X$ alle parti finite di $\omega \times \omega$ (che contengono le sequenze finite ordinate $\bigcup\{\omega^i |i \in \omega\}$ \footnote{Qui stiamo usando AC.}).
-	Detto $T(a)$ il minimo periodo della successione $a$, sia $f(a) = a_{|T(a)}$ (cioè i termini da $a_0$ a $a_{T(a)-1}$ (incluso), cio fino all'ultimo che non si può ottenere come ripetizione).\\
-	Per verificare l'iniettività osserviamo che $f(a)$ determina $T(a) = 1 + \max(\Dom(f(a)))$ - tecnicamente è uguale a $\Dom(f(a))$. Ora $a_i = (f(a))_j$, dove $j < T(a)$ è l'unico naturale congruo ad $i$ modulo $T(a)$, cioè per assegnare l'$i$-esimo valore ad $(a_i)$ vediamo a quale valore $i$ è congruo modulo $T(a)$ e fissiamo un rappresentante $<T(a)$, sia $j$, a questo punto
-	$a_i = (f(a))_j$ (cioè prendiamo l'elemento giusto nella stringa ordinata che determina il periodo\footnote{Notare come questo procedimento non richieda nemmeno salvare il periodo nella funzione iniziale, ci basta solo la stringa finita dei primi $T(a)$ termini per ricostruire l'intera successione.}).
-    Ciò determina completamente $(a)$, dandoci l'iniettività e quindi la disuguaglianza dall'alto.
+	Detto $T(a)$ il minimo periodo della successione $a$, sia $f(a) = a_{|T(a)}$ (cio\`e i termini da $a_0$ a $a_{T(a)-1}$ (incluso), cio fino all'ultimo che non si pu\`o ottenere come ripetizione).\\
+	Per verificare l'iniettivit\`a osserviamo che $f(a)$ determina $T(a) = 1 + \max(\Dom(f(a)))$ - tecnicamente \`e uguale a $\Dom(f(a))$. Ora $a_i = (f(a))_j$, dove $j < T(a)$ \`e l'unico naturale congruo ad $i$ modulo $T(a)$, cio\`e per assegnare l'$i$-esimo valore ad $(a_i)$ vediamo a quale valore $i$ \`e congruo modulo $T(a)$ e fissiamo un rappresentante $<T(a)$, sia $j$, a questo punto
+	$a_i = (f(a))_j$ (cio\`e prendiamo l'elemento giusto nella stringa ordinata che determina il periodo\footnote{Notare come questo procedimento non richieda nemmeno salvare il periodo nella funzione iniziale, ci basta solo la stringa finita dei primi $T(a)$ termini per ricostruire l'intera successione.}).
+    Ci\`o determina completamente $(a)$, dandoci l'iniettivit\`a e quindi la disuguaglianza dall'alto.
 \end{soln}
 
 \begin{itemize}
@@ -246,25 +246,25 @@ Attenzione però che la stessa successione, es. $1,2,3,3,3,\ldots$ può essere r
 
 \begin{soln}
 	(Senza AC)\\
-	Per la definizione di esponenziazione di cardinalità $|{}^\RR\RR| = |\RR|^{|\RR|} = (2^{\aleph_0})^{2^{\aleph_0}} = 2^{\aleph_0 \cdot 2^{\aleph_0}} = 2^{2^{\aleph_0}}$. Osservare che, oltre alla definizione,
-	e alla proprietà associativa delle potenze, abbiamo usato soltanto che $\aleph_0 \cdot 2^{\aleph_0} = 2^{\aleph_0}$, che è immediato con \hyperref[ax9]{AC}, ma che \hyperref[prodotto_cardinali_senza_AC]{abbiamo dimostrato anche senza}.
+	Per la definizione di esponenziazione di cardinalit\`a $|{}^\RR\RR| = |\RR|^{|\RR|} = (2^{\aleph_0})^{2^{\aleph_0}} = 2^{\aleph_0 \cdot 2^{\aleph_0}} = 2^{2^{\aleph_0}}$. Osservare che, oltre alla definizione,
+	e alla propriet\`a associativa delle potenze, abbiamo usato soltanto che $\aleph_0 \cdot 2^{\aleph_0} = 2^{\aleph_0}$, che \`e immediato con \hyperref[ax9]{AC}, ma che \hyperref[prodotto_cardinali_senza_AC]{abbiamo dimostrato anche senza}.
 \end{soln}
 
 \begin{itemize}
 	\item \textcolor{purple}{$|$funzioni da $\RR$ in $\RR$ continue$|$ $= |\text{C}^0(\RR)|$}
 \end{itemize}
 
-\textcolor{MidnightBlue}{\underline{Idea}: una funzione continua è determinata dai valori che assume sui razionali, quindi è come se ci bastasse definirla su $\QQ$, ovvero come sottoinsieme di ${}^\QQ \RR$.}
+\textcolor{MidnightBlue}{\underline{Idea}: una funzione continua \`e determinata dai valori che assume sui razionali, quindi \`e come se ci bastasse definirla su $\QQ$, ovvero come sottoinsieme di ${}^\QQ \RR$.}
 
 \begin{soln}
 	(Senza AC)\\
-	Consideriamo la mappa $\RR \hookrightarrow \text C^0(\RR) : r \mapsto f_r$, tale che $f_r : x \mapsto x$, ossia la funzione che mappa ogni reale nella sua funzione costante [che è continua], tale funziona è banalmente iniettiva
+	Consideriamo la mappa $\RR \hookrightarrow \text C^0(\RR) : r \mapsto f_r$, tale che $f_r : x \mapsto x$, ossia la funzione che mappa ogni reale nella sua funzione costante [che \`e continua], tale funziona \`e banalmente iniettiva
 	e ci dice che $2^{\aleph_0} \leq |\text C^0(\RR)|$.\\
-	Per la disuguaglianza opposta, consideriamo $|_\QQ : \text C^0(\RR) \rightarrow {}^\QQ \RR : f \mapsto f_{|\QQ}$ e osserviamo che $|{}^\QQ \RR| = |\RR|^{|\QQ|} = (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0}$. Verifichiamo che la mappa $|_{\QQ}$ è iniettiva,
-	date $f_{|\QQ},g_{|\QQ} \in {}^{\QQ}\RR$ si ha [per l'estensionalità di funzioni che]:
+	Per la disuguaglianza opposta, consideriamo $|_\QQ : \text C^0(\RR) \rightarrow {}^\QQ \RR : f \mapsto f_{|\QQ}$ e osserviamo che $|{}^\QQ \RR| = |\RR|^{|\QQ|} = (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0}$. Verifichiamo che la mappa $|_{\QQ}$ \`e iniettiva,
+	date $f_{|\QQ},g_{|\QQ} \in {}^{\QQ}\RR$ si ha [per l'estensionalit\`a di funzioni che]:
 	\[ f_{|\QQ} = g_{|\QQ} \implies f_{|\QQ}(x) = g_{|\QQ}(x) \qquad \forall x \in \QQ 
 		\]
-	Ora, $\forall x \in \RR$ esiste [una successione di razionali che lo approssima] $\{x_n\}_{n\in \omega} \subseteq \QQ$ tale che $x_n \to x$\footnote{Deriva dalla densità di $\QQ$ in $\RR$ e lo si può verificare in tanti modi,
+	Ora, $\forall x \in \RR$ esiste [una successione di razionali che lo approssima] $\{x_n\}_{n\in \omega} \subseteq \QQ$ tale che $x_n \to x$\footnote{Deriva dalla densit\`a di $\QQ$ in $\RR$ e lo si pu\`o verificare in tanti modi,
 	per esempio mostrando una successione esplicita di razionali, ad esempio $x_n := \frac{\left\lfloor nx\right\rfloor}{n} \in \QQ$.}, dunque:
 	\[ \begin{split}
 		f(x) = g(x) &\iff f\left(\lim_{n \to +\infty} x_n\right) = g\left(\lim_{n \to +\infty} x_n\right) \qquad \forall x \in \RR \\
@@ -273,46 +273,46 @@ Attenzione però che la stessa successione, es. $1,2,3,3,3,\ldots$ può essere r
 		\]
 	dove abbiamo usato il fatto che $f$ e $g$ continue, implica che commutano con i limiti. A questo punto, visto che le due funzioni sono uguali sulla restrizione a $\QQ$, e che $\{x_n\}_{n \in \omega} \subseteq \QQ$,
 	i due limiti coincidono e rendono vero il primo termine, ossia $f(x) = g(x)$, $\forall x \in \RR$,
-	e per estensionalità per funzioni, si conclude che $f = g$, quindi $|_{\QQ}$ è iniettiva e ci dà la disuguaglianza $|\text C^0(\RR)| \leq 2^{\aleph_0}$, con cui si conclude.
+	e per estensionalit\`a per funzioni, si conclude che $f = g$, quindi $|_{\QQ}$ \`e iniettiva e ci d\`a la disuguaglianza $|\text C^0(\RR)| \leq 2^{\aleph_0}$, con cui si conclude.
 \end{soln}
 
 \begin{remark}
-	Per concludere l'iniettività di $|_\QQ$ si poteva anche osservare che, se $f \ne g$, WLOG si può assumere che esista $x_0$ tale per cui $f(x_0) > g(x_0)$ e per permanenza del segno esiste $\varepsilon > 0$ tale che $f(x) > g(x)$ per ogni $x \in ]x_0 - \varepsilon, x_0 + \varepsilon[$.\\
-	Per la densità di $\QQ$ in $\RR$ esiste necessariamente un razionale in questo intervallo, per cui accade $f(q) > g(q)$ e quindi $f_{|\QQ} \ne g_{|\QQ}$. 
+	Per concludere l'iniettivit\`a di $|_\QQ$ si poteva anche osservare che, se $f \ne g$, WLOG si pu\`o assumere che esista $x_0$ tale per cui $f(x_0) > g(x_0)$ e per permanenza del segno esiste $\varepsilon > 0$ tale che $f(x) > g(x)$ per ogni $x \in ]x_0 - \varepsilon, x_0 + \varepsilon[$.\\
+	Per la densit\`a di $\QQ$ in $\RR$ esiste necessariamente un razionale in questo intervallo, per cui accade $f(q) > g(q)$ e quindi $f_{|\QQ} \ne g_{|\QQ}$. 
 \end{remark}
 
 \begin{itemize}
 	\item \textcolor{purple}{$|$funzioni da $\RR$ in $\RR$ crescenti$|$ $= |\{f \in {}^\RR \RR | \; \text{$f$ crescente}\}|$}
 \end{itemize}
 
-\textcolor{MidnightBlue}{\underline{Idea}: Una funzione crescente supera ogni barriera in un punto ben determinato, e questi punti \underline{quasi} determinano la funzione. Quasi perché c'è più di un modo di superare un razionale nei punti di discontinuità. Converrà quindi codificare una funzione crescente con la funzione che manda ogni razionale nel punto
-di superamento corredato dall'informazione necessaria per disambiguare la discontinuità.}\\
-\textcolor{MidnightBlue}{\underline{Idea più dettagliata}: Sia $f$ crescente $\RR \to \RR$. Per definizione, il reale $f(x)$ è l'insieme dei razionali: $r < f(x)$. Quindi $f$ è determinata dall'insieme delle coppie $(r,x) \in \QQ \times \RR$ tali che $r < f(x)$.
-Se ora fissiamo $r$, siccome $f$ è crescente, l'insieme dei $-x$ tali che $r < f(x)$ è un segmento iniziale di $\RR$. Quindi $f$ è determinata dalla funzione $\QQ \to \{\text{segm. iniz. di $\RR$}\}$ che manda $r$ in $\{-x \in \RR | r < f(x)\}$. Siccome i segmenti iniziali di $\RR$ sono: $\RR$, $\emptyset$, $]-\infty,x[$ e $]-\infty,x]$, ce ne sono $1+1+2^{\aleph_0}+2^{\aleph_0} = 2^{\aleph_0}$.
-Abbiamo quindi al più $(2^{\aleph_0})^{\aleph_0}$ funzioni crescenti.}
+\textcolor{MidnightBlue}{\underline{Idea}: Una funzione crescente supera ogni barriera in un punto ben determinato, e questi punti \underline{quasi} determinano la funzione. Quasi perch\'e c'\`e pi\`u di un modo di superare un razionale nei punti di discontinuit\`a. Converr\`a quindi codificare una funzione crescente con la funzione che manda ogni razionale nel punto
+di superamento corredato dall'informazione necessaria per disambiguare la discontinuit\`a.}\\
+\textcolor{MidnightBlue}{\underline{Idea pi\`u dettagliata}: Sia $f$ crescente $\RR \to \RR$. Per definizione, il reale $f(x)$ \`e l'insieme dei razionali: $r < f(x)$. Quindi $f$ \`e determinata dall'insieme delle coppie $(r,x) \in \QQ \times \RR$ tali che $r < f(x)$.
+Se ora fissiamo $r$, siccome $f$ \`e crescente, l'insieme dei $-x$ tali che $r < f(x)$ \`e un segmento iniziale di $\RR$. Quindi $f$ \`e determinata dalla funzione $\QQ \to \{\text{segm. iniz. di $\RR$}\}$ che manda $r$ in $\{-x \in \RR | r < f(x)\}$. Siccome i segmenti iniziali di $\RR$ sono: $\RR$, $\emptyset$, $]-\infty,x[$ e $]-\infty,x]$, ce ne sono $1+1+2^{\aleph_0}+2^{\aleph_0} = 2^{\aleph_0}$.
+Abbiamo quindi al pi\`u $(2^{\aleph_0})^{\aleph_0}$ funzioni crescenti.}
 
 \begin{soln}
 	(Senza AC)\\
-	Osserviamo intanto che la cardinalità cercata è maggiore o uguale di $2^{\aleph_0}$ perché per ogni $k \in \RR$ la funzione $f_k(x) = x \cdot \e^{k}$ è strettamente crescente. Dobbiamo dimostrare la disuguaglianza opposta.
-	Abbiamo bisogno di osservare che i segmenti iniziali di $\RR$ sono: $\emptyset$, $\RR$ e gli insiemi della forma $]-\infty,x[$ o $]-\infty,x]$ per $x \in \RR$ [naturalmente tutti soddisfano la definizione di segmento iniziale, quindi c'è bisogno di dimostrare soltanto che tutti i possibili segmenti iniziali di $\RR$ sono tra quelli di questa forma].
-	Consideriamo infatti un segmento iniziale $I \ne \emptyset$ di $\RR$. O $I$ è superiormente limitato o no. Se non è superiormente limitato (moralmente non è una semiretta, ma una retta oppure verifica la definizione di illimitato a vuoto) allora $I = \RR$ (si possono verificare facilmente le due inclusioni) oppure $I = \emptyset$. Se è superiormente limitato, $I$ è o $]-\infty,\sup I[$ o $]-\infty,\sup I[$.\\
+	Osserviamo intanto che la cardinalit\`a cercata \`e maggiore o uguale di $2^{\aleph_0}$ perch\'e per ogni $k \in \RR$ la funzione $f_k(x) = x \cdot \e^{k}$ \`e strettamente crescente. Dobbiamo dimostrare la disuguaglianza opposta.
+	Abbiamo bisogno di osservare che i segmenti iniziali di $\RR$ sono: $\emptyset$, $\RR$ e gli insiemi della forma $]-\infty,x[$ o $]-\infty,x]$ per $x \in \RR$ [naturalmente tutti soddisfano la definizione di segmento iniziale, quindi c'\`e bisogno di dimostrare soltanto che tutti i possibili segmenti iniziali di $\RR$ sono tra quelli di questa forma].
+	Consideriamo infatti un segmento iniziale $I \ne \emptyset$ di $\RR$. O $I$ \`e superiormente limitato o no. Se non \`e superiormente limitato (moralmente non \`e una semiretta, ma una retta oppure verifica la definizione di illimitato a vuoto) allora $I = \RR$ (si possono verificare facilmente le due inclusioni) oppure $I = \emptyset$. Se \`e superiormente limitato, $I$ \`e o $]-\infty,\sup I[$ o $]-\infty,\sup I[$.\\
 	Segue quindi che $|\{\text{segmenti iniziali di $\RR$}\}| = 1 + 1 + 2^{\aleph_0} + 2^{\aleph_0}$. Ci basta quindi trovare una funzione iniettiva dalle funzioni [debolmente] crescenti alle funzioni da $\QQ$ a tali segmenti iniziali di $\RR$:
 	\[ F : \{\text{$f \in {}^\RR \RR$ crescenti}\} \to {}^\QQ\{\text{segmenti iniziali di $\RR$}\}
 		\]
 	possiamo definirla come segue:
 	\[ F(f) : \QQ \to \{\text{segmenti iniziali di $\RR$}\} : q \mapsto \{x \in \RR | q < f(-x)\}
 		\]
-	Verifichiamo che $F$ è ben definita ed iniettiva:
+	Verifichiamo che $F$ \`e ben definita ed iniettiva:
 	\begin{itemize}
-		\item[$\diamondsuit$] \underline{Buona definizione}: Vogliamo vedere che $(F(f))(q)$ è un segmento iniziale. Sia $x \in (F(f))(q)$ e sia $y < x$, vogliamo mostrare che $y \in (F(f))(q)$, osserviamo che $y < x \implies -y > -x$ (per le proprietà di $\RR$), da cui $f(-y) > f(-x) > q \implies f(-y) > q$ (poiché $f$ crescente), ovvero $y \in (F(f))(q)$.
-		\item[$\diamondsuit$] \underline{Iniettività}: Consideriamo $f,g \in {}^\RR\RR$ crescenti distinte, ossia esiste almeno un $x \in \RR$ tale che (WLOG) $f(x) < g(x)$, vogliamo dimostrare che $F(f) \ne F(g)$. Per la densità di $\QQ$ esiste un razionale tale che $f(x) < q < g(x)$, per cui possiamo valutare $(F(g))(q)$ e $(F(f))(q)$, e osservare che [considerando l'$x$ iniziale] $-x \in (F(g))(q)$, cioè $q < g(x)$ e allo stesso tempo $-x \not \in (F(f))(q)$ poiché abbiamo dalla disuguaglianza sopra che $f(x) < q$, ovvero $F(f)$ e $F(g)$ sono distinte su $q \in \QQ$,
-		quindi abbiamo l'iniettività.
+		\item[$\diamondsuit$] \underline{Buona definizione}: Vogliamo vedere che $(F(f))(q)$ \`e un segmento iniziale. Sia $x \in (F(f))(q)$ e sia $y < x$, vogliamo mostrare che $y \in (F(f))(q)$, osserviamo che $y < x \implies -y > -x$ (per le propriet\`a di $\RR$), da cui $f(-y) > f(-x) > q \implies f(-y) > q$ (poich\'e $f$ crescente), ovvero $y \in (F(f))(q)$.
+		\item[$\diamondsuit$] \underline{Iniettivit\`a}: Consideriamo $f,g \in {}^\RR\RR$ crescenti distinte, ossia esiste almeno un $x \in \RR$ tale che (WLOG) $f(x) < g(x)$, vogliamo dimostrare che $F(f) \ne F(g)$. Per la densit\`a di $\QQ$ esiste un razionale tale che $f(x) < q < g(x)$, per cui possiamo valutare $(F(g))(q)$ e $(F(f))(q)$, e osservare che [considerando l'$x$ iniziale] $-x \in (F(g))(q)$, cio\`e $q < g(x)$ e allo stesso tempo $-x \not \in (F(f))(q)$ poich\'e abbiamo dalla disuguaglianza sopra che $f(x) < q$, ovvero $F(f)$ e $F(g)$ sono distinte su $q \in \QQ$,
+		quindi abbiamo l'iniettivit\`a.
 	\end{itemize}
 \end{soln}
 
 \pagebreak
 \begin{definition}[Partizione]
-	Diciamo che $A$ è una \vocab{partizione} di $B$ se:
+	Diciamo che $A$ \`e una \vocab{partizione} di $B$ se:
 	\[ \bigcup A = B \qquad \emptyset \not\in A \qquad \forall x,y \in A \; x \cap y = \emptyset
 		\]
 \end{definition}
@@ -323,22 +323,22 @@ Abbiamo quindi al più $(2^{\aleph_0})^{\aleph_0}$ funzioni crescenti.}
 
 \begin{soln}
 	(Senza AC)\\
-	Osserviamo che la mappa $\ps(\omega\setminus\{0,1\})\setminus\{\emptyset\} \hookrightarrow \{\text{partizioni di $\omega$}\} : A \mapsto \{A\cup \{0\},(\omega\setminus A)\cup \{1\}\}$ è iniettiva per estensionalità [basta addirittura solo il paio] (o anche osservare che, detto $z(x)$ l'unico elemento dei due della partizione che contiene lo 0, si ha proprio che $z(\{A\cup \{0\},\omega\setminus A\cup \{1\}\}) \cap (\omega\setminus\{0\}) = A$, da cui segue ancora più banalmente l'iniettività),
+	Osserviamo che la mappa $\ps(\omega\setminus\{0,1\})\setminus\{\emptyset\} \hookrightarrow \{\text{partizioni di $\omega$}\} : A \mapsto \{A\cup \{0\},(\omega\setminus A)\cup \{1\}\}$ \`e iniettiva per estensionalit\`a [basta addirittura solo il paio] (o anche osservare che, detto $z(x)$ l'unico elemento dei due della partizione che contiene lo 0, si ha proprio che $z(\{A\cup \{0\},\omega\setminus A\cup \{1\}\}) \cap (\omega\setminus\{0\}) = A$, da cui segue ancora pi\`u banalmente l'iniettivit\`a),
 	dunque abbiamo la disuguaglianza $2^{\aleph_0} \leq |\{\text{partizioni di $\omega$}\}|$.\\
 	Per il viceversa, osserviamo che data una partizione $A = \{A_i\}_{i \in I}$ di $\omega$, per la definizione che ne abbiamo dato, si ha $\forall n \in \omega \; \exists i \in I \; n \in A_i$, per cui possiamo definire la mappa $\{\text{partizioni di $\omega$}\} \rightarrow {}^{\omega}\ps(\omega) : A \mapsto f_A$,
-	con $f_A : \omega \rightarrow \ps(\omega) : n \mapsto A_i$. Tale funzione è ben definita perché $A$ è una partizione di $\omega$, inoltre è iniettiva, perché, osservando che $\Imm(f_A) = A$ [perché banalmente otteniamo tutti gli insiemi disgiunti che formano la partizione originale, quindi l'insieme di tali insiemi, cioè l'immagine di $f_A$ è proprio la partizione stessa],
+	con $f_A : \omega \rightarrow \ps(\omega) : n \mapsto A_i$. Tale funzione \`e ben definita perch\'e $A$ \`e una partizione di $\omega$, inoltre \`e iniettiva, perch\'e, osservando che $\Imm(f_A) = A$ [perch\'e banalmente otteniamo tutti gli insiemi disgiunti che formano la partizione originale, quindi l'insieme di tali insiemi, cio\`e l'immagine di $f_A$ \`e proprio la partizione stessa],
 	si ottiene che $f_A = f_B \implies \Imm(f_A) = \Imm(f_B) \iff A = B$, quindi abbiamo ottenuto anche che $|\{\text{partizioni di $\omega$}\}| \leq 2^{\aleph_0}$.
 \end{soln}
 
 \begin{remark}[Disuguaglianza dall'alto alternativa]
-	Un'alternativa alla seconda disuguaglianza della soluzione precedente è data dalla funzione:
+	Un'alternativa alla seconda disuguaglianza della soluzione precedente \`e data dalla funzione:
 	\[ \{\text{partizioni di $\omega$}\} \hookrightarrow {}^\omega\omega : A \mapsto g_A
 		\]
-	con $g_A : \omega \to \omega : n \mapsto \min(A_i)$, dove $A_i$ è l'elemento della partizione che per definizione contiene $n$. Tale funzione è naturalmente iniettiva, infatti, stiamo facendo la stessa cosa fatta nella soluzione, con la differenza che, anziché mandare l'elemento nell'insieme lo mandiamo nel suo minimo, ed essendo tutti gli insiemi della partizione disgiunti, tale minimo non può essere assunto da nessun altro elemento della partizione.
+	con $g_A : \omega \to \omega : n \mapsto \min(A_i)$, dove $A_i$ \`e l'elemento della partizione che per definizione contiene $n$. Tale funzione \`e naturalmente iniettiva, infatti, stiamo facendo la stessa cosa fatta nella soluzione, con la differenza che, anzich\'e mandare l'elemento nell'insieme lo mandiamo nel suo minimo, ed essendo tutti gli insiemi della partizione disgiunti, tale minimo non pu\`o essere assunto da nessun altro elemento della partizione.
 \end{remark}
 
 \begin{note}[Quando il complementare fa fallire le partizioni distinte]
-	Potrebbe venire la tentazione di definire $f(A) = \{A, \omega\setminus A\}$, però questa funzione non è iniettiva, per esempio, il sottoinsieme dei numeri pari e il sottoinsieme dei numeri dispari vanno nella stessa partizione.
+	Potrebbe venire la tentazione di definire $f(A) = \{A, \omega\setminus A\}$, per\`o questa funzione non \`e iniettiva, per esempio, il sottoinsieme dei numeri pari e il sottoinsieme dei numeri dispari vanno nella stessa partizione.
 \end{note}
 
 \begin{itemize}
@@ -347,7 +347,7 @@ Abbiamo quindi al più $(2^{\aleph_0})^{\aleph_0}$ funzioni crescenti.}
 
 \begin{soln}
 	(Senza AC)\\
-	Per la disuguaglianza dal basso, va bene la stessa mappa usata sopra, cioè $\ps(\omega\setminus\{0,1\})\setminus\{\emptyset\} \hookrightarrow \{\text{partizioni di $\omega$}\} : A \mapsto \{A\cup \{0\},(\omega\setminus A)\cup \{1\}\}$, che è iniettiva, produce delle partizioni fatte da due elementi, e quindi ci dice che $2^{\aleph_0} \leq |\{\text{partizioni finite di $\omega$}\}|$ (naturalmente numerabile - finito = numerabile, per un fatto visto in precedenza, quindi abbiamo $|\omega| = |\omega \setminus\{0,1\}|$).\\
+	Per la disuguaglianza dal basso, va bene la stessa mappa usata sopra, cio\`e $\ps(\omega\setminus\{0,1\})\setminus\{\emptyset\} \hookrightarrow \{\text{partizioni di $\omega$}\} : A \mapsto \{A\cup \{0\},(\omega\setminus A)\cup \{1\}\}$, che \`e iniettiva, produce delle partizioni fatte da due elementi, e quindi ci dice che $2^{\aleph_0} \leq |\{\text{partizioni finite di $\omega$}\}|$ (naturalmente numerabile - finito = numerabile, per un fatto visto in precedenza, quindi abbiamo $|\omega| = |\omega \setminus\{0,1\}|$).\\
 	Per il viceversa basta osservare che $\{\text{partizioni finite di $\omega$}\} \subseteq \{\text{partizioni di $\omega$}\}$, che abbiamo contato sopra, dunque otteniamo che $|\{\text{partizioni finite di $\omega$}\}| \leq 2^{\aleph_0}$.
 \end{soln}
 \pagebreak
@@ -357,51 +357,51 @@ Abbiamo quindi al più $(2^{\aleph_0})^{\aleph_0}$ funzioni crescenti.}
 
 \begin{soln}
 	(Senza AC)\\
-	Osserviamo che $\ps(\omega)\setminus\{\emptyset\} \rightarrow \{\text{partizioni di $\omega$ in parti finite}\} : A \mapsto \{2i,2i+1\}_{i \in A} \cup \{2i\}_{i \not \in A} \cup \{2i+1\}_{i \not \in A}$ dà la disuguaglianza dal basso, infatti, tale funzione è ben definita in quanto:
-	\[ \{2i,2i+1\}_{i \in A} \cup \{2i\}_{i \not \in A} \cup \{2i+1\}_{i \not \in A} =\footnote{Si verifica facilmente usando estensionalità.} \{i\}_{i \in \omega} \cup \{2i\}_{i \in \omega} = \omega
+	Osserviamo che $\ps(\omega)\setminus\{\emptyset\} \rightarrow \{\text{partizioni di $\omega$ in parti finite}\} : A \mapsto \{2i,2i+1\}_{i \in A} \cup \{2i\}_{i \not \in A} \cup \{2i+1\}_{i \not \in A}$ d\`a la disuguaglianza dal basso, infatti, tale funzione \`e ben definita in quanto:
+	\[ \{2i,2i+1\}_{i \in A} \cup \{2i\}_{i \not \in A} \cup \{2i+1\}_{i \not \in A} =\footnote{Si verifica facilmente usando estensionalit\`a.} \{i\}_{i \in \omega} \cup \{2i\}_{i \in \omega} = \omega
 		\]
 	e vale che $\{2i\}_{i \not \in A} \cap \{2i+1\}_{i \not \in A} = \emptyset$ (altrimenti esisterebbero numeri pari e dispari contemporaneamente) e $\{2i,2i+1\}_{i \in A} \cap \{2i\}_{i \not \in A} = \{2i,2i+1\}_{i \in A} \cap \{2i+1\}_{i \not \in A} = \emptyset$, in quanto
 	se una delle due intersezioni non fosse vuota potremmo scrivere $2i = 2j \implies i = j$ per $i \in A$ e $j \not \in A$, oppure 
-	$2i + 1 = 2j + 1 \implies i = j$ per $i \in A$ e $j \not \in A$, che è assurdo. Inoltre tale mappa è iniettiva, infatti, prese due partizioni nell'immagine:
+	$2i + 1 = 2j + 1 \implies i = j$ per $i \in A$ e $j \not \in A$, che \`e assurdo. Inoltre tale mappa \`e iniettiva, infatti, prese due partizioni nell'immagine:
 	\[ P_A = \{2i,2i+1\}_{i \in A} \cup \{2i\}_{i \not \in A} \cup \{2i+1\}_{i \not \in A} \qquad P_B = \{2i,2i+1\}_{i \in B} \cup \{2i\}_{i \not \in B} \cup \{2i+1\}_{i \not \in B}
 		\]
-	per estensionalità (essendo insiemi di insiemi), $P_A = P_B$ se e solo se tutti i singoletti e gli insiemi con due elementi sono uguali, e l'ultima cosa significa che $\{2i,2i+1\}_{i \in A} = \{2i,2i+1\}_{i \in B}$, ma questa cosa è possibile [di nuovo per estensionalità] se e solo se $A = B$.
+	per estensionalit\`a (essendo insiemi di insiemi), $P_A = P_B$ se e solo se tutti i singoletti e gli insiemi con due elementi sono uguali, e l'ultima cosa significa che $\{2i,2i+1\}_{i \in A} = \{2i,2i+1\}_{i \in B}$, ma questa cosa \`e possibile [di nuovo per estensionalit\`a] se e solo se $A = B$.
 	Abbiamo quindi ottenuto che $2^{\aleph_0} \leq |\{\text{partizioni di $\omega$ in parti finite}\}|$. L'altra disuguaglianza si ottiene osservando che $\{\text{partizioni di $\omega$ in parti finite}\} \subseteq \{\text{partizioni di $\omega$}\}$.
 \end{soln}
 
 \begin{soln}
 	(Soluzione alternativa, senza AC)\\
 	Per la disuguaglianza dall'alto possiamo fare come prima, mentre dal basso possiamo codificare una partizione in parti finite usando stringe di 0 e 1 per ottenere coppie di insiemi che ci danno tutte le classi di resto modulo 3 man mano.
-	Utilizziamo 2 insiemi associati ad una cifra della stringa, perché usandone uno solo si perde l'iniettività (avremmo che la prima cifra della stringa da sempre lo stesso insieme di tre elementi). Inoltre, possiamo fissare man mano un elemento ad esempio nell'insieme da due elementi tenere sempre $3i+1$,
+	Utilizziamo 2 insiemi associati ad una cifra della stringa, perch\'e usandone uno solo si perde l'iniettivit\`a (avremmo che la prima cifra della stringa da sempre lo stesso insieme di tre elementi). Inoltre, possiamo fissare man mano un elemento ad esempio nell'insieme da due elementi tenere sempre $3i+1$,
 	e far variare il primo elemento del secondo insieme e il secondo elemento del secondo insieme per poter distinguere le partizioni ottenute da 0 e 1 (in quella posizione rispettivamente). Dunque definiamo:
 	\[ f : {}^\omega2 \to \{\text{partizioni di $\omega$ in parti finite}\} : (a_i)_{i \in \omega} \mapsto \{\{3i + 2a_i\},\{3i+1,3i+2-2a_i\}\}_{i \in \omega}
 		\]
 	quindi ad esempio:
 	\[ (0,1,1,0,\ldots) \mapsto \{\underbrace{\{0\},\{1,2\}}_{a_0 = 0},\underbrace{\{5\},\{4,3\}}_{a_1 = 1},\underbrace{\{8\},\{7,6\}}_{a_2 = 1},\underbrace{\{9\},\{10,11\}}_{a_3 = 0},\ldots\}
 		\]
-	Infine $f$ è iniettiva, perché due partizioni sono uguali se e solo se tutti gli insiemi sono uguali e usando la formula possiamo determinare per ogni coppia di insiemi se $a_i$ è 1 o 0 in posizione $i$.\footnote{Notare infine che per costruzione scambiare 0 e 1 nella stringa non fa altro che scambiare l'elemento del singoletto col ``secondo'' elemento del secondo insieme.}
-	Da ciò si conclude che abbiamo almeno $|{}^\omega2| = 2^{\aleph_0}$ partizioni di $\omega$ in sottoinsiemi finiti.
+	Infine $f$ \`e iniettiva, perch\'e due partizioni sono uguali se e solo se tutti gli insiemi sono uguali e usando la formula possiamo determinare per ogni coppia di insiemi se $a_i$ \`e 1 o 0 in posizione $i$.\footnote{Notare infine che per costruzione scambiare 0 e 1 nella stringa non fa altro che scambiare l'elemento del singoletto col ``secondo'' elemento del secondo insieme.}
+	Da ci\`o si conclude che abbiamo almeno $|{}^\omega2| = 2^{\aleph_0}$ partizioni di $\omega$ in sottoinsiemi finiti.
 \end{soln}
 
 \begin{itemize}
 	\item \textcolor{purple}{$|$partizioni di $\omega$ in parti infinite$|$}
 \end{itemize}
 
-\textcolor{MidnightBlue}{\underline{Idea}: È facile risolvere questo esercizio con una costruzione ad hoc, ma si può anche ragionare così. C'è una corrispondenza biunivoca fra $\omega$ e $\omega \times \omega$, quindi anche fra le rispettive partizioni in parti infinite.
-D'altro canto, tutte le partizioni di $\omega$ si mappano iniettivamente nelle partizioni in parti infinite di $\omega \times \omega$ moltiplicando ciascuna delle parti per $\omega$ (così abbiamo contato tutte le partizioni in parti infinite di $\omega \times \omega$).}
+\textcolor{MidnightBlue}{\underline{Idea}: \`E facile risolvere questo esercizio con una costruzione ad hoc, ma si pu\`o anche ragionare cos\`i. C'\`e una corrispondenza biunivoca fra $\omega$ e $\omega \times \omega$, quindi anche fra le rispettive partizioni in parti infinite.
+D'altro canto, tutte le partizioni di $\omega$ si mappano iniettivamente nelle partizioni in parti infinite di $\omega \times \omega$ moltiplicando ciascuna delle parti per $\omega$ (cos\`i abbiamo contato tutte le partizioni in parti infinite di $\omega \times \omega$).}
 
 \begin{soln}
 	 Dagli esercizi precedenti abbiamo immediatamente la disuguaglianza dall'alto, data da $2^{\aleph_0}$. Osserviamo preliminarmente che una bigezione $f : A \to B$ ne induce una tra le parti definita in questo modo:
-	\[ \ol f : \ps(A) \to \ps(B) : X \mapsto f[X]\,\footnote{È un'idea che verrà usata anche dopo per contare i sottoinsiemi di $\RR$ isomorfi a $(\QQ,<)$.}
+	\[ \ol f : \ps(A) \to \ps(B) : X \mapsto f[X]\,\footnote{\`E un'idea che verr\`a usata anche dopo per contare i sottoinsiemi di $\RR$ isomorfi a $(\QQ,<)$.}
 		\]
-	che preserva naturalmente le cardinalità $|\ol f(X)| = |X|$. Sia $Part^{\geq \aleph_0}(\square)$ l'insieme delle parti infinite di $\square$, si verifica facilmente che:
-	\[ \ol{\ol f}_{|Part^{\geq \aleph_0}(A)} : Part^{\geq \aleph_0}(A) \to Part^{\geq \aleph_0}(B)\,\footnote{Ciò la funzione che applica due volte $\ol f$ prima sugli insiemi che contengono gli elementi della partizione e poi su questi ultimi (la stiamo prendendo già ristretta).}
+	che preserva naturalmente le cardinalit\`a $|\ol f(X)| = |X|$. Sia $Part^{\geq \aleph_0}(\square)$ l'insieme delle parti infinite di $\square$, si verifica facilmente che:
+	\[ \ol{\ol f}_{|Part^{\geq \aleph_0}(A)} : Part^{\geq \aleph_0}(A) \to Part^{\geq \aleph_0}(B)\,\footnote{Ci\`o la funzione che applica due volte $\ol f$ prima sugli insiemi che contengono gli elementi della partizione e poi su questi ultimi (la stiamo prendendo gi\`a ristretta).}
 		\]
-	è una bigezione, di conseguenza $|Part^{\geq \aleph_0}(A)| = |Part^{\geq \aleph_0}(B)|$. Ci basta quindi contare le partizioni in insiemi infiniti di $\omega \times \omega$, in particolare ci basta una stima dal basso (visto che per le partizioni in insiemi infiniti su $\omega$ abbiamo già la stima dall'alto).\\
+	\`e una bigezione, di conseguenza $|Part^{\geq \aleph_0}(A)| = |Part^{\geq \aleph_0}(B)|$. Ci basta quindi contare le partizioni in insiemi infiniti di $\omega \times \omega$, in particolare ci basta una stima dal basso (visto che per le partizioni in insiemi infiniti su $\omega$ abbiamo gi\`a la stima dall'alto).\\
 	Possiamo quindi usare la mappa di cui abbiamo parlato sopra:
 	\[ g : \{\text{partizioni di $\omega$}\} \to Part^{\geq \aleph_0}(\omega \times \omega) : P \to \{A \times \omega | A \in P\}
 		\]
-	ed è iniettiva, poiché presa $Q$ in arrivo è sufficiente mandarla nell'insieme fatto da $\{\pi[X] | X \in Q\}$, con $\pi : \omega \times \omega \to \omega$ proiezione alla prima componente. 
+	ed \`e iniettiva, poich\'e presa $Q$ in arrivo \`e sufficiente mandarla nell'insieme fatto da $\{\pi[X] | X \in Q\}$, con $\pi : \omega \times \omega \to \omega$ proiezione alla prima componente. 
 \end{soln}
 
 \begin{itemize}
@@ -410,35 +410,35 @@ D'altro canto, tutte le partizioni di $\omega$ si mappano iniettivamente nelle p
 
 \begin{soln}
 	(Senza AC)\\
-	I singoletti di $\RR$ soddisfano la definizione di insieme chiuso, quindi la mappa $\RR \to \{\text{chiusi di $\RR$}\} : x \mapsto \{x\}$ è iniettiva e ci dà la disuguaglianza $2^{\aleph_0} \leq |\{\text{chiusi di $\RR$}\}|$.\\
-	Per il viceversa dimostriamo che la seguente mappa è iniettiva:
+	I singoletti di $\RR$ soddisfano la definizione di insieme chiuso, quindi la mappa $\RR \to \{\text{chiusi di $\RR$}\} : x \mapsto \{x\}$ \`e iniettiva e ci d\`a la disuguaglianza $2^{\aleph_0} \leq |\{\text{chiusi di $\RR$}\}|$.\\
+	Per il viceversa dimostriamo che la seguente mappa \`e iniettiva:
 	\[ f : \{\text{chiusi di $\RR$}\} \to \ps(\QQ \times \QQ) : A \mapsto \{(a,b) \in \QQ \times \QQ | a < b \land ]a,b[ \,\cap\, A = \emptyset\}
 		\]
 	(ovvero mappiamo il chiuso nell'insieme degli estremi razionali di tutti gli intervalli aperti disgiunti da $A$). Basta osservare che, per definizione di insieme chiuso, $x \not \in A$ se e solo esistono $y,z \in \RR$ tali che $y<x<z$, e 
-	l'intorno $]x,z[$ di $x$ non interseca $A$\footnote{Typo Mamino.}. In questo caso, per la densità di $\QQ$, possiamo trovare $a,b \in \QQ$, $y<a<x<b<z$. Di conseguenza:
-	\[ A = \RR \setminus \bigcup\{]a,b[ | (a,b) \in f(A)\}\,\footnote{Stiamo trovando il chiuso come complementare dell'aperto e osservando che l'aperto complementare è univocamente determinato dagli intervalli a estremi razionali che non intersecano $A$, e che quindi sono contenuti interamente nel complementare (quest'idea è la versione complementare di quella nella soluzione alternativa).}
+	l'intorno $]x,z[$ di $x$ non interseca $A$\footnote{Typo Mamino.}. In questo caso, per la densit\`a di $\QQ$, possiamo trovare $a,b \in \QQ$, $y<a<x<b<z$. Di conseguenza:
+	\[ A = \RR \setminus \bigcup\{]a,b[ | (a,b) \in f(A)\}\,\footnote{Stiamo trovando il chiuso come complementare dell'aperto e osservando che l'aperto complementare \`e univocamente determinato dagli intervalli a estremi razionali che non intersecano $A$, e che quindi sono contenuti interamente nel complementare (quest'idea \`e la versione complementare di quella nella soluzione alternativa).}
 		\]
-	Questo prova l'iniettività di $f$, per cui:
+	Questo prova l'iniettivit\`a di $f$, per cui:
 	\[ |\{\text{chiusi di $\RR$}\}| \leq |\ps(\QQ \times \QQ)| = 2^{\aleph_0}
 		\]
 \end{soln}
 
 \begin{soln}
 	(Soluzione alternativa, senza AC)\\
-	I chiusi sono in bigezione con gli aperti, per mezzo del complementare, inoltre la disuguaglianza dal basso si fa esattamente con i complementari dei singoletti.\\ Per il viceversa osserviamo che ogni aperto di $\RR$ si può scrivere come unione al più numerabile di intervalli con estremi razionali,
-	infatti, dato $x \in A \subseteq \RR$ (aperto), si ha che $\exists\varepsilon > 0 \; ]x - \varepsilon, x + \varepsilon[ \subseteq A$ e, per la densità di $\QQ$, esistono $a,b \in \QQ$ tali che $x - \varepsilon < a < x < b < x + \varepsilon$.
-	A questo punto $\forall x \in A$ esistono $a,b \in \QQ \cap A$ tali che $x \in ]a,b[$, in particolare ciò significa che $A \subseteq \bigcup_{a,b \in \QQ \cap A} I_{(a,b)}$ (con $I_{(a,b)} = ]a,b[$), inoltre essendo tutti gli intervalli aperti contenuti in $A$ vale anche il contenimento opposto, dunque abbiamo:\footnote{Osserviamo che prendere l'unione degli intervalli su tutti i razionali nell'aperto è anche eccessivo, in realtà potremmo addirittura partizionare ogni aperto in un'unione al più numerabile di intervalli disgiunti, tuttavia si complicherebbe definire una mappa iniettiva come stiamo per fare.}
+	I chiusi sono in bigezione con gli aperti, per mezzo del complementare, inoltre la disuguaglianza dal basso si fa esattamente con i complementari dei singoletti.\\ Per il viceversa osserviamo che ogni aperto di $\RR$ si pu\`o scrivere come unione al pi\`u numerabile di intervalli con estremi razionali,
+	infatti, dato $x \in A \subseteq \RR$ (aperto), si ha che $\exists\varepsilon > 0 \; ]x - \varepsilon, x + \varepsilon[ \subseteq A$ e, per la densit\`a di $\QQ$, esistono $a,b \in \QQ$ tali che $x - \varepsilon < a < x < b < x + \varepsilon$.
+	A questo punto $\forall x \in A$ esistono $a,b \in \QQ \cap A$ tali che $x \in ]a,b[$, in particolare ci\`o significa che $A \subseteq \bigcup_{a,b \in \QQ \cap A} I_{(a,b)}$ (con $I_{(a,b)} = ]a,b[$), inoltre essendo tutti gli intervalli aperti contenuti in $A$ vale anche il contenimento opposto, dunque abbiamo:\footnote{Osserviamo che prendere l'unione degli intervalli su tutti i razionali nell'aperto \`e anche eccessivo, in realt\`a potremmo addirittura partizionare ogni aperto in un'unione al pi\`u numerabile di intervalli disgiunti, tuttavia si complicherebbe definire una mappa iniettiva come stiamo per fare.}
 	\[ A = \bigcup_{\begin{subarray}{c}a,b \in \QQ \cap A\\ a < b\end{subarray}} I_{(a,b)}
 		\]
-	Abbiamo quindi scoperto che un aperto di $\RR$ è univocamente determinato dai razionali che contiene, dunque possiamo definire la mappa:
+	Abbiamo quindi scoperto che un aperto di $\RR$ \`e univocamente determinato dai razionali che contiene, dunque possiamo definire la mappa:
 	\[ \{\text{aperti di $\RR$}\} \to \ps(\QQ) : A \mapsto A \cap \QQ 
 		\]
-	che è banalmente iniettiva (ed anzi è addirittura una bigezione) perché preso $B$ in arrivo otteniamo che $A = \bigcup_{\begin{subarray}{c}a,b \in B\\ a < b\end{subarray}} I_{(a,b)}$, dunque abbiamo la disuguaglianza dall'alto con $2^{\aleph_0}$.
+	che \`e banalmente iniettiva (ed anzi \`e addirittura una bigezione) perch\'e preso $B$ in arrivo otteniamo che $A = \bigcup_{\begin{subarray}{c}a,b \in B\\ a < b\end{subarray}} I_{(a,b)}$, dunque abbiamo la disuguaglianza dall'alto con $2^{\aleph_0}$.
 \end{soln}
 
 \pagebreak
 \begin{exercise}
-	Delle seguenti, a quali è possibile rispondere, assumendo che, senza scelta, non si può dire se valga o no $|$sottoinsiemi numerabili di $\RR| =2^{\aleph_0}$?
+	Delle seguenti, a quali \`e possibile rispondere, assumendo che, senza scelta, non si pu\`o dire se valga o no $|$sottoinsiemi numerabili di $\RR| =2^{\aleph_0}$?
 \end{exercise}
 
 \begin{itemize}
@@ -446,13 +446,13 @@ D'altro canto, tutte le partizioni di $\omega$ si mappano iniettivamente nelle p
 \end{itemize}
 
 \begin{soln}
-	(Non necessita di AC\footnote{In ogni caso AC ci darebbe solo la disuguaglianza dall'alto gratuitamente, ma nella soluzione che stiamo per vedere possiamo costruire direttamente una bigezione. Un'idea per avere poi una disuguaglianza dal baso è osservare che i singoletti $\{x\}$ per $x \in \RR$ sono bene ordinati, dunque tutte le somme di buoni ordini $\{x\} + \omega$ sono buoni ordini contenuti in $\RR$ e dunque ne abbiamo proprio $2^{\aleph_0}$.})\\
-	Questa è una conseguenza di un esercizio precedente, ovvero il fatto che la cardinalità delle successioni crescenti da $\omega$ in $\RR$ sia $2^{\aleph_0}$. Per trovare la cardinalità richiesta è sufficiente osservare che la funzione:
+	(Non necessita di AC\footnote{In ogni caso AC ci darebbe solo la disuguaglianza dall'alto gratuitamente, ma nella soluzione che stiamo per vedere possiamo costruire direttamente una bigezione. Un'idea per avere poi una disuguaglianza dal baso \`e osservare che i singoletti $\{x\}$ per $x \in \RR$ sono bene ordinati, dunque tutte le somme di buoni ordini $\{x\} + \omega$ sono buoni ordini contenuti in $\RR$ e dunque ne abbiamo proprio $2^{\aleph_0}$.})\\
+	Questa \`e una conseguenza di un esercizio precedente, ovvero il fatto che la cardinalit\`a delle successioni crescenti da $\omega$ in $\RR$ sia $2^{\aleph_0}$. Per trovare la cardinalit\`a richiesta \`e sufficiente osservare che la funzione:
 	\[ I_n : \{\text{succ. cresc. di reali}\} \to \{\text{sottoins. di $\RR \sim (\omega,<)$}\} : (a_i)_{i \in \omega} \mapsto \{a_i | i \in \omega\}
 		\]
-	è bigettiva. Tale mappa è ben definita in quanto l'immagine di una successione crescente è un insieme isomorfo a $(\omega,<)$, inoltre è surgettiva in quanto per ogni elemento in arrivo esiste per definizione una mappa strettamente crescente da $\omega$ ad $\RR$ di cui è l'immagine (si ha proprio che $(\Imm(a_n),<_{\RR}) \sim (\omega,<)$).\\
-	Dire che è iniettiva significa dire che dato $\Imm(a_n)$, un sottoinsieme di $\RR$ isomorfo a $(\omega,<)$, $(a_n)$ è l'unico isomorfismo di ordini fra $(\omega,<)$ e $\Imm(a_n)$. Sia $(b_m)$ un secondo isomorfismo tra $\Imm(a_n)$ e $(\omega,<)$, ne segue che $f = b^{-1} \circ a$ è un isomorfismo tra $(\omega,<)$ e se stesso diverso dall'identità, ma ciò è assurdo per quanto visto.
-	Infatti $f$ è crescente ed essendo $(\omega,<)$ un buon ordinamento si deve avere $f(n) \geq n$ (vale la dimostrazione già vista, oppure la si può fare per induzione osservando che il passo induttivo è: $f(n+1) > f(n) \geq n \implies f(n+1) \geq n+1$), ma parimenti $f^{-1}(n) \geq n$, quindi si ha necessariamente che $f(n) = n$.
+	\`e bigettiva. Tale mappa \`e ben definita in quanto l'immagine di una successione crescente \`e un insieme isomorfo a $(\omega,<)$, inoltre \`e surgettiva in quanto per ogni elemento in arrivo esiste per definizione una mappa strettamente crescente da $\omega$ ad $\RR$ di cui \`e l'immagine (si ha proprio che $(\Imm(a_n),<_{\RR}) \sim (\omega,<)$).\\
+	Dire che \`e iniettiva significa dire che dato $\Imm(a_n)$, un sottoinsieme di $\RR$ isomorfo a $(\omega,<)$, $(a_n)$ \`e l'unico isomorfismo di ordini fra $(\omega,<)$ e $\Imm(a_n)$. Sia $(b_m)$ un secondo isomorfismo tra $\Imm(a_n)$ e $(\omega,<)$, ne segue che $f = b^{-1} \circ a$ \`e un isomorfismo tra $(\omega,<)$ e se stesso diverso dall'identit\`a, ma ci\`o \`e assurdo per quanto visto.
+	Infatti $f$ \`e crescente ed essendo $(\omega,<)$ un buon ordinamento si deve avere $f(n) \geq n$ (vale la dimostrazione gi\`a vista, oppure la si pu\`o fare per induzione osservando che il passo induttivo \`e: $f(n+1) > f(n) \geq n \implies f(n+1) \geq n+1$), ma parimenti $f^{-1}(n) \geq n$, quindi si ha necessariamente che $f(n) = n$.
 \end{soln}
 
 \begin{itemize}
@@ -460,18 +460,18 @@ D'altro canto, tutte le partizioni di $\omega$ si mappano iniettivamente nelle p
 \end{itemize}
 
 \begin{soln}
-	(Non si può rispondere senza AC)\\
-	Ci basta argomentare che se sapessimo rispondere a questa domanda, allora sapremmo altresì la cardinalità dell'insieme dei sottoinsiemi numerabili di $\RR$ (come conseguenza).\\
-	Usando scelta, e quindi dando per buono che i sottoinsiemi numerabili di $\RR$ sono $2^{\aleph_0}$, ci basta trovare una stima dal basso, tale stima è data da:
+	(Non si pu\`o rispondere senza AC)\\
+	Ci basta argomentare che se sapessimo rispondere a questa domanda, allora sapremmo altres\`i la cardinalit\`a dell'insieme dei sottoinsiemi numerabili di $\RR$ (come conseguenza).\\
+	Usando scelta, e quindi dando per buono che i sottoinsiemi numerabili di $\RR$ sono $2^{\aleph_0}$, ci basta trovare una stima dal basso, tale stima \`e data da:
 	\[ f : \{\text{sottoinsiemi numerabili di $\RR$}\} = \ps^{\aleph_0}(\RR) \to \{\text{sottoinsiemi $\sim \QQ$}\}
 		\]
 	infatti, trovata una $f$ iniettiva avremmo concluso. Per costruire $f$, ricordiamo che abbiamo dimostrato che $|\RR \setminus \QQ| = 2^{\aleph_0} = |\RR|$ e consideriamo $g : \RR \to \RR \setminus \QQ$ una bigezione.
-	Osservato questo l'idea è chiara: vogliamo prendere un sottoinsieme numerabile di $\RR$, mandarlo in un sottoinsieme [numerabile] di $\RR$ disgiunto da $\QQ$ via $g$ e vogliamo unirlo a $\QQ$ per avere nuovo insieme isomorfo a $\QQ$.
+	Osservato questo l'idea \`e chiara: vogliamo prendere un sottoinsieme numerabile di $\RR$, mandarlo in un sottoinsieme [numerabile] di $\RR$ disgiunto da $\QQ$ via $g$ e vogliamo unirlo a $\QQ$ per avere nuovo insieme isomorfo a $\QQ$.
 	Possiamo quindi definire: $f : \ps^{\aleph_0}(\RR) \to \{\text{sottoinsiemi $\sim \QQ$}\} : X \mapsto g[X] \cup \QQ$.
 	\begin{itemize}
-		\item[*] \underline{$f$ è ben definita}: cioè in arrivo abbiamo sempre ordini isomorfi a $\QQ$. Per verificare ciò è sufficiente verificare le ipotesi del teorema di isomorfismo di Cantor. $g[X] \cup \QQ$ è numerabile in quanto unione (finita) di numerabili, inoltre $g[X] \cup \QQ$ contiene $\QQ$, quindi è denso in $\RR$ e di conseguenza
-		in se stesso, infine è illimitato, perché se lo fosse vorrebbe dire che $\QQ$ è limitato, ma ciò è assurdo.
-		\item[*] \underline{$f$ è iniettiva}: essendo $g[X] \cap \QQ = \emptyset$ (per costruzione), si ha $g[X] \cup \QQ = g[Y] \cup \QQ \implies g[X] = g[Y] \overset{\text{$g$ bigez.}}{\iff} X = Y$.
+		\item[*] \underline{$f$ \`e ben definita}: cio\`e in arrivo abbiamo sempre ordini isomorfi a $\QQ$. Per verificare ci\`o \`e sufficiente verificare le ipotesi del teorema di isomorfismo di Cantor. $g[X] \cup \QQ$ \`e numerabile in quanto unione (finita) di numerabili, inoltre $g[X] \cup \QQ$ contiene $\QQ$, quindi \`e denso in $\RR$ e di conseguenza
+		in se stesso, infine \`e illimitato, perch\'e se lo fosse vorrebbe dire che $\QQ$ \`e limitato, ma ci\`o \`e assurdo.
+		\item[*] \underline{$f$ \`e iniettiva}: essendo $g[X] \cap \QQ = \emptyset$ (per costruzione), si ha $g[X] \cup \QQ = g[Y] \cup \QQ \implies g[X] = g[Y] \overset{\text{$g$ bigez.}}{\iff} X = Y$.
 	\end{itemize}
 	e quindi abbiamo ottenuto anche $|\{\text{sottoinsiemi di $\RR \sim \QQ$}\}| \leq 2^{\aleph_0}$.
 \end{soln}
@@ -480,13 +480,13 @@ D'altro canto, tutte le partizioni di $\omega$ si mappano iniettivamente nelle p
 	\item \textcolor{purple}{$|$sottoinsiemi di $\RR$ ben ordinati dall'ordinamento indotto$|$}
 \end{itemize}
 
-\textcolor{MidnightBlue}{\underline{Idea}: Se $S$ è bene ordinato e $x \in S$, allora o $x$ è il massimo di $S$ o esiste il minimo $y \in S \; y > x$. Comunque sia, possiamo trovare un razionale $q \in \RR$ tale che $x$ è il massimo di $S$ prima di $q$.
+\textcolor{MidnightBlue}{\underline{Idea}: Se $S$ \`e bene ordinato e $x \in S$, allora o $x$ \`e il massimo di $S$ o esiste il minimo $y \in S \; y > x$. Comunque sia, possiamo trovare un razionale $q \in \RR$ tale che $x$ \`e il massimo di $S$ prima di $q$.
 Possiamo quindi sperare di usare questi razionali come codici degli elementi di $S$.} 
 
 \begin{soln}
-	(Senza AC\footnote{In realtà con AC si fa la stessa cosa, ma si evita di definire una mappa come quella sotto, poiché in ogni intervallo tra elementi ordinati di $S$ possiamo semplicemente scegliere un elemento e concludere allo stesso modo (usando le parti di $\QQ$).})\\
+	(Senza AC\footnote{In realt\`a con AC si fa la stessa cosa, ma si evita di definire una mappa come quella sotto, poich\'e in ogni intervallo tra elementi ordinati di $S$ possiamo semplicemente scegliere un elemento e concludere allo stesso modo (usando le parti di $\QQ$).})\\
 	I singoletti di $\RR$ sono bene ordinati con l'ordinamento indotto, quindi ne abbiamo almeno $2^{\aleph_0}$ (andavano bene anche i sottoinsiemi bene ordinati isomorfi ad $(\omega,<)$ visti sopra).
-	Ci basta quindi mostrare che la seguente funzione è iniettiva:
+	Ci basta quindi mostrare che la seguente funzione \`e iniettiva:
 	\[ f : \{\text{sottoins. bene ordinati di $\RR$}\} \to {}^\QQ(\RR \cup \{\spadesuit\}) : S \mapsto f(S)
 		\]
 	con:
@@ -496,17 +496,17 @@ Possiamo quindi sperare di usare questi razionali come codici degli elementi di 
 	\end{cases}
 		\]
 	ossia la mappa che associa ogni sottoinsieme bene ordinato di $\RR$ alla funzione da $\QQ$ in $\RR \cup \{\spadesuit\}$. Chiaramente $|\RR \cup \{\spadesuit\}| = 2^{\aleph_0} + 1 = 2^{\aleph_0}$, da cui l'asserto.\\
-	Va da sé che $\Imm(f(S))\setminus\{\spadesuit\} \subseteq S$, ci basta quindi dimostrare l'inclusione opposta, ossia che, dato $S \subseteq \RR$ bene ordinato da $<_{\RR}$, per ogni $x \in S$ esiste un $r \in \QQ$ tale che $(f(S))(r) = x$. Ci sono due casi:
+	Va da s\'e che $\Imm(f(S))\setminus\{\spadesuit\} \subseteq S$, ci basta quindi dimostrare l'inclusione opposta, ossia che, dato $S \subseteq \RR$ bene ordinato da $<_{\RR}$, per ogni $x \in S$ esiste un $r \in \QQ$ tale che $(f(S))(r) = x$. Ci sono due casi:
 	\begin{itemize}
 		\item[-] se $x = \max(S)$, allora basta un qualunque $r > x$
-		\item[-] se $x$ non è il massimo di $S$, sia $y := \min\{z \in S | z > x\}$, che esiste perché $S$ è bene ordinato. Per densità c'è $r \in \QQ$ con $x<r<y$ e chiaramente $x = (f(S))(r)$.
+		\item[-] se $x$ non \`e il massimo di $S$, sia $y := \min\{z \in S | z > x\}$, che esiste perch\'e $S$ \`e bene ordinato. Per densit\`a c'\`e $r \in \QQ$ con $x<r<y$ e chiaramente $x = (f(S))(r)$.
 	\end{itemize}
 \end{soln}
 
 \pagebreak
 \subsection{\texorpdfstring{Forma normale di $\omega_\alpha$}{Forma normale di omega-alpha}}
 \begin{proposition}[$\omega_\alpha = \omega^{\omega_\alpha}$]
-	Dato $\omega_\alpha$, l'immagine di $\alpha$ mediante la funzione degli aleph, la sua forma normale di Cantor è data da:
+	Dato $\omega_\alpha$, l'immagine di $\alpha$ mediante la funzione degli aleph, la sua forma normale di Cantor \`e data da:
 	\[ \omega_\alpha = \omega^{\omega_\alpha}
 		\]
 \end{proposition}
@@ -514,58 +514,58 @@ Possiamo quindi sperare di usare questi razionali come codici degli elementi di 
 \begin{proof}
 	Ci basta dimostrare le due disuguaglianze.
 	\begin{itemize}
-		\item[$\boxed{\leq}$] Osserviamo che la mappa $x \mapsto \omega^x$ è strettamente crescente tra ordinali (se la pensiamo come funzione da $\Ord$ a $\Ord$), ci basta osservare che per le funzioni classe strettamente crescenti, da una classe a se stessa, vale la medesima proprietà che abbiamo visto per funzioni strettamente crescenti da un buon ordine a se stesso, ovvero l'immagine sta sopra la diagonale ($F(n) \geq n$).\\
-		Questa cosa continua a funzionare con la stessa dimostrazione (in particolare ci serve semplicemente dire che ogni sottoinsieme di ordinali ha minimo), infatti se per assurdo ci fosse un $m \in \Ord$ per cui $F(m) < m$, allora l'insieme di ordinali per cui ciò è vero è non vuoto ed ha minimo $k$ [come abbiamo dimostrato per gli insiemi di ordinali], per il quale si ha $F(k) < k$ e $F(F(k)) < F(k)$, cioè $F(k)$ appartiene all'insieme degli ordinali che non rispettano la 
-		proprietà ed è più piccolo di $k$, che è contro la minimalità di $k$, quindi assurdo.\\
-		A questo punto quanto dimostrato vale anche per l'esponenziazione di $\omega$ ad un ordinale in quanto la funzione è strettamente crescente, da cui si ha $\omega_\alpha \leq \omega^{\omega_\alpha}$.
+		\item[$\boxed{\leq}$] Osserviamo che la mappa $x \mapsto \omega^x$ \`e strettamente crescente tra ordinali (se la pensiamo come funzione da $\Ord$ a $\Ord$), ci basta osservare che per le funzioni classe strettamente crescenti, da una classe a se stessa, vale la medesima propriet\`a che abbiamo visto per funzioni strettamente crescenti da un buon ordine a se stesso, ovvero l'immagine sta sopra la diagonale ($F(n) \geq n$).\\
+		Questa cosa continua a funzionare con la stessa dimostrazione (in particolare ci serve semplicemente dire che ogni sottoinsieme di ordinali ha minimo), infatti se per assurdo ci fosse un $m \in \Ord$ per cui $F(m) < m$, allora l'insieme di ordinali per cui ci\`o \`e vero \`e non vuoto ed ha minimo $k$ [come abbiamo dimostrato per gli insiemi di ordinali], per il quale si ha $F(k) < k$ e $F(F(k)) < F(k)$, cio\`e $F(k)$ appartiene all'insieme degli ordinali che non rispettano la 
+		propriet\`a ed \`e pi\`u piccolo di $k$, che \`e contro la minimalit\`a di $k$, quindi assurdo.\\
+		A questo punto quanto dimostrato vale anche per l'esponenziazione di $\omega$ ad un ordinale in quanto la funzione \`e strettamente crescente, da cui si ha $\omega_\alpha \leq \omega^{\omega_\alpha}$.
 		\item[$\boxed{\geq}$] Vogliamo dimostrare che $\omega^{\omega_\alpha} \leq \omega_\alpha$, per definizione (essendo un ordinale limite):
 		\[ \omega^{\omega_\alpha} = \{\omega^{\beta} | \beta < \omega_\alpha\} = \sup\{\omega^\beta |\;|\beta| < \aleph_\alpha\}
 			\]
-		dove la seconda uguaglianza deriva dal fatto che è equivalente considerare un ordinale che sta in $\omega_\alpha$ o che ha cardinalita $\aleph_\alpha$, in quanto $\omega_\alpha$ è l'ordinale più piccolo della sua cardinalità, quindi qualsiasi ordinale più grande ha necessariamente cardinalità maggiore e viceversa.\\
-		Basta quindi dimostrare che $|\beta| < \aleph_\alpha \rightarrow |\omega^\beta| < \aleph_\alpha$ (da cui $\sup\{\omega^\beta | \; \beta < \omega_\alpha\} \leq \omega_\alpha$, perché stiamo di fatto dimostrando che $\omega_\alpha$ è un maggiorante di $\{\omega^\beta | \beta < \omega_\alpha\}$, dunque essendo il sup il minimo dei maggioranti si ha la disuguaglianza).
-		Sappiamo che $\omega^{\beta}$ è isomorfo [come buon ordinamento] a $S_\beta : \{f : \beta \to \omega |\;|\supp(f)|<\aleph_0\}$ con un opportuno ordinamento. Ad ogni $f \in S_\beta$ associamo $f_{|\supp(f)} \in \psf(\beta \times \omega)$, tale corrispondenza è naturalmente iniettiva e ci dà:
+		dove la seconda uguaglianza deriva dal fatto che \`e equivalente considerare un ordinale che sta in $\omega_\alpha$ o che ha cardinalita $\aleph_\alpha$, in quanto $\omega_\alpha$ \`e l'ordinale pi\`u piccolo della sua cardinalit\`a, quindi qualsiasi ordinale pi\`u grande ha necessariamente cardinalit\`a maggiore e viceversa.\\
+		Basta quindi dimostrare che $|\beta| < \aleph_\alpha \rightarrow |\omega^\beta| < \aleph_\alpha$ (da cui $\sup\{\omega^\beta | \; \beta < \omega_\alpha\} \leq \omega_\alpha$, perch\'e stiamo di fatto dimostrando che $\omega_\alpha$ \`e un maggiorante di $\{\omega^\beta | \beta < \omega_\alpha\}$, dunque essendo il sup il minimo dei maggioranti si ha la disuguaglianza).
+		Sappiamo che $\omega^{\beta}$ \`e isomorfo [come buon ordinamento] a $S_\beta : \{f : \beta \to \omega |\;|\supp(f)|<\aleph_0\}$ con un opportuno ordinamento. Ad ogni $f \in S_\beta$ associamo $f_{|\supp(f)} \in \psf(\beta \times \omega)$, tale corrispondenza \`e naturalmente iniettiva e ci d\`a:
 		\[ |\omega^{\beta}| \leq |\psf(\beta \times \omega)| \overset{\text{AC}}{=} |\beta| \cdot \aleph_0 \overset{\text{Hp.}}{<} \aleph_\alpha
 			\]
 	\end{itemize}
 \end{proof}
 
 \pagebreak
-\subsection{Sottoinsiemi infiniti di cardinalità fissata}
+\subsection{Sottoinsiemi infiniti di cardinalit\`a fissata}
 \begin{proposition}
-	[Numero di sottoinsiemi infiniti di cardinalità fissata]
+	[Numero di sottoinsiemi infiniti di cardinalit\`a fissata]
 	Dato un insieme $X$ infinito, con $|X| = \kappa$, dato $\nu \leq \kappa$, cardinale infinito, allora:
 	\[ |\ps^\nu(X)| = |\{Y \in \ps(X) : |Y| = \nu\}| = \kappa^\nu
 		\]
 \end{proposition}
 
 \begin{proof}
-	Per la disuguaglianza dall'alto è facile osservare che $\ps^{\nu}(X) \subseteq \ps^{\leq \nu}(X)$ e la mappa:
+	Per la disuguaglianza dall'alto \`e facile osservare che $\ps^{\nu}(X) \subseteq \ps^{\leq \nu}(X)$ e la mappa:
 	\[ \kappa^\nu \twoheadrightarrow \ps^{\leq \nu}(X) : f \mapsto \Imm(f)
 		\]
-	è surgettiva, infatti, dato $Z \in \ps^{\leq \nu}(X)$, si ha $|Z| \leq \nu$, dunque esiste $g : \nu \to Z$ surgettiva, che può essere naturalmente considerata come funzione da $\nu$ a $\kappa$ con l'immagine voluta.\footnote{Osservare che avremmo anche potuto fare la mappa iniettiva al contrario fissando bigezioni con AC.}
-	Abbiamo quindi che $|\ps^\nu(X)| \leq |\ps^{\leq \nu}(X)| \leq \kappa^\nu$. Per il viceversa ci basta osservare che $f\in \kappa^\nu$ è un sottoinsieme di $\nu \times \kappa$ di cardinalità $\nu$, per cui $\kappa^\nu \subseteq \ps^{\nu}(\nu \times \kappa)$,
-	ma essendo che $\kappa \cdot \nu = \kappa  = |X|$, allora $|\ps^{\nu}(X)| = |\ps^{\nu}(\nu \times \kappa)|$ - dove la bigezione è indotta da una bigezione tra $\nu \times \kappa$ e $X$ -. Abbiamo quindi: $\kappa^\nu \leq |\ps^\nu(\nu \times \kappa)| \leq |\ps^\nu(X)|$.
+	\`e surgettiva, infatti, dato $Z \in \ps^{\leq \nu}(X)$, si ha $|Z| \leq \nu$, dunque esiste $g : \nu \to Z$ surgettiva, che pu\`o essere naturalmente considerata come funzione da $\nu$ a $\kappa$ con l'immagine voluta.\footnote{Osservare che avremmo anche potuto fare la mappa iniettiva al contrario fissando bigezioni con AC.}
+	Abbiamo quindi che $|\ps^\nu(X)| \leq |\ps^{\leq \nu}(X)| \leq \kappa^\nu$. Per il viceversa ci basta osservare che $f\in \kappa^\nu$ \`e un sottoinsieme di $\nu \times \kappa$ di cardinalit\`a $\nu$, per cui $\kappa^\nu \subseteq \ps^{\nu}(\nu \times \kappa)$,
+	ma essendo che $\kappa \cdot \nu = \kappa  = |X|$, allora $|\ps^{\nu}(X)| = |\ps^{\nu}(\nu \times \kappa)|$ - dove la bigezione \`e indotta da una bigezione tra $\nu \times \kappa$ e $X$ -. Abbiamo quindi: $\kappa^\nu \leq |\ps^\nu(\nu \times \kappa)| \leq |\ps^\nu(X)|$.
 \end{proof}
 
 \subsection{Sottrazione cardinale}
 \begin{proposition}[Sottrarre cardinali]
-	Sia $A \subseteq X$ e $|X| \geq \aleph_0$ (cioè almeno infinito per AC\footnote{Questa proposizione e la dimostrazione annessa dipendono pesantemente da AC.}), se $|A| < |X|$ allora abbiamo che vale: $|X \setminus A| = |X|$.
+	Sia $A \subseteq X$ e $|X| \geq \aleph_0$ (cio\`e almeno infinito per AC\footnote{Questa proposizione e la dimostrazione annessa dipendono pesantemente da AC.}), se $|A| < |X|$ allora abbiamo che vale: $|X \setminus A| = |X|$.
 \end{proposition}
 
 \begin{proof}
 	Per AC $|X| = \aleph_\alpha$ e $|A| = |\aleph_\beta|$, con $\alpha > \beta$ ordinali (per la monotonia della funzione degli aleph). Abbiamo che:
 	\[ X = (A \sqcup X)\setminus A
 		\]
-	cioè $|X| = |A| + |X \setminus A| \iff \aleph_\alpha = \aleph_\beta + \aleph_\gamma$, con $\aleph_\beta + \aleph_\gamma = \aleph_{\max(\beta,\gamma)}$.
-	A questo punto se $\gamma < \alpha \implies \max(\beta,\gamma) < \alpha$ e per monotonia della funzione degli aleph $\aleph_{\max(\beta,\gamma)} < \aleph_\alpha$, che è assurdo.
-	Se $\gamma > \alpha \implies \max(\beta,\gamma) = \gamma$ (perché $\beta < \alpha$) e si otterrebbe, di nuovo per monotonia, $\aleph_\alpha < \aleph_\gamma$ che è ancora assurdo.
-	L'unica possibilità che rimane\footnote{Notare che questo è vero anche senza AC perché gli ordinali sono totalmente ordinati per quanto abbiamo detto sulla relazione d'ordine tra buoni ordinamenti (naturalmente stiamo facendo pesante uso di AC, quindi in ogni caso varrebbe).}
-	quindi è che $\gamma = \alpha \implies \aleph_\gamma = \aleph_\alpha \iff |X \setminus A| = |X|$.
+	cio\`e $|X| = |A| + |X \setminus A| \iff \aleph_\alpha = \aleph_\beta + \aleph_\gamma$, con $\aleph_\beta + \aleph_\gamma = \aleph_{\max(\beta,\gamma)}$.
+	A questo punto se $\gamma < \alpha \implies \max(\beta,\gamma) < \alpha$ e per monotonia della funzione degli aleph $\aleph_{\max(\beta,\gamma)} < \aleph_\alpha$, che \`e assurdo.
+	Se $\gamma > \alpha \implies \max(\beta,\gamma) = \gamma$ (perch\'e $\beta < \alpha$) e si otterrebbe, di nuovo per monotonia, $\aleph_\alpha < \aleph_\gamma$ che \`e ancora assurdo.
+	L'unica possibilit\`a che rimane\footnote{Notare che questo \`e vero anche senza AC perch\'e gli ordinali sono totalmente ordinati per quanto abbiamo detto sulla relazione d'ordine tra buoni ordinamenti (naturalmente stiamo facendo pesante uso di AC, quindi in ogni caso varrebbe).}
+	quindi \`e che $\gamma = \alpha \implies \aleph_\gamma = \aleph_\alpha \iff |X \setminus A| = |X|$.
 \end{proof}
 
 \pagebreak
 \subsection{Rango ordinale}
-Il seguente risultato amplia quanto già visto nel capitolo dedicato a buona fondazione, ovvero che $\alpha \subseteq V_\alpha$, dandoci un risultato più generale. 
+Il seguente risultato amplia quanto gi\`a visto nel capitolo dedicato a buona fondazione, ovvero che $\alpha \subseteq V_\alpha$, dandoci un risultato pi\`u generale. 
 \begin{proposition}
 	[Rango di un ordinale]
 	Dato $\alpha \in \Ord$ vale che $\rank(\alpha) = \alpha$.
@@ -574,17 +574,17 @@ Il seguente risultato amplia quanto già visto nel capitolo dedicato a buona fon
 \begin{proof}
 	Procediamo per induzione transfinita.
 	\begin{itemize}
-		\item[$\boxed{\text{caso 0}}$] È ovvio che $\emptyset \not \in V_0$ e $\emptyset \in V_1$, dunque $\rank(0) = 0$.
-		\item[$\boxed{\text{caso successore}}$] Supponiamo che $\rank(\alpha) = \alpha$ e dimostriamo che $\rank(\alpha + 1) = \alpha + 1$. Per ipotesi $\alpha \in V_{\alpha + 1}$, cioè il minimo elemento della gerarchia che ha come elemento $\alpha$ è $V_\alpha + 1$,
-		ciò implica in automatico che $V_{\alpha + 1}$ è anche il minimo insieme ad avere $\{\alpha\}$ come sottoinsieme, altrimenti $\alpha$ apparterrebbe a qualche $V_\beta$ con $\beta < \alpha$ e non può accadere. Osserviamo inoltre che, per transitività, $\alpha \in V_{\alpha + 1} \implies \alpha \subseteq V_{\alpha + 1}$, per cui abbiamo:
+		\item[$\boxed{\text{caso 0}}$] \`E ovvio che $\emptyset \not \in V_0$ e $\emptyset \in V_1$, dunque $\rank(0) = 0$.
+		\item[$\boxed{\text{caso successore}}$] Supponiamo che $\rank(\alpha) = \alpha$ e dimostriamo che $\rank(\alpha + 1) = \alpha + 1$. Per ipotesi $\alpha \in V_{\alpha + 1}$, cio\`e il minimo elemento della gerarchia che ha come elemento $\alpha$ \`e $V_\alpha + 1$,
+		ci\`o implica in automatico che $V_{\alpha + 1}$ \`e anche il minimo insieme ad avere $\{\alpha\}$ come sottoinsieme, altrimenti $\alpha$ apparterrebbe a qualche $V_\beta$ con $\beta < \alpha$ e non pu\`o accadere. Osserviamo inoltre che, per transitivit\`a, $\alpha \in V_{\alpha + 1} \implies \alpha \subseteq V_{\alpha + 1}$, per cui abbiamo:
 		\[ \alpha + 1 = \underbrace{\alpha}_{\subseteq V_{\alpha + 1}} \cup \underbrace{\{\alpha\}}_{\subseteq V_{\alpha + 1}} \subseteq V_{\alpha + 1} \implies \alpha + 1 \in V_{\alpha + 2}
 			\]
-		da cui $\rank(\alpha + 1) \leq \alpha + 1$. D'altra parte $\alpha \in \alpha + 1$ per costruzione, quindi $\alpha = \rank(\alpha) < \rank(\alpha + 1)$, ovvero $\alpha + 1 \leq \rank(\alpha + 1)$ e ciò ci fa concludere. Alternativamente si poteva notare che se fosse minore o uguale ad $\alpha$, $\{\alpha\}$
-		non potrebbe essere un sottoinsieme di $\alpha + 1$ (che è assurdo), in quanto, come visto sopra, per avere $\{\alpha\}$ come sottoinsieme abbiamo bisogno almeno di essere in $V_{\alpha + 1}$, dunque $\alpha + 1 \leq \rank(\alpha + 1)$, e si conclude di nuovo. 
+		da cui $\rank(\alpha + 1) \leq \alpha + 1$. D'altra parte $\alpha \in \alpha + 1$ per costruzione, quindi $\alpha = \rank(\alpha) < \rank(\alpha + 1)$, ovvero $\alpha + 1 \leq \rank(\alpha + 1)$ e ci\`o ci fa concludere. Alternativamente si poteva notare che se fosse minore o uguale ad $\alpha$, $\{\alpha\}$
+		non potrebbe essere un sottoinsieme di $\alpha + 1$ (che \`e assurdo), in quanto, come visto sopra, per avere $\{\alpha\}$ come sottoinsieme abbiamo bisogno almeno di essere in $V_{\alpha + 1}$, dunque $\alpha + 1 \leq \rank(\alpha + 1)$, e si conclude di nuovo. 
 		\item[$\boxed{\text{caso limite}}$] Supponiamo che $\forall \alpha < \lambda \; \rank(\alpha) = \alpha$ e dimostriamo che $\rank(\lambda) = \lambda$. Osserviamo che, sapendo che $y \in x \implies \rank(x) < \rank(y)$, si ha:
 		\[ \forall \alpha < \lambda \; \alpha = \rank(\alpha) < \rank(\lambda)
 			\]
-		cioè $\rank(\lambda)$ è un maggiorante di $\{\alpha | \alpha < \lambda\}$, quindi è maggiore o uguale dell'estremo superiore di questo insieme, $\lambda \leq \rank(\lambda)$. D'altra parte, sappiamo che $\lambda \subseteq V_{\lambda} \implies \lambda \in V_\lambda$, per cui $\rank(\lambda) = \lambda$.
+		cio\`e $\rank(\lambda)$ \`e un maggiorante di $\{\alpha | \alpha < \lambda\}$, quindi \`e maggiore o uguale dell'estremo superiore di questo insieme, $\lambda \leq \rank(\lambda)$. D'altra parte, sappiamo che $\lambda \subseteq V_{\lambda} \implies \lambda \in V_\lambda$, per cui $\rank(\lambda) = \lambda$.
 	\end{itemize}
 \end{proof}
 
@@ -603,52 +603,52 @@ Il seguente risultato amplia quanto già visto nel capitolo dedicato a buona fon
 
 Richiamiamo brevemente tre fatti visti nel prologo.
 
-\begin{fact}[Criterio per gli insiemi di unicità]
-\label{unicità}
+\begin{fact}[Criterio per gli insiemi di unicit\`a]
+\label{unicit\`a}
 Dato $X \subseteq \RR$ se (ma non solo se) \textcolor{purple}{ogni funzione continua $f : \RR \to \RR$ che soddisfi:
 \begin{itemize}
-	\item per ogni intervallo aperto $\left]a,b\right[$ con $]a,b[ \,\cap\, X = \emptyset$, $f_{| \, ]a,b[}$ è lineare.
+	\item per ogni intervallo aperto $\left]a,b\right[$ con $]a,b[ \,\cap\, X = \emptyset$, $f_{| \, ]a,b[}$ \`e lineare.
 	\item per ogni $x \in \RR$, se $f$ ha derivate destre e sinistre in $x$, allora queste coincidono\footnote{Ovvero $f$ non ha punti angolosi.}.
 \end{itemize}
-è lineare}\footnote{$f(x) = \alpha x + \beta$.}, allora $X$ è di unicità.
+\`e lineare}\footnote{$f(x) = \alpha x + \beta$.}, allora $X$ \`e di unicit\`a.
 \end{fact}
 
-\textcolor{MidnightBlue}{Ricordiamo che con $(\star)$ indichiamo la proprietà in \textcolor{purple}{viola}.}
+\textcolor{MidnightBlue}{Ricordiamo che con $(\star)$ indichiamo la propriet\`a in \textcolor{purple}{viola}.}
 
 \begin{remark}[Derivato di un chiuso soddisfa $(\star) \implies$ chiuso soddisfa $(\star)$]
-	Se $X$ è chiuso e $X^{\prime}$ soddisfa $(\star)$ - per cui $X'$ è di unicità per il criterio -, allora anche $X$ è di unicità.
+	Se $X$ \`e chiuso e $X^{\prime}$ soddisfa $(\star)$ - per cui $X'$ \`e di unicit\`a per il criterio -, allora anche $X$ \`e di unicit\`a.
 \end{remark}
 
 \begin{corollary}[Derivato $n$-esimo soddisfa $(\star) \implies$ insieme soddisfa $(\star)$]
-Detto $X^{(n)}$ il derivato $n$-esimo di $X$, se per $X^{(n)}$ vale $(\star)$, per qualche $n \in \NN$, allora anche per $X$ vale $(\star)$, quindi per il \hyperref[unicità]{Fatto 1.5} è di unicità.\footnote{Il caso con $X^{(n)} = \emptyset$ scritto da Mamino nelle note è un caso particolare di questo.}
+Detto $X^{(n)}$ il derivato $n$-esimo di $X$, se per $X^{(n)}$ vale $(\star)$, per qualche $n \in \NN$, allora anche per $X$ vale $(\star)$, quindi per il \hyperref[unicit\`a]{Fatto 1.5} \`e di unicit\`a.\footnote{Il caso con $X^{(n)} = \emptyset$ scritto da Mamino nelle note \`e un caso particolare di questo.}
 \end{corollary}
 
 Questi, uniti a quanto visto nella sezione sul teorema di Cantor-Bendixson, ci permettono finitamente di dimostrare il seguente risultato.
 
 \begin{theorem}[Teorema di Cantor-Lebesgue]
-	Se $X \subseteq \RR$ è chiuso e numerabile, allora $X$ soddisfa $(\star)$, e quindi è di unicità.
+	Se $X \subseteq \RR$ \`e chiuso e numerabile, allora $X$ soddisfa $(\star)$, e quindi \`e di unicit\`a.
 \end{theorem}
 
 \begin{proof}
-	Per il teorema di \hyperref[Cantor_Bendixson]{Cantor-Bendixson} possiamo scrivere $C = P \cup A$, con $P$ perfetto e $A$ al più numerabile, ed essendo per ipotesi $C$ numerabile ed i perfetti non vuoti di $\RR$ continui,
-	si deve avere che $P = \emptyset$ e $C = A$. Dove $P$ è il \vocab{derivato di Cantor-Bendixson}, che era definito come:
+	Per il teorema di \hyperref[Cantor_Bendixson]{Cantor-Bendixson} possiamo scrivere $C = P \cup A$, con $P$ perfetto e $A$ al pi\`u numerabile, ed essendo per ipotesi $C$ numerabile ed i perfetti non vuoti di $\RR$ continui,
+	si deve avere che $P = \emptyset$ e $C = A$. Dove $P$ \`e il \vocab{derivato di Cantor-Bendixson}, che era definito come:
 	\[ P = \bigcap_{\alpha \in \Ord}X_\alpha = \{x \in \RR |\forall \alpha \in\Ord \; x \in X_\alpha \} \qquad \text{con }X_\alpha = \begin{cases}
 		X_0 = X \\
 		X_{\alpha + 1} = X'_\alpha \\
 		X_\lambda = \bigcap_{\gamma < \lambda}X_\gamma &\text{$\lambda$ limite}
 	\end{cases}
 		\]
-	Ora essendo $X$ chiuso la successione così definita è decrescente - perché $X' = X\setminus\{\text{punti isolati di $X$}\}$ - e naturalmente per il principio della discesa infinita generalizzato si deve stabilizzare,
+	Ora essendo $X$ chiuso la successione cos\`i definita \`e decrescente - perch\'e $X' = X\setminus\{\text{punti isolati di $X$}\}$ - e naturalmente per il principio della discesa infinita generalizzato si deve stabilizzare,
 	essendo $P = \emptyset$, la successione si stabilizza necessariamente nel vuoto, ovvero $\exists \beta \in \Ord \; \forall \delta \geq \beta \; X_\delta = \emptyset$. Abbiamo quindi che $X_\beta = \emptyset$ per $\beta \in \Ord$, per cui $X_\beta$ soddisfa $(\star)$, non ci resta che generalizzare il corollario sopra per ottenere la tesi.\\
-	Vogliamo dimostrare che se $X_\alpha$ soddisfa $(\star)$ per qualche $\alpha \in \Ord$, allora anche $X$ (chiuso) soddisfa $(\star)$, ed è quindi di unicità per il fatto sopra. Procediamo per induzione transfinita assumendo il risultato dell'osservazione, che abbiamo già dimostrato nel prologo.
+	Vogliamo dimostrare che se $X_\alpha$ soddisfa $(\star)$ per qualche $\alpha \in \Ord$, allora anche $X$ (chiuso) soddisfa $(\star)$, ed \`e quindi di unicit\`a per il fatto sopra. Procediamo per induzione transfinita assumendo il risultato dell'osservazione, che abbiamo gi\`a dimostrato nel prologo.
 	\begin{itemize}
 		\item[$\boxed{\text{caso 0}}$] Se $X^{(0)} = X$ soddisfa $(\star)$ allora abbiamo finito.
 		\item[$\boxed{\text{caso successore}}$] Supponiamo che se $X_\alpha$ soddisfa $(\star)$ allora $X$ soddisfa $(\star)$ e dimostriamo che se $X_{\alpha+1}$ soddisfa $(\star)$, allora $X$ soddisfa $(\star)$.
 		Detto $Y = X_\alpha$, allora $Y' = X_{\alpha + 1}$, per cui, per l'osservazione $Y = X_\alpha$ soddisfa $(\star)$, quindi per ipotesi induttiva anche $X$ soddisfa $(\star)$ e abbiamo concluso.
 		\item[$\boxed{\text{caso limite}}$] Supponiamo che $\forall \gamma < \lambda \; X_\gamma$ se $X_\gamma$ soddisfa $(\star)$, allora $X$ soddisfa $(\star)$, e dimostriamo che se $X_\lambda$ soddisfa $(\star)$ allora anche $X$ soddisfa $(\star)$.\\
 		Ci basta verificare che uno degli $X_\gamma$, per $\gamma < \lambda$, rispetta $(\star)$ per poter applicare l'ipotesi induttiva ed ottenere quanto voluto. Data $f \in \text C^0(\RR)$, senza punti angolosi e lineare quando ristretta ad intervalli aperti che non intersecano 
-		$X_\gamma$, verifichiamo che è lineare. Poiché $X_\lambda \subseteq X_\gamma$, e per $X_\lambda$ vale $(\star)$, $f$ rispetta la condizione di essere lineare sugli intervalli aperti che non intersecano $X_\gamma \supseteq X_\lambda$,
-		quindi la rispetta in automatico su $X_\lambda$, e poiché rispetta banalmente anche le altre due condizioni per $X_\lambda$ allora è lineare - perché per ipotesi appunto la proprietà $(\star)$ vale per $X_\lambda$ e questo ci dà la linearità globale di $f$ -,
+		$X_\gamma$, verifichiamo che \`e lineare. Poich\'e $X_\lambda \subseteq X_\gamma$, e per $X_\lambda$ vale $(\star)$, $f$ rispetta la condizione di essere lineare sugli intervalli aperti che non intersecano $X_\gamma \supseteq X_\lambda$,
+		quindi la rispetta in automatico su $X_\lambda$, e poich\'e rispetta banalmente anche le altre due condizioni per $X_\lambda$ allora \`e lineare - perch\'e per ipotesi appunto la propriet\`a $(\star)$ vale per $X_\lambda$ e questo ci d\`a la linearit\`a globale di $f$ -,
 		e quindi anche $X_\gamma$ rispetta $(\star)$.
 	\end{itemize}
 \end{proof}
@@ -657,12 +657,12 @@ Questi, uniti a quanto visto nella sezione sul teorema di Cantor-Bendixson, ci p
 \pagebreak
 \subsection{\texorpdfstring{$\epsilon$-ricorsione}{epsilon-ricorsione}}
 \begin{theorem}[Principio di $\epsilon$-ricorsione]
-	Data una funzione classe $G : V \to V$ esiste ed è unica la funzione classe $F : V \to V$ tale che:
+	Data una funzione classe $G : V \to V$ esiste ed \`e unica la funzione classe $F : V \to V$ tale che:
 	\[ \forall x \; F(x) = G(F_{|x})
 		\]
 \end{theorem}
 
-\textcolor{MidnightBlue}{L'idea è imitare la dimostrazione del teorema di ricorsione transfinita v.1 usando l'$\epsilon$-induzione al posto dell'induzione transfinita.}
+\textcolor{MidnightBlue}{L'idea \`e imitare la dimostrazione del teorema di ricorsione transfinita v.1 usando l'$\epsilon$-induzione al posto dell'induzione transfinita.}
 
 \begin{proof}[INCOMPLETA]
 	Definiamo una funzione delle troncate della funzione $F$ che vogliamo definire, per mezzo di delle approssimazioni finite come segue:
@@ -672,36 +672,36 @@ Questi, uniti a quanto visto nella sezione sul teorema di Cantor-Bendixson, ci p
 		\forall z \in x \; f(z) = G(f(z))
 	\end{cases} \quad \land \quad y = f
 		\]
-	Per avere che $H : V \to V$ è ben definita come funzione classe, vogliamo dimostrare:
-	\[ \forall x \; \exists\textcolor{red}{!} f \;\text{$f$ è una $x$-approssimazione}
+	Per avere che $H : V \to V$ \`e ben definita come funzione classe, vogliamo dimostrare:
+	\[ \forall x \; \exists\textcolor{red}{!} f \;\text{$f$ \`e una $x$-approssimazione}
 		\]
 	procediamo per $\epsilon$-induzione come segue. Dato $x$, supponiamo per ipotesi induttiva che per ogni $y \in x$
-	esistano e siano uniche le $y$-approssimazioni, $f_y$, e dimostriamo che esiste ed è unica una $x$-approssimazione.
+	esistano e siano uniche le $y$-approssimazioni, $f_y$, e dimostriamo che esiste ed \`e unica una $x$-approssimazione.
 	Consideriamo:
 	\[ f := \bigcup_{y \in x}f_y
 		\]	
 	e osserviamo che:
 	\begin{itemize}
-		\item[$\diamondsuit$] \underline{$f$ è una funzione}: dobbiamo dire che prese $f_{y_1},f_{y_2}$ due funzioni dell'unione, queste due coincidono sull'intersezione, preso infatti $z \in \tc(y_1) \cap \tc(y_2)$
+		\item[$\diamondsuit$] \underline{$f$ \`e una funzione}: dobbiamo dire che prese $f_{y_1},f_{y_2}$ due funzioni dell'unione, queste due coincidono sull'intersezione, preso infatti $z \in \tc(y_1) \cap \tc(y_2)$
 		\item[$\diamondsuit$] \underline{$\Dom(f) = \tc(x)$}: si osserva che:
 		\[ \Dom(f) = \bigcup_{y \in x}\Dom(f_y) = \bigcup_{y \in x} \tc(y) = \tc(x)
 			\]
-		dove l'ultima uguaglianza è una facile verifica.
+		dove l'ultima uguaglianza \`e una facile verifica.
 		\item[$\diamondsuit$] \underline{$\forall z \in x \; f(z) = G(f_{|z})$}: se $z \in x$, allora $z \in \tc(y)$ per qualche $y \in X$, per cui $f(z) = f_{y}(z) \overset{\text{Hp. indutt.}}{=} G(f_{y|z}) = G(f_{|z})$,
-		dove l'ultima uguaglianza vale perché $f$ è un'estense di $f_y$ per definizione - che è lo stesso motivo per cui vale la prima -.
+		dove l'ultima uguaglianza vale perch\'e $f$ \`e un'estense di $f_y$ per definizione - che \`e lo stesso motivo per cui vale la prima -.
 	\end{itemize}
-	Resta infine da verificare l'unicità di $f$ come unica $x$-approssimazione, date $f'$ e $f''$ entrambe $x$-approssimazioni osserviamo che:
+	Resta infine da verificare l'unicit\`a di $f$ come unica $x$-approssimazione, date $f'$ e $f''$ entrambe $x$-approssimazioni osserviamo che:
 	\[ \forall z \in x \; f'(z) = G(f'_{|z}) = G(f''_{|z}) = f''(z)
 		\]
 	A questo punto possiamo definire $F : V \to V$ come segue:
 	\[ y = F(x) \Mydef f = H(\tc(x)) \land y = f(x)
 		\]
 	quindi si ha $F(x) = f(x) = G(f_{|x})$, per cui non ci resta che verificare che $f_{|x} = F_{|x}$, ovvero $\forall z \in x \; F(z) = f(z)$.
-	Per ipotesi si ha che $z \in \tc(y)$ per qualche $y \in x$, per cui $F(z) = f'(z)$, con $f' = H(y)$, quindi $f'(z) = f(z)$ poiché le funzioni date da $H(\cdot)$
-	coincidono sull'intersezione dei loro domini per l'unicità vista prima.\\
-	Non ci rimane altro che verificare l'unicità di $F$, per farlo procediamo ancora per $\epsilon$-induzione, date $F_1$ ed $F_2$ che soddisfano la tesi, per ipotesi induttiva abbiamo che $F_{1|x} = F_{2|x}$,
+	Per ipotesi si ha che $z \in \tc(y)$ per qualche $y \in x$, per cui $F(z) = f'(z)$, con $f' = H(y)$, quindi $f'(z) = f(z)$ poich\'e le funzioni date da $H(\cdot)$
+	coincidono sull'intersezione dei loro domini per l'unicit\`a vista prima.\\
+	Non ci rimane altro che verificare l'unicit\`a di $F$, per farlo procediamo ancora per $\epsilon$-induzione, date $F_1$ ed $F_2$ che soddisfano la tesi, per ipotesi induttiva abbiamo che $F_{1|x} = F_{2|x}$,
 	per cui:
 	\[ F_1(x) = G(F_{1|x}) \overset{\text{Hp. indutt.}}{=} G(F_{2|x}) = F_2(x)
 		\]
-	pertanto vale il passo induttivo, e quindi l'induzione ci garantisce che $\forall x \; F_1(x) = F_2(x)$, ovvero $F$ è unica come funzione classe.
+	pertanto vale il passo induttivo, e quindi l'induzione ci garantisce che $\forall x \; F_1(x) = F_2(x)$, ovvero $F$ \`e unica come funzione classe.
 \end{proof}

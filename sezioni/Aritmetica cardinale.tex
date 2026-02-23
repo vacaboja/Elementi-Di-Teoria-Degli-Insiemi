@@ -1,84 +1,84 @@
 \section{Aritmetica cardinale}
 
 \begin{definition}[Cardinali]
-	Diciamo che $\kappa$ è un \vocab{cardinale} se $\kappa$ è un ordinale iniziale.
+	Diciamo che $\kappa$ \`e un \vocab{cardinale} se $\kappa$ \`e un ordinale iniziale.
 \end{definition}
 
 \begin{notation}[Cardinali successori]
 	Indichiamo con la notazione:
-	\[ \kappa = \lambda^+ \Mydef \text{$\kappa$ è il minimo cardinale $>\lambda$}
+	\[ \kappa = \lambda^+ \Mydef \text{$\kappa$ \`e il minimo cardinale $>\lambda$}
 		\]
-	ad esempio, $\omega_\alpha^+ = \omega_{\alpha + 1}$, ovvero l'ordinale iniziale successivo [che quindi ha cardinalità strettamente più grande].
+	ad esempio, $\omega_\alpha^+ = \omega_{\alpha + 1}$, ovvero l'ordinale iniziale successivo [che quindi ha cardinalit\`a strettamente pi\`u grande].
 \end{notation}
 
-Possiamo definire le operazioni di prodotto, somma e potenza cardinale (per il \hyperref[buon_ordinamento]{teorema del buon ordinamento} le operazioni sulle cardinalità e sugli ordinali iniziali corrispondono), per cui se $\kappa = \omega_\alpha$, $\lambda = \omega_\beta$ e $\mu = \omega_\gamma$ scriviamo:
+Possiamo definire le operazioni di prodotto, somma e potenza cardinale (per il \hyperref[buon_ordinamento]{teorema del buon ordinamento} le operazioni sulle cardinalit\`a e sugli ordinali iniziali corrispondono), per cui se $\kappa = \omega_\alpha$, $\lambda = \omega_\beta$ e $\mu = \omega_\gamma$ scriviamo:
 \[ \kappa =  \lambda + \mu \qquad \kappa = \lambda \cdot \mu \qquad \kappa = \lambda^\mu
 	\]
 per rispettivamente:
 \[ \aleph_\alpha = \aleph_\beta + \aleph_\gamma \qquad \aleph_\alpha = \aleph_\beta \cdot \aleph_\gamma \qquad \aleph_\alpha = \aleph_\beta^{\aleph_\gamma}
 	\]
 Occorre fare attenzione a non confondere le operazioni \textcolor{red}{cardinali} con quelle \textcolor{MidnightBlue}{ordinali}. In questa sezione ci occupiamo di operazioni \textcolor{red}{cardinali}.\\
-Siccome ad ogni cardinalità corrisponde un unico ordinale iniziale [per \hyperref[ax9]{AC}], che abbia quella cardinalità, possiamo scrivere:
-\[ \kappa = |X| \Mydef \text{$\kappa$ è un cardinale e $|\kappa| = |X|$}
+Siccome ad ogni cardinalit\`a corrisponde un unico ordinale iniziale [per \hyperref[ax9]{AC}], che abbia quella cardinalit\`a, possiamo scrivere:
+\[ \kappa = |X| \Mydef \text{$\kappa$ \`e un cardinale e $|\kappa| = |X|$}
 	\]
-Cioè stiamo commettendo un piccolo abuso di notazione (o di definizione) e dicendo che la definizione di cardinalità può essere in realtà quella dell'ordinale iniziale a lui associato, in realtà questa cosa non è sbagliata, nel senso che alla fine, tutte le cardinalità degli insiemi (per AC) sono ordinali iniziali, cioè vi è sempre una bigezione tra ordinale iniziale e insieme (se hanno la stessa cardinalità, ma la cardinalità, come detto in precedenza non è qualcosa di per sé, ma è una definizione che 
-considera sempre due insiemi), quello che stiamo facendo con i cardinali non è altro che fissare una notazione per dei ``rappresentanti privilegiati'' delle cardinalità, che sono appunto gli ordinali iniziali.\\
-Per questi ultimi valgono tutte le proprietà viste sulle cardinalità, che quindi ci danno le operazioni cardinali (che NON sono un'estensione di quelle ordinali, ma altre operazioni definite diversamente e soltanto tra ordinali iniziali, perché entrano in gioco le proprietà viste sulle cardinalità).\footnote{Osservare che nel caso degli ordinali [iniziali] finiti le operazioni ordinali coincidono con quelle cardinali ed entrambe coincidono con le operazioni definite per ricorsione numerabile su $\omega$, questo 
-perché gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di ordinali e sono tutti ordinali iniziali (per tutte le cardinalità finite).}
+Cio\`e stiamo commettendo un piccolo abuso di notazione (o di definizione) e dicendo che la definizione di cardinalit\`a pu\`o essere in realt\`a quella dell'ordinale iniziale a lui associato, in realt\`a questa cosa non \`e sbagliata, nel senso che alla fine, tutte le cardinalit\`a degli insiemi (per AC) sono ordinali iniziali, cio\`e vi \`e sempre una bigezione tra ordinale iniziale e insieme (se hanno la stessa cardinalit\`a, ma la cardinalit\`a, come detto in precedenza non \`e qualcosa di per s\'e, ma \`e una definizione che 
+considera sempre due insiemi), quello che stiamo facendo con i cardinali non \`e altro che fissare una notazione per dei ``rappresentanti privilegiati'' delle cardinalit\`a, che sono appunto gli ordinali iniziali.\\
+Per questi ultimi valgono tutte le propriet\`a viste sulle cardinalit\`a, che quindi ci danno le operazioni cardinali (che NON sono un'estensione di quelle ordinali, ma altre operazioni definite diversamente e soltanto tra ordinali iniziali, perch\'e entrano in gioco le propriet\`a viste sulle cardinalit\`a).\footnote{Osservare che nel caso degli ordinali [iniziali] finiti le operazioni ordinali coincidono con quelle cardinali ed entrambe coincidono con le operazioni definite per ricorsione numerabile su $\omega$, questo 
+perch\'e gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di ordinali e sono tutti ordinali iniziali (per tutte le cardinalit\`a finite).}
 \subsection{Somme e prodotti infiniti}
 
 \begin{definition}[Somme e prodotti infiniti]
-	Sia $I$ un insieme e $\{\kappa_i\}_{i \in I}$ una famiglia di cardinali. Definiamo la \vocab{somma} e il \vocab{prodotto sulla famiglia} indicizzata da $I$ come:\footnote{La somma non è altro che una naturale estensione della somma tra cardinalità, per la somma di due cardinalità, in altre parole, stiamo rendendo disgiunti tutti gli insiemi e poi li stiamo unendo. Osservare anche che la definizione di prodotto data non usa AC.}
+	Sia $I$ un insieme e $\{\kappa_i\}_{i \in I}$ una famiglia di cardinali. Definiamo la \vocab{somma} e il \vocab{prodotto sulla famiglia} indicizzata da $I$ come:\footnote{La somma non \`e altro che una naturale estensione della somma tra cardinalit\`a, per la somma di due cardinalit\`a, in altre parole, stiamo rendendo disgiunti tutti gli insiemi e poi li stiamo unendo. Osservare anche che la definizione di prodotto data non usa AC.}
 	 \begin{align*}
 		\sum_{i \in I} \kappa_i &\Mydef\left\lvert \bigcup\{\kappa_i \times \{i\} | i \in I\}\right\rvert \\
 		\prod_{i \in I} \kappa_i &\Mydef \left\lvert \left\{f : I \rightarrow \sup_{i \in I} \kappa_i \m  \forall i \in I \; f(i) \in \kappa_i\right\}\right\rvert 
 	 \end{align*}
-	(osservare che il sup di una famiglia di cardinali, essendo ordinali iniziali, è dato dall'unione di questi ultimi\footnote{Inoltre, notare anche come sapessimo già fare prodotti infiniti degli stessi insiemi, considerando le funzioni dall'uno all'altro, ma ciò valeva solo volendo fare un prodotto infinito di uno stesso insieme, per un numero di volte dato dall'insieme di arrivo
+	(osservare che il sup di una famiglia di cardinali, essendo ordinali iniziali, \`e dato dall'unione di questi ultimi\footnote{Inoltre, notare anche come sapessimo gi\`a fare prodotti infiniti degli stessi insiemi, considerando le funzioni dall'uno all'altro, ma ci\`o valeva solo volendo fare un prodotto infinito di uno stesso insieme, per un numero di volte dato dall'insieme di arrivo
 	(e.g. ${}^\omega A = \underbrace{A \times \ldots \times A}_{\text{$\omega$ volte}.}$).}).
 \end{definition}
 
-\textcolor{MidnightBlue}{Formalmente la famiglia $\{\kappa_i\}_{i \in I}$ è una funzione $f$ con $\Dom(f) = I$ e $\forall i \in I \; f(i)$ è un cardinale, $\kappa_i$ è un'abbreviazione per $f_i$.}
+\textcolor{MidnightBlue}{Formalmente la famiglia $\{\kappa_i\}_{i \in I}$ \`e una funzione $f$ con $\Dom(f) = I$ e $\forall i \in I \; f(i)$ \`e un cardinale, $\kappa_i$ \`e un'abbreviazione per $f_i$.}
 
 \begin{remark}[Prodotti cartesiani infiniti]
-	La definizione sopra generalizza quella di prodotto cartesiano data, a prodotto cartesiano di una famiglia qualunque di insiemi qualunque. Nel caso finito c'è una bigezione tra le due definizioni, infatti, data una $f$ che va da $I$ all'unione $\bigcup \{X_i\}_{i \in I}$ [con $I$ finito] di una 
+	La definizione sopra generalizza quella di prodotto cartesiano data, a prodotto cartesiano di una famiglia qualunque di insiemi qualunque. Nel caso finito c'\`e una bigezione tra le due definizioni, infatti, data una $f$ che va da $I$ all'unione $\bigcup \{X_i\}_{i \in I}$ [con $I$ finito] di una 
 	famiglia di insiemi, tale $f$ per definizione fissa un elemento in ogni insieme, $f(i) \in X_i$, $\forall i \in I$, a questo punto, possiamo scrivere le immagini di $f(i)$ in una $|I|$-upla ordinata [secondo l'ordinamento su $I$], ed ottenere l'elemento del prodotto cartesiano finito voluto.\\
-	Viceversa una $|I|$-upla definisce completamente una mappa da $I$ a $\bigcup\{X_i\}_{i \in I}$, infatti basta prendere come $f(i)$ l'$i$-esima componente della tupla, e tale componente sta in $X_i$, dunque si ottiene proprio una funzione che rispetta la proprietà richiesta.
+	Viceversa una $|I|$-upla definisce completamente una mappa da $I$ a $\bigcup\{X_i\}_{i \in I}$, infatti basta prendere come $f(i)$ l'$i$-esima componente della tupla, e tale componente sta in $X_i$, dunque si ottiene proprio una funzione che rispetta la propriet\`a richiesta.
 \end{remark}
 
 \begin{note}[Somma di cardinali disgiunti]
-	Sia $\{X_i\}_{i \in I}$ una famiglia di insiemi a due a due \textbf{disgiunti}, e sia $\forall i \in I \; \kappa_i = |X_i|$\footnote{Se non sono già dati i cardinali c'è bisogno di AC.} allora:
+	Sia $\{X_i\}_{i \in I}$ una famiglia di insiemi a due a due \textbf{disgiunti}, e sia $\forall i \in I \; \kappa_i = |X_i|$\footnote{Se non sono gi\`a dati i cardinali c'\`e bisogno di AC.} allora:
 	\[ \sum_{i \in I} \kappa_i = \left\lvert \bigcup\{X_i | i \in I\}\right\rvert 
 		\]
-	ovvero se gli insiemi a cui sono associati i cardinali sono disgiunti, la somma è semplicemente la cardinalità dell'unione senza bisogno di costruire l'unione disgiunta.\footnote{Questa proprietà così naturale nel caso finito, richiede AC per essere valida nel caso generale e dare una coerenza alle nostre definizioni, da qui l'importanza di assumere scelta per estendere le operazioni cardinali al caso infinito.}
+	ovvero se gli insiemi a cui sono associati i cardinali sono disgiunti, la somma \`e semplicemente la cardinalit\`a dell'unione senza bisogno di costruire l'unione disgiunta.\footnote{Questa propriet\`a cos\`i naturale nel caso finito, richiede AC per essere valida nel caso generale e dare una coerenza alle nostre definizioni, da qui l'importanza di assumere scelta per estendere le operazioni cardinali al caso infinito.}
 \end{note}
 
 \begin{proof}
 	(Richiede \hyperref[ax9]{AC})\\
 	Per ogni $i \in I$ scegliamo una bigezione $f_i : \kappa_i \times \{i\} \rightarrow X_i$, con $|\kappa_i \times \{i\}| = |\kappa_i| = |X_i|$\footnote{Per la precisione consideriamo $B = \{B_i\}_{i \in I}$, con $B_i = \{f_i : \kappa_i \times \{i\} \to X_i | \;\text{$f_i$ bigezione}$\},
-	poiché per ogni $i \in I$ vale l'uguaglianza tra cardinalità scritta sopra, allora nessuno dei $B_i$ è vuoto, ovvero $\emptyset \not \in B$, dunque possiamo usare AC e ottenere una funzione $\phi : B \to \bigcup B : B_i \mapsto \phi(B_i) \in B_i$, che fissa per ogni insieme $B_i$ una sua bigezione.
-	Osservare che usiamo AC per l'arbitrarietà di $|I|$, se fosse finito non avremmo bisogno di AC per fissare le bigezioni (per questo questa proprietà non ha bisogno di AC nel caso finito), ma nel caso infinito non possiamo fare altrimenti.}, allora si ha che:
+	poich\'e per ogni $i \in I$ vale l'uguaglianza tra cardinalit\`a scritta sopra, allora nessuno dei $B_i$ \`e vuoto, ovvero $\emptyset \not \in B$, dunque possiamo usare AC e ottenere una funzione $\phi : B \to \bigcup B : B_i \mapsto \phi(B_i) \in B_i$, che fissa per ogni insieme $B_i$ una sua bigezione.
+	Osservare che usiamo AC per l'arbitrariet\`a di $|I|$, se fosse finito non avremmo bisogno di AC per fissare le bigezioni (per questo questa propriet\`a non ha bisogno di AC nel caso finito), ma nel caso infinito non possiamo fare altrimenti.}, allora si ha che:
 	\[ f : \bigcup \{\kappa_i \times\{i\} | i \in I\} \rightarrow \bigcup \{X_i | i \in I\} : (a,i) \mapsto f_i(a,i)\,\footnote{Typo Mamino.}
 		\]
-	ossia $f = \bigcup\{f_i | i \in I\}$, ed è ben definita perché gli insiemi sono disgiunti inoltre è una bigezione perché unione di bigezioni definite su insiemi disgiunti in arrivo.
-	Abbiamo quindi una bigezione tra l'insieme usato per la definizione di somma di cardinalità e l'unione degli insiemi corrispondenti a tali cardinalità, dunque la cardinalità dell'unione degli insiemi è proprio uguale alla somma delle cardinalità degli insiemi.
+	ossia $f = \bigcup\{f_i | i \in I\}$, ed \`e ben definita perch\'e gli insiemi sono disgiunti inoltre \`e una bigezione perch\'e unione di bigezioni definite su insiemi disgiunti in arrivo.
+	Abbiamo quindi una bigezione tra l'insieme usato per la definizione di somma di cardinalit\`a e l'unione degli insiemi corrispondenti a tali cardinalit\`a, dunque la cardinalit\`a dell'unione degli insiemi \`e proprio uguale alla somma delle cardinalit\`a degli insiemi.
 \end{proof}
 
 \begin{note}[Disuguaglianza di inclusione-esclusione nel caso generale]
-	Sia $\{X_i\}_{i \in I}$ una famiglia di insiemi non necessariamente a due a due disgiunti, e sia $\forall i \in I \; \kappa_i = |X_i|$\footnote{Come prima, se non sono già dati i cardinali c'è bisogno di AC.} allora in generale vale la disuguaglianza di inclusione-esclusione,
-	ovvero la cardinalità dell'unione della famiglia è minore o uguale alla somma delle cardinalità degli elementi della famiglia:
+	Sia $\{X_i\}_{i \in I}$ una famiglia di insiemi non necessariamente a due a due disgiunti, e sia $\forall i \in I \; \kappa_i = |X_i|$\footnote{Come prima, se non sono gi\`a dati i cardinali c'\`e bisogno di AC.} allora in generale vale la disuguaglianza di inclusione-esclusione,
+	ovvero la cardinalit\`a dell'unione della famiglia \`e minore o uguale alla somma delle cardinalit\`a degli elementi della famiglia:
 	\[	\left\lvert\bigcup\{X_i | i \in I\} \right\rvert \leq \sum_{i \in I} \kappa_i
 		\]
-	Inoltre la definizione di prodotto data è ben posta indipendentemente dagli insiemi di cui si considera la cardinalità:
+	Inoltre la definizione di prodotto data \`e ben posta indipendentemente dagli insiemi di cui si considera la cardinalit\`a:
 	\[ \prod_{i \in I} \kappa_i = \left\lvert\left\{f : I \to \bigcup_{i \in I} X_i \m \forall i \in I \; f(i) \in X_i\right\}\right\rvert 
 		\]
 \end{note}
 
 \begin{proof}
 	(Richiede \hyperref[ax9]{AC})\\
-	Per la prima disuguaglianza si può fare come nel caso precedente, ovvero $\forall i \in I$ abbiamo $|\kappa_i \times \{i\}| = |X_i|$, per cui (usando AC nel caso generale) possiamo fissare una bigezione $f_i$, e considerare $f = \bigcup_{i \in I} f_i$, data da:
+	Per la prima disuguaglianza si pu\`o fare come nel caso precedente, ovvero $\forall i \in I$ abbiamo $|\kappa_i \times \{i\}| = |X_i|$, per cui (usando AC nel caso generale) possiamo fissare una bigezione $f_i$, e considerare $f = \bigcup_{i \in I} f_i$, data da:
 	\[ f : \bigcup\{\kappa_i \times \{i\} | i \in I\} \to \bigcup \{X_i | i \in I\} : (a,i) \mapsto f_i(a)
 		\]
-	in questo caso abbiamo che $f$ è unione di bigezioni, ma in arrivo gli insiemi non sono tutti necessariamente disgiunti, quindi ci può essere un elemento che ha più controimmagini, pertanto $f$ è soltanto surgettiva e tale surgettività ci dà:
+	in questo caso abbiamo che $f$ \`e unione di bigezioni, ma in arrivo gli insiemi non sono tutti necessariamente disgiunti, quindi ci pu\`o essere un elemento che ha pi\`u controimmagini, pertanto $f$ \`e soltanto surgettiva e tale surgettivit\`a ci d\`a:
 	\[ \sum_{i \in I} \kappa_i = \left\lvert \bigcup\{\kappa_i \times \{i\} | i \in I\}\right\rvert \geq \left\lvert \bigcup \{X_i | i \in I\}\right\rvert 
 		\]
 	Per la seconda osservazione possiamo ancora una volta fissare per ogni $i \in I$ le bigezioni $g_i : \kappa_i \rightarrow X_i$ (con AC) e mandare ogni funzione del primo insieme in una funzione che valutata in ogni $i$ restituisce il valore di $f(i)$ trasportato in $X_i$ mediante la bigezione fissata per quell'$i$:
@@ -86,36 +86,36 @@ perché gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di o
 		g : \left\{f : I \rightarrow \sup_{i \in I} \kappa_i \m \forall i \in I \; f(i) \in \kappa_i\right\} &\rightarrow \left\{f : I \rightarrow \bigcup \{X_i | i \in I\} \m \forall i \in I \; f(i) \in X_i\right\} \\
 																								     f &\mapsto g(f)(i) = g_i(f(i))
 	\end{align*}
-	tale mappa è bigettiva, perché se due mappe in arrivo coincidono su tutti gli $i \in I$, essendo le $g_i$ bigezioni, si ha che le mappe in partenza sono uguali, inoltre presa una mappa $h$ nell'insieme in arrivo, si può ottenere la sua controimmagine costruendo una
+	tale mappa \`e bigettiva, perch\'e se due mappe in arrivo coincidono su tutti gli $i \in I$, essendo le $g_i$ bigezioni, si ha che le mappe in partenza sono uguali, inoltre presa una mappa $h$ nell'insieme in arrivo, si pu\`o ottenere la sua controimmagine costruendo una
 	funzione fatta da $g_i^{-1}(h(i))$, per ogni $i \in I$.
 \end{proof}
 
 \begin{remark}[Prodotto infinito di potenze]
-	Vale la proprietà del prodotto di potenze\footnote{$a^{n+m} = a^na^m$.} anche nel caso di prodotti arbitrari:
+	Vale la propriet\`a del prodotto di potenze\footnote{$a^{n+m} = a^na^m$.} anche nel caso di prodotti arbitrari:
 	\[ \kappa^{\sum_{i \in I}\lambda_i} = \prod_{i \in I} \kappa^{\lambda_i}
 		\]
 \end{remark}
 
 \begin{proof}
-	Un elemento dell'insieme al LHS è una funzione $f : \sum_{i \in I} \lambda_i = \bigcup\{\lambda_i \times \{i\} | i \in I\} \rightarrow \kappa$,
-	tale funzione può essere identificata in una funzione:
+	Un elemento dell'insieme al LHS \`e una funzione $f : \sum_{i \in I} \lambda_i = \bigcup\{\lambda_i \times \{i\} | i \in I\} \rightarrow \kappa$,
+	tale funzione pu\`o essere identificata in una funzione:
 	\[ \prod_{i \in I}\kappa^{\lambda_i}\ni\widetilde{f} : I \rightarrow \bigcup\{\kappa^{\lambda_i} | i \in I\} : i \mapsto \widetilde{f}_i \in \kappa^{\lambda_i}
 		\]
-	ovvero mandiamo $f$ in una funzione che associa ad ogni $i \in I$ la funzione $\widetilde{f}_i := f(\cdot,i) \in \kappa^{\lambda_i}$. È abbastanza immediato verificare che è iniettiva, infatti se due funzioni in arrivo coincidono praticamente le funzioni in partenza coincidono su tutte le coppie di elementi 
-	in $\bigcup\{\lambda_i \times \{i\} | i \in I\}$, si verifica inoltre che è anche surgettiva.
+	ovvero mandiamo $f$ in una funzione che associa ad ogni $i \in I$ la funzione $\widetilde{f}_i := f(\cdot,i) \in \kappa^{\lambda_i}$. \`E abbastanza immediato verificare che \`e iniettiva, infatti se due funzioni in arrivo coincidono praticamente le funzioni in partenza coincidono su tutte le coppie di elementi 
+	in $\bigcup\{\lambda_i \times \{i\} | i \in I\}$, si verifica inoltre che \`e anche surgettiva.
 \end{proof}
 
-\begin{exercise}[Proprietà delle operazioni cardinali]
-	Valgono le proprietà ragionevoli per le operazioni tra cardinali, ad esempio:
+\begin{exercise}[Propriet\`a delle operazioni cardinali]
+	Valgono le propriet\`a ragionevoli per le operazioni tra cardinali, ad esempio:
 	\begin{itemize}
-		\item se $\forall i \in I \; \kappa_i \leq \lambda_i$: \textcolor{orange}{(compatibilità con l'ordinamento - versione infinita)}
+		\item se $\forall i \in I \; \kappa_i \leq \lambda_i$: \textcolor{orange}{(compatibilit\`a con l'ordinamento - versione infinita)}
 		\[ \sum_{i \in I} \kappa_i \leq \sum_{i \in I} \lambda_i \qquad \prod_{i \in I} \kappa_i \leq \prod_{i \in I} \lambda_i
 			\]
 		\item $\forall i \in I \; \kappa_i \leq \sum_{i \in I} \kappa_i$ \textcolor{orange}{(corollario di quella sopra)}
-		\item Se $I = I_1 \sqcup I_2$: \textcolor{orange}{(associatività infinita)}
+		\item Se $I = I_1 \sqcup I_2$: \textcolor{orange}{(associativit\`a infinita)}
 		\[ \sum_{i \in I} \kappa_i = \left(\sum_{i \in I_1} \kappa_i\right) + \left(\sum_{i \in I_2} \kappa_i\right) \qquad \prod_{i \in I}\kappa_i = \left(\prod_{i \in I_1} \kappa_i\right)\cdot\left(\prod_{i \in I_2} \kappa_i\right)
 			\]
-		\item \textcolor{orange}{(compatibilità tra le definizioni di operazioni cardinali)}:
+		\item \textcolor{orange}{(compatibilit\`a tra le definizioni di operazioni cardinali)}:
 		\[ \sum_{i \in \kappa} \lambda = \kappa \cdot \lambda \qquad \prod_{i \in \kappa} \lambda = \lambda^\kappa
 			\]
 		\item \textcolor{orange}{(prodotto di potenze)}:
@@ -133,17 +133,17 @@ perché gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di o
 \end{proposition}
 
 \begin{proof}
-	La seconda uguaglianza deriva dal fatto che le cardinalità sono tutte aleph, per cui vale la proprietà vista per il prodotto tra aleph. Per la prima dimostriamo le due disuguaglianze come segue [e concludiamo con Cantor-Bernstein].
+	La seconda uguaglianza deriva dal fatto che le cardinalit\`a sono tutte aleph, per cui vale la propriet\`a vista per il prodotto tra aleph. Per la prima dimostriamo le due disuguaglianze come segue [e concludiamo con Cantor-Bernstein].
 	\begin{itemize}
-		\item[$\boxed{\leq}$] Deriva facilmente dalle proprietà viste sopra:
+		\item[$\boxed{\leq}$] Deriva facilmente dalle propriet\`a viste sopra:
 		\[ \sum_{i \in I} \kappa_i \leq \sum_{i \in I} \sup_{i \in I}\kappa_i = |I| \cdot \sup_{i \in I} \kappa_i
 			\]
-		dove appunto, la prima disuguaglianza è esattamente la compatibilità della somma con l'ordinamento dei cardinali, mentre la seconda uguaglianza è la compatibilità tra le definizioni delle operazioni.
-		\item[$\boxed{\geq}$] Siccome $|I| \cdot \sup_{i \in I} \kappa_i$ è il massimo fra $|I|$ e $\sup_{i \in I} \kappa_i$ [lo abbiamo già visto all'inizio], basta verificare che la somma al LHS è maggiore di entrambi separatamente.
-		$\sum_{i \in I}\kappa_i \geq \sum_{i \in I} 1 = |I|$, dove la prima disuguaglianza è la compatibilità prodotto-ordinamento [applicata a cardinali $>0$ per ipotesi] e la seconda quella delle operazioni. L'altra disuguaglianza segue osservando che:
+		dove appunto, la prima disuguaglianza \`e esattamente la compatibilit\`a della somma con l'ordinamento dei cardinali, mentre la seconda uguaglianza \`e la compatibilit\`a tra le definizioni delle operazioni.
+		\item[$\boxed{\geq}$] Siccome $|I| \cdot \sup_{i \in I} \kappa_i$ \`e il massimo fra $|I|$ e $\sup_{i \in I} \kappa_i$ [lo abbiamo gi\`a visto all'inizio], basta verificare che la somma al LHS \`e maggiore di entrambi separatamente.
+		$\sum_{i \in I}\kappa_i \geq \sum_{i \in I} 1 = |I|$, dove la prima disuguaglianza \`e la compatibilit\`a prodotto-ordinamento [applicata a cardinali $>0$ per ipotesi] e la seconda quella delle operazioni. L'altra disuguaglianza segue osservando che:
 		\[ \forall j \in I \; \sum_{i \in I} \kappa_i \geq \kappa_j
 			\]
-		cioè tutta la famiglia è più piccola della somma, quindi deve esserlo anche il sup di tale famiglia.
+		cio\`e tutta la famiglia \`e pi\`u piccola della somma, quindi deve esserlo anche il sup di tale famiglia.
 	\end{itemize}
 \end{proof}
 
@@ -156,32 +156,32 @@ perché gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di o
 \end{proposition}
 
 \begin{proof}
-	Dimostriamo che non può valere il $\geq$. Siano:
+	Dimostriamo che non pu\`o valere il $\geq$. Siano:
 	\[ A := \bigcup\{\kappa_i \times \{i\} | i \in I\} \qquad B := \left\{f : I \rightarrow \sup_{i \in I} \lambda_i \m \forall i \in I \; f(i) \in \lambda_i\right\} 
 		\]
-	gli insiemi le cui cardinalità definiscono rispettivamente il prodotto della famiglia $\{\lambda_i\}_{i \in I}$ e la somma della famiglia $\{\kappa_i\}_{i \in I}$.
-	Data una qualunque funzione $f : A \rightarrow B$\footnote{Typo di Mamino.} dobbiamo dimostrare che non può essere surgettiva (ovvero $\neg |B| \geq |A|$, cioè non è vero che la somma è maggiore o uguale al prodotto).
+	gli insiemi le cui cardinalit\`a definiscono rispettivamente il prodotto della famiglia $\{\lambda_i\}_{i \in I}$ e la somma della famiglia $\{\kappa_i\}_{i \in I}$.
+	Data una qualunque funzione $f : A \rightarrow B$\footnote{Typo di Mamino.} dobbiamo dimostrare che non pu\`o essere surgettiva (ovvero $\neg |B| \geq |A|$, cio\`e non \`e vero che la somma \`e maggiore o uguale al prodotto).
 	Consideriamo la famiglia di funzioni tra i cardinali $\kappa_i$ e $\lambda_i$ definita via $f$ da:
 	\[ f_i : \kappa_i \to \lambda_i : \alpha \mapsto (\underbrace{f(\alpha,i)}_{\in B})(i) \in \lambda_i
 		\]
- 	siccome per ipotesi $\kappa_i < \lambda_i$ le funzioni $f_i$ non possono essere surgettive per ogni $i \in I$, e ciò si traduce nel fatto che, per ogni $i \in I$, $\lambda_i \setminus\Imm(f_i) \ne \emptyset$.\\
+ 	siccome per ipotesi $\kappa_i < \lambda_i$ le funzioni $f_i$ non possono essere surgettive per ogni $i \in I$, e ci\`o si traduce nel fatto che, per ogni $i \in I$, $\lambda_i \setminus\Imm(f_i) \ne \emptyset$.\\
 	Per quanto detto $\emptyset \not \in \{\lambda_i \setminus\Imm(f_i)\}_{i \in I}$, dunque possiamo usare AC per fissare fissare un elemento in ciascun insieme $\lambda_i \setminus\Imm(f_i)$, in particolare possiamo
 	scrivere una funzione che associa l'indice $i$ in $I$ al corrispettivo elemento fissato in $\lambda_i \setminus \Imm(f_i)$ come segue:
 	\[ g : I \rightarrow \sup_{i \in I} \lambda_i : i \mapsto g(i) \in \lambda_i \setminus \Imm(f_i)
 		\]
-	osserviamo che $g \in B$ in quanto $g(i) \in \lambda_i$ per ogni $i \in I$, inoltre vale che che $g \not \in \Imm(f)$. Se, per assurdo, $g \in \Imm(f)$, allora [ricordando che $f$ è definita sulle coppie di $A$]
-	abbiamo $g = f(\alpha,i)$, per qualche $(\alpha, i) \in A$, da cui [per estensionalità per funzioni]: 
+	osserviamo che $g \in B$ in quanto $g(i) \in \lambda_i$ per ogni $i \in I$, inoltre vale che che $g \not \in \Imm(f)$. Se, per assurdo, $g \in \Imm(f)$, allora [ricordando che $f$ \`e definita sulle coppie di $A$]
+	abbiamo $g = f(\alpha,i)$, per qualche $(\alpha, i) \in A$, da cui [per estensionalit\`a per funzioni]: 
 	\[ g(i) = f(\alpha,i)(i) \overset{\text{def. $f_i$}}{=} f_i(\alpha) \in \Imm(f_i) \; \lightning
 		\]
-	che è assurdo in quanto $g(i) \in \lambda_i \setminus \Imm(f_i)$ per definizione. Abbiamo quindi verificato che c'è sempre un elemento di $B$, $g \not \in \Imm(f)$, che rende falsa la surgettività di una qualunque funzione.
-	Poiché per AC le cardinalità sono totalmente ordinate, deve quindi valere necessariamente che all'inizio si ha $|A| < |B|$.
+	che \`e assurdo in quanto $g(i) \in \lambda_i \setminus \Imm(f_i)$ per definizione. Abbiamo quindi verificato che c'\`e sempre un elemento di $B$, $g \not \in \Imm(f)$, che rende falsa la surgettivit\`a di una qualunque funzione.
+	Poich\'e per AC le cardinalit\`a sono totalmente ordinate, deve quindi valere necessariamente che all'inizio si ha $|A| < |B|$.
 \end{proof}
 
 \begin{example}[Disuguaglianza di Cantor]
 	Osserviamo che applicando il teorema di König sui cardinali 1 e 2, sommati su una famiglia $\kappa$, si ottiene:
 	\[ \kappa = \sum_{i \in \kappa} 1 \;\textcolor{red}{<}\; \prod_{i \in \kappa} 2 = 2^\kappa
 		\]
-	(dove le uguaglianze laterali sono la compatibilità delle definizioni delle operazioni), ovvero proprio il \hyperref[cantor]{teorema di Cantor} dimostrato in precedenza, che ora diventa un caso particolare del teorema di König.
+	(dove le uguaglianze laterali sono la compatibilit\`a delle definizioni delle operazioni), ovvero proprio il \hyperref[cantor]{teorema di Cantor} dimostrato in precedenza, che ora diventa un caso particolare del teorema di König.
 \end{example}
 
 \begin{example}[$2^{\aleph_0} \ne \aleph_\omega$]
@@ -198,7 +198,7 @@ perché gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di o
 \end{exercise}
 
 \begin{soln}
-	Basta sfruttare che il prodotto di numerabili è numerabile, infatti:
+	Basta sfruttare che il prodotto di numerabili \`e numerabile, infatti:
 	\[ \aleph_{41}^{\aleph_0} \overset{\text{Hp.}}{=} (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0} \overset{\text{Hp.}}{=} \aleph_{41}
 		\]
 \end{soln}
@@ -208,13 +208,13 @@ perché gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di o
 \end{exercise}
 
 \begin{soln}
-	La soluzione più breve usa la formula di Hausdorff, che vederemo alla fine del capitolo (sarebbe $(\kappa^+)^{\lambda} = \kappa^{\lambda} \cdot \kappa^+$), per la quale:
+	La soluzione pi\`u breve usa la formula di Hausdorff, che vederemo alla fine del capitolo (sarebbe $(\kappa^+)^{\lambda} = \kappa^{\lambda} \cdot \kappa^+$), per la quale:
 	\[ \aleph_{42}^{\aleph_0} \overset{\text{Hausdorff}}{=} \aleph_{41}^{\aleph_0} \cdot \aleph_{42} \overset{\text{Hp.}}{=} (2^{\aleph_0})^{\aleph_0} \cdot \aleph_{42} = 2^{\aleph_0} \cdot \aleph_{42} \overset{\text{Hp.}}{=} \aleph_{41} \cdot \aleph_{42} = \aleph_{42}
 		\]
 \end{soln}
 
 \begin{exercise}[Pure peggio]
-	Se $2^{\aleph_0} = \aleph_{1}$\footnote{Che è l'\vocab{ipotesi del continuo} (\vocab{CH}).}, allora $\aleph_{n+1}^{\aleph_0} = \aleph_{n+1}$, per $n \in \omega$.
+	Se $2^{\aleph_0} = \aleph_{1}$\footnote{Che \`e l'\vocab{ipotesi del continuo} (\vocab{CH}).}, allora $\aleph_{n+1}^{\aleph_0} = \aleph_{n+1}$, per $n \in \omega$.
 \end{exercise}
 
 \begin{soln}
@@ -228,21 +228,21 @@ perché gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di o
 \end{soln}
 
 \pagebreak
-\subsection{Cofinalità}
+\subsection{Cofinalit\`a}
 
-\begin{definition}[Cofinalità - v.1]
-	Dato un cardinale infinito $\kappa$, la \vocab{cofinalità} di $\kappa$, $\cof(\kappa)$, è il minimo cardinale 
+\begin{definition}[Cofinalit\`a - v.1]
+	Dato un cardinale infinito $\kappa$, la \vocab{cofinalit\`a} di $\kappa$, $\cof(\kappa)$, \`e il minimo cardinale 
 	$\mu$ per cui esiste una famiglia $\{\lambda_i\}_{i \in \mu}$ di cardinali tali che:
 	\[ \forall i \in \mu \; \lambda_i < \kappa \qquad \text e \qquad \kappa = \sum_{i \in \mu} \lambda_i
 		\]
 \end{definition}
 
-\textcolor{MidnightBlue}{In altri termini, $\cof(\kappa)$ è il \textcolor{red}{minimo numero di parti} $<\kappa$ [ovvero proprio $\mu$] in cui può essere diviso un insieme di cardinalità $\kappa$.}
+\textcolor{MidnightBlue}{In altri termini, $\cof(\kappa)$ \`e il \textcolor{red}{minimo numero di parti} $<\kappa$ [ovvero proprio $\mu$] in cui pu\`o essere diviso un insieme di cardinalit\`a $\kappa$.}
 
-\begin{example}[Cofinalità v.1 di alcuni cardinali noti]
-	Vediamone alcuni esempi pratici di cofinalità v.1, tenendo conto che cerchiamo sempre il minimo numero di ``pezzi'' in cui dividere un cardinale, in modo tale che i ``pezzi'' abbiano cardinalità strettamente minore:
+\begin{example}[Cofinalit\`a v.1 di alcuni cardinali noti]
+	Vediamone alcuni esempi pratici di cofinalit\`a v.1, tenendo conto che cerchiamo sempre il minimo numero di ``pezzi'' in cui dividere un cardinale, in modo tale che i ``pezzi'' abbiano cardinalit\`a strettamente minore:
 	\begin{itemize}
-		\item $\cof(\aleph_0) = \aleph_0$, qualsiasi cosa più piccola sarebbe un cardinale finito, e dividere $\aleph_0$ in un numero finito di parti dà ancora parti di cardinalità $\aleph_0$, mentre usando $\aleph_0$ abbiamo tutti ``pezzettini'' finiti, la cui unione finita è finita, ma l'unione di $\aleph_0$ cardinali finiti dà proprio $\aleph_0$ per le proprietà viste:
+		\item $\cof(\aleph_0) = \aleph_0$, qualsiasi cosa pi\`u piccola sarebbe un cardinale finito, e dividere $\aleph_0$ in un numero finito di parti d\`a ancora parti di cardinalit\`a $\aleph_0$, mentre usando $\aleph_0$ abbiamo tutti ``pezzettini'' finiti, la cui unione finita \`e finita, ma l'unione di $\aleph_0$ cardinali finiti d\`a proprio $\aleph_0$ per le propriet\`a viste:
 		\[ \aleph_0 = \sum_{i < \aleph_0} 1 \leq \sum_{i < \aleph_0} n_i \leq \sum_{i < \aleph_0} \aleph_0 = \aleph_0 \cdot \aleph_0 = \aleph_0
 			\]
 		\item $\cof(\aleph_\omega) = \aleph_0$ in quanto:
@@ -254,60 +254,60 @@ perché gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di o
 		\item $\cof(\aleph_{42}) = \aleph_{42}$ in quanto:
 		\[ \aleph_{42} = \sum_{i \in I} \kappa_i \leq \sum_{i \in I} \aleph_{41} = \max\left(|I|,\aleph_{41}\right) \implies |I| = \aleph_{42}
 			\]
-		dove la prima uguaglianza è il fatto che stiamo supponendo di poter scrivere $\aleph_{42}$ come somma, la seconda disuguaglianza deriva dal fatto che stiamo supponendo (per avere la definizione di cofinalità v.1) che i cardinali che sommiamo siano strettamente più piccoli di $\aleph_{42}$, e, nel caso peggiore (perché gli $\aleph_{41}$ sono i pezzi di
+		dove la prima uguaglianza \`e il fatto che stiamo supponendo di poter scrivere $\aleph_{42}$ come somma, la seconda disuguaglianza deriva dal fatto che stiamo supponendo (per avere la definizione di cofinalit\`a v.1) che i cardinali che sommiamo siano strettamente pi\`u piccoli di $\aleph_{42}$, e, nel caso peggiore (perch\'e gli $\aleph_{41}$ sono i pezzi di
 		grandezza massima che possiamo prendere), troviamo calcolando la somma, che 
-		l'unica possibilità è che $|I| = \aleph_{42}$.
+		l'unica possibilit\`a \`e che $|I| = \aleph_{42}$.
 	\end{itemize}
 \end{example}
 
-\begin{definition}[Cofinalità - v.2]
-	Dato un insieme ordinato $(S,<)$\footnote{Questa definizione di cofinalità, al contrario della precedente è valida su qualsiasi insieme [parzialmente] ordinato, mentre la
-	precedente solo per i cardinali.}, diciamo che $A\subseteq S$ è \vocab{cofinale} in $S$ se $\forall x \in S \; \exists y \in A \; x \leq y$ \textcolor{MidnightBlue}{- ossia $A$ non 
-	ha maggioranti stretti in S}. La \vocab{cofinalità} di $(S,<)$ è la minima cardinalità di un sottoinsieme cofinale di $S$.
+\begin{definition}[Cofinalit\`a - v.2]
+	Dato un insieme ordinato $(S,<)$\footnote{Questa definizione di cofinalit\`a, al contrario della precedente \`e valida su qualsiasi insieme [parzialmente] ordinato, mentre la
+	precedente solo per i cardinali.}, diciamo che $A\subseteq S$ \`e \vocab{cofinale} in $S$ se $\forall x \in S \; \exists y \in A \; x \leq y$ \textcolor{MidnightBlue}{- ossia $A$ non 
+	ha maggioranti stretti in S}. La \vocab{cofinalit\`a} di $(S,<)$ \`e la minima cardinalit\`a di un sottoinsieme cofinale di $S$.
 \end{definition}
 
-\begin{example}[Cofinalità v.2 di alcuni cardinali noti]
+\begin{example}[Cofinalit\`a v.2 di alcuni cardinali noti]
 	Vediamone alcune secondo questa nuova definizione:
 	\begin{itemize}
-		\item $\cof(\omega) = \aleph_0$, $\omega$ è banalmente cofinale in se stesso, inoltre, qualsiasi altro sottoinsieme è finito, dunque ha un maggiorante stretto in $\omega$, pertanto $\omega$ è un\footnote{Va bene qualsiasi altro sottoinsieme infinito di $\omega$, tanto sono tutti $\aleph_0$.} sottoinsieme
-		cofinale di $\omega$, da cui considerando la cardinalità si ha $\aleph_0$.
-		\item $\cof(\RR,<) = \aleph_0$, infatti $\omega$ è cofinale in $\RR$, basta prendere per ogni $x \in \RR$ la parte intera superiore, $x \leq \lceil x \rceil \in \omega$, inoltre, per quanto visto con AC $\aleph_0$ è la più
-		piccola cardinalità infinita (stiamo escludendo con lo stesso ragionamento di sopra che vi siano insiemi cofinali finiti in $\RR$), quindi per la definizione v.2, la minima cardinalità cercata è proprio $\aleph_0$.
-		\item $\cof(]0,1],<_{|\RR}) = 1$, perché $\{1\}$ è un sottoinsieme cofinale di $]0,1]$ (non ha maggioranti stretti nel nostro intervallo), e la cofinalità non può essere 0 perché nell'intervallo ha maggioranti stretti.
-		\item $\cof(\omega+1) = 1$, infatti, il sottoinsieme $\{\omega\} \subset \omega + 1$ non ha maggioranti stretti, per cui è cofinale ed in particolare $|\{\omega\}| = 1$, dunque, non essendo il vuoto (o 0) cofinale in $\omega + 1$, segue necessariamente che $\{\omega\}$ è il più piccolo sottoinsieme cofinale.
-		\item $\cof(\omega_\omega) = \aleph_0$ perché $\{\omega_0,\omega_1,\omega_2,\ldots\} = \{\omega_\alpha | \alpha < \omega\}$ è un insieme cofinale in $\omega_\omega = \sup_{i \in \omega} \omega_\alpha$ [banalmente perché abbiamo preso tutti gli $\omega_\alpha$ prima di $\omega_\omega$, quindi non ci può essere fuori qualcosa di strettamente più grande], inoltre, la cardinalità di questo insieme è ovviamente $\aleph_0$,
-		ed è il più piccolo insieme cofinale, infatti, per qualsiasi sottoinsieme finito di $\omega_\omega$, è sufficiente prendere il successivo dell'$\omega_\alpha$ più grande.
+		\item $\cof(\omega) = \aleph_0$, $\omega$ \`e banalmente cofinale in se stesso, inoltre, qualsiasi altro sottoinsieme \`e finito, dunque ha un maggiorante stretto in $\omega$, pertanto $\omega$ \`e un\footnote{Va bene qualsiasi altro sottoinsieme infinito di $\omega$, tanto sono tutti $\aleph_0$.} sottoinsieme
+		cofinale di $\omega$, da cui considerando la cardinalit\`a si ha $\aleph_0$.
+		\item $\cof(\RR,<) = \aleph_0$, infatti $\omega$ \`e cofinale in $\RR$, basta prendere per ogni $x \in \RR$ la parte intera superiore, $x \leq \lceil x \rceil \in \omega$, inoltre, per quanto visto con AC $\aleph_0$ \`e la pi\`u
+		piccola cardinalit\`a infinita (stiamo escludendo con lo stesso ragionamento di sopra che vi siano insiemi cofinali finiti in $\RR$), quindi per la definizione v.2, la minima cardinalit\`a cercata \`e proprio $\aleph_0$.
+		\item $\cof(]0,1],<_{|\RR}) = 1$, perch\'e $\{1\}$ \`e un sottoinsieme cofinale di $]0,1]$ (non ha maggioranti stretti nel nostro intervallo), e la cofinalit\`a non pu\`o essere 0 perch\'e nell'intervallo ha maggioranti stretti.
+		\item $\cof(\omega+1) = 1$, infatti, il sottoinsieme $\{\omega\} \subset \omega + 1$ non ha maggioranti stretti, per cui \`e cofinale ed in particolare $|\{\omega\}| = 1$, dunque, non essendo il vuoto (o 0) cofinale in $\omega + 1$, segue necessariamente che $\{\omega\}$ \`e il pi\`u piccolo sottoinsieme cofinale.
+		\item $\cof(\omega_\omega) = \aleph_0$ perch\'e $\{\omega_0,\omega_1,\omega_2,\ldots\} = \{\omega_\alpha | \alpha < \omega\}$ \`e un insieme cofinale in $\omega_\omega = \sup_{i \in \omega} \omega_\alpha$ [banalmente perch\'e abbiamo preso tutti gli $\omega_\alpha$ prima di $\omega_\omega$, quindi non ci pu\`o essere fuori qualcosa di strettamente pi\`u grande], inoltre, la cardinalit\`a di questo insieme \`e ovviamente $\aleph_0$,
+		ed \`e il pi\`u piccolo insieme cofinale, infatti, per qualsiasi sottoinsieme finito di $\omega_\omega$, \`e sufficiente prendere il successivo dell'$\omega_\alpha$ pi\`u grande.
 		\item $\cof(\omega_{42}) = \aleph_{42}$ per la proposizione che segue.
 	\end{itemize}
 \end{example}
 
-\begin{proposition}[Equivalenza delle definizioni di cofinalità]
-	Dato $\kappa$ cardinale \textbf{infinito}\footnote{Nel caso $\kappa$ cardinale finito, non coincidono, ed anzi, la definizione v.1 dà sempre 2, mentre la v.2 dà sempre 1, perché ogni cardinale finito ha sempre un massimo.},
+\begin{proposition}[Equivalenza delle definizioni di cofinalit\`a]
+	Dato $\kappa$ cardinale \textbf{infinito}\footnote{Nel caso $\kappa$ cardinale finito, non coincidono, ed anzi, la definizione v.1 d\`a sempre 2, mentre la v.2 d\`a sempre 1, perch\'e ogni cardinale finito ha sempre un massimo.},
 	allora vale che $\cof^{\text{(v.1)}}(\kappa) = \cof^{\text{(v.2)}}(\kappa)$.
 \end{proposition}
 
 \begin{proof}
 	Siano $\lambda_1 := \cof^{\text{(v.1)}}(\kappa)$ e $\lambda_2 := \cof^{\text{(v.2)}}(\kappa)$, verifichiamo quindi le due disuguaglianze per avere la tesi.
 	\begin{itemize}
-		\item[$\boxed{\lambda_1 \leq \lambda_2}$] Sia $A$ un sottoinsieme cofinale in $\kappa$, mostriamo che $\lambda_1 \leq |A|$, cioè che $\lambda_1$ è più piccolo di tutte le cardinalità dei sottoinsiemi cofinali di $\kappa$ in questo modo sarà proprio minore o uguale del minimo, ovvero $\lambda_2$.\\
-		Osserviamo che (questo vale per tutti gli ordinali limite), essendo $\kappa$ un ordinale iniziale, dunque limite, $\forall \alpha \in \kappa \; \exists \beta \in A \; s(\alpha) \leq \beta$ (per cofinalità di $A$) e quindi $\alpha < \alpha + 1 \leq \beta$, dove $\alpha + 1 \in \kappa$ perché limite. Dunque ogni elemento di $\kappa$
-		appartiene a qualche elemento di $A$, per cui vale $\kappa = \bigcup A$\footnote{Per essere precisi questo è un solo contenimento, l'altro segue dal fatto che $A \subseteq \kappa$ e $\kappa$ è un insieme transitivo, quindi $\bigcup A \subseteq \kappa$.}. Da ciò segue che:
+		\item[$\boxed{\lambda_1 \leq \lambda_2}$] Sia $A$ un sottoinsieme cofinale in $\kappa$, mostriamo che $\lambda_1 \leq |A|$, cio\`e che $\lambda_1$ \`e pi\`u piccolo di tutte le cardinalit\`a dei sottoinsiemi cofinali di $\kappa$ in questo modo sar\`a proprio minore o uguale del minimo, ovvero $\lambda_2$.\\
+		Osserviamo che (questo vale per tutti gli ordinali limite), essendo $\kappa$ un ordinale iniziale, dunque limite, $\forall \alpha \in \kappa \; \exists \beta \in A \; s(\alpha) \leq \beta$ (per cofinalit\`a di $A$) e quindi $\alpha < \alpha + 1 \leq \beta$, dove $\alpha + 1 \in \kappa$ perch\'e limite. Dunque ogni elemento di $\kappa$
+		appartiene a qualche elemento di $A$, per cui vale $\kappa = \bigcup A$\footnote{Per essere precisi questo \`e un solo contenimento, l'altro segue dal fatto che $A \subseteq \kappa$ e $\kappa$ \`e un insieme transitivo, quindi $\bigcup A \subseteq \kappa$.}. Da ci\`o segue che:
 		\[ \kappa \leq \sum_{\beta \in A} |\beta| \leq \sum_{\beta \in A} \kappa = |A| \cdot \kappa = \kappa
 			\]
-		per cui il termine in mezzo è uguale a $\kappa$, ed essendo che $\forall \beta \in A \; \beta \in \kappa \to |\beta| < \kappa$ (poiché $\kappa$ iniziale), quella ottenuta sopra è proprio una scrittura di $\kappa$ come somma di termini strettamente più piccoli, per cui si ha $ \lambda_1 \leq |A|$.
-		\item[$\boxed{\lambda_2 \leq \lambda_1}$] Se $\lambda_1 = \kappa$ non c'è niente da dimostrare, perché $\kappa$ stesso è cofinale in sé, e quindi il minimo nella definizione v.2 comprende già $\kappa$ per cui la disuguaglianza è automaticamente verifica. Assumiamo quindi che $\lambda_1 < \kappa$, ci basta trovare un insieme cofinale in $\kappa$ di cardinalità $\lambda_1$, in questo modo sta nel minimo dell'altra definizione e otteniamo la disuguaglianza voluta.
-		Per ipotesi esiste $\{\kappa_i\}_{i \in I}$ con $|I| = \lambda_1$, tale che per la definizione di cofinalità v.1:
-		\[ \kappa = \sum_{i \in I} \kappa_i = \max\left(|I|,\sup_{i \in I} \kappa_i\right) = \max\left(\lambda_1, \sup_{i \in I} \kappa_i\right) \overset{\lambda_1 < \kappa}{=}\, \footnote{Se il max fosse $\lambda_1$, avremmo $\kappa = \lambda_1$, che è contro il fatto supposto poco sopra, ovvero $\lambda_1 < \kappa$, pertanto il max deve essere necessariamente il sup.} \sup_{i \in I} \kappa_i
+		per cui il termine in mezzo \`e uguale a $\kappa$, ed essendo che $\forall \beta \in A \; \beta \in \kappa \to |\beta| < \kappa$ (poich\'e $\kappa$ iniziale), quella ottenuta sopra \`e proprio una scrittura di $\kappa$ come somma di termini strettamente pi\`u piccoli, per cui si ha $ \lambda_1 \leq |A|$.
+		\item[$\boxed{\lambda_2 \leq \lambda_1}$] Se $\lambda_1 = \kappa$ non c'\`e niente da dimostrare, perch\'e $\kappa$ stesso \`e cofinale in s\'e, e quindi il minimo nella definizione v.2 comprende gi\`a $\kappa$ per cui la disuguaglianza \`e automaticamente verifica. Assumiamo quindi che $\lambda_1 < \kappa$, ci basta trovare un insieme cofinale in $\kappa$ di cardinalit\`a $\lambda_1$, in questo modo sta nel minimo dell'altra definizione e otteniamo la disuguaglianza voluta.
+		Per ipotesi esiste $\{\kappa_i\}_{i \in I}$ con $|I| = \lambda_1$, tale che per la definizione di cofinalit\`a v.1:
+		\[ \kappa = \sum_{i \in I} \kappa_i = \max\left(|I|,\sup_{i \in I} \kappa_i\right) = \max\left(\lambda_1, \sup_{i \in I} \kappa_i\right) \overset{\lambda_1 < \kappa}{=}\, \footnote{Se il max fosse $\lambda_1$, avremmo $\kappa = \lambda_1$, che \`e contro il fatto supposto poco sopra, ovvero $\lambda_1 < \kappa$, pertanto il max deve essere necessariamente il sup.} \sup_{i \in I} \kappa_i
 			\]
-		Osserviamo ora che $A := \{\kappa_i | i \in I\}$ è cofinale in $\kappa$ e da questo segue la tesi in quanto $\lambda_2 \overset{\text{def. cof$^{\text{(v.2)}}$}}{\leq} |A| \overset{i \twoheadrightarrow \kappa_i}{\leq} |I| = \lambda_1$.
-		Dato $x \in \kappa$, se $x$ non fosse maggiorato da qualche elemento di $A$, avremmo che $x$ è un maggiorante di $A$ stesso, per cui:
+		Osserviamo ora che $A := \{\kappa_i | i \in I\}$ \`e cofinale in $\kappa$ e da questo segue la tesi in quanto $\lambda_2 \overset{\text{def. cof$^{\text{(v.2)}}$}}{\leq} |A| \overset{i \twoheadrightarrow \kappa_i}{\leq} |I| = \lambda_1$.
+		Dato $x \in \kappa$, se $x$ non fosse maggiorato da qualche elemento di $A$, avremmo che $x$ \`e un maggiorante di $A$ stesso, per cui:
 		\[ \sup_{i \in I}\kappa_i \leq x < \kappa \; \lightning
 			\]
-		dove l'assurdo deriva dal fatto che sopra avevamo ottenuto che $\kappa = \sup_{i \in I}\kappa_i$. Alternativamente si può anche osservare che $x \in \kappa = \sup_{i \in I}\kappa_i = \bigcup_{i \in I}\kappa_i \left(= \bigcup A\right)$, ovvero $x \in \kappa_i$, per qualche $i \in I$, per cui $x < \kappa_i$, e dunque $A$ è cofinale in $\kappa$.
+		dove l'assurdo deriva dal fatto che sopra avevamo ottenuto che $\kappa = \sup_{i \in I}\kappa_i$. Alternativamente si pu\`o anche osservare che $x \in \kappa = \sup_{i \in I}\kappa_i = \bigcup_{i \in I}\kappa_i \left(= \bigcup A\right)$, ovvero $x \in \kappa_i$, per qualche $i \in I$, per cui $x < \kappa_i$, e dunque $A$ \`e cofinale in $\kappa$.
 	\end{itemize}
 \end{proof}
 
-\begin{proposition}[Transitività della cofinalità]
+\begin{proposition}[Transitivit\`a della cofinalit\`a]
 	Sia $(S,<_S)$ totalmente ordinato e $T \subseteq S$ cofinale in $S$, allora:
 	\[ \cof(S,<_S) = \cof(T,<_T)
 		\]
@@ -315,33 +315,33 @@ perché gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di o
 \end{proposition}
 
 \begin{proof}
-	Per dimostrare la proposizione dimostriamo due cose, in primis che se $A \subseteq T$ è cofinale in $T$, allora è cofinale anche in $S$, dunque i sottoinsiemi cofinali di $T$ sono contenuti in quelli di $S$, per cui, per definizione v.2, si ha $\cof(S,<_S) \leq \cof(T,<_T)$.
+	Per dimostrare la proposizione dimostriamo due cose, in primis che se $A \subseteq T$ \`e cofinale in $T$, allora \`e cofinale anche in $S$, dunque i sottoinsiemi cofinali di $T$ sono contenuti in quelli di $S$, per cui, per definizione v.2, si ha $\cof(S,<_S) \leq \cof(T,<_T)$.
 	\begin{itemize}
-		\item Dato $A \subseteq T$ cofinale in $T$, verifichiamo che è cofinale anche in $S$. Sia $x \in S$, dobbiamo trovare un $y \in A$ tale che $x \leq y$. Siccome $T$ è cofinale in $S$ per ipotesi, esiste $t \in T$ tale per cui $x \leq t$, e, siccome 
-		$A$ è cofinale in $T$, esiste $y \in A$ per il quale $t \leq y$, da cui $x \leq y$.
+		\item Dato $A \subseteq T$ cofinale in $T$, verifichiamo che \`e cofinale anche in $S$. Sia $x \in S$, dobbiamo trovare un $y \in A$ tale che $x \leq y$. Siccome $T$ \`e cofinale in $S$ per ipotesi, esiste $t \in T$ tale per cui $x \leq t$, e, siccome 
+		$A$ \`e cofinale in $T$, esiste $y \in A$ per il quale $t \leq y$, da cui $x \leq y$.
 	\end{itemize}
-	La seconda cosa che dimostriamo è che se $B \subseteq S$ è cofinale in $(S,<_S)$, allora esiste un sottoinsieme $B' \subseteq T$, con $|B'| \leq |B|$, cofinale in $T$, in tal modo per la definizione v.2, si ha $\cof(T,<_T) \leq \cof(S,<_S)$, e si conclude la tesi.
+	La seconda cosa che dimostriamo \`e che se $B \subseteq S$ \`e cofinale in $(S,<_S)$, allora esiste un sottoinsieme $B' \subseteq T$, con $|B'| \leq |B|$, cofinale in $T$, in tal modo per la definizione v.2, si ha $\cof(T,<_T) \leq \cof(S,<_S)$, e si conclude la tesi.
 	\begin{itemize}
-		\item Dato $B \subseteq S$ cofinale, siccome $T$ è cofinale in $S$, possiamo usare la cofinalità di quest'ultimo rispetto a $B$, e quindi per ogni $b \in B \subseteq S$ possiamo fissare (in generale con AC) un $y_b \in T$ con $b \leq y_b$. Sia $B' := \{y_b \in T : b \in B\} \subseteq T$.\\
-		Naturalmente la mappa $b \mapsto y_b$ è una funzione surgettiva da $B$ a $B'$, per cui abbiamo $|B'| \leq |B|$. Infine, non ci resta che osservare che $B'$ è cofinale in $T$, preso dunque $x \in T$, poiché $B$ è cofinale in $S$ esiste $b \in B \; b \geq x$,
-		possiamo quindi considerare l'$y_b \in B'$ associato e ottenere $y_b \geq b \geq x$, che ci garantisce la cofinalità.
+		\item Dato $B \subseteq S$ cofinale, siccome $T$ \`e cofinale in $S$, possiamo usare la cofinalit\`a di quest'ultimo rispetto a $B$, e quindi per ogni $b \in B \subseteq S$ possiamo fissare (in generale con AC) un $y_b \in T$ con $b \leq y_b$. Sia $B' := \{y_b \in T : b \in B\} \subseteq T$.\\
+		Naturalmente la mappa $b \mapsto y_b$ \`e una funzione surgettiva da $B$ a $B'$, per cui abbiamo $|B'| \leq |B|$. Infine, non ci resta che osservare che $B'$ \`e cofinale in $T$, preso dunque $x \in T$, poich\'e $B$ \`e cofinale in $S$ esiste $b \in B \; b \geq x$,
+		possiamo quindi considerare l'$y_b \in B'$ associato e ottenere $y_b \geq b \geq x$, che ci garantisce la cofinalit\`a.
 	\end{itemize}
 \end{proof}
 
 \begin{proposition}[I cardinali infiniti sono sempre cofinali in se stessi]
-	Sia $\kappa$ un cardinale infinito, allora vale che $\cof(\kappa) \leq \kappa$.\footnote{Usando la definizione v.2, questo fatto è vero per un qualsiasi ordinale parziale.}
+	Sia $\kappa$ un cardinale infinito, allora vale che $\cof(\kappa) \leq \kappa$.\footnote{Usando la definizione v.2, questo fatto \`e vero per un qualsiasi ordinale parziale.}
 \end{proposition}
 
 \begin{proof}
-	Infatti, $\kappa$ si può scrivere come:
+	Infatti, $\kappa$ si pu\`o scrivere come:
 	\[ \kappa = \sum_{i \in \kappa} 1
 		\]
-	che rispetta la definizione v.1 di cofinalità. Pertanto $\kappa$ è tra le cardinalità di cui si prende il minimo nella definizione, e, essendo un elemento
-	del minimo segue anche che necessariamente il minimo sara più piccolo, da cui $\cof(\kappa) \leq \kappa$.\\
-	Ragionamento analogo se si usa la definizione v.2 di cofinalità, infatti ogni insieme è cofinale in se stesso, per cui $\kappa$ è tra gli insiemi di cui si considera il minimo della cardinalità per avere la cofinalità secondo questa definizione.
+	che rispetta la definizione v.1 di cofinalit\`a. Pertanto $\kappa$ \`e tra le cardinalit\`a di cui si prende il minimo nella definizione, e, essendo un elemento
+	del minimo segue anche che necessariamente il minimo sara pi\`u piccolo, da cui $\cof(\kappa) \leq \kappa$.\\
+	Ragionamento analogo se si usa la definizione v.2 di cofinalit\`a, infatti ogni insieme \`e cofinale in se stesso, per cui $\kappa$ \`e tra gli insiemi di cui si considera il minimo della cardinalit\`a per avere la cofinalit\`a secondo questa definizione.
 \end{proof}
 
-\begin{remark}[La cofinalità è sempre un cardinale regolare]
+\begin{remark}[La cofinalit\`a \`e sempre un cardinale regolare]
 	Sia $(S,<)$ totalmente ordinato, allora:
 	\[ \cof(\cof(S,<)) = \cof(S,<)
 		\]
@@ -350,20 +350,20 @@ perché gli elementi di $\omega$ sono i loro stessi rappresentanti canonici di o
 
 \begin{proof}
 	Sia $\kappa = \cof(S,<)$ e $A \subseteq S$ cofinale, quindi $|A| = \kappa$, sappiamo che vale in generale $\cof(\kappa) \leq \kappa$. Supponiamo per assurdo che $\cof(\kappa) < \kappa$,
-	per definizione di cofinalità esistono $\{\kappa_i\}_{i \in I}$, $\forall i \in I \; \kappa_i < \kappa$ e $\cof(\kappa) = |I| < \kappa$, tali che:
+	per definizione di cofinalit\`a esistono $\{\kappa_i\}_{i \in I}$, $\forall i \in I \; \kappa_i < \kappa$ e $\cof(\kappa) = |I| < \kappa$, tali che:
 	\[ \kappa = \sum_{i \in I} \kappa_i = |I| \cdot \sup_{i \in I}\kappa_i = \sup_{i \in I}\kappa_i
 		\]
-	dunque che possiamo fissare una famiglia $\{A_i\}_{i \in I}$ di sottoinsiemi di $A$ disgiunti tali che $\forall i \in I \; |A_i| = \kappa_i$ e $\bigcup\{A_i | i \in I\} = A$ (è l'osservazione vista all'inizio per cui data una famiglia arbitraria di insiemi disgiunti, la cardinalità della loro unione è proprio la somma dei cardinali associati).\\
-	Osserviamo ora che ogni $i \in I$, $A_i$ \textcolor{red}{non è cofinale in $S$} siccome $|A_i| = \kappa_i < \kappa = \cof(S,<)$, quindi possiamo scegliere per tutti gli $A_i$ un maggiorante stretto $y_i \in S$.
+	dunque che possiamo fissare una famiglia $\{A_i\}_{i \in I}$ di sottoinsiemi di $A$ disgiunti tali che $\forall i \in I \; |A_i| = \kappa_i$ e $\bigcup\{A_i | i \in I\} = A$ (\`e l'osservazione vista all'inizio per cui data una famiglia arbitraria di insiemi disgiunti, la cardinalit\`a della loro unione \`e proprio la somma dei cardinali associati).\\
+	Osserviamo ora che ogni $i \in I$, $A_i$ \textcolor{red}{non \`e cofinale in $S$} siccome $|A_i| = \kappa_i < \kappa = \cof(S,<)$, quindi possiamo scegliere per tutti gli $A_i$ un maggiorante stretto $y_i \in S$.
 	Sia $B := \{y_i \in S | i \in I\} \subseteq A$\footnote{Typo di Mamino.}, vale che $|B| \overset{i \twoheadrightarrow y_i}{\leq} |I| \overset{\text{Hp. assurda}}{<} \kappa$.\\
-	D'altro canto $B$ è cofinale \textcolor{red}{in $S$}, infatti, preso $x \in S$, per la cofinalità di $A$,
-	$\exists a \in A$ tale che $x \leq a$, ora $a$ è necessariamente in uno degli $A_i$, quindi si ha $x \leq a \leq y_i \in B$.
-	Ma allora $B$ è cofinale in $(S,<)$ e ciò è assurdo perché $\cof(S,<) = \kappa$ e vale la disuguaglianza scritta sopra.
+	D'altro canto $B$ \`e cofinale \textcolor{red}{in $S$}, infatti, preso $x \in S$, per la cofinalit\`a di $A$,
+	$\exists a \in A$ tale che $x \leq a$, ora $a$ \`e necessariamente in uno degli $A_i$, quindi si ha $x \leq a \leq y_i \in B$.
+	Ma allora $B$ \`e cofinale in $(S,<)$ e ci\`o \`e assurdo perch\'e $\cof(S,<) = \kappa$ e vale la disuguaglianza scritta sopra.
 \end{proof}
 
-Vediamo ora alcune applicazioni della cofinalità.
+Vediamo ora alcune applicazioni della cofinalit\`a.
 
-\begin{corollary}[di König - o disuguaglianze di cofinalità]
+\begin{corollary}[di König - o disuguaglianze di cofinalit\`a]
 	Per $\kappa$ cardinale infinito, e $\lambda$ cardinale $\geq 2$ vale:
 	\[ \kappa < \kappa^{\cof(\kappa)} \qquad \kappa < \cof(\lambda^{\kappa})\,
 		\]
@@ -379,41 +379,41 @@ Vediamo ora alcune applicazioni della cofinalità.
 \end{proof}
 
 \begin{definition}[Funzione $\gimel$]
-	La funzione $\gimel$\footnote{\;``Gimel'', pronunciata ``ghimel''.} è definita sui cardinali infiniti da:
+	La funzione $\gimel$\footnote{\;``Gimel'', pronunciata ``ghimel''.} \`e definita sui cardinali infiniti da:
 	\[ \gimel(\kappa) = \kappa^{\cof(\kappa)}
 		\]
 \end{definition}
 
-\begin{corollary}[Disuguaglianze di cofinalità via $\gimel$]
-	Con la funzione $\gimel$, dato $\kappa$ cardinale infinito, abbiamo le disuguaglianze di cofinalità:
+\begin{corollary}[Disuguaglianze di cofinalit\`a via $\gimel$]
+	Con la funzione $\gimel$, dato $\kappa$ cardinale infinito, abbiamo le disuguaglianze di cofinalit\`a:
 	\[ \kappa < \gimel(\kappa) \qquad \cof(\kappa) < \cof(\gimel(\kappa))
 		\]
 \end{corollary}
 
 \begin{proof}
-	La prima disuguaglianza è una riscrittura di quella sopra, infatti $\kappa < \kappa^{\cof(\kappa)} = \gimel(\kappa)$. La seconda disuguaglianza è un corollario della seconda disuguaglianza sopra che
+	La prima disuguaglianza \`e una riscrittura di quella sopra, infatti $\kappa < \kappa^{\cof(\kappa)} = \gimel(\kappa)$. La seconda disuguaglianza \`e un corollario della seconda disuguaglianza sopra che
 	si ottiene prendendo $\lambda = \kappa$ ed usando $\cof(\kappa)$ al posto di $\kappa$.
 \end{proof}
 
-\begin{definition}[Proprietà dei cardinali]
-	Dato un cardinale $\kappa$, diciamo che è:
+\begin{definition}[Propriet\`a dei cardinali]
+	Dato un cardinale $\kappa$, diciamo che \`e:
 	\begin{itemize}
 		\item \vocab{regolare} se $\cof(\kappa) = \kappa$
 		\item \vocab{singolare} se $\cof(\kappa) < \kappa$
 		\item \vocab{successore} se $\kappa = \aleph_{\alpha + 1}$ per qualche $\alpha \in \Ord$
 		\item \vocab{limite} se $\kappa = \aleph_{\lambda}$ per $\lambda$ ordinale limite
 		\item \vocab{limite forte} se $\aleph_0 < \kappa$ e $\forall \alpha \in \Ord \; \aleph_\alpha < \kappa \rightarrow 2^{\aleph_\alpha} < \kappa$
-		\item \vocab{debolmente inaccessibile} se è regolare e limite
-		\item \vocab{(fortemente) inaccessibile} se è regolare e limite forte.
+		\item \vocab{debolmente inaccessibile} se \`e regolare e limite
+		\item \vocab{(fortemente) inaccessibile} se \`e regolare e limite forte.
 	\end{itemize}
 \end{definition}
 
 \begin{proposition}[Limite forte $\implies$ limite]
-	Un cardinale limite forte è anche limite.
+	Un cardinale limite forte \`e anche limite.
 \end{proposition}
 
 \begin{proof}
-	Se per assurdo fosse successore, $\kappa = \aleph_{\alpha + 1}$, poiché $\aleph_\alpha < \aleph_{\alpha + 1}$ avremmo per ipotesi di limite forte che $2^{\aleph_\alpha} < \aleph_{\alpha + 1}$, ma questo è assurdo in quanto $\aleph_{\alpha + 1} \leq 2^{\aleph_\alpha}$ poiché è per definizione il più piccolo cardinale strettamente maggiore di $\aleph_{\alpha}$.
+	Se per assurdo fosse successore, $\kappa = \aleph_{\alpha + 1}$, poich\'e $\aleph_\alpha < \aleph_{\alpha + 1}$ avremmo per ipotesi di limite forte che $2^{\aleph_\alpha} < \aleph_{\alpha + 1}$, ma questo \`e assurdo in quanto $\aleph_{\alpha + 1} \leq 2^{\aleph_\alpha}$ poich\'e \`e per definizione il pi\`u piccolo cardinale strettamente maggiore di $\aleph_{\alpha}$.
 \end{proof}
 
 \begin{proposition}[Successore $\implies$ regolare]
@@ -421,44 +421,44 @@ Vediamo ora alcune applicazioni della cofinalità.
 \end{proposition}
 
 \begin{proof}
-	Sia $\kappa = \aleph_{\alpha + 1}$, da sopra sappiamo che vale sempre $\cof(\kappa) \leq \kappa$, supponiamo per assurdo che $\kappa$ non sia regolare, cioè $\cof(\kappa) < \kappa$. Usando la definizione di cofinalità si ottiene:
+	Sia $\kappa = \aleph_{\alpha + 1}$, da sopra sappiamo che vale sempre $\cof(\kappa) \leq \kappa$, supponiamo per assurdo che $\kappa$ non sia regolare, cio\`e $\cof(\kappa) < \kappa$. Usando la definizione di cofinalit\`a si ottiene:
 	\[ \aleph_{\alpha + 1} = \kappa = \sum_{i \in \cof(\kappa)} \kappa_i \leq \sum_{i \in \cof(\kappa)} \aleph_\alpha = \cof(\kappa) \cdot \aleph_\alpha \leq \aleph_\alpha \;\textcolor{red}{<}\; \aleph_{\alpha + 1} \; \lightning
 		\]
-	dove nella penultima disuguaglianza abbiamo usato che $\cof(\kappa) < \kappa = \aleph_{\alpha + 1} \implies \cof(\kappa) \leq \aleph_\alpha$, poiché $\aleph_\alpha$ è il più grande cardinale strettamente più piccolo di $\aleph_{\alpha + 1}$.
+	dove nella penultima disuguaglianza abbiamo usato che $\cof(\kappa) < \kappa = \aleph_{\alpha + 1} \implies \cof(\kappa) \leq \aleph_\alpha$, poich\'e $\aleph_\alpha$ \`e il pi\`u grande cardinale strettamente pi\`u piccolo di $\aleph_{\alpha + 1}$.
 \end{proof}
 
 \begin{corollary}[$\gimel$ di cardinali regolari]
-	Se $\kappa$ è \textcolor{red}{successore}, allora $\gimel(\kappa) = 2^{\kappa}$.
+	Se $\kappa$ \`e \textcolor{red}{successore}, allora $\gimel(\kappa) = 2^{\kappa}$.
 \end{corollary}
 
 \begin{proof}
-	È ovvio che $\gimel(\kappa) = \kappa^{\cof(\kappa)} \overset{\text{$\kappa$ regolare}}{=} \kappa^\kappa = 2^{\kappa}$, dove l'ultima disuguaglianza come al solito vale perché:
+	\`E ovvio che $\gimel(\kappa) = \kappa^{\cof(\kappa)} \overset{\text{$\kappa$ regolare}}{=} \kappa^\kappa = 2^{\kappa}$, dove l'ultima disuguaglianza come al solito vale perch\'e:
 	\[ 2^{\kappa} \overset{\textcolor{purple}{2 \leq \kappa}}{\leq} \kappa^{\kappa} \overset{\textcolor{purple}{\kappa \leq 2^\kappa}}{\leq} (2^{\kappa})^{\kappa} = 2^{\kappa}
 		\]
 \end{proof}
 
-\begin{proposition}[Cofinalità dei cardinali limiti]
-	Se $\lambda$ è un cardinale limite, allora $\cof(\aleph_\lambda) = \cof(\lambda)$.
+\begin{proposition}[Cofinalit\`a dei cardinali limiti]
+	Se $\lambda$ \`e un cardinale limite, allora $\cof(\aleph_\lambda) = \cof(\lambda)$.
 \end{proposition}
 
 \begin{proof}
-	Osserviamo che $\{\aleph_\alpha : \alpha < \lambda\}$ è un sottoinsieme cofinale in $\aleph_\lambda$, infatti, dato $y \in \aleph_\lambda = \bigcup_{\alpha < \lambda} \aleph_\alpha$, si ha $y \in \aleph_\alpha$, per qualche $\alpha < \lambda$, dunque è sempre maggiorato da un elemento dell'insieme.
-	Inoltre, essendo la mappa $\alpha \mapsto \aleph_\alpha$ strettamente crescente e surgettiva si ha $\{\aleph_\alpha : \alpha < \lambda\} \sim \lambda$\footnote{Stiamo implicitamente usando che la cofinalità di insiemi totalmente ordinati isomorfi sia la stessa, questa proprietà è un'immediata conseguenza del fatto di star usando una mappa 
-	strettamente crescente tra gli insiemi, da cui si ottiene che se le cofinalità non fossero uguali si avrebbe un assurdo.}, dunque la cofinalità di questo insieme è proprio uguale a $\cof(\lambda)$, e si conclude ricordando che abbiamo visto che la cofinalità è transitiva per i sottoinsiemi cofinali, dunque $\cof(\aleph_\lambda) = \cof(\lambda)$.
+	Osserviamo che $\{\aleph_\alpha : \alpha < \lambda\}$ \`e un sottoinsieme cofinale in $\aleph_\lambda$, infatti, dato $y \in \aleph_\lambda = \bigcup_{\alpha < \lambda} \aleph_\alpha$, si ha $y \in \aleph_\alpha$, per qualche $\alpha < \lambda$, dunque \`e sempre maggiorato da un elemento dell'insieme.
+	Inoltre, essendo la mappa $\alpha \mapsto \aleph_\alpha$ strettamente crescente e surgettiva si ha $\{\aleph_\alpha : \alpha < \lambda\} \sim \lambda$\footnote{Stiamo implicitamente usando che la cofinalit\`a di insiemi totalmente ordinati isomorfi sia la stessa, questa propriet\`a \`e un'immediata conseguenza del fatto di star usando una mappa 
+	strettamente crescente tra gli insiemi, da cui si ottiene che se le cofinalit\`a non fossero uguali si avrebbe un assurdo.}, dunque la cofinalit\`a di questo insieme \`e proprio uguale a $\cof(\lambda)$, e si conclude ricordando che abbiamo visto che la cofinalit\`a \`e transitiva per i sottoinsiemi cofinali, dunque $\cof(\aleph_\lambda) = \cof(\lambda)$.
 \end{proof}
 \pagebreak
 \begin{note}[Esistenza di cardinali inaccessibili nella ZFC]
-	In generale, un cardinale \textcolor{red}{limite} potrebbe essere \textcolor{MidnightBlue}{singolare o regolare}. Tuttavia, benché sia facile esibire cardinali limiti singolari (abbiamo visto ad esempio $\aleph_\omega$), gli assiomi della ZFC non implicano l'esistenza [all'interno della teoria]
-	di un cardinale limite e regolare - che abbiamo detto si chiama appunto \textcolor{purple}{debolmente inaccessibile}. Insomma, non si può dimostrare che tutti i cardinali limiti sono singolari - e non c'è una buona ragione per assumere che lo siano (quindi non aggiungiamo un altro assioma) - ma sarebbe comunque coerente
+	In generale, un cardinale \textcolor{red}{limite} potrebbe essere \textcolor{MidnightBlue}{singolare o regolare}. Tuttavia, bench\'e sia facile esibire cardinali limiti singolari (abbiamo visto ad esempio $\aleph_\omega$), gli assiomi della ZFC non implicano l'esistenza [all'interno della teoria]
+	di un cardinale limite e regolare - che abbiamo detto si chiama appunto \textcolor{purple}{debolmente inaccessibile}. Insomma, non si pu\`o dimostrare che tutti i cardinali limiti sono singolari - e non c'\`e una buona ragione per assumere che lo siano (quindi non aggiungiamo un altro assioma) - ma sarebbe comunque coerente
 	con gli assiomi della teoria degli insiemi che tutti i cardinali limiti fossero singolari (quindi potremmo aggiungere questo assioma senza perdere la coerenza).
 \end{note}
 
 \begin{remark}[Cardinali limiti ed inaccessibili]
-	L'idea dietro ai cardinali debolmente limiti è che non possano essere ``raggiunti'' a partire da un altro cardinale ripetendo l'operazione di successore cardinale (proprio come accade per gli ordinali limite con l'operazione di successore ordinale).\\
-	I cardinali che sono limiti forti, oltre alla proprietà precedente, per definizione, non sono ottenibili ripetendo l'operazione di prendere le parti\footnote{Un esempio può essere $\beth_\omega$, che è un cardinale limite forte [singolare], che, da definizione (si veda negli esercizi in fondo), non è ottenibile prendendo le parti di un qualche $\beth_\alpha$, per $\alpha < \omega$.},
-	infatti vale appunto che se $\lambda$ è limite forte, preso $\kappa < \lambda$ si ha $2^\kappa < \lambda$, dunque prendere le parti di cardinali più piccoli non ci fa arrivare mai a $\kappa$.\\
-	I cardinali limiti e limiti forti possono essere ancora costruiti per unione (come ad esempio capita per i $\beth_\lambda$, con $\lambda$ limite), quindi avere un cardinale limite forte non è ancora sufficiente per avere qualcosa di inaccessibile, la nozione vera di inaccessibilità può essere definita solo tramite la cofinalità. Infatti,
-	per un cardinale $\kappa$ limite [forte] richiedere che sia regolare ci dice che tale cardinale \textcolor{purple}{non} può essere espresso come somma (unione) di meno di $\kappa$ cardinali minori di $\kappa$.
+	L'idea dietro ai cardinali debolmente limiti \`e che non possano essere ``raggiunti'' a partire da un altro cardinale ripetendo l'operazione di successore cardinale (proprio come accade per gli ordinali limite con l'operazione di successore ordinale).\\
+	I cardinali che sono limiti forti, oltre alla propriet\`a precedente, per definizione, non sono ottenibili ripetendo l'operazione di prendere le parti\footnote{Un esempio pu\`o essere $\beth_\omega$, che \`e un cardinale limite forte [singolare], che, da definizione (si veda negli esercizi in fondo), non \`e ottenibile prendendo le parti di un qualche $\beth_\alpha$, per $\alpha < \omega$.},
+	infatti vale appunto che se $\lambda$ \`e limite forte, preso $\kappa < \lambda$ si ha $2^\kappa < \lambda$, dunque prendere le parti di cardinali pi\`u piccoli non ci fa arrivare mai a $\kappa$.\\
+	I cardinali limiti e limiti forti possono essere ancora costruiti per unione (come ad esempio capita per i $\beth_\lambda$, con $\lambda$ limite), quindi avere un cardinale limite forte non \`e ancora sufficiente per avere qualcosa di inaccessibile, la nozione vera di inaccessibilit\`a pu\`o essere definita solo tramite la cofinalit\`a. Infatti,
+	per un cardinale $\kappa$ limite [forte] richiedere che sia regolare ci dice che tale cardinale \textcolor{purple}{non} pu\`o essere espresso come somma (unione) di meno di $\kappa$ cardinali minori di $\kappa$.
 \end{remark}
 
 \pagebreak
@@ -473,7 +473,7 @@ Vediamo ora alcune applicazioni della cofinalità.
 \begin{proof}
 	Dimostriamo le due disuguaglianze tra LHS e RHS.
 	\begin{itemize}
-		\item[$\boxed{\geq}$] Siccome $\kappa^{\lambda} \cdot \kappa^+ = \max(\kappa^{\lambda}, \kappa^+)$, è ovvio che $(\kappa^+)^\lambda$ è maggiore o uguale di entrambi i termini per debole monotonia dell'esponenziale. Alternativamente, sempre sfruttando la debole monotonia dell'esponenziale si ha:
+		\item[$\boxed{\geq}$] Siccome $\kappa^{\lambda} \cdot \kappa^+ = \max(\kappa^{\lambda}, \kappa^+)$, \`e ovvio che $(\kappa^+)^\lambda$ \`e maggiore o uguale di entrambi i termini per debole monotonia dell'esponenziale. Alternativamente, sempre sfruttando la debole monotonia dell'esponenziale si ha:
 		\[ \kappa^\lambda \cdot \kappa^+ \leq (\kappa^+)^{\lambda} \cdot \kappa^+ = (\kappa^+)^{\lambda + 1} \overset{\text{$\lambda$ infinito}}{=}(\kappa^+)^{\lambda}
 			\]
 		\item[$\boxed{\leq}$] Distinguiamo due casi:
@@ -481,12 +481,12 @@ Vediamo ora alcune applicazioni della cofinalità.
 			\item[$\bullet$]\textbf{\underline{se $\kappa < \lambda$}}: in questo caso si ha, per definizione, che $\kappa^+ \leq \lambda$, da cui:
 			\[ (\kappa^+)^\lambda \leq \lambda^\lambda = 2^{\lambda} \overset{\textcolor{purple}{\kappa < \lambda}}{=} \kappa^{\lambda} \leq \kappa^{\lambda}\cdot \kappa^+
 				\]
-			\item[$\bullet$]\textbf{\underline{se $\kappa \geq \lambda$}}: essendo $\kappa^+$ successore, è regolare, dunque $\cof(\kappa^+) = \kappa^+$, si osserva dunque che data $f \in (\kappa^+)^\lambda$ si ha:
+			\item[$\bullet$]\textbf{\underline{se $\kappa \geq \lambda$}}: essendo $\kappa^+$ successore, \`e regolare, dunque $\cof(\kappa^+) = \kappa^+$, si osserva dunque che data $f \in (\kappa^+)^\lambda$ si ha:
 			\[ |\Imm(f)| \leq \lambda \leq \kappa < \kappa^{+} \implies \text{$\Imm(f)$ non cofinale in $\kappa^+$}
 				\]
-			ovvero esiste un ordinale $\alpha \in \kappa^+$ tale che [è un maggiorante di tutta l'immagine] $\Imm(f) \subseteq \alpha$, per cui segue che $f \in \alpha^\lambda$. Quanto visto implica che $(\kappa^+)^\lambda \subseteq \bigcup_{\alpha < \kappa^+}(\alpha)^\lambda$, ed essendo che 
-			per ogni $\alpha \in \kappa^+$ è ovvio che $\alpha^{\lambda} \subseteq (\kappa^+)^\lambda$, si ha anche che $\bigcup_{\alpha < \kappa^+} \alpha^\lambda \subseteq (\kappa^+)^\lambda$.\\
-			A questo punto possiamo stimare la cardinalità di $(\kappa^+)^\lambda$ facendo uso della disuguaglianza di inclusione-esclusione come segue:
+			ovvero esiste un ordinale $\alpha \in \kappa^+$ tale che [\`e un maggiorante di tutta l'immagine] $\Imm(f) \subseteq \alpha$, per cui segue che $f \in \alpha^\lambda$. Quanto visto implica che $(\kappa^+)^\lambda \subseteq \bigcup_{\alpha < \kappa^+}(\alpha)^\lambda$, ed essendo che 
+			per ogni $\alpha \in \kappa^+$ \`e ovvio che $\alpha^{\lambda} \subseteq (\kappa^+)^\lambda$, si ha anche che $\bigcup_{\alpha < \kappa^+} \alpha^\lambda \subseteq (\kappa^+)^\lambda$.\\
+			A questo punto possiamo stimare la cardinalit\`a di $(\kappa^+)^\lambda$ facendo uso della disuguaglianza di inclusione-esclusione come segue:
 			\[ (\kappa^+)^\lambda = \left\lvert \bigcup_{\alpha < \kappa^+} \alpha^{\lambda}\right\rvert \leq \sum_{\alpha < \kappa^+} |\alpha^{\lambda}| = \sum_{\alpha < \kappa^+} |\alpha|^{\lambda} \leq \sum_{\alpha < \kappa^+} \kappa^{\lambda} = \kappa^{\lambda} \cdot \kappa^+
 				\]
 		\end{itemize}
@@ -505,7 +505,7 @@ Vediamo ora alcune applicazioni della cofinalità.
 \begin{remark}
 	[Disuguaglianza somma-prodotto]
 	Data una famiglia infinita di cardinali $\{\kappa_i\}_{i \in I}$ vale una disuguaglianza somma-prodotto\footnote{König normalmente ha come condizione iniziale una disuguaglianza
-	stretta che ne implica un'altra stretta, e quest'ultima a sua volta ne implica una larga, tuttavia, questo ragionamento non funziona se la disuguaglianza iniziale è larga perché non potremmo applicare König.}:
+	stretta che ne implica un'altra stretta, e quest'ultima a sua volta ne implica una larga, tuttavia, questo ragionamento non funziona se la disuguaglianza iniziale \`e larga perch\'e non potremmo applicare König.}:
 	\[ \sum_{i \in I} \kappa_i \leq \prod_{i \in I} \kappa_i
 		\]
 \end{remark}
@@ -514,16 +514,16 @@ Vediamo ora alcune applicazioni della cofinalità.
 	Ci basta trovare una funzione iniettiva:
 	\[  F : \bigcup_{i \in I} \kappa_i \times \{i\} \to \prod_{i \in I}\kappa_i = \left\{f : I \to \sup_{i \in I}\kappa_i \m \forall i \in I \; f(i) \in \kappa_i\right\}
 		\]
-	Osserviamo che essendo il prodotto fatto da cardinali infiniti, dunque aleph, vale che $\prod_{i \in I} \kappa_i = \prod_{i \in I} (\kappa_i + 1)$\footnote{Stiamo aggiungendo a tutti i cardinali $\{\spadesuit\}$ e fare il conto così non cambia, perché abbiamo visto che il prodotto è ben definito (cioè anche usando un insieme che non sia il cardinale stesso, purché abbia la stessa cardinalità, ciò che esce dal prodotto è in bigezione col risultato del prodotto fatto con i cardinali).}, con quest'ultimo che è dato dall'insieme:
+	Osserviamo che essendo il prodotto fatto da cardinali infiniti, dunque aleph, vale che $\prod_{i \in I} \kappa_i = \prod_{i \in I} (\kappa_i + 1)$\footnote{Stiamo aggiungendo a tutti i cardinali $\{\spadesuit\}$ e fare il conto cos\`i non cambia, perch\'e abbiamo visto che il prodotto \`e ben definito (cio\`e anche usando un insieme che non sia il cardinale stesso, purch\'e abbia la stessa cardinalit\`a, ci\`o che esce dal prodotto \`e in bigezione col risultato del prodotto fatto con i cardinali).}, con quest'ultimo che \`e dato dall'insieme:
 	\[ \left\{f : I \to \sup_{i \in I}(\kappa_i + 1) \m \forall i \in I \; f(i) \in \kappa_i \cup \{\spadesuit\}\right\}
 		\]
-	A questo punto la mappa più naturale possibile associa ogni coppia $(a_i,i)$ (con $a_i \in \kappa_i$) ad una funzione nell'insieme di arrivo che su $i$ fa $a_i$ e fa $\spadesuit$ altrove:
+	A questo punto la mappa pi\`u naturale possibile associa ogni coppia $(a_i,i)$ (con $a_i \in \kappa_i$) ad una funzione nell'insieme di arrivo che su $i$ fa $a_i$ e fa $\spadesuit$ altrove:
 	\[ F : \bigcup_{i \in I} \kappa_i \hookrightarrow \prod_{i \in I} (\kappa_i + 1) : (a_i,i) \mapsto \underbrace{f(x)}_{\in {}^I(\sup_{i \in I}(\kappa_i + 1))} = \begin{cases}
 		a_i &\text{se $x = i$} \\
 		\spadesuit &\text{se $x \ne i$}
 	\end{cases}
 		\]
-	ed è iniettiva appunto perché la coppia $(a_i,i)$ può essere pensata mappata nella $|I|$-upla (o funzione) $(\spadesuit,\ldots,\underbrace{a_i}_{i},\ldots,\spadesuit,\ldots)$, dunque è facile vedere che due funzioni uguali ci danno che le coppie in partenza sono esattamente uguali.
+	ed \`e iniettiva appunto perch\'e la coppia $(a_i,i)$ pu\`o essere pensata mappata nella $|I|$-upla (o funzione) $(\spadesuit,\ldots,\underbrace{a_i}_{i},\ldots,\spadesuit,\ldots)$, dunque \`e facile vedere che due funzioni uguali ci danno che le coppie in partenza sono esattamente uguali.
 \end{proof}
 
 \begin{exercise}[$\aleph_\omega^{\aleph_0}$]
@@ -536,12 +536,12 @@ Vediamo ora alcune applicazioni della cofinalità.
 		\item[$\boxed{\geq}$] Facile stima che deriva dalla monotonia del prodotto cardinale:
 		\[ \prod_{n \in \omega} \aleph_n \leq \prod_{n \in \omega} \aleph_\omega = \aleph_\omega^{\aleph_0}
 			\]
-		\item[$\boxed{\leq}$] Consideriamo $\Lambda = \bigsqcup \{\Lambda_k | k \in \omega\} \subseteq \omega$, con $\Lambda_k = \{p_k^{n+1} | n \in \omega\}$ (abbiamo escluso 1 da tutti gli insiemi per renderli [insiemi numerabili] disgiunti), dove $p_k$ è il $k$-esimo primo (ricordiamo che sono enumerabili da $\omega$).\\
+		\item[$\boxed{\leq}$] Consideriamo $\Lambda = \bigsqcup \{\Lambda_k | k \in \omega\} \subseteq \omega$, con $\Lambda_k = \{p_k^{n+1} | n \in \omega\}$ (abbiamo escluso 1 da tutti gli insiemi per renderli [insiemi numerabili] disgiunti), dove $p_k$ \`e il $k$-esimo primo (ricordiamo che sono enumerabili da $\omega$).\\
 		A questo punto abbiamo:
 		\begin{align*}
 			\prod_{n \in \omega} \aleph_n &\geq \prod_{n \in \Lambda} \aleph_n &&\text{($\Lambda \subseteq \omega$)} \\
 			&= \prod_{n \in \Lambda_1 \sqcup \ldots \sqcup \Lambda_k \sqcup \ldots} \aleph_n \\
-			&= \left(\prod_{n \in \Lambda_1}\aleph_n\right)\cdot\ldots\cdot\left(\prod_{n \in \Lambda_k}\aleph_n\right)\cdot\ldots &&\text{(associatività infinita)} \\
+			&= \left(\prod_{n \in \Lambda_1}\aleph_n\right)\cdot\ldots\cdot\left(\prod_{n \in \Lambda_k}\aleph_n\right)\cdot\ldots &&\text{(associativit\`a infinita)} \\
 			&=\prod_{k \in \omega}\prod_{n \in \Lambda_k}\aleph_n \\
 			&\geq \prod_{k \in \omega}\left(\sum_{n \in \Lambda_k}\aleph_n\right) &&\text{(disuguaglianza somma-prodotto)} \\
 			&= \prod_{k \in \omega}\left(|\aleph_0| \cdot \sup_{n \in \omega}\aleph_n\right) \\
@@ -551,11 +551,11 @@ Vediamo ora alcune applicazioni della cofinalità.
 \end{soln}
 
 \begin{remark}[Alternativa per la seconda disuguaglianza precedente]
-	Osserviamo che al posto di usare l'associatività infinita su un'unione disgiunta infinita di insiemi, nella seconda disuguaglianza precedente, avremmo anche potuto fissare una bigezione $f : \omega \times \omega \to \omega$
+	Osserviamo che al posto di usare l'associativit\`a infinita su un'unione disgiunta infinita di insiemi, nella seconda disuguaglianza precedente, avremmo anche potuto fissare una bigezione $f : \omega \times \omega \to \omega$
 	e riscrivere la produttoria come segue [cambiando di fatto solo il nome dell'insieme su cui la facciamo]:
 	\[ \prod_{n \in \omega} \aleph_n = \prod_{(a,b)\in \omega \times \omega} \aleph_{f(a,b)} = \prod_{a \in \omega} \prod_{b \in \omega} \aleph_{f(a,b)}
 		\]
-	(dove l'ultima uguaglianza è semplicemente una riscrittura dell'insieme), osserviamo ora che il prodotto è maggiore di tutti gli elementi di $\{\aleph_{f(a,b)} | b \in \omega\}$ dunque è maggiore o uguale del sup di tale insieme (per definizione):
+	(dove l'ultima uguaglianza \`e semplicemente una riscrittura dell'insieme), osserviamo ora che il prodotto \`e maggiore di tutti gli elementi di $\{\aleph_{f(a,b)} | b \in \omega\}$ dunque \`e maggiore o uguale del sup di tale insieme (per definizione):
 	\[ \prod_{b \in \omega} \aleph_{f(a,b)} \geq \sup\{\aleph_{f(a,b)} | b \in \omega\} = \aleph_\omega
 		\]
 	dove l'uguaglianza deriva dal fatto che l'insieme su cui stiamo facendo il sup coincide con $\{\aleph_n | n \in \omega\}$. Dunque possiamo stimare $\prod_{b \in \omega} \aleph_{f(a,b)} \geq \aleph_\omega$ e ottenere:
@@ -564,7 +564,7 @@ Vediamo ora alcune applicazioni della cofinalità.
 \end{remark}
 
 \begin{exercise}[$\aleph_n^{\aleph_1} = \aleph_0^{\aleph_1}\cdot \aleph_n$]
-	Dimostrare che per ogni $n \in \omega$ vale $\aleph_n^{\aleph_1} = \aleph_0^{\aleph_1}\cdot \aleph_n$.\footnote{Osservare che con la stessa identica dimostrazione vale di più: \textcolor{purple}{$\aleph_n^{\aleph_\alpha} = \aleph_0^{\aleph_\alpha} \cdot \aleph_n$}, per $\alpha \in \Ord$.}
+	Dimostrare che per ogni $n \in \omega$ vale $\aleph_n^{\aleph_1} = \aleph_0^{\aleph_1}\cdot \aleph_n$.\footnote{Osservare che con la stessa identica dimostrazione vale di pi\`u: \textcolor{purple}{$\aleph_n^{\aleph_\alpha} = \aleph_0^{\aleph_\alpha} \cdot \aleph_n$}, per $\alpha \in \Ord$.}
 \end{exercise}
 
 \begin{soln}
@@ -583,9 +583,9 @@ Vediamo ora alcune applicazioni della cofinalità.
 
 \begin{soln}
 	Osserviamo innanzitutto che $\gimel(\aleph_1) = \aleph_1^{\cof(\aleph_1)} = \aleph_1^{\aleph_1}$ (abbiamo appena visto che i cardinali successori sono regolari) e $\gimel(\aleph_\omega) = \aleph_{\omega}^{\cof(\aleph_{\omega})} = \aleph_{\omega}^{\cof(\omega,<)} = \aleph_\omega^{\aleph_0}$,
-	quindi il RHS è $\aleph_1^{\aleph_1} \cdot \aleph_\omega^{\aleph_0}$. Si tratta quindi di dimostrare come al solito due disuguaglianze.
+	quindi il RHS \`e $\aleph_1^{\aleph_1} \cdot \aleph_\omega^{\aleph_0}$. Si tratta quindi di dimostrare come al solito due disuguaglianze.
 	\begin{itemize}
-		\item[$\boxed{\geq}$] È una facile stima sfruttando la monotonia dell'esponenziale e le proprietà delle potenze:
+		\item[$\boxed{\geq}$] \`E una facile stima sfruttando la monotonia dell'esponenziale e le propriet\`a delle potenze:
 		\[ \aleph_1^{\aleph_1}\cdot \aleph_\omega^{\aleph_0} \leq \aleph_1^{\aleph_1}\cdot \aleph_\omega^{\aleph_1} = (\aleph_1 \cdot \aleph_\omega)^{\aleph_1} = \aleph_\omega^{\aleph_1}
 			\] 
 		\item[$\boxed{\leq}$] Per questa disuguaglianza sono necessari i due esercizi precedenti, infatti:
@@ -601,11 +601,11 @@ Vediamo ora alcune applicazioni della cofinalità.
 \end{soln}
 
 \begin{fact}[Esponenziazione di cardinali]
-	La funzione esponenziale $\kappa^\lambda$ è determinata ricorsivamente dalle funzioni $\cof$ e $\gimel$.
+	La funzione esponenziale $\kappa^\lambda$ \`e determinata ricorsivamente dalle funzioni $\cof$ e $\gimel$.
 \end{fact}
 
 Non dimostriamo questo fatto, dimostriamo tuttavia il seguente caso particolare, che basta ad illustrare le tecniche necessarie: la \vocab{funzione del continuo}
-$\kappa \mapsto 2^{\kappa}$ è determinata ricorsivamente dalla funzione $\gimel(\kappa)$.
+$\kappa \mapsto 2^{\kappa}$ \`e determinata ricorsivamente dalla funzione $\gimel(\kappa)$.
 
 \begin{definition}[Quasi esponenziazione di un cardinale limite]
 	Sia $\kappa$ un cardinale \textcolor{red}{limite}. Definiamo:
@@ -620,50 +620,50 @@ $\kappa \mapsto 2^{\kappa}$ è determinata ricorsivamente dalla funzione $\gimel
 \end{lemma}
 
 \begin{proof}
-	Per definizione di cofinalità sia $\{\kappa_i\}_{i \in \lambda}$, tale che $\kappa_i < \kappa$ per ogni $i \in \cof(\kappa)$, per cui $\kappa = \sum_{i \in \cof(\kappa)}\kappa_i$. Allora vale la segue catena di disuguaglianze:
+	Per definizione di cofinalit\`a sia $\{\kappa_i\}_{i \in \lambda}$, tale che $\kappa_i < \kappa$ per ogni $i \in \cof(\kappa)$, per cui $\kappa = \sum_{i \in \cof(\kappa)}\kappa_i$. Allora vale la segue catena di disuguaglianze:
 	\[  \textcolor{purple}{2^\kappa} = 2^{\sum_{i \in \cof(\kappa)}\kappa_i}
 									 = \prod_{i \in \cof(\kappa)} 2^{<\kappa}
 									 = \textcolor{MidnightBlue}{(2^{<\kappa})^{\cof(\kappa)}}
 									 \leq (2^\kappa)^{\cof(\kappa)} = \textcolor{purple}{2^\kappa}
 		\]
-	dove: la prima uguaglianza è la definizione di cofinalità, la seconda la proprietà del prodotto infinito di potenze (visto in un'osservazione ad inizio capitolo), la terza è una delle proprietà dei prodotti infiniti,
-	e la quarta è la monotonia debole dell'esponenziale, in quanto $2^{<\kappa} = \sup\{2^{\lambda}|\text{$\lambda$ cardinale e } \lambda < \kappa\} \leq 2^\kappa$.
+	dove: la prima uguaglianza \`e la definizione di cofinalit\`a, la seconda la propriet\`a del prodotto infinito di potenze (visto in un'osservazione ad inizio capitolo), la terza \`e una delle propriet\`a dei prodotti infiniti,
+	e la quarta \`e la monotonia debole dell'esponenziale, in quanto $2^{<\kappa} = \sup\{2^{\lambda}|\text{$\lambda$ cardinale e } \lambda < \kappa\} \leq 2^\kappa$.
 \end{proof}
 
 \begin{definition}[Funzione del continuo definitivamente costante sotto un cardinale]
-	Sia $\kappa$ un cardinale, diciamo che la funzione del continuo $\lambda \mapsto 2^\lambda$ è \vocab{definitivamente costante sotto $\kappa$} se esiste un cardinale $\mu < \kappa$ tale che [la funzione del
-	continuo è costante da lì in poi fino a $\kappa$ escluso] $\forall \nu$ cardinale $\mu \leq \nu < \kappa \rightarrow 2^\nu = 2^\mu$.
+	Sia $\kappa$ un cardinale, diciamo che la funzione del continuo $\lambda \mapsto 2^\lambda$ \`e \vocab{definitivamente costante sotto $\kappa$} se esiste un cardinale $\mu < \kappa$ tale che [la funzione del
+	continuo \`e costante da l\`i in poi fino a $\kappa$ escluso] $\forall \nu$ cardinale $\mu \leq \nu < \kappa \rightarrow 2^\nu = 2^\mu$.
 \end{definition}
 
 \begin{proposition}[Esponenziazione cardinale di 2]
-	La funzione del continuo $\kappa \mapsto 2^{\kappa}$ è determinata da $\gimel$ come segue:
+	La funzione del continuo $\kappa \mapsto 2^{\kappa}$ \`e determinata da $\gimel$ come segue:
 	\[ 2^{\kappa} = \begin{cases}
-		\gimel(\kappa) &\text{se $\kappa$ è successore} \\
-		2^{<\kappa} \cdot \gimel(\kappa) &\text{se $\lambda \mapsto 2^\lambda$ è definitivamente costante sotto $\kappa$} \\
-		\gimel(2^{<\kappa}) &\text{se $\lambda \mapsto 2^\lambda$ \textcolor{red}{non} è definitivamente costante sotto $\kappa$} \\
+		\gimel(\kappa) &\text{se $\kappa$ \`e successore} \\
+		2^{<\kappa} \cdot \gimel(\kappa) &\text{se $\lambda \mapsto 2^\lambda$ \`e definitivamente costante sotto $\kappa$} \\
+		\gimel(2^{<\kappa}) &\text{se $\lambda \mapsto 2^\lambda$ \textcolor{red}{non} \`e definitivamente costante sotto $\kappa$} \\
 	\end{cases}
 		\]
 \end{proposition}
 
 \begin{proof}
-	Abbiamo già visto il caso successore in precedenza. Supponiamo quindi che $\kappa$ sia un cardinale limite e vediamo prima i casi in cui 
-	la funzione del continuo è definitivamente costante e $\kappa$.
+	Abbiamo gi\`a visto il caso successore in precedenza. Supponiamo quindi che $\kappa$ sia un cardinale limite e vediamo prima i casi in cui 
+	la funzione del continuo \`e definitivamente costante e $\kappa$.
 	\begin{itemize}
-		\item \textcolor{purple}{Caso $\lambda \mapsto 2^\lambda$ è definitivamente costante sotto $\kappa$ e $\kappa$ regolare.}\\
+		\item \textcolor{purple}{Caso $\lambda \mapsto 2^\lambda$ \`e definitivamente costante sotto $\kappa$ e $\kappa$ regolare.}\\
 		Osserviamo che vale:
 		\[ 2^{<\kappa} \cdot \gimel(\kappa) \overset{\text{$\kappa$ regolare}}{=} 2^{<\kappa} \cdot \kappa^\kappa = 2^{<\kappa} \cdot 2^\kappa = 2^\kappa
 			\]
-		dove nell'ultima uguaglianza abbiamo usato che $2^{\kappa}$ è un maggiorante dell'insieme $\{2^{\lambda} | \;\text{$\lambda < \kappa$ e $\lambda$ cardinale}\}$, dunque è maggiore o uguale del sup, ovvero $2^{<\kappa}$.
-		\item \textcolor{purple}{Caso $\lambda \mapsto 2^\lambda$ è definitivamente costante sotto $\kappa$ e $\kappa$ singolare.}\\
-		In questo caso l'ipotesi che la funzione del continuo sia definitivamente costante sotto $\kappa$ ci dice che $\exists \mu < \kappa$ tale che per ogni cardinale $\mu \leq \nu < \kappa$, si ha $2^{\mu} = 2^{\nu}$, in particolare ciò significa che $2^{\mu} = 2^{<\kappa}$ (soddisfa esattamente la definizione di sup 
-		dell'insieme), e ciò ci dà:
+		dove nell'ultima uguaglianza abbiamo usato che $2^{\kappa}$ \`e un maggiorante dell'insieme $\{2^{\lambda} | \;\text{$\lambda < \kappa$ e $\lambda$ cardinale}\}$, dunque \`e maggiore o uguale del sup, ovvero $2^{<\kappa}$.
+		\item \textcolor{purple}{Caso $\lambda \mapsto 2^\lambda$ \`e definitivamente costante sotto $\kappa$ e $\kappa$ singolare.}\\
+		In questo caso l'ipotesi che la funzione del continuo sia definitivamente costante sotto $\kappa$ ci dice che $\exists \mu < \kappa$ tale che per ogni cardinale $\mu \leq \nu < \kappa$, si ha $2^{\mu} = 2^{\nu}$, in particolare ci\`o significa che $2^{\mu} = 2^{<\kappa}$ (soddisfa esattamente la definizione di sup 
+		dell'insieme), e ci\`o ci d\`a:
 		\[ \textcolor{orange}{2^\kappa} \overset{\text{lemma}}{=} (2^{<\kappa})^{\cof(\kappa)} = 2^{\overbrace{\mu \cdot \cof(\kappa)}^{\mu \leq \;< \kappa}} = 2^\mu = \textcolor{MidnightBlue}{2^{<\kappa}} 
 			\]
 		Per concludere osserviamo che in questo caso $\gimel(\kappa) = 2^{<\kappa}$:
 		\[ \textcolor{MidnightBlue}{\gimel(\kappa)} = {\kappa}^{\cof(\kappa)} \overset{\textcolor{red}{\cof(\kappa) < \kappa}}{\leq} \kappa^{\kappa} = 2^\kappa \overset{\text{sopra}}{=} \textcolor{MidnightBlue}{2^{<\kappa}}
 			\]
 	\end{itemize}
-	Vediamo ora il caso in cui la funzione del continuo non è definitivamente costante sotto $\kappa$.
+	Vediamo ora il caso in cui la funzione del continuo non \`e definitivamente costante sotto $\kappa$.
 	\begin{itemize}
 		\item \textcolor{purple}{Caso $\lambda \mapsto 2^\lambda$ non definitivamente costante sotto $\kappa$.}\\
 		Basta dimostrare che \textcolor{green}{$\cof(2^{<\kappa}) = \cof(\kappa)$}, e da questo segue immediatamente che:
@@ -671,12 +671,12 @@ $\kappa \mapsto 2^{\kappa}$ è determinata ricorsivamente dalla funzione $\gimel
 			\]
 		dunque non dobbiamo far altro che dimostrare l'assunto.
 		\begin{itemize}
-			\item[$\boxed{\cof(2^{<\kappa}) \leq \cof(\kappa)}$] Sia $A \subseteq \kappa$ cofinale in $\kappa$ e consideriamo $B:=\{2^{\alpha} | \alpha \in A\}\subseteq 2^{<\kappa}$, naturalmente si ha $|B| \overset{\alpha \twoheadrightarrow 2^{\alpha}}{\leq} |A|$, se verifichiamo che $B$ è cofinale in $2^{<\kappa}$, avremmo la disuguaglianza per la definizione v.2 di cofinalità.\\
-			Sia $x < 2^{<\kappa}$, allora, per definizione di sup, esiste $\gamma < \kappa$ tale che $x < 2^\gamma$, siccome $A$ è cofinale in $\kappa$, allora esiste $\beta \in A$ tale che $\beta \geq \gamma > x$, dunque per monotonia si ottiene $x < 2^\gamma \leq 2^\beta \in B$.
-			\item[$\boxed{\cof(\kappa) \leq \cof(2^{<\kappa})}$] Per definizione $\alpha < 2^{<\kappa}$ significa che esiste un cardinale $\beta < \kappa$, tale che $\alpha < 2^\beta$, indichiamo con $\beta_\alpha$ il minimo cardinale per cui ciò accade.
-			Sia ora $A \subseteq 2^{<\kappa}$ un sottoinsieme cofinale, definiamo $B:=\{\beta_\alpha : \alpha \in A\}$, naturalmente la mappa $\alpha \mapsto \beta_\alpha$ ci dà la disuguaglianza $|B| \leq |A|$, se dimostriamo quindi che $B$ è cofinale in $\kappa$ abbiamo concluso.\\
-			Sia $x < \kappa$, si ha $2^x \leq 2^\kappa$, non può valere che $2^x = 2^\kappa$, altrimenti la funzione del continuo sarebbe definitivamente costante sotto $\kappa$ (contro l'ipotesi), per cui esiste $x < y < \kappa$ tale che $2^x < 2^y < 2^\kappa$. Quanto detto ci assicura che $2^x < 2^\kappa$,
-			a questo punto, per la cofinalità di $A$, si ha $2^x \leq \alpha \in A$, da cui $2^x \leq \alpha < 2^{\beta_\alpha}$. Osserviamo infine che $x \leq \beta_\alpha$, infatti, se fosse $x > \beta_\alpha$, allora $2^x \geq 2^{\beta_\alpha}$, che è assurdo.
+			\item[$\boxed{\cof(2^{<\kappa}) \leq \cof(\kappa)}$] Sia $A \subseteq \kappa$ cofinale in $\kappa$ e consideriamo $B:=\{2^{\alpha} | \alpha \in A\}\subseteq 2^{<\kappa}$, naturalmente si ha $|B| \overset{\alpha \twoheadrightarrow 2^{\alpha}}{\leq} |A|$, se verifichiamo che $B$ \`e cofinale in $2^{<\kappa}$, avremmo la disuguaglianza per la definizione v.2 di cofinalit\`a.\\
+			Sia $x < 2^{<\kappa}$, allora, per definizione di sup, esiste $\gamma < \kappa$ tale che $x < 2^\gamma$, siccome $A$ \`e cofinale in $\kappa$, allora esiste $\beta \in A$ tale che $\beta \geq \gamma > x$, dunque per monotonia si ottiene $x < 2^\gamma \leq 2^\beta \in B$.
+			\item[$\boxed{\cof(\kappa) \leq \cof(2^{<\kappa})}$] Per definizione $\alpha < 2^{<\kappa}$ significa che esiste un cardinale $\beta < \kappa$, tale che $\alpha < 2^\beta$, indichiamo con $\beta_\alpha$ il minimo cardinale per cui ci\`o accade.
+			Sia ora $A \subseteq 2^{<\kappa}$ un sottoinsieme cofinale, definiamo $B:=\{\beta_\alpha : \alpha \in A\}$, naturalmente la mappa $\alpha \mapsto \beta_\alpha$ ci d\`a la disuguaglianza $|B| \leq |A|$, se dimostriamo quindi che $B$ \`e cofinale in $\kappa$ abbiamo concluso.\\
+			Sia $x < \kappa$, si ha $2^x \leq 2^\kappa$, non pu\`o valere che $2^x = 2^\kappa$, altrimenti la funzione del continuo sarebbe definitivamente costante sotto $\kappa$ (contro l'ipotesi), per cui esiste $x < y < \kappa$ tale che $2^x < 2^y < 2^\kappa$. Quanto detto ci assicura che $2^x < 2^\kappa$,
+			a questo punto, per la cofinalit\`a di $A$, si ha $2^x \leq \alpha \in A$, da cui $2^x \leq \alpha < 2^{\beta_\alpha}$. Osserviamo infine che $x \leq \beta_\alpha$, infatti, se fosse $x > \beta_\alpha$, allora $2^x \geq 2^{\beta_\alpha}$, che \`e assurdo.
 		\end{itemize}
 	\end{itemize}
 \end{proof}
