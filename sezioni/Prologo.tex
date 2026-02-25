@@ -7,15 +7,12 @@ Data una serie trigonometrica:
 \[ S(x) = c_0 + \sum_{i=1}^{+\infty}a_i\sin{(ix)}+b_i\cos{(ix)}
 	\]
 se, per ogni $x \in \RR$, sappiamo che $S(x)$ converge a~$0$, possiamo dire che i coefficienti $c_0,a_i,b_i$ sono tutti~$0$?
-
-{\drkgrn In altri termini, se sappiamo che una serie trigonometrica converge
+\end{problem}
+\comment{In altri termini, se sappiamo che una serie trigonometrica converge
 puntualmente a una certa funzione~$f$, i coefficienti della serie sono
 univocamente determinati da~$f$?}
-\end{problem}
 
-Risolto positivamente da
-\href{https://it.wikipedia.org/wiki/Georg_Cantor}{\textcolor{purple}{Georg
-Cantor}} nel 1870. Ottenuto questo risultato, Cantor nota che \`e possibile
+Risolto positivamente da Georg Cantor nel 1870. Ottenuto questo risultato, Cantor nota che \`e possibile
 indebolire l'ipotesi: pu\`o assumere la convergenza a~$0$ solo su un opportuno
 sottoinsieme di~$\RR$.
 
@@ -48,7 +45,7 @@ ogni funzione continua $f\colon\RR \to \RR$ che soddisfi le ipotesi seguenti
 	\item per ogni intervallo aperto $\left]a,b\right[$ con $]a,b[
 \,\cap\, X = \emptyset$, $f_{| \, ]a,b[}$ \`e lineare;
 	\item per ogni $x \in \RR$, se $f$ ha derivate destre e sinistre in $x$, allora queste coincidono
-{\drkgrn ``$f$ non ha punti angolosi''.}
+\comment{``$f$ non ha punti angolosi''.}
 \end{itemize}
 \end{fact}
 
@@ -118,11 +115,11 @@ che nei punti $a_0,a_1,a_2,\ldots$ essa ammette derivata destra e sinistra.
 Per ipotesi, quindi, questi punti non possono essere angolosi, per cui
 \[ {\drkred f_{-}'(a_0)} = {\drkgrn f_{+}'(a_0)}\, \phantom{=}\,
 {\drkred f_{-}'(a_1)} =
-{\drkgrn f_{+}(a_1)}
-\,\phantom{= f_{-}(a_2)}\,\;\;\dotsc \]
-D'altro canto, per la linearit\`a in $]a_0,a_1[$, $]a_1,a_2[$, $\ldots$
+{\drkgrn f_{+}'(a_1)}
+\,\phantom{= f_{-}'(a_2)}\,\;\;\dotsc \]
+D'altro canto, per la linearit\`a in $]a_0,a_1[$\/, $]a_1,a_2[$\/, $\ldots$
 \[ \phantom{f_{-}'(a_0) =}\, {\drkgrn f_{+}'(a_0)} = {\drkred f_{-}'(a_1)}\,
-\phantom{=}\, {\drkgrn f_{+}(a_1)} = {\drkred f_{-}(a_2)}
+\phantom{=}\, {\drkgrn f_{+}'(a_1)} = {\drkred f_{-}'(a_2)}
 \;\;\dotsc \]
 Quindi $f'$ \`e costante sulla semiretta~$x < l$, ossia $f$ \`e lineare
 in questa semiretta. Per ipotesi $f$ \`e lineare anche nella semiretta~$l<x$.
@@ -154,21 +151,21 @@ come nell'esempio precedente, per cui concludiamo che $f$ \`e lineare.
 \begin{definition}
 Un insieme $X$ \`e \vocab{numerabile} se \`e il supporto di una successione,
 $X = \{a_0,a_1,a_2,\ldots\} = \{a_i | i \in \NN\}$, con $a_i \ne a_j$ per
-ogni $i \ne j$. {\drkgrn In altre parole, $X$ \`e numerabile se esiste $f
+ogni $i \ne j$. \comment{In altre parole, $X$ \`e numerabile se esiste $f
 \colon \NN \to X$ biunivoca.}
 \end{definition}
 
 \begin{example}
 	\begin{tabular}{llll}
 I seguenti insiemi sono numerabili
-& {\drkgrn perch\'e li elenco cos\`i} & {\drkred cio\`e cos\`i}\\
+& \comment{perch\'e li elenco cos\`i} & {\drkred cio\`e cos\`i}\\
 \hline
-\hskip 7em $\NN$ & {\drkgrn $0,1,2,3\ldots$} & {\drkred $a_i = i$}\\
-\hskip 7em $\{\text{numeri dispari}\}$ & {\drkgrn $1,3,5,7\ldots$} & {\drkred $a_i = 2i +
+\hskip 7em $\NN$ & \comment{$0,1,2,3\ldots$} & {\drkred $a_i = i$}\\
+\hskip 7em $\{\text{numeri dispari}\}$ & \comment{$1,3,5,7\ldots$} & {\drkred $a_i = 2i +
 1$}\\
-\hskip 7em $\{\text{numeri primi}\}$ & {\drkgrn $2,3,5,7\ldots$} & {\drkred $a_i =
+\hskip 7em $\{\text{numeri primi}\}$ & \comment{$2,3,5,7\ldots$} & {\drkred $a_i =
 \text{boh?} \; p_i \, \text{?}$}\\
-\hskip 7em $\ZZ$ & {\drkgrn $0, -1, 1, -2, 2\ldots$} &  {\drkred $a_i =  (-1)^i
+\hskip 7em $\ZZ$ & \comment{$0, -1, 1, -2, 2\ldots$} &  {\drkred $a_i =  (-1)^i
 \left\lceil\frac{i}{2}\right\rceil$}
 	\end{tabular}
 \end{example}
@@ -193,10 +190,11 @@ Un sottoinsieme infinito di un insieme numerabile \`e, a sua volta, numerabile.
 Sia $Y \subseteq X$ con $Y$ infinito e $X = \{a_i | i \in \NN\}$. La
 sottosuccessione $b_j = a_{i_j}$ degli $a_*$ che appartengono a $Y$
 enumera $Y$.
-{\drkred A essere precisi 
+
+Questa dimostrazione \`e sufficiente, per\`o, a essere precisi,
 bisognerebbe dire esattamente chi sono gli indici $i_j$. Per ricorsione:
 \[ i_0 = \min\{i | a_i \in Y\} \qquad i_{j+1} = \min\{i > i_j | a_i \in Y\} \]
-dove i minimi esistono perch\'e $Y$ non \`e finito.}
+dove i minimi esistono perch\'e $Y$ non \`e finito.
 \end{proof}
 
 \begin{proposition}
@@ -243,9 +241,9 @@ Chiaramente $x$ non \`e nessuno degli $a_{i_j}$, perch\'e $a_{i_2k} < x < a_{i_{
 questo \`e assurdo perch\'e allora $x = a_n$ \`e compreso fra $a_{i_{j-1}}$ e $a_{i_j}$, per\`o $n < i_{j+1}$ contro la minimalit\`a di quest'ultimo.
 \end{proof}
 
-\begin{drkgrnexe}
+\begin{exercise}
 Hai notato che ho trascurato il caso $n < i_1$?
-\end{drkgrnexe}
+\end{exercise}
 
 \begin{exercise}
 Dimostra che l'insieme di Cantor $C$ non \`e numerabile.
@@ -278,9 +276,9 @@ soddisfa~($\star$).
 \end{remark}
 
 \begin{proof}
-Occorre dimostrare che {\drkred se} $f\colon \RR \to \RR$ \`e continua, lineare
+Occorre dimostrare che \hi{se} $f\colon \RR \to \RR$ \`e continua, lineare
 quando ristretta agli intervalli aperti che non intersecano $X$, e non ha
-punti angolosi, {\drkred allora} $f$ \`e lineare quando ristretta agli intervalli
+punti angolosi, \hi{allora} $f$ \`e lineare quando ristretta agli intervalli
 aperti che non intersecano $X'$.
 Fatto questo, usando l'ipotesi su~$X'$, deduciamo che $f$ \`e lineare -- abbiamo
 quindi mostrato che $X$ gode della propriet\`a~($\star$).
@@ -292,7 +290,7 @@ Siccome $]a,b[ \, \cap \, X' = \emptyset$, allora
 \[ ]a,b[ \,\cap\, X \subseteq
 \{\text{punti isolati di $X$}\} \]
 Quindi $[a+\varepsilon, b-\varepsilon] \cap
-X$ \`e finito, {\drkgrn se cos\`i non fosse, avrebbe un punto di accumulazione
+X$ \`e finito, \comment{se cos\`i non fosse, avrebbe un punto di accumulazione
 che, quindi, sarebbe un punto di accumulazione anche per~$X$, e non un punto
 isolato~$\lightning$} Per cui $f_{|[a+\varepsilon, b-\varepsilon]}$ \`e lineare
 a tratti, e, siccome per ipotesi non ha punti angolosi, \`e lineare.
@@ -406,7 +404,7 @@ Per smontare ogni possibile insieme chiuso e numerabile occorre un \textbf{nuovo
 Questa tecnica \`e stata sviluppata da Cantor, forse prendendo le mosse dal problema degli insiemi di unicit\`a, e sar\`a uno degli argomenti centrali del corso.
 
 \begin{exercise}[per la fine del corso]
-Dimostrare il teorema di \hyperref[CL]{Cantor-Lebesgue}.
+Dimostrare il teorema di \hyperref[CL]{Cantor-Lebesgue.}
 \end{exercise}
 
 \subsection{Giochi di parole}
@@ -419,7 +417,7 @@ tutti i numeri primi non \`e un numero primo. Per\`o ci sono anche collezioni ch
 	\]
 ossia la collezione delle collezioni che non sono membri di se stesse -- la
 $N$ sta per collezioni normali.\\
-{\drkred $N \in N$ oppure no?}\\
+\hi{$N \in N$ oppure no?}\\
 $N \in N$ se e solo se, per definizione, $N \not \in N\;\;\lightning$
 
 Il paradosso di Russell ci dice che, del \vocab{principio di collezione} -- ossia
@@ -442,13 +440,13 @@ dicano quali costruzioni sono lecite: quali insiemi esistono. Il ruolo della teo
 \subsection{Scopi del corso}
 Questo corso persegue due obiettivi:
 \begin{enumerate}[(1)]
-	\item Studiare i \textbf{fondamenti della matematica}, nella forma pi\`u comunemente accettata nel XX secolo e fino ad ora, la teoria degli insiemi di 
-	\href{https://it.wikipedia.org/wiki/Ernst_Zermelo}{\textcolor{purple}{Zermelo}}-\href{https://it.wikipedia.org/wiki/Adolf_Abraham_Halevi_Fraenkel}{\textcolor{purple}{Fraenkel}} con l'assioma della scelta (ZFC).
+	\item Studiare i \textbf{fondamenti della matematica}, nella forma pi\`u comunemente accettata nel XX secolo e fino ad ora, la teoria degli insiemi di
+	Zermelo--Fraenkel con l'assioma della scelta (ZFC).
 	\item Studiare tecniche e strumenti che sono stati sviluppati grazie alla teoria degli insiemi, per esempio: la teoria delle cardinalit\`a, la teoria dei numeri ordinali, l'induzione e la ricorsione transfinita.
 \end{enumerate}
 
 In questo corso non ci occupiamo dei modelli della teoria degli insiemi. Mi spiego. Per esempio, in teoria dei gruppi si assiomatizza cosa sia un gruppo, e poi si studia come possano essere fatti i diversi gruppi. In 
-teoria degli insiemi si assiomatizza l'universo di tutti gli insiemi, per\`o, per il teorema di incompletezza di \href{https://it.wikipedia.org/wiki/Kurt_G%C3%B6del}{\textcolor{purple}{Gödel}}, questa assiomatizzazione non 
+teoria degli insiemi si assiomatizza l'universo di tutti gli insiemi, per\`o, per il teorema di incompletezza di G\"odel, questa assiomatizzazione non 
 pu\`o essere completa. Quindi esistono tanti universi insiemistici,
 non diversamente da come ci sono tanti gruppi.
 Indagare le tecniche per costruire e manipolare queste strutture -- i modelli della teoria degli insiemi -- \`e argomento di corsi pi\`u avanzati.

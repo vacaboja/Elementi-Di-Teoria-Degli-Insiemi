@@ -13,7 +13,7 @@
 \usepackage{marvosym}
 \usepackage[svgnames,dvipsnames]{xcolor}
 \usepackage[colorlinks=true,pdfusetitle]{hyperref}
-\hypersetup{urlcolor=RubineRed,linkcolor=RoyalBlue,citecolor=ForestGreen,hypertexnames=false}
+\hypersetup{allcolors=blue!60!black!90!green,hypertexnames=false}
 \usepackage{thmtools}
 \usepackage[framemethod=TikZ]{mdframed}
 % https://tex.stackexchange.com/a/292090/76888
@@ -42,7 +42,6 @@
 \newcommand{\wt}{\widetilde}
 \newcommand{\wh}{\widehat}
 \newcommand{\eps}{\varepsilon}
-\newcommand{\vocab}[1]{\textbf{\prpl{#1}}}
 
 \newcommand{\CC}{\mathbb C}
 \newcommand{\FF}{\mathbb F}
@@ -82,13 +81,10 @@
 \mdfdefinestyle{mdbluebox}{
   roundcorner=10pt,
   linewidth=1pt,
-  skipabove=\baselineskip,
-  nobreak=true,
-  linecolor=blue,
-  backgroundcolor=TealBlue!5,
+  nobreak=true
 }
 \declaretheoremstyle[
-  headfont=\bfseries\color{MidnightBlue},
+  headfont=\bfseries,
   mdframed={style=mdbluebox},
   headpunct={\\[3pt]},
   postheadspace={0pt}
@@ -97,28 +93,24 @@
 \mdfdefinestyle{mdrosebox}{
   roundcorner=10pt,
   linewidth=1pt,
-  skipabove=\baselineskip,
   nobreak=true,
-  linecolor=red,
-  backgroundcolor=Mahogany!6,
+  linecolor=red!60!black!90!yellow,
+  backgroundcolor=red!60!black!90!yellow!5
 }
 \declaretheoremstyle[
-  headfont=\bfseries\color{BrickRed},
+  headfont=\bfseries\color{red!60!black!90!yellow},
   mdframed={style=mdrosebox},
   headpunct={\\[3pt]},
   postheadspace={0pt}
 ]{thmrosebox}
 
 \mdfdefinestyle{mdredbox}{
-  linewidth=0.5pt,
-  skipabove=\baselineskip,
+  linewidth=0.7pt,
   frametitlefont=\bfseries,
-  nobreak=true,
-  linecolor=RawSienna,
-  backgroundcolor=Salmon!60!yellow!5,
+  nobreak=true
 }
 \declaretheoremstyle[
-  headfont=\bfseries\color{RawSienna},
+  headfont=\bfseries,
   mdframed={style=mdredbox},
   headpunct={\\[3pt]},
   postheadspace={0pt},
@@ -126,32 +118,28 @@
 
 \mdfdefinestyle{mdgreenbox}{
   linewidth=2pt,
-  skipabove=\baselineskip,
   rightline=false,
   leftline=true,
   topline=false,
   bottomline=false,
   linecolor=ForestGreen,
-  backgroundcolor=ForestGreen!5,
+  backgroundcolor=green!40!black!5,
 }
 \declaretheoremstyle[
-  headfont=\bfseries\color{ForestGreen!70!black},
+  headfont=\bfseries\color{green!40!black!95},
   mdframed={style=mdgreenbox},
   headpunct={ --- },
 ]{thmgreenbox}
 
 \mdfdefinestyle{mdpurplebox}{
-  linewidth=2pt,
-  skipabove=\baselineskip,
-  rightline=false,
-  leftline=true,
-  topline=false,
-  bottomline=false,
-  linecolor=purple!70!black,
-  backgroundcolor=purple!5,
+  roundcorner=10pt,
+  linewidth=1pt,
+  nobreak=true,
+  linecolor=blue!60!black!90!green,
+  backgroundcolor=blue!60!black!90!green!5
 }  
 \declaretheoremstyle[
-  headfont=\bfseries\color{purple},
+  headfont=\bfseries\color{blue!60!black!90!green},
   mdframed={style=mdpurplebox},
   headpunct={ --- },
 ]{thmpurplebox}
@@ -170,25 +158,12 @@
   headpunct={ --- },
 ]{thmblackbox}
 
-\mdfdefinestyle{mddrkgrnbx}{
-  linewidth=2pt,
-  rightline=false,
-  leftline=true,
-  topline=false,
-  bottomline=false,
-  linecolor=green!40!black,
-}
-\declaretheoremstyle[
-  headfont=\color{green!40!black}\normalfont\bfseries,
-  bodyfont=\color{green!40!black}\normalfont,
-  mdframed={style=mddrkgrnbx},
-  headpunct={ --- },
-]{thmdrkgrnbx}
-
 \declaretheoremstyle[
   headfont=\normalfont\bfseries,
   bodyfont=\normalfont,
 ]{basehead}
+
+% box rounded
 
 \declaretheorem[style=thmbluebox,name=Teorema,numberwithin=section]{theorem}
 \declaretheorem[style=thmbluebox,name=Teorema,numbered=no]{theorem*}
@@ -203,6 +178,12 @@
 
 \declaretheorem[style=thmrosebox,name=Assioma]{axiom}
 
+\declaretheorem[style=thmpurplebox,name=Notazione,sibling=theorem]{notation}
+\declaretheorem[style=thmpurplebox,name=Definizione,sibling=theorem]{definition}
+\declaretheorem[style=thmpurplebox,name=Definizione,numbered=no]{definition*}
+
+% box sharp
+
 \declaretheorem[style=thmredbox,name=Esempio,sibling=theorem]{example}
 \declaretheorem[style=thmredbox,name=Esempio,numbered=no]{example*}
 \declaretheorem[style=thmredbox,name=Esempio buffo,sibling=theorem]{exampleb}
@@ -211,33 +192,30 @@
 \declaretheorem[style=thmredbox,name=NON Esempio,sibling=theorem]{notexample}
 \declaretheorem[style=thmredbox,name=NON Esempio buffo,sibling=theorem]{notexampleb}
 
+% left line background
+
 \declaretheorem[style=thmgreenbox,name=Osservazione,sibling=theorem]{remark}
 \declaretheorem[style=thmgreenbox,name=Osservazione,numbered=no]{remark*}
-\declaretheorem[style=thmgreenbox,name=Nota,sibling=theorem]{note}
+\declaretheorem[style=thmgreenbox,name=Nota,sibling=theorem,numbered=no]{note}
 
-\declaretheorem[style=thmpurplebox,name=Notazione,sibling=theorem]{notation}
-\declaretheorem[style=thmpurplebox,name=Definizione,sibling=theorem]{definition}
-\declaretheorem[style=thmpurplebox,name=Definizione,numbered=no]{definition*}
+% left line only
 
 \declaretheorem[style=thmblackbox,name=Esercizio,sibling=theorem]{exercise}
 \declaretheorem[style=thmblackbox,name=Esercizio,numbered=no]{exercise*}
-
-\declaretheorem[style=thmdrkgrnbx,name=Esercizio,sibling=theorem]{drkgrnexe}
-
-\declaretheorem[style=basehead,name=Problema,sibling=theorem]{problem}
-\declaretheorem[style=basehead,name=Problema,numbered=no]{problem*}
+\declaretheorem[style=thmblackbox,name=Problema,sibling=theorem]{problem}
+\declaretheorem[style=thmblackbox,name=Problema,numbered=no]{problem*}
 
 \newenvironment{soln}{\begin{proof}[Soluzione]}{\end{proof}}
 
 % Miscellaneous configuration
 
 \renewcommand*{\sectionformat}%
-  {\color{red!60!black}\S\thesection\enskip}
+  {\color{red!60!black!90!yellow}\S\thesection\enskip}
 \renewcommand*{\subsectionformat}%
-  {\color{red!60!black}\S\thesubsection\enskip}
+  {\color{red!60!black!90!yellow}\S\thesubsection\enskip}
 \renewcommand*{\subsubsectionformat}%
-  {\color{red!60!black}\S\thesubsubsection\enskip}
-\addtokomafont{paragraph}{\color{red!60!black}}
+  {\color{red!60!black!90!yellow}\S\thesubsubsection\enskip}
+\addtokomafont{paragraph}{\color{red!60!black!90!yellow}}
 \KOMAoptions{numbers=noenddot}
 
 \setkomafont{title}{\Huge\scshape}
@@ -279,8 +257,13 @@
 
 \def\drkgrn{\color{green!40!black!95}}
 \def\drkred{\color{red!60!black!90!yellow}}
+\def\brown{\color{RawSienna}}
 \def\drkblu{\color{blue!60!black!90!green}}
-\def\prpl{\color{violet}}
+\def\prpl{\color{purple}}
+
+\def\comment#1{{\drkgrn #1}}
+\def\vocab#1{\textbf{\drkblu{#1}}}
+\def\hi#1{{\drkred #1}}
 
 \def\above#1{\overset{\smash{\mathclap{\parbox{10cm}{\centering\normalsize\vbox to 0pt{\vss{#1}}}}}}}
 \def\below#1{\underset{\smash{\mathclap{\parbox{10cm}{\centering\normalsize\vbox to 0pt{{#1}\vss}}}}}}
