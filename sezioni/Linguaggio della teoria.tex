@@ -1,6 +1,6 @@
 \section{Il linguaggio della teoria degli insiemi}
-Per non incorrere in contraddizione, accettiamo che le sole proposizioni ad avere senso siano quelle esprimibili mediante \vocab{formule insiemistiche}. Le formule si costruiscono ricorsivamente.
-\def\explain#1{\above{\color{blue}``#1''\\$\downarrow$}}
+Per non incorrere in contraddizione, accettiamo che le sole proposizioni ad avere senso siano quelle esprimibili mediante \vocab{formule insiemistiche.} Le formule si costruiscono ricorsivamente.
+\def\explain#1{\above{\drkblu``#1''\\$\downarrow$}}
 \begin{itemize}
 	\item Le lettere $a,b,c,\ldots,A,B,C,\ldots,\alpha,\beta,\gamma,\ldots$ rappresentano \vocab{variabili}. I valori delle variabili sono sempre insiemi, e non ci sono altri oggetti salvo gli insiemi.
 	\item Le \vocab{formule atomiche} sono:
@@ -11,7 +11,7 @@ Per non incorrere in contraddizione, accettiamo che le sole proposizioni ad aver
 	\item Le formule atomiche si combinano tra loro mediante:
 	\begin{itemize}
 		\item \vocab{connettivi logici}
-		\[ \text{\color{blue}``non'' $\rightarrow$\ }\neg\text{formula} \qquad \text{formula}\explain{e}\land\text{formula} \qquad \text{formula}\explain{o}\lor\text{formula}
+		\[ \text{\drkblu``non'' $\rightarrow$\ }\neg\text{formula} \qquad \text{formula}\explain{e}\land\text{formula} \qquad \text{formula}\explain{o}\lor\text{formula}
 			\]
 		\vskip-2\baselineskip
 		{\drkgrn \begin{flalign*}
@@ -30,7 +30,7 @@ Per non incorrere in contraddizione, accettiamo che le sole proposizioni ad aver
 		\end{flalign*}}
 	\end{itemize}
 \end{itemize}
-\textbf{\underline{L'intuizione}} \`e che l'universo insiemistico sia un gigantesco \href{https://it.wikipedia.org/wiki/Digrafo_aciclico}{\textcolor{purple}{grafo diretto aciclico}} i cui vertici sono gli insiemi,
+\textbf{\underline{L'intuizione}} \`e che l'universo insiemistico sia un gigantesco \vocab{grafo diretto aciclico} i cui vertici sono gli insiemi,
 e in cui le frecce rappresentano la relazione di appartenenza.
 
 \begin{center}
@@ -82,19 +82,19 @@ leggibilit\`a.
 \def\hboxm#1#{\dohboxm{#1}}
 \textbf{\underline{Abbreviazioni}}
 Le formule appena descritte costituiscono il linguaggio della teoria degli
-insiemi {\drkred puro}. Durante il corso estenderemo
+insiemi {\drkred puro.} Durante il corso estenderemo
 pi\`u volte questo linguaggio mediante abbreviazioni, che semplicemente rimpiazzano formule pi\`u lunghe con scritture convenzionali pi\`u compatte, e quindi non alterano 
 la potenza espressiva del linguaggio. Vediamo le prime abbreviazioni:
 \def\pippo{\;\;\Mydef\;\;}
 \begin{align*}
-{\prpl {\prpl \Phi \rightarrow \Psi} }&\pippo \Psi \lor \neg \Phi  &{\prpl  \Phi \leftrightarrow \Psi }&\pippo (\Phi \rightarrow \Psi) \land (\Psi \rightarrow \Phi) \\
-{\prpl x \ne y }&\pippo \neg x = y  &{\prpl  x \not\in y }&\pippo \neg x \in y  \\
-{\prpl \exists {x \in y} \Phi }&\pippo \exists x (x \in y \land \Phi) & {\prpl \forall {x \in y} \Phi} &\pippo \forall x (x \in y \rightarrow \Phi) \\
-{\prpl \exists ! x \Phi(x) }&\pippo \mathrlap{\exists x (\Phi(x) \land \forall y(\Phi(y) \rightarrow y = x))} \\
-{\prpl \exists ! {x \in y} \Phi(x) }&\pippo \exists ! x (x \in y \land \Phi(x)) \\
-{\prpl A \subseteq B }&\pippo \forall {x \in A} x \in B &{\prpl  A \subsetneq B }&\pippo( A \subseteq B) \land (A \ne B) \\
-{\prpl C = A \cup B }&\pippo \mathrlap{\forall x \, x \in C \leftrightarrow (x \in A \lor x \in B)} \\
-{\prpl C = A \cap B }&\pippo \mathrlap{\forall x \, x \in C \leftrightarrow (x \in A \land x \in B)}
+{\drkblu {\drkblu \Phi \rightarrow \Psi} }&\pippo \Psi \lor \neg \Phi  &{\drkblu  \Phi \leftrightarrow \Psi }&\pippo (\Phi \rightarrow \Psi) \land (\Psi \rightarrow \Phi) \\
+{\drkblu x \ne y }&\pippo \neg x = y  &{\drkblu  x \not\in y }&\pippo \neg x \in y  \\
+{\drkblu \exists {x \in y} \Phi }&\pippo \exists x (x \in y \land \Phi) & {\drkblu \forall {x \in y} \Phi} &\pippo \forall x (x \in y \rightarrow \Phi) \\
+{\drkblu \exists ! x \Phi(x) }&\pippo \mathrlap{\exists x (\Phi(x) \land \forall y(\Phi(y) \rightarrow y = x))} \\
+{\drkblu \exists ! {x \in y} \Phi(x) }&\pippo \exists ! x (x \in y \land \Phi(x)) \\
+{\drkblu A \subseteq B }&\pippo \forall {x \in A} x \in B &{\drkblu  A \subsetneq B }&\pippo( A \subseteq B) \land (A \ne B) \\
+{\drkblu C = A \cup B }&\pippo \mathrlap{\forall x \, x \in C \leftrightarrow (x \in A \lor x \in B)} \\
+{\drkblu C = A \cap B }&\pippo \mathrlap{\forall x \, x \in C \leftrightarrow (x \in A \land x \in B)}
 \end{align*}
 \begin{note}
 	Il fatto che possiamo dire $C = A \cup B$ o $C = A \cap B$ non significa n\'e che questi oggetti esistano n\'e che siano unici. Dimostreremo fra poco l'esistenza e unicit\`a 
@@ -117,14 +117,14 @@ Esprimi queste proposizioni mediante formule insiemistiche \textbf{pure:}
 	\item gli elementi degli elementi di $A$ sono elementi di $A$
 	\item $B$ \`e l'insieme dei sottoinsiemi di $A$
 	\item unione degli elementi di $A$ \`e l'intersezione di quelli di $B$\\
-\textcolor{blue}{(qui assumi che unione e intersezione esistano e siano uniche)}
+{\drkgrn (qui assumi che unione e intersezione esistano e siano uniche)}
 	\item ogni insieme \`e disgiunto da uno dei suoi elementi
 \end{itemize}
 \end{exercise}
 
 \subsection{Le regole di inferenza}
 La teoria assiomatica degli insiemi si compone di tre parti: il linguaggio formale che abbiamo appena descritto, gli assiomi della teoria che studieremo durante il corso, 
-ed un sistema di regole formali che specificano precisamente quali passaggi siano leciti nelle dimostrazioni. Possiamo immaginare questa ultima componente come una specie di algebra dei ragionamenti,
+e un sistema di regole formali che specificano precisamente quali passaggi siano leciti nelle dimostrazioni. Possiamo immaginare questa ultima componente come una specie di algebra dei ragionamenti,
 che permette di verificare i passaggi di una dimostrazione in maniera puramente meccanica, come se fossero semplici manipolazioni algebriche. Noi non vedremo le regole di inferenza, e voglio spiegare qui il perch\'e.
 \begin{enumerate}[1]
 	\item Sono argomento del corso di logica.
@@ -153,9 +153,9 @@ procedimento per mezzo di una \vocab{tavola di verit\`a.}
 	V & V & F & F & F & V & F\\
 	V & F & F & V & V & F & V\\
 	F & V & V & F & V & F & V\\
-	F & F & V & V & \below{$\color{blue}\uparrow$}V &
-\below{\vskip\baselineskip\color{blue}Queste
-due colonne coincidono!}F & \below{$\color{blue}\uparrow$}V
+	F & F & V & V & \below{$\drkblu\uparrow$}V &
+\below{\vskip\baselineskip\drkblu Queste
+due colonne coincidono!}F & \below{$\drkblu\uparrow$}V
 	\end{tabular} 
 \end{center}
 \vskip2\baselineskip
@@ -167,12 +167,12 @@ mente:
 \land \Psi) \lor (\Phi \land \Theta)} & \\
 && {\drkgrn \Phi \lor (\Psi \land \Theta) \pippo (\Phi \lor \Psi) \land (\Phi \lor
 \Theta)} &\\
-& {\prpl
-\above{\scriptsize\href{https://it.wikipedia.org/wiki/Leggi_di_De_Morgan}{\prpl
+& {\drkred
+\above{\scriptsize\href{https://it.wikipedia.org/wiki/Leggi_di_De_Morgan}{\drkred
 ``leggi di De Morgan''}\\\vskip-4pt$\downarrow$}{\neg(\Phi \land \Psi)
 \pippo \neg \Phi \lor \neg \Psi}} & {\drkblu \Phi \rightarrow
 \neg \Psi \pippo \phantom{\neg} \Psi \rightarrow \neg \Phi} &\\
-& {\prpl \neg(\Phi \lor \Psi) \pippo \neg \Phi \land \neg \Psi}  &
+& {\drkred \neg(\Phi \lor \Psi) \pippo \neg \Phi \land \neg \Psi}  &
 {\drkblu \Phi \rightarrow
 \phantom{\neg} \Psi \pippo \neg \Psi \rightarrow \neg \Phi} &
 \end{align*}
@@ -185,6 +185,21 @@ Ricava, dalle definizioni dei connettivi, le tavole di verit\`a di $\Phi\,
 Dimostra le equivalenze precedenti.
 \end{exercise}
 
+\textbf{\underline{Struttura delle dimostrazioni}} Generalmente, una
+dimostrazione consiste in una sequenza di passaggi logici, in ciascuno dei
+quali si {\drkblu usano} una o pi\`u ipotesi, o proposizioni stabilite nei
+passaggi precedenti, per {\drkred dimostrare} una nuova proposizione. A
+ciascun costrutto logico -- connettivi, quantificatori, etc.\ -- sono
+legate prescrizioni specifiche su come quel costrutto pu\`o essere
+{\drkblu usato} e come pu\`o essere {\drkred dimostrato.} Qui non entriamo
+nei dettagli di queste regole, diamo per\`o alcuni esempi. Teniamo
+presente che, nella pratica, raramente si descrivono i singoli passaggi
+elementari di ogni ragionamento. Anzi, le dimostrazioni, se atomizzate in
+una nebbia di passaggi elementari, diventerebbero quasi incomprensibili.
+I corsi dei primi anni della laurea in matematica servono appunto per
+allenare gli studenti nell'arte di riconoscere i ragionamenti giusti --
+cio\`e quelli che sono riconducibili a passaggi elementari corretti.
+
 \textbf{\underline{Implicazioni}} Per {\drkred dimostrare} un'implicazione $\Phi
 \rightarrow \Psi$ spesso conviene assumere $\Phi$ e, a partire da questo
 assunto, cercare una dimostrazione di~$\Psi$. L'implicazione
@@ -194,7 +209,7 @@ $\Phi$ \`e vera.
 \textbf{\underline{Quantificatori}} {\drkred Dimostrare} una formula universale
 $\forall x \Phi(x)$ significa semplicemente dimostrare $\Phi(x)$ senza fare
 alcuna assunzione sul valore di~$x$: solitamente si dice che si dimostra
-$\Phi(x)$ per un x {\prpl arbitrario,} e si conclude che vale $\forall x
+$\Phi(x)$ per un x {\drkred arbitrario,} e si conclude che vale $\forall x
 \Phi(x)$ per l'arbirtariet\`a di~$x$. {\drkred Dimostrare} $\forall {x\in
 y}
 \Phi(x)$ significa dedurre $\Phi(x)$ dall'ipotesi~$x\in y$.
@@ -301,9 +316,17 @@ Vi sono regole per la relazione di uguaglianza, che dicono, in sostanza,
 che se $x = y$ allora $x$ e $y$ non sono distinguibili. Pi\`u precisamente
 valgono due cose: $x = x$; e $x = y \rightarrow (\Phi(x)
 \leftrightarrow \Phi(y))$ qualunque sia $\Phi$.
-Per quanto ci riguarda, \textbf{se $\mathbf{x = y}$ allora $\mathbf x$ e
-$\mathbf y$ sono nomi della stessa cosa}.
+Per quanto ci riguarda, {\drkred se $\mathbf{x = y}$ allora $\mathbf x$ e
+$\mathbf y$ sono nomi della stessa cosa.}
 
 \textbf{\underline{Dimostrazione per assurdo}}
 \`E un procedimento gi\`a implicito nelle osservazioni qua sopra, ma sarebbe
-assurdo non menzionarlo.
+assurdo non menzionarlo. In pratica, per dimostrare {\drkred $\Phi$}, si assume
+{\drkblu $\neg\Phi$}, e si ricava una contraddizione. Funziona perch\'e il
+ragionamento equivale a una dimostrazione di {\drkred $\neg\Phi\rightarrow
+\text{falso}$,} che equivale a
+{\drkred $\neg\text{falso} \rightarrow \neg\neg\Phi$,} che equivale a
+{\drkred $\text{vero}\rightarrow\Phi$,} che equivale a~{\drkred $\Phi$.}
+Come si vede, la regola della doppia negazione ($\neg\neg\Psi$
+equivale a~$\Psi$) \`e legata alla dimostrazione per assurdo: i
+construttivisti negano la validit\`a di ambedue i procedimenti.

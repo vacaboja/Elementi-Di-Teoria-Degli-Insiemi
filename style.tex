@@ -145,7 +145,8 @@
 \declaretheoremstyle[
   headfont=\bfseries\color{blue!60!black!90!green},
   mdframed={style=mdpurplebox},
-  headpunct={ --- },
+  headpunct={\\[3pt]},
+  postheadspace={0pt}
 ]{thmpurplebox}
 
 \mdfdefinestyle{mdblackbox}{
@@ -261,9 +262,8 @@
 
 \def\drkgrn{\color{green!40!black!95}}
 \def\drkred{\color{red!60!black!90!yellow}}
-\def\brown{\color{RawSienna}}
 \def\drkblu{\color{blue!60!black!90!green}}
-\def\prpl{\color{purple}}
+\let\prpl\drkred
 
 \def\comment#1{{\drkgrn #1}}
 \def\vocab#1{\textbf{\drkblu{#1}}}
