@@ -414,7 +414,7 @@ Combinando gli assiomi dell'unione e del paio possiamo definire $a \cup b$.
 \begin{definition}
 \ 
 \vskip-3\baselineskip
-	\[ a \cup b \;\;\Mydef\;\; \bigcup\{a,b\}
+	\[ {\drkblu a \cup b} \;\;\Mydef\;\; \bigcup\{a,b\}
 		\]
 \end{definition}
 
@@ -437,7 +437,7 @@ differenza delle unioni, non serve alcun nuovo assioma?}
 	Sia $C$ una {\drkred classe} non vuota. {\drkgrn Nota che, in particolare, $C$ pu\`o
 essere un insieme.}
 	L'{\drkred insieme} $B$ \`e l'\vocab{intersezione} di $C$ se:
-	\[ B = \bigcap C \;\;\Mydef\;\; \forall x (x \in B \leftrightarrow
+	\[ {\drkblu B = \bigcap C} \;\;\Mydef\;\; \forall x (x \in B \leftrightarrow
 \forall {y \in C} (x \in y))
 		\]
 \end{definition}
@@ -468,8 +468,8 @@ verificato che $x \in B \leftrightarrow \forall {y \in C} (x \in y)$, ossia $B =
 \begin{notation}
 \ 
 \vskip-3\baselineskip
-\begin{align*} a \cap b &\;\;\Mydef\;\; \bigcap\{a,b\}\\
-a\setminus b &\;\;\Mydef\;\; \{x \in a | x \not\in b\}
+\begin{align*} {\drkblu a \cap b} &\;\;\Mydef\;\; \bigcap\{a,b\}\\
+{\drkblu a\setminus b} &\;\;\Mydef\;\; \{x \in a | x \not\in b\}
 \end{align*}
 \end{notation}
 
@@ -490,13 +490,13 @@ a\setminus b &\;\;\Mydef\;\; \{x \in a | x \not\in b\}
 \ 
 \vskip-3\baselineskip
 \begin{alignat*}{2}
-\text{\drkred{commutativit\`a:}}&\quad&   a \cup b &= b \cup a\\
+\text{\drkblu{commutativit\`a:}}&\quad&   a \cup b &= b \cup a\\
 	&& a \cap b &= b \cap a \\
-\text{\drkred{associativit\`a:}}&&   a \cup (b \cup c) &= (a \cup b) \cup c \drkblu\Mydef a \cup b \cup c \\
+\text{\drkblu{associativit\`a:}}&&   a \cup (b \cup c) &= (a \cup b) \cup c \drkblu\Mydef a \cup b \cup c \\
 	&& a \cap (b \cap c) &= (a \cap b) \cap c \drkblu\Mydef a \cap b \cap c \\
-\text{\drkred{distributivit\`a:}}&&  a \cup (b \cap c) &= (a \cup b) \cap (a \cup c) \\
+\text{\drkblu{distributivit\`a:}}&&  a \cup (b \cap c) &= (a \cup b) \cap (a \cup c) \\
 	&& a \cap (b \cup c) &= (a \cap b) \cup (a \cap c) \\
-\text{\drkred{leggi di De Morgan:}}&&   a \setminus (b \cup c) &= (a \setminus b) \cap (a \setminus c) \\
+\text{\drkblu{leggi di De Morgan:}}&&   a \setminus (b \cup c) &= (a \setminus b) \cap (a \setminus c) \\
 	&& a \setminus (b \cap c) &= (a \setminus b) \cup (a \setminus c)
 \end{alignat*}
 \end{proposition}
@@ -572,7 +572,7 @@ A questo punto non vale neanche pi\`u la pena di fare l'esercizio.
 \begin{notation}
 \ 
 \vskip-3\baselineskip
-	\[ {\drkred B = \ps(A)} \;\;\Mydef\;\; \forall x \; x \in B \leftrightarrow x \subseteq A
+	\[ {\drkblu B = \ps(A)} \;\;\Mydef\;\; \forall x \; x \in B \leftrightarrow x \subseteq A
 		\]
 L'insieme $\ps(A)$ \`e detto \vocab{insieme delle parti} o \vocab{insieme
 potenza} di~$A$.
@@ -637,26 +637,26 @@ $\forall x_1,x_2\dotsc x_n\in Y$ al posto di $\forall x_1\in Y\;\forall x_2\in Y
 \begin{definition}
 	La relazione $\sim \,\subseteq A \times A$ \`e una \vocab{relazione di equivalenza} se \`e:
 \begin{alignat*}{2}
-&\text{\drkblu riflessiva:} && \;\;\forall x \in A \; x \sim x\\
-&\text{\drkblu simmetrica:} && \;\;\forall x,y \in A x\sim y \leftrightarrow y \sim x\\
-&\text{\drkblu transitiva:} && \;\;\forall x,y,z \in A \; (x \sim y \land y \sim z) \rightarrow x \sim z
+&\text{\drkblu riflessiva:} && \;\;\forall {x \in A} \; x \sim x\\
+&\text{\drkblu simmetrica:} && \;\;\forall {x,y \in A} \; x\sim y \leftrightarrow y \sim x\\
+&\text{\drkblu transitiva:} && \;\;\forall {x,y,z \in A} \; (x \sim y \land y \sim z) \rightarrow x \sim z
 \end{alignat*}
 \end{definition}
 
 \begin{definition}
 	La relazione $\leq \, \in A \times A$ \`e una \vocab{relazione di ordine largo} se \`e:
 \begin{alignat*}{2}
-&\text{\drkblu riflessiva:} && \;\;\forall x \in A \; x \leq x\\
-&\text{\drkblu antisimmetrica:} && \;\;\forall x,y \in A \; (x \leq y \land y \leq x) \rightarrow x = y\\
-&\text{\drkblu transitiva:} && \;\;\forall x,y,z \in A \; (x \leq y \land y \leq z) \rightarrow x \leq z
+&\text{\drkblu riflessiva:} && \;\;\forall {x \in A} \; x \leq x\\
+&\text{\drkblu antisimmetrica:} && \;\;\forall {x,y \in A} \; (x \leq y \land y \leq x) \rightarrow x = y\\
+&\text{\drkblu transitiva:} && \;\;\forall {x,y,z \in A} \; (x \leq y \land y \leq z) \rightarrow x \leq z
 \end{alignat*}
 \end{definition}
 
 \begin{definition}
 	La relazione $< \, \in A \times A$ \`e una \vocab{relazione di ordine stretto} se \`e:
 \begin{alignat*}{2}
-&\text{\drkblu irriflessiva:} && \;\;\forall x \in A \; \neg(x < x)\\
-&\text{\drkblu transitiva:} && \;\;\forall x,y,z \in A \; (x < y \land y < z) \rightarrow x < z
+&\text{\drkblu irriflessiva:} && \;\;\forall {x \in A} \; \neg(x < x)\\
+&\text{\drkblu transitiva:} && \;\;\forall {x,y,z \in A} \; (x < y \land y < z) \rightarrow x < z
 \end{alignat*}
 \end{definition}
 
@@ -719,7 +719,7 @@ avessimo paura di essere fraintesi.
 	Data una relazione $\rel \subseteq A \times B$, e dati $A'
 \subseteq A$, $B' \subseteq B$, possiamo definire la \vocab{restrizione}
 di $\rel$ ad $A'\times B'$:
-	\[ {\drkblu \rel_{|A' \times B'}} \Mydef \rel \cap (A' \times B')
+	\[ {\drkblu \rel_{|A' \times B'}} \;\;\Mydef\;\; \rel \cap (A' \times B')
 		\]
 \end{definition}
 
@@ -730,9 +730,9 @@ di $\rel$ ad $A'\times B'$:
 \begin{definition}
 	Data una relazione $\rel \subseteq A \times B$, definiamo:
 	\[  \begin{split}
-		\Dom(\rel) &\;\Mydef\; \{x \in A | \exists {y \in B} \;
+		\Dom(\rel) &\;\;\Mydef\;\; \{x \in A | \exists {y \in B} \;
 x\,\rel\, y\} \qquad \text{\vocab{dominio} di $\rel$} \\
-	    \Imm(\rel) &\;\Mydef\; \{y \in B | \exists {x \in A} \; x\,
+	    \Imm(\rel) &\;\;\Mydef\;\; \{y \in B | \exists {x \in A} \; x\,
 \rel\, y \} \qquad \text{\vocab{immagine} di $\rel$}
 	\end{split}
 			\]
