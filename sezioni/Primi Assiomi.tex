@@ -181,7 +181,7 @@ che soddisfano una certa formula come ad una specie di insieme: una
 intendiamo dire che useremo la scrittura $\drkblu x \in C$ come una semplice
 abbreviazione per la formula $\Phi(x)$. Si capisce che il glifo~$C$,
 qui, non ha un senso proprio: si tratta semplicemente di una parte del
-simbolo $\in C$ che \`e un tutt'uno inscindibile.
+simbolo ``$\in C$'' che \`e un tutt'uno inscindibile.
 Non avrebbe senso, per esempio, scrivere $\drkred C \in \text{qualcosa}.$ In altri
 termini, se scriviamo $x \in C$ in luogo di $\Phi(x)$, \`e solo come ausilio
 all'intuizione -- per comodit\`a insomma -- e sarebbe stato ugualmente
@@ -191,7 +191,17 @@ che~$\Phi(x)$. Per caso, il simbolo che abbiamo scelto, $\in C,$
 assomiglia graficamente a un simbolo di appartenenza applicato al
 glifo~$C$.
 
-%TODO: from here
+\begin{notation}
+Detta $C$ la classe degli insiemi~$x$ tali che vale~$\Phi(x)$, definiamo:
+\begin{align*}
+{\drkblu x \in C} &\;\;\Mydef\;\; \Phi(x) & {\drkblu \forall{x\in
+C}\dotsc} &\;\;\Mydef\;\; \forall x \,
+\Phi(x)\rightarrow\dotsc\\
+&& {\drkblu \exists{x\in C}\dotsc} &\;\;\Mydef\;\; \exists x \,
+x\in C \land \dotsc
+\end{align*}
+\end{notation}
+
 \begin{definition}
 La classe $V$ definita dalla formula
 \[ {\drkblu x \in V} \;\;\Mydef\;\; x = x \]
@@ -529,63 +539,74 @@ Ora possiamo costruire insiemi finiti elencandone gli elementi, come si fa di so
 	Dimostrare la proposizione precedente.
 \end{exercise}
 
-% PIPPO
-
 \subsection{Assioma delle parti e prodotto cartesiano}
-Abbiamo definito le coppie $(x,y)$, per\`o, per esempio, ancora nulla ci assicura che dati $A$ e $B$ esista:
-\[ A \times B = \{(x,y) | x \in A \land y \in B\}
-	\]
-Le funzioni $A \rightarrow B$ saranno poi sottoinsiemi di $A \times B$, e vorremo parlare dell'insieme ${}^{A}B$
-delle funzioni $A \rightarrow B$. Per tutto questo ci manca un solo ingrediente: l'insieme delle parti.
+Lo scopo della teoria che stiamo sviluppando \`e di permettere, mediante
+opporune codifiche, tutte le costruzioni della matematica ordinaria. Per
+esempio, abbiamo visto, la coppia di Kuratowski permette di codificare le
+coppie ordinate per mezzo di insiemi opportuni. Avendo a disposizione
+coppie ordinate, possiamo dire, per esempio, che un certo insieme \`e una
+funzione da~$A$ a~$B$. Per\`o ancora ci manca un modo per costruire
+l'insieme di \textit{tutte} le funzioni da~$A$ a~$B$. Lo otterremo
+sfruttando l'ingrediante di questa sezione: l'\vocab{insieme delle parti,}
+detto anche \vocab{insieme potenza.}
 
 \begin{axiom}
 	[Assioma delle parti]
 	\label{ax6}
-	Dato un insieme $A$ esiste l'insieme $\ps(A)$ i cui elementi sono i sottoinsiemi di $A$.
+	``Dato un insieme $A$ esiste un insieme $B$ i cui elementi sono i
+sottoinsiemi di $A$.''
 	\[ \forall A \; \exists B \; \forall x \; x \in B \leftrightarrow x \subseteq A 
 		\]
 \end{axiom}
 
 \begin{proposition}
-	[Unicit\`a delle parti]
-	Vale che:
-	\[\forall A \; \exists ! B \; \forall x \; x \in B \leftrightarrow x \subseteq A 
+\ 
+\vskip-3\baselineskip
+	\[\forall A \; \existrun B \; \forall x \; x \in B \leftrightarrow x \subseteq A 
 		\]
 \end{proposition}
-
 \begin{proof}
-	Segue come sempre per \hyperref[ax2]{estensionalit\`a}, in quanto, se avessimo $B_1$, $B_2$, allora:
-	\[ \forall x (x \in B_1 \leftrightarrow x \subseteq A) \qquad \text e \qquad \forall x(x \in B_2 \leftrightarrow x \subseteq A)
-		\]
-	quindi $\forall x((x \in B_1) \leftrightarrow (x \subseteq A) \leftrightarrow (x \in B_2)) \leftrightarrow \forall x (x \in B_1 \leftrightarrow x \in B_2) \leftrightarrow B_1 = B_2$.
+A questo punto non vale neanche pi\`u la pena di fare l'esercizio.
 \end{proof}
 
-\begin{notation}[Insieme delle parti - o insieme potenza]
-	Data l'unicit\`a possiamo porre:
-	\[ B = \ps(A) \Mydef \forall x \; x \in B \leftrightarrow x \subseteq A
+\begin{notation}
+\ 
+\vskip-3\baselineskip
+	\[ {\drkred B = \ps(A)} \;\;\Mydef\;\; \forall x \; x \in B \leftrightarrow x \subseteq A
 		\]
+L'insieme $\ps(A)$ \`e detto \vocab{insieme delle parti} o \vocab{insieme
+potenza} di~$A$.
 \end{notation}
 
-\begin{proposition}[Esistenza ed unicit\`a del prodotto cartesiano]
-	Dati $A$ e $B$  esiste ed \`e unico insieme $A \times B$ tale che:
-	\[ \forall z (z \in A \times B) \leftrightarrow \exists x \in A \, \exists y \in B \, z = (x,y)\footnote{Ossia, informalmente, $ z \in A \times B$ se e solo se si pu\`o scrivere come coppia ordinata di un elemento di $A$ ed uno di $B$.}
+\begin{proposition}
+	Dati $A$ e $B$  esiste un unico insieme \vocab{$A \times B$} tale che:
+	\[ \forall z (z \in A \times B) \;\;\leftrightarrow\;\; \exists {x
+\in A} \, \exists {y \in B} \, z = (x,y)
 		\]
+\drkgrn Ossia, informalmente
+\[ A\times B \;\;=\;\; \{\,(x,y)\,|\,x\in A \land y\in B\,\} \]
 \end{proposition}
 
 \begin{proof}
-	L'unicit\`a \`e conseguenza immediata della definizione e dell'\hyperref[ax2]{assioma di estensionalit\`a} (stessa dimostrazione di sempre). Per l'esistenza, definiamo per \hyperref[ax3]{separazione}:
-	\[ A \times B \Mydef \{z \in \ps(\ps(A \cup B)) | \exists x \in A \ \exists y \in B \ z = (x,y)\}
+	L'unicit\`a \`e conseguenza immediata della definizione e
+dell'\hyperref[ax2]{assioma di estensionalit\`a.} Per l'esistenza,
+definiamo per \hyperref[ax3]{separazione:}
+	\[ A \times B \;\;\Mydef\;\; \{\,z \in \ps(\ps(A \cup B))\, |\, \exists {x
+\in A} \exists {y \in B}  z = (x,y)\,\}
 		\]
-	cos\`i come scritto, siamo sicuri che \`e un insieme che contiene coppie ordinate di elementi di $A$ e $B$, tuttavia, affinch\'e tale insieme che abbiamo costruito nella teoria, rispetti la definizione data di prodotto cartesiano, dobbiamo anche dimostrare anche che ogni coppia $(x,y)$ con $x \in A$ e $y \in B$ appartiene a questo insieme.
-	Per fare ci\`o bisogna dimostrare che tutte queste coppie appartengono a $\ps(\ps(A \cup B))$:\footnote{Poniamo $a,b,\ldots \in z \Mydef a \in z \land b \in z \land \ldots$ e $a,b,\ldots \subseteq z \Mydef a \subseteq z \land b \subseteq z \land \ldots$}\,\footnote{Tutte le implicazioni si basano sul fatto che se un oggetto \`e sottoinsieme di un qualche insieme allora \`e un elemento del corrispondente insieme delle parti per definizione.}
-	\[\begin{split}
-		a \in A \land b \in B &\implies \{a\},\{a,b\} \subseteq A \cup B \\
-		& \implies \{a\},\{a,b\} \in \ps(A \cup B) \\
-		& \overset{\text{\hyperref[ax4]{paio}}}{\implies} (a,b) = \{\{a\},\{a,b\}\} \subseteq \ps(A \cup B)\\
-		& \implies (a,b) \in \ps(\ps(A \cup B))
-	\end{split}
-		\]
-	pertanto tutte le coppie ordinate di elementi di $A$ e $B$ appartengono a $A \times B$, che quindi rispetta proprio la definizione di prodotto cartesiano voluta.
+Dobbiamo dimostrare che ogni coppia $(x,y)$, con $x\in A$ e~$y\in B$,
+appartiene a questo insieme. Basta dimostrare che tutte queste coppie
+appartengono a~$\ps(\ps(A \cup B))$.
+\begin{alignat*}{2}
+		x \in A \land y \in B &\quad\implies\quad& \mathrlap{\{x\}\subseteq
+A\cup B}\phantom{\{x\} \in \ps(A\cup B)} &\;\;\land\;\; \{x,y\} \subseteq A \cup B \\
+		& \quad\implies\quad& \{x\} \in \ps(A\cup B)
+&\;\;\land\;\; \{x,y\} \in \ps(A \cup B) \\
+		& \quad\implies\quad& (x,y) = \{\{x\},\,&\{x,y\}\} \subseteq \ps(A \cup B)\\
+		& \quad\implies\quad& &\phantom{\{x,y\}\}}\mathllap{(x,y)}
+\in \ps(\ps(A \cup B))
+\end{alignat*}
+\vskip-\baselineskip\qedhere
 \end{proof}
 
 \begin{note}
@@ -595,46 +616,48 @@ delle funzioni $A \rightarrow B$. Per tutto questo ci manca un solo ingrediente:
 \subsection{Relazioni di equivalenza e di ordine, funzioni}
 Ora rivedremo alcuni concetti ben noti dai primi corsi del primo anno (\emph{o dalla scuola superiore?}). Lo facciamo molto rapidamente, essenzialmente per completezza, e per fissare le notazioni.
 
-\begin{definition}[Relazione binaria]
-	Si dice \vocab{relazione binaria} fra $A$ e $B$ un sottoinsieme di $A \times B$.
+\begin{definition}
+Una \vocab{relazione binaria} fra $A$ e $B$ \`e un sottoinsieme di $A \times B$.
 \end{definition}
 
-\begin{notation}[Relazione binaria]
-	Data una relazione $\rel \subseteq A \times B$, definiamo l'abbreviazione:
-	\[ a \rel b \Mydef (a,b) \in \rel
+\begin{notation}
+	Data una relazione binaria $\rel \subseteq A \times B$, definiamo l'abbreviazione:
+	\[ {\drkblu a\,\rel\,b} \;\;\Mydef\;\; (a,b) \in \rel
 		\]
+{\drkgrn Per esempio scriviamo $a < b$ per indicare che $(a,b) \in\, <$.}
 \end{notation}
 
-\begin{example}
-	Per esempio scriviamo $a < b$ per indicare che $(a,b) \in\, <$.
-\end{example}
-
-Considerando il caso di $A \times A$ possiamo definire le seguenti relazioni.
+\begin{notation}
+Per brevit\`a scriveremo $\forall x_1,x_2\dotsc x_n$ al posto di $\forall x_1
+\forall x_2 \dotsc \forall x_n$, e similmente con~$\oldexists$. Scriveremo
+$\forall x_1,x_2\dotsc x_n\in Y$ al posto di $\forall x_1\in Y\;\forall x_2\in Y
+\;\dotsc \forall x_n\in Y$, e similmente con~$\oldexists\dotsc\in Y$.
+\end{notation}
 
 \begin{definition}
-	Una relazione $\sim \,\subseteq A \times A$ \`e una \vocab{relazione di equivalenza} se \`e:
-	\begin{enumerate}[(i)]
-		\item \textbf{\underline{riflessiva}}: $\forall x \in A \; x \sim x$.
-		\item \textbf{\underline{simmetrica}}: $\forall x,y \in A\footnote{$\forall x_1,\ldots,x_n \Mydef \forall x_1 \ldots \forall x_n$, e lo stesso con $\exists$ e con i quantificatori limitati.} x \sim y \leftrightarrow y \sim x$.
-		\item \textbf{\underline{transitiva}}: $\forall x,y,z \in A \; (x \sim y \land y \sim z) \rightarrow x \sim z$.
-	\end{enumerate}
+	La relazione $\sim \,\subseteq A \times A$ \`e una \vocab{relazione di equivalenza} se \`e:
+\begin{alignat*}{2}
+&\text{\drkblu riflessiva:} && \;\;\forall x \in A \; x \sim x\\
+&\text{\drkblu simmetrica:} && \;\;\forall x,y \in A x\sim y \leftrightarrow y \sim x\\
+&\text{\drkblu transitiva:} && \;\;\forall x,y,z \in A \; (x \sim y \land y \sim z) \rightarrow x \sim z
+\end{alignat*}
 \end{definition}
 
 \begin{definition}
-	$\leq \, \in A \times A$ \`e una \vocab{relazione di ordine (largo)} se \`e:
-	\begin{enumerate}[(i)]
-		\item \textbf{\underline{riflessiva}}: $\forall x \in A \; x \leq x$.
-		\item \textbf{\underline{antisimmetrica}}: $\forall x,y \in A \; (x \leq y \land y \leq x) \rightarrow x = y$.
-		\item \textbf{\underline{transitiva}}: $\forall x,y,z \in A \; (x \leq y \land y \leq z) \rightarrow x \leq z$.
-	\end{enumerate}
+	La relazione $\leq \, \in A \times A$ \`e una \vocab{relazione di ordine largo} se \`e:
+\begin{alignat*}{2}
+&\text{\drkblu riflessiva:} && \;\;\forall x \in A \; x \leq x\\
+&\text{\drkblu antisimmetrica:} && \;\;\forall x,y \in A \; (x \leq y \land y \leq x) \rightarrow x = y\\
+&\text{\drkblu transitiva:} && \;\;\forall x,y,z \in A \; (x \leq y \land y \leq z) \rightarrow x \leq z
+\end{alignat*}
 \end{definition}
 
 \begin{definition}
-	$< \, \in A \times A$ \`e una \vocab{relazione di ordine stretto} se \`e:
-	\begin{enumerate}[(i)]
-		\item \textbf{\underline{irriflessiva}}: $\forall x \in A \; \neg(x < x)$.
-		\item \textbf{\underline{transitiva}}: $\forall x,y,z \in A \; (x < y \land y < z) \rightarrow x < z$.
-	\end{enumerate}
+	La relazione $< \, \in A \times A$ \`e una \vocab{relazione di ordine stretto} se \`e:
+\begin{alignat*}{2}
+&\text{\drkblu irriflessiva:} && \;\;\forall x \in A \; \neg(x < x)\\
+&\text{\drkblu transitiva:} && \;\;\forall x,y,z \in A \; (x < y \land y < z) \rightarrow x < z
+\end{alignat*}
 \end{definition}
 
 \begin{exercise}
@@ -643,34 +666,46 @@ Considerando il caso di $A \times A$ possiamo definire le seguenti relazioni.
 		\]
 \end{exercise}
 
-\begin{soln}
-Se valesse che $\forall x,y \in A \; x < y \rightarrow y < x$, allora sarebbero contemporaneamente vere $x < y$ e $y < x$, da cui, per transitivit\`a si avrebbe $x < x$ che \`e falso.
-\end{soln}
-
-\begin{proposition}[Corrispondenza tra ordini stretti e larghi]
+\begin{proposition}\label{precedente}
 	Data una relazione di ordine stretto $<$ su $A$, la relazione:
-	\[ \leq\, = \{(x,y) \in A \times A | x < y \lor x = y\}\footnote{Formalmente: $\{z \in A \times A | \exists x,y \in A \; z = (x,y) \land \ldots\}$.}
+	\[ \leq \;\;=\;\; \{(x,y) \in A \times A | x < y \lor x = y\} \]
+	\`e una relazione di ordine largo. Viceversa, se $\leq$ \`e una
+relazione di ordine largo, la relazione seguente \`e di ordine stretto:
+	\[ < \;\;=\;\; \{(x,y) \in A \times A | x \leq y \land x \ne y\}
 		\]
-	\`e una relazione di ordine largo. Viceversa, se $\leq$ \`e una relazione di ordine largo, la seguente relazione \`e dei ordine stretto:
-	\[ <\, = \{(x,y) \in A \times A | x \leq y \land x \ne y\}\footnote{Come la nota sopra.}
-		\]
-	Inoltre, in questo modo, le relazioni di ordine stretto e di ordine largo sono poste in corrispondenza una - a - uno.
+	Inoltre, la corrispondenza stabilita in questo modo \`e biunivoca.
 \end{proposition}
 
-\begin{proof}
-	Definiamo la \vocab{diagonale di una relazione} di $A \times A$ come:
-	\[ \Delta_A \Mydef \{(x,y) \in A \times A | x = y\}
+\begin{note}
+La notazione
+\[\{(x,y)\in A \times A | \dotsc\}\]
+nella proposizione precendete non \`e stata definita. Formalmente, avrei
+dovuto fissare $B=A\times A$ e scrivere
+\[\{z \in B | \exists x,y \in A \, z=(x,y)\land \dotsc\}.\]
+Abusi di questo genere continueranno, e saranno presto passati sotto
+silenzio.
+\end{note}
+
+\begin{proof}[Dimostrazione di~\ref{precedente}]
+	Definiamo la \vocab{diagonale}
+	\[ {\drkblu \Delta_A} \;\;\Mydef\;\; \{(x,y) \in A \times A | x = y\}
 		\]
-	Allora \`e facile verificare che, se $<$ \`e una relazione di ordine stretto, allora $< \cap \,\Delta_A = \emptyset$ e $< \cup \,\Delta_A$ \`e una relazione di ordine largo corrispondente.
+	\`E facile verificare che, se $<$ \`e una relazione di ordine
+stretto, allora $< \cap \,\Delta_A = \emptyset$ e $< \cup \,\Delta_A$ \`e
+la relazione di ordine largo corrispondente.
 	Viceversa, se $\leq$ \`e una relazione di ordine largo, allora $\Delta_A \subseteq \, \leq$ e $\leq \setminus \Delta_A$ \`e la relazione di ordine stretto corrispondente.
 \end{proof}
 
-\begin{notation}[Relazioni d'ordine strette e larghe]
-	Fissata una relazione di ordine largo $\textcolor{red}{\leq}$ su $A$, ci sentiremo liberi di usare la corrispondente relazione di ordine stretto $\textcolor{red}{<}$ fintanto che la scelta del simbolo sia indizio sufficiente dell'operazione.
+\begin{notation}
+	Fissata una relazione di ordine largo $\textcolor{red}{\leq}$ su
+$A$, ci sentiremo liberi di usare la corrispondente relazione di ordine
+stretto $\textcolor{red}{<}$, e viceversa, fidando che la scelta del simbolo sia indizio sufficiente.
+Parleremo quindi semplicemente di \vocab{relazione di ordine} come se non
+avessimo paura di essere fraintesi.
 	Inoltre scriveremo $x > y$ per $y < x$ e $x \geq y$ per $y \leq x$.
 \end{notation}
 
-\begin{definition}[Relazione di ordine totale]
+\begin{definition}[Ordini totali]
 	Una \vocab{relazione di ordine totale} su $A$ \`e una relazione di ordine $\leq$ tale che:
 	\[ \forall x,y \in A \, (x \leq y) \lor (x = y) \lor (y \leq x)
 		\]
@@ -680,66 +715,52 @@ Se valesse che $\forall x,y \in A \; x < y \rightarrow y < x$, allora sarebbero 
 	Formula la definizione precedente per ordini stretti.
 \end{exercise}
 
-\begin{soln}
-Diciamo che $<$ \`e un ordinamento totale (stretto) su $A$ se:
-\[ \forall x \in A \, \forall y \in A (x \ne y \land ((x < y) \lor (x > y))) \lor (x = y)
-	\]
-o anche semplicemente:
-\[ \forall x \in A \, \forall y \in A (x = y) \lor (x < y) \lor (x > y)
-	\]
-E per quanto detto possiamo anche pensare che:
-\[ \text{$\leq$ ordine totale} \iff \text{$< \cup \Delta_A$ ordine totale}
-	\]
-(infatti nella prima definizione non \`e strettamente necessario che compaia l'uguaglianza, la si pu\`o ottenere quanto entrambe le disuguaglianze sono vere per antisimmetria, mentre per ordini stretti \`e necessario aggiungere la diagonale nella definizione di totalit\`a).
-\end{soln}
-
 \begin{definition}[Restrizione di una relazione]
-	Data una relazione $\rel \subseteq A \times B$, e dati $A' \subseteq A$, $B' \subseteq B$, possiamo definire la \vocab{restrizione} di $\rel$ a $A'\times B'$:
-	\[ \rel_{|A' \times B'} \Mydef \rel \cap (A' \times B')
+	Data una relazione $\rel \subseteq A \times B$, e dati $A'
+\subseteq A$, $B' \subseteq B$, possiamo definire la \vocab{restrizione}
+di $\rel$ ad $A'\times B'$:
+	\[ {\drkblu \rel_{|A' \times B'}} \Mydef \rel \cap (A' \times B')
 		\]
-	``restrizione di $\mathcal R$ a $A' \times B'$\,''.
 \end{definition}
 
 \begin{exercise}
 	Data $\rel$ relazione di equivalenza/ordine su $A$ e $A' \subseteq A$, dimostra che $\rel_{|A' \times A'}$ \`e una relazione di equivalenza/ordine su $A'$.
 \end{exercise}
 
-\begin{soln}
-Vediamolo per le relazioni di equivalenza. \`E facile osservare che $\forall a' \in A'$, vale che $(a',a') \in \mathcal{R}_{|A' \times A'}$ (sta in $A' \times A'$ per definizione di prodotto cartesiano e sta in $\mathcal{R}$ essendo una relazione di equivalenza per ipotesi (vale il per ogni)),
-analogamente valgono simmetria e riflessivit\`a. 
-\end{soln}
-
-\begin{definition}[Dominio e immagine di una relazione]
+\begin{definition}
 	Data una relazione $\rel \subseteq A \times B$, definiamo:
 	\[  \begin{split}
-		\Dom(\rel) &\Mydef \{x \in A | \exists y \in B \; x\rel y\} \qquad \text{\vocab{dominio} di $\rel$} \\
-	    \Imm(\rel) &\Mydef \{y \in B | \exists x \in A \; x \rel y \} \qquad \text{\vocab{immagine} di $\rel$}
+		\Dom(\rel) &\;\Mydef\; \{x \in A | \exists {y \in B} \;
+x\,\rel\, y\} \qquad \text{\vocab{dominio} di $\rel$} \\
+	    \Imm(\rel) &\;\Mydef\; \{y \in B | \exists {x \in A} \; x\,
+\rel\, y \} \qquad \text{\vocab{immagine} di $\rel$}
 	\end{split}
 			\]
-	(notare che $\Dom(\rel)$ e $\Imm(\rel)$ non coincidono necessariamente con $A$ e $B$).
 \end{definition}
 
-\begin{definition}[Funzione]
-	Chiamiamo \vocab{funzione} $f:A \rightarrow B$ una relazione $f \subseteq A \times B$ tale che:
-	\[ \forall x \in A \; \exists ! \, y \in B \; (x,y) \in f
+\begin{definition}
+	Chiamiamo \vocab{funzione $f:A \rightarrow B$} una relazione $f \subseteq A \times B$ tale che:
+	\[ \forall {x \in A} \; \existsun {y \in B} \; (x,y) \in f
 		\]
-		(Intuitivamente $f$ \`e l'insieme delle coppie $(x,f(x))$ per $x \in A$).
+	{\drkgrn Intuitivamente $f$ \`e l'insieme delle coppie $(x,f(x))$
+per $x \in A$.}
 \end{definition}
 
-\begin{notation}[Immagine e immagine di un sottoinsieme]
-	Data una funzione $f$ possiamo indicare la coppia $(x,y) \in f$ con la seguente abbreviazione:
-	\[ y = f(x) \Mydef (x,y) \in f
+\begin{notation}
+	Data una funzione $f$, scriviamo
+	\[ {\drkblu y = f\drkred (\drkblu x\drkred )} \;\;\Mydef\;\; (x,y) \in f
 		\]
-	Dato $S \subseteq \Dom(f)$, indichiamo l'immagine di un sottoinsieme (ovvero l'insieme delle immagini del sottoinsieme) come:
-	\[ f[S] \Mydef \{y \in \Imm(f)| \exists x \in S \; \underbrace{y = f(x)}_{= (x,y) \in f}\} = \underbrace{\{f(x) | x \in S\}}_{\text{informalmente}}
+	Dato $S \subseteq \Dom(f)$, scriviamo
+	\[ {\drkblu f\drkred [\drkblu S\drkred ]} \;\;\Mydef\;\; \{y \in
+\Imm(f)| \exists {x \in S }\; y = f(x) \} \drkgrn \;\;=\;\; \{f(x) | x \in S\}
 		\]
 \end{notation}
 
-\begin{definition}[Iniettivit\`a, suriettivit\`a e bigettivit\`a]
+\begin{definition}
 	Una funzione $f: A \rightarrow B$ \`e:
 	\[ \begin{split}
 		\text{\vocab{iniettiva} se:}\; & \forall y \in \Imm(f)\; \exists! \, x \in \Dom(f) \; f(x) = y\\
-		\text{\vocab{suriettiva} se:}\; & B = \Imm(f)\; \text{ossia $\forall y \in B \; \exists x \in A \; f(x) = y$.}\\
+		\text{\vocab{surgettiva} se:}\; & B = \Imm(f)\; \text{ossia $\forall y \in B \; \exists x \in A \; f(x) = y$.}\\
 		\text{\vocab{bigettiva} se:}\; &\text{\`e sia iniettiva sia surgettiva.}
 	\end{split}
 		\]
@@ -747,72 +768,50 @@ analogamente valgono simmetria e riflessivit\`a.
 
 \begin{definition}[Funzione inversa]
 	Data $f$ iniettiva:
-	\[ f^{-1} \Mydef \{(y,x) \in B \times A | f(x) = y\} \subseteq B \times A
+	\[ f^{-1} \;\;\Mydef\;\; \{(y,x) \in B \times A | f(x) = y\}
+\;\;\subseteq\;\; B \times A
 		\]
 \end{definition}
 
-\begin{remark}[Funzione inversa e controimmagine]
-	Se $f$ iniettiva, $f^{-1} : \Imm(f) \rightarrow \Dom(f)$ \`e una funzione\footnote{Altrimenti \`e la semplice controimmagine di un sottoinsieme dell'immagine (che non \`e una funzione).} a
-	sua volta iniettiva (basta pensare alla definizione di $f^{-1}$ iniettiva e usare che per l'iniettivit\`a di $f$ c'\`e un'unica $x \in \Dom(f)$ tale che $y = f(x)$).
-	In particolare se $f : A \rightarrow B$ \`e bigettiva, allora $f^{-1}$ \`e bigettiva.
+\begin{remark}
+	Data $f$ iniettiva, $f^{-1}$ \`e una funzione $\Imm(f) \to
+\Dom(f)$ iniettiva.
+	In particolare, se $f \colon A \to B$ \`e bigettiva, allora
+$f^{-1}$ \`e bigettiva $B\to A$.
 \end{remark}
 
-\begin{definition}[Restrizione di una funzione]
-	Data $f: A \rightarrow B$ e $A' \subseteq A$ definiamo:
-	\[ f_{|A'} \Mydef \{(x,y) \in A' \times B | f(x) = y\}
+\begin{definition}
+	Data $f: A \rightarrow B$ e $A' \subseteq A$ definiamo la
+\vocab{restrizione di $f$ ad $A'$:}
+	\[ {\drkblu f_{|A'}} \;\;\Mydef\;\; \{(x,y) \in A' \times B | f(x) = y\}
 		\]
-	 ``$f$ \vocab{ristretta} ad $A'$\,'' \`e una funzione: $A' \rightarrow B$.
 \end{definition}
 
-\begin{definition}[Composizione di funzioni]
-	Date $g : A \rightarrow B$ e $f : B \rightarrow C$:
-	\[ f \circ g \Mydef \{(x,z) \in A \times C | z = f(g(x))\}\footnote{O pi\`u formalmente $\exists y(y = g(x) \land z = f(y))$.}
-		\]
-	``$f$ \vocab{composta} con $g$'' \`e una funzione: $A \rightarrow C$.
+\begin{definition}
+	Date $g : A \rightarrow B$ e $f : B \rightarrow C$, definiamo la
+loro \vocab{composizione $f\circ g\colon A\to C$:}
+	\[ {\drkblu f \circ g} \;\;\Mydef\;\; \{(x,z) \in A \times C | z =
+f(g(x))\} \]
 \end{definition}
 
-\begin{notation}[Funzione identit\`a]
+\begin{notation}
 	Indichiamo con $\id_A$ la \vocab{funzione identit\`a} su $A$:
-	\[ \id_A \Mydef \{(x,y) \in A \times A | x = y\} = \Delta_A
+	\[ {\drkblu \id_A} \;\;\Mydef\;\; \{(x,y) \in A \times A | x = y\}
+\;\;=\;\; \Delta_A
 		\]
 \end{notation}
 
-\begin{remark}[Caratterizzazione funzione inversa]
+\begin{remark}
 	Data $f : A \rightarrow B$ bigettiva e $g : B \rightarrow A$ \`e equivalente scrivere:
 	\[ g = f^{-1} \qquad g \circ f = \id_A \qquad f \circ g = \id_B
 		\]
 \end{remark}
 
-\begin{exercise}[Composizione di funzioni iniettive/surgettive/bigettive]
-	Data $f : A \rightarrow B$ e $g: B \rightarrow C$, sotto quali condizioni $g \circ f$ \`e iniettiva, suriettiva, bigettiva?
+\begin{exercise}
+	Data $f : A \rightarrow B$ e $g: B \rightarrow C$, sotto quali condizioni $g \circ f$ \`e iniettiva, surgettiva, bigettiva?
 \end{exercise}
 
-\begin{soln}
-	Indaghiamo il problema partendo prima dalle singole funzioni con delle propriet\`a e componendole. Se $f$ e $g$ sono iniettive, allora $g \circ f$ \`e iniettiva, infatti:
-	\[ g(f(x)) = g(f(y)) \overset{\text{$g$ iniett.}}{\iff} f(x) = f(y) \overset{\text{$f$ iniett.}}{\iff} x = y \qquad \forall x,y \in A
-		\]
-		che \`e equivalente alla definizione di $g \circ f : A \rightarrow C$ iniettiva. Se $f$ e $g$ sono surgettive, allora $g \circ f$ \`e surgettiva:
-	\begin{align*}
-		\text{$g$ surgettiva} &\iff \forall z \in C \; \exists y \in B \; g(y) = z \\
-		\text{$f$ surgettiva} &\iff \forall y \in B \; \exists x \in A \; f(x) = y
-	\end{align*}
-	che messe assieme ci danno che $g(f(x)) = z$, cio\`e per ogni $z \in C$ esiste $x \in A$ tale che $(g \circ f)(x) = z$, che \`e equivalente alla definizione di $g \circ f$ surgettiva.
-	Naturalmente, mettendo assieme i risultati precedenti, otteniamo che $f$ e $g$ bigettive implica $g \circ f$ bigettiva. Viceversa, osserviamo che se $g \circ f$ \`e iniettiva, allora $f$ \`e iniettiva,
-	infatti, se per assurdo $f(x) = f(y)$, con $x \ne y$, allora, applicando $g$, si ha $g(f(x)) = g(f(y))$ (perch\'e immagini di cose uguali), ma per iniettivit\`a di $g \circ f$, ci\`o equivale a $x = y$,
-	che \`e assurdo, pertanto $x = y$\footnote{Abbiamo dimostrato per assurdo che $f(x) = f(y) \implies x = y$ (sotto l'ipotesi che $g \circ f$ iniettiva), il viceversa \`e banale e con questo si ha l'equivalenza con la definizione di $f$ iniettiva}.
-	Se $g \circ f$ \`e surgettiva, allora $g$ \`e surgettiva, infatti, per ipotesi, $\forall z \in C \; \exists x \in A \; g(f(x)) = z$, e, dato che $f(x) \in B$, abbiamo trovato che per ogni $z \in C$ esiste $y = f(x) \in B$ tale che $g(y) = z$, ovvero $g$ surgettiva.\\
-	Infine, verrebbe da chiedersi, se date $f$ iniettiva e $g$ surgettiva, $g \circ f$ sia necessariamente bigettiva (cos\`i da avere magari un'equivalenza tra la bigettivit\`a della composizione e le propriet\`a delle funzioni in partenza), sfortunatamente ci\`o \`e falso: presa
-	$f : \{0,1\} \hookrightarrow \{0,1,2,3\}$ e $g : \{0,1,2,3\} \twoheadrightarrow \{0,1,2\}$, con:
-	\begin{align*}
-		& g(0) = 0 \qquad f(0) = 0 \\
-		& g(1) = 0 \qquad f(1) = 1 \\
-		& g(2) = 2 \\
-		& g(3) = 3
-	\end{align*}
-	abbiamo $f$ iniettiva, $g$ surgettiva, ma $g \circ f$ non \`e n\'e iniettiva ($g(f(0)) = g(f(1))$) n\'e surgettiva ($\Imm(g \circ f) = \{0\}$).
-\end{soln}
-
-\begin{exercise}[Insieme quoziente e proiezione]
+\begin{exercise}
 	\label{3.73}
 	Data una relazione di equivalenza $\sim$ su $A$, dimostra che esiste un insieme $\faktor{A}{\sim}$ ed una funzione surgettiva $i_\sim$ da $A$ a $\faktor{A}{\sim}$
 	tale che:
@@ -820,35 +819,8 @@ analogamente valgono simmetria e riflessivit\`a.
 		\]
 \end{exercise}
 
-\begin{soln}
-	Possiamo definire l'insieme $\faktor A \sim$ per separazione nelle parti di $A$ come segue:
-	\[ \faktor{A}{\sim} \Mydef \{B \in \ps(A) | \forall x \in A \; \forall y \in B \; x \sim y \leftrightarrow x \in B\}
-		\]
-	Osserviamo che per ogni $B, C \in \faktor A \sim$, vale che $B \cap C \ne \emptyset \iff B = C$, infatti, se esiste $x \in B \cap C$, allora $x \sim y$, $\forall y \in B$, e $x \sim z$, $\forall z \in C$.
-	Da cui $w \in B \iff w \sim x \iff w \in C$ e quindi per l'arbitrariet\`a di $x$, vale $B = C$.\footnote{Essendo che ogni elemento, per quanto detto \`e in una classe di equivalenza di $\faktor{A}{\sim}$, si ha anche che $\bigcup \faktor{A}{\sim} = A$, dunque le classi di equivalenza sono disgiunte
-	e la loro unione d\`a proprio l'insieme, pertanto si dir\`a che formano una \vocab{partizione} dell'insieme $A$.}\\
-	Da quanto appena osservato segue quindi che ogni $x \in A$ appartiene ad una e una sola \vocab{classe di equivalenza} (gli elementi di $\faktor A\sim$), in quanto \`e sempre almeno in relazione con se stesso per riflessivit\`a, possiamo quindi definire $i_\sim$ come 
-	la funzione da $A$ a $\faktor A \sim$ che manda $x$ nella sua classe di equivalenza. Naturalmente $i_\sim(x) = i_\sim(y)$ equivale al dire che le due classi di equivalenza sono la stessa, dunque per definizione
-	si ottiene proprio che $x \sim y$. Inoltre $i_\sim$ \`e surgettiva in quanto in ogni classe di equivalenza di $\faktor A \sim$ c'\`e almeno un elemento (per la riflessivit\`a delle relazioni di equivalenza), la cui immagine via $i_\sim$ d\`a appunto la classe.
-\end{soln}
 
-\begin{exercise}[Primo teorema di ``omomorfismo'', per insiemi]
+\begin{exercise}
 	Data una relazione di equivalenza $\sim$ su $A$ e $f : A \rightarrow B$, affinch\'e esista la funzione $\widetilde{f}: \faktor{A}{\sim} \rightarrow B$ tale che $f = \widetilde{f} \circ i_\sim$,
 	\`e necessario e sufficiente che $\forall x,y \in A \; x \sim y \rightarrow f(x) = f(y)$.
 \end{exercise}
-
-\begin{soln}
-	Osserviamo che\footnote{Per essere formalissimi, staremmo usando che $f = \widetilde{f} \circ i_\sim \iff f(x) = (\widetilde{f} \circ i_\sim)(x)$, $\forall x \in A$, ovvero
-	l'estensionalit\`a per funzioni vista in un'osservazione precedente.} $f(x) = (\widetilde{f} \circ i_\sim)(x)$, $\forall x \in A$ se e solo se $f(x) = \widetilde{f}(i_\sim(x))$, ora ci\`o equivale al fatto che 
-	l'immagine dell'elemento $x \in A$ al LHS \`e uguale a quella della classe di equivalenza (che \`e un sottoinsieme di $A$) $i_\sim(x)$ tramite $\widetilde{f}$ al RHS. Per rispettare la relazione richiesta (che sarebbe poi la commutativit\`a di un diagramma)
-	possiamo definire $\widetilde{f}(C)$, $C \in \faktor{A}{\sim}$, come $f(z)$ per un qualunque $z \in C$.\\ Ora ci basta osservare che questa \`e una buona definizione, e lo \`e in quanto tutti gli elementi in $C$ sono in relazione $\sim$ tra loro e per ipotesi tale relazione 
-	\`e che la loro immagine via $f$ sia la stessa, pertanto $f(x) = f(y)$, $\forall x,y \in C$. Infine, poich\'e $\forall x \in A \; x \in i_\sim(x)$, si ha proprio che $\widetilde{f}(i_\sim(x)) = f(x)$. Abbiamo quindi dimostrato che l'uguaglianza iniziale \`e vera 
-	se $\sim$ \`e definita come nelle ipotesi, osserviamo che se tale uguaglianza funziona, allora due elementi sono in relazione via $\sim$ se e solo se hanno la stessa immagine. Infatti, si avrebbe che:
-	\[ \begin{split}
-		f(x) = f(y) &\iff \widetilde{f}(i_\sim(x)) = \widetilde{f}(i_\sim(y)) \\
-					&\iff i_\sim(x) = i_\sim(y) \\
-					&\iff x \sim y
-	\end{split}
-		\]
-	dove la prima equivalenza \`e l'assunto, la seconda \`e la definizione di $\widetilde{f}$ (che \`e una bigezione tra $\faktor A\sim$ e $\Imm(f)$, per questo abbiamo usato l'iniettivit\`a), mentre l'ultima equivalenza \`e la definizione di classi di equivalenza.
-\end{soln}
