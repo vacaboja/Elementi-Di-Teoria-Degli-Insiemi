@@ -229,7 +229,7 @@ per l'Osservazione~\ref{succ2}(2).
 \begin{proof}
 	Per induzione su $b$.
 
-	{\drkred Caso $b = 0$.} $a \in \emptyset \rightarrow \ldots$ \`e vera a vuoto, perch\'e $a
+	{\drkred Caso $b = \emptyset$.} $a \in \emptyset \rightarrow \ldots$ \`e vera a vuoto, perch\'e $a
 \in \emptyset$ \`e falsa.
 
 	{\drkred Caso $b = s(n)$.}
@@ -299,14 +299,14 @@ l'Osservazione~\ref{succ2}(2) abbiamo due casi:
 
 Per induzione su $a$.
 
-{\drkred Caso $a = 0$.} Dobbiamo dimostrare $\drkred \emptyset \in b \lor
+{\drkred Caso $a = \emptyset$.} Dobbiamo dimostrare $\drkred \emptyset \in b \lor
 \emptyset = b \lor b \in \emptyset$, ossia $\drkred \emptyset \in b \lor
 \emptyset = b$ perch\'e il terzo disgiunto \`e impossibile.
 Procediamo per induzione su $b$.
 
 \setlength{\leftskip}{4em}
 
-{\drkred Caso $b = 0$.} La tesi \`e $\emptyset \in \emptyset \lor
+{\drkred Caso $b = \emptyset$.} La tesi \`e $\emptyset \in \emptyset \lor
 \emptyset = \emptyset$.
 
 {\drkred Caso $b = s(m)$.} L'ipotesi induttiva \`e $\drkgrn \emptyset \in
@@ -368,316 +368,396 @@ $\{n\}\subseteq\omega$ perch\'e~$n\in\omega$.
 	\end{align*}
 \end{proof}
 
-%\subsection{Induzione forte e principio del minimo}
-%\begin{theorem}
-%	[Principio di induzione - forma forte]
-%	Data una formula insiemistica $\Phi(x)$, vale:
-%	\[ (\forall n \in \omega (\forall x < n \; \Phi (x)) \rightarrow \Phi(n)) \rightarrow \forall n \in \omega \; \Phi(n)
-%		\]
-%	ovvero, se assumendo $\Phi(x)$ per tutti gli $x < n$, abbiamo $\Phi(n)$, allora $\Phi(n)$ \`e vera per tutti i numeri $n$.
-%\end{theorem}
-%
-%\begin{remark}
-%	Chiaramente questa forma \`e ``forte'' perch\'e permette di assumere un'ipotesi induttiva pi\`u forte dell'induzione di Peano. In quella, infatti, si deve dedurre $\Phi(n)$ a 
-%	partire da $\Phi$ del numero precedente. Qui, invece, possiamo far conto di sapere $\Phi$, non solo per il precedente, ma per tutti i numeri minori di $n$.
-%\end{remark}
-%
-%\begin{proof}
-%	Definiamo $\psi(m) \Mydef \forall x < m \; \Phi(x)$ e dimostriamo per induzione debole che $\forall m \in \omega \; \psi(m)$, \textcolor{MidnightBlue}{ cio\`e che per ogni fissato naturale $\Phi$ \`e vera per i naturali pi\`u piccoli},
-%	in tal modo, per ogni $n \in \omega$ sappiamo che \`e vera $\psi(n+1) \implies \Phi(n)$, che \`e proprio la tesi.
-%	\begin{itemize}
-%		\item[$\boxed{m = 0}$] Abbiamo che $\psi(0) = \forall x < 0 \; \Phi(x) \equiv \forall x (x < 0 \to \Phi(x))$, che \`e vera a vuoto in quanto $x < 0 \equiv x \in \emptyset$ che \`e sempre falso, dunque l'implicazione tra partentesi \`e sempre vera.
-%		\item[$\boxed{m \implies m + 1}$] Assumiamo che $\psi(m) = \forall x < m \; \Phi(x)$ sia vera e mostriamo che $\psi(m) = \forall x < m + 1 \; \Phi(x)$ \`e vera. Per un lemma visto $x < s(m) \implies x < m \lor x = m$, nel primo caso $\Phi(x)$ \`e vera per ipotesi induttiva.
-%		Nel caso di $\Phi(m)$, abbiamo per ipotesi che \textcolor{purple}{$\forall n \in \omega (\forall x < n \; \Phi (x)) \rightarrow \Phi(n)$}, dunque, per $n = m$, abbiamo visto nel primo caso che $\forall x < m \; \Phi(m)$, per cui l'ipotesi (vera) ha antecedente vero, che ci d\`a necessariamente conseguente $\Phi(m)$ vero.
-%	\end{itemize}
-%\end{proof}
-%
-%\begin{theorem}
-%	[Principio del minimo]
-%	Sia $A \subseteq \omega$. Se $A \ne \emptyset$ allora esiste $n \in A$ tale che $\forall x \in A \; n \leq x$. Ovvero, ogni sottoinsieme non vuoto di $\omega$ ha un minimo elemento.
-%\end{theorem}
-%
-%\textcolor{MidnightBlue}{\underline{Possibile idea di dimostrazione}: dimostriamo per induzione forte che se $n \in A$ - che \`e equivalente a $A\subseteq \omega \land A \ne \emptyset$ -, allora $A$ ha un minimo. Per ipotesi induttiva assumiamo che $\forall x < n \; x \in A \to A$ ha minimo, e dimostriamo che se $n \in A$, allora 
-%$A$ ha minimo. Dato $n \in A$, se esiste $x \in n$ tale che $x \in A$, allora $A$ ha minimo per ipotesi induttiva, altrimenti, se $\forall x < n \; x \not \in A$, allora $n$ \`e il minimo di $A$.}
-%
-%\begin{proof}
-%	Dimostriamo la contronominale della tesi, ovvero se $A \subseteq \omega$ non ha un elemento minimo, allora $A$ \`e vuoto, cio\`e $\forall n \in \omega \; n \not \in A$. Procediamo per induzione forte, assumendo per ipotesi induttiva che $\forall x < n \; x \not \in A$, mostriamo che $n \not \in A$.
-%	Pi\`u precisamente vogliamo dimostrare che $(\forall x < n \; x \not \in A) \to n \not \in A$, ma ci\`o \`e equivalente al fatto che $A$ non abbia un minimo:
-%	\begin{align*}
-%		(\forall x < n \; x \not \in A) \to n \not \in A &\iff \neg(\exists x < n \; x \in A) \to n \not \in A \\
-%														 &\iff n \in A \to \exists x < n \; x \in A &&\text{(contronominale)}\\
-%														 &\iff \text{$A$ non ha minimo}
-%	\end{align*}
-%	abbiamo quindi dimostrato che l'implicazione che vogliamo dimostrare \`e equivalente all'ipotesi per cui \`e vera, inoltre per l'ipotesi induttiva l'antecedente dell'implicazione \`e vero, per cui, dalla tavola di verit\`a,
-%	l'unica possibilit\`a \`e che anche il conseguente $n \not \in A$ sia vero. Ci\`o verifica il passo induttivo e quindi l'induzione forte ci garantisce la contronominale della tesi - che naturalmente \`e equivalente a quest'ultima -.
-%\end{proof}
-%
-%\begin{remark}
-%	Per completare l'equivalenza tra induzione, induzione forte e principio del minimo, andrebbe dimostrato anche che principio del minimo$\implies$induzione.
-%\end{remark}
-%
-%\begin{definition}[Insieme ben ordinato]
-%	Un insieme totalmente ordinato $(S, <)$ si dice \vocab{bene ordinato} se ogni sottoinsieme non vuoto ha un minimo.\footnote{Cio\`e se vale il principio del minimo c(come vale in $\omega$).}
-%	\[ \forall A \subseteq S \; A \ne \emptyset \rightarrow \exists m \in A \; \forall x \in A \; m \leq x
-%		\]
-%\end{definition}
-%
-%La nozione di buon ordine \`e stata introdotta da Cantor agli albori della teoria degli insiemi, e giocher\`a un ruolo centrale in questo corso.
-%
-%\begin{example}
-%	$(\omega, <)$ \`e un insieme bene ordinato\footnote{Si usa la notazione di coppia ordinata per indicare sia l'insieme sia la relazione che c'\`e sopra.} per quanto visto nel teorema precedente.
-%\end{example}
-%
-%\begin{exercise}
-%	Dimostra che $X = s(s(s(\omega)))$ \`e bene ordinato dalla relazione $a < b \Mydef a \in b$.
-%\end{exercise}
-%
-%\begin{soln}
-%	Dato $(\omega,<)$, basta considerare la seguente relazione:
-%	\[ \prec := < \cup (\omega \times \{\omega\}) \cup (s(\omega) \times \{s(\omega)\}) \cup (s(s(\omega)) \times \{s(s(\omega))\})\,\footnote{Che formalmente \`e un sottoinsieme di $s(s(s(\omega))) \times s(s(s(\omega)))$.}
-%		\]
-%	dove $(x,y) \in \prec \leftrightarrow x \in y$. Si vede quindi che $(s(s(s(\omega))),\prec)$ \`e un ordine totale (fondamentalmente perch\'e $<$ lo \`e, 
-%	e le coppie che abbiamo aggiunto sono costruite apposta per rispettare la definizione di ordine [stretto] totale). Abbiamo costruito $\prec$ in modo che 
-%	$\forall n \in \omega \; n \prec \omega$, inoltre vale anche [per costruzione] che $\omega \prec s(\omega) \prec s(s(\omega))$, dunque, dato $S \subseteq s(s(s(\omega)))$,
-%	se $S \cap \omega \ne \emptyset$, allora il minimo esiste ed \`e dato da $\min_<(S \cap \omega)$. Se $S \cap \omega = \emptyset$ (ovvero se $S$ \`e un sottoinsieme di $\{\omega,s(\omega),s(s(\omega))\}$),
-%	allora per definizione di $\prec$ (come scritto sopra), per tutti i sottoinsiemi possibili abbiamo sempre un minimo [per la totalit\`a di $\prec$]. Pertanto $\forall S \subseteq s(s(s(\omega)))$ c'\`e un minimo
-%	e quindi in $s(s(s(\omega)))$ vale il principio del minimo, cio\`e \`e ben ordinato.
-%\end{soln}
-%
-%\subsection{Ricorsione numerabile}
-%La ricorsione \`e il procedimento per cui si costruisce una funzione $f : \omega \rightarrow \text{qualcosa}$, definendo $f(s(n))$ a partire da $f(n)$, o,
-%pi\`u in generale da $f(\emptyset),\ldots,f(n)$. Questo \`e un procedimento fondamentale: potremmo dire che \`e IL modo di pensare gli infidi puntini ($\ldots$). Vediamo qualche esempio.
-%
-%\begin{example}
-%	[Operazioni aritmetiche]
-%	Possiamo definire somma e prodotto come:
-%	\[ \begin{cases}
-%		a + \textcolor{red}{0} = a \\
-%		a + \textcolor{red}{s(b)} = s(a + b)
-%	\end{cases}
-%	\qquad
-%	\begin{cases}
-%		a \cdot \textcolor{red}{0} = 0\\
-%		a \cdot \textcolor{red}{s(b)} = a \cdot b + a
-%	\end{cases}
-%		\]
-%	anzich\'e $a + b = \underbrace{s(s(\ldots a \ldots))}_{\text{$b$ successori}}$ (abbiamo il caso base con 0, e poi si procede ricorsivamente dal caso base fino a $b$) e $a \cdot b = \underbrace{a + a + \ldots + a}_{\text{$b$ volte}}$ (ricorsivamente ad un certo 
-%	punto si partir\`a da $a$ e si inizier\`a a sommare).
-%\end{example}
-%
-%\begin{example}
-%	[Potenza e fattoriale]
-%	Possiamo definire ricorsivamente potenze e fattoriali come segue:
-%	\[ \begin{cases}
-%		a^{\textcolor{red}{0}} = 1\\
-%		a^{\textcolor{red}{s(b)}} = a^b \cdot a
-%	\end{cases}
-%	\qquad
-%	\begin{cases}
-%		\textcolor{red}{0}! = 1\\
-%		\textcolor{red}{s(a)}! = a! \cdot s(a)
-%	\end{cases}
-%		\]
-%	anzich\'e $a^b = \underbrace{a \cdot a \cdot \ldots \cdot a}_{\text{$b$ volte}}$ e $a! = 1 \cdot 2 \cdot \ldots \cdot (a - 1) \cdot a$.
-%\end{example}
-%
-%\begin{example}
-%	[Sommatoria]
-%	Possiamo definire la sommatoria come:
-%	\[\begin{cases}
-%		\displaystyle
-%		\sum_{i = 0}^{\textcolor{red}{0}} f(i) = 0\\
-%		\displaystyle
-%		\sum_{i = 0}^{\textcolor{red}{s(a)}} f(i) = \left(\sum_{i=0}^{a} f(i) \right) + f(s(a))
-%	\end{cases}
-%		\]
-%	anzich\'e $\displaystyle\sum_{i = 0}^a f(i) = f(0) + f(1) + \ldots + f(a)$ (cio\`e con la sommatoria definita ricorsivamente stiamo eliminando il fastidioso discorso (poco formale) dei puntini \dots).
-%\end{example}
-%
-%Altre \vocab{successioni} - \textbf{ossia funzioni con dominio $\omega$} - sono definite nella maniera pi\`u naturale proprio per ricorsione.
-%
-%\begin{example}[Esempio di applicazione della ricorsione]
-%	In quanti modi posso coprire una sequenza di $n$ caselle $\underbrace{\square\square\square\ldots\square\square}_{n}$ con tessere di una o due caselle,
-%	$\square$ e $\square\square$, che non si sovrappongano e non lascino caselle scoperte?
-%\end{example}
-%
-%\begin{soln}
-%	Detto $F_n$ il numero di ricoprimenti di una sequenza lunga $n$, vediamo che la tessera pi\`u a sinistra pu\`o essere $\square$ o $\square \square$. Nel primo caso, ci sono 
-%	$F_{n-1}$ modi di completare il ricoprimento, nel secondo caso $F_{n-2}$. Abbiamo quindi trovato una relazione ricorsiva del numero di ricoprimenti in funzione di $n$:
-%	\[ F_n = F_{n-1} + F_{n-2}\footnote{Cio\`e il numero totale di modi di ricoprire la sequenza di $n$ caselle deriva dalla somma dei due casi, che rappresentano i modi di ricoprire le altre caselle fissata quella/e iniziale/i, ci\`o fissati i casi base ci definisce bene (via ricorsione numerabile) una successione che conta il numero 
-%	di ricoprimenti in funzione di $n$.}
-%		\]
-%	La sequenza risulta completamente determinata, per ricorsione, osservando che $F_0 = F_1 = 1$: sono i \vocab{numeri di Fibonacci}.
-%\end{soln}
-%
-%\textbf{In un certo senso, induzione e ricorsione sono due facce della stessa medaglia}: dove l'induzione dimostra $\Phi(s(n))$ assumendo di sapere 
-%$\Phi(n)$, la ricorsione calcola $f(s(n))$ assumendo di sapere $f(n)$. Lo stesso parallelismo, vedremo, si presenter\`a per l'induzione e la ricorsione transfinita.
-%Tornando al numerabile: come abbiamo enunciato due forme dell'induzione, enunceremo due forme della ricorsione.\\
-%La semplice osservazione che segue dice che due funzioni sono uguali precisamente quando assumono gli stessi valori.
-%
-%\begin{remark}
-%	[Estensionalit\`a per funzioni]
-%	Date $f,g : A \rightarrow B$, allora:
-%	\[ f = g \leftrightarrow \forall x \in A \; f(x) = g(x)
-%		\]
-%	(dove l'uguaglianza di funzioni non \`e altro che uguaglianza di sottoinsiemi in $A \times B$).
-%\end{remark}
-%
-%\begin{proof}
-%	Si osserva che:
-%	\[ (x,y) \in f \overset{\text{def. $f$}}{\iff} y = f(x) \overset{\text{Hp.}}{\iff} y = g(x) \overset{\text{def. $g$}}{\iff} (x,y) \in g
-%		\]
-%	e si conclude per \hyperref[ax2]{estensionalit\`a} che quanto scritto sopra equivale a dire che gli insiemi $f$ e $g$ sono uguali.
-%\end{proof}
-%
-%\begin{notation}[Insieme delle funzioni da $A$ a $B$]
-%	Indichiamo con ${}^{A}B$ l'insieme delle funzioni da $A$ a $B$, che esiste per \hyperref[ax3]{separazione} in $\ps(A \times B)$.
-%\end{notation}
-%
-%\begin{theorem}
-%	[Ricorsione numerabile - prima forma]
-%	\label{ric1}
-%	Dato un insieme $A$, un elemento $k \in A$ e una funzione:
-%	\[ h : \omega \times A \rightarrow A
-%		\]
-%	esiste un'unica funzione $f : \omega \rightarrow A$ tale che:
-%	\[ f(0) = k \quad \land \quad \forall n \in \omega\; f(s(n)) = h(n,f(n))
-%		\]
-%\end{theorem}
-%
-%\begin{example}[Potenza e fattoriale con la ricorsione numerabile]
-%	Per definire $a^b$ considero $k = 1$, $h(n,x) = a \cdot x$, e $h(0,x) = k = 1$. Per definire il fattoriale $k = 1$, $h(n,x) = s(n) \cdot x$ e $h(0,x) = k = 1$.
-%\end{example}
-%
-%\begin{exercise}
-%	Come potrei costruire $F_n$ usando questo teorema?
-%\end{exercise}
-%
-%\textcolor{MidnightBlue}{Il piano consiste nel trovare una formula $\Phi(x,y)$ che dice ``$y = f(x)$'' - questa \`e la vera difficolt\`a 
-%della dimostrazione - poi semplicemente otteniamo $f$ per separazione nell'insieme $\omega \times A$ (in tal modo $f$ \`e una funzione da $\omega$ ad $A$) usando la formula $\Phi$.
-%Dire ``$y = f(x)$'' vuol dire ``i primi $x$ passaggi della ricorsione, partendo da $k$, conducono a $y$''.}
-%
-%\begin{proof}
-%	Dato $x \in \omega$ diciamo che $g$ \`e una \vocab{$x$-approssimazione} - per la $h$ fissata nell'ipotesi - se la vale:
-%	\[ \text{$g$ $x$-approssimazione} \Mydef \begin{cases}
-%		g \in {}^{s(x)}A \\
-%		g(0) = k \\
-%		\forall n \in x\; g(s(n)) = h(n,g(n))
-%	\end{cases}
-%		\]
-%	di fatto $g$ \`e la ricorsione che stiamo cercando di definire, date le ipotesi, fatta un numero finito di passi - $x \in \omega$ -.
-%	Iniziamo a dimostrare quindi che questa ricorsione finita esiste per ogni numero finito di iterazioni $x \in \omega$ fissato.\\
-%	\textcolor{MidnightBlue}{Il vantaggio di tagliuzzare $f$ in $x$-approssimazioni \`e che cos\`i otteniamo un parametro, $x$, su cui impostare un'induzione.}	
-%	\begin{lemma}[Esistenza e unicit\`a delle $x$-approssimazioni in $\omega$]
-%		$\forall x \in \omega$, fissata $h$ come nelle ipotesi del teorema di ricorsione, $\exists ! \, g$ ``$g$ \`e una $x$-approssimazione per $h$''.
-%	\end{lemma}
-%
-%	\begin{proof}
-%		Fissato $x \in \omega$, possiamo procedere per induzione - di fatto sul numero di iterazioni della ricorsione -.
-%		\begin{itemize}
-%			\item[$\boxed{x = 0}$] Basta osservare che l'unica $0$-approssimazione \`e la funzione $\{(0,k)\}$. Infatti il dominio
-%			\`e $\{0\}$ per definizione, $g(0) = k$, e vale a vuoto la terza condizione, l'unicit\`a \`e banale, pertanto l'unica $0$-approssimazione possibile per $h$ \`e proprio la funzione $g = \{(0,k)\}$.
-%			\item[$\boxed{x = s(a)}$] Per ipotesi induttiva abbiamo che esiste ed \`e unica una $a$-approssimazione per $h$, diciamo $g$, vogliamo dimostrare che esiste ed \`e unica una $s(a)$-approssimazione per $h$.
-%			Per ipotesi $g \in {}^{s(a)} A$, $g(0) = k$ e $\forall b \in a \; g(s(b)) = h(b,g(b))$, possiamo quindi estendere $g$ a $s(a)$ come segue:
-%			\[ g' = g \cup \{(s(a), h(a,g(a)))\}
-%				\]
-%			A questo punto \`e immediato verificare che $g'$ \`e una $s(a)$-approssimazione, infatti, $\Dom(g') = \Dom(g) \cup \{s(a)\} = s(a) \cup \{s(a)\} = s(s(a))$, $g'(0) = g(0) = k$ e $\forall t \in a\; g'(s(t)) = g(s(t)) = h(t,g(t))$,
-%			e per costruzione, $g'(s(a)) = h(a,g(a))$. Per l'unicit\`a, sappiamo per ipotesi induttiva che esiste un'unica $a$-approssimazione per $h$, quindi, date $g'$ e $g''$ due $s(a)$-approssimazioni per $h$, si ha necessariamente che $g_{|s(a)}' = g_{|s(a)}''$,
-%			e in particolare ci\`o significa che $g'(a) = g''(a)$, da cui:
-%			\[ g'(s(a)) \overset{\text{def.}}{=} h(a,g'(a)) \overset{\text{Hp. indutt.}}{=} h(a,g''(a)) \overset{\text{def.}}{=} g''(s(a))
-%				\]
-%		\end{itemize}	
-%	\end{proof}
-%	Il lemma appena dimostrato ci garantisce esistenza e unicit\`a di funzioni ricorsive finite - di lunghezza arbitraria fissata - che rispettano le stesse propriet\`a di $f$ nella tesi (ad eccezione del dominio naturalmente), vogliamo ora far vedere che esiste una funzione con tali propriet\`a con dominio tutto $\omega$.
-%	Introduciamo la formula $\Phi$:
-%	\[ \Phi(x,y) \Mydef \exists g \in {}^{s(x)}A \; \text{``tale che $g$ \`e una $x$-approssimazione''} \land\, g(x) = y
-%		\]
-%	Per l'unicit\`a delle $x$-approssimazioni possiamo scrivere $\forall x \in \omega \; \exists \textcolor{red}{!}\, y \; \Phi(x,y)$. Possiamo quindi finalmente definire $f$ per separazione in $\omega \times A$:
-%	\[ f := \{(x,y) \in \omega \times A | \Phi(x,y)\}\footnote{Di fatto stiamo costruendo $f$ con le ricorsioni finite - cio\`e $f$ manda $x$ nell'unico $y$ raggiungibile iterando la ricorsione $x$ volte, in altre parole \`e la successione delle ricorsioni troncate -, che per\`o ora sappiamo ci sono e sono uniche qualsiasi sia la lunghezza - quindi per infiniti valori di $x \in \omega$ -.}
-%		\]
-%	L'unicit\`a di $y$ osservata prima ci garantisce che $f$ \`e una funzione, occorre dunque verificare che soddisfi le propriet\`a richieste nella tesi.
-%	\begin{itemize}
-%		\item[$\boxed{f(0) = k}$] Abbiamo visto che esiste un'unica 0-approssimazione, $g = \{(0,k)\}$, e per definizione di $f$, abbiamo proprio che $f(0) = g(0) = k$.
-%		\item[$\boxed{f(s(n)) = h(n,f(n))}$] Segue per costruzione di $f$ che $f(s(n)) = g(s(n))$, con $g \in {}^{s(s(n))}A$ che \`e una $s(n)$-approssimazione, pertanto, $g(s(n)) = h(n,g(n))$,
-%		ora $g(n) = g_{|s(n)}(n)$ \`e una (l'unica) $n$-approssimazione per $h$ (lo si verifica facilmente), per cui, per definizione di $f$, $f(n) = g(n)$ e rimettendo tutto assieme si ottiene:
-%		\[ f(s(n)) = g(s(n)) = h(n,g(n)) = h(n,f(n))
-%			\]
-%	\end{itemize}
-%	Ci\`o dimostra che una $f$ ottenuta per separazione soddisfa la tesi del teorema di ricorsione numerabile.
-%	L'unicit\`a di $f$ segue facilmente per induzione, Date $f'$ e $f''$ che soddisfano la ricorsione abbiamo:
-%	\[ f'(0) = k = f''(0) \qquad f'(s(n)) = h(n,f'(n)) \overset{\text{Hp. indutt.}}{=} h(n,f''(n)) = f''(s(n))
-%		\]
-%	e per estensionalit\`a di funzioni si conclude che $f' = f''$.
-%\end{proof}
-%
-%Procedendo come negli esempi all'inizio di questa sezione, il \hyperref[ric1]{teorema di ricorsione numerabile} ci consente di costruire le operazioni aritmetiche, le potenze, etc.
-%A titolo di esempio, vediamo nel dettaglio, il caso della somma.
-%
-%\begin{example}
-%	[Costruzione di $+ : \omega \times \omega \rightarrow \omega$]
-%	Vogliamo formalizzare la definizione:
-%	\[ \begin{cases}
-%		a + \textcolor{red}{0} = 0\\
-%		a + \textcolor{red}{s(b)} = s(a+b)
-%	\end{cases}
-%		\]
-%	Per il \hyperref[ric1]{teorema di ricorsione numerabile} sappiamo che, per ogni $a \in \omega$ fissato, esiste un'unica $f : \omega \rightarrow \omega$ tale che:
-%	\[ f(\textcolor{red}{0}) = a \land \forall b \in \omega \; f(\textcolor{red}{s(b)}) = s(f(b))
-%		\]
-%	Scriviamo quindi:
-%	\[ a + x = y \Mydef \exists f \in {}^{\omega}\omega \;\; f(0) = a \; \land  \; f(x) = y \; \land \; \forall b \in \omega \; f(s(b)) = s(f(b))
-%		\]
-%\end{example}
-%
-%L'applicazione che segue chiude il conto che abbiamo lasciato aperto con gli assiomi di Peano. Dimostriamo che essi identificano un'unica struttura a meno di isomorfismi, quindi $\omega$ \`e 
-%a buon diritto, l'insieme dei numeri naturali.
-%
-%\begin{theorem}[Unicit\`a dei numeri naturali]
-%	Supponiamo che $(\NN, 0, \text{succ})$ soddisfi gli assiomi di Peano, allora $(\NN, 0, \text{succ})$ \textbf{e} $(\omega,\emptyset,s)$ sono strutture isomorfe - \textbf{ossia, formalmente, esiste}:
-%	$ f : \omega \rightarrow \NN$ \textbf{bigettiva} tale che:\footnote{Cio\`e gli assiomi di Peano hanno un unico modello a meno di isomorfismo di strutture.}
-%	\begin{enumerate}[(i)]
-%		\item $f(\emptyset) = 0$.
-%		\item $\forall n \in \omega \; f(s(n)) = \text{succ}(f(n))$.
-%	\end{enumerate}
-%\end{theorem}
-%
-%Fa comodo isolare la seguente osservazione.
-%
-%\begin{remark}[Ogni numero in $\omega\setminus\emptyset$ \`e successore]
-%	$\forall x \in \omega \; x \ne 0 \rightarrow \exists y \in \omega \; x = s(y)$, ovvero ogni numero diverso da 0 \`e il successore di qualcos'altro.
-%\end{remark}
-%
-%\begin{proof}
-%	Induzione su $x$. Il caso $x = 0$ \`e vero a vuoto (essendo la premessa sempre automaticamente falsa). Nel caso $x = s(m)$ basta prendere $y = m$ e si ha $x = s(y)$.
-%\end{proof}
-%
-%\begin{proof}
-%	Per il \hyperref[ric1]{teorema di ricorsione} (stiamo prendendo $A = \NN$, e $k = 0$ e $h = \text{succ}$) c'\`e un'unica $f$ che soddisfa le condizioni $f(\emptyset) = 0$ e $\forall n \in \omega \; f(s(n)) = \text{succ}(f(n))$.
-%	Resta da constatare che $f$ \`e bigettiva.
-%	\begin{itemize}
-%		\item[\boxed{\text{Surgettivit\`a}}] Per ipotesi $(\NN, 0, \text{succ})$ soddisfa gl assiomi di Peano, per cui vale il principio di induzione. Dimostriamo quindi per induzione in $(\NN, 0, \text{succ})$ la surgettivit\`a di $f$.
-%		\begin{itemize}
-%			\item[$\boxed{y = 0}$] Basta osservare che $f(\emptyset) = 0$ per costruzione.
-%			\item[$\boxed{y = \text{succ}(n)}$] Per ipotesi induttiva esiste $x \in \omega$ tale che $f(x) = n$, da cui si ottiene, per definizione di $f$ che $f(s(x)) = \text{succ}(n)$.
-%		\end{itemize}
-%		\item[\boxed{\text{Iniettivit\`a}}] Per assurdo supponiamo ci sia un elemento in $\omega$ con la stessa immagine di un altro. Sia $x :=\min\{n \in \omega | \exists y \in \omega \; f(n) = f(y)\}$, dunque, per minimalit\`a di $x$, esiste $y \in \omega$ con $y > x$, tale per cui $f(x) = f(y)$.
-%		Poich\'e $y > x$ si ha che $y > 0$, per cui $y = s(y')$ per qualche $y' \in \omega$, distinguiamo quindi due casi.
-%		\begin{itemize}
-%			\item[$\boxed{x = 0}$] In tal caso si deve avere che:
-%			\[
-%				\text{succ}(f(y')) \overset{\text{def. $f$}}{=} f(s(y'))
-%								   \overset{y = s(y')}{=} f(y)
-%								   \overset{\text{Hp. assurda}}{=} f(x) \overset{\text{def. $f$}}{=} 0
-%				\]
-%			per cui $0$ \`e successore di qualcosa in $\NN$, che \`e contro gli assiomi di Peano.
-%			\item[$\boxed{x \ne 0}$] Per l'osservazione possiamo scrivere $x = s(x')$, da cui:
-%			\[ \text{succ}(f(x')) \overset{\text{def. $f$}}{=} f(s(x')) = f(x) \overset{\text{Hp. assurda}}{=} f(y) = f(s(y')) \overset{\text{def. $f$}}{=} \text{succ}(f(y'))
-%				\]
-%			e dagli assiomi di Peano in $\NN$, per l'iniettivit\`a del successore, si ha $f(x') = f(y')$, con $x' < x$, per cui contro la minimalit\`a di $x \; \textcolor{red}\lightning$.
-%		\end{itemize}
-%	\end{itemize}
-%\end{proof}
-%
+\begin{note}
+D'ora in avanti, quando ci riferiamo a elementi di $\omega$, possiamo
+usare i simboli $\in$ e~$<$ intercambiabilmente. La scelta sar\`a basata
+unicamente sull'intento di comunicare al meglio il significato matematico
+delle formule che scriviamo. Per esempio, potremo scrivere $\forall {m<n}
+\dotsc$ in luogo di $\forall {m\in n} \dotsc$, \etc.
+
+Allo stesso modo, se non ci interessano i dettagli della codifica,
+scriveremo semplicemente $0$, $1$, $2$, \etc.\ per $\emptyset$,
+$s(\emptyset)$, $s(s(\emptyset))$, \etc.
+\end{note}
+
+\subsection{Induzione forte e principio del minimo}
+\ 
+
+\begin{theorem}
+	[Principio di induzione -- forma forte]
+	Data una formula insiemistica $\Phi(x)$, vale:
+	\[ (\forall {n \in \omega} (\forall {x < n} \; \Phi (x))
+\rightarrow \Phi(n)) \rightarrow \forall {n \in \omega} \; \Phi(n)
+	\]
+	{\drkgrn ``Se assumendo $\Phi(x)$ per tutti gli $x < n$, abbiamo $\Phi(n)$,
+allora $\Phi(n)$ \`e vera per tutti i numeri $n$''.}
+\end{theorem}
+
+\begin{remark}
+	Questa forma \`e ``forte'' perch\'e permette di assumere un'ipotesi induttiva pi\`u forte dell'induzione di Peano. In quella, infatti, si deve dedurre $\Phi(n)$ a 
+	partire da $\Phi$ del numero precedente. Qui, invece, possiamo far
+conto di sapere $\Phi$, non solo per il precedente, ma per tutti i numeri
+minori di~$n$.
+\end{remark}
+
+\begin{proof}
+Assumiamo
+\[ {\drkgrn \forall {n \in \omega} (\forall {x < n} \; \Phi (x)) \rightarrow
+\Phi(n)} \tag{$\star$} \]
+	Definiamo $\drkblu \Psi(m) \Mydef \forall x < m \; \Phi(x)$ e
+dimostriamo per induzione $\forall {m \in \omega} \; \Psi(m)$.
+
+{\drkred Caso $m=0$.} $\Psi(0) = \forall x < 0 \; \Phi(x)$ \`e vera a
+vuoto.
+
+{\drkred Caso $m = s(n)$.} L'ipotesi induttiva \`e $\drkgrn\Psi(m)$, ossia
+$\drkgrn\forall x < m \; \Phi(x)$. Dobbiamo dimostrare $\drkred\forall {x <
+s(m)}\; \Phi(x)$, che equivale a $\left(\forall {x<m}\;
+\Phi(x)\right)\land\Phi(m)$. Il primo congiunto \`e l'ipotesi induttiva,
+mentre $\Phi(m)$ si deduce dall'ipotesi induttiva via~($\star$).
+
+Abbiamo dimostrato $\forall {m \in \omega} \forall {x<m} \Phi(x)$: per
+ottenere la tesi, dato un
+$n\in\omega$ qualunque, basta prendere $m=s(n)$ e $x=n$.
+\end{proof}
+
+\begin{theorem}
+	[Principio del minimo]
+	Sia $A \subseteq \omega$. Se $A \ne \emptyset$ allora esiste $n
+\in A$ tale che $\forall x \in A \; n \leq x$.\\
+{\drkgrn ``Ogni sottoinsieme non vuoto di $\omega$ ha un minimo
+elemento''.}
+\end{theorem}
+
+\begin{proof}
+	Assumiamo che $A$ non abbia minimo: $\drkgrn \forall {n\in A}\exists {x
+\in A} x < n$. Dimostriamo per induzione forte che $\drkred \forall
+x\in\omega\;x\not\in A$, ossia che $A$ \`e vuoto. Per applicare l'induzione,
+dobbiamo dimostrare che, per ogni $n\in\omega$, vale $\drkred (\forall {x<n}\;x\not\in A)\rightarrow n\not\in
+A$. Questa \`e, per\`o, equivalente a
+	\begin{alignat*}{2}
+&&(\neg\exists {x < n} \; x \in A) &\to n \not \in A \\
+\iff&&\;\; (\neg\exists x \; x < n \land x \in A) &\to n \not \in A \\
+\iff&& (\neg\exists {x \in A} \; x < n) &\to n \not \in A \\
+\iff&& n \in A &\to \exists {x \in A} \; x < n
+	\end{alignat*}
+Che \`e l'assunto.
+\end{proof}
+
+\begin{definition}[Insieme ben ordinato]
+	Un insieme totalmente ordinato $(S, <)$ si dice \vocab{bene ordinato} se ogni sottoinsieme non vuoto ha un minimo.
+	\[ \forall {A \subseteq S} \; A \ne \emptyset \rightarrow \exists
+{m \in A} \; \forall {x \in A} \; m \leq x
+		\]
+\end{definition}
+
+La nozione di buon ordine \`e stata introdotta da Cantor agli albori della teoria degli insiemi, e giocher\`a un ruolo centrale in questo corso.
+
+\begin{example}
+	$(\omega, <)$ \`e un insieme bene ordinato.
+\end{example}
+
+\begin{exercise}
+	Dimostra che $X = s(s(s(\omega)))$ \`e bene ordinato dalla relazione $a < b \Mydef a \in b$.
+\end{exercise}
+
+\subsection{Ricorsione numerabile}
+La ricorsione \`e il procedimento per cui si costruisce una funzione
+$f\colon \omega \to \text{qualcosa}$ definendo $f(s(n))$ a partire da $f(n)$, o,
+pi\`u in generale da $f(0)\ldots f(n)$. Questo \`e un procedimento
+fondamentale: potremmo dire che \`e la via principale per precisare gli
+infidi puntini ($\ldots$) del \textit{cos\`i via}. Per esempio, a patto di
+dimostrare che l'oggetto costruito esiste ed \`e unico, abbiamo le
+seguenti definizioni.
+
+\begin{definition}[Operazioni aritmetiche]
+\ 
+\vskip-3\baselineskip
+	\begin{align*}
+	&\begin{cases}
+		a + {\drkred 0} = a \\
+		a + {\drkred s(b)} = s(a + b)
+	\end{cases}
+	&&
+	\begin{cases}
+		a \cdot {\drkred 0} = 0\\
+		a \cdot {\drkred s(b)} = a \cdot b + a
+	\end{cases}\\
+	&\text{\drkgrn Anzich\'e $a + b =
+\underbrace{s(s(}_{\mathclap{\text{$b$ successori}}}
+\ldots a \ldots\,))$}
+	&&
+	\text{\drkgrn Anzich\'e $a \cdot b = \underbrace{a + a + \ldots + a}_{\text{$b$
+volte}}$}
+	\end{align*}
+\end{definition}
+
+\begin{definition}[Potenza e fattoriale]\label{def-pot-fat}
+\ 
+\vskip-3\baselineskip
+	\begin{align*}
+	&\begin{cases}
+		a^{{\drkred 0}} = 1\\
+		a^{{\drkred s(b)}} = a^b \cdot a
+	\end{cases}
+	&&
+	\begin{cases}
+		{\drkred 0}! = 1\\
+		{\drkred s(a)}! = a! \cdot s(a)
+	\end{cases}\\
+	&\text{\drkgrn Anzich\'e
+$a^b = \underbrace{a \cdot a \cdot \ldots \cdot a}_{\text{$b$ volte}}$}
+	&&
+	\text{\drkgrn Anzich\'e
+$a! = 1 \cdot 2 \cdot \ldots \cdot (a - 1) \cdot a$}
+	\end{align*}
+\end{definition}
+
+\begin{definition}[Sommatoria]
+\ 
+\vskip-2\baselineskip
+	\[\begin{cases}
+		\displaystyle \mathrlap{\phantom{\sum}}\sum_{i = 0}^{{\drkred 0}} f(i) =
+0\qquad\qquad\text{\drkgrn Anzich\'e $\displaystyle\sum_{i = 0}^a f(i) = f(0) + f(1) + \ldots + f(a)$}\\
+		\displaystyle \mathrlap{\phantom{\sum^{\displaystyle\sum}}}\sum_{i = 0}^{{\drkred s(a)}} f(i) = \left(\sum_{i=0}^{a} f(i) \right) + f(s(a))
+	\end{cases}
+		\]
+\end{definition}
+
+Altre \vocab{successioni} -- \textbf{ossia funzioni con dominio $\omega$}
+-- sono definite nella maniera pi\`u naturale proprio per ricorsione.
+
+\begin{example}
+	In quanti modi posso coprire una sequenza di $n$ caselle
+$\overbrace{\square\!\square\!\square\!\square\!\square\ldots\square\!\square}^{n}$ con tessere di una o due caselle,
+	$\square$ e $\square\!\square$, che non si sovrappongano e non lascino caselle scoperte?
+\end{example}
+
+\begin{soln}
+	Detto $F_n$ il numero di ricoprimenti di una sequenza lunga $n$,
+vediamo che la tessera pi\`u a sinistra pu\`o essere $\square$ o
+$\square\!\square$. Nel primo caso, ci sono 
+	$F_{n-1}$ modi di completare il ricoprimento, nel secondo caso
+$F_{n-2}$. Quindi
+	\[ F_n = F_{n-1} + F_{n-2} \]
+e la sequenza risulta completamente determinata, per ricorsione, osservando che $F_0 = F_1 = 1$: sono i \vocab{numeri di Fibonacci}.
+\end{soln}
+
+Lo scopo di questa sezione \`e dimostrare esistenza e unicit\`a delle
+funzioni definite per ricorsione. {\drkred Attenzione: sarebbe sbagliato}
+dire che se esiste ed \`e unica $f(n)$ allora esiste ed \`e unica
+$f(s(n))$, quindi, per induzione, esiste ed \`e unica~$f$. Questo
+perch\'e, semplicemente, la frase precedente non ha senso: non si pu\`o scrivere nel linguaggio
+della teoria degli insiemi.
+Tuttavia, \textbf{in un certo senso, induzione e ricorsione sono due facce
+della stessa medaglia:} dove l'induzione dimostra $\Phi(s(n))$ assumendo di sapere 
+$\Phi(n)$, la ricorsione calcola $f(s(n))$ assumendo di sapere $f(n)$. Lo stesso parallelismo, vedremo, si presenter\`a per l'induzione e la ricorsione transfinita.
+O, tornando al numerabile, come abbiamo enunciato due forme
+dell'induzione, enunceremo anche due forme della ricorsione.
+
+Ci servir\`a la semplice osservazione che segue.
+
+\begin{remark}
+	[Estensionalit\`a per funzioni]
+	Date $f,g \colon A \to B$
+	\[ f = g \;\;\leftrightarrow\;\; \forall {x \in A} \; f(x) = g(x)
+		\]
+	{\drkgrn ``Due funzioni sono uguali precisamente quando assumono i medesimi
+valori''.}
+\end{remark}
+
+\begin{proof}
+	Per estensionalit\`a in quanto
+	\[ (x,y) \in f \;\iff\; y = f(x) \;\iff\; y = g(x) \;\iff\; (x,y) \in g
+		\]
+\vskip-\baselineskip
+\end{proof}
+
+\begin{notation}[Insieme delle funzioni da $A$ a $B$]
+	Indichiamo con ${}^{A}B$ l'insieme delle funzioni da $A$ a $B$,
+che esiste per \hyperref[ax3]{separazione} in~$\ps(A \times B)$.
+\end{notation}
+
+\begin{theorem}
+	[Ricorsione numerabile -- prima forma]
+	\label{ric1}
+	Dato un insieme $\drkgrn A$, un elemento $\drkgrn k \in A$ e una funzione
+	\[\drkgrn h \colon \omega \times A \to A
+		\]
+	esiste un'unica funzione $\drkred f \colon \omega \to A$ tale che:
+	\[{\drkred  f(0) = k \quad \land \quad \forall {n \in \omega}\;
+f(s(n)) = h(n,f(n))}
+		\]
+\end{theorem}
+
+\begin{example}
+	Possiamo giustificare la Definizione~\ref{def-pot-fat} come
+segue:\\
+	\hbox{}\hskip 2em per definire $a^b$ consideriamo $k = 1$ e $h(n,x) = a \cdot x$;\\
+	\hbox{}\hskip 2em per definire il fattoriale $k = 1$ e $h(n,x) = s(n) \cdot x$.
+\end{example}
+
+\begin{exercise}
+	Come potrei costruire $F_n$ usando questo teorema?
+\end{exercise}
+
+\begin{proof}
+{\drkgrn Il piano consiste nel trovare una formula $\Phi(x,y)$ che dice
+``$y = f(x)$'' -- questa \`e la vera difficolt\`a 
+della dimostrazione -- poi semplicemente otteniamo $f$ per separazione nell'insieme $\omega \times A$ usando la formula $\Phi$.
+La formula~$\Phi(x,y)$ dir\`a ``i primi $x$ passaggi della ricorsione, partendo da $k$, conducono a $y$''.}
+
+Fissiamo $A$, $k \in A$ e $h\colon \omega \times A \to A$.
+	Dato $x \in \omega$ diciamo che $g$ \`e una
+\vocab{$x$-approssimazione} se la vale la formula seguente:
+	\[ g \in {}^{s(x)}A \;\;\land\;\; 
+		g(0) = k \;\;\land\;\;
+		\forall {n < x} \; g(s(n)) = h(n,g(n)) \]
+{\drkgrn che dice che $g\colon\{0\dotsc x\}\to A$ soddisfa la definizione
+ricorsiva di~$f$ ristretta al dominio~$\{0\dotsc x\}$. Il vantaggio di
+tagliuzzare $f$ in $x$-approssimazioni \`e che cos\`i otteniamo un
+parametro,~$x$, su cui impostare un'induzione.}
+
+	\begin{lemma*}
+		$\forall {x \in \omega}\; \existsun g\;\text{``$g$ \`e una
+$x$-approssimazione''}$
+	\end{lemma*}
+
+	\begin{proof}
+		Induzione su~$x$.
+
+{\drkred Caso $x = 0$.} Basta osservare che l'unica $0$-approssimazione \`e la funzione $\{(0,k)\}$. Infatti il dominio
+			\`e $\{0\}$ per definizione e abbiamo l'unica condizione $g(0) = k$.
+
+{\drkred Caso $x = s(a)$.} Per ipotesi induttiva esiste un'unica
+$a$-approssimazione~$g$. Poniamo $g' = g \cup \{(s(a), h(a,g(a)))\}$,
+{\drkgrn ossia $g'(t)=g(t)$ per~$t\le a$ e $g'(s(a)) = h(a,g(a))$.}
+\`E immediato verificare che $g'$ \`e una $s(a)$-approssimazione.
+Per l'unicit\`a, date $g'$ e $g''$ due $s(a)$-approssimazioni, abbiamo
+dall'ipotesi induttiva che $g_{|s(a)}' = g = g_{|s(a)}''$, in quanto queste
+restrizioni sono $a$-approssimazioni. D'altro canto il dominio di $g'$
+e~$g''$ \`e $s(s(a)) = s(a)\cup\{s(a)\}$, resta quindi da verificare che
+$g'(s(a))=g''(s(a))$. Abbiamo:
+\begin{align*}
+g'(s(a)) \;=\; h(a,g'(a)) \;&=\; h(a,g'_{|s(a)}(a))\\
+&=\; h(a,g''_{|s(a)}(a)) \;=\; h(a,g''(a)) \;=\; g''(s(a))
+\end{align*}
+\vskip-\baselineskip
+\end{proof}
+	Stabilito il lemma, introduciamo la formula $\Phi$:
+	\[ {\drkblu \Phi(x,y)} \;\;\Mydef\;\; \exists {g \in {}^{s(x)}A}
+\; \text{``$g$ \`e una $x$-approssimazione''} \land g(x) = y
+		\]
+	Per l'unicit\`a delle $x$-approssimazioni
+$\forall {x \in \omega} \; \existsun y \; \Phi(x,y)$, abbiamo quindi una
+funzione~$f$ definita per separazione in $\omega \times A$:
+	\[ {\drkblu f} \;\;\Mydef\;\; \{(x,y) \in \omega \times A \,|\, \Phi(x,y)\} 
+\]
+
+Resta da verificare che $f$ soddisfa le condizioni della ricorsione.
+
+{\drkblu Condizione $f(0) = k$.} Immediata.
+
+{\drkblu Condizione $f(s(n)) = h(n,f(n))$.} Per costruzione, $f(s(n)) =
+g(s(n))$, con $g \in {}^{s(s(n))}A$ che \`e una $s(n)$-approssimazione. In
+particolare $g(s(n)) = h(n,g(n))$.
+		Ora, $g_{|s(n)}$ \`e una $n$-approssimazione, per cui
+$g(n) = g_{|s(n)}(n) = g(n)$, e rimettendo tutto assieme:
+		\[ f(s(n)) \;=\; g(s(n)) \;=\; h(n,g(n)) \;=\; h(n,f(n))
+			\]
+
+	L'unicit\`a di $f$ segue facilmente per induzione: date $f'$ e $f''$ che soddisfano la ricorsione abbiamo
+$\forall {n\in\omega}\; f'(n)=f''(n)$, infatti
+	\[ f'(0) \;=\; k \;=\; f''(0) \qquad f'(s(n)) \;=\; h(n,f'(n))
+\;=\; h(n,f''(n)) \;=\; f''(s(n))
+		\]
+	e si conclude
+	per l'estensionalit\`a delle funzioni.
+\end{proof}
+
+Il \hyperref[ric1]{teorema di ricorsione numerabile} dimostra che le
+definizioni date all'inizio di questa sezione sono ben poste.
+A titolo di esempio, vediamo nel dettaglio, il caso della somma.
+
+\begin{example}
+	[Costruzione di $+ \colon \omega \times \omega \to \omega$]
+	Vogliamo formalizzare la definizione:
+	\[ \begin{cases}
+		a + {\drkred 0} = 0\\
+		a + {\drkred s(b)} = s(a+b)
+	\end{cases}
+		\]
+	Per il \hyperref[ric1]{teorema di ricorsione numerabile} sappiamo
+che, per ogni $a \in \omega$ fissato, esiste un'unica $f \colon \omega \to \omega$ tale che:
+	\[ f({\drkred 0}) = a \;\land\; \forall {b \in \omega} \; f({\drkred s(b)}) = s(f(b))
+		\]
+	Abbiamo quindi una formula che definisce il~$+$:
+	\[ {\drkblu a + x = y} \;\;\Mydef\;\; \exists {f \in {}^{\omega}\omega} \;
+\big(\,f(0) = a \; \land  \; f(x) = y \; \land \; \forall {b \in \omega} \;
+f(s(b)) = s(f(b))\,\big)
+		\]
+	Da questa formula, se desideriamo, possiamo ricavare, per
+separazione, una
+funzione~$\drkblu +\subseteq\omega\times\omega$.
+\end{example}
+
+L'applicazione che segue chiude il conto che abbiamo lasciato aperto con
+gli assiomi di Peano. Dimostriamo che essi identificano un'unica struttura
+a meno di isomorfismi, quindi $\omega$ \`e, a buon diritto, l'insieme dei numeri naturali.
+
+\begin{theorem}\label{uninne}
+	Supponiamo che $(\NN, 0, \text{succ})$ soddisfi gli assiomi di
+Peano, allora {\drkblu $(\NN, 0, \text{succ})$ e $(\omega,\emptyset,s)$ sono
+strutture isomorfe} -- ossia, formalmente, esiste
+	$ f \colon \omega \to \NN$ bigettiva tale che
+\[f(\emptyset)\; =\; 0 \qquad\land\qquad\forall {n \in \omega} \; f(s(n))
+= \text{succ}(f(n))\]
+\end{theorem}
+
+Fa comodo isolare la seguente osservazione.
+
+\begin{remark}\label{zerononsuc}
+	$\forall {x \in \omega} \; x \ne 0 \rightarrow \exists
+{y\in\omega} \; x = s(y)$
+\end{remark}
+
+\begin{proof}
+	Induzione su $x$. Il caso $x = 0$ \`e vero a vuoto. Nel caso $x = s(m)$ basta prendere $y = m$ e si ha $x = s(y)$.
+{\drkgrn Ipotesi induttiva? Chi ha mai detto che vada usata?}
+\end{proof}
+
+\begin{proof}[Dimostrazione del Teorema~\ref{uninne}]
+	Per il \hyperref[ric1]{teorema di ricorsione} c'\`e un'unica $f$
+che soddisfa le condizioni $f(\emptyset) = 0$ e $\forall {n \in \omega} \; f(s(n)) = \text{succ}(f(n))$.
+	Resta da constatare che $f$ \`e bigettiva.
+
+{\drkblu Surgettivit\`a.} Per ipotesi $(\NN, 0, \text{succ})$ soddisfa gli
+assiomi di Peano, per cui ha il \textit{suo} principio di induzione.
+Dimostriamo per induzione in $(\NN, 0, \text{succ})$ che $\forall
+{y\in\NN} \;\exists {x\in\omega}\;y=f(x)$.
+
+{\drkred Caso $y = 0$.} Basta osservare che $f(\emptyset) = 0$ per costruzione.
+
+{\drkred Caso $y = \text{succ}(n)$.} Per ipotesi induttiva esiste $x \in
+\omega$ tale che $f(x) = n$.\\ Quindi $f(s(x)) = \text{succ}(n)=y$.
+
+{\drkblu Iniettivit\`a} Consideriamo, per assurdo, il minimo $x\in\omega$
+tale che esista $y\in\omega$ con $x\neq y$ ma $f(x)=f(y)$. Per la
+minimalit\`a, $x<y$, quindi, in particolare, $0<y$, e possiamo scrivere
+$y=s(y')$ per l'Osservazione~\ref{zerononsuc}. Si danno due casi. 
+
+{\drkred Caso $x = 0$.} Allora $0=f(x)=f(s(y'))=\text{succ}(f(y'))$,
+assurdo perch\'e l'assioma (b) su~$\NN$ dice che $0$ non pu\`o essere un
+successore.
+
+{\drkred Caso $x \ne 0$.} Per l'Osservazione~\ref{zerononsuc} possiamo scrivere $x = s(x')$, da cui:
+			\[ \text{succ}(f(x')) \;=\; f(s(x')) \;=\; f(x)
+\;=\; f(y) \;=\; f(s(y')) \;=\; \text{succ}(f(y'))
+				\]
+			e, per l'assioma~(a) in~$\NN$, abbiamo $f(x') =
+f(y')$. Tuttavia $x' < x$, e questo contraddice la minimalit\`a di $x$.
+\end{proof}
+
 %Se, infine, volgiamo la nostra attenzione all'esempio dei numeri di Fibonacci, vediamo che non \`e possibile definire questa sequenza applicando il \hyperref[ric1]{teorema di ricorsione}
 %in maniera diretta, perch\'e $F_n$ non dispense solo dal termine precedente della sequenza, $F_{n-1}$, ma anche da $F_{n-2}$. Ce la si potrebbe cavare con un trucco, per esempio definendo la funzione
 %$n \mapsto (F_n,F_{n+1})$ da $\omega$ a $\omega \times \omega$. \`E comodo, per\`o, disporre di una versione pi\`u versatile del teorema di ricorsione numerabile.
