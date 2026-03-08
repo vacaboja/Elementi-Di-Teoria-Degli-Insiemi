@@ -758,54 +758,57 @@ successore.
 f(y')$. Tuttavia $x' < x$, e questo contraddice la minimalit\`a di $x$.
 \end{proof}
 
-%Se, infine, volgiamo la nostra attenzione all'esempio dei numeri di Fibonacci, vediamo che non \`e possibile definire questa sequenza applicando il \hyperref[ric1]{teorema di ricorsione}
-%in maniera diretta, perch\'e $F_n$ non dispense solo dal termine precedente della sequenza, $F_{n-1}$, ma anche da $F_{n-2}$. Ce la si potrebbe cavare con un trucco, per esempio definendo la funzione
-%$n \mapsto (F_n,F_{n+1})$ da $\omega$ a $\omega \times \omega$. \`E comodo, per\`o, disporre di una versione pi\`u versatile del teorema di ricorsione numerabile.
-%
-%\begin{theorem}
-%	[Ricorsione numerabile - seconda forma]
-%	Dato un insieme $A$, denotiamo con $A^*$ il sottoinsieme delle funzioni con dominio un naturale, $A^* = \bigcup_{n \in \omega} {}^n A$.
-%	Sia $h : A^* \rightarrow A$, allora esiste un'unica funzione
-%	$f: \omega \rightarrow A$ tale che:
-%	\[ \forall n \in \omega \; f(n) = h(f_{|n})\,\footnote{In altre parole $f(n)$ pu\`o dipendere in maniera arbitraria dai valori assunti da $f$ su $n$, dove tale arbitrariet\`a \`e stabilit\`a da $h$, la 
-%	quale valuta una funzione, definita su un dominio finito, su alcuni suoi fissati - in funzione di $n$ - valori.}
-%		\]
-%\end{theorem}
-%
-%\textcolor{MidnightBlue}{L'idea \`e di definire, mediante la prima forma del \hyperref[ric1]{teorema di ricorsione}, la successione della troncata di $f$, ossia la funzione $f' : n \mapsto f_{|n}$, e da questa definire poi la $f$ voluta - un modo alternativo, sarebbe 
-%ripetere la dimostrazione della prima forma -.}
-%
-%\begin{proof}
-%	Definiamo per \hyperref[ric1]{ricorsione numerabile v.1} la successione delle ricorsioni date da $h$ troncate al valore $n$ - cio\`e $f'(s(n))$ \`e la funzione che fa la ricorsione determinata da $h$ fino ad $n$ -:
-%	\[ f' : \omega \to \textcolor{purple}{A^*} : \begin{cases}
-%		f'(0) = 0 \\
-%		f'(s(n)) = f'(n) \cup \{(n,h(f'(n)))\}
-%	\end{cases}
-%		\]
-%	che appunto esiste ed \`e unica per il teorema di ricorsione numerabile ed \`e la successione delle (funzioni) troncate della funzione che vogliamo costruire. \\
-%	Definiamo ora $f(n) := (f'(s(n)))(n) = h(f'(n))$ \textcolor{MidnightBlue}{- cio\`e $f$ calcolata al valore $n$-esimo \`e data dal valore della $n+1$-esima troncata della ricorsione determinata da $h$, calcolata in $n$ -}, in tal modo abbiamo che $f : \omega \to A$ esiste ed \`e unica (come conseguenza dell'esistenza e dell'unicit\`a di $f'$), pertanto non ci resta altro che verificare per induzione
-%	che effettivamente $f'$ sia la successione della troncata di $f$, cio\`e $\forall n \in \omega \; \textcolor{purple}{f_{|n} = f'(n)} \in A^*$ - in tal modo $h(f'(n)) = h(f_{|n})$ -.
-%	\begin{itemize}
-%		\item[$\boxed{n = 0}$] In tal caso si vede subito che $f_{|0} = \emptyset$, infatti qualsiasi funzione ristretta al vuoto d\`a il vuoto, d'altra parte, per costruzione, si ha anche che $f'(0) = 0$.
-%		\item[$\boxed{n = s(m)}$] Per ipotesi induttiva $f_{|m} = f'(m)$, vogliamo verificare che $f_{|s(m)} = f'(s(m))$:
-%		\begin{align*}
-%			f_{|s(m)} &= f_{|m} \cup \{(m,f(m))\} &&\text{(def. funzione)}\\
-%					  &= f'(m) \cup \{(m,f'(s(m))(m))\} &&\text{(Hp. indutt. + def. $f$)}\\
-%					  &= f'(m) \cup \{(m,h(f'(m)))\} = f'(s(m)) &&\text{(def. $f'$)}
-%		\end{align*}
-%	\end{itemize}
-%	Infine, quindi, $f(n) \overset{\text{def. $f$}}{=} f'(s(n))(n) \overset{\text{def. $f'$}}{=} h(f'(n)) \overset{\text{appena visto}}{=} h(f_{|n})$.
-%\end{proof}
-%
-%\begin{example}
-%	[Esempio di applicazione]
-%	Per costruire la successione di Fibonacci, definiamo $h(g)$ in questo modo. Sia $n = \Dom(g)$. Se $n = \emptyset$ o $n = 1$, allora $h(g) = 1$.
-%	Altrimenti esistono $n-1, n-2 \in \omega$ tali che $s(n-1) = s(s(n-2)) = n$. Definiamo quindi $h(g) = g(n-1) + g(n-2)$\footnote{Abbiamo quindi ottenuto $h$ come funzione di funzioni con dominio in $\omega$ e in particolare pi\`u piccolo di $n$, dunque per il teorema tale $h$ definisce univocamente $f(n)$, a partire da $f_{|n} \in A^*$.}.
-%\end{example}
-%
-%Abbiamo ora terminato di dimostrare le propriet\`a di base dei numeri naturali. Da qui, prende le mosse il corso di aritmetica. Nella prossima sezione, inizieremo
-%lo studio di un concetto squisitamente insiemistico: la cardinalit\`a.
-%
-%\begin{exercise}
-%	Dimostra commutativit\`a, associativit\`a, etc. di $+$ e $\cdot$.
-%\end{exercise}
+Se, infine, volgiamo la nostra attenzione all'esempio dei numeri di Fibonacci, vediamo che non \`e possibile definire questa sequenza applicando il \hyperref[ric1]{teorema di ricorsione}
+in maniera diretta, perch\'e $F_n$ non dispense solo dal termine precedente della sequenza, $F_{n-1}$, ma anche da $F_{n-2}$. Ce la si potrebbe cavare con un trucco, per esempio definendo la funzione
+$n \mapsto (F_n,F_{n+1})$ da $\omega$ a $\omega \times \omega$. \`E comodo, per\`o, disporre di una versione pi\`u versatile del teorema di ricorsione numerabile.
+
+\begin{theorem}\label{ric2}
+	[Ricorsione numerabile -- seconda forma]
+	Dato un insieme $A$, denotiamo con $A^*$ l'insieme delle
+funzioni~$g\subseteq\omega\times A$ con $\Dom(g)\in\omega$, dette
+\vocab{sequenze finite} di elementi di~$A$. Sia $h \colon A^* \to A$, allora esiste un'unica funzione
+	$f\colon \omega \to A$ tale che:
+	\[ \forall {n \in \omega} \; f(n) = h(f_{|n})\ \]
+{\drkgrn In altre parole, $f(n)$ pu\`o dipendere in maniera arbitraria dai valori
+assunti da $f$ sui numeri minori di~$n$.}
+\end{theorem}
+
+\begin{example}
+	Per costruire i Fibonacci, definiamo $h(g)$ in questo modo. Sia $n
+= \Dom(g)$. Se $n = 0$ o $n = 1$, allora $h(g) = 1$.
+	Altrimenti esistono $n-1, n-2 \in \omega$ tali che $s(n-1) =
+s(s(n-2)) = n$. Definiamo quindi $h(g) = g(n-1) + g(n-2)$.
+\end{example}
+
+\begin{proof}[Dimostrazione di~\ref{ric2}]
+{\drkgrn L'idea \`e di definire, mediante la prima forma del
+\hyperref[ric1]{teorema di ricorsione}, la successione delle troncate di
+$f$, ossia la funzione $f' \colon n \mapsto f_{|n}$ -- un modo alternativo sarebbe 
+procedere come nella dimostrazione della prima forma.}
+
+Costruiamo per \hyperref[ric1]{ricorsione numerabile v.1} la
+funzione $f'\colon\omega\to A^\star$ tale che
+ \[ f'(0) = \emptyset \qquad f'(s(n)) \;=\; f'(n) \;\cup\;
+\{\,(n,h(f'(n)))\,\} \]
+Poniamo $f(n) = h(f'(n))$.
+
+Basta verificare che $\drkred \forall {n \in \omega} \; f_{|n} = f'(n)$, ne segue
+infatti
+\[ f(n) \;=\; h(f'(n)) \;=\; h(f_{|n})\]
+che \`e la tesi. Svolgiamo la verifica per induzione.
+
+{\drkred Caso $n = 0$.} Immediato.
+
+{\drkred Caso $n = s(m)$.} L'ipotesi induttiva \`e $\drkgrn f_{|m} =
+f'(m)$.
+\[ f_{|s(m)} \;=\; f_{|m} \cup \{(m,f(m))\} \;=\; f'(m) \cup
+\{(m,h(f'(m)))\} \;=\; f'(s(m)) \]
+\vskip-\baselineskip
+\end{proof}
+
+Abbiamo ora terminato di dimostrare le propriet\`a di base dei numeri naturali. Da qui, prende le mosse il corso di aritmetica. Nella prossima sezione, inizieremo
+lo studio di un concetto squisitamente insiemistico: la cardinalit\`a.
+
+\begin{exercise}
+	Dimostra commutativit\`a, associativit\`a, etc. di $+$ e $\cdot$.
+\end{exercise}
