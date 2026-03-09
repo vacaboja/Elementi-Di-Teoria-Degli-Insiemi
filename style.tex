@@ -87,7 +87,7 @@
 \declaretheoremstyle[
   headfont=\bfseries,
   mdframed={style=mdbluebox},
-  headpunct={\\[3pt]},
+  headpunct={\\},
   postheadspace={0pt}
 ]{thmbluebox}
 
@@ -102,7 +102,7 @@
 \declaretheoremstyle[
   headfont=\bfseries\color{red!60!black!90!yellow},
   mdframed={style=mdrosebox},
-  headpunct={\\[3pt]},
+  headpunct={\\},
   postheadspace={0pt}
 ]{thmrosebox}
 
@@ -115,7 +115,7 @@
 \declaretheoremstyle[
   headfont=\bfseries,
   mdframed={style=mdredbox},
-  headpunct={\\[3pt]},
+  headpunct={\\},
   postheadspace={0pt},
 ]{thmredbox}
 
@@ -127,11 +127,13 @@
   bottomline=false,
   linecolor=ForestGreen,
   backgroundcolor=green!40!black!5,
+  nobreak=true
 }
 \declaretheoremstyle[
   headfont=\bfseries\color{green!40!black!95},
   mdframed={style=mdgreenbox},
-  headpunct={ --- },
+  headpunct={\\},
+  postheadspace={0pt},
 ]{thmgreenbox}
 
 \mdfdefinestyle{mdpurplebox}{
@@ -140,12 +142,13 @@
   linewidth=1pt,
   nobreak=true,
   linecolor=blue!60!black!90!green,
-  backgroundcolor=blue!60!black!90!green!5
+  backgroundcolor=blue!60!black!90!green!5,
+  nobreak=true
 }  
 \declaretheoremstyle[
   headfont=\bfseries\color{blue!60!black!90!green},
   mdframed={style=mdpurplebox},
-  headpunct={\\[3pt]},
+  headpunct={\\},
   postheadspace={0pt}
 ]{thmpurplebox}
 
@@ -156,16 +159,20 @@
   topline=false,
   bottomline=false,
   linecolor=black,
+  nobreak=true
 }
 \declaretheoremstyle[
   headfont=\bfseries,
   mdframed={style=mdblackbox},
-  headpunct={ --- },
+  headpunct={\\},
+  postheadspace={0pt},
 ]{thmblackbox}
 
 \declaretheoremstyle[
   headfont=\normalfont\bfseries,
   bodyfont=\normalfont,
+  headpunct={\\},
+  postheadspace={0pt},
 ]{basehead}
 
 % box rounded
@@ -294,3 +301,10 @@
 \let\lightning\Lightning
 \def\etc{\&c}
 \def\union{{\textstyle\bigcup}\,}
+
+\def\mouse{\raisebox{0pt}[0pt][0pt]{%
+\begin{tikzpicture}[scale=.1, baseline=-.5ex]
+\fill (0,0) circle (2);
+\fill (-1.8,2) circle (1);
+\fill (1.8,2) circle (1);
+\end{tikzpicture}}}
