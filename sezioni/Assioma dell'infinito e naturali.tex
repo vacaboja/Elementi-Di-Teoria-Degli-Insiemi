@@ -734,8 +734,7 @@ che soddisfa le condizioni $f(\emptyset) = 0$ e $\forall {n \in \omega} \; f(s(n
 
 {\drkblu Surgettivit\`a.} Per ipotesi $(\NN, 0, \text{succ})$ soddisfa gli
 assiomi di Peano, per cui ha il \textit{suo} principio di induzione.
-Dimostriamo per induzione in $(\NN, 0, \text{succ})$ che $\forall
-{y\in\NN} \;\exists {x\in\omega}\;y=f(x)$.
+Dimostriamo $\forall {y\in\NN} \;\exists {x\in\omega}\;y=f(x)$ per induzione in~$(\NN, 0, \text{succ})$.
 
 {\drkred Caso $y = 0$.} Basta osservare che $f(\emptyset) = 0$ per costruzione.
 
@@ -763,8 +762,7 @@ Se, infine, volgiamo la nostra attenzione all'esempio dei numeri di Fibonacci, v
 in maniera diretta, perch\'e $F_n$ non dispense solo dal termine precedente della sequenza, $F_{n-1}$, ma anche da $F_{n-2}$. Ce la si potrebbe cavare con un trucco, per esempio definendo la funzione
 $n \mapsto (F_n,F_{n+1})$ da $\omega$ a $\omega \times \omega$. \`E comodo, per\`o, disporre di una versione pi\`u versatile del teorema di ricorsione numerabile.
 
-\begin{theorem}\label{ric2}
-	[Ricorsione numerabile -- seconda forma]
+\begin{theorem}[Ricorsione numerabile -- seconda forma]\label{ric2}
 	Dato un insieme $A$, denotiamo con $A^*$ l'insieme delle
 funzioni~$g\subseteq\omega\times A$ con $\Dom(g)\in\omega$, dette
 \vocab{sequenze finite} di elementi di~$A$. Sia $h \colon A^* \to A$, allora esiste un'unica funzione
