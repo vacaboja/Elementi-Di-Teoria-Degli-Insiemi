@@ -4,115 +4,134 @@ una corrispondenza biunivoca fra di essi.
 
 \begin{definition}[Equipotenza/Cardinalit\`a]
 	Dati due insiemi $A$ e $B$:
-	\[ |A| = |B| \Mydef \exists f \in {}^A B \; \text{``$f$ \`e bigettiva $A \rightarrow B$''}
-		\]
-	diciamo anche che ``$A$ ha la stessa \vocab{cardinalit\`a} di $B$'' o che ``$A$ e $B$ sono \vocab{equipotenti}''. Poniamo inoltre:
-	\[ |A| \leq |B| \Mydef \exists B' \subseteq B \; |A| = |B'| 
-		\]
-	ossia $\exists f \in {}^A B$ ``$f$ \`e iniettiva'' (la definizione ci dice proprio che esiste un sottoinsieme di $B$ che \`e in bigezione con $A$, e per definizione di iniettivit\`a, si ha proprio che $A \hookrightarrow B$)\footnote{Tale relazione sar\`a anche una relazione di ordine tra cardinalit\`a quando queste ultime saranno singoli oggetti della teoria.}.
+\begin{align*}
+{\drkblu |A| = |B|} \;\;\Mydef\;\;& \exists {f \in {}^A B} \;\; \text{``$f$ \`e bigettiva $A \to B$''}\\[-\jot]
+\text{\drkgrn ``$A$ ha la stessa \vocab{cardinalit\`a} di $B$''}\phantom{\;\;\Mydef\;\;}&\\[-\jot]
+\text{\drkgrn ``$A$ e $B$ sono \vocab{equipotenti}''}\phantom{\;\;\Mydef\;\;}&\\[-\jot]
+\\[-\jot]
+{\drkblu |A| \leq |B|} \;\;\Mydef\;\;& \exists {B' \subseteq B} \; |A| = |B'|\\[-\jot]
+\text{\drkgrn ossia:}\;&\exists {f \in {}^A B} \;\;\text{``$f$ \`e iniettiva''}
+\end{align*}
 \end{definition}
 
-\begin{note}[Sulla notazione per le cardinalit\`a]
-	Osserviamo che:
+\begin{note}
+\ 
+\vskip-3\baselineskip
+\ 
 	\begin{itemize}
-		\item La scrittura $|A| = |B|$ suggerisce che esistono insiemi - o oggetti di qualche genere - denotati $|A|$ e $|B|$ di cui si predica l'uguaglianza.
-		Effettivamente costruiamo questi oggetti, ma, per ora, la scrittura $|A| = |B|$ \`e inscindibile, come \ding{168}$[A,B)$ (nel senso che per ora \`e solo un'abbreviazione per dire bigezione, pertanto non possiamo separare quei simboli o farci qualcosa).
-		\item Potrebbe sorgere il sospetto che se $|A|\textcolor{red}{<}|B|$ quando $A \subsetneq B$, ma non \`e cos\`i, come mostra l'esempio di $A = \{x \in \omega | x > 0\}$ e $B = \omega$, infatti $A \subsetneq B$, ma $|A| = |B|$.
+		\item La scrittura $|A| = |B|$ suggerisce che esistano insiemi -- o, comunuqe, oggetti di qualche genere -- denotati $|A|$ e~$|B|$ di cui si predica l'uguaglianza.
+		Effettivamente costruiamo questi oggetti, ma, per ora, la
+scrittura $|A| = |B|$ \`e inscindibile, come $\mouse(A,B)$.
+		\item Ci sentiremo liberi di scrivere
+$|A|\ge|B|$ e $|A|\neq|B|$ per indicare $|B|\le|A|$ e~$\neg\,|A|=|B|$
+rispettivamente.
+		\item Se $A\subseteq B$ vale anche $|A|\le|B|$. Tuttavia,
+se $A \subsetneq B$ non \`e detto che valga la
+disuguaglianza stretta~$|A|<|B|$, come mostra l'esempio di $A = \{x \in \omega | x > 0\}$ e $B = \omega$.
 	\end{itemize}
 \end{note}
 
-\begin{remark}[Propriet\`a formali di una relazione di equivalenza]
-	La relazione $|\cdot| = |\cdot|$ soddisfa le propriet\`a formali di una relazione di equivalenza (ma per ora NON lo \`e\footnote{Potrebbe tuttavia essere pensata come una relazione di equivalenza su $V$ (la classe di tutti gli insiemi).}):
-	\begin{itemize}
-		\item \textbf{riflessivit\`a}: $|A| = |A|$.
-		\item \textbf{simmetria}: $|A| = |B| \rightarrow |B| = |A|$.
-		\item \textbf{transitivit\`a}: $|A| = |B| \land |B| = |C| \rightarrow |A| = |C|$.
-	\end{itemize}
+\begin{remark}
+	La relazione $|\cdot| = |\cdot|$ soddisfa le propriet\`a formali
+di una relazione di equivalenza:\\
+{\drkblu Riflessivit\`a:} $|A| = |A|$.\\
+{\drkblu Simmetria:} $|A| = |B| \rightarrow |B| = |A|$.\\
+{\drkblu Transitivit\`a:} $|A| = |B| \land |B| = |C| \rightarrow |A| = |C|$.
 \end{remark}
 
 \begin{exercise}
 	Dimostrare l'osservazione.
 \end{exercise}
 
-\begin{soln}
-Per la riflessivit\`a basta osservare che $\id_A$ \`e una bigezione da $A$ in $A$. Per la simmetria, abbiamo visto che se $f : A \rightarrow B$ \`e iniettiva, allora ammette
-inversa $g : \Imm(f) \rightarrow A$ a sua volta iniettiva (e surgettiva poich\'e ha necessariamente come immagine tutto $A$), inoltre, essendo $f$ bigettiva si ha che $\Imm(f) = B$, quindi $g : B \rightarrow A$, e 
-per quanto detto \`e bigettiva, dunque nel linguaggio della cardinalit\`a $|B| = |A|$.\\
-Infine, $|A| = |B| \iff \exists f : A \rightarrow B$ bigettiva, $|B| = |C| \iff \exists g : B \rightarrow C$ bigettiva, ora \`e sufficiente osservare che $g \circ f : A \rightarrow C$ \`e bigettiva in quanto composizione di funzioni bigettive\footnote{\`E una semplice verifica.}, per avere $|A| = |C|$.
-\end{soln}
-
-\begin{remark}[Propriet\`a formali $\lbrack$parziali$\rbrack$ di una relazione di ordine $\lbrack$largo$\rbrack$]
-	La relazione $|\cdot| \leq |\cdot|$ soddisfa\footnote{Tali propriet\`a, unite al teorema di Cantor-Bernstein, che stiamo per vedere, ci danno una relazione di ordine totale su $V$.}:
-	\begin{itemize}
-		\item \textbf{riflessivit\`a}: $|A| \leq |A|$.
-		\item \textbf{transitivit\`a}: $|A| \leq |B| \land |B| \leq |C| \rightarrow |A| \leq |C|$.
-	\end{itemize}
+\begin{remark}
+	La relazione $|\cdot| \leq |\cdot|$ soddisfa:\\
+{\drkblu Riflessivit\`a:} $|A| \leq |A|$.\\
+{\drkblu Transitivit\`a:} $|A| \leq |B| \land |B| \leq |C| \rightarrow |A|
+\leq |C|$.\\
+\`E inoltre {\drkblu compatibile con la relazione~$|\cdot| = |\cdot|$:}
+$|A|=|B|\rightarrow |A|\le|B|$.
 \end{remark}
 
 \begin{exercise}
 	Dimostrare l'osservazione.
 \end{exercise}
 
-\begin{soln}
-Per la riflessivit\`a basta osservare che $\id_A$ \`e in particolare una mappa iniettiva (oppure che $A$ \`e un sottoinsieme [improprio] di se stesso e quindi l'identit\`a \`e la bigezione richiesta dalla definizione).
-Per la transitivit\`a $|A| \leq |B| \iff \exists A \hookrightarrow B$, $|B| \leq |C| \iff \exists g : B \hookrightarrow C$, e osservando che la composizione di funzioni iniettive \`e iniettiva, si ha che $g \circ f : A \rightarrow C$ \`e iniettiva $\iff |A| \leq |C|$.
-\end{soln}
-
-Per stabilire che le cardinalit\`a sono, formalmente, ordinate dalla relazione $|\cdot| \leq |\cdot|$, ci manca l'antisimmetria, che \`e appunto enunciata dal teorema seguente.
+Per stabilire che le cardinalit\`a sono, formalmente, ordinate dalla
+relazione $|\cdot| \leq |\cdot|$, ci manca l'antisimmetria, e questo \`e
+l'enunciato del teorema di Cantor-Bernstein.
 
 \subsection{Teorema di Cantor-Bernstein}
+\ 
 
 \begin{theorem}
 	[Cantor-Bernstein]
 	\label{CB}
-	Se c'\`e una funzione iniettiva $A \rightarrow B$ e una funzione iniettiva $B \rightarrow A$, allora esiste una bigezione fra $A$ e $B$.
-	\[ \forall A,B (|A| \leq |B| \land |B| \leq |A|) \rightarrow |A| = |B|
+\ 
+\vskip-2\baselineskip
+	\[ \forall {A,B} \;\; (|A| \leq |B| \land |B| \leq |A|)
+\;\rightarrow\; |A| = |B|
 		\]
+	{\drkgrn Se c'\`e una funzione iniettiva $A \rightarrow B$ e una
+funzione iniettiva $B \rightarrow A$, allora esiste una bigezione fra $A$
+e $B$.}
 \end{theorem}
 
 \begin{proof}
-	Per ipotesi abbiamo quindi $f: A \rightarrow B$ e $g: B \rightarrow A$ iniettive. Il nostro obiettivo \`e costruire una nuova funzione $h : A \rightarrow B$ bigettiva.\\
-	\textcolor{MidnightBlue}{L'idea \`e che ogni elemento, poniamo, di $A$, \`e una tappa di un percorso:
-	\[ a \overset{f}{\to} f(a) \overset{g}{\to} g(f(a)) \overset{f}{\to} f(g(f(a))) \overset{g}{\to} \dots
+	Siano $f\colon A \to B$ e $g\colon B \to A$ iniettive. Il nostro
+obiettivo \`e costruire una nuova funzione $h \colon A \to B$ bigettiva.
+
+{\def\maf{\;\;{\color{violet} \overset{f}{\mapsto}}\;\;}
+\def\mag{\;\;{\color{blue!50!cyan} \overset{g}{\mapsto}}\;\;}
+\drkgrn L'idea \`e che ogni elemento, poniamo, di $A$, \`e una tappa di un percorso:
+\[\color{black} a \maf f(a) \mag g(f(a)) \maf f(g(f(a))) \mag \dots \]
+	Siccome $f$ e $g$ sono iniettive, questo percorso ha altres\`i
+un'unica estensione all'indietro:
+	\[ \drkred \dots\mag f^{-1}(g^{-1}(a)) \maf g^{-1}(a) \mag
+\color{black} a \maf f(a) \mag g(f(a)) \maf f(g(f(a)))
+\mag \dots
 		\]
-	Siccome $f$ e $g$ sono iniettive, questo percorso ha altres\`i un'unica estensione all'indietro - sappiamo che se le funzioni sono iniettive, allora ammettono un'inversa iniettiva (e surgettiva verso l'insieme di partenza),
-	dunque possiamo sempre tornare indietro in modo unico, estendendo quindi il nostro percorso anche nell'altra direzione:
-	\[ \ldots\overset{g}{\to}\textcolor{red}{f^{-1}(g^{-1}(a))} \overset{f}{\to} \textcolor{red}{g^{-1}(a)} \overset{g}{\to} a \overset{f}{\to} f(a) \overset{g}{\to} g(f(a)) \overset{f}{\to} f(g(f(a))) \overset{g}{\to} \ldots
-		\]
-	a patto che $a \in \Imm(g)$ (poich\'e $g^{-1} : A \supseteq \Imm(g) \to B$ - ed \`e bigettiva), $g^{-1}(a) \in \Imm(f)$, etc. Quando, e se, non possiamo pi\`u applicare la funzione inversa, il percorso (all'indietro) si interrompe.
-	Con questa catena di composizioni osserviamo che ci sono quindi solo tre tipi di percorsi possibili:
+	a patto che $a \in \Imm(g)$), $g^{-1}(a) \in \Imm(f)$, \etc. Quando, e se, non possiamo pi\`u applicare la funzione inversa, il percorso all'indietro si interrompe.
+	Ci sono quindi solo tre tipi di percorsi possibili:
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=12.5cm]{immagini/cantor-ber1a.png}
+		\includegraphics[width=\textwidth]{immagini/cantor-ber1a.png}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=12.5cm]{immagini/cantor-ber1b.png}
+		\includegraphics[width=\textwidth]{immagini/cantor-ber1b.png}
 	\end{figure}
-	Per gli elementi che si trovano su un percorso circolare, o su un percorso illimitato avanti e indietro, $f$ fornisce una bigezione, come la fornirebbe anche $g^{-1}$ - la scelta \`e arbitraria a patto di 
-	usare la medesima funzione per l'intero percorso - nel modo seguente\footnote{Informalmente, se siamo in uno dei due casi, allora $f$ \`e per forza una mappa bigettiva, perch\'e \`e iniettiva e ``prende'' tutti gli elementi in arrivo, idem $g^{-1}$.}:
+	Per gli elementi che si trovano su un percorso circolare, o su un
+percorso illimitato avanti e indietro, $f$ fornisce una bigezione, come la
+fornirebbe anche $g^{-1}$ -- la scelta \`e arbitraria a patto di 
+	usare la medesima funzione per l'intero percorso.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=12.5cm]{immagini/cantor-ber2a.png}
+		\includegraphics[width=\textwidth]{immagini/cantor-ber2a.png}
 	\end{figure}
+\vskip-.7cm
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=11.5cm]{immagini/cantor-ber2b.png}
+		\includegraphics[width=\textwidth]{immagini/cantor-ber2b.png}
 	\end{figure}
 	Per i percorsi illimitati solo in avanti, occorre invece vedere in quale insieme sta l'elemento iniziale del percorso: se questo \`e in $A$, la bigezione \`e data da $f$,
 	altrimenti se sta in $B$ la bigezione \`e data da $g^{-1}$.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=12.5cm]{immagini/cantor-ber3.png}
+		\includegraphics[width=\textwidth]{immagini/cantor-ber3.png}
 	\end{figure}
-	Per comodit\`a poniamo quindi $h(x) = f(x)$ in ogni caso, eccetto quando $x$ \`e lungo un percorso che parte da $B$, nel cui caso poniamo $h(x) = g^{-1}(x)$.}\\
-	Formalmente, definiamo per \hyperref[ric1]{ricorsione} (prima forma) le seguenti successioni di sottoinsiemi di $B$ e $A$ rispettivamente - ossia, tecnicamente, la funzione $\omega \rightarrow \ps(B) \times \ps(A) : i \mapsto (B_i,A_i)$, con:
+	Per comodit\`a poniamo quindi $h(x) = f(x)$ in ogni caso, eccetto quando $x$ \`e lungo un percorso che parte da $B$, nel cui caso poniamo $h(x) = g^{-1}(x)$.}
+
+	Formalmente, definiamo per \hyperref[ric1]{ricorsione} le seguenti
+successioni di sottoinsiemi di $B$ e $A$ rispettivamente -- ossia,
+tecnicamente, la funzione $\omega \to \ps(B) \times \ps(A) \colon i
+\mapsto (B_i,A_i)$.
 	\[ B_0 = B \setminus\Imm(f) \qquad A_i = g[B_i] \qquad B_{s(i)} = f[A_i]
 		\]
 	Definiamo quindi:
-	\[ B_* = \bigcup_{i \in \omega}B_i \Mydef \bigcup\{B_i | i \in \omega\} \qquad A_* = \bigcup_{i \in \omega} A_i
+	\[ B_* = {\drkred \bigcup_{i \in \omega}B_i} \Mydef \bigcup\{B_i | i \in \omega\} \qquad A_* = \bigcup_{i \in \omega} A_i
 		\]
-	Questi sono i punti che appartengono a cammini che partono da $B$, definiamo quindi $h : A \rightarrow B$ e $k : B \rightarrow A$ come segue:
+	Gli elementi di $B_*$ e~$A_*$ sono i punti appartenenti a cammini
+che partono da $B$, definiamo quindi $h\colon A \to B$ e $k\colon B \to A$ come segue:
 	\[ h(x) = \begin{cases}
 		g^{-1}(x) &\text{se $x \in A_*$}\\
 		f(x) &\text{altrimenti}
@@ -123,134 +142,149 @@ Per stabilire che le cardinalit\`a sono, formalmente, ordinate dalla relazione $
 		f^{-1}(y) &\text{altrimenti}
 	\end{cases}
 		\]
-	\textcolor{purple}{queste mappe coprono tutti i casi  possibili, infatti, i percorsi ciclici e illimitati da entrambe le parti sono coperti da $k = f^{-1}$ ed $h = g^{-1}$, mentre nel caso di percorsi che partono da $B$ e sono limitati a sinistra [all'indietro], ovvero con primo elemento in $B^*$ abbiamo che $k(y) = g(y)$,
-	invece nel caso simmetrico, in cui si parte da $A$ con percorso limitato a sinistra (quindi $x \not \in A_*$) si ha $h(x) = f(x)$, in tal modo prendiamo tutti gli elementi di entrambi gli insiemi, ed essendo che $f$ e $g$ sono iniettive, per ipotesi, non rischiamo sovrapposizioni ed otteniamo proprio delle bigezioni.}\\
-	Ci basta quindi dimostrare che $h$ e $k$ sono ben definite, $k \circ h = \id_A$ e $h \circ k = \id_B$, in tal modo avremo la nostra bigezione (e la sua inversa).
-	\begin{itemize}
-		\item[$\boxed{\text{$h$ e $k$ ben definite}}$] Occorre verificare che stiamo applicando $g^{-1}$ e $f^{-1}$ a elementi della immagine di $g$ e $f$ rispettivamente.
+	Ci basta dimostrare che $h$ e $k$ sono ben definite, $k \circ h = \id_A$ e $h \circ k = \id_B$.
+
+{\drkblu Buona definizione di $h$ e $k$.} Occorre verificare che stiamo applicando $g^{-1}$ e $f^{-1}$ a elementi della immagine di $g$ e $f$ rispettivamente.
 		Nella definizione di $h$, se $x \in A_*$, allora $x \in A_i$, per qualche $i \in \omega$, quindi $x \in g[B_i] \subseteq \Imm(g)$. Nella definizione di $k$, se $y \not \in B_*$, in particolare,
 		$y \not \in B_0$, per cui $y \in \Imm(f)$.
-		\item[$\boxed{k \circ h = \id_A}$] Se $x \in A_*$, allora $x \in A_i$, per qualche $i \in \omega$, quindi $x = g(y)$, con $y \in B_i$, per cui $k(h(y)) = k(g^{-1}(x)) = k(y) = g(y) = x$ (abbiamo usato che $y = g^{-1}(x) \in B_*$ per quanto supposto sopra).\\
+
+{\drkblu $k \circ h = \id_A$.} Se $x \in A_*$, allora $x \in A_i$, per qualche $i \in \omega$, quindi $x = g(y)$, con $y \in B_i$, per cui $k(h(x)) = k(g^{-1}(x)) = k(y) = g(y) = x$.
 		Per il caso $x \not \in A_*$, osserviamo, intanto, che $x \not \in A_* \implies f(x) \not \in B_*$. Infatti, se $f(x) \in B_i$, con $i \in \omega$, allora $i \ne 0$, perch\'e $B_0 = B \setminus \Imm(f)$, quindi possiamo scrivere $i = s(j)$, 
-		e $f(x) \in B_{s(j)} = f[A_j]$. Per l'iniettivit\`a di $f$, abbiamo allora $x \in A_j \;\lightning$\\
-		Di conseguenza, se $x \not \in A_*$, $k(h(x)) = k(f(x)) \overset{f(x) \not \in B_*}{=} f^{-1}(f(x)) = x$.
-		\item[$\boxed{h \circ k = \id_B}$] Se $y \in B_*$, allora $y \in B_i$, per qualche $i \in \omega$, quindi $g(y) \in A_i$. Di conseguenza $h(k(y)) = h(g(y)) = g^{-1}(g(y)) = y$. Altrimenti $y \not \in B_*$ e, se $f^{-1}(y)\in A_*$, avremmo una contraddizione,
+		e $f(x) \in B_{s(j)} = f[A_j]$. Per l'iniettivit\`a di
+$f$, abbiamo allora $x \in A_j \;\lightning\,$
+		Di conseguenza, se $x \not \in A_*$, $k(h(x)) = k(f(x)) = f^{-1}(f(x)) = x$.
+
+{\drkblu $h \circ k = \id_B$.} Se $y \in B_*$, allora $y \in B_i$, per qualche $i \in \omega$, quindi $g(y) \in A_i$. Di conseguenza $h(k(y)) = h(g(y)) = g^{-1}(g(y)) = y$. Altrimenti $y \not \in B_*$ e, se $f^{-1}(y)\in A_*$, avremmo una contraddizione,
 		perch\'e $f^{-1}(y) \in A_i \rightarrow y = f(f^{-1}(y)) \in A_{s(i)}$. Quindi $h(k(y)) = h(f^{-1}(y)) = f(f^{-1}(y)) = y$.
-	\end{itemize}
 \end{proof}
 
 Visto che $|\cdot|\leq|\cdot|$ ha le propriet\`a formali di una relazione d'ordine fra le classi di equivalenza della relazione $|\cdot| = |\cdot|$, possiamo definire il corrispondente ordine stretto.
 
-\begin{definition}[Ordinamento stretto fra cardinalit\`a]
+\begin{definition}
 	Dati due insiemi $A$ e $B$ definiamo:
-	\[ |A| < |B| \Mydef |A| \leq |B| \land |A| \ne |B| \, \footnote{Dove ricordiamo che $|A| \ne |B| \Mydef \neg(|A| = |B|)$.}
-		\]
+	\[ {\drkblu |A| < |B|} \;\;\Mydef\;\; |A| \leq |B| \land |A| \neq |B| \]
 \end{definition}
+
+% PIPPO
 
 \subsection{Teorema di Cantor}
 
+\ 
+
 \begin{theorem}[Cantor]
 	\label{cantor}
-	Dato un qualunque insieme $A$ vale:
-	\[ |A| < |\ps(A)|
-		\]
+	Dato un insieme qualunque $A$, vale $|A| < |\ps(A)|$.
 \end{theorem}
 
-La dimostrazione di questo enunciato \`e, ancora una volta, il medesimo argomento del paradosso di Russell.
+{\drkgrn La dimostrazione di questo enunciato \`e, ancora una volta, il
+medesimo argomento del paradosso di Russell.}
 
 \begin{proof}
-	La disuguaglianza $|A| \leq |\ps(A)|$ \`e facile: basta considerare la funzione iniettiva:
-	\[ A \to \ps(A) : x \mapsto \{x\}
-		\]
-	(che \`e iniettiva per \hyperref[ax2]{estensionalit\`a}). Consideriamo, ora, una qualunque funzione $f : A \rightarrow \ps(A)$ iniettiva.
-	Dobbiamo dimostrare che $\Imm(f) \subsetneq \ps(A)$ (cio\`e che non \`e surgettiva). Consideriamo:
-	\[ B = \{x \in A | x \not \in f(x)\} \, \footnote{$f(x) \in \ps(A)$, ovvero \`e un sottoinsieme di $A$, quindi stiamo considerando il sottoinsieme degli elementi di $A$ che non stanno nelle loro immagini (dei sottoinsiemi di $A$).}
-		\]
-	Ora $B \subseteq A$, supponendo per assurdo che $f$ sia bigettiva, ovvero che $B = f(a)$ per qualche $a \in A$, avremmo:
-	\[ a \in f(a) \subseteq A \iff a \in B \iff a \not \in f(a) \; \lightning
+	La disuguaglianza $|A| \leq |\ps(A)|$ \`e facile: basta considerare la funzione iniettiva
+	$A \to \ps(A)$ che manda $x$ in~$\{x\}$
+
+	Consideriamo, ora, una funzione arbitraria $f\colon A \rightarrow \ps(A)$.
+	Ci basta dimostrare che $f$ non pu\`o essere surgettiva. Consideriamo:
+	\[ B = \{x \in A | x \not \in f(x)\} \]
+	Supponendo, per assurdo, che $f$ sia surgettiva, avremmo $B = f(a)$
+per qualche $a \in A$. Quindi
+	\[ a \in f(a) \;\;\iff\;\; a \in B \;\;\iff\;\; a \not \in f(a)
+\quad \lightning
 		\]
 \end{proof}
 
 \subsection{Operazioni fra cardinalit\`a}
 
-\begin{definition}[Somma, prodotto e potenze di cardinalit\`a]
-	Dati $A$ e $B$ possiamo definire somma, prodotto e potenze di cardinalit\`a come segue:
-	\[ \begin{split}
-		|A| + |B| &\Mydef |A \sqcup B| \Mydef |(A \times \{0\}) \cup (B \times \{1\})| \\
-		|A|\cdot |B| &\Mydef |A \times B| \\
-		|A|^{|B|} &\Mydef |{}^{B}A|
-	\end{split}
-		\]
-	(nella definizione di unione disgiunta abbiamo fatto il prodotto per cose diverse, in modo che gli elementi comuni ai due insiemi sono comunque diversi per la seconda componente, e quindi siano contati due volte.)
+\ 
+
+\begin{definition}[Unione disgiunta]
+	\[ {\drkblu A \sqcup B} \;\;\Mydef\;\; (A \times \{0\}) \cup (B \times
+\{1\}) \]
 \end{definition}
 
-Osserviamo che le operazioni fra cardinalit\`a cos\`i date sono ben definite.
+\begin{definition}[Somma, prodotto e potenza di cardinalit\`a]
+	\[ {\drkblu |A| + |B|} \;\;\Mydef\;\; |A \sqcup B| \qquad {\drkblu |A|\cdot |B|
+}\;\;\Mydef\;\; |A \times B| \qquad
+		{\drkblu |A|^{|B|}} \;\;\Mydef\;\; |{}^{B}A|
+		\]
+\end{definition}
 
-\begin{proposition}[Buona definizione delle operazioni]
-	Le operazioni di somma, prodotto e potenza fra cardinalit\`a sono ben definite modulo bigezioni, ossia dati $A,B,A',B'$, con $|A| = |A'|$ e $|B| = |B'|$, vale:
-	\[ |A| + |B| = |A'| + |B'| \qquad |A|\cdot|B| = |A'|\cdot|B'| \qquad |A|^{|B|} = |A'|^{|B'|}
+\begin{proposition}
+	Le operazioni di somma, prodotto e potenza di cardinalit\`a sono ben definite, ossia dati $A,B,A',B'$, con $|A| = |A'|$ e $|B| = |B'|$, vale:
+	\[ |A| + |B| \;\;=\;\; |A'| + |B'| \qquad |A|\cdot|B| \;\;=\;\;
+|A'|\cdot|B'| \qquad |A|^{|B|} \;\;=\;\; |A'|^{|B'|}
 		\]
 \end{proposition}
 
 \begin{proof}
 	Date $f : A \rightarrow A'$ e $g : B \rightarrow B'$ bigettive, \`e immediato verificare che le seguenti sono bigezioni:
-	\[  \begin{split}
-		A \sqcup B \to A' \sqcup B' :\,& (a,0) \mapsto (f(a),0) \\
-											 \,& (b,1) \mapsto (g(b),1) \\
-	 	A \times B \to A' \times B' :\,& (a,b) \mapsto (f(a),g(b)) \\
-		{}^{B}A \to {}^{B'}A' :\,& h \mapsto f \circ h \circ g^{-1} \, \footnote{Deriva dal diagramma commutativo che si pu\`o disegnare.}
-		\end{split}
-		\]
-	ed equivalgono alle uguaglianze di cardinalit\`a nella tesi.
+\begin{align*}
+\drkred A \sqcup B &\drkred \to A' \sqcup B' &\drkred A \times B
+&\drkred\to A' \times B' &\drkred {}^{B}A &\drkred\to
+{}^{B'}A' \\
+(a,0) &\mapsto (f(a),0) & (a,b) &\mapsto (f(a),g(b)) & h &\mapsto f \circ
+h \circ g^{-1} \\
+(b,1) &\mapsto (g(b),1)
+\end{align*}
+\vskip-\baselineskip
 \end{proof}
 
 \begin{notation}[Cardinalit\`a finite]
 Riferendoci alle cardinalit\`a finite $|\emptyset|,|1|,|2|,\ldots$ se non c'\`e rischio di confusione, scriveremo semplicemente $0,1,2,\ldots$
 \end{notation}
 
-\begin{remark}[Teorema di Cantor rivisitato]
-	$|\ps(A)| = 2^{|A|}$, per cui il \hyperref[cantor]{teorema di Cantor}, pu\`o essere enunciato dicendo che, dato un qualunque $A$, vale $|A| < 2^{|A|}$.
+\begin{remark}
+	$|\ps(A)| = 2^{|A|}$, per cui il \hyperref[cantor]{teorema di Cantor} pu\`o essere enunciato dicendo che, dato un qualunque $A$, vale $|A| < 2^{|A|}$.
 \end{remark}
 
-Verifichiamo che effettivamente ci sia una bigezione tra l'insieme delle parti di $A$ e quello delle funzioni da $A$ in 2.
-
 \begin{proof}
-	La funzione che ad ogni $B \in \ps(A)$ associa la sua \vocab{funzione indicatrice} $\chi_B : A \rightarrow 2$ \`e definita da:
+	La funzione che ad ogni $B \in \ps(A)$ associa la sua
+\vocab{funzione indicatrice} $\chi_B\colon A \rightarrow 2$ definita da:
 	\[ \chi_B(x) = \begin{cases}
 		1 &\text{se $x \in B$}\\
 		0 &\text{altrimenti}
 	\end{cases}
 		\]
-	ed \`e una bigezione $\ps(A) \rightarrow {}^{A}2$ (ovvero $|\ps(A)| = |{}^{A}\{0,1\}| = |{}^{A}2|$ per la nostra codifica dei naturali, e per la definizione data prima la seconda cardinalit\`a corrisponde proprio all'operazione $|2|^{|A|}$).
+	\`e una bigezione $\ps(A) \rightarrow {}^{A}2$.
 \end{proof}
 
-\begin{proposition}[Propriet\`a delle operazioni fra cardinalit\`a]
-	Le operazioni fra cardinalit\`a godono delle propriet\`a seguenti: denotando, per brevit\`a, con $\alpha,\beta,\gamma$ i simboli: $|A|,|B|,|C|$:
+\begin{proposition}
+	Le operazioni fra cardinalit\`a godono delle propriet\`a seguenti: denotando, per brevit\`a, con $\alpha,\beta,\gamma$ i simboli $|A|,|B|,|C|$
 	\begin{align*}
-		&\alpha + 0 = \alpha 	 & \quad & \alpha + \beta = \beta + \alpha 		 	& \quad & \alpha + (\beta + \gamma) = (\alpha + \beta) + \gamma \\
-		&\alpha \cdot 0 = 0 	 & \quad & \alpha \cdot \beta = \beta \cdot \alpha 	& \quad & \alpha \cdot (\beta \cdot \gamma) = (\alpha \cdot \beta) \cdot \gamma \\
-		&\alpha \cdot 1 = \alpha & \quad & \alpha \cdot (\beta + \gamma) = \alpha \cdot \beta + \alpha \cdot \gamma \\
-		&\alpha^0 = 1 			 & \quad & (\alpha^\beta)^\gamma = \alpha^{\gamma \cdot \beta} & \quad & (\alpha \cdot \beta)^\gamma = \alpha^\gamma \cdot \beta^\gamma \\
-		&1^\alpha = 1			 & \quad & \alpha^{\beta + \gamma} = \alpha^\beta \cdot \alpha^\gamma
+\alpha + 0 &= \alpha 	 & \alpha + \beta &= \beta + \alpha
+& \alpha + (\beta + \gamma) &= (\alpha + \beta) + \gamma \\
+\alpha \cdot 0 &= 0 	 & \alpha \cdot \beta &= \beta \cdot \alpha 	&
+\alpha \cdot (\beta \cdot \gamma) &= (\alpha \cdot \beta) \cdot \gamma \\
+\alpha \cdot 1 &= \alpha & \mathrlap{\quad\;\;\alpha \cdot (\beta + \gamma) =
+\alpha \cdot \beta + \alpha \cdot \gamma} \\
+\alpha^0 &= 1 		& (\alpha^\beta)^\gamma &= \alpha^{\gamma \cdot
+\beta} & (\alpha \cdot \beta)^\gamma &= \alpha^\gamma \cdot \beta^\gamma \\
+\alpha^1 &= \alpha	& \alpha^{\beta + \gamma} &= \alpha^\beta \cdot
+\alpha^\gamma \\
+1^\alpha &= 1
 	\end{align*}
 \end{proposition}
 
 \begin{proof}
 	In ciascun caso, si tratta semplicemente di esibire una bigezione esplicita fra il membro di sinistra e il membro di destra. Come esempio, vediamo uno dei casi pi\`u complicati, il resto 
-	\`e lasciato come \textcolor{red}{esercizio}. \\
+	\`e lasciato come {\drkred esercizio}.
+
 	Dimostriamo che $(|A|^{|B|})^{|C|} = |A|^{|C|\cdot|B|}$. Dobbiamo esibire una bigezione fra l'insieme ${}^C({}^BA)$ delle funzioni che ad ogni elemento di $C$ associano una funzione $B \rightarrow A$, e l'insieme ${}^{C \times B}A$, delle funzioni 
 	che ad ogni coppia di elementi in $C \times B$ associano un elemento di $A$. Associamo a $f \in {}^C({}^BA)$ la funzione $\widetilde{f} \in {}^{C \times B}A$ definita da:
-	\[ \widetilde{f}(c,b) = (\underbrace{f(c)}_{\in {}^{B}A})(\underbrace{b}_{\in B}) \, \footnote{Cio\`e la mappa $\sim$ prende una funzione da $C$ a ${}^{B}A$ e la manda in un'altra che prende coppie di elementi in $C \times B$, e valuta il primo elemento in $f$ 
-	per ottenere una mappa da $B$ a $A$, che poi valuta in $b \in B$.}
-		\]
+	\[ \widetilde{f}(c,b) \;\;=\;\; f(c)(b) \]
 	Dimostriamo che l'inversa di questa applicazione associa a $g \in {}^{C \times B}A$ la funzione $\overline{g} \in {}^{C}({}^B A)$ definita da:
-	\[	\overline{g}(c) : B \to A : b \mapsto g(c,b) \, \footnote{Ovvero la mappa $-$ associa una mappa di ${}^{C\times B}A$ con la mappa $\overline{g} \in {}^{C}({}^B A)$, che valutata in $c \in C$, d\`a una funzione da $B$ in $A$, che ad ogni $b \in B$ associa $g(c,b)$.}
-		\]
-	La verifica \`e facilissima, presa $g \in {}^{C \times B}A$ si ha:
-	\[ \forall (c,b) \in C \times B \quad \widetilde{\overline{g}}(c,d) = (\overline{g}(c))(b) = g(c,b) \implies \widetilde{\overline{g}} = g
-		\]
-	(quindi $\sim \circ -$ \`e l'identit\`a). Presa $f \in {}^{C}({}^B A)$, e fissato un qualunque $c \in C$, si ha:
-	\[ \forall b \in B \,(\overline{\widetilde{f}}(c)(b)) = \widetilde{f}(c,b) = (f(c))(b) \implies \overline{\widetilde{f}}(c) = f(c)
-		\]
-	da cui, per l'arbitrariet\`a di $c$, $\overline{\widetilde{f}} = f$ (e quindi $- \circ \sim$ \`e l'identit\`a).
+	\begin{align*}
+\overline{g}(c) \colon B &\to A \\
+b &\mapsto g(c,b)
+\end{align*}
+	La verifica \`e facilissima, prese $f\in{}^{C}({}^B A)$ e $g \in {}^{C \times B}A$ si ha:
+\begin{alignat*}{2}
+	\forall {c\in C}\;\forall {b \in B} \quad
+&\overline{\widetilde{f}}(c)(b) = \widetilde{f}(c,b) = (f(c))(b)
+&&\;\;\implies\;\; \overline{\widetilde{f}}(c) = f(c)\\
+	\forall {(c,b) \in C \times B} \quad
+&\widetilde{\overline{g}}(c,d) = (\overline{g}(c))(b) = g(c,b)
+&&\;\;\implies\;\; \widetilde{\overline{g}} = g
+\end{alignat*}
+\vskip-2\baselineskip
 \end{proof}
