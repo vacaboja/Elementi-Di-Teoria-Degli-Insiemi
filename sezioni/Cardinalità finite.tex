@@ -1,251 +1,256 @@
 \section{Cardinalit\`a finite}
 Ora inizia una breve carrellata fra le cardinalit\`a pi\`u facile da definire. Parliamo qui di cardinalit\`a finite, poi introdurremo la cardinalit\`a numerabile e la cardinalit\`a del continuo.
 
-\begin{definition}[Insieme finito/infinito]
-	Diciamo che $A$ \`e \vocab{finito} se $\exists n \in \omega \, |A| = |n|$. Se $A$ non \`e finito, diciamo che $A$ \`e \vocab{infinito}.
+\begin{definition}
+	Diciamo che $A$ \`e \vocab{finito} se $\exists {n \in \omega} \, |A| = |n|$. Se $A$ non \`e finito, diciamo che $A$ \`e \vocab{infinito.}
 \end{definition}
 
-Storicamente, \`e riflessiva una definizione alternativa di finitezza, data originariamente da Dedekind.
+Storicamente, \`e rilevante una definizione alternativa di finitezza, data originariamente da Dedekind.
 
-\begin{definition}[Dedekind-finitezza]
-	Diciamo che $A$ \`e \vocab{Dedekind-finito} se non pu\`o essere messo in corrispondenza biunivoca con un suo sottoinsieme proprio. Ossia $A$ \`e Dedekind-finito se:
-	\[ \forall B \subsetneq A \, |B| < |A|
-		\]
+\begin{definition}
+	Diciamo che $A$ \`e \vocab{Dedekind-finito} se {\drkred non} pu\`o
+essere messo in corrispondenza biunivoca con un suo sottoinsieme
+proprio.\\
+{\drkgrn Ossia $A$ \`e Dedekind-finito se $\forall {B \subsetneq A} \, |B|
+< |A|$}
 \end{definition}
 
 \subsection{Principio dei cassetti}
-Con gli assiomi introdotti fino ad ora, possiamo solo dimostrare che finito $\rightarrow$ Dedekind-finito, mentre l'implicazione inversa \`e conseguenza dell'assioma della scelta.
 
-\begin{proposition}[Principio dei cassetti - ossia finito $\rightarrow$ Dedekind-finito]
+Con gli assiomi introdotti finora, possiamo solo dimostrare finito~$\rightarrow$~Dedekind-finito, mentre l'implicazione inversa \`e conseguenza dell'assioma della scelta.
+
+\begin{proposition}[Principio dei cassetti -- ossia finito $\rightarrow$ Dedekind-finito]
 	\label{cassetti}
-	Dato $A$ finito e $B$ un sottoinsieme proprio di $A$, $B \subsetneq A$, vale $|B| < |A|$. 
+	Dato $A$ finito e $B \subsetneq A$, vale $|B| < |A|$. 
 \end{proposition}
 
 \begin{proof}
-	Naturalmente $|B| \leq |A|$ vale perch\'e l'identit\`a $\id_B$ \`e una funzione iniettiva $B \rightarrow A$. Occorre quindi dimostrare che $|B| \ne |A|$.\\
-	Per ipotesi $|A| = |n|$, per qualche $n \in \omega$, sia $g : A \to n$ una bigezione, si ha naturalmente che $|B| = |g[B]|$, e $g[B] \subsetneq n$, se verifichiamo che $|g[B]| < |n|$,
-	allora otteniamo in automatico che $|B| < |A|$. Per fare ci\`o verifichiamo la disuguaglianza stretta nel caso in cui appunto l'insieme di partenza sia un naturale, dimostriamo per induzione la contronominale di questo fatto,
-	ovvero dimostriamo che ogni sottoinsieme di un naturale con la sua stessa cardinalit\`a \`e proprio il naturale stesso\footnote{La cui contronominale \`e appunto che ogni sottoinsieme proprio di $n$ ha cardinalit\`a minore strettamente di quest'ultimo.}.
-	\[ \textcolor{purple}{\forall n \in \omega \; \forall B \subseteq n (|B|=|n|\rightarrow B = n)}
-		\]
-	\begin{itemize}
-		\item[$\boxed{\text{caso $n = \emptyset$}}$] Vera a vuoto perch\'e $\emptyset$ non ha sottoinsiemi.
-		\item[$\boxed{\text{caso $n = m + 1$}}$] Assumiamo per ipotesi induttiva che $\forall B \subseteq m (|B| = |m| \rightarrow B = m)$, vogliamo dimostrare che $\forall C \subseteq m + 1 (|C| = |m + 1| \rightarrow C = m + 1)$.\\
-		Sia $f : m + 1 \rightarrow C$ una bigezione tra $m + 1$ e $C$, possiamo assumere, WLOG - vedremo alla fine perch\'e -, che $f(m) = m$ (cio\`e che $m \in C$ e che \`e un punto fisso di $f$), in tal modo $f_{|m}$ sar\`a una bigezione tra $m$ e $C \setminus\{m\}$ (che \`e un suo sottoinsieme), per ipotesi induttiva ci\`o implica che $C \setminus \{m\} = m$,
-		per cui $C \overset{\text{$f$ bigez.}}{=}\Imm(f) = m \cup \{f(m)\} = m \cup \{m\} = m + 1$.
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width = 1.95cm]{immagini/cassetti1.png}
-		\end{figure}
-		Se $f(m) \ne m$ vediamo in primis che esiste sempre $a < m$ tale che $f(a) < m$ e inoltre possiamo sempre costruire una bigezione $f'$, a partire da $f$, tale per cui $f'(m) = m$.
-		Se non esistesse $a < m$ tale per cui $f(a) = m$, allora $f_{|m}$ sarebbe una bigezione tra $m$ e $C \setminus\{f(m)\} \subseteq m$, che per ipotesi induttiva significa $C \setminus\{f(m)\} = m$,
-		per cui $m \cup \{f(m)\} = m + 1 \implies f(m) = m$, contro l'assunto iniziale, per cui assurdo. Abbiamo ora che esiste $a < m$ tale per cui $f(a) = m$, quindi possiamo definire una nuova bigezione $f'$,
-		che ha $m$ come punto fisso, nella maniera seguente:
+	Naturalmente $|B| \leq |A|$, perch\'e l'identit\`a $\id_B$ \`e una funzione iniettiva $B \rightarrow A$. Occorre quindi dimostrare che $|B| \ne |A|$.
+
+Osserviamo che, senza perdita di generalit\`a, possiamo assumere
+$A=n\in\omega$. Infatti, siccome $A$ \`e finito, abbiamo una
+bigezione~$f\colon A \to n$, per un opportuno $n\in\omega$. Ora,
+siccome $f$ \`e iniettiva, abbiamo sia $f[B]\subsetneq n$, sia
+$|B|=|f[B]|$. 
+
+In definitiva, ci basta dimostrare, per induzione su~$n$, che
+	\[ \forall {n \in \omega} \; \forall {B \subseteq n} (|B|=|n|\rightarrow B = n) \]
+{\drkred Caso $n = \emptyset$.} Vera a vuoto perch\'e $\emptyset$ non ha sottoinsiemi.
+
+{\drkred Caso $n = m + 1$} L'ipotesi induttiva \`e $\drkblu \forall {B
+\subseteq m}\; (|B| = |m| \rightarrow B = m)$, vogliamo dimostrare
+$\drkred \forall {C \subseteq m + 1}\; (|C| = |m + 1| \rightarrow C = m + 1)$.
+Consideriamo una bigezione $f\colon m + 1 \to C$ e dimostriamo che $C=m+1$.
+Si danno due casi: o $f(m) = m$ oppure no.
+
+\vbox to 0pt{\hbox to
+0.18\textwidth{\hss\includegraphics[width=.15\textwidth]{immagini/cassetti1.png}\hss}\vss}
+
+\setlength\leftskip{.2\textwidth}
+{\drkblu Se $f(m)=m$.} Allora, detto $B=f[m]$, siccome $f$ \`e iniettiva,
+$m\notin f[m]$, quindi $f_{|m}$ \`e una bigezione~$m\to B\subseteq m$. Per
+ipotesi induttiva $B=m$, da cui $C=B\cup\{f(m)\}=m\cup\{m\}=m+1$.
+
+\setlength\leftskip{0pt}
+\vbox to
+0pt{\includegraphics[width=.18\textwidth]{immagini/cassetti2.png}\vss}
+
+\setlength\leftskip{.2\textwidth}
+{\drkblu Se $f(m) \ne m$.} Allora vediamo in primis che esiste $a < m$
+tale che $f(a) < m$, se cos\`i non fosse allora $f_{|m}$ sarebbe una
+bigezione tra $m$ e $C \setminus\{f(m)\} \subsetneq m$, contro l'ipotesi
+induttiva. 
+Fissato questo $a$, possiamo costruire una nuova bigezione $f'\colon
+m+1\to C$ che ricade
+nel caso precedente:
 		\[ f'(x) = \begin{cases}
 			m &\text{se $x = m$} \\
 			f(m) &\text{se $x = a$} \\
 			f(x) &\text{altrimenti} \\
 		\end{cases}
 			\]
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width = 1.95cm]{immagini/cassetti2.png}
-			\end{figure}
-	\end{itemize}
+\setlength\leftskip{0pt}
 \end{proof}
 
-\begin{corollary}[$A$ finito $\implies$ ha un'unica cardinalit\`a]
-	Se $A$ \`e un insieme finito, allora esiste ed \`e unico un elemento di $\omega$ con cui \`e in bigezione:
-	\[ \exists \textcolor{red}{!} n \in \omega \; |A| = |n|
-		\]
+%PIPPO
+
+\begin{corollary}
+	Se $A$ \`e un insieme finito, allora $\existrun {n \in \omega} \;
+|A| = |n|$.
 \end{corollary}
 
 \begin{proof}
-	Se $|m| = |A| = |n|$, possiamo assumere, senza perdita di generalit\`a $m \leq n$, che corrisponde a $m \subseteq n$, quindi per il \hyperref[cassetti]{principio dei cassetti} $m = n$.
+	Supponiamo $|m| = |A| = |n|$ con $m \leq n$, allora $m \subseteq
+n$, quindi, per il \hyperref[cassetti]{principio dei cassetti}, $m = n$.
 \end{proof}
 
-Se adesso volessimo dimostrare il viceversa: [che formulato in versione contronominale \`e] che un insieme infinito non \`e Dedekind-finito, quale sarebbe l'ostacolo? Abbiamo gi\`a osservato che $\omega$ non \`e finito, perch\'e la funzione successore 
-stabilisce una corrispondenza biunivoca fra $\omega$ e $\omega \setminus\{0\} \subsetneq \omega$ (quindi non \`e Dedekind-finito, e per la contronominale del \hyperref[cassetti]{principio dei cassetti} non \`e finito). Ne segue la seguente osservazione.
+Se adesso volessimo dimostrare 
+
+Il viceversa del princio dei cassetti dice che un insieme infinito non \`e
+Dedekind-finito, ossia pu\`o essere messo in corrispondenza biunivoca con
+un suo sottoinsieme proprio. Quale \`e l'ostacolo per dimostrare questo
+enunciato? Per cominciare, osserviamo che $\omega$ non \`e Dedekind-finito, perch\'e la funzione successore 
+stabilisce una corrispondenza biunivoca fra $\omega$ e $\omega
+\setminus\{0\}$. Pi\`u in generale, vale la seguente osservazione.
 
 \begin{remark}
 	\label{omega_Dedekind_finito}
-	Se esiste $f : \omega \rightarrow A$ iniettiva, allora $A$ non \`e Dedekind-finito.\footnote{E quindi in automatico non \`e finito.}
+	Se esiste $f\colon \omega \rightarrow A$ iniettiva, allora $A$ non \`e Dedekind-finito.
 \end{remark}
 
 \begin{proof}
 	Basta considerare la funzione iniettiva:
-	\[ g : A \to A : a \mapsto \begin{cases}
+	\begin{align*} g\colon A &\to A\\
+		a &\mapsto \begin{cases}
 		f \circ s \circ f^{-1}(a) &\text{se $a \in f[\omega]$} \\
 		\id_A(a) &\text{altrimenti}
 	\end{cases}
-		\]
-	\`E immediato vedere che $\Imm(g) = A \setminus \{f(0)\} \subsetneq A$ (l'unico escluso \`e lo 0, perch\'e non pu\`o esserci un elemento che ha come controimmagine un elemento di $\omega$ il cui
-	successore sia 0, perch\'e per quanto visto non esiste), dunque $A \hookrightarrow \Imm(g) \subsetneq A$, pertanto \`e in bigezione con un suo sottoinsieme proprio, per cui non pu\`o essere Dedekind-finito.\footnote{\`E l'argomento dell'\href{https://en.wikipedia.org/wiki/Hilbert\%27s_paradox_of_the_Grand_Hotel}{\textcolor{purple}{hotel di Hilbert}}.}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width = 4.5cm]{immagini/cassetti3.png}
-	\end{figure}
+	\end{align*}
+\vbox to
+0pt{\vss\includegraphics[width=.27\textwidth]{immagini/cassetti3.png}\vskip-.5\baselineskip}
+	\`E immediato vedere che $\Imm(g) = A \setminus \{f(0)\}
+\subsetneq A$.
 \end{proof}
 
-Quindi ci basterebbe dimostrare che $\omega$ si immerge in ogni insieme infinito (e dal lemma appena visto avremmo che l'insieme non \`e Dedekind-finito, completando l'altra freccia del principio dei cassetti).
+Quindi ci basterebbe dimostrare che $\omega$ si immerge in ogni insieme
+infinito.
 Un tentativo di dimostrazione potrebbe andare come segue.
 
-\begin{proof}
-	Sia $A$ infinito, costruiamo per ricorsione, seconda forma, una $f : \omega \rightarrow A$ iniettiva. Supponiamo di conoscere $f_{|n}$, il nostro scopo \`e definire il prossimo valore: $f(n)$.
+{\drkgrn\begin{proof}[Dimostrazione falsa.]
+	Sia $A$ infinito, costruiamo per ricorsione, seconda forma, una
+$f\colon \omega \rightarrow A$ iniettiva. Supponiamo di conoscere $f_{|n}$, il nostro scopo \`e definire il prossimo valore: $f(n)$.
 	Siccome $A$ \`e infinito, $f_{|n}$, che \`e iniettiva per costruzione, non pu\`o essere surgettiva, quindi esiste $a \in A$ con $a \not \in \Imm(f_{|n})$. Pongo $f(n) = a$.
-\end{proof}
+\end{proof}}
 
 Dov'\`e l'errore? Nell'ultima riga! Noi sappiamo che, data $f_{|n}$, esistono degli $a \in A$ con $a \not\in\Imm(f_{|n})$, questo \`e corretto. \`E anche corretto che ci basterebbe porre $f(n) =$``uno qualunque di questi $a$''.
-Il guaio \`e che, \textcolor{MidnightBlue}{per applicare il teorema di ricorsione}, ci serve una funzione che fissa uno degli $a$ da poter usare come $h$ del teorema di ricorsione (pi\`u precisamente, vorremmo definire $h$ come un elemento di $A \setminus \Imm(f_{|n}) \ne \emptyset$, poich\'e tuttavia dobbiamo ripetere questo procedimento infinite volte - per ogni $n \in \omega$ -,
-non possiamo fissare infiniti elementi tutti assieme - che \`e equivalente allo scrivere $h$ come insieme quale \`e - con gli assiomi attualmente a disposizione, infatti possiamo per ora fissare soltanto un numero finito di cose).
-A patto di averne una, ne andrebbe bene una qualunque.\\ Purtroppo per\`o, a partire dalla mera ipotesi che $A$ \`e infinito, non abbiamo modo di procurarci nessuna funzione del genere. Potremmo cavarcela se avessimo qualche struttura su $A$, sulla quale far leva - per esempio per dire ``prendo il minimo 
-fra gli $a \not\in \Imm(f_{|n})$'', o ``prendo il pi\`u giallo'' - ma di $A$ non sappiamo nulla, e non abbiamo modo di indurre una struttura di questo genere.\\
+Il guaio \`e che, per applicare il teorema di ricorsione, ci serve una
+funzione che fissa uno degli $a$: la funzione~$h$ nell'enunciato del
+teorema.
+A patto di averne una, ne andrebbe bene una qualunque. Purtroppo per\`o, a
+partire dalla mera ipotesi che $A$ \`e infinito, non abbiamo modo di
+procurarci nessuna funzione del genere. Potremmo cavarcela se avessimo
+qualche struttura su $A$, sulla quale far leva -- per esempio per dire
+``prendo il minimo 
+fra gli $a \not\in \Imm(f_{|n})$'', o ``prendo il pi\`u giallo'' -- ma di
+$A$ non sappiamo nulla, e, per ora, non abbiamo modo di indurre una struttura di questo genere.
+Lo potremo fare, tuttavia, facendo appello all'assioma della scelta.
+
 Accettato che non possiamo dimostrare che $\omega$ si immerge in qualsiasi insieme infinito, possiamo per\`o lambire questa soglia: dimostriamo che, in un insieme infinito, si immergono tutti i numeri naturali.
 
-\begin{proposition}[Tutti i naturali si immergono in un qualsiasi insieme infinito]
-	Sia $A$ infinito, allora $\forall n\in \omega \; |n| < |A|$.
+\begin{proposition}
+	Sia $A$ infinito, allora $\forall {n\in \omega} \; |n| < |A|$.
 \end{proposition}
 
 \begin{proof}
 	Basta dimostrare il $\leq$, infatti $|n| < |n+1| \leq |A|$. Dimostriamo per induzione su $n$ che c'\`e una funzione iniettiva da $n$ ad $A$.
-	\begin{itemize}
-		\item[$\boxed{\text{caso $n = 0$}}$] La funzione vuota, $f = \emptyset$ che va dal vuoto a qualsiasi insieme, va bene.
-		\item[$\boxed{\text{caso $n = m+1$}}$] Per ipotesi induttiva esiste $f : m \rightarrow A$ iniettiva. Siccome $A$ \`e infinito (e $m$ \`e finito), $A \setminus \Imm(f) \ne \emptyset$, quindi esiste $a \in A \setminus \Imm(f)$ e possiamo prenderlo (stiamo fissando una sola cose e possiamo farlo).
-		Definiamo la funzione $f' = f \cup \{(n,a)\}$, che \`e iniettiva in quanto unione di funzioni iniettive su insiemi disgiunti - in arrivo.
-	\end{itemize}
+
+{\drkred Caso $n = 0$} La funzione vuota.
+
+{\drkred Caso $n = m+1$} Per ipotesi induttiva esiste $f\colon m
+\rightarrow A$ iniettiva. Siccome $A$ \`e infinito, esiste $a\in A
+\setminus \Imm(f)$, quindi esiste $a \in A \setminus \Imm(f)$.
+La funzione $f' = f \cup \{(m,a)\}$ \`e iniettiva~$n\to A$.
 \end{proof}
 
-\begin{corollary}[Ovviet\`a]
+Per capire, quando sar\`a il momento, l'assioma della scelta, \`e
+{\drkred importante} aver riflettuto sulla domanda seguente.
+
+\begin{exercise}
+Cosa distingue la dimostrazione precedente dalla {\drkgrn Dimostrazione
+falsa?}
+\end{exercise}
+
+\begin{corollary}
 	Un sottoinsieme di un insieme finito \`e finito.
 \end{corollary}
 
 \begin{proof}
-	Sia $A$ finito e $B \subseteq A$. Se, per assurdo $B$ fosse infinito, avremmo:
-	\[ |B| \overset{B \subseteq A}{\leq} |A| \overset{\text{$A$ finito}}{=} |n| \overset{\text{prop. sopra}}{<} |B| \;\textcolor{red}{\lightning}
-		\]	
+	Sia $A$ finito e $B \subseteq A$. Se, per assurdo, $B$ fosse
+infinito, avremmo $|A|<|B|\le|A|\;\lightning$
 \end{proof}
 
 \begin{exercise}
 	\label{disuguaglianze_senza_AC1}
-	Dimostrare che:
+	Dimostra le proposizioni seguenti.
 	\begin{itemize}
-		\item se $|A| < |n|$ con $n \in \omega$, allora $|A| = |m|$ per qualche $m < n$.
-		\item se $A$ \`e finito e $f : A \rightarrow B$, allora $f[A]$ \`e finito.
+		\item Se $|A| < |n|$ con $n \in \omega$, allora $|A| = |m|$ per qualche $m < n$.
+		\item Se $A$ \`e finito e $f\colon A \rightarrow B$, allora $f[A]$ \`e finito.
 	\end{itemize}	
 \end{exercise}
 
-\begin{soln}
-	Verifichiamo le due cose separatamente.
-	\begin{itemize}
-		\item Per ipotesi esiste $f : A \to n$ iniettiva e non surgettiva, abbiamo quindi $f[A] \subseteq n$, e per il corollario sopra un sottoinsieme di un insieme finito \`e finito, ovvero $\exists m \in \omega \; |f[A]| = m$.
-		Osserviamo che necessariamente $m < n$, se fosse $m \geq n$, per la definizione di ordinamento su $\omega$, ci\`o corrisponde a $m \supseteq n \implies |m| \geq |n|$, per cui:
-		\[ |A| \overset{\text{$f$ iniett.}}{=} |f[A]| = |m| \geq |n| \overset{\text{Hp.}}{>} |A| \;\textcolor{red}{\lightning}
-			\] 
-		\item Se verifichiamo che $|f[A]| \leq |A|$, essendo $A$ finito, otteniamo $|f[A]| \leq |n|$, per qualche $n \in \omega$, e, o $|f[A]| = |n|$, oppure $|f[A]| < |n|$ e quindi vale il punto precedente, in ogni caso si ottiene $f[A]$ finito.\\
-		Ci resta da verificare l'assunzione iniziale, possiamo farlo sfruttando il buon ordinamento di $\omega$ tramite la seguente funzione:
-		\[ g : f[A] \to A : x \mapsto h^{-1}\left(\min_{<_{|n}}(h[f^{-1}(x)])\right)
-			\]
-		dove $<_{|n}$ \`e l'ordine usuale di $\omega$ ristretto ad $n$ e $h$ \`e la bigezione che esiste per ipotesi da $A$ ad $n$.
-		Si vede facilmente che $g$ \`e ben definita, verifichiamo che \`e anche iniettiva:
-		\[	\begin{split}
-			g(x) = g(y) &\iff h^{-1}\left(\min_{<_{|n}}\{h[f^{-1}(x)]\}\right) = h^{-1}\left(\min_{<_{|n}}\{h[f^{-1}(y)]\}\right) \\
-						&\iff \min_{<_{|n}}\{h[f^{-1}(x)]\} = \min_{<_{|n}}\{h[f^{-1}(y)]\} \\
-						&\iff h(a) = h(b)
-		\end{split}
-			\]
-		con $a \in f^{-1}(x)$ e $b \in f^{-1}(y)$ (in altre parole abbiamo dato un nome ai minimi). Ora, essendo $h$ bigettive quanto scritto equivale ad $a  = b$, che, applicando $f$,
-		equivale a:
-		\[ x = f(a) \overset{a = b}{=} f(b) = y
-			\]
-		per cui $g$ \`e iniettiva e vale la disuguaglianza iniziale.
-	\end{itemize}
-\end{soln}
-
 \subsection{Operazioni fra le cardinalit\`a finite}
 
-\begin{proposition}[Corrispondenza tra le operazioni su $\omega$ e quelle tra cardinalit\`a finite]
+\ 
+
+\begin{proposition}
 	\label{op_card_fin}
-	Dati $m,n \in \omega$ vale che:
+	Dati $m,n \in \omega$
 	\[ |m| + |n| = |m+n| \qquad |m|\cdot|n| = |m \cdot n| \qquad |m|^{|n|} = |m^n|
 		\]
-	ovvero, per gli elementi di $\omega$ le operazioni tra cardinalit\`a corrispondo alla cardinalit\`a delle operazioni tra gli elementi, gi\`a definite per ricorsione su $\omega$.
+	dove $m+n$, $m\cdot n$ e $m^n$ sono le operazioni definite per
+ricorsione numerabile (Definizione~\ref{def-op-ar} e
+Definizione~\ref{def-pot-fat}).
 \end{proposition}
 
 \begin{proof}
-	Dimostriamo, intanto che $|m| + |1| = |s(m)|$. A sinistra abbiamo, infatti la cardinalit\`a di $(m \times \{0\}) \cup \{(0,1)\}$\footnote{Typo di Mamino sui suoi appunti in quanto $1 = \{0\}$.} e a destra abbiamo la cardinalit\`a di $m \cup \{m\}$.
+	Dimostriamo, intanto, che $|m| + |1| = |s(m)|$. A sinistra abbiamo,
+infatti, la cardinalit\`a di $m\sqcup 1 = (m \times \{0\}) \cup \{(0,1)\}$
+e a destra abbiamo la cardinalit\`a di $m \cup \{m\}$.
 	Quest'ultimo insieme si mappa bigettivamente nel primo, mandando $x \in m$ in $(x,0)$ e $m$ in $(0,1)$. 
-	Ora, le uguaglianze asserite seguono, per induzione su $n$, dalle propriet\`a delle operazioni sulle cardinalit\`a e dalla definizione ricorsiva delle operazioni su $\omega$.\\
-	\textcolor{purple}{$|m|+|n| = |m+n|$}
-	\begin{itemize}
-		\item[$\boxed{\text{caso $n = 0$}}$] $|m| + |0| =  |(m \times \{0\}) \cup \emptyset| = |m| = |m + 0|$.
-		\item[$\boxed{\text{caso $n = s(a)$}}$] Per ipotesi induttiva abbiamo $|m| + |a| = |m + a|$, da cui possiamo verificare la tesi come segue:
+
+Ora, le uguaglianze asserite seguono, per induzione su $n$, dalle propriet\`a delle operazioni sulle cardinalit\`a e dalla definizione ricorsiva delle operazioni su $\omega$.
+
+{\drkblu $|m|+|n| = |m+n|$}\\
+{\drkred Caso $n = 0$}
+\[|m| + |0| =  |m \sqcup \emptyset| = |m| = |m + 0|\]
+
+{\drkred Caso $n = s(a)$}
 		\begin{align*}
-			|m| + |s(a)| \overset{\text{oss. iniziale}}{=}\quad& |m| + (|a| + |1|) \\
-						 \overset{\text{propr. operaz. card.}}{=}& (|m| + |a|) + |1| \\
-						 \overset{\text{Hp. indutt}}{=}\quad& |m+a| + |1| \\
-						 \overset{\text{oss. iniziale}}{=}\quad& |s(m+a)| \\
-						 \overset{\text{def. di $+$}}{=}\quad\;& |m + s(a)|
+|m| + |s(a)| &= |m| + (|a| + |1|) &&\text{osservazione iniziale}\\
+	&= (|m| + |a|) + |1| &&\text{propriet\`a associativa del $+$ fra
+cardinalit\`a}\\
+	&= |m+a| + |1| &&\text{ipotesi induttiva}\\
+	&= |s(m+a)| &&\text{osservazione iniziale}\\
+	&= |m + s(a)| &&\text{definizione ricorsiva di~$+$}
  		\end{align*}
-	\end{itemize}
-	\textcolor{purple}{$|m|\cdot|n| = |m \cdot n|$}
-	\begin{itemize}
-		\item[$\boxed{\text{caso $n = 0$}}$] $|m| \cdot |0| =  |m \times \emptyset| = |0| \overset{\text{def. di $\cdot$}}{=} |m \cdot 0|$.
-		\item[$\boxed{\text{caso $n = s(a)$}}$] Per ipotesi induttiva abbiamo $|m|\cdot|a| = |m \cdot a|$, da cui possiamo verificare la tesi come segue:
-		\[ \begin{split}
-			|m| \cdot |s(a)| \overset{\text{oss. iniziale}}{=}\quad& |m| \cdot (|a| + |1|) \\
-						 \overset{\text{propr. operaz. card.}}{=}& |m| \cdot |a| + \underbrace{|m| \cdot |1|}_{|m \times \{0\}| = |m|} \\
-						 \overset{\text{Hp. indutt}}{=}\quad& |m \cdot a| + |m| \\
-						 \overset{\text{propr. $+$ card. fin.}}{=}\quad& |m \cdot a + m| \\
-						 \overset{\text{def. di $\cdot$}}{=}\quad\;& |m \cdot s(a)|
- 		\end{split} 
-			\]
-	\end{itemize}
-	\textcolor{purple}{$|m|^{|n|} = |m^n|$}
-	\begin{itemize}
-		\item[$\boxed{\text{caso $n = 0$}}$] $|m|^{|0|} =  |{}^{0}m| = |\{f : 0 \rightarrow m\}| = |\{\emptyset\}| =  |1| = |m^0|$ (l'unica funzione possibile dal vuoto a $m$ \`e $f = \emptyset$\footnote{E quindi ${}^0m = \{f : \emptyset \rightarrow m\} = \{\emptyset\} = 1$, o in alternativa si pu\`o pensare che
-		$f \subseteq \emptyset \times m = \emptyset \implies f \in \ps(\emptyset) = \{\emptyset\}$ e quindi $f = \emptyset \implies {}^0m = \{f\} = \{\emptyset\} = 1$.}).
-		\item[$\boxed{\text{caso $n = s(a)$}}$] Per ipotesi induttiva abbiamo $|m|^{|a|} = |m^a|$, per cui abbiamo:
-		\[ \begin{split}
-			|m|^{|s(a)|} \overset{\text{oss. iniziale}}{=}\quad& |m|^{|a| + |1|} \\
-						 \overset{\text{propr. operaz. card.}}{=}& |m|^{|a|} \cdot |m|^{|1|} \textcolor{MidnightBlue}{= |m| }\\
-						 \overset{\text{Hp. indutt}}{=}\quad& |m^a| \cdot |m| \\
-						 \overset{\text{caso prec.}}{=}\quad& |m^a \cdot m| \\
-						 \overset{\text{def. potenza}}{=}\quad\;& |m^{s(a)}|
- 		\end{split} 
-			\]
-		(dove $|m|^{|1|} = |m|$ perch\'e $|{}^{1}m|  = |\{f : 1 \rightarrow m\}| = |\{\{(0,0)\},\{(0,1)\},\{(0,2)\},\ldots,\linebreak(0,m-1)\}|$, e quest'ultimo insieme \`e banalmente in bigezione con $m$).
-	\end{itemize}
+
+{\drkblu $|m|\cdot|n| = |m \cdot n|$}\\
+{\drkred Caso $n = 0$}
+\[|m| \cdot |0| =  |m \times \emptyset| = |\emptyset| = |m \cdot 0|\]
+
+{\drkred Caso $n = s(a)$} 
+		\begin{align*}
+			|m| \cdot |s(a)| &= |m| \cdot (|a| + |1|) &&\text{osservazione iniziale}\\
+&= |m| \cdot |a| + |m| \cdot |1| &&\text{propriet\`a distributiva del $\cdot$ fra cardinalit\`a}\\
+&= |m \cdot a| + |m| &&\text{ipotesi induttiva $+$ facile verifica}\\
+&= |m \cdot a + m| &&\text{uguaglianza dimostrata per il $+$}\\
+&= |m \cdot s(a)| &&\text{definizione ricorsiva di~$\cdot$}
+ 		\end{align*}
+
+{\drkblu $|m|^{|n|} = |m^n|$}\\
+{\drkred Caso $n = 0$}
+\[ |m|^{|0|} =  |{}^{0}m| = |\{\emptyset\}| =  |1| = |m^0| \]
+
+{\drkred Caso $n = s(a)$}
+		\begin{align*}
+|m|^{|s(a)|} &= |m|^{|a| + |1|} &&\text{osservazione iniziale}\\
+&= |m|^{|a|} \cdot |m|^{|1|} &&\text{propriet\`a dell'esponenziale fra
+cardinalit\`a}\\
+&= |m^a| \cdot |m| &&\text{ipotesi induttiva $\cdot$ facile verifica}\\
+&= |m^a \cdot m| &&\text{uguaglianza dimostrata per il $\cdot$}\\
+&= |m^{s(a)}| &&\text{definizione ricorsiva di esponenziale}
+ 		\end{align*}
 \end{proof}
 
 \begin{note}
-	Questa proposizione ci fornisce una dimostrazione delle propriet\`a aritmetiche elementari delle operazioni su $\omega$ [sfruttando le propriet\`a delle operazione fra cardinalit\`a], alternativa a quella per induzione (che \`e stata lasciata per esercizio).
-	Basta, infatti, applicare le corrispondenti propriet\`a delle operazioni sulle cardinalit\`a\footnote{E ci\`o non comporta problemi di circolarit\`a poich\'e nella dimostrazione della proposizione precedente abbiamo usato \textbf{solo} la definizione delle tre operazione e nessuna delle  loro propriet\`a.}.
+	Questa proposizione ci fornisce una dimostrazione delle
+propriet\`a aritmetiche elementari delle operazioni su $\omega$
+alternativa a quella per induzione (che \`e stata lasciata come esercizio).
+	Basta, infatti, applicare le corrispondenti propriet\`a delle
+operazioni sulle cardinalit\`a (la cui dimostrazione \`e stata lasciata
+come esercizio).
 \end{note}
 
 \begin{exercise}
-	Dimostra che se $m,n \in \omega$ e $m \leq n$, esiste un unico $n-m \in \omega$ tale che $m + (n-m) = n$. In due modi diversi.
+	Dimostra che se $m,n \in \omega$ e $m \leq n$, allora esiste un unico $n-m \in \omega$ tale che $m + (n-m) = n$. In due modi diversi.
 \end{exercise}
-
-I due modi sono sostanzialmente l'induzione ed il principio del minimo (idea la quale sar\`a riutilizzata in maniera molto simile per dimostrare il lemma di sottrazione ordinale), partiamo da quest'ultimo modo.
-
-\begin{soln}
-	Fissati $m,n \in \omega$, con $m \leq n$, dobbiamo verificare esistenza ed unicit\`a di $k \in \omega$ tale che $m + k = n$.
-	\begin{itemize}
-		\item[$\boxed{\text{unicit\`a}}$] Per l'unicit\`a ci basta osservare che la funzione somma \`e strettamente crescente in entrambe le componenti\footnote{Andrebbe verificato per induzione.}, dunque qualsiasi $k' \ne k$, per l'ordinamento totale di $\omega$, \`e necessariamente strettamente maggiore o minore di $k$, da cui la somma con $m$ \`e a sua volta strettamente maggiore o minore di $n$.
-		\item[$\boxed{\text{esistenza}}$] Se $m = n$, allora $k = 0$ e si conclude. Possiamo quindi supporre che $m < n$, sia $d$ il minimo tale per cui $m + d > n$, tale minimo esiste perch\'e $n < s(n) < m + s(n)$, dunque l'insieme in cui \`e preso \`e non vuoto e bene ordinato, pertanto $d$ \`e ben definito. Poich\'e $m < n$ si ha $d > 0$, dunque $d = b + 1$, e per la minimalit\`a
-		di $d$ si ha $m + b \leq n$, dove in particolare, se valesse il $<$, si avrebbe $m + d = m + s(b) = s(m + b) \leq n$, che \`e assurdo, dunque vale l'uguaglianza e $b$ \`e il $k$ cercato.
-	\end{itemize}
-\end{soln}
-
-Vediamo ora la stessa cosa dimostrata facendo uso dell'induzione numerabile.
-
-\begin{soln}
-	Per l'unicit\`a si procede esattamente come sopra, dimostriamo per induzione (su $n$) che fissati $m,n \in \omega$, con $m \leq n$, esiste $k \in \omega$ tale che $m + k = n$.
-	\begin{itemize}
-		\item[$\boxed{\text{caso $n = 0$}}$] In tal caso, o $m < n = 0$, e quindi la tesi \`e vera a vuoto, oppure $m = n = 0$, ed in questo caso basta prendere $k = 0$.
-		\item[$\boxed{n \implies n + 1}$] Supponiamo che esista $k \in \omega$ tale che $m + k = n$ e verifichiamo che esista $k' \in \omega$ tale che $m + k' = n + 1$. Dall'ipotesi induttiva:
-		\[ m + k = n \implies m + s(k) = s(m + k) = s(n) = n + 1
-			\]
-		per cui prendiamo proprio $k ' = k + 1$.
-	\end{itemize}
-\end{soln}
