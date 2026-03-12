@@ -101,10 +101,10 @@ Gli assiomi di Peano apparivano cos\`i in ``\emph{Arithmetices principia}'', nel
 		\hbox to\textwidth{\hss\includegraphics[width=\textwidth]{immagini/peano.png}\hss}
 \end{note}
 
-\def\succ{\text{succ}}
+\def\sukk{\text{succ}}
 
 \begin{theorem}[$\omega$ soddisfa gli assiomi di Peano]
-	La funzione $\succ: \omega \rightarrow \omega$ data da $\succ(n) = s(n)$ \`e ben definita e $(\omega,\emptyset,\text{succ})$
+	La funzione $\sukk\colon \omega \to \omega$ data da $\sukk(n) = s(n)$ \`e ben definita e $(\omega,\emptyset,\text{succ})$
 	soddisfa gli assiomi di Peano.
 \end{theorem}
 
@@ -445,8 +445,8 @@ A$. Questa \`e, per\`o, equivalente a
 Che \`e l'assunto.
 \end{proof}
 
-\begin{definition}[Insieme ben ordinato]
-	Un insieme totalmente ordinato $(S, <)$ si dice \vocab{bene ordinato} se ogni sottoinsieme non vuoto ha un minimo.
+\begin{definition}[Insieme bene ordinato]\label{def-ben-ord}
+	Un insieme totalmente ordinato $(S, <)$ si dice \vocab{bene ordinato} se ogni suo sottoinsieme non vuoto ha un minimo.
 	\[ \forall {A \subseteq S} \; A \ne \emptyset \rightarrow \exists
 {m \in A} \; \forall {x \in A} \; m \leq x
 		\]
