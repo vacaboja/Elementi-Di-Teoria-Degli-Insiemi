@@ -431,69 +431,79 @@ commutativo con identit\`a~$1 \,\Mydef\, [(1,0)]_\ZZ$.
 		\]
 \end{note}
 
-%Per dimostrare la numerabilit\`a di $\ZZ$ e $\QQ$, \`e comodo richiamare
-%ancora un esercizio~(\ref{disuguaglianze_senza_AC2}), per\`o, questa
-%volta, lo risolviamo.
-%
-%\begin{lemma}
-%	Se $|A| \leq \aleph_0$ e $f\colon A \to B$ \`e surgettiva, allora $|B| \leq \aleph_0$.
-%\end{lemma}
-%
-%\begin{proof}
-%Per ipotesi esiste $g\colon A\to\omega$ iniettiva, dobbiamo trovare 
-%$h\colon B \to \omega$ iniettiva. Definiamo
-%        \[ h(b) = \min_<(g[f^{-1}(b)])
-%                \]
-%        $f^{-1}(b) \ne \emptyset$ per ogni $b \in B$ poich\'e $f$ \`e surgettiva, per cui il minimo \`e ben definito, e quindi lo \`e $h$.
-%        Vediamo l'iniettivit\`a, se $h(b) = h(b')$, allora i minimi, siano $g(a)$ e $g(a')$, sono uguali, ma $a$ e $a'$ sono elementi nelle controimmagini rispettivamente di $b$ e $b'$, cio\`e tali che $f(a) = b$ e $f(a') = b'$.
-%        Sappiamo quindi per ipotesi che $g(a) = g(a')$ e per l'iniettivit\`a di $g$ segue $a = a'$, da cui $f(a) = f(a')$, da cui $b = f(a) = f(a') = b'$.
-%\end{proof}
-%
-%
-%\begin{corollary}[Caratterizzazione della al pi\`u numerabilit\`a]
-%	\label{disugcardnum}
-%	Un insieme $A \ne \emptyset$ \`e al pi\`u numerabile se e solo se esiste $f : \omega \rightarrow A$ surgettiva.\footnote{D'ora in avanti le disuguaglianze che danno al pi\`u numerabile ottenute mediante mappe surgettive saranno quindi legittime.}
-%\end{corollary}
-%
-%\begin{proof}
-%	La freccia $\Longleftarrow$ deriva dall'esercizio citato prima. Per l'inverso, supponiamo $A$ al pi\`u numerabile e mostriamo che c'\`e sempre una mappa surgettiva tra $\omega$ ed $A$.
-%	Per ipotesi esiste $g : A \hookrightarrow \omega$ - iniettiva -, essendo $A \ne \emptyset$ possiamo fissare $a \in A$ e definire la seguente mappa:
-%	\[ f : \omega \to A : x \mapsto \begin{cases}
-%										g^{-1}(x) &\text{se $x \in \Imm(g)$} \\
-%										a &\text{altrimenti}
-%									\end{cases}
-%		\]
-%	tale mappa \`e naturalmente ben definita ed \`e surgettiva in quanto stiamo semplicemente estendendo la mappa bigettiva $g^{-1} : \omega\supseteq\Imm(g) \to A$.
-%\end{proof}
-%
-%\begin{notation}[Successione - enumerazione]
-%	Con \vocab{successione} (numerabile) intendiamo semplicemente una funzione con dominio $\omega$, per cui:
-%	\[ \alpha = \{\alpha_i\}_{i \in \omega} \Mydef \alpha : \omega \to \ldots: i \mapsto \alpha_i
-%		\]
-%	cio\`e $\alpha$ \`e un ``elenco numerabile'' - non necessariamente esaustivo - degli elementi dell'insieme di arrivo. Per \vocab{enumerazione}
-%	intendiamo una successione (numerabile) surgettiva, tale per cui, detto $A$ l'insieme di arrivo, si ha $\Imm(\alpha) = A$, o - informalmente - $A = \{\alpha_i | i \in \omega\}$.
-%\end{notation}
-%
-%\textcolor{MidnightBlue}{Il corollario sopra, quindi, non ci dice altro che $A \ne \emptyset$ \`e al pi\`u numerabile se e solo se ha almeno un'enumerazione.}
-%
-%\begin{example}[L'insieme dei numeri interi \`e numerabile]
-%	$\ZZ$ \`e numerabile.
-%\end{example}
-%
-%\begin{proof}
-%	La funzione $\omega \times \omega \to \ZZ : (a,b) \mapsto a - b$ \`e surgettiva per definizione (\`e la proiezione al quoziente di $\omega \times \omega$ modulo $\sim_\ZZ$, che sappiamo essere sempre surgettiva, in questo caso stiamo indicando le classi $[(a,b)]_\ZZ$ con $a - b$, ma sono sempre classi di equivalenza), e $\omega \times \omega$ \`e numerabile\footnote{$|\omega \times \omega| = \aleph_0 \cdot \aleph_0 = \aleph_0$.} dunque $|\ZZ|\leq \aleph_0$.\\
-%	D'altro canto, la funzione $\omega \rightarrow \ZZ : n \mapsto [(n,0)]_\ZZ$ \`e iniettiva, infatti $[(n,0)]_\ZZ = [(m,0)]_\ZZ \iff (n,0) \sim (m,0) \iff n = m$ (per definizione di $\sim_\ZZ$), dunque $\aleph_0 \leq |\ZZ|$, pertanto - per \hyperref[CB]{Cantor-Bernstein} - $|\ZZ| = \aleph_0$.
-%\end{proof}
-%
-%\begin{example}[L'insieme dei numeri razionali \`e numerabile]
-%	$\QQ$ \`e numerabile.
-%\end{example}
-%
-%\begin{proof}
-%	Come nell'esempio precedente, la proiezione al quoziente $\ZZ \times (\omega \setminus\{0\}) \rightarrow \QQ : (n,d) \mapsto \frac{n}{d}$ (dove la frazione \`e un'abbreviazione per la classe di equivalenza $[(n,d)]_\QQ$), \`e surgettiva per costruzione, inoltre $|\ZZ \times (\omega \setminus\{0\})| = |\ZZ| \cdot |\omega \setminus\{0\}| = \aleph_0 \cdot \aleph_0 = \aleph_0$, dunque vale il 
-%	\hyperref[disugcardnum]{corollario} sulla disuguaglianza tra cardinalit\`a, pertanto $\aleph_0 \geq |\QQ|$.\\
-%	Viceversa, la funzione $\omega \rightarrow \QQ : n \mapsto \frac{n}{1}$ \`e iniettiva, infatti $\frac n1 = \frac m1 \iff n \cdot 1 = m \cdot 1 \iff m = n$, dunque per definizione si ha $\aleph_0 \leq |\QQ|$. Da cui per \hyperref[CB]{Cantor-Bernstein} $|\QQ| = \aleph_0$.
-%\end{proof}
+Per dimostrare la numerabilit\`a di $\ZZ$ e $\QQ$, \`e comodo richiamare
+ancora un esercizio~(\ref{disuguaglianze_senza_AC2}), per\`o, questa
+volta, lo risolviamo.
+
+\begin{lemma}
+	Se $|A| \leq \aleph_0$ e $f\colon A \to B$ \`e surgettiva, allora $|B| \leq \aleph_0$.
+\end{lemma}
+
+\begin{proof}
+Per ipotesi esiste $g\colon A\to\omega$ iniettiva, dobbiamo trovare 
+$h\colon B \to \omega$ iniettiva. Definiamo
+        \[ h(b) = \min\big(g\big[\,\{a\in A\,|\,f(a)=b\}\,\big]\big)
+                \]
+        L'insieme fra graffe non pu\`o essere vuoto per la surgettivit\`a
+di~$f$, per cui il minimo \`e ben definito.
+        Dimostriamo l'iniettivit\`a. Se $h(b) = h(b')$, allora i minimi,
+siano $g(a)$ e $g(a')$, sono uguali, quindi $a=a'$ per l'iniettivit\`a
+di~$g$. A questo punto $b=f(a)=f(a')=b'$.
+\end{proof}
+
+
+\begin{corollary}
+	\label{disugcardnum}
+	Un insieme $A \ne \emptyset$ \`e al pi\`u numerabile se e solo se
+esiste $f \colon \omega \to A$ surgettiva.
+\end{corollary}
+
+\begin{proof}
+	La freccia $\Leftarrow$ \`e il lemma. Supponiamo ora che $A$ sia
+al pi\`u numerabile. Allora o $A$ \`e numerabile, e in questo caso
+c'\`e una bigezione~$\omega\to A$. O $A$ \`e finito, per cui c'\`e $h\colon
+n \to A$, per qualche $n\in\omega$, bigettiva. In questo caso, fissiamo un $a\in A$, e
+definiamo $f(x) = h(x)$ per $x<n$ e $f(x)=a$ per $x\ge n$.
+\end{proof}
+
+\begin{notation}[Successione - enumerazione]
+	Con \vocab{successione} (numerabile) intendiamo semplicemente una
+funzione con dominio $\omega$, e scriviamo $\drkblu \alpha =
+\{\alpha_i\}_{i \in \omega}$ per dire che $\alpha$ \`e una successione. In
+questo contesto ${\drkblu \alpha_i} \;\Mydef\; \alpha(i)$.
+
+Per \vocab{enumerazione} di $A$
+	intendiamo una successione che mappa surgettivamente $\omega$
+su~$A$.
+\end{notation}
+
+{\drkgrn Il corollario sopra, quindi, dice che $A \ne \emptyset$ \`e al pi\`u numerabile se e solo se ha un'enumerazione.}
+
+\begin{example}
+	$\ZZ$ \`e numerabile.
+\end{example}
+
+\begin{proof}
+	La funzione $\omega \times \omega \to \ZZ,\quad (a,b) \mapsto a - b$ \`e surgettiva
+e $\omega \times \omega$ \`e numerabile, quindi $|\ZZ|\leq \aleph_0$.
+	D'altro canto, la funzione $\omega \rightarrow \ZZ,\quad n \mapsto
+[(n,0)]_\ZZ$ \`e iniettiva, quindi $\aleph_0 \leq |\ZZ|$. Per
+il teorema di \hyperref[CB]{Cantor-Bernstein}, $|\ZZ| = \aleph_0$.
+\end{proof}
+
+\begin{example}
+	$\QQ$ \`e numerabile.
+\end{example}
+
+\begin{proof}
+	Come nell'esempio precedente, $\ZZ \times (\omega \setminus\{0\})
+\rightarrow \QQ\quad  (n,d) \mapsto \frac{n}{d}$ \`e surgettiva, e $|\ZZ
+\times (\omega \setminus\{0\})| = |\ZZ| \cdot |\omega \setminus\{0\}| =
+\aleph_0 \cdot \aleph_0 = \aleph_0$, dunque $|\QQ|\leq \aleph_0$.
+	Viceversa, la funzione $\omega \rightarrow \QQ,\quad n \mapsto
+\frac{n}{1}$ \`e iniettiva, per cui $\aleph_0 \leq |\QQ|$, e si conclude
+nuovamente per il teorema di \hyperref[CB]{Cantor-Bernstein}.
+\end{proof}
 %
 %Adesso, ci piacerebbe poter dire che, se abbiamo un insieme $A$ al pi\`u numerabile, e tutti i suoi elementi sono, a loro volta, insiemi al pi\`u numerabili, allora
 %$\bigcup A$ \`e al pi\`u numerabile \textcolor{MidnightBlue}{- ovvero un'unione al pi\`u numerabile di insiemi al pi\`u numerabili \`e a sua volta al pi\`u numerabile}.\\
