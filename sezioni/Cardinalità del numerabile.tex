@@ -29,7 +29,7 @@ In questo corso, giocheranno un ruolo importante, in questa direzione, le
 relazioni d'ordine, e, in particolare -- l'idea \`e di Cantor -- i 
 buoni ordini. Ricordiamo che un insieme totalmente ordinato \`e
 \vocab{bene ordinato}
-(Definizione~\ref{def-ben-ord}) se ogni suo sottoinsieme non vuoto ha un
+(definizione~\ref{def-ben-ord}) se ogni suo sottoinsieme non vuoto ha un
 minimo elemento.
 
 Il trucco \`e che un isomorfismo di ordini \`e, in particolare, una
@@ -112,7 +112,7 @@ $\forall {x \in \omega} \; \exists {y \in \omega} \; x < y$.
 	(1) \`e il principio del minimo. (2) segue da $x<s(x)$.
 Dimostriamo~(3). Se $A$ \`e superiormente limitato da $L \in \omega$,
 allora $A \subseteq s(L)$, quindi $A$ \`e finito.
-Di conseguenza, applicando l'Osservazione~\ref{ord-fin}, si vede che $A$
+Di conseguenza, applicando l'osservazione~\ref{ord-fin}, si vede che $A$
 ha un massimo. {\drkgrn Basta, per esempio, considerare l'ordinamento su~$A$
 definito da~$x\prec y \Mydef x > y$, questo \`e isomorfo a un numero
 naturale~$n$, l'elemento corrispondente a $0\in n$ \`e il massimo di~$A$.}
@@ -161,7 +161,7 @@ Verifichiamo che $f\colon \omega \to A$ \`e ben definita, strettamente crescente
 
 {\drkblu Buona definizione $f$.} Dobbiamo verificare che il minimo esista,
 ossia che $A\setminus f[x]\neq\emptyset$. Se cos\`i non fosse, $A$ sarebbe
-l'insieme finito~$f[x]$, ma l'Osservazione~\ref{ord-fin} implica che un
+l'insieme finito~$f[x]$, ma l'osservazione~\ref{ord-fin} implica che un
 insieme finito e non vuoto non pu\`o essere illimitato.
 
 {\drkblu Monotonia stretta.} Se $x_1<x_2$, allora $f[x_1]\subseteq
@@ -378,7 +378,7 @@ massimo perch\'e $\prec$ \`e totale.
 Usando la proposizione appena dimostrata, potremmo dimostrare, per
 esempio, che $\ZZ$ e $\QQ$ sono numerabili, se non fosse che non abbiamo
 ancora definito questi oggetti. Allo scopo, ricordiamo che --
-Esercizio~\ref{3.73} -- una relazione di equivalenza
+esercizio~\ref{3.73} -- una relazione di equivalenza
 induce un insieme di classi di equivalenza.
 
 \begin{definition}[$\ZZ$]
@@ -468,7 +468,7 @@ n \to A$, per qualche $n\in\omega$, bigettiva. In questo caso, fissiamo un $a\in
 definiamo $f(x) = h(x)$ per $x<n$ e $f(x)=a$ per $x\ge n$.
 \end{proof}
 
-\begin{notation}[Successione - enumerazione]
+\begin{notation}
 	Con \vocab{successione} (numerabile) intendiamo semplicemente una
 funzione con dominio $\omega$, e scriviamo $\drkblu \alpha =
 \{\alpha_i\}_{i \in \omega}$ per dire che $\alpha$ \`e una successione. In
@@ -506,485 +506,461 @@ il teorema di \hyperref[CB]{Cantor-Bernstein}, $|\ZZ| = \aleph_0$.
 \frac{n}{1}$ \`e iniettiva, per cui $\aleph_0 \leq |\QQ|$, e si conclude
 nuovamente per il teorema di \hyperref[CB]{Cantor-Bernstein}.
 \end{proof}
-%
-%Adesso, ci piacerebbe poter dire che, se abbiamo un insieme $A$ al pi\`u numerabile, e tutti i suoi elementi sono, a loro volta, insiemi al pi\`u numerabili, allora
-%$\bigcup A$ \`e al pi\`u numerabile \textcolor{MidnightBlue}{- ovvero un'unione al pi\`u numerabile di insiemi al pi\`u numerabili \`e a sua volta al pi\`u numerabile}.\\
-%D'altro canto \`e ragionevole: se esiste una enumerazione $\{a_i\}_{i \in \omega}$ di $A$, e, per ogni $i \in \omega$, esiste una enumerazione di $a_i$, cio\`e esiste:
-%\[ \alpha_i : \omega \twoheadrightarrow a_i : j \mapsto \alpha_i(j) = \alpha_{i,j}
-%	\]
-%tale per cui $a_i = \Imm(\alpha_i) = \{\alpha_{i,j}\}_{j \in \omega}$, allora possiamo mandare surgettivamente - cio\`e enumerare - $\omega \times \omega$ in $\bigcup A$ mandando ogni coppia $(i,j)$ nel $j$-esimo elemento dell'$i$-esimo elemento di $A$, $(i,j) \mapsto \alpha_{i,j}$,
-%e, siccome $\omega \times \omega$ numerabile, allora per il \hyperref[disugcardnum]{corollario} $|A| \leq \aleph_0$.\\
-%L'\textcolor{red}{errore} \`e credere di poter fissare una enumerazione $\alpha_i$ di $a_i$ per ogni $i \in \omega$. Usando l'assioma della scelta potremo farlo, ma, per ora, non abbiamo modo, in generale, di procurarci la funzione che associa ogni naturale ad una enumerazione dell'elemento di $A$ da lui indicizzato, $i \mapsto \alpha_i$.
-%Possiamo per\`o assumere di averla, cos\`i si corregge il ragionamento impreciso di prima.
-%
-%\begin{proposition}[$|A| \leq \aleph_0 \implies |\bigcup A| \leq \aleph_0$]
-%	Sia $A = \{a_i \in A| i \in \omega\}$ e \textcolor{red}{sia $\{\alpha_i\}_{i \in \omega}$ una successione di funzioni}\footnote{Che stiamo appunto assumendo di avere gi\`a, altrimenti serve AC.} tali per cui,
-%	per ogni $i \in \omega$, si ha che $\alpha_i : \omega \twoheadrightarrow a_i$ \`e una enumerazione di $a_i$, allora $\left|\bigcup A\right| \leq \aleph_0$.
-%\end{proposition}
-%
-%\begin{proof}
-%	Basta osservare che la funzione:
-%	\[ f : \omega \times \omega \to \bigcup A : (i,j) \mapsto \alpha_i(j) = \alpha_{i,j}
-%		\]
-%	\`e surgettiva e vale quindi il solito \hyperref[disugcardnum]{corollario}. Infatti, dato $a \in \bigcup A$,
-%	poich\'e $A = \{a_i\}_{i \in \omega}$, allora $a \in a_i$, per qualche $i \in \omega$, e poich\'e $a_i = \Imm(\alpha_i)$ - qui stiamo usando che gli elementi di $A$ sono a loro volta al pi\`u numerabili -,
-% 	allora esiste $j \in \omega$ tale per cui $\alpha_i(j) = a$.
-%\end{proof}
-%
-%\pagebreak
-%
-%\begin{notation}
-%	Data una funzione $f : I \rightarrow S$ definiamo:
-%	\[ \bigcup_{i \in I} f(i) \Mydef \bigcup f[I]
-%		\]
-%	Cos\`i, per esempio, se $A = \{a_i | i \in \omega\}$:
-%	\[ \bigcup A = \bigcup_{i \in \omega} a_i \;\textcolor{MidnightBlue}{= \{x | \exists i \in \omega \; x \in a_i\}}
-%		\]
-%\end{notation}
-%
-%\begin{definition}
-%	[Parti finite]
-%	Definiamo le \vocab{parti finite} di un insieme $A$ come:
-%	\[ \psf(A) \Mydef \{X \in \ps(A) : |X| < \aleph_0\}
-%		\]
-%\end{definition}
-%
-%\begin{proposition}[Insieme al pi\`u numerabile $\implies$ parti finite al pi\`u numerabile]
-%	$|A| \leq \aleph_0 \rightarrow |\psf(A)| \leq \aleph_0$.
-%\end{proposition}
-%
-%\begin{proof}
-%	Il caso $A = \emptyset$ \`e immediato. Assumiamo $A \ne \emptyset$, sia:
-%	\[ \ps^{\leq n} = \{X \in \ps(A) : |X| \leq n\}
-%		\]
-%	siccome $\psf(A) = \bigcup_{n \in \omega} \ps^{\leq n}(A)$, basta esibire una successione di enumerazioni $n \mapsto (\alpha_n \twoheadrightarrow \ps^{\leq n}(A))$, per poter usare il corollario sull'unione - cos\`i da evitare AC.\\
-%	Essendo $|\omega \times A| = \aleph_0$ dall'ipotesi, possiamo fissare  $f : \omega \twoheadrightarrow \omega \times A : x \mapsto (f_1(x),f_2(x))$\footnote{Avendo fissato una $f$ a caso $f_1$ ed $f_2$ sono di fatto funzioni surgettive - entrambe da $\omega$ al rispettivo insieme - a caso.}
-%	surgettiva (in realt\`a anche bigettiva). A questo punto possiamo costruire la successione di enumerazioni $(\alpha_n)_{n \in \omega}$ - 
-%	con $\alpha_n$ enumera $\ps^{\leq n}(A)$ per ogni $n \in \omega$ - per ricorsione numerabile prima forma come segue:
-%	\begin{itemize}
-%		\item[$\boxed{m = 0}$] In questo caso $\ps^{=0}(A) = \{\emptyset\}$, dunque $\alpha_0$ \`e la funzione che mappa tutti i naturali in 0, cio\`e $\alpha_0 = \{(n,0)\}_{n \in \omega}$.
-%		\item[$\boxed{m \implies m + 1}$] Data un'enumerazione $\alpha_m$ di $\ps^{\leq m}(A)$, definiamo l'enumerazione $\alpha_{m + 1}$ di $\ps^{\leq m + 1}(A)$ nella maniera seguente:
-%		\[ 	\alpha_{m + 1} : \omega \rightarrow \ps^{\leq m + 1} : x \mapsto \begin{cases}
-%			\emptyset &\text{se $x = 0$} \\
-%			\underbrace{\alpha_m(\overbrace{f_1(x-1)}^{\textcolor{MidnightBlue}{\in \; \omega}})}_{\textcolor{MidnightBlue}{\in \;\ps^{\leq m}(A)}} \cup \{\underbrace{f_2(x - 1)}_{\textcolor{MidnightBlue}{\in A}}\}\;\textcolor{MidnightBlue}{\ne \;\emptyset} &\text{altrimenti}
-%			\end{cases}
-%		\]
-%		\textcolor{MidnightBlue}{di fatto - a parte lasciare un insieme vuoto - stiamo prendendo tutti gli insiemi in $\ps^{\leq m}(A)$ e ci stiamo aggiungendo un elemento di $A$\footnote{Una sorta di shift per la cardinalit\`a.} - va verificato che questa costruzione mantenga la surgettivit\`a e lo faremo a breve.}
-%	\end{itemize}
-%	Verifichiamo ora per induzione che la successione che abbiamo costruito ricorsivamente $(\alpha_n)_{n \in \omega}$ di enumerazioni dei $\ps^{\leq n}(A)$ sia effettivamente tale, ovvero che $\alpha_n$ sia una mappa surgettiva da $\omega$ in $\ps^{\leq n}(A)$ per ogni $n \in \omega$.
-%	\begin{itemize}
-%		\item[$\boxed{m = 0}$] La successione costante $\alpha_0 = \{(n,0)\}_{n \in \omega}$ \`e banalmente surgettiva.
-%		\item[$\boxed{m \implies m + 1}$] Per ipotesi induttiva la successione $\alpha_m : \omega \twoheadrightarrow \ps^{\leq m}(A)$ \`e surgettiva, vogliamo verificare che anche $\alpha_{m + 1} : \omega \to \ps^{\leq m + 1}(A)$ lo \`e.
-%		Dato $Y \in \ps^{\leq s(m)}(A)$ si danno due casi. Se $Y = \emptyset$, allora per costruzione $Y = \alpha_{s(m)}(0) = \emptyset$. Altrimenti siamo nel caso in cui esiste almeno un elemento $y \in Y$.\\
-%		In questo caso necessariamente $|Y\setminus\{y\}| \leq m$, quindi per ipotesi induttiva - cio\`e $\alpha_m$ surgettiva - $Y \setminus\{y\} = \alpha_m(t)$ per qualche $t \in \omega$.
-%		Per la surgettivit\`a di $f : \omega \twoheadrightarrow \omega \times A$, la coppia $(t,y)$ \`e immagine di qualche $x \in \omega$, cio\`e $f(x) = (f_1(x),f_2(x)) = (t,y)$.
-%		Segue quindi che proprio $x+1$ \`e una controimmagine di $Y$:
-%		\begin{align*}
-%			\alpha_{m + 1}(x+1) &= \alpha_m(f_1(x)) \cup \{f_2(x)\} &&(\text{definizione $\alpha_{m+1}$})\\
-%							   &= \alpha_m(t) \cup \{y\} &&(f(x) = (t,y)) \\
-%							   &= (Y \setminus\{y\}) \cup \{y\} = Y &&(\text{Hp. induttiva})
-%		\end{align*}
-%	\end{itemize}
-%\end{proof}
-%
-%\paragraph*{Applicazione}\mbox{}\\
-%Dimostriamo che l'insieme dei numeri reali algebrici $\A_{\RR}$\footnote{Sarebbe $\overline{\QQ} \cap \RR$.} \`e numerabile. Per questa applicazione, assumiamo le propriet\`a elementari di $\RR$.
-%L'insieme $\A_{\RR}$ \`e definito come l'insieme degli $x \in \RR$ che sono zeri di qualche polinomio a coefficienti razionali:
-%\[ \A_{\RR} \Mydef \{x \in \RR | \exists p(x) \in \QQ[x]\setminus\{0\} \; p(x) = 0\}
-%	\]
-%I numeri reali che non sono algebrici si dicono \vocab{trascendenti} (= $\RR\setminus(\overline{\QQ} \cap \RR)$), siccome - formalmente, vedremo questo risultato in seguito - $\RR$ non \`e numerabile, deduciamo dalla numerabilit\`a di
-%$\A_{\RR}$ che ci sono numeri reali trascendenti.\\
-%Dimostriamo, intanto, che l'insieme $\QQ[x]$, dei polinomi a coefficienti razionali nella indeterminata $x$, \`e numerabile.
-%Possiamo identificare un polinomio:
-%\[ p(x) = a_0 + a_1x + a_2x^2 + \ldots + a_d x^d
-%	\]
-%con l'insieme dei suoi monomi:
-%\[ p(x) = \{a_0,a_1x,a_2x^2,\ldots,a_dx^d\}
-%	\]
-%e ciascun monomio con la coppia (grado, coefficiente):
-%\[ p(x) = \{(0,a_0),(1,a_1),\ldots,(d,a_d)\}\,\footnote{Pu\`o essere pensata come funzione da $d$ in $\QQ$, o come una funzione da $\omega$ a $\QQ$ a supporto finito.}
-%	\]
-%Formalmente, come accade per i numeri, le coppie ordinate, le funzioni, etc., anche i polinomi non sono oggetti atomici della teoria degli insiemi: occorre, in qualche modo, fissare una codifica.
-%Quella appena descritta \`e una codifica ragionevole. Rappresentando i polinomi in questo modo:
-%\[ \QQ[x] \subseteq \psf(\omega \times \QQ) \, \footnote{Pi\`u precisamente $\QQ[x] = \bigcup_{n \in \omega} n \times \QQ \subseteq \psf(\omega \times \QQ)$.}
-%	\]
-%per cui, essendo che $|\omega \times \QQ| = \aleph_0 \implies |\psf(\omega \times \QQ)| = \aleph_0$, si ha $|\QQ[x]| \leq \aleph_0$.
-%Inoltre \`e elementare che $\QQ \hookrightarrow \QQ[x]$ (ad esempio $q \mapsto \{(0,q)\}$ \`e una mappa iniettiva che d\`a tutti i polinomi di grado 0), in tal modo si ha anche l'altra disuguaglianza di 
-%cardinalit\`a e quindi - come al solito per \hyperref[CB]{Cantor-Bernstein} - $|\QQ[x]| = \aleph_0$. Venendo ad $\A_{\RR}$ abbiamo una facile surgezione:
-%\begin{multline*}
-%	f : (\QQ[x]\setminus\{0\}) \times \omega \to \A_{\RR} :\\
-%	 (p,i) \mapsto \text{``la $i$-esima radice di $p$ se questa esiste, altrimenti 0''}
-%\end{multline*}
-%Vediamo, per\`o, in maggior dettaglio come si pu\`o rappresentare $f$ mediante una formula insiemistica.
-%\[
-%	\text{``$\alpha$ \`e la $i$-esima radice di $p$''} \equiv
-%	p(\alpha) = 0 \land |\{x \in \RR | x \leq \alpha \land p(x) = 0\}| = |i|
-%\]
-%\begin{multline*}
-%	y = f(p,i) \equiv \text{``$y$ \`e la $i$-esima radice di $p$''} \\
-%	\land(y = 0 \land \neg \exists \alpha \in \RR \; \text{``$\alpha$ \`e la $i$-esima radice di $p$''})
-%\end{multline*}
-%Per separazione esiste, quindi, $f$, e, di conseguenza $|\A_{\RR}| \leq \aleph_0$. La disuguaglianza opposta \`e immediata perch\'e $\QQ \subseteq \A_{\RR}$ - \`e facile scrivere un polinomio in $\QQ[x]$ che abbia come radice un qualsiasi $q \in \QQ$ fissato.
-%
-%\begin{exercise}[Ogni gruppo finitamente generato \`e al pi\`u numerabile]
-%	Dato un insieme $X$, una funzione $f : X \times X \to X$, e un sottoinsieme $A \subseteq X$ al pi\`u numerabile, dimostra che esiste un $\ol A \subseteq X$ al pi\`u numerabile tale che $A \subseteq \ol A$\footnote{Typo di Mamino, questa ipotesi manca nelle dispense, ma c'\`e scritta nel 2021.}
-%	e $f[\ol A \times \ol A] \subseteq \ol A$. Concludi che un gruppo finitamente generato \`e al pi\`u numerabile.
-%\end{exercise}
-%
-%\begin{soln}[DA COMPLETARE]
-%	L'idea per risolvere la prima parte \`e ottenere $\ol A$ come unione numerabile di una successione che parta da $A$ e che ad ogni passaggio nel faccia l'immagine via $f$, in modo tale che l'unione rispetti poi tutte le propriet\`a volute.
-%	Per questa ragione definiamo per ricorsione numerabile prima forma la seguente successione:
-%	\[ A_n : \omega \to \ps(X) : \begin{cases}
-%		A_0 = 0 \\
-%		A_{n + 1} = f[A_n \times A_n] \cup A_n
-%	\end{cases}
-%		\]
-%	e quindi $\ol A := \bigcup_{n \in \omega} A_n$. Naturalmente, essendo $A_n \subseteq X$ per ogni $n \in \omega$ - per definizione di $f$ -, si ha che $\ol A \subseteq X$; inoltre, presi $x,y \in \ol A$ si ha $x \in A_i$ e $y \in A_j$, per $i, j \in \omega$, poich\'e $A_n \subseteq A_{n + 1}$, cio\`e la successione \`e crescente,
-%	si ha $x,y \in A_{\max(i,j)}$, per cui per definizione di $f$ si conclude $f(x,y) \in A_{\max(i,j) + 1} \subseteq \ol A$.\\
-%	Ci rimane da verificare che $|\ol A| \leq \aleph_0$, per fare ci\`o vogliamo usare il corollario dell'unione - che evita AC -, dobbiamo quindi procurarci una 
-%	successione di enumerazioni $n \mapsto \alpha_n$, con $\alpha_n : \omega \twoheadrightarrow A_n$. Definiamo la successione per ricorsione numerabile.
-%	\begin{itemize}
-%		\item[$\boxed{n = 0}$] Per ipotesi $A_0 = A$ \`e al pi\`u numerabile quindi possiamo fissare una sua enumerazione ed usare quella come $\alpha_0$.
-%		\item[$\boxed{n \implies n + 1}$] Supponiamo di avere per ipotesi induttiva $\alpha_n : \omega \to A_n$ e costruiamo $\alpha_{n + 1} : \omega \to A_{n + 1}$
-%	\end{itemize}
-%	Dimostriamo ora per induzione che la successione cos\`i definita \`e effettivamente una successione di enumerazione per gli $A_n$\footnote{Come nella proposizione
-%	sulle parti finite, non solo la successione di enumerazioni ci permette di applicare il corollario sull'unione, ma ha come conseguenza - cosa che stiamo per dimostrare per induzione - che $\forall n \in \omega \; |A_n| \leq \aleph_0$, che a priori non sapevamo.}.
-%	\begin{itemize}
-%		\item[$\boxed{n = 0}$] Abbiamo preso gi\`a $\alpha_0$ enumerazione nelle costruzione per ricorsione, quindi non c'\`e altro da dimostrare.
-%		\item[$\boxed{n \implies n + 1}$] Supponiamo che $\alpha_n$ sia surgettiva e dimostriamo che lo \`e $\alpha_{n + 1} : \omega \to A_{n + 1}$. Dato $y \in A_{n + 1} = f[A_n \times A_n] \cup A_n$,
-%		ci sono tre possibilit\`a:
-%		\begin{itemize}
-%			\item se $y \in A_n \setminus f[A_n \times A_n]$: in tal caso, essendo $\alpha_n$ surgettiva esiste $x \in \omega$ tale per cui $\alpha_n(x) = y$
-%			\item se $y \in A_n \cap f[A_n \times A_n]$: in tal caso $y = f(z)$, con $z = (a,b) \in A_n \times A_n$, e di nuovo, per surgettivit\`a di $\alpha_n$ esistono $a',b' \in A_n$, per cui $\alpha_n(a') = a$ e $\alpha_n(b') = b$
-%			\item se $y \in f[A_n \times A_n] \setminus A_n$:
-%		\end{itemize}
-%	\end{itemize}
-%	Per la seconda parte, dato un gruppo $G$ e $S \subseteq G$, tale che $|S| < \aleph_0$ e $\langle S \rangle = G$, consideriamo la funzione:
-%	\[ f : G \times G \to G : (x,y) \mapsto xy^{-1}
-%		\]
-%	per quanto dimostrato nella prima parte esiste $\overline{S} \subseteq G$ tale che $S \subseteq \ol S$ e $|\ol S| \leq \aleph_0$. Essendo ora $G$ non vuoto e finitamente generato si ha $S \ne \emptyset$,
-%	per cui $\ol S \ne \emptyset$, verifichiamo dunque che $\ol S$ \`e un sottogruppo di $G$.
-%	\begin{itemize}
-%		\item Essendo $\ol S \ne \emptyset$ esiste $g \in \ol S$, e per ipotesi $e_G = gg^{-1} f(g,g) \in \ol S$.
-%		\item Dal primo punto segue facilmente che $\forall g \in \ol S \; g^{-1} = e_G \cdot g^{-1} = f(e_G,g) \in \ol S$.
-%		\item Infine $\forall g,h \in \ol S$, per il punto precedente vale sempre che $h^{-1} \in \ol S$, e per ipotesi $gh = f(g,h^{-1}) \in \ol S$.
-%	\end{itemize}
-%	Abbiamo quindi che $\ol S$ \`e un sottogruppo di $G$ che contiene $S$, per cui \`e proprio tutto il gruppo, $\ol S = G$, e quindi vale $|G| = |\ol S| \leq \aleph_0$.
-%\end{soln}
-%
-%\subsection{Ordini densi numerabili}
-%Il prossimo risultato che vedremo \`e, come al solito, dovuto a Cantor, e caratterizza l'ordine di $\QQ$ a meno di isomorfismi.
-%
-%\begin{definition}[Densit\`a]
-%	Sia $(A,<)$ totalmente ordinato, e $B \subseteq A$, diciamo che $B$ \`e \vocab{denso in} $(A,<)$ se:
-%	\[ \forall x,y \in A \; x < y \rightarrow \exists z \in B \; x < z < y
-%		\]
-%	\textcolor{MidnightBlue}{cio\`e tra due elementi di $A$ c'\`e sempre un elemento di $B$}.\\
-%	Inoltre diciamo che $(A, <)$ \`e \vocab{denso}, cio\`e \`e denso in se stesso, se:
-%	\[ \forall x,y \in A \; x < y \rightarrow \exists z \in A \; x < z < y
-%		\]
-%	\textcolor{MidnightBlue}{cio\`e tra due elementi di $A$ c'\`e sempre qualche elemento di $A$}.
-%\end{definition}
-%
-%\begin{example}[$(\QQ,<)$ \`e denso in se stesso]
-%	Abbiamo gi\`a osservato, in un esercizio, che $\QQ$ \`e denso, infatti:
-%	\[ x < y \rightarrow x < \frac{x+y}{2} < y
-%		\]
-%	cio\`e presi due qualsiasi elementi di $\QQ$, la loro media aritmetica \`e sempre in mezzo e sta in $\QQ$ (formalmente le due disuguaglianze si giustificano con le operazioni di $\QQ$ + l'ordinamento totale + le propriet\`a 
-%	di compatibilit\`a tra operazioni e ordinamento).
-%\end{example}
-%
-%\begin{notexample}[$(\omega,<)$ non \`e denso in se stesso]
-%	L'insieme $\omega$ con il suo ordinamento naturale non \`e denso, perch\'e $\not\exists z \in \omega \; 0 < z < 1$.
-%\end{notexample}
-%
-%\begin{theorem}[Teorema di isomorfismo di Cantor]
-%	\label{isoCantor}
-%	Sia $(A,<)$ un insieme totalmente ordinato tale che:
-%	\begin{enumerate}[1.]
-%		\item $|A| = \aleph_0$
-%		\item $(A,<)$ \`e denso
-%		\item $(A,<)$ non ha \vocab{estremi}, ossia non ha n\'e massimo n\'e minimo elemento
-%	\end{enumerate}
-%	allora $(A,<)\sim(\QQ,<)$.\footnote{Notare che le propriet\`a elencate sono cose che abbiamo gi\`a verificato che valgono per $\QQ$, quindi questo teorema \`e la caratterizzazione di $(\QQ,<)$ come ordine totale.}
-%\end{theorem}
-%
-%\textcolor{MidnightBlue}{L'idea \`e di costruire l'isomorfismo per ricorsione. Ad ogni passo della ricorsione avremo $f_i : A_i \rightarrow Q_i$ isomorfismo con $A_i \subseteq A$ finito 
-%e $Q_i \subseteq \QQ$. Dovremo quindi estendere $f_i$ ingrandendo il suo dominio.
-%Supponiamo, per esempio, di voler definire $f_{i+1}(x)$ con $x \not \in A_i$. Allora, siccome $A_i$ \`e finito, per sapere la posizione di $x$ a ciascuno degli elemento di $A_i$, ci basta sapere quale sia l'ultimo elemento prima di $x$,
-%e quale sia il primo dopo $x$ - diciamo che, per esempio, sono $a_2$  e $a_3$ rispettivamente. Dovremo allora mandare $x$ in un $f_{i+1}(x)$ con $f_i(a_2) < f_{i+1}(x) < f_i(a_3)$, e questo esiste per la densit\`a di $\QQ$.}
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width = 12cm]{immagini/IsoCantor.png}
-%\end{figure}
-%
-%\textcolor{MidnightBlue}{Ragionando simmetricamente, possiamo anche estendere $f_i$, dato un $y \in \QQ$ con $y \not\in Q_i$, in modo tale che $y \in \Imm(f_{i+1})$.}
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width = 12cm]{immagini/IsoCantor2.png}
-%\end{figure}
-%
-%\textcolor{MidnightBlue}{In definitiva, ci basta quindi fissare un'enumerazione di $A$ e una di $\QQ$, e fare questi passi di estensione in maniera alternata, assicurandoci cos\`i di aggiungere al dominio della $f$, uno per uno,
-%tutti gli elementi di $A$, e di aggiungere all'immagine, uno per uno, tutti gli elementi di $\QQ$. Ci far\`a comodo la segue osservazione.}
-%
-%\begin{remark}[L'unione di un insieme di funzioni compatibili \`e una funzione]
-%	Sia $F \subseteq \ps(A \times B)$ un insieme di funzioni. Se vale che:	
-%	\[ \forall f_1,f_2 \in F \; f_{1|\Dom(f_1) \cap \Dom(f_2)} = f_{2|\Dom(f_1) \cap \Dom(f_2)}
-%			\]
-%	cio\`e se le funzioni da $A$ a $B$ coincidono sull'intersezione dei domini a due a due, $\forall x \in \Dom(f_1) \cap Dom(f_2) \; f_1(x) = f_2(x)$, allora $\bigcup F$ \`e ancora una funzione dall'unione dei domini a $B$:
-%	\[ \bigcup F : \bigcup\{\Dom(f) | f\in F\} \rightarrow B
-%		\]
-%\end{remark}
-%
-%\begin{proof}
-%	Bisogna verificare che vale la propriet\`a fondamentale delle funzioni, ovvero che, se $(x,y_1) \in \bigcup F$ e $(x,y_2) \in \bigcup F$, allora $y_1 = y_2$.\\
-%	Dalla prima cosa abbiamo che esiste $f_1 \in \bigcup F$ tale che $f_1(x) = y_1$ e, dalla seconda, sappiamo che esiste $f_2 \in \bigcup F$ tale che $f_2(x) = y_2$, ma questo significa - per definizione di dominio -
-%	che $x \in \Dom(f_1) \cap \Dom(f_2)$, dunque dall'ipotesi si ha che:
-%	\[ y_1 = f_1(x) \overset{\text{Hp.}}{=} f_2(x) = y_2
-%		\]
-%\end{proof}
-%
-%Siamo ora pronti per dimostrare formalmente il teorema.
-%
-%\begin{proof}
-%	Per l'ipotesi 1 possiamo fissare un'enumerazione di $A$ e $\QQ$ rispettivamente:
-%	\[ A = \{a_i | i \in \omega\} \qquad \QQ = \{q_i | i \in \omega\}
-%		\]
-%	vogliamo costruire una successione di funzioni $(f_i)_{i \in \omega}$ tale per cui, per ogni $i \in \omega$:
-%	\begin{enumerate}[(1)]
-%		\item $f_i : A_i \rightarrow Q_i$ con $|A_i| = |Q_i| < \aleph_0$.
-%		\item $f_i$ \`e un isomorfismo di ordini fra $A_i$ e $Q_i$.
-%		\item $f_{i} \subseteq f_{s(i)}$ \textcolor{MidnightBlue}{- ossia $f_{s(i)}$ estende $f_i$}.
-%		\item $\forall j < i \; a_j \in A_i \land q_j \in Q_i$, \textcolor{MidnightBlue}{ossia il dominio e l'immagine contengono sempre almeno i primi $i$ elementi delle rispettive enumerazioni (poi possono contenere anche altro come vedremo dopo nella costruzione):
-%		\[ 	\{a_0,\ldots,a_{i-1}\} \subseteq \Dom(f_i) = A_i \qquad Q_i = \{q_0,\ldots,q_{i-1}\} \subseteq \Imm(f_i) = Q_i
-%			\]}
-%	\end{enumerate}
-%	Dando per buona l'esistenza e l'unicit\`a della successione sopra, possiamo definire:
-%	\[ f := \bigcup_{i \in \omega} f_i
-%		\]
-%	\begin{itemize}
-%		\item[$\diamondsuit$] \underline{$f$ \`e una funzione}: da $(3)$ segue, facilmente per induzione, che $\forall i < j \; f_i \subseteq f_j$, quindi \`e una successione di funzioni ciascuna che estende la precedente, per cui sono compatibili e l'unione \`e ancora una funzione.
-%		\item[$\diamondsuit$] \underline{$f : A \to \QQ = \Imm(f)$}: da $(4)$ vale che $\Dom(f) = \bigcup_{i \in \omega}\Dom(f_i) = \bigcup_{i \in \omega} A_i = A$ e $\Imm(f) = \bigcup_{i \in \omega}\Imm(f_i) = \bigcup_{i \in \omega} Q_i = \QQ$ - dove abbiamo appunto usato
-%		che dominio e immagine $i$-esimi, $A_i$ e $Q_i$, per (4) contengono i primi $i$-termini della enumerazione. Poich\'e abbiamo preso come codominio proprio l'immagine $f$ \`e automaticamente surgettiva. 
-%		\item[$\diamondsuit$] \underline{$f$ strettamente crescente}: dati $x, y \in A$ tali per cui $x < y$, si ha che $x \in A_i$ e $y \in A_j$, per $i,j \in \omega$, ora detta $t:= \max(i,j)$ si ha che $x,y \in A_t$ e, per $(4)$, $A_t \subseteq f(t)$, con $f_t$ isomorfismo - per (2), segue quindi:
-%		\[ x < y \leftrightarrow f(x) = f_t(x) < f_t(y) = f(y)
-%			\]
-%	\end{itemize}
-%	Non ci resta altro da fare che costruire la successione $(f_i)_{i \in \omega}$ per ricorsione numerabile - prima forma. Poniamo $f_0 = \emptyset$,
-%	per costruire $f_{s(i)}$ definiamo prima un passo intermedio $f_{i+0.5}$ \textcolor{MidnightBlue}{- nel primo passo, $f_{i + 0.5}$, estendiamo la funzione aggiungendo $a_{i}$ al dominio (se non ci fosse gi\`a), nel secondo passo, $f_{i + 1}$, analogamente, aggiungiamo $q_i$ all'immagine (se non ci fosse gi\`a).}
-%	Data quindi $f_i : A_i \to Q_i$, distinguiamo due casi:
-%	\begin{itemize}
-%		\item \underline{se $a_i \in \Dom(f_i)$}: allora $f_{i + 0.5} = f_i$.
-%		\item \underline{altrimenti}: detto $\overline{j} := \min\{j \in \omega | f_i \cup \{(a_i,q_j)\} \; \text{\`e un isomorfismo}\}$ \textcolor{MidnightBlue}{(tecnicamente basta strettamente crescente visto che l'immagine \`e il codominio)},
-%		poniamo $f_{i + 0.5} = f_i \cup \{(a_i,q_{\ol j})\}$.
-%	\end{itemize}
-%	Ora possiamo fare il secondo passo di estensione e definire $f_{i+1}$:
-%	\begin{itemize}
-%		\item \underline{se $q_i \in \Imm(f_{i + 0.5})$}: allora $f_{i + 1} = f_{i + 0.5}$.
-%		\item \underline{altrimenti}: detto $\ol \iota := \min\{\iota \in \omega | f_{i + 0.5} \cup (a_{\ol \iota},q_i) \; \text{\`e un isomorfismo}\}$ \textcolor{MidnightBlue}{(come prima basta strettamente crescente)}.\footnote{Notare che la costruzione sarebbe stata simmetrica e funzionante nel caso avessimo voluto costruire $f : \QQ \to A$.}
-%	\end{itemize}
-%	Le propriet\`a (1),\ldots,(4) seguono in maniera immediata per induzione, a patto che la costruzione sia ben posta, ossia i minimi esistano. 
-%	Ad essere precisi, occorre quindi dimostrare, per induzione su $i$, la seguente proposizione:
-%	\[ \forall i \in \omega \; \text{``la costruzione di $f_i$ \`e ben posta e valgono (1),\ldots,(4)''}
-%		\]
-%	Naturalmente il nel caso $f_0 = \emptyset$ la proposizione \`e vera a vuoto, vediamo il passo induttivo, ma solo per la buona definizione.\\
-%	Per verificare che la definizione di $f_{i + 1}$ sia ben posta, supponendo per ipotesi induttiva che $f_i$ lo sia e che valgano per lei le propriet\`a $(1),\ldots,(4)$,
-%	bisogna verificare dunque che i minimi esistano in entrambi i passaggi di estensione, e qui entrano in gioco le ipotesi 2 e 3 del teorema. Vediamo che esiste il minimo
-%	nel primo passaggio di estensione (sar\`a analogo verificarlo nel secondo). Consideriamo:
-%	\[ \ol j = \min\{j \in \omega | f_i \cup \{(a_i,q_j)\}\,\text{\`e un isomorfismo}\}
-%		\]
-%	Per ipotesi induttiva, vale $(1)$ per $f_i$, per cui $A_i$ \`e finito. Detto $n = |A_i|$ (avendo gi\`a fatto il caso $i = 0$ sappiamo che $i > 0$ e dalla costruzione $|i| \leq |A_i|$),
-%	sfruttando il fatto visto che un ordine totale finito \`e isomorfismo ad un numero naturale possiamo bene ordinare $A_i$ nella maniera seguente:
-%	\[ A_i = \{\alpha_0,\ldots,\alpha_{n-1}\} \qquad\text{con $\alpha_0<\ldots<\alpha_{n-1}$}
-%		\]
-%	Ora, siamo naturalmente nel caso in cui $a_i \not \in \Dom(f_i)$, quindi o $a_i <\alpha_0$, o $\alpha_k < a_i < \alpha_{k+1}$ per
-%	qualche $k$, o $a_{n-1}<a_i$. Nel primo e terzo caso, rispettivamente, siccome $\QQ$ non ha estremi, c'\`e un $q_j < f_i(\alpha_0)$, o $q_j > f_i(\alpha_n)$, per cui $f_{i + 0.5} \cup \{(a_i,q_j)\}$ \`e un isomorfismo.
-%	Nel secondo caso, per la densit\`a di $\QQ$, esiste $q_j$ con $f_i(\alpha_k)<q_j<f_i(\alpha_{k+1})$ e quindi di nuovo $f_{i + 0.5}  \cup \{(a_i,q_j)\}$ \`e un isomorfismo. Nella verifica del secondo passo dell'estensione
-%	faremo lo stesso identico ragionamento con $Q_i$ usando questa volta densit\`a ed illimitatezza di $A$, per trovare gli elementi.
-%\end{proof}
-%
-%\begin{corollary}[Ogni ordine al pi\`u numerabile \`e isomorfo ad un sottoinsieme di $\QQ$]
-%	Sia $(A,<)$ un ordine totale con $|A| \leq \aleph_0$. Allora esiste $B \subseteq \QQ$ tale che $(A,<) \sim (B,<)$ con l'ordinamento indotto su $B$ da $\QQ$.
-%\end{corollary}
-%
-%\begin{note}
-%	Volendo, si potrebbe dimostrare questo corollario ripetendo, con qualche variazione, la dimostrazione del teorema. Ora daremo, per\`o,
-%	un argomento che, invece, applica il teorema. \`E comodo definire, prima, il prodotto di ordini.
-%\end{note}
-%
-%\begin{definition}[Prodotto lessicografico di ordini]
-%	Dati $(A,<_A)$ e $(B,<_B)$ definiamo il \vocab{prodotto lessicografico} di ordini come:
-%	\[ (A,<_A) \times (B,<_B) \Mydef (A \times B, <_{A \times B})
-% 		\]
-%	dove $(a,b) <_{A \times B} (a',b') \Mydef (b <_B b') \lor (b = b' \land a <_A a')$.
-%\end{definition}
-%
-%\textcolor{MidnightBlue}{Ossia $(A,<_A) \times (B,<_B)$ \`e il prodotto cartesiano $A \times B$ munito dell'ordine che confronta prima la seconda componente.}\\
-%Visualmente, si pu\`o immaginare il prodotto lessicografico $(A,<_A) \times (B,<_B)$ come ``$(A,<_A)$ ripetuto $(B,<_B)$ volte''.
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width = 10cm]{immagini/ordine_lessicografico.png}
-%\end{figure}
-%
-%\begin{remark}[Il prodotto lessicografico grafico di ordini totali \`e un ordine totale]
-%	Se $(A, <_A)$ e $(B,<_B)$ sono ordini totali, allora anche $(A,<_A) \times (B,<_B)$ lo \`e.\footnote{\`E una facile verifica che usa appunto la totalit\`a di $<_A$ e $<_B$.}
-%\end{remark}
-%
-%\begin{exercise}[Associativit\`a del prodotto lessicografico]
-%	Dati $(A,<_A),(B,<_B)$ e $(C,<_C)$ dimostra che:
-%	\[ ((A,<_A) \times (B,<_B)) \times (C,<_C) \sim (A,<_A) \times ((B,<_B) \times (C,<_C))
-%		\]
-%	ossia che il prodotto lessicografico di ordini \`e associativo a meno di isomorfismi.
-%\end{exercise}
-%
-%Veniamo ora alla dimostrazione del corollario
-%
-%\begin{proof}
-%	Se $A = \emptyset$ \`e banale, supponiamo quindi $A \ne \emptyset$ e consideriamo:
-%	\[ (S,<) \Mydef (\QQ,<) \times (A,<)
-%		\]
-%	\begin{figure}[H]
-%		\centering
-%		\includegraphics[width = 10cm]{immagini/coroll_iso_cantor.png}
-%	\end{figure}
-%	L'insieme $S = \QQ \times A$ \`e numerabile, inoltre, dato $(q,a) \in \QQ \times A$ abbiamo:
-%	\[ (q-1,a) < (q,a) < (q+1,a) 
-%		\]
-%	quindi $\QQ \times A$ non ha estremi - n\'e superiori n\'e inferiori. Per verificare che \`e denso, consideriamo $(q_1,a_1) < (q_2, a_2)$ e verifichiamo che in ogni caso c'\`e sempre un altro elemento di $S$ strettamente nel mezzo.
-%	\begin{itemize}
-%		\item Se $a_1 < a_2$, allora $(q_1,a_1) < (q_1+1,a_1) < (q_2,a_2)$ - e funziona per la definizione di ordinamento nel prodotto lessicografico.
-%		\item Se $a_1 = a_2$ - per cui siamo nella stessa copia di $\QQ$ -, si ha che $(q_1,a_1) < \left(\frac{q_1+q_2}{2},a_1\right) < (q_2,a_2) = (q_2,a_1)$.
-%	\end{itemize}
-%	quindi $(S,<)$ \`e denso e per il \hyperref[isoCantor]{teorema di isomorfismo di Cantor} si ha $(S,<) \sim (\QQ,<)$.
-%	Infine $A \hookrightarrow \QQ \times A : a \mapsto (0,a)$, quindi, componendo l'immersione (strettamente crescente) con l'isomorfismo trovato, abbiamo che $(A,<)$ \`e isomorfo ad un sottoinsieme di $(\QQ,<)$. 
-%\end{proof}
-%
-%\begin{exercise}[Isomorfismo di Cantor senza l'ipotesi di illimitatezza]
-%	Dimostra che se $(A,<)$ \`e denso \textcolor{red}{(ma non necessariamente senza estremi)} e $2 \leq |A| \leq \aleph_0$, allora $(A,<)$ \`e isomorfismo a uno dei seguenti intervalli di $\QQ$:
-%	\[ [0,1]_{\QQ} \qquad ]0,1]_{\QQ} \qquad [0,1[_{\QQ} \qquad ]0,1[_{\QQ}
-%		\]
-%\end{exercise}
-%
-%\begin{soln}
-%	Osserviamo che per l'ipotesi di densit\`a $2 \leq |A| \leq \aleph_0 \implies |A| = \aleph_0$\footnote{Stiamo escludendo l'insieme denso con un solo elemento grazie all'ipotesi che $|A| \geq 2$.}. A questo punto, se $A$ \`e senza estremi si ha:
-%	\[ (A,<) \sim (\QQ,<) \sim ]0,1[_\QQ
-%		\]
-%	($]0,1[_\QQ$ \`e totalmente ordinato [ereditariamente dall'ordine di $\QQ$], senza estremi, numerabile [sottoinsieme di $\QQ$ e c'\`e la mappa $n \mapsto \frac 1n$] e denso [basta prendere la media di due elementi e osservare che sta sempre in mezzo per le propriet\`a algebriche di $\QQ$]).\\
-%	Negli altri casi si osserva che:
-%	\[ [0,1]_{\QQ} = ]0,1[_{\QQ} \,\cup\, \{0,1\}  \qquad ]0,1]_{\QQ} = ]0,1[_{\QQ} \,\cup\, \{1\} \qquad [0,1[_{\QQ} = ]0,1[_{\QQ} \,\cup\, \{0\}
-%		\]
-%	vediamo, ad esempio, nel caso di $A$ con entrambi gli estremi, che, detti questi $a$ e $b$, si ha:
-%	\[ (A\setminus\{a,b\},<_{|A\setminus\{a,b\}}) \sim (\QQ,<) \sim (]0,1[_{\QQ},<)
-%		\]
-%	e analogamente negli altri due casi. Fissiamo un isomorfismo $f$ tra $A \setminus \{a,b\}$ e $]0,1[_\QQ$ ed estendiamolo all'isomorfismo voluto:
-%	\[ f' : A \to [0,1]_\QQ : x \mapsto \begin{cases}
-%		0 &\text{se $x = a$} \\
-%		1 &\text{se $x = b$} \\
-%		f(x) &\text{altrimenti}
-%	\end{cases}
-%		\]
-%	si verifica facilmente che \`e effettivamente un isomorfismo e negli altri casi si procede in maniera analoga.
-%\end{soln}
-%
-%\subsection{Il grafo random}
-%
-%La tecnica di estendere indefinitamente isomorfismi parziali che ci ha permesso di dimostrare il teorema di isomorfismo di Cantor
-%si chiama \vocab{back-and-forth}, ed \`e un metodo fondamentale per trovare isomorfismi fra strutture.\\
-%Cogliamo questa occasione per suggerire un esercizio di applicazione della medesima tecnica che \`e un po' complicato. Si tratta di definire il \vocab{grafo random}
-%o \vocab{grafo di Rado}.
-%
-%\begin{definition}[Grafo]
-%	Un \vocab{grafo} $(V,e)$ sull'insieme di vertici $V$ \`e dato da una relazione $e$ simmetrica \textcolor{MidnightBlue}{($\forall x,y \in V \; (x,y) \in e \leftrightarrow (y,x) \in e$)} e 
-%	irriflessiva \textcolor{MidnightBlue}{($\forall x \in V \; (x,x) \not\in e$)}.
-%\end{definition}
-%
-%\textcolor{MidnightBlue}{L'idea \`e che $V$ pu\`o essere immaginato come un insieme di punti che possono essere connessi da archi. Dire che c'\`e un arco fra $x$ e $y$ equivale a $(x,y) \in e$.\\}
-%\mbox{}\\
-%Partiamo da un'idea intuitiva -  chi ha gi\`a seguito un corso di probabilit\`a sapr\`a formalizzare questa cosa in termini precisi. Data una probabilit\`a $p \in \, ]0,1[$ costruiamo un grafo
-%$G_p$ con insieme di vertici $\omega$ come segue. Per ogni coppia $(i,j) \in \omega \times \omega$ con $i < j$ \textcolor{MidnightBlue}{- cio\`e la seconda componente \`e sempre strettamente pi\`u grande della prima -}
-%lanciamo una moneta \textbf{che fa testa con probabilit\`a $p$} - tutte queste monete indipendentemente - e, se viene testa, mettiamo un arco fra $i$ e $j$.\\
-%Potremmo pensare che i grafi $G_{0.01}$ e $G_{0.99}$ debbano venire molto diversi: uno ha l'1\% degli archi possibili, l'altro ha il 99\%, insomma uno \`e quasi vuoto, l'altro quasi completo. \textbf{Avviene,
-%tuttavia, che, con probabilit\`a 1, questi grafi sono isomorfismi}\footnote{A meno di rinominare i vertici, che \`e quello che diremo nella definizione di isomorfismo.}, dove, per essere precisi dobbiamo definire cosa sia un isomorfismo tra grafi.
-%
-%\begin{definition}[Isomorfismo fra grafi]
-%	I grafi $(V_1,e_1)$ e $(V_2,e_2)$ sono \vocab{isomorfi} se esiste una bigezione $f : V_1 \rightarrow V_2$ tale che:
-%	\[ \forall v,w \in V_1 \; (v,w) \in e_1 \leftrightarrow (f(v),f(w)) \in e_2
-%		\]
-%\end{definition}
-%
-%Vediamo perch\'e. Dati due sottoinsiemi finiti $X$ e $Y$ di $\omega$, e dato un vertice $v \not \in X \cup Y$ la probabilit\`a che $x$ sia connesso da un arco a tutti i vertici di $X$ e a nessuno di quelli di $Y$
-%\`e $p^{|X|} \cdot (1 - p)^{|Y|}$\footnote{Eventi indipendenti: $v$ \`e connesso ad un vertice di $X$ con probabilit\`a $p$, ed \`e connesso a tutti i vertici di $X$ con probabilit\`a $p^{|X|}$, viceversa non \`e connesso ad alcun vertice di $Y$ con
-%probabilit\`a $(1-p)^{|Y|}$.} - come che sia, \`e un certo numero $>0$ - e, avendo preso $X$ ed $Y$ finiti, ci sono infiniti $v \in \omega \land v \not \in X \cup Y$.\\
-%Si capisce, quindi, che con probabilit\`a 1 - ossia certamente - almeno uno di questi $v$ vincer\`a questa lotteria (ne abbiamo infiniti in fondo), ossia sar\`a connesso 
-%a tutti gli $X$ e a nessuno degli $Y$. Usiamo l'esistenza di questo $v$ per definire un grafo random.
-%
-%\begin{definition}[Grafo random]
-%	Il grafo $(\omega,e)$\footnote{Questa definizione \`e per $\omega$, ma la definizione generale di grafo random \`e data dalla stessa propriet\`a per un generico grafo (numerabile) $(G,e)$.} \`e un \vocab{grafo random} se:\footnote{Typo di Mamino, manca ipotesi di finitezza.}
-%	\[ \forall X,Y \subseteq \omega \land  X \cap Y = \emptyset \land |X|,|Y|<\aleph_0\; \exists v \in \omega \setminus(X \cup Y) \; \underbrace{X \times \{v\} \subseteq e}_{\textcolor{MidnightBlue}{\forall x\in X \; (x,v) \,\in\, e}} \land \underbrace{(Y \times \{v\}) \cap e = \emptyset}_{\textcolor{MidnightBlue}{\not\exists y \in Y \; (y,v) \,\in\, e}}
-%		\]
-%	cio\`e se per ogni coppia di sottoinsiemi finiti di vertici disgiunti esiste un vertice fuori dall'unione di questi ultimi, connesso a tutti i vertici di uno ed a nessuno dei vertici dell'altro.
-%\end{definition}
-%
-%\begin{exercise}[Esistenza e unicit\`a del grafo random]
-%	Dimostra che esiste un grafo random, ed \`e unico a meno di isomorfismi - cio\`e indipendentemente da $p \in \, ]0,1[$ viene sempre lo stesso grafo.\footnote{\underline{Hint}: Usare la tecnica del back-and-forth per l'unicit\`a.}
-%\end{exercise}
-%
-%\begin{soln}
-%	Vediamo separatamente esistenza ed unicit\`a.
-%	\begin{itemize}
-%		\item[$\boxed{\text{esistenza}}$] Per l'esistenza dobbiamo definire una relazione su $\omega$\footnote{Come per la definizione di grafo random, l'esistenza la si pu\`o dimostrare pi\`u in generale per un qualsiasi insieme numerabile.} che rispetti la propriet\`a che definisce
-%		un grafo random. Per fare ci\`o ci serviremo per comodit\`a del \href{https://en.wikipedia.org/wiki/BIT_predicate}{\textcolor{purple}{preditcato BIT}} definito come segue:
-%		\[ \text{BIT}(i,j) = \left\lfloor \frac{i}{2^j}\right\rfloor \mod 2
-%			\]
-%		cio\`e BIT$(i,j) = 1$ se la $j$-esima cifra di $i$ espresso in base 2 \`e 1, altrimenti \`e 0. A questo punto possiamo definire la seguente relazione:
-%		\[ \forall i,j \in \omega \; i \sim y \equiv \text{BIT}(i,j) \lor \underbrace{\text{BIT}(j,i)}_{= \text{BIT}(i,j)^\top}
-%			\]
-%		ovvero la simmetrizzazione della relazione BIT. Questa relazione \`e appunto simmetrica e rispetta la propriet\`a del grafo random, dati infatti $X,Y \subseteq \omega$ finiti e disgiunti, consideriamo:
-%		\[ x := 2^{\max(X,Y) + 1} + \sum_{i \in X} 2^i
-%			\]
-%		ci\`o ci assicura che $x \equiv 1 \pmod{2^i}$ per ogni $i \in X$, per cui $\forall i \in X \; (x,i) \in e$, ed al contempo $x \equiv 0 \pmod{2^j}$ per ogni $j \in \omega \setminus (X \cup \{\max(X,Y) + 1\}) \supseteq Y$, cio\`e $(x,j) \not \in e$ per ogni $j \in Y$.
-%		Naturalmente non vale nemmeno che $(j,x) \in e$ per $j \in Y$ in quanto $x > j$, dunque la cifra $x$-esima di $j$ in base 2 \`e necessariamente 0 ($j < x < 2^x \implies \left\lfloor \frac{j}{2^x}\right\rfloor = 0$).
-%		\item[$\boxed{\textrm{unicit\`a}}$] Siano $(S,s)$ e $(R,r)$ due grafi random, verifichiamo che sono isomorfi. Fissiamo due enumerazioni di $S$ ed $R$:
-%		\[ S = \{s_i | i \in \omega\} \qquad R = \{r_i | i \in \omega\}
-%			\]
-%		e costruiamo una successione di funzioni $(f_i)_{i \in \omega}$ tale che:
-%		\begin{enumerate}[(1)]
-%			\item $f_i : S_i \to R_i$ con $|S_i|,|R_i| < \aleph_0$.
-%			\item $f_i$ \`e un isomorfismo di grafi.
-%			\item $\forall i \in \omega \; f_{i} \subseteq f_{i + 1}$.
-%			\item $\forall i \in \omega \; \{s_0,\ldots,s_{i-1}\} \subseteq \dom(S_i) = S_i \land \{r_0,\ldots,r_{i-1}\} \subseteq \Imm(f_i) = R_i$.
-%		\end{enumerate}
-%		Data quindi $(f_i)_{i \in \omega}$, possiamo definire $f := \bigcup_{i \in \omega} f_i$, con $\dom(f) = \bigcup_{i \in \omega} S_i = S$ - il contenimento dal basso c'\`e per (4), quello dall'alto perch\'e come vedremo nella costruzione della successione $\forall i \in \omega \; S_i \subseteq S$.
-%		Osserviamo ora che:
-%		\begin{itemize}
-%			\item[$\diamondsuit$] \underline{$f$ \`e ben definita e surgettiva}: per $(3)$ l'unione delle funzioni $f_i$ \`e una funzione, inoltre, come per il dominio $\bigcup_{i \in \omega} R_i = R$, per cui $f : S \to R$ \`e surgettiva.
-%			\item[$\diamondsuit$] \underline{$f$ \`e un isomorfismo}: presi $x,y \in S$ vogliamo verificare che valga $(x,y) \in s \leftrightarrow (f(x),f(y)) \in r$. Dato che $x \in S_i$ e $y \in S_j$, per $i,j \in \omega$, preso WLOG $j > i$, abbiamo $x,y \in S_j$, per cui:
-%			\[ (x,y) \in s \leftrightarrow (f(x),f(y)) = (f_j(x),f_j(y)) \overset{\text{$f_j$ isomorfismo}}{\in} R
-%				\]
-%		\end{itemize}
-%		Non ci resta altro che costruire $(f_i)_{i \in \omega}$ per ricorsione numerabile. Poniamo $f_0 = \emptyset$, ora dato $f_i$ definiamo $f_{i + 1}$ mediante due passi di estensione come segue. Definiamo prima $f_{i + 0.5}$ a partire da $f_i$ nella maniera seguente:
-%		\begin{itemize}
-%			\item se $s_i \in \dom(f_i)$, allora $f_{i + 0.5} = f_i$.
-%			\item altrimenti sia $\ol j := \min\{j \in \omega | f_{i} \cup \{(s_i,r_j)\} \; \text{\`e un isomorfismo}\}$, poniamo $f_{i + 0.5} = f_{i} \cup \{(s_i,r_{\ol j})\}$.
-%		\end{itemize}
-%		Ora definiamo $f_{i+1}$ a partire da $f_{i + 0.5}$:
-%		\begin{itemize}
-%			\item se $r_i \in \Imm(f_i)$, allora $f_{i + 1} = f_{i + 0.5}$.
-%			\item altrimenti sia $\ol \iota := \min\{\iota \in \omega | f_{i + 0.5} \cup \{(s_\iota,r_i)\} \; \text{\`e un isomorfismo}\}$, poniamo $f_{i + 1} =f_{i + 0.5} \cup \{(s_{\ol \iota},r_i)\}$.
-%		\end{itemize}
-%		A questo punto dimostriamo per induzione che la costruzione sopra sia ben posta in ogni passaggio e che valgano le propriet\`a (1),\ldots,(4). Per $f_0 = \emptyset$ \`e banale, assumiamo ora che $f_i$ sia ben definita e che valgano le propriet\`a (1),\ldots,(4) e verifichiamo che 
-%		vale la stessa cosa per $f_{i + 1}$. Per la buona definizione dobbiamo verificare che nei passaggi di estensione i minimi esistano sempre, dunque, nel caso in cui $s_i \not \in \dom(f_i)$ verifichiamo che l'insieme 
-%		$\{j \in \omega | f_{i} \cup \{(s_i,r_j)\} \; \text{\`e un isomorfismo}\}$ \`e non vuoto, per fare ci\`o dobbiamo verificare che esiste $r_j \in R$ tale che $\forall x \in S_i$ se $(x,s_i) \in s$ allora si ha $(f_i(x),r_j) \in r$.
-%		Essendo $S_i$ finito, l'insieme degli elementi con cui $s_i$ \`e in relazione \`e finito, e quindi a sua volta lo sar\`a l'insieme delle immagini via $f_i$ di tali elementi, chiamiamolo $U$, ora poich\'e $(R,r)$ soddisfa la propriet\`a 
-%		del grafo random esiste almeno un elemento $u$ in relazione con tutti gli elementi di $U$ e con nessun elemento del vuoto (basta un qualunque sottoinsieme di $R$ finito e disgiunto da $U$), a questo punto ci basta prendere $r_j = u$.\\
-%		Analogamente, nel secondo passaggio di estensione, nel caso in cui $r_i \not \in \Imm(f_{i+0.5})$, dobbiamo verificare che l'insieme $\{\iota \in \omega | f_{i + 0.5} \cup \{(s_\iota,r_i)\} \; \text{\`e un isomorfismo}\}$ sia non vuoto, ovvero trovare un $s_\iota \in S$ tale che $\forall y \in R$
-%		per cui $(y,r_i) \in R$, si abbia $(f_{i+0.5}^{-1}(y),s_\iota) \in s$\footnote{Tecnicamente stiamo gi\`a assumendo di aver verificato che $f_{i + 0.5}$ \`e un isomorfismo, ma questo segue banalmente dall'ipotesi induttiva e dalla costruzione.}.
-%		Come prima, l'insieme degli elementi di $R_{i + 0.5}$ in relazione con $r_i$ \`e finito, e cos\`i sar\`a anche la sua controimmagine via $f_{i + 0.5}^{-1}$, chiamiamola $V$, a questo punto, essendo $(S,s)$ un grafo random,
-%		esiste un elemento $v \in S$ in relazione con tutti gli elementi di $V$ e nessuno del vuoto, ci basta dunque prendere $s_\iota = v$.\\
-%		Verifichiamo ora che valgano le propriet\`a (1),\ldots,(4) per $f_{i+1}$. \`E immediato osservare che $f_i \subseteq f_{i + 0.5} \subseteq f_{i + 1}$ per costruzione, e, sempre per costruzione, $s_i \in \dom(f_{i+1})$ e $r_i \in \Imm(f_i + 1)$, in tal modo abbiamo verificato (3) e (4).
-%		In entrambi i passaggi della costruzione aggiungiamo al pi\`u un elemento, dunque $S_{i+1}$ e $R_{i + 1}$ sono finiti, per cui abbiamo (1), infine, $f_{i+0.5}$ \`e un isomorfismo per costruzione e da questo segue che per costruzione lo \`e anche $f_{i+1}$, dunque abbiamo anche (2).
-%	\end{itemize}
-%\end{soln}
+
+Il corollario~\ref{disugcardnum} e il teorema
+di~\hyperref[CB]{Cantor-Bernstein} sono utili strumenti per dimostrare la
+numerabilit\`a di svariati insiemi. Il nostro prossimo esempio sar\`a
+l'insieme dei numeri reali algebrici, e per questo \`e comodo uno
+strumento in pi\`u: il fatto che se abbiamo un insieme $A$ al pi\`u numerabile, e tutti i suoi elementi sono, a loro volta, insiemi al pi\`u numerabili, allora
+$\bigcup A$ \`e al pi\`u numerabile.
+Questo \`e ragionevole: se esiste una enumerazione $\{a_i\}_{i \in
+\omega}$ di $A$, e, per ogni $i \in \omega$, esiste una enumerazione di
+${\alpha_{i,j}}_{j\in\omega}$,
+allora possiamo mandare surgettivamente $\omega \times \omega$ in $\bigcup
+A$: $(i,j)\mapsto\alpha_{i,j}$.
+
+{\drkred L'errore} \`e credere di poter fissare una enumerazione
+$\alpha_i$ di $a_i$ per ogni $i \in \omega$. Usando l'assioma della scelta
+potremo farlo, ma, per ora, non abbiamo modo, in generale, di procurarci
+la funzione $i\mapsto\alpha_i$.
+Possiamo per\`o assumere di averla, cos\`i si corregge il ragionamento impreciso di prima.
+
+\begin{proposition}
+	Sia $A = \{a_i \in A| i \in \omega\}$ e sia $\{\alpha_i\}_{i \in \omega}$ una successione di funzioni tali per cui,
+	per ogni $i \in \omega$, la funzione $\alpha_i\colon \omega \to a_i$ \`e una enumerazione di $a_i$. Allora $\left|\bigcup A\right| \leq \aleph_0$.
+\end{proposition}
+
+\begin{proof}
+	Basta osservare che la funzione:
+\[f \colon \omega \times \omega \to \bigcup A \qquad (i,j) \mapsto
+\alpha_i(j) \]
+	\`e surgettiva.
+\end{proof}
+
+\begin{notation}
+	Data una funzione $f \colon I \rightarrow S$ definiamo:
+	\[ \bigcup_{i \in I} f(i) \;\;\Mydef\;\; \bigcup f[I]
+		\]
+	Cos\`i, per esempio, se $A = \{a_i | i \in \omega\}$:
+	\[ \bigcup_{i \in \omega} a_i \;\;=\;\; \bigcup A \;\;{\drkgrn =\;\; \{x | \exists i \in \omega \; x \in a_i\}}
+		\]
+\end{notation}
+
+\begin{definition}
+	Definiamo le \vocab{parti finite} di un insieme $A$ come:
+	\[ \psf(A) \;\;\Mydef\;\; \{X \in \ps(A) | |X| < \aleph_0\}
+		\]
+\end{definition}
+
+\begin{proposition}
+	$|A| \;\leq\; \aleph_0 \;\;\rightarrow\;\; |\psf(A)| \;\leq\; \aleph_0$.
+\end{proposition}
+
+\begin{proof}
+	Il caso $A = \emptyset$ \`e immediato. Assumiamo $A \ne \emptyset$, sia:
+	\[ \ps^{\leq n} = \{X \in \ps(A) : |X| \leq n\}
+		\]
+	siccome $\psf(A)$ \`e l'unione degli insiemi~$\ps^{\leq n}(A)$, ci
+basta esibire una successione di enumerazioni~$\alpha_n$ di~$\ps^{\leq
+n}(A)$.
+
+Sfruttando il fatto che $|\omega \times A| = \aleph_0$, fissiamo una
+funzione surgettiva $f\colon
+\omega \to \omega \times A$. Indichiamo con $f_\omega(x)\in\omega$ e $f_A(x)\in
+A$ le due
+componenti della coppia $f(x)$.
+A questo punto, possiamo costruire la successione di enumerazioni
+$(\alpha_n)_{n \in \omega}$ per ricorsione:
+
+{\drkblu Per $n = 0$.} Siccome $\ps^{\le0}(A) = \{\emptyset\}$, stabiliamo
+che $\alpha_0$ \`e la funzione costante $i\mapsto\emptyset$.
+
+{\drkblu Per $n = m+1$.} Supponiamo data una enumerazione $\alpha_m$
+di~$\ps^{\leq m}(A)$ e poniamo:
+		\[ 	\alpha_{m + 1}(x)\;=\; \begin{cases}
+			\emptyset &\text{se $x = 0$} \\
+			\alpha_m(f_1(x-1)) \cup \{f_2(x - 1)\} &\text{altrimenti}
+			\end{cases}
+		\]
+
+	Verifichiamo per induzione che, per ogni~$n\in\omega$, la funzione
+$\alpha_n$ \`e una surgezione $\omega\to\ps^{\leq n}(A)$.
+
+{\drkred Caso $n = 0$.} Immediato.
+
+{\drkred Caso $n = m + 1$.} Per ipotesi induttiva la successione $\alpha_m
+\colon \omega \to \ps^{\leq m}(A)$ \`e surgettiva, vogliamo verificare che
+anche $\alpha_{m + 1} \colon \omega \to \ps^{\leq m + 1}(A)$ lo \`e.
+
+Dato $Y \in \ps^{\leq m+1)}(A)$ si danno due casi. Se $Y = \emptyset$,
+allora per costruzione $Y = \alpha_{s(m)}(0)$. Altrimenti fissiamo $y \in
+Y$, per cui $|Y\setminus\{y\}| \leq m$, quindi c'\`e un $t\in\omega$ per
+cui $Y \setminus\{y\} = \alpha_m(t)$.
+		Per la surgettivit\`a di $f \colon \omega \to \omega
+\times A$, la coppia $(t,y)$ \`e immagine di qualche $x \in \omega$,
+quindi:
+		\begin{alignat*}{3}
+			\alpha_{m + 1}(x+1) \;&=\;\;& \alpha_m(f_1(x))
+&\;\cup\;
+\{f_2(x)\} && \\
+							   &=& (Y
+\setminus\{y\}) \;\;&\;\cup\;\;\;\; \{y\} && =\; Y 
+		\end{alignat*}
+\vskip-\baselineskip
+\end{proof}
+
+\paragraph*{Applicazione}
+
+Dimostriamo che l'insieme dei numeri reali algebrici $\A_{\RR}$ \`e
+numerabile. Per questa applicazione, assumiamo le propriet\`a algebriche elementari di $\RR$.
+L'insieme $\A_{\RR}$ \`e definito come l'insieme degli $x \in \RR$ che sono zeri di qualche polinomio a coefficienti razionali:
+\[ \A_{\RR} \;\;\Mydef\;\; \{x \in \RR | \exists p(x) \in \QQ[x]\setminus\{0\} \; p(x) = 0\}
+	\]
+I numeri reali che non sono algebrici si dicono \vocab{trascendenti}.
+Siccome -- dimostreremo questo risultato in seguito -- $\RR$ non \`e
+numerabile, si pu\`o dedurre dalla numerabilit\`a di
+$\A_{\RR}$ che ci sono numeri reali trascendenti.
+
+Dimostriamo, intanto, che l'insieme $\QQ[x]$, dei polinomi a coefficienti razionali nella indeterminata $x$, \`e numerabile.
+I polinomi, come accade per i numeri, le coppie ordinate, le funzioni,
+\etc.\ non sono oggetti della teoria degli insiemi, per cui occorre
+fissare una codifica. \`E ragionevole identificare un polinomio:
+\[ p(x) = a_0 + a_1x + a_2x^2 + \ldots + a_d x^d
+	\]
+con l'insieme dei suoi monomi:
+\[ p(x) = \{a_0,a_1x,a_2x^2,\ldots,a_dx^d\}
+	\]
+e ciascun monomio con la coppia {\drkblu (grado, coefficiente):}
+\[ p(x) = \{(0,a_0),(1,a_1),\ldots,(d,a_d)\} \]
+Rappresentando i polinomi in questo modo, abbiamo:
+\[ \QQ[x] \subseteq \psf(\omega \times \QQ)
+	\]
+per cui $|\QQ[x]| \leq \aleph_0$.
+Inoltre \`e elementare immergere $\QQ$ in~$\QQ[x]$, quindi~$|\QQ[x]| = \aleph_0$.
+
+Venendo ad $\A_{\RR}$ abbiamo una facile surgezione:
+\begin{align*}
+	f \colon (\QQ[x]\setminus\{0\}) \times \omega &\to \A_{\RR}\\
+	 (p,i) &\mapsto \text{``la $i$-esima radice di $p$ se questa esiste, altrimenti 0''}
+\end{align*}
+Per i miei 2.5 lettori che non sono convinti del virgolettato,
+descriviamo
+$f$ con precisione, mediante una formula insiemistica:
+\[
+	\text{``$\alpha$ \`e la $i$-esima radice di $p$''} \;\;\Mydef\;\;
+	p(\alpha) = 0 \land \bigl|\:\{x \in \RR | x \leq \alpha \land p(x)
+= 0\}\:\bigr| = i
+\]
+\begin{align*}
+	y = f(p,i) \;\;\Mydef\; \phantom{\lor}\; &\text{``$y$ \`e la $i$-esima radice di $p$''} \\
+	\lor\; &(y = 0 \land \neg \exists \alpha \in \RR \; \text{``$\alpha$ \`e la $i$-esima radice di $p$''})
+\end{align*}
+Dove viene lasciato come {\drkred esercizio} di
+scrivere una formula insiemistica che dice $p(x)=y$.
+Per separazione esiste, quindi, $f$, e, di conseguenza $|\A_{\RR}| \leq
+\aleph_0$. La disuguaglianza opposta \`e immediata perch\'e $\QQ \subseteq
+\A_{\RR}$.
+
+\begin{exercise}[Ogni gruppo finitamente generato \`e al pi\`u numerabile]
+	Dato un insieme $X$, una funzione $f\colon X \times X \to X$, e un
+sottoinsieme $A \subseteq X$ al pi\`u numerabile, dimostra che esiste un
+$\ol A \subseteq X$ al pi\`u numerabile tale che $A \subseteq \ol A$ e~$f[\ol A \times \ol A] \subseteq \ol A$.
+\end{exercise}
+
+\subsection{Ordini densi numerabili}
+Il prossimo risultato \`e, come al solito, dovuto a Cantor, e caratterizza l'ordine di $\QQ$ a meno di isomorfismi.
+
+\begin{definition}[Densit\`a]
+	Sia $(A,<)$ totalmente ordinato, e $B \subseteq A$, diciamo che:
+\begin{alignat*}{1}
+\text{\drkblu $B$ \`e denso in $(A,<)$} \qquad \mathclap{\text{se}} \qquad
+&\forall {x,y \in A} \; x < y \rightarrow \exists {z \in B} \; x < z < y \\
+\text{\drkblu $(A, <)$ \`e denso} \qquad \mathclap{\text{se}} \qquad &\text{$A$ \`e
+denso in s\'e} \\
+\mathclap{\text{cio\`e}}\qquad &\forall {x,y \in A} \; x < y \rightarrow \exists {z \in A} \; x < z < y
+\end{alignat*}
+\end{definition}
+
+\begin{example}
+	$\QQ$ \`e denso, infatti: $ x < y \rightarrow x < \frac{x+y}{2} <
+y $.
+\end{example}
+
+\begin{notexample}
+	L'insieme $\omega$, con l'ordine usuale, non \`e
+denso, perch\'e $\nexists {z \in \omega} \; 0 < z < 1$.
+\end{notexample}
+
+\begin{theorem}[Teorema di isomorfismo di Cantor]
+	\label{isoCantor}
+	Sia $(A,<)$ un insieme totalmente ordinato. Allora
+$(A,<)\sim(\QQ,<)$ se e solo se valgono simultaneamente:
+	\begin{enumerate}[1.]
+		\item $|A| = \aleph_0$
+		\item $(A,<)$ \`e denso
+		\item $(A,<)$ non ha \vocab{estremi}, ossia non ha n\'e
+massimo n\'e minimo elemento.
+	\end{enumerate}
+\end{theorem}
+
+{\drkgrn $\QQ$ soddisfa le tre propriet\`a, per cui, la direzione da
+dimostrare \`e che se $(A,<)$ soddisfa 1.--3.\ allora \`e isomorfo
+a~$\QQ$. L'idea \`e di costruire un isomorfismo per ricorsione. Ad ogni
+passo della ricorsione abbiamo un isomorfismo $f_i \colon A_i \rightarrow Q_i$ con $A_i \subseteq A$ finito 
+e $Q_i \subseteq \QQ$. Estendiamo questo isomorfismo facendo crescere
+gradualmente $A_i$ e~$Q_i$ fino a invadere $A$ e~$\QQ$ rispettivamente.
+
+Consideriamo il caso in cui vogliamo estendere $f_i$ aggiungendo un nuovo
+elemento~$x$ al suo dominio, e senza violare la definizione di
+isomorfismo. Per questo dobbiamo mappare~$x$ in un razionale~$f_{i+1}(x)$
+che sia situato rispetto agli elementi di~$f_i[A_i]$ nello stesso modo in
+cui $x$ \`e situato rispetto agli elementi di~$A_i$.
+Siccome $A_i$ \`e finito, per sapere la posizione di $x$ rispetto a
+ciascuno degli elementi di $A_i$, ci basta sapere quale sia l'ultimo elemento prima di $x$,
+e quale sia il primo dopo $x$ -- diciamo che, per esempio, sono $a_2$  e
+$a_3$ rispettivamente. Dobbiamo allora mandare $x$ in un $f_{i+1}(x)$ con $f_i(a_2) < f_{i+1}(x) < f_i(a_3)$, e questo esiste per la densit\`a di $\QQ$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \textwidth]{immagini/IsoCantor.png}
+\end{figure}
+
+Ragionando simmetricamente, possiamo anche estendere $f_i$, dato un $y \in \QQ$ con $y \not\in Q_i$, in modo tale che $y \in \Imm(f_{i+1})$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \textwidth]{immagini/IsoCantor2.png}
+\end{figure}
+
+In definitiva, ci basta quindi fissare un'enumerazione di $A$ e una di $\QQ$, e fare questi passi di estensione in maniera alternata, assicurandoci cos\`i di aggiungere al dominio della $f$, uno per uno,
+tutti gli elementi di $A$, e di aggiungere all'immagine, uno per uno,
+tutti gli elementi di $\QQ$. La chiave \`e che il procedimento sar\`a
+completo solo dopo $\omega$ passi, mentre, ad ogni passo, dobbiamo
+estendere soltanto un isomorfismo parziale che ha dominio e immagine
+finite, ragion per cui troviamo sempre spazio per farlo.}
+
+Ci far\`a comodo la seguente osservazione.
+
+\begin{remark}\label{obs-uni-fun}
+	Sia $F \subseteq \ps(A \times B)$ un insieme di funzioni. Se:
+	\[ \forall {f_1,f_2 \in F} \; \underbrace{f_{1|\Dom(f_1) \cap
+\Dom(f_2)} = f_{2 |\Dom(f_1) \cap \Dom(f_2)}}_{\text{ossia $\forall {x \in
+\Dom(f_1) \cap \Dom(f_2)} \; f_1(x) = f_2(x)$}}
+			\]
+allora $\bigcup F$ \`e una funzione da $\bigcup\{\Dom(f) | f\in
+F\}$ a~$B$.
+\end{remark}
+
+\begin{proof}
+	Bisogna verificare che se $(x,y_1) \in \bigcup F$ e $(x,y_2) \in \bigcup F$, allora $y_1 = y_2$.
+Dalla prima abbiamo che esiste $f_1 \in \bigcup F$ tale che $f_1(x) = y_1$
+e, dalla seconda, esiste $f_2 \in \bigcup F$ tale che $f_2(x) = y_2$.
+Quindi $x\in \Dom(f_1) \cap \Dom(f_2)$ e, usando l'ipotesi, segue che $y_1 = f_1(x) = f_2(x) =
+y_2$.
+\end{proof}
+
+\begin{proof}[Dimostrazione di~\ref{isoCantor}.]
+	Fissiamo enumerazioni di $A$ e $\QQ$ rispettivamente:
+	\[ A = \{a_i | i \in \omega\} \qquad \QQ = \{q_i | i \in \omega\}
+		\]
+	Intendiamo costruire una successione di funzioni $(f_i)_{i \in
+\omega}$ tale che, per ogni $i \in \omega$:
+	\begin{enumerate}[(1)]
+		\item $f_i \colon A_i \to Q_i$ con $|A_i| = |Q_i| < \aleph_0$
+		\item $f_i$ \`e un isomorfismo di ordini fra $A_i$ e $Q_i$
+		\item $f_i \subseteq f_{i+1}$ {\drkgrn ossia $f_{i+1}$
+estende $f_i$.}
+		\item $\forall {j < i} \; a_j \in A_i \land q_j \in Q_i$
+{\drkgrn ossia $\begin{aligned} \{a_0,\ldots,a_{i-1}\} &\subseteq
+\Dom(f_i) = A_i \\
+\{q_0,\ldots,q_{i-1}\} &\subseteq \Imm(f_i) = Q_i
+\end{aligned}$}
+	\end{enumerate}
+
+Assumendo di aver costruito una successione che verifica queste
+condizioni, verifichiamo che $f \Mydef \bigcup_{i \in \omega} f_i$ \`e un
+isomorfismo di ordini fra~$A$ e~$\QQ$. Da (3) segue, mediante una facile
+induzione, che $\forall {i < j} \; f_i \subseteq f_j$, per cui, applicando
+l'osservazione~\ref{obs-uni-fun}, $f$ \`e una funzione. Inoltre (4)
+implica che $\Dom(f)=A$ e~$\Imm(f)=\QQ$. Fissiamo $x,y\in A$ e
+verifichiamo
+\[x < y \;\;\leftrightarrow\;\; f(x) < f(y) \]
+Siccome $\{a_i\}_{i\in\omega}$ enumera~$A$, possiamo scrivere $x=a_m$
+e~$y=a_n$, per opportuni $m,n$. Fissato $t>m,n$ abbiamo $x,y\in\Dom(f_t)$,
+per cui, sfruttando il fatto che~$f_t$ \`e un isomorfismo di ordini
+		\[ x < y \;\;\leftrightarrow\;\; f(x) = f_t(x) < f_t(y) = f(y)
+			\]
+
+Mostriamo ora la costruzione, per ricorsione, di una successione
+$\{f_i\}_{i \in \omega}$ che soddisfa le condizioni (1)--(4).
+Poniamo, per cominciare, $f_0 = \emptyset$.
+
+Per costruire $f_{i+1}$ passiamo attraverso un passo intermedio~$\drkblu
+f_{i+0.5}:$
+	\begin{itemize}
+		\item se $a_i \in \Dom(f_i)$: allora $f_{i + 0.5} = f_i$.
+		\item altrimenti: detto $\overline{j} =
+\min\{j \in \omega | f_i \cup \{(a_i,q_j)\} \; \text{\`e un
+isomorfismo}\}$\\ poniamo $f_{i + 0.5} = f_i \cup \{(a_i,q_{\ol j})\}$.
+	\end{itemize}
+
+Ora costriamo $\drkblu f_{i+1}:$
+	\begin{itemize}
+		\item se $q_i \in \Imm(f_{i + 0.5})$: allora $f_{i + 1} = f_{i + 0.5}$.
+		\item altrimenti: detto $\ol l =
+\min\{l \in \omega | f_{i + 0.5} \cup (a_{\ol l},q_i) \; \text{\`e
+un isomorfismo}\}$\\
+poniamo $f_{i + 1} = f_{i+0.5} \cup \{(a_{\ol l},q_i)\}$
+	\end{itemize}
+	Le propriet\`a (1)\ldots(4) seguono facilmente per induzione, a patto che la costruzione sia ben posta, ossia i minimi esistano. 
+	Ad essere precisi, occorre dimostrare, per induzione su $i$, la seguente proposizione:
+	\[ \forall i \in \omega \; \text{``la costruzione di $f_i$ \`e ben
+posta e valgono (1)\ldots(4)''}
+		\]
+Assumiamo $a_i\not\in\Dom(f_i)$
+	e verifichiamo che esiste
+\[
+	\overline{j}\;\;=\;\;\min\{j \in \omega | f_i \cup \{(a_i,q_j)\}
+\]
+l'analoga verifica per $\ol l$ \`e simmetrica.
+	Per ipotesi induttiva, $A_i$ \`e finito. Detto $n = |A_i|$,
+per l'osservazione~\ref{ord-fin}
+	\[ A_i = \{\alpha_0,\ldots,\alpha_{n-1}\} \qquad\text{con} \qquad\alpha_0<\ldots<\alpha_{n-1}
+		\]
+	Ora, o $a_i <\alpha_0$, o $\alpha_k < a_i < \alpha_{k+1}$ per
+	qualche $k$, o $\alpha_{n-1}<a_i$. Nel primo e terzo caso,
+rispettivamente, siccome $\QQ$ non ha estremi, c'\`e un $q_j <
+f_i(\alpha_0)$, o, rispettivamente, un $q_j > f_i(\alpha_n)$. Questo basta
+perch\'e $f_i \cup \{(a_i,q_j)\}$ sia un isomorfismo.
+	Nel secondo caso, per la densit\`a di $\QQ$, esiste $q_j$ con
+$f_i(\alpha_k)<q_j<f_i(\alpha_{k+1})$ e, di nuovo, questo \`e sufficiente
+perch\'e $f_i  \cup \{(a_i,q_j)\}$ sia un isomorfismo.
+\end{proof}
+
+\begin{corollary}\label{cor-emb-ord-num}
+	Sia $(A,<)$ un ordine totale con $|A| \leq \aleph_0$. Allora esiste $B \subseteq \QQ$ tale che $(A,<) \sim (B,<)$ con l'ordinamento indotto su $B$ da $\QQ$.
+\end{corollary}
+
+\begin{note}
+	Volendo, si potrebbe dimostrare questo corollario ripetendo, con qualche variazione, la dimostrazione del teorema. Ora daremo, per\`o,
+	un argomento che, invece, applica il teorema. \`E comodo definire, prima, il prodotto di ordini.
+\end{note}
+
+\begin{definition}[Prodotto lessicografico di ordini]
+	Dati $(A,<_A)$ e $(B,<_B)$ definiamo ${\drkblu (A,<_A) \times
+(B,<_B)}\; \Mydef\; (A \times B, <_{A \times B})$\\
+	dove ${\drkblu (a,b) <_{A \times B} (a',b')}\; \Mydef\; (b <_B b') \lor (b = b' \land a <_A a')$.
+
+{\drkgrn Ossia $(A,<_A) \times (B,<_B)$ \`e il prodotto cartesiano $A \times B$ munito dell'ordine che confronta prima la seconda componente.}
+\end{definition}
+
+\vfill\pagebreak
+
+Visualmente, si pu\`o immaginare il prodotto lessicografico $(A,<_A) \times (B,<_B)$ come ``$(A,<_A)$ ripetuto $(B,<_B)$ volte''.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \textwidth]{immagini/ordine_lessicografico.png}
+\end{figure}
+
+\begin{remark}
+	Il prodotto \`e un ordine. Inoltre, se $(A, <_A)$ e $(B,<_B)$ sono ordini totali, allora anche $(A,<_A) \times (B,<_B)$ lo \`e.
+\end{remark}
+
+\begin{exercise}
+	Dati $(A,<_A),(B,<_B)$ e $(C,<_C)$ dimostra che:
+	\[ ((A,<_A) \times (B,<_B)) \times (C,<_C) \sim (A,<_A) \times ((B,<_B) \times (C,<_C))
+		\]
+	ossia che il prodotto lessicografico di ordini \`e associativo a meno di isomorfismi.
+\end{exercise}
+
+\begin{proof}[Dimostrazione di~\ref{cor-emb-ord-num}]
+	Il caso $A = \emptyset$ \`e immediato. Supponiamo quindi $A \ne \emptyset$ e consideriamo:
+	\[ (\QQ\times A,<) \;\;\Mydef\;\; (\QQ,<) \times (A,<)
+		\]
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = \textwidth]{immagini/coroll_iso_cantor.png}
+	\end{figure}
+	L'insieme $\QQ \times A$ \`e numerabile, inoltre, dato $(q,a) \in \QQ \times A$ abbiamo
+	\[ (q-1,a) < (q,a) < (q+1,a)\]
+	quindi $\QQ \times A$ non ha estremi. Per verificare che \`e
+denso, fissiamo $(q_1,a_1) < (q_2, a_2)$.\\
+Se $a_1 < a_2$, allora $(q_1,a_1) < (q_1+1,a_1) < (q_2,a_2)$.\\
+Se $a_1 = a_2$, allora $(q_1,a_1) < \left(\frac{q_1+q_2}{2},a_1\right) < (q_2,a_2) = (q_2,a_1)$.
+
+
+	Per il \hyperref[isoCantor]{teorema di isomorfismo di Cantor,}
+$(\QQ\times A,<) \sim (\QQ,<)$.
+	Si conclude osservando che $A$ \`e isomorfo a $\{0\}\times
+A\subseteq \QQ \times A$.
+\end{proof}
+
+\begin{exercise}
+	Dimostra che se $(A,<)$ \`e denso e $2 \leq |A| \leq \aleph_0$,
+allora $(A,<)$ \`e isomorfo a uno dei seguenti intervalli di $\QQ$:
+$\;[0,1]_{\QQ} \quad ]0,1]_{\QQ} \quad [0,1[_{\QQ} \quad ]0,1[_{\QQ}$.
+\end{exercise}
+
+
+\subsection{Il grafo random}
+
+La tecnica di estendere indefinitamente isomorfismi parziali che ci ha permesso di dimostrare il teorema di isomorfismo di Cantor
+si chiama \vocab{back-and-forth}, ed \`e un metodo fondamentale per
+trovare isomorfismi fra strutture in teoria dei modelli.
+Cogliamo questa occasione per suggerire un esercizio di applicazione della
+medesima tecnica che \`e un po' complicato. Si tratta della costruzione
+del \vocab{grafo random} o \vocab{grafo di Rado}.
+
+\begin{definition}[Grafo]
+	Un \vocab{grafo} $(V,e)$ \`e il dato di un insieme \textit{di
+vertici} $V$ e di una relazione \textit{di adiacenza} $e\subseteq V\times
+V$ simmetrica {\drkgrn ($\forall {x,y \in V} \; (x,y) \in e \leftrightarrow (y,x) \in e$)} e 
+	irriflessiva {\drkgrn ($\forall {x \in V} \; (x,x) \not\in e$).}
+
+{\drkgrn L'idea \`e che $V$ pu\`o essere immaginato come un insieme di
+punti che possono essere connessi, o no, da archi. L'esistenza di un arco fra $x$ e $y$ \`e rappresentata da $(x,y) \in e$.}
+\end{definition}
+
+Partiamo da un'idea intuitiva -- chi ha gi\`a seguito un corso di probabilit\`a sapr\`a formalizzare questa cosa in termini precisi. Data una probabilit\`a $p \in \, ]0,1[$ costruiamo un grafo
+$G_p$ con insieme di vertici $\omega$ come segue. Per ogni coppia $(i,j) \in \omega \times \omega$ con $i < j$
+lanciamo una moneta {\drkred che fa testa con probabilit\`a $p$} -- tutte
+queste monete indipendentemente -- e, se viene testa, mettiamo un arco fra $i$ e $j$.
+
+Potremmo pensare che i grafi $G_{0.01}$ e $G_{0.99}$ debbano venire molto
+diversi: uno ha l'$1\%$ degli archi possibili, l'altro ha il $99\%$, insomma uno \`e quasi vuoto, l'altro quasi completo. Avviene,
+tuttavia, che, con probabilit\`a~$1$, questi grafi sono isomorfi.
+
+\begin{definition}[Isomorfismo fra grafi]
+	I grafi $(V_1,e_1)$ e $(V_2,e_2)$ sono \vocab{isomorfi} se esiste
+una bigezione $f\colon V_1 \to V_2$ tale che:
+	\[ \forall {v,w \in V_1} \; (v,w) \in e_1 \leftrightarrow (f(v),f(w)) \in e_2
+		\]
+\end{definition}
+
+Vediamo perch\'e. Dati due sottoinsiemi finiti $X$ e $Y$ di $\omega$, e
+dato un vertice $v \not \in X \cup Y$ la probabilit\`a che $v$ sia connesso da un arco a tutti i vertici di $X$ e a nessuno di quelli di $Y$
+\`e $p^{|X|}(1 - p)^{|Y|} > 0$. Avendo preso $X$ e $Y$ finiti, ci sono
+infiniti vertici $v \not \in X \cup Y$.
+Si capisce, quindi, che, con probabilit\`a~$1$, qualcuno di questi
+vertici~$v$ sar\`a connesso 
+a tutti gli $X$ e a nessuno degli $Y$. Usiamo l'esistenza di questo $v$
+per definire formalmente {\drkred un} grafo random.
+
+\begin{definition}[Grafo random]
+	Il grafo $(V,e)$ \`e un grafo random se $|V|=\aleph_0$ e
+	\[ \forall {X\in\psf(V)}\;\forall {Y\in\psf(V\setminus X)}\;
+\exists {v \in V \setminus(X \cup Y)} \; \underbrace{X \times \{v\}
+\subseteq e}_{{\drkgrn \forall {x\in X} \; (x,v) \in e}} \land
+\underbrace{(Y \times \{v\}) \cap e = \emptyset}_{{\drkgrn\nexists {y \in
+Y} \; (y,v) \in e}}
+		\]
+\end{definition}
+
+Le considerazioni di sopra dimostrano che un qualunque~$G_p$, con
+probabilit\`a~$1$, \`e un grafo random.
+
+\begin{exercise}[Esistenza e unicit\`a del grafo random]
+	Dimostra che esiste un grafo random, ed \`e unico a meno di
+isomorfismi.
+\end{exercise}

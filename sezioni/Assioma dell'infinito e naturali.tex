@@ -224,7 +224,7 @@ Dim.
 \lor s(a) = b)\quad$ (il successore non fa salti).\\
 Oppure anche $\quad\forall {a,b \in \omega} \; a < b \rightarrow
 s(a)<s(b)\quad$
-per l'Osservazione~\ref{succ2}(2).
+per l'osservazione~\ref{succ2}(2).
 \end{lemma}
 
 \begin{proof}
@@ -265,7 +265,7 @@ b \in n) \rightarrow a \in n$; vogliamo dedurre:
 				\[ \drkred (a \in b \land b \in s(n))
 \implies a \in s(n)
 					\]
-Dall'ipotesi $b\in s(n)$, per l'Osservazione~\ref{succ2}(2), ricaviamo due casi:
+Dall'ipotesi $b\in s(n)$, per l'osservazione~\ref{succ2}(2), ricaviamo due casi:
 				\[ \begin{split}
 					& b = n \implies a \in b = n \implies a \in s(n)\\
 					& b \in n \implies a \in b \in n
@@ -285,7 +285,7 @@ Induzione su $a$.
 
 {\drkred Caso $a = s(n)$.} L'ipotesi induttiva \`e $\drkgrn \neg \, n \in n$.
 Assumiamo, per assurdo, $\drkgrn s(n) \in s(n)$. Per
-l'Osservazione~\ref{succ2}(2) abbiamo due casi:
+l'osservazione~\ref{succ2}(2) abbiamo due casi:
 			\[ \begin{split}
 				& s(n) = n \implies n \in n \; \lightning\\
 				& s(n) \in n \implies n \in s(n) \in n \implies n \in n \; \lightning
@@ -592,7 +592,7 @@ f(s(n)) = h(n,f(n))}
 \end{theorem}
 
 \begin{example}
-	Possiamo giustificare la Definizione~\ref{def-pot-fat} come
+	Possiamo giustificare la definizione~\ref{def-pot-fat} come
 segue:\\
 	\hbox{}\hskip 2em per definire $a^b$ consideriamo $k = 1$ e $h(n,x) = a \cdot x$;\\
 	\hbox{}\hskip 2em per definire il fattoriale $k = 1$ e $h(n,x) = s(n) \cdot x$.
@@ -727,7 +727,7 @@ Fa comodo isolare la seguente osservazione.
 {\drkgrn Ipotesi induttiva? Chi ha mai detto che vada usata?}
 \end{proof}
 
-\begin{proof}[Dimostrazione del Teorema~\ref{uninne}]
+\begin{proof}[Dimostrazione del teorema~\ref{uninne}]
 	Per il \hyperref[ric1]{teorema di ricorsione} c'\`e un'unica $f$
 che soddisfa le condizioni $f(\emptyset) = 0$ e $\forall {n \in \omega} \; f(s(n)) = \text{succ}(f(n))$.
 	Resta da constatare che $f$ \`e bigettiva.
@@ -744,13 +744,13 @@ Dimostriamo $\forall {y\in\NN} \;\exists {x\in\omega}\;y=f(x)$ per induzione in~
 {\drkblu Iniettivit\`a} Consideriamo, per assurdo, il minimo $x\in\omega$
 tale che esista $y\in\omega$ con $x\neq y$ ma $f(x)=f(y)$. Per la
 minimalit\`a, $x<y$, quindi, in particolare, $0<y$, e possiamo scrivere
-$y=s(y')$ per l'Osservazione~\ref{zerononsuc}. Si danno due casi. 
+$y=s(y')$ per l'osservazione~\ref{zerononsuc}. Si danno due casi. 
 
 {\drkred Caso $x = 0$.} Allora $0=f(x)=f(s(y'))=\text{succ}(f(y'))$,
 assurdo perch\'e l'assioma (b) su~$\NN$ dice che $0$ non pu\`o essere un
 successore.
 
-{\drkred Caso $x \ne 0$.} Per l'Osservazione~\ref{zerononsuc} possiamo scrivere $x = s(x')$, da cui:
+{\drkred Caso $x \ne 0$.} Per l'osservazione~\ref{zerononsuc} possiamo scrivere $x = s(x')$, da cui:
 			\[ \text{succ}(f(x')) \;=\; f(s(x')) \;=\; f(x)
 \;=\; f(y) \;=\; f(s(y')) \;=\; \text{succ}(f(y'))
 				\]
