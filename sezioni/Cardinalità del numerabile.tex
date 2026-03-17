@@ -915,11 +915,13 @@ del \vocab{grafo random} o \vocab{grafo di Rado}.
 \begin{definition}[Grafo]
 	Un \vocab{grafo} $(V,e)$ \`e il dato di un insieme \textit{di
 vertici} $V$ e di una relazione \textit{di adiacenza} $e\subseteq V\times
-V$ simmetrica {\drkgrn ($\forall {x,y \in V} \; (x,y) \in e \leftrightarrow (y,x) \in e$)} e 
-	irriflessiva {\drkgrn ($\forall {x \in V} \; (x,x) \not\in e$).}
+V$ simmetrica {\drkgrn ($(x,y) \in e \leftrightarrow (y,x) \in e$)} e 
+	irriflessiva {\drkgrn ($(x,x) \not\in e$).}
 
-{\drkgrn L'idea \`e che $V$ pu\`o essere immaginato come un insieme di
-punti che possono essere connessi, o no, da archi. L'esistenza di un arco fra $x$ e $y$ \`e rappresentata da $(x,y) \in e$.}
+{\drkgrn L'idea \`e che la presenza di un arco fra $x$ e $y$ \`e
+rappresentata da $(x,y) \in e$. Gli archi non sono diretti. Fra due
+vertici non pu\`o esserci pi\`u di un arco. Non ci sono archi che
+connettono un vertice a se stesso.}
 \end{definition}
 
 Partiamo da un'idea intuitiva -- chi ha gi\`a seguito un corso di probabilit\`a sapr\`a formalizzare questa cosa in termini precisi. Data una probabilit\`a $p \in \, ]0,1[$ costruiamo un grafo
