@@ -2,52 +2,51 @@
 
 In questa sezione daremo una definizione di $\RR$ come insieme ordinato. Estenderemo, poi, la definizione ad includere le operazioni di campo, ma senza svolgere le verifiche.
 
-\begin{definition}[Maggiorante, insieme superiormente limitato ed estremo superiore]
+\begin{definition}
 	Sia $(A,<)$ un ordine totale, allora:
 	\begin{itemize}
-		\item $m \in A$ \`e un \vocab{maggiorante} di $B \subseteq A$ se $\forall x \in B \; x \leq m$
+		\item $m \in A$ \`e un \vocab{maggiorante} di $B \subseteq A$ se $\forall {x \in B} \; x \leq m$
 		\item $B \subseteq A$ \`e \vocab{superiormente limitato} se ha un maggiorante
-		\item $s\in A$ \`e \vocab{l'estremo superiore} di $B$ - denotato con $\sup B$ - se $s$ \`e il minimo dei maggioranti di $B$.
+		\item $s\in A$ \`e \vocab{l'estremo superiore} di $B$ -- denotato $\drkblu \sup B$ -- se $s$ \`e il minimo dei maggioranti di $B$.
 	\end{itemize}
 \end{definition}
 
 \begin{note}
-	Non sempre gli estremi superiori esistono, e, se $B$ ha un estremo superiore, questo \`e unico\footnote{Segue dall'unicit\`a del minimo di un insieme ordinato.}.
+	Non sempre gli estremi superiori esistono, per\`o, se $B$ ha un estremo superiore, questo \`e unico.
 \end{note}
 
-\begin{definition}[Ordine totale completo]
-	Un ordine totale $(A,<)$ \`e \vocab{completo} se ogni $B \subseteq A$ superiormente limitato ha un estremo superiore $\sup B \in A$.\footnote{Questa per la precisione \`e la definizione di \vocab{Dedekind-completezza}.}.
+\begin{definition}
+	Un ordine totale $(A,<)$ \`e \vocab{completo} se ogni $B \subseteq A$ non vuoto e superiormente limitato ha un estremo superiore $\sup B \in A$.
 \end{definition}
 
-\begin{exercise}[$\QQ$ non \`e completo]
+\begin{exercise}
 	\label{q_noncompleto}
-	Dimostra, usando solo le propriet\`a di $\QQ$, che l'insieme $\{x \in \QQ | x^2 < 2\}$ non ha estremo superiore in $\QQ$.
+	Dimostra, usando solo le propriet\`a di $\QQ$, che l'insieme $\{x
+\in \QQ | x^2 < 2\}$ non ha estremo superiore in $\QQ$.
+
+{\drkred Attenzione!} Dire che il sup \`e $\sqrt 2$ ma $\sqrt 2\not\in\QQ$ non
+vale. Tutto quello che hai \`e~$\QQ$.
 \end{exercise}
-
-\begin{lemma}[$\QQ$ \`e archimedeo]
-	Diciamo che un campo ordinato $K$ soddisfa la \vocab{propriet\`a archimedea} se, dati $x,y \in F$, con $0 < x < y$, esiste $n \in \NN$ tale che $nx > y$.\footnote{O equivalentemente dato $x \in K$, con $x > 0$, esiste $n \in \NN$ tale che $n > x$.}
-	$(\QQ,0,1,+,\cdot,\leq)$ \`e un campo ordinato archimedeo.
-\end{lemma}
-
-\begin{soln}
-	
-\end{soln}
 
 In conseguenza dell'esercizio, possiamo dire che $\QQ$ non \`e completo. Costruiamo ora un ordine completo $(\RR,<)$ che contiene una copia isomorfa di $\QQ$ come sottoinsieme denso.
 
-\begin{definition}[Segmento iniziale]
-	Sia $(A,<)$ un ordine totale. $B \subseteq A$ \`e un \vocab{segmento iniziale} di $A$ se $\forall x \in B \; \forall y \in A \; y < x \rightarrow y \in B$ \textcolor{MidnightBlue}{- cio\`e se contiene un punto, contiene tutti i precedenti, strettamente}.
-\end{definition}
+\begin{definition}
+	Sia $(A,<)$ un ordine totale. $B \subseteq A$ \`e un
+\vocab{segmento iniziale} di $A$ se
+\[\forall {x \in B} \; \forall {y \in
+A} \; y < x \rightarrow y \in B\]
+{\drkgrn Ossia $B$ \`e un segmento iniziale di $A$ se, ogniqualvolta $B$
+contiene un elemento, $B$ contiene altres\`i tutti gli elementi minori di
+questo.}
 
-Ossia $B$ \`e un segmento iniziale di $A$ se, ogniqualvolta $B$ contiene un elemento, $B$ contiene altres\`i tutti gli elementi minori di questo.
 Un segmento iniziale $B$ di $A$ si dice \vocab{proprio} se $B \ne A$.
+\end{definition}
 
 \begin{example}[Segmento iniziale principale]
 	Dato $(A,<)$ ordine totale, $A$ stesso e $\emptyset$ sono segmenti iniziali di $A$. Dato $x \in A$, l'insieme:
-	\[ A_x \Mydef \{y \in A | y < x\}
+	\[ {\drkblu A_x}  \;\;\Mydef\;\; \{y \in A | y < x\}
 		\]
-	\`e un segmento iniziale proprio di di $A$ - detto \vocab{segmento inziale principale} determinato da $x$. Ad esempio $\{x \in \QQ | x < 0 \lor x^2 < 2\}$
-	\`e un segmento iniziale - proprio - di $\QQ$ che non \`e principale.
+	\`e un segmento iniziale proprio di di $A$, detto \vocab{segmento inziale principale} determinato da $x$.
 \end{example}
 
 \begin{note}
@@ -55,23 +54,24 @@ Un segmento iniziale $B$ di $A$ si dice \vocab{proprio} se $B \ne A$.
 \end{note}
 
 \begin{definition}[Sezioni di Dedekind]
-	Una \vocab{sezione} sull'insieme totalmente ordinato $(A,<)$ \`e un segmento iniziale \textcolor{red}{proprio}
-	e \textcolor{red}{non vuoto} di $A$ che \textcolor{red}{non ha un massimo elemento} \textcolor{MidnightBlue}{- per convenzione scegliamo di non metterci massimo elemento}.
+	Una \vocab{sezione} sull'insieme totalmente ordinato $(A,<)$ \`e
+un segmento iniziale {\drkred proprio}
+	e {\drkred non vuoto} di $A$ che {\drkred non ha un massimo
+elemento.}
+{\drkgrn Ossia $B$ segmento iniziale di $A$ \`e una sezione se $B \ne A$,
+$B \ne \emptyset$ e $\forall {x \in B} \; \exists {y \in B} \; x < y$.}
 \end{definition}
 
-Ossia $B$ segmento iniziale di $A$ \`e una sezione se $B \ne A$, $B \ne \emptyset$ e $\forall x \in B \; \exists y \in B \; x < y$.
-
-\begin{definition}[Insieme ordinato dei numeri reali]
-	Definiamo l'insieme dei \vocab{numeri reali} come l'insieme delle sezioni di Dedekind di $\QQ$:
-	\[ \RR \Mydef \{x \in \ps(\QQ) | \, \text{$x$ \`e una sezione su $\QQ$}\}\,\footnote{Moralmente: sono tutti i modi di prendere $\QQ$, tagliarlo in due e prendere la cosa a sinistra (per le nostre convenzioni).}
+\begin{definition}[$\RR$ come insieme ordinato]
+	\[ {\drkred \RR} \;\;\Mydef\;\; \{\,x \in \ps(\QQ)\, | \,
+\text{$x$ \`e una sezione su $\QQ$}\,\}
 		\]
-	con l'ordinamento dato da:
-	\[ \forall x,y \in \RR \; x \leq y \Mydef x \subseteq y \, \footnote{Era equivalente definire il $<$ a partire da $\subsetneq$, avremmo ottenuto comunque lo stesso ordine su $\RR$.}
+	Dati $x,y\in\RR$
+	\[ {\drkred x \leq y} \;\;\Mydef\;\; x \subseteq y
 		\]
-	\textcolor{MidnightBlue}{poich\'e il contenimento come relazione su $\ps(\QQ)$ \`e un ordinamento parziale, allora anche $\leq$ lo \`e in automatico.}
 \end{definition}
 
-\begin{proposition}[$\RR$ \`e completo]
+\begin{proposition}[$\RR$ \`e completo]\label{prop-r-comp}
 	$(\RR,<)$ \`e un ordine totale completo.
 \end{proposition}
 
@@ -83,164 +83,193 @@ Prima della dimostrazione, isoliamo un semplice lemma.
 
 \begin{proof}
 	Sia $\alpha \in \bigcup X$ e sia $\beta \in A$, con $\beta < \alpha$, vogliamo verificare che $\beta \in \bigcup X$.
-	Poich\'e $\alpha \in \bigcup X$, allora $\alpha \in B$, con $B$ segmento iniziale di $A$ e $B \in X$, a questo punto \`e ovvio per la propriet\`a dei segmenti iniziali che
-	$\beta < \alpha \to \beta \in B \subseteq \bigcup X$.
+	Siccome $\alpha \in \bigcup X$, esiste $x\in X$ con $\alpha \in
+x$. Siccome $x$ \`e segmento iniziale di~$A$, $\beta \in x \subseteq \bigcup X$.
 \end{proof}
 
-Ora possiamo dimostrare la proposizione come segue.
+\begin{proof}[Dimostrazione di~\ref{prop-r-comp}]
+	Abbiamo un ordine parziale perch\'e il contenimento ($\subseteq$)
+\`e un ordine parziale. Dobbiamo verificarne la totalit\`a.
+	Dati $x,y \in \RR$, supponiamo per assurdo che non valga n\'e $x \subseteq y$ n\'e $y \subseteq x$, allora esistono $a,b \in \QQ$ tali che $a \in x \setminus y$ e $b \in y \setminus x$.
+	Ora, o $a < b$, o $b < a$.
+	Nel primo caso, poich\'e $b \in y$, si avrebbe $a \in y
+\;\lightning$. Analogamente, nel secondo caso, $a\in x \Rightarrow b \in x \; \lightning$.
 
-\begin{proof}
-	Abbiamo detto che $(\RR,\leq)$, con $\leq$ definito come il contenimento tra le sezioni di Dedekind di $\QQ$ \`e gi\`a un ordinamento parziale, dobbiamo quindi verificarne la totalit\`a.
-	Dati $x,y \in \RR$, supponiamo per assurdo che non valga n\'e $x \subseteq y$ n\'e $y \subseteq x$, allora, essendo $x,y \ne \emptyset$ - per definizione di sezioni -, si ha che esistono $a,b \in \QQ$ tali che $a \in x \setminus y$ e $b \in y \setminus x$.
-	A questo punto, visto che l'ordinamento su $\QQ$ \`e totale, vale necessariamente una tra $a < b$ e $b < a$ (non pu\`o valere l'uguale senn\`o l'elemento starebbe nell'intersezione di $x$ e $y$).
-	Nel primo caso, poich\'e $b \in y$ - ed $y$ \`e un segmenti iniziale - si avrebbe $a \in y \;\textcolor{red}\lightning$, analogamente, nel secondo caso, $b \in x \; \textcolor{red}{\lightning}$.\\
-	Verifichiamo ora la completezza, dato $A \subseteq \RR$ non vuoto e superiormente limitato, cio\`e ammette un maggiorante $m \in \RR$, dimostriamo che $\sup A = \bigcup A \in \RR$.\\
-	Per il lemma precedente $\bigcup A$, essendo unione di reali, \`e ancora un segmento iniziale - di $\QQ$ -, e, siccome $A$ non \`e vuoto, allora $\bigcup A \ne \emptyset$. Poich\'e $m$ \`e un maggiorante di $A$,
-	si ha $\forall x \in A \; x \leq m \equiv x \subseteq m \implies \bigcup A \leq m \in \RR$, per cui $\bigcup A \ne \RR$\footnote{Typo Mamino}, quindi \`e un segmento iniziale non vuoto e proprio, inoltre, non ha massimo,
-	perch\'e se lo avesse sarebbe massimo per una delle sezioni dell'unione cosa che non pu\`o avvenire. Abbiamo quindi che $\bigcup A$ \`e una sezione di Dedekind di $\QQ$ e quindi $\bigcup A \in \RR$. \\
-	Verifichiamo che $\bigcup A$ \`e il minore dei maggioranti di $A$. Se $x \in A$, allora $x \subseteq \bigcup A$, e, per la definizione di ordinamento data, ci\`o equivale a $x \leq \bigcup A$.
-	Ora, se $m$ \`e un altro maggiorante di $A$, allora per definizione $\forall x \in A \; x \leq m \equiv x \subseteq m$, ma ci\`o significa che $\bigcup A \subseteq m \equiv \bigcup A \leq m$, ovvero $\bigcup A$ \`e il minimo tra i maggioranti.
+	Verifichiamo ora la completezza. Sia $A \subseteq \RR$ non vuoto e
+superiormente limitato da $m \in \RR$. Dimostriamo che $\sup A = \bigcup A \in \RR$.
+
+{\drkblu $\bigcup A \in \RR$.}	Per il lemma precedente $\bigcup A$ \`e un segmento iniziale di
+$\QQ$. Siccome $A$ non \`e vuoto, allora $\bigcup A \ne \emptyset$. Poich\'e $m$ \`e un maggiorante di $A$,
+	si ha $\bigcup A \subseteq m$, per cui $\bigcup A \ne \RR$. Se
+$\bigcup A$ avesse un massimo~$M$, allora esisterebbe $a\in A$ con $M\in
+a$, per cui $M$ sarebbe il massimo anche di~$a\;\lightning$. In definitiva
+$\bigcup A$ \`e una sezione di $\QQ$, quindi $\bigcup A \in \RR$.
+
+{\drkblu $\bigcup A$ \`e un maggiorante di $A$.} Infatti, se $x \in A$,
+allora $x \subseteq \bigcup A$, cio\`e $x\le\bigcup A$.
+
+{\drkblu $\bigcup A$ \`e il minimo maggiorante.}
+	Se $m$ \`e un maggiorante di $A$, allora per definizione $\forall
+{x \in A} \; x \subseteq m$, ma ci\`o significa che $\bigcup A \subseteq
+m$, ovvero $\bigcup A \le m$.
 \end{proof}
 
-\begin{remark}[$\QQ$ si immerge in maniera ordinata e densa in $\RR$]
-	La funzione $\iota : \QQ \hookrightarrow \RR : a \mapsto \QQ_a = \{x \in \QQ | x < a\}$, cio\`e la funzione che manda ogni razionale nella sua sezione di Dedekind principale,
-	immerge $\QQ$ in $\RR$ in maniera strettamente crescente e densa - ossia $\iota[\QQ]$ \`e densa in $\RR$.
+\begin{remark}
+	La funzione $\iota \colon \QQ \to \RR \quad a \mapsto \QQ_a
+\drkgrn = \{x \in \QQ | x < a\}$
+	immerge $\QQ$ in $\RR$ in maniera strettamente crescente e densa
+-- ossia $\iota[\QQ]$ \`e denso in $\RR$.
 \end{remark}
 
 \begin{proof}
-	Osserviamo in primis che $\iota$ \`e ben definita in quanto $\QQ_a$ \`e un segmento iniziale di $\QQ$, proprio e non vuoto, per cui \`e una sezione di Dedekind di $\QQ$, cio\`e un elemento di $\RR$.
-	Vediamo ora che dati $a,b \in \QQ$, con $a < b$, si ha che $\QQ_a \subsetneq \QQ_b$, infatti:
-	\[ x \in \QQ_a \iff x < a < b \implies x < b \iff x \in \QQ_b
-		\]
-	e $a \not \in \QQ_a \land a \in \QQ_b$ per cui $\iota(a) < \iota(b)$. Infine, dati $x,y \in \RR$, con $x < y$, vediamo che contenuto strettamente nel mezzo c'\`e un elemento di $\Imm(\iota)$.
-	Poich\'e $x < y \equiv x \subsetneq y \implies y \setminus x \ne \emptyset$, e per definizione $y \setminus x \subseteq \QQ$, per cui possiamo prendere $b \in y \setminus x$ e, siccome $y$ non ha massimo, abbiamo $b < q \in y \setminus x$, verifichiamo che $x < \iota(q) = \QQ_q < y$.
-	Infatti, poich\'e $q \in y$ - e $y$ \`e una sezione - allora $\forall c \in \QQ_q \equiv c < q \land q \in y \implies c \in y$, e naturalmente $q \not \in \QQ_q$ ma $q \in y$ per cui $\QQ_q \subsetneq y \equiv \iota(q) < y$.
-	Analogamente, poich\'e $a,b \not \in x$, allora $\forall z \in x \; z \leq a < b \equiv x \subseteq \QQ_a \subsetneq \QQ_b$, dove non c'\`e l'ultima uguaglianza perch\'e $a < b \to a \in \QQ_b$ e $a \not \in \QQ_a$.
+	Dati $a,b \in \QQ$ con $a < b$, abbiamo $\QQ_a \subsetneq \QQ_b$,
+per cui $\iota$ \`e strettamente crescente. Dati $x,y \in \RR$ con $x <
+y$, per definizione $x \subsetneq y$, quindi c'\`e un $a \in y \setminus
+x$. Siccome $y$ non ha massimo, c'\`e un $b\in y$ con $a<b$. Ora,
+$x\subseteq \QQ_a \subsetneq \QQ_b \subsetneq y$, per cui $x<\iota(b)<y$.
 \end{proof}
 
-\begin{notation}[Abuso di immersioni]
+\begin{notation}[Abuso di]
 	Siccome le immersioni:
 	\[ \omega \hookrightarrow \ZZ \hookrightarrow \QQ \hookrightarrow \RR
 		\]
 	sono tutte iniettive e crescenti, quando non c'\`e pericolo di confusione, possiamo abusare della notazione immaginando che 
 	queste siano vere e proprie inclusioni:
-	\[ \omega \;\textcolor{red}{\subseteq}\; \ZZ \;\textcolor{red}{\subseteq} \;\QQ \;\textcolor{red}{\subseteq}\; \RR
+	\[ \omega \;{\drkred\subseteq}\; \ZZ \;{\drkred\subseteq} \;\QQ
+\;{\drkred\subseteq}\; \RR
 		\]
 	In realt\`a non \`e vero: per esempio \`e $\iota[\QQ]$, non $\QQ$, a essere sottoinsieme di $\RR$, ma $\iota[\QQ]$ \`e in corrispondenza biunivoca, in maniera 
-	canonica, tramite appunto $\iota$, con $\QQ$, e questa corrispondenza preserva tutta la struttura rilevante - l'ordine come abbiamo verificato, ma anche le operazioni di campo.
+	canonica, con $\QQ$, e questa corrispondenza preserva tutta la
+struttura rilevante: l'ordine, come abbiamo verificato, ma anche le operazioni di campo.
 \end{notation}
 
-\begin{corollary}[$\RR$ \`e pi\`u che numerabile]
+\begin{corollary}
 	$\aleph_0 < |\RR|$.
 \end{corollary}
 
 \begin{proof}
-	Dall'osservazione sulla notazione di sopra, abbiamo visto che $\QQ \overset{\iota}{\hookrightarrow} \RR$, da cui $\aleph_0 = |\QQ| \leq |\RR|$, inoltre $\QQ$ \`e denso in $\RR$, pertanto 
-	$\RR$ \`e denso in se stesso. Si vede facilmente che $\RR$ non ha massimo n\'e minimo, quindi se $\RR$ fosse numerabile sarebbe isomorfo, per l'\hyperref[isoCantor]{isomorfismo di Cantor},
-	a $\QQ$. D'altro canto $\RR$ \`e completo e $\QQ$ no - per l'\hyperref[q_noncompleto]{esercizio} visto -, dunque non possono essere isomorfi, e quindi necessariamente non vale l'ipotesi 1 det teorema di isomorfismo di Cantor
-	che avevamo assunto, dunque non pu\`o esserci una bigezione $\implies \aleph_0 < |\RR|$.
+	Abbiamo visto che $|\QQ| \leq |\RR|$, inoltre $\QQ$ \`e denso in $\RR$, pertanto 
+	$\RR$ \`e denso in s\'e. Si vede facilmente che $\RR$ non ha
+massimo n\'e minimo, quindi, se $\RR$ fosse numerabile, sarebbe isomorfo a
+$\QQ$, per il \hyperref[isoCantor]{teorema di isomorfismo di Cantor}.
+	D'altro canto $\RR$ \`e completo e $\QQ$ no per
+l'esercizio~\ref{q_noncompleto}.
 \end{proof}
 
-\subsection{Caratterizzazione dei reali come ordine}
+\subsection{Caratterizzazione di $(\RR, <)$.}
 Abbiamo stabilito che $(\RR,<)$ \`e un ordine totale, completo e senza estremi con un sottoinsieme, $\QQ$, denso e numerabile.
 Queste propriet\`a, a loro volta, caratterizzano l'insieme ordinato $(\RR,<)$ a meno di isomorfismi.
 
-\begin{proposition}[Caratterizzazione di $(\RR,<)$]
-	Sia $(A,<)$ un ordine totale, se:
+\begin{proposition}[Caratterizzazione di $(\RR,<)$]\label{pro-car-rrr}
+	Sia $(A,<)$ un ordine totale, allora $(A,<) \sim (\RR,<)$ se e
+solo se valgono simultaneamente:
 	\begin{enumerate}[1.]
 		\item $(A,<)$ \`e completo
 		\item $(A,<)$ \`e senza estremi
-		\item esiste $B \subseteq A$ numerabile e denso in $A$\footnote{Si dice anche che $A$ \`e \vocab{separabile}.}
+		\item esiste $B \subseteq A$ numerabile e denso in $A$.
 	\end{enumerate} 
-	allora $(A,<) \sim (\RR,<)$.
 \end{proposition}
 
 \begin{proof}
-	Denotiamo con $\widetilde{A}$ l'insieme delle sezioni di Dedekind su \textcolor{red}{$B$}, cio\`e $\widetilde{A} = \{x \in \ps(B) | \text{$x$ \`e una sezione di $\QQ$}\}$.
-	Osserviamo che $(A,\leq) \sim (\widetilde{A},\subseteq)$ \textcolor{MidnightBlue}{- cio\`e un ordine totale con le propriet\`a sopra \`e necessariamente isomorfo alle sezioni di Dedekind del suo denso numerabile}.
+	Denotiamo con $\widetilde{A}$ l'insieme delle sezioni {\drkred su
+$B$}.
+	Osserviamo che $(A,\leq) \sim (\widetilde{A},\subseteq)$.
 	L'isomorfismo \`e infatti dato da:
-	\[ f : A \rightarrow \widetilde{A} : a \mapsto B_a = \{x \in B | x < a\}
+	\[ f \colon A \rightarrow \widetilde{A} \qquad a \mapsto B_a = \{x \in B | x < a\}
 		\]
 	la cui inversa \`e:
-	\[ g : \widetilde{A} \rightarrow A : Y \mapsto \sup Y
+	\[ g \colon \widetilde{A} \rightarrow A \qquad Y \mapsto \sup Y
 		\]
-	\textcolor{MidnightBlue}{Verifiche: dobbiamo mostrare in primis che le mappe sono l'una l'inversa dell'altra.
-	\begin{itemize}
-			\item[$\boxed{g \circ f = \id_A}$] Dato $a \in A$, osserviamo che $g(f(a)) = \sup B_a = \sup\{x \in B | x < a\}$, e che il sup di tale insieme \`e proprio $a$. Infatti, \`e banale che $a$ \`e un maggiorante,
-			preso $b < a$ maggiorante per $B_a$, essendo $B$ denso, esiste $b < b ' < a$, e dall'ultima disuguaglianza $b' \in B_a$, per cui $b$ non pu\`o essere un maggiorante, dunque $a$ \`e proprio il minimo dei maggioranti.
-			\item[$\boxed{f \circ g = \id_{\widetilde{A}}}$] Data una sezione di $B$, $X \in \widetilde{A}$, osserviamo che $f(g(X)) = B_{\sup X}$, mostriamo che $B_{\sup X} = X$. \`E ovvio che $\forall x \in X \; x < \sup X$ - ricordiamo che le sezioni non hanno massimo, quindi non c'\`e l'uguale -,
-			per cui $x \in B_{\sup X}$ e quindi $X \subseteq B_{\sup X}$. Viceversa, dato $x \in B_{\sup X}$, ci\`o equivale a $x < \sup X$, e, per definizione di sup, esiste necessariamente $x' \in X$ tale che $x < x' < \sup X$, ed essendo $X$ un segmento iniziale segue $x \in X$, per cui $B_{\sup X} \subseteq X$.
-	\end{itemize}
-	Osserviamo infine che naturalmente $f$ \`e strettamente crescente (si pu\`o usare $g$), dati $a,a' \in A$, segue $B_a \subsetneq B_{a'}$ (e naturalmente $\widetilde{A}$ \`e totalmente ordinato con la stessa dimostrazione di $\RR$).}\\
-	Ora per il \hyperref[isoCantor]{teorema di isomorfismo di Cantor} abbiamo che $(B,<_{|B}) \sim (\QQ,<)$, infatti \`e numerabile e denso per 3 - se \`e denso in $A$ lo \`e in particolare in se stesso -,
-	inoltre, poich\'e $A$ \`e illimitato e $B$ \`e denso in lui, allora anche $B$ \`e illimitato.\\
-	A questo punto, \`e facile osservare che fissato un isomorfismo tra $(B,<_{|B})$ e $(\QQ,<)$ questo preserva le sezioni di Dedekind, per cui induce un isomorfismo tra le sezioni di Dedekind dei rispettivi due insiemi,
-	e unendo ci\`o alla prima osservazione si ha $(\widetilde{A},<) \sim (A,<) \sim (\RR,<)$.
+
+	Verifiche: dobbiamo mostrare che $g \circ f = \id_A$, $f \circ g =
+\id_{\widetilde{A}}$ e $f$ \`e crescente.
+	
+{\drkblu $g \circ f = \id_A$} Dato $a \in A$, sia $b = g(f(a)) = \sup B_a
+= \sup\{x \in B | x < a\}$. Dobbiamo dimostrare $a=b$. Per costruzione $a$
+\`e un maggiorante di~$B_a$. Supponiamo che non sia il minimo, allora
+			preso $c < a$ maggiorante di~$B_a$, essendo $B$
+denso, esiste $c'\in B$ con $c < c' < a$, quindi $c' \in B_a\;\lightning$
+
+{\drkblu $f \circ g = \id_{\widetilde{A}}$} Data una sezione $X$ di $B$,
+sia $Y = f(g(X)) = B_{\sup X}$. Mostriamo che $X = Y$. Siccome $X$ non ha
+massimo, $\forall {x \in X} \; x < \sup X$, 
+			per cui $x \in B_{\sup X}=Y$, quindi $X \subseteq
+Y$. Viceversa, dato $y\in Y$, ossia $y < \sup X$, esiste $y' \in X$ tale
+che $y < y'$, per cui $y \in X$. Ne segue che  per cui $Y \subseteq X$.
+
+{\drkblu $f$ \`e crescente.} Dati $a,a' \in A$, se $a<a'$, allora $B_a
+\subsetneq B_{a'}$ perch\'e, per la densit\`a di~$B$, esiste $b\in B$ con
+$a<b<a'$.
+
+	Ora, per il \hyperref[isoCantor]{teorema di isomorfismo di
+Cantor}, $B$, con l'ordine indotto da~$(A,<)$, \`e isomorfo a~$\QQ$,
+quindi le sezioni di $B$ sono isomorfe a quelle di~$\QQ$, per cui $(A,<)
+\sim (\widetilde{A},\subsetneq) \sim (\RR, <)$.
 \end{proof}
 
-Per completezza, definiamo ora la struttura di campo di $\RR$. Non verificheremo le propriet\`a, e neanche la correttezza di queste definizioni.
+Per completezza, definiamo la struttura di campo di $\RR$. Non verificheremo le propriet\`a, e neanche la correttezza di queste definizioni.
 
 \begin{definition}[Campo ordinato]
 	$(F,0,1,+,\cdot,\leq)$ \`e un \vocab{campo ordinato} se:
 	\begin{itemize}
 		\item $(F,0,1,+,\cdot)$ \`e un campo
-		\item $(F,<)$ \`e un'ordine totale \footnote{Come ribadito pi\`u volte \`e indifferente usare $<$ o $\leq$.}
-		\item $\forall x,y,z \in F \; x < y \rightarrow x + z < y + z$ \textcolor{orange}{(compatibilit\`a con la somma)}
-		\item $\forall x,y \in F (0 < x \land 0 < y) \rightarrow 0 < x \cdot y$ \textcolor{orange}{(compatibilit\`a con il prodotto)}
+		\item $(F,<)$ \`e un'ordine totale
+		\item $\forall {x,y,z \in F} \; x < y \rightarrow x + z < y + z$
+		\item $\forall {x,y \in F} \; (0 < x \land 0 < y) \rightarrow 0 < x \cdot y$
 	\end{itemize}
-	(le ultime due richieste sono le propriet\`a di \textbf{compatibilit\`a} della struttura di campo [= compatibilit\`a delle operazioni] con l'ordinamento $<$ di $F$).
 \end{definition}
 
-\begin{definition}[Somma su $\RR$]
-	Dati $x,y \in \RR$ definiamo la \vocab{somma di numeri reali}:
-	\[ x + y \Mydef \{a + b \in \QQ | a \in x \land b \in y\}
+\begin{definition}
+	Dati $x,y \in \RR$
+	\[ {\drkblu x + y} \;\;\Mydef\;\; \{a + b \in \QQ | a \in x \land b \in y\}
 		\]
-	cio\`e la sezione di $\QQ$ che ha come elementi i razionali somme di elementi di $x$ e $y$.
-\end{definition}
-
-\begin{definition}[Prodotto su $\RR$]
-	Dati $x,y \in \RR$ con $x > 0$ e $y > 0$ definiamo il \vocab{prodotto di numeri reali}:
-	\[ x \cdot y \Mydef \{q \in \QQ | q \leq 0\} \cup \{a\cdot b \in \QQ| a \in x  \land b \in y \land a > 0 \land b > 0\}
+	Dati $x,y \in \RR$ con $x > 0$ e $y > 0$
+	\[ {\drkblu x \cdot y} \;\;\Mydef\;\; \{q \in \QQ | q \leq 0\} \cup \{a\cdot b \in \QQ| a \in x  \land b \in y \land a > 0 \land b > 0\}
 		\]
-	cio\`e l'unione di $\QQ_0 \cup \{0\}$ con la sezione di $\QQ$ che ha come elementi i razionali prodotti di elementi \textbf{positivi} di $x$ e $y$.
+Definiamo quindi $\drkblu -x$ tramite l'inverso additivo ed il prodotto
+nei casi in cui uno dei fattori \`e $<0$ tramite la regola dei segni.
 \end{definition}
 
-Definiamo quindi $-x$ tramite l'inverso additivo ed il prodotto nei casi $x < 0$, $y>0$ etc. tramite l'uso della regola dei segni.
 
 \begin{theorem}[Unicit\`a di $(\RR,0,1,+,\cdot,\leq)$]
 	$\RR$ dotato delle operazioni definite, \`e l'unico campo ordinato completo a meno di isomorfismo.
 \end{theorem}
 
-La dimostrazione di questo teorema, talvolta, si vede nei corsi di analisi 1, noi non la studieremo, Per chi fosse interessato: LIBRO DI TESTO \cite{jech}, capitolo 10; NOTE DEL PROF. Di Nasso, 
-fascicolo 4 \cite{diNasso_eti_2019_20}; LEZIONE 16 dell'a.a. 2020-21 \cite{mamino_eti_20_21}.
+La dimostrazione di questo teorema, talvolta, si vede nei corsi di analisi
+1, noi non la studieremo, Per chi fosse interessato, vedi per esempio
+\textit{Hrbacek Jech, Introduction to Set Theory}, capitolo~10.
 
-\subsection{\texorpdfstring{La cardinalit\`a del continuo \`e $2^{\aleph_0}$}{2 alla aleph-zero}}
+\subsection{$|\RR| = 2^{\aleph_0}$}
 Torniamo ad una questione pi\`u strettamente insiemistica.
 
-\begin{theorem}[Cardinalit\`a del continuo]
+\begin{theorem}\label{crdr}
 	$|\RR| = 2^{\aleph_0}$
 \end{theorem}
 
-Questo teorema ci dice, in un modo ancora diverso, che $\RR$ \`e pi\`u che numerabile - poich\'e $\aleph_0 < 2^{\aleph_0}$ (per \hyperref[cantor]{Cantor}) - ma, in pi\`u, caratterizza
+Questo teorema ci dice, in un modo ancora diverso, che $\RR$ \`e pi\`u che
+numerabile -- poich\'e $\aleph_0 < 2^{\aleph_0}$ -- ma, in pi\`u, caratterizza
 anche esattamente la cardinalit\`a di $\RR$.
 
-\textcolor{MidnightBlue}{Prima della dimostrazione formale, vediamo intuitivamente perch\'e il risultato \`e vero. Per definizione $\RR \subseteq \ps(\QQ)$, quindi si immerge nelle parti, da cui
-$|\RR| \leq 2^{\aleph_0}$, mentre la disuguaglianza da dimostrare \`e $2^{\aleph_0} \leq |\RR|$.
-Esibiamo quindi una funzione iniettiva $\ps(\omega) \rightarrow \RR$ come segue:
-\[ f : \ps(\omega) \rightarrow \RR : S \mapsto 0.a_0^Sa_1^Sa_2^Sa_3^S\ldots \qquad \text{con} \; a_i^s = \begin{cases}
+{\drkgrn Prima della dimostrazione formale, vediamo intuitivamente perch\'e il risultato \`e vero. Per definizione $\RR \subseteq \ps(\QQ)$, quindi la disuguaglianza da dimostrare \`e $2^{\aleph_0} \leq |\RR|$.
+Esibiamo una funzione iniettiva $\ps(\omega) \to \RR$:
+\[ f(S) = \underbrace{0.a_0^Sa_1^Sa_2^Sa_3^S\ldots}_{\text{in notazione
+decimale}} \qquad \text{con} \; a_i^s = \begin{cases}
 	0 &\text{\text{se $i \not\in S$}} \\
 	1 &\text{\text{se $i \in S$}}
 \end{cases}
 	\]
-per esempio $S = \{2,3,5,7,11,\ldots\}$ d\`a $f(S) = 0.001101010001\ldots$ \`e chiaro che:
-\[ f(S) = f(T) \overset{\text{def.}}{\iff} \forall i \in \omega \; a_i^S = a_i^T \overset{\text{def.}}{\iff} \forall i \in \omega \; i \in S \leftrightarrow i \in T \overset{\text{estensionalit\`a}}{\iff} S = T
+\`E chiaro che:
+\[ f(S) = f(T) \iff \forall {i \in \omega} \; a_i^S = a_i^T \iff \forall
+{i \in \omega} \; i \in S \leftrightarrow i \in T \iff S = T
 	\]
-Non \`e difficile formalizzare questa dimostrazione\footnote{L'unica cosa a cui stare attenti \`e fissare una sola rappresentazione binaria nel caso di periodicit\`a.}. Basterebbe definire $0.a_1a_2a_3\ldots$ come $\sum_{i = 0}^\infty a_i 10^{-(i + 1)}$, poi $\sum_{i = 0}^\infty$
+Non sarebbe difficile formalizzare questa dimostrazione.
+Basterebbe definire $0.a_1a_2a_3\ldots$ come $\sum_{i = 0}^\infty a_i 10^{-(i + 1)}$, poi $\sum_{i = 0}^\infty$
 come $\sup_{n \in \omega}\sum_{i = 0}^n$, poi $\sum_{i = 0}^n$ per ricorsione numerabile, poi dimostrare le propriet\`a aritmetiche rilevanti. Noi sfrutteremo la stessa idea, 
 ma formulando la dimostrazione in termini di ordini.}
 
 \subsection{Operazioni che coinvolgono la cardinalit\`a del continuo}
-Prima di dimostrare il teorema, sviluppiamo un po' di aritmetica della cardinalit\`a $2^{\aleph_0}$. \textcolor{red}{Questi lemmi sono importanti, e serviranno per calcolare 
+Prima di dimostrare il teorema, sviluppiamo un po' di aritmetica della
+cardinalit\`a $2^{\aleph_0}$. {\drkred Questi lemmi sono importanti, e serviranno per calcolare 
 la cardinalit\`a di insiemi concreti.}
 
 \begin{remark}
@@ -248,202 +277,243 @@ la cardinalit\`a di insiemi concreti.}
 \end{remark}
 
 \begin{proof}
-	Basta osservare che per le propriet\`a delle operazioni sulla cardinalit\`a $(2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0 \cdot \aleph_0}$, e, ricordando
-	che prodotto di numerabili \`e numerabile, si ottiene $2^{\aleph_0 \cdot \aleph_0} = 2^{\aleph_0}$.
+$(2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0 \cdot \aleph_0} = 2^{\aleph_0}$.
 \end{proof}
 
-\begin{lemma}[Assorbimento della cardinalit\`a al pi\`u continua]
+\begin{lemma}
 	\label{prodotto_cardinali_senza_AC}
-	Siano $\alpha$, $\beta$ abbreviazioni per o ``finito'' o $\aleph_0$ o $2^{\aleph_0}$, allora:
+	Siano $\alpha$, $\beta$ o ``finito'' o $\aleph_0$ o $2^{\aleph_0}$, allora:
 	\[ \alpha + \beta = \alpha \cdot \beta = \max(\alpha,\beta)
 		\]
-	\textcolor{red}{eccetto il caso} $\alpha \cdot 0 = 0 \cdot \beta = 0$.
+	{\drkred eccetto il caso} $\alpha \cdot 0 = 0 \cdot \beta = 0$.
 \end{lemma}
 
 \begin{proof}
-	Somme e prodotti di cardinalit\`a finite sono finite (per il \hyperref[op_card_fin]{teorema}, e in questo caso l'enunciato del lemma \`e gi\`a soddisfatto perch\'e
-	nel caso di entrambe le cose finite ci interessa soltanto che tutte e tre le operazioni sopra diano cose finite, pertanto da ora possiamo assumere che una delle due 
-	abbreviazioni non sia finita e procedere con la dimostrazione). Supponiamo quindi $\aleph_0 \leq \beta$ e, senza perdita di generalit\`a, $\alpha < \beta$.
-	Abbiamo:
-	\begin{align*}
-		&\beta = \beta + 0 \overset{\text{compatib. op. cardin.}}{\leq} \alpha + \beta \overset{\text{compatib. op. cardin. + Hp.}}{\leq} 2\beta = \beta \\
-		&\beta = \beta \cdot 1 \overset{\text{compatib. op. cardin.}}{\leq} \alpha \cdot \beta \overset{\text{compatib. op. cardin + Hp.}}{\leq} \beta^2 = \beta
-	\end{align*}
-	dove l'ultima uguaglianza nel prodotto vale perch\'e $\aleph_0^2 = \aleph_0$, e $2^{\aleph_0} \leq (2^{\aleph_0})^2 \leq (2^{\aleph_0})^{\aleph_0}  = 2^{\aleph_0}$ (quindi la cosa accade 
-	per entrambi i possibili valori di $\beta$). Nel caso di $2\beta$, si osserva che $\aleph_0 \leq 2 \cdot \aleph_0 \leq \aleph_0 \cdot \aleph_0 = \aleph_0$ e $2^{\aleph_0} \leq 2 \cdot 2^{\aleph_0} \leq 2^{\aleph_0} \cdot 2^{\aleph_0} 
-	= 2^{\aleph_0 + \aleph_0} = 2^{\aleph_0}$ (come al solito per le propriet\`a di compatibilit\`a e dando per buone le disuguaglianze iniziali, che possono essere verificate scrivendo semplici mappe).\\
-	Pertanto si conclude l'enunciato usando Cantor-Bernstein nella serie di disuguaglianze sopra, 
-	che ci danno proprio la tesi (ricordando che avevamo scelto WLOG $\beta$ come massimo).
+	Somme e prodotti di cardinalit\`a finite sono finiti
+(teorema~\ref{op_card_fin}). 
+Supponiamo quindi $\aleph_0 \leq \beta$ e, senza perdita di generalit\`a,
+$\alpha \le \beta$. Allora
+\[
+\beta \;\;\le\;\; {\alpha+\beta \atop \alpha\cdot\beta} \;\;\le\;\;
+\beta^2 \;\;{\drkred =}\;\;\beta
+\]
+	dove l'ultima uguaglianza vale perch\'e $\aleph_0^2 = \aleph_0$, e
+$2^{\aleph_0} \leq (2^{\aleph_0})^2 \leq (2^{\aleph_0})^{\aleph_0}  =
+2^{\aleph_0}$.
 \end{proof}
 
-\begin{lemma}[$\alpha^{\aleph_0} = 2^{\aleph_0}$]
-	Se $2 \leq \alpha \leq 2^{\aleph_0}$\footnote{Per la disuguaglianza di \hyperref[cantor]{Cantor} nel mezzo c'\`e anche $\aleph_0$, dunque vale anche che $\aleph_0^{\aleph_0} = 2^{\aleph_0}$} allora $\alpha^{\aleph_0} = 2^{\aleph_0}$.
+\begin{lemma}
+	Se $2 \leq \alpha \leq 2^{\aleph_0}$ allora $\alpha^{\aleph_0} = 2^{\aleph_0}$.
 \end{lemma}
 
 \begin{proof}
-	\`E sufficiente osservare che:
-	\[ 2^{\aleph_0} \leq \alpha^{\aleph_0} \leq (2^{\aleph_0})^{\aleph_0} \overset{\text{oss. sopra}}{=} 2^{\aleph_0}
-		\]
-	dove le disuguaglianze sono semplicemente l'ipotesi + \hyperref[compatibilit\`a_operazioni_cardinalit\`a]{l'osservazione sulla compatibilit\`a} tra ordinamento e operazioni fra cardinalit\`a (si conclude come al solito per \hyperref[CB]{Cator-Bernstein}).
+	$2^{\aleph_0} \leq \alpha^{\aleph_0} \leq (2^{\aleph_0})^{\aleph_0} = 2^{\aleph_0}
+		$
 \end{proof}
 
-\subsection{Sottrarre un  numerabile dal continuo}
+\subsection{$2^{\aleph_0} - \aleph_0 = 2^{\aleph_0}$}
 Ricordiamo un'osservazione riguardo al numerabile.
 
-\begin{remark}[Numerabile - finito = numerabile]
+\begin{remark}
 	\label{numerabile - finito}
 	Sia $|A| = \aleph_0$ e $B \subseteq A$ con $|B|<\aleph_0$. Allora $|A \setminus B| = \aleph_0$.
 \end{remark}
 
 \begin{proof}
-	Siccome $A \setminus B \subseteq A$, per la dicotomia vista, o $|A \setminus B| = \aleph_0$ o $|A \setminus B|<\aleph_0$.
-	Escludiamo che valga la seconda possibilit\`a, infatti se cos\`i fosse:
-	\[ A = B \cup (A \setminus B)
-		\]
-	cio\`e un insieme numerabile \`e unione di insiemi finiti, dunque \`e finito - ad esempio per inclusione-esclusione $\aleph_0 = |A| = |A \cup A\setminus B| \leq |A| + |A \setminus B| = n + m \in \omega$ - che \`e assurdo.
+	Siccome $A \setminus B \subseteq A$ o $|A \setminus B| = \aleph_0$ o $|A \setminus B|<\aleph_0$.
+Se valesse la seconda $A = B \cup (A \setminus B)$ sarebbe
+finito~$\;\lightning$
 \end{proof}
 
 Vale una proposizione analoga per $2^{\aleph_0}$.
 
-\begin{lemma}[Continuo - al pi\`u numerabile = continuo]
+\begin{lemma}
 	\label{continuo-numerabile}
 	Sia $|A| = 2^{\aleph_0}$ e $B \subseteq A$ con $|B| \leq \aleph_0$, allora $|A \setminus B| = 2^{\aleph_0}$.
 \end{lemma}
 
-\begin{note}[Continuo - al pi\`u continuo (escluso) = continuo]
-	Il lemma varrebbe anche rimpiazzando $|B| \leq \aleph_0$ con $|B| < 2^{\aleph_0}$, per\`o, per ora, possiamo dimostrare solo l'asserto pi\`u debole sopra.
+\begin{note}
+Assumendo l'assioma di scelta, il lemma vale anche rimpiazzando $|B| \leq
+\aleph_0$ con $|B| < 2^{\aleph_0}$. Anzi, per qualunque~$A$ e
+qualunque~$B\subseteq A$ purch\'e $|B|
+< |A|$. Per\`o, per ora, possiamo dimostrare solo l'asserto pi\`u debole
+enunciato qua sopra.
 \end{note}
 
 \begin{proof}
-	Chiaramente $A\setminus B \subseteq A \implies |A\setminus B| \leq |A| = 2^{\aleph_0}$, basta quindi dimostrare la disuguaglianza opposta.
+	Abbiamo la disuguaglianza $|A\setminus B| \leq |A| =
+2^{\aleph_0}$, basta quindi stabilire che $2^{\aleph_0}\le |A\setminus B|$.
 	Siccome $2^{\aleph_0}\cdot 2^{\aleph_0} = 2^{\aleph_0}$, esiste una bigezione:
-	\[ f : A \rightarrow {}^{\omega}2 \times {}^{\omega}2
+	\[ f \colon A \to {}^{\omega}2 \times {}^{\omega}2
 		\]
-	sia $\pi : {}^{\omega}2 \times {}^{\omega}2 \rightarrow {}^{\omega}2 : (x,y) \mapsto x$ - \`e surgettiva ma non iniettiva. Siccome $B$ \`e al pi\`u numerabile, per un esercizio visto:
+	sia $\pi \colon {}^{\omega}2 \times {}^{\omega}2 \to {}^{\omega}2$
+la proiezione $\pi(x,y) = x$. Siccome $B$ \`e al pi\`u numerabile
 	\[ |f[B]| \leq |B| \leq \aleph_0 < 2^{\aleph_0}
 		\]
-	in particolare $|f[B]| = |B|$ perch\'e $f$ bigezione, inoltre, essendo $f[B]$ al pi\`u numerabile e $\pi$ surgettiva, $|\pi[f[B]]| \leq |f[B]|$ - come visto nell'\hyperref[disuguaglianze_senza_AC2]{esercizio}\footnote{$|f[B]| \leq \aleph_0$, $f[B] \overset{\pi}{\twoheadrightarrow} \pi[f[B]]$, quindi $|\pi[f[B]]| \leq \aleph_0$.}.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width = 4cm]{immagini/continuo-numerabile.png}
-	\end{figure}
-	Quindi, in particolare $\pi \circ f[B] \ne {}^{\omega}2$. Possiamo quindi prendere $x \in {}^{\omega}2 \setminus \pi \circ f[B]$. Dire che $x \not \in \pi \circ f[B]$ significa
-	che le coppie con prima componente $x$ nel prodotto sono disgiunte da $f[B]$, cio\`e $(\underbrace{\{x\} \times {}^{\omega}2}_{= \pi^{-1}(x)}) \cap f[B] = \emptyset$.\\
-	E nuovamente, tornando indietro ad $A$ via $f^{-1}$, troviamo $f^{-1}(\{x\} \times {}^{\omega}2) \cap B = \emptyset$, ossia $f^{-1}(\{x\} \times {}^{\omega}2) \subseteq A \setminus B$,
-	da cui $|f^{-1}(\{x\} \times {}^{\omega}2)| \leq |A \setminus B|$. Usando il fatto che $f$ \`e bigettiva:
-	\[ |f^{-1}(\{x\} \times {}^{\omega}2)| \overset{\text{$f$ bigett.}}{=} |\{x\} \times {}^{\omega}2| = 1 \cdot 2^{\aleph_0} = 2^{\aleph_0}
-		\]
-	dunque abbiamo anche la disuguaglianza dal basso e quindi $|A \setminus B| = 2^{\aleph_0}$.
+\vbox to 0pt{
+\vskip-2.5\baselineskip
+		\includegraphics[width = .3\textwidth]{immagini/continuo-numerabile.png}
+\hss}
+
+\vskip-\baselineskip
+\vskip-\parskip
+\setlength\leftskip{.33\textwidth}
+	Per cui $\pi \circ f[B] \ne {}^{\omega}2$.
+Prendiamo $x \in {}^{\omega}2 \setminus \pi \circ f[B]$.\\
+Dire che $x \not \in \pi \circ f[B]$ significa
+	che $(\{x\} \times {}^{\omega}2) \cap f[B] = \emptyset$.\\
+	$\text{Quindi } f^{-1}(\{x\} \times {}^{\omega}2) \cap B = \emptyset$,\\
+	$\mathrlap{\text{ossia}}\phantom{\text{Quindi }}f^{-1}(\{x\} \times {}^{\omega}2) \subseteq A \setminus B$,\\
+	$\mathrlap{\text{da cui}}\phantom{\text{Quindi }}\mathllap{|}f^{-1}(\{x\} \times {}^{\omega}2)| \leq |A \setminus B|$.\\
+	Usando il fatto che $f$ \`e bigettiva:\\
+	$\phantom{\text{Quindi }}\mathllap{|}f^{-1}(\{x\} \times
+{}^{\omega}2)| = |{}^{\omega}2| = 2^{\aleph_0}$.\\
+Quindi $2^{\aleph_0}\le |A\setminus B|$.
+
+\setlength\leftskip{0pt}
+\vskip-\baselineskip
 \end{proof}
 
-Siamo finitamente pronti per dimostrare che $|\RR| = 2^{\aleph_0}$.
+\begin{proof}[Dimostrazione di~\ref{crdr} {\drkred(\mathshift|\RR| =
+2^{\aleph_0}\mathshift)}]
+	Siccome $\RR \subseteq \ps(\QQ)$, la disuguaglianza $|\RR| \leq
+2^{\aleph_0}$ \`e immediata. Per dimostrare la disuguaglianza opposta
+consideriamo:
+	\[ A \;\;\Mydef\;\; \big\oldparen\;X \in \ps(\omega)\; |\; X \ne
+\emptyset \land |\omega \setminus X| \geq \aleph_0\;\big\}
+		\]
+	{\drkgrn ossia i sottoinsiemi di $\omega$ non vuoti e \vocab{coinfiniti}.
 
-\begin{proof}(\textcolor{purple}{$|\RR| = 2^{\aleph_0}$})\\
-	Siccome $\RR \subseteq \ps(\QQ)$, la disuguaglianza $|\RR| \leq 2^{\aleph_0}$ \`e immediata. Per dimostrare la disuguaglianza opposta definiamo:
-	\[ A \Mydef \{X \in \ps(\omega) | X \ne \emptyset \land |\omega \setminus X| \geq \aleph_0\}
+	Intuitivamente: $X \in A$ rappresenta lo sviluppo in notazione
+binaria di un $x \in\, ]0,1[$
+\[ x = 0.a_1a_2a_3 \ldots \qquad \iff \qquad a_i = 1 \leftrightarrow i \in
+X\]
+La condizione $X \ne \emptyset$ serve a escludere lo $0$, la 
+	condizione di coinfinitezza a escludere l'uno periodico.}
+
+	Ci basta dimostrare che $|A| = 2^{\aleph_0}$ e che esiste $f
+\colon A \rightarrow \RR$ iniettiva. La prima cosa \`e facile:
+	\[ A = \ps(\omega)\;\setminus\; \Big(\;\{\emptyset\} \;\cup\;
+\underbrace{\big\oldparen\: X \in \ps(\omega)\;\big|\; |\omega \setminus
+X|<\aleph_0\:\big\}}_{=: S}\;\Big)
 		\]
-	ossia i sottoinsiemi di $\omega$ non vuoti e \vocab{coinfiniti}.\\
-	\textcolor{MidnightBlue}{\underline{Intuitivamente}: $X \in A$ rappresenta lo sviluppo in notazione binaria di un $x \in\, ]0,1[$ - $x = 0.a_1a_2a_3 \ldots$, $a_i = 1 \leftrightarrow i \in X$ - la condizione $X \ne \emptyset$ serve a escludere lo 0, la 
-	condizione di coinfinitezza a escludere l'uno periodico.\footnote{Cio\`e codificando un sottoinsieme di $\omega$ con una stringa binaria, un insieme che da un certo punto in poi prende tutti i naturali \`e una stringa binaria con tutti 1 da un certo punto, e quindi il corrispondente numero 0.$a_1a_2\ldots$ ad un certo punto ha un 1 periodico
-	\textcolor{MidnightBlue}{- e questa cosa \`e problematica perch\'e ad esempio $0,1 =  0,011111\ldots$, e ci\`o fa perdere l'iniettivit\`a alla mappa che vogliamo costruire}.
-	Tuttavia, imponendo che il sottoinsieme sia coinfinito, abbiamo o che \`e finito (e quindi da un certo punto in poi c'\`e 0 definitivamente), oppure \`e infinito, ma nel contempo ha infiniti punti che non stanno in lui, quindi la stringa non pu\`o avere un 1 periodico.}}\\
-	Ci basta dimostrare che $|A| = 2^{\aleph_0}$ e che esiste $f : A \rightarrow \RR$ iniettiva. La prima cosa \`e facile, infatti gli insiemi coinfiniti si ottengono togliendo dalle parti quelli cofiniti (e il vuoto):
-	\[ A = \ps(\omega)\setminus (\{\emptyset\} \cup \underbrace{\{X \in \ps(\omega) : |\omega \setminus X|<\aleph_0\}}_{=: S})
+	L'insieme $S$ -- dei sottoinsiemi di $\omega$ \vocab{cofiniti} --
+\`e in corrispondenza biunivoca con $\psf(\omega)$ tramite la funzione
+\textit{complementare rispetto a $\omega$}:
+	\[ \ol \bullet \colon S \rightarrow \psf(\omega) \qquad X \mapsto \ol X = \omega \setminus X
 		\]
-	E l'insieme $S$ dei sottoinsiemi di $\omega$ cofiniti \`e in corrispondenza biunivoca con $\psf(\omega)$, semplicemente prendendo effettivamente il complementare:
-	\[ \ol \square : S \rightarrow \psf(\omega) : X \mapsto \ol X = \omega \setminus X
+	Quindi $|S| = |\psf(\omega)| = \aleph_0$, e, di conseguenza $|A| = 2^{\aleph_0}$ grazie al lemma precedente.
+
+	Resta da costruire $f \colon A \rightarrow \RR$ iniettiva.
+	Cominciamo col dare un ordine totale su $A$. Dati $X,Y \in A$ definiamo:
+	\[ X <_A Y \;\;\Mydef\;\; \exists {i \in \omega} \; \underbrace{(i
+\cap X = i \cap Y)}_{\forall {j < i} \; j \in X \leftrightarrow j \in Y} \land \underbrace{(i \in Y \setminus X)}_{i \in Y \land i \not\in X}\
 		\]
-	Quindi $|S| = |\psf(\omega)| = \aleph_0$, e, di conseguenza $|A| = |\ps(\omega)\setminus(\{\emptyset\}\cup S)| = 2^{\aleph_0}$, grazie al lemma precedente.
-	Resta da costruire $f : A \rightarrow \RR$ iniettiva.\\
-	Cominciamo col definire un ordine totale su $A$. Dati $X,Y \in A$ definiamo:
-	\[ X <_A Y \Mydef \exists i \in \omega \; \underbrace{(i \cap X = i \cap Y)}_{\forall j \,<\, i \; j \,\in\, X \leftrightarrow j \,\in\, Y} \land \underbrace{(i \in Y \setminus X)}_{i \,\in\, Y\; \land\; i \,\not\in \,X}\,\footnote{Cio\`e gli elementi pi\`u piccoli di $i$ sono nell'intersezione di $X$ e $Y$, per cui $i$ \`e il pi\`u piccolo elemento non comune e $X < Y$ significa che sta in $Y$.}
-		\]
-	in altri termini, detto $i$ il minimo elemento della differenza simmetrica $X \Delta Y \Mydef (X \setminus Y) \cup (Y \setminus X)$ - che \`e ben definito perch\'e sono sottoinsiemi di $\omega$ -, se $i \in Y$ - per cui, chiaramente, $i \not \in X$ - allora $X < Y$, se, invece $i \in X$ - per cui $i \not \in Y$ - allora $Y < X$.
-	La verifica che un ordine cos\`i definito \`e totale \`e immediata.\\
-	Sia $B \Mydef \psf(\omega) \setminus \{\emptyset\} \subseteq A$, chiaramente $|B| = \aleph_0$, dimostriamo che $B$ \`e denso in $A$ \textcolor{MidnightBlue}{- cio\`e i sottoinsiemi finiti di $\omega$ sono densi in quelli coinfiniti}.\\
-	Dati $X,Y \in A$, con $X < Y$, e, per definizione, sia $i := \min X \Delta Y$, consideriamo $j := \min \{x \in \omega | x > i \land x \not \in X\}$ - dove l'insieme \`e non vuoto in quanto $X$ \`e coinfinito. 
-	Ora, dato l'insieme finito $Z := (X \cap j) \cup \{j\}$, verifichiamo che $X < Z < Y$, in questo modo abbiamo che $B$ \`e denso in $A$.
- 	\textcolor{MidnightBlue}{Di fatto, abbiamo mantenuto l'intersezione comune tra $X$ e $Z$ fino a $j$, dopodich\'e $j \in Z \land j \not \in Z$, per cui $X < Z$. Analogamente, avendo preso $j > i$ e gli stessi elementi di $X$ fino a $j$, accade che $i = \min Z \Delta Y$, per cui $Z < Y$}.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width = 7.0cm]{immagini/cardinalit\`a_R.png}
-	\end{figure}
+	ossia, detto $i$ il minimo della differenza simmetrica $X \Delta Y
+\;\Mydef\; (X \setminus Y) \cup (Y \setminus X)$, allora per definizione o
+$i\in Y$ o $i\in X$: nel primo caso diciamo che $X<Y$, nel secondo
+che~$Y<X$.
+\`E facile verificare che questo \`e un ordine totale.
+
+Ora vorremmo immergere $A$ in $\RR$. L'idea \`e trovare un sottoinesieme
+denso e numerabile di~$A$: questo sar\`a isomorfo a~$\QQ$, e la
+completezza di~$\RR$ ci permetter\`a di estendere l'isomorfismo a una
+iniezione di~$A$ in~$\RR$. Consideriamo $B \Mydef \psf(\omega) \setminus \{\emptyset\} \subseteq A$.
+Sappiamo che $|B| = \aleph_0$. Dimostriamo che $B$ \`e denso in $A$.
+
+\vbox to 0pt{
+\vskip.5\baselineskip
+		\includegraphics[width = 0.47\textwidth]{immagini/cardinalità_R.png}
+\vss}
+
+\vskip-\baselineskip
+	Dati $X,Y \in A$, con $X < Y$, sia $i = \min X \Delta Y$ e sia
+$j>i$
+minimo tale che $j\not\in X$, che esiste perch\'e $X$ \`e coinfinito.
+	Sia $Z = (X \cap j) \cup \{j\}$, che \`e finito, quindi appartiene
+a~$B$. Per costruzione $j=\min X\Delta Z$ e $j\in Z$, quindi $X<Z$.
+Inoltre $i=\min Y\Delta Z$ e $i\in Y$, quindi $Z<Y$. Abbiamo cos\`i
+verificato la densit\`a.
+\setlength\leftskip{.5\textwidth}
+
+\setlength\leftskip{0pt}
 	Stabilito che $B$ \`e denso in $A$,  allora, in particolare, $B$ \`e denso in se stesso, dunque
- 	valgono le ipotesi del \hyperref[isoCantor]{isomorfismo di Cantor} e quindi c'\`e $g : B \rightarrow \QQ$, isomorfismo di ordini.
+ 	valgono le ipotesi del \hyperref[isoCantor]{teorema di isomorfismo
+di Cantor}, quindi c'\`e $g \colon B \rightarrow \QQ$, isomorfismo di ordini.
 	Ora, siccome $B$ \`e denso in $A$, la funzione:
-	\[ h : A \rightarrow \; \{\text{sezioni su $B$}\} : X \mapsto B_X = \{Y \in B | Y < X\}
+	\[ h \colon A \rightarrow \; \{\text{sezioni su $B$}\} \qquad X \mapsto B_X = \{Y \in B | Y < X\}
 		\]
-	\`e - banalmente ben definita - e iniettiva (perch\'e strettamente crescente). Quindi la mappa $f : A \rightarrow \RR : X \mapsto g[h(X)]$, che prende un insieme coinfinito, lo manda nella sezione di Dedekind da lui generata su $B$,
-	e infine nella corrispettiva sezione su $\QQ$, \`e una funzione - ben posta e - iniettiva da $A$ ad $\RR$, infatti \`e composizione di due mappe iniettive.
+	\`e ben definita e iniettiva. Quindi $f \colon A \rightarrow \RR$
+definita da~$f(X) = g[h(X)]$ \`e iniettiva.
 \end{proof}
-
-\subsection{\texorpdfstring{$(\star)$ Alternativa per la cardinalit\`a di $\RR$}{Alternativa per la cardinalit\`a dei reali}}
-Vediamo un modo alternativo di stimare dal basso la cardinalit\`a di $\RR$ sfruttando l'insieme di Cantor.
-L'idea \`e che ad successione binaria possiamo associare un punto dell'insieme di Cantor scegliendo semplicemente il percorso sui rami dell'albero della costruzione,
-dopodich\'e - poich\'e intersechiamo una successione decrescente di compatti - otteniamo un insieme non vuoto da cui prendere il punto di $C$ da far corrispondere alla sequenza binaria.
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale = 0.4]{immagini/cantor-R-cardinalit\`a.png}
-\end{figure}
-In tal modo avremo $2^{\aleph_0} = |2^{\omega}| \leq |C| \leq |\RR|$.
-
-\begin{proof}
-	Definiamo la seguente funzione:
-	\[ f : {}^{\omega}2 \to \RR : (a_i)_{i \in \omega} \mapsto \sum_{i = 0}^{\infty} \frac{a_i}{3^i} \;\textcolor{MidnightBlue}{= a_1 \cdot 3^{-1} + a_2 \cdot 3^{-2} + \ldots}
-		\]
-	\textcolor{MidnightBlue}{- sarebbe una scrittura in base 3 senza la cifra 2\footnote{Potremmo anche fare la stessa cosa buttando
-	via 1 anzich\'e 2, ma convenzionalmente si sceglie che \`e meglio avere 0.1 che 0.0222\ldots. Potremmo altres\`i usare una base diversa ottenendo la stessa cosa, purch\'e non sia due, in tal caso si procede come la prima dimostrazione vista.}, cio\`e una cosa del tipo $0.01011100\ldots$,
-	dove non abbiamo problemi di ambiguit\`a a causa di periodicit\`a, dati da $0,1 = 0,02222\ldots$, poich\'e abbiamo tolto il 2 e quindi usiamo solo la prima scrittura. In particolare \`e come elencare i punti del Cantor fatto in $\left[0,\frac{3}{2}\right]$.}\footnote{Infatti si poteva procedere anche usando il Cantor solito e definendo la mappa da $\{0,2\}^\omega$ a $\RR$,
-	che manda una successione in $\sum_{i = 1}^\infty \frac{a_i}{3^i} = \frac 13 \sum_{i = 0}^\infty \frac{a_i}{3^i}$, e in particolare, questa si ottiene dalla funzione precedente moltiplicata per $\frac{2}{3}$ (notare che questa cosa cambia l'insieme numerico da $\{0,1\}$ a $\{0,2\}$ e sistema l'indice per il primo termine della scrittura decimale).}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale = 0.4]{immagini/cantor_0_32.png}
-	\end{figure}
-	Dove naturalmente la sommatoria \`e definita per ricorsione numerabile come funzione da $\omega \to \RR$ nella maniera seguente:
-	\[ \sum_{i = 0}^0 \square_i = \square_0 \qquad \sum_{i = 0}^{n + 1} \square_i = \left(\sum_{i = 0}^n \square_i\right) + \square_{n + 1}
-		\]
-	e la serie \`e ben definita come:
-	\[ \sum_{i = 0}^{\infty}\square_i = \sup_{n \in \omega}\left(\sum_{i = 0}^n \square_i\right)
-		\]
-	Occorre quindi verificare che $f$ \`e ben definita ed iniettiva.
-	\begin{itemize}
-		\item[$\diamondsuit$] \underline{$f$ ben definita}: cio\`e la serie in arrivo \`e un elemento di $\RR$, ossia $\sup_{n \in \omega}\left(\sum_{i = 0}^n \frac{a_i}{3}\right)$ esiste,
-		e, come sappiamo, ci\`o \`e equivalente a chiedere che $\left\{\sum_{i = 0}^n \frac{a_i}{3}\right\}_{n \in \omega}$ ha un maggiorante. Vediamo per induzione che:
-		\[ \sum_{i = 0}^n \frac{a_i}{3^i} \leq \frac 32 - \frac{1}{2 \cdot 3^n}
-			\]
-		fatto questo il RHS si pu\`o stimare a sua volta con $\frac 32$ \textcolor{MidnightBlue}{- sarebbe la somma della serie -}, che costituisce un upper bound per ogni $n \in \omega$, quindi per tutti gli elementi dell'insieme.
-		\begin{itemize}
-			\item[$\boxed{n = 0}$] Banalmente $ \sum_{i = 0}^0 \frac{a_i}{3^i} = \frac{a_0}{3^0} = \frac{a_1}{3} \leq \frac 13 < \frac 43 = \frac 32 - \frac{1}{2 \cdot 3^1}$.
-			\item[$\boxed{n \implies n + 1}$] Supponiamo $\sum_{i = 0}^n \frac{a_i}{3^i} \leq \frac 32 - \frac{1}{2 \cdot 3^n}$ e dimostriamo $\sum_{i = 0}^{n+1} \frac{a_i}{3^i} \leq \frac 32 - \frac{1}{2 \cdot 3^{n+1}}$.
-			\begin{align*}
-				\sum_{i = 0}^{n+1} \frac{a_i}{3^i} &= \left(\sum_{i = 0}^{n} \frac{a_i}{3^i}\right) + \frac{a_{n+1}}{3^{n+1}} &&\text{(def. ricorsiva)} \\
-												   &\leq \frac 32 - \frac{1}{2 \cdot 3^n} + \frac{a_{n+1}}{3^{n+1}} &&\text{(hp. induttiva)} \\
-												   &\leq \frac 32 - \frac{1}{2 \cdot 3^n} + \frac{1}{3^{n+1}} &&(a_{n+1} \in \{0,1\}) \\
-												   &= \frac 32 - \frac{1}{3^n} \cdot \frac 16 = \frac 32 - \frac{1}{2 \cdot 3^{n+1}}
-			\end{align*}
-		\end{itemize}
-		\item[$\diamondsuit$] \underline{$f$ iniettiva}: date due successioni binarie distinte, $(a_i)_{i \in \omega}$ e $(b_i)_{i \in \omega}$, sia $i_0 \in \omega$ il minimo per cui $a_{i_0} \ne b_{i_0}$. Assumiamo WLOG di essere nel caso $a_{i_0} = 0$ e $b_{i_0} = 1$ e 
-		verifichiamo che $f(b) > f(a)$ \textcolor{MidnightBlue}{- stiamo proprio verificando la stretta crescenza}. In particolare dimostriamo che:
-		\[ f(a) < f(a) + \frac{1}{2 \cdot 3^{i_0}} \leq f(b)
-			\]
-		Per verificare la seconda disuguaglianza osserviamo che:
-		\begin{align*}
-			f(a) &= \sup_{n \in \omega} \left(\sum_{i = 0}^n \frac{a_i}{3^i}\right) \\
-				 &= \sup_{n \in \omega} \left(\sum_{i < i_0}\frac{a_i}{3^i} + \sum_{i = i_0 + 1}^n \frac{a_i}{3^i} \right) &&(a_{i_0 + 1} = 0) \\
-				 &= \sup_{n \in \omega} \left(\sum_{i < i_0}\frac{b_i}{3^i} + \sum_{i = i_0 + 1}^n \frac{a_i}{3^i} \right) &&(\forall i < i_0 \; a_{i} = b_{i}) \\
-				 &=\sup_{n \in \omega} \left(\sum_{i < i_0}\frac{b_i}{3^i} + \frac{1}{3^{i_0 + 1}}\sum_{j = 0}^{n - i_0 - 1} \frac{a_{j + i_0 + 1}}{3^j} \right) &&(j = i - i_0 - 1) \\
-				 &\leq\sup_{n \in \omega} \left(\sum_{i < i_0}\frac{b_i}{3^i} + \frac{1}{3^{i_0 + 1}} \cdot \frac 32  \right) &&(\text{dalla stima sopra}) \\
-				 &= \sum_{i < i_0}\frac{b_i}{3^i} + \frac{1}{2 \cdot 3^{i_0}}  
-		\end{align*}
-		Ora, dato che:
-		\begin{align*}
-			f(b) &\geq \sum_{i < i_0}\frac{b_i}{3^i} + \frac{1}{3^{i_0}} \implies \sum_{i < i_0}\frac{b_i}{3^i} \leq f(b) - \frac{1}{3^{i_0}} &&(b_{i_0} = 1)
-		\end{align*}
-		possiamo concludere la stima sopra:
-		\[ f(a) \leq \sum_{i < i_0}\frac{b_i}{3^i} + \frac{1}{2 \cdot 3^{i_0}} \leq f(b) - \frac{1}{3^{i_0}} + \frac{1}{2 \cdot 3^{i_0}} = f(b) - \frac{1}{2 \cdot 3^{i_0}}
-			\]
-		che \`e equivalentemente alla seconda disuguaglianza voluta.
-	\end{itemize}
-\end{proof}
-
-\subsection{\texorpdfstring{$(\star) \; (F,0,1,+,\cdot,\leq)$}{Unicit\`a (a meno di isomorfismo) di un campo ordinato completo}}
+%
+%\subsection{\texorpdfstring{$(\star)$ Alternativa per la cardinalit\`a di $\RR$}{Alternativa per la cardinalit\`a dei reali}}
+%Vediamo un modo alternativo di stimare dal basso la cardinalit\`a di $\RR$ sfruttando l'insieme di Cantor.
+%L'idea \`e che ad successione binaria possiamo associare un punto dell'insieme di Cantor scegliendo semplicemente il percorso sui rami dell'albero della costruzione,
+%dopodich\'e - poich\'e intersechiamo una successione decrescente di compatti - otteniamo un insieme non vuoto da cui prendere il punto di $C$ da far corrispondere alla sequenza binaria.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale = 0.4]{immagini/cantor-R-cardinalità.png}
+%\end{figure}
+%In tal modo avremo $2^{\aleph_0} = |2^{\omega}| \leq |C| \leq |\RR|$.
+%
+%\begin{proof}
+%	Definiamo la seguente funzione:
+%	\[ f : {}^{\omega}2 \to \RR : (a_i)_{i \in \omega} \mapsto \sum_{i = 0}^{\infty} \frac{a_i}{3^i} \;\textcolor{MidnightBlue}{= a_1 \cdot 3^{-1} + a_2 \cdot 3^{-2} + \ldots}
+%		\]
+%	\textcolor{MidnightBlue}{- sarebbe una scrittura in base 3 senza la cifra 2\footnote{Potremmo anche fare la stessa cosa buttando
+%	via 1 anzich\'e 2, ma convenzionalmente si sceglie che \`e meglio avere 0.1 che 0.0222\ldots. Potremmo altres\`i usare una base diversa ottenendo la stessa cosa, purch\'e non sia due, in tal caso si procede come la prima dimostrazione vista.}, cio\`e una cosa del tipo $0.01011100\ldots$,
+%	dove non abbiamo problemi di ambiguit\`a a causa di periodicit\`a, dati da $0,1 = 0,02222\ldots$, poich\'e abbiamo tolto il 2 e quindi usiamo solo la prima scrittura. In particolare \`e come elencare i punti del Cantor fatto in $\left[0,\frac{3}{2}\right]$.}\footnote{Infatti si poteva procedere anche usando il Cantor solito e definendo la mappa da $\{0,2\}^\omega$ a $\RR$,
+%	che manda una successione in $\sum_{i = 1}^\infty \frac{a_i}{3^i} = \frac 13 \sum_{i = 0}^\infty \frac{a_i}{3^i}$, e in particolare, questa si ottiene dalla funzione precedente moltiplicata per $\frac{2}{3}$ (notare che questa cosa cambia l'insieme numerico da $\{0,1\}$ a $\{0,2\}$ e sistema l'indice per il primo termine della scrittura decimale).}
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[scale = 0.4]{immagini/cantor_0_32.png}
+%	\end{figure}
+%	Dove naturalmente la sommatoria \`e definita per ricorsione numerabile come funzione da $\omega \to \RR$ nella maniera seguente:
+%	\[ \sum_{i = 0}^0 \square_i = \square_0 \qquad \sum_{i = 0}^{n + 1} \square_i = \left(\sum_{i = 0}^n \square_i\right) + \square_{n + 1}
+%		\]
+%	e la serie \`e ben definita come:
+%	\[ \sum_{i = 0}^{\infty}\square_i = \sup_{n \in \omega}\left(\sum_{i = 0}^n \square_i\right)
+%		\]
+%	Occorre quindi verificare che $f$ \`e ben definita ed iniettiva.
+%	\begin{itemize}
+%		\item[$\diamondsuit$] \underline{$f$ ben definita}: cio\`e la serie in arrivo \`e un elemento di $\RR$, ossia $\sup_{n \in \omega}\left(\sum_{i = 0}^n \frac{a_i}{3}\right)$ esiste,
+%		e, come sappiamo, ci\`o \`e equivalente a chiedere che $\left\{\sum_{i = 0}^n \frac{a_i}{3}\right\}_{n \in \omega}$ ha un maggiorante. Vediamo per induzione che:
+%		\[ \sum_{i = 0}^n \frac{a_i}{3^i} \leq \frac 32 - \frac{1}{2 \cdot 3^n}
+%			\]
+%		fatto questo il RHS si pu\`o stimare a sua volta con $\frac 32$ \textcolor{MidnightBlue}{- sarebbe la somma della serie -}, che costituisce un upper bound per ogni $n \in \omega$, quindi per tutti gli elementi dell'insieme.
+%		\begin{itemize}
+%			\item[$\boxed{n = 0}$] Banalmente $ \sum_{i = 0}^0 \frac{a_i}{3^i} = \frac{a_0}{3^0} = \frac{a_1}{3} \leq \frac 13 < \frac 43 = \frac 32 - \frac{1}{2 \cdot 3^1}$.
+%			\item[$\boxed{n \implies n + 1}$] Supponiamo $\sum_{i = 0}^n \frac{a_i}{3^i} \leq \frac 32 - \frac{1}{2 \cdot 3^n}$ e dimostriamo $\sum_{i = 0}^{n+1} \frac{a_i}{3^i} \leq \frac 32 - \frac{1}{2 \cdot 3^{n+1}}$.
+%			\begin{align*}
+%				\sum_{i = 0}^{n+1} \frac{a_i}{3^i} &= \left(\sum_{i = 0}^{n} \frac{a_i}{3^i}\right) + \frac{a_{n+1}}{3^{n+1}} &&\text{(def. ricorsiva)} \\
+%												   &\leq \frac 32 - \frac{1}{2 \cdot 3^n} + \frac{a_{n+1}}{3^{n+1}} &&\text{(hp. induttiva)} \\
+%												   &\leq \frac 32 - \frac{1}{2 \cdot 3^n} + \frac{1}{3^{n+1}} &&(a_{n+1} \in \{0,1\}) \\
+%												   &= \frac 32 - \frac{1}{3^n} \cdot \frac 16 = \frac 32 - \frac{1}{2 \cdot 3^{n+1}}
+%			\end{align*}
+%		\end{itemize}
+%		\item[$\diamondsuit$] \underline{$f$ iniettiva}: date due successioni binarie distinte, $(a_i)_{i \in \omega}$ e $(b_i)_{i \in \omega}$, sia $i_0 \in \omega$ il minimo per cui $a_{i_0} \ne b_{i_0}$. Assumiamo WLOG di essere nel caso $a_{i_0} = 0$ e $b_{i_0} = 1$ e 
+%		verifichiamo che $f(b) > f(a)$ \textcolor{MidnightBlue}{- stiamo proprio verificando la stretta crescenza}. In particolare dimostriamo che:
+%		\[ f(a) < f(a) + \frac{1}{2 \cdot 3^{i_0}} \leq f(b)
+%			\]
+%		Per verificare la seconda disuguaglianza osserviamo che:
+%		\begin{align*}
+%			f(a) &= \sup_{n \in \omega} \left(\sum_{i = 0}^n \frac{a_i}{3^i}\right) \\
+%				 &= \sup_{n \in \omega} \left(\sum_{i < i_0}\frac{a_i}{3^i} + \sum_{i = i_0 + 1}^n \frac{a_i}{3^i} \right) &&(a_{i_0 + 1} = 0) \\
+%				 &= \sup_{n \in \omega} \left(\sum_{i < i_0}\frac{b_i}{3^i} + \sum_{i = i_0 + 1}^n \frac{a_i}{3^i} \right) &&(\forall i < i_0 \; a_{i} = b_{i}) \\
+%				 &=\sup_{n \in \omega} \left(\sum_{i < i_0}\frac{b_i}{3^i} + \frac{1}{3^{i_0 + 1}}\sum_{j = 0}^{n - i_0 - 1} \frac{a_{j + i_0 + 1}}{3^j} \right) &&(j = i - i_0 - 1) \\
+%				 &\leq\sup_{n \in \omega} \left(\sum_{i < i_0}\frac{b_i}{3^i} + \frac{1}{3^{i_0 + 1}} \cdot \frac 32  \right) &&(\text{dalla stima sopra}) \\
+%				 &= \sum_{i < i_0}\frac{b_i}{3^i} + \frac{1}{2 \cdot 3^{i_0}}  
+%		\end{align*}
+%		Ora, dato che:
+%		\begin{align*}
+%			f(b) &\geq \sum_{i < i_0}\frac{b_i}{3^i} + \frac{1}{3^{i_0}} \implies \sum_{i < i_0}\frac{b_i}{3^i} \leq f(b) - \frac{1}{3^{i_0}} &&(b_{i_0} = 1)
+%		\end{align*}
+%		possiamo concludere la stima sopra:
+%		\[ f(a) \leq \sum_{i < i_0}\frac{b_i}{3^i} + \frac{1}{2 \cdot 3^{i_0}} \leq f(b) - \frac{1}{3^{i_0}} + \frac{1}{2 \cdot 3^{i_0}} = f(b) - \frac{1}{2 \cdot 3^{i_0}}
+%			\]
+%		che \`e equivalentemente alla seconda disuguaglianza voluta.
+%	\end{itemize}
+%\end{proof}
+%
+%\subsection{\texorpdfstring{$(\star) \; (F,0,1,+,\cdot,\leq)$}{Unicit\`a (a meno di isomorfismo) di un campo ordinato completo}}
