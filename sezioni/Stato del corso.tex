@@ -1,24 +1,27 @@
 \section*{Stato del corso}
 \addcontentsline{toc}{section}{Stato del corso}
-\`E un dato di fatto - il primo teorema di incompletezza di Gödel - che ogni teoria \vocab{calcolabile} - i cui assiomi possano, cio\`e, essere elencati 
-in maniera meccanica - \`e necessariamente incompleta. L'incompletezza non \`e quindi un difetto, o meglio, che lo sia oppure no \`e irrilevante, perch\'e 
-non pu\`o essere evitata.\\
+\`E un dato di fatto -- per il primo teorema di incompletezza di G\"odel -- che, se gli assiomi della teoria degli insiemi formano una sequenza \vocab{calcolabile} -- cio\`e possono essere elencati 
+in maniera meccanica -- la teoria risultatnte \`e necessariamente incompleta -- cio\`e non fissa il valore di verit\`a di ogni possibile affermazione insiemistica. L'incompletezza non \`e quindi un difetto, o meglio, che lo sia oppure no \`e irrilevante, perch\'e 
+non pu\`o essere evitata.
+
 Tuttavia, gli assiomi che abbiamo introdotto fino ad ora lasciano aperte lacune che sarebbe desiderabile colmare.
 
 \begin{enumerate}[1.]
-	\item Sarebbe ragionevole che questi insiemi esistessero [all'interno della teoria che stiamo costruendo]:
-	\[ \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\{\{\emptyset\}\}\}, \ldots\}
-		\]\[ \{\omega, s(\omega), s(s(\omega)), s(s(s(\omega))),\ldots\}
+	\item Sarebbe ragionevole che questi insiemi esistessero:
+	\[ \big\oldparen\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\{\{\emptyset\}\}\}, \ldots\big\}
+		\]\[ \big\oldparen\omega, s(\omega), s(s(\omega)), s(s(s(\omega))),\ldots\big\}
 			\]
-	Per\`o gli assiomi 1-7 non bastano n\'e per dimostrarne l'esistenza, n\'e - e questo sarebbe disastroso - permettono di escluderla.
-	\item Alcune questioni sulle cardinalit\`a, come per esempio la confrontabilit\`a, non possono essere decise sulla base dei solo assiomi 1-7.
+	Per\`o gli assiomi 1--7 non bastano n\'e per dimostrarne l'esistenza, n\'e -- e questo sarebbe disastroso -- permettono di escluderla.
+
+	\item Alcune questioni sulle cardinalit\`a, come per esempio la confrontabilit\`a, non possono essere decise sulla base dei soli assiomi 1--7.
 	Inoltre ci mancano risultati desiderabili per via delle applicazioni, segnatamente il lemma di Zorn.
+
 	\item Vi sono insiemi la cui esistenza vorremmo escludere. Per esempio vorremmo che l'equazione $X = \{X\}$ non avesse soluzioni, e farebbe comodo escludere 
-	l'esistenza di qualcosa del tipo $Y = \{\{\{\{\{\ldots\}\}\}\}\}$ con infinite parentesi annidate. Il guaio qui non \`e grave, ma questi oggetti contraddicono, in parte, l'intuizione che vorremmo 
-	concretizzare negli assiomi della teoria degli insiemi. Noi vorremmo \textbf{che un insieme fosse identificabile dalla sua struttura}. Mi spiego, per esempio $\emptyset$ \`e identificato dal fatto di non avere elementi,
-	$\{\emptyset\}$ \`e identificato dal fatto di avere un solo elemento che non ha elementi etc. per tutti gli insiemi che conosciamo, ma cosa dire di $Y$? $Y$ ha un elemento $Y_1$, che ha un elemento $Y_2$,
-	che ha \ldots e la stessa descrizione si potrebbe applicare anche a $Y_1$, e anche a $Y_2$ \ldots Sono tutti uguali? 
+	l'esistenza di qualcosa del tipo $Y = \Big\oldparen\big\oldparen\{\raisebox{.8pt}{\mathshift\scriptstyle\{\raisebox{.6pt}{\mathshift\scriptscriptstyle\{\cdots\}\mathshift}{}\}\mathshift}{}\}\big\}\Big\}$ con infinite parentesi annidate. Il guaio qui non \`e grave, ma questi oggetti contraddicono, in parte, l'intuizione che vorremmo 
+	concretizzare negli assiomi della teoria degli insiemi: noi vorremmo, infatti, che un insieme fosse identificabile analizzando sua struttura. Mi spiego, per esempio $\emptyset$ \`e identificato dal fatto di non avere elementi,
+	$\{\emptyset\}$ \`e identificato dal fatto di avere un solo elemento che non ha elementi \etc. Ma cosa dire di $Y$? $Y$ ha un elemento $Y_1$, che ha un elemento $Y_2$,
+	che ha \ldots\ e la stessa descrizione si potrebbe applicare anche a $Y_1$, e anche a $Y_2$ \ldots\ Sono tutti uguali? Cosa distinguerebbe due diverse soluzioni dell'equazione~$X=\{X\}$, se ci fossero?
 \end{enumerate}
 
 Queste tre lacune saranno colmate dai tre assiomi che ancora ci mancano: rispettivamente l'assioma del rimpiazzamento, l'assioma della scelta e l'assioma di buona fondazione. La teoria risultante sar\`a,
-inevitabilmente, incompleta - per esempio non decide il problema del continuo: l'esistenza di cardinalit\`a intermedie fra $\aleph_0$ e $2^{\aleph_0}$ - ma \`e la fondazione meglio accettata della matematica.
+inevitabilmente, incompleta -- per esempio non decide il problema del continuo: l'esistenza di cardinalit\`a intermedie fra $\aleph_0$ e $2^{\aleph_0}$ -- ma \`e la fondazione meglio accettata della matematica.
