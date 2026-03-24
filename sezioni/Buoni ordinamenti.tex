@@ -240,242 +240,233 @@ di~$<$ a~$X$
 	Dimostra che $(A,<)$ \`e un buon ordine. Esibisci inoltre un controesempio eliminando la condizione 2 dalle ipotesi.
 \end{exercise}
 
-%\subsection{Operazioni aritmetiche fra buoni ordini}
-%Per ora, non abbiamo visto molti esempi di buoni ordini. Le operazione definite in questa sezione forniscono una prima sorgente di esempi concreti.
-%Nel seguito del corso, vedremo buoni ordini assai pi\`u vasti di quelli ottenibili con queste operazioni.
-%
-%\begin{definition}[Somma di ordini totali]
-%	Dati $(A,<_A)$ e $(B,<_B)$ ordini totali. Definiamo la \vocab{somma di ordini totali} come:
-%	\[ (A,<_A) + (B,<_B) \Mydef (A \sqcup B, <_+)
-%		\]
-%	dove, ricordiamo che $A \sqcup B = (A \times\{0\}) \cup (B \times \{1\})$, e $<_+$ \`e definito da:
-%	\[ \begin{split}
-%		(x,y) <_+ (x',y') &\Mydef (y = 0 \land y' = 1) \\
-%						  &\lor (y = 0 \land y' = 0 \land x <_A x') \\
-%						  &\lor (y = 1 \land y' = 1 \land x <_B x')
-%	\end{split}
-%		\]
-%\end{definition}
-%
-%\textcolor{MidnightBlue}{L'idea \`e che $(A,<_A) + (B,<_B)$ si ottiene attaccando $(B,<_B)$ in coda a $(A,<_A)$}.
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width = 7.5cm]{immagini/somma_ordini_totali.png}
-%\end{figure}
-%
-%Riproponiamo, per completezza, la definizione di prodotto lessicografico.
-%
-%\begin{definition}[Prodotto di lessicografico]
-%	Siano $(A,<_A)$ e $(B,<_B)$ ordini totali. Definiamo il \vocab{prodotto del lessicografico}:
-%	\[ (A,<_A) \cdot (B,<_B) \Mydef (A \times B, <_\times)
-%		\]
-%	dove $<_\times$ \`e definito da:
-%	\[ (x,y) <_\times (x',y') \Mydef (y <_B y') \lor (y = y' \land x <_A x')
-%		\]
-%\end{definition}
-%
-%\textcolor{MidnightBlue}{L'idea di confrontare prima la seconda componente, deriva dal fatto che $(A,<_A) \cdot (B,<_B)$ sono 
-%tante copie di $(A,<_A)$ giustapposte, quanti sono gli elementi di $B$ (e quindi associate nello stesso ordine)}.
-%
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width = 10.5cm]{immagini/ordine_lessicografico.png}
-%\end{figure}
-%
-%Per definire l'esponenziale ci serve la nozione di supporto.
-%
-%\begin{definition}[Supporto di una funzione da un insieme a un buon ordine]
-%	Dato un buon ordine $(B,<)$ e $f : A \rightarrow B$, il \vocab{supporto} di $f$ \`e:
-%	\[ \supp_B(f) \Mydef \{x \in A | f(x) \ne \min_{<_B} B\}
-%		\]
-%	(ometteremo il pedice $B$ quando \`e chiaro cosa sia $B$).
-%\end{definition}
-%
-%\textcolor{MidnightBlue}{Il supporto \`e quindi il sottoinsieme dei punti sull'insieme di partenza, sui quali $f$ non assume il minimo del buon ordinamento in arrivo quest'ultimo.}
-%
-%\begin{definition}[Esponenziali di ordini totali]
-%	Dati $(A,<_A)$ e $(B,<_B)$ ordini totali, definiamo l'\vocab{esponenziale di ordini totali}:
-%	\[ (A,<_A)^{(B,<_B)} \Mydef (\{f \in {}^{B}A \, : \, |\supp_A f| < \aleph_0\},<_{\exp})
-%		\]
-%	dove l'insieme \`e quello delle funzioni a supporto finito (quindi che su un numero finito di punti non assumono il valore $\min_{<_B}B$), e l'ordine $<_{\exp}$ \`e definito da:
-%	\[ f <_{\exp} g \Mydef (f \ne g) \land (f(m) <_A g(m))
-%		 \]
-%	dove $m$ \`e il massimo valore in $B$ su cui $f$ e $g$ sono diverse, cio\`e non sono entrambe $\min A$, $m := \max_{<_B}\{x \in B | f(x) \ne g(x)\}$.
-%\end{definition}
-%
-%\textcolor{MidnightBlue}{L'idea \`e che una funzione $B \rightarrow A$ pu\`o essere vista come una specie di tupla con tante componenti quanti sono gli elementi di $B$\footnote{D'altronde abbiamo visto che $|{}^{B}A| = |A|^{|B|}$, il che ci fa notare che la definizione data di insieme di funzioni come una sorta di esponenziazione di un insieme ad un altro, \`e coerente con quella di esponenziazione come prodotto cartesiano ripetuto un numero di volte pari alla cardinalit\`a dell'esponente, da qui l'identificazione di ${}^{B}A$ con $\underbrace{A \times \ldots \times A}_{\text{$|B|$ volte}}$, che ci d\`a l'intuizione descritta (e che formalmente si traduce nell'insieme di funzioni, che sar\`a poi la vera definizione di prodotto cartesiano).}.
-%Ordinare queste tuple lessicograficamente significa (generalizzando l'idea usata per il prodotto lessicografico) che vince la componente diversa pi\`u a destra, e se definitivamente c'\`e il minimo in entrambe le tuple, per la finitezza del supporto, basta confrontare l'ultima componente dove sono diverse, ossia la componente corrispondente all'elemento di $B$ pi\`u grande su cui le funzioni sono diverse.}
-%
-%\begin{exercise}
-%	Verificare che $(\omega,<)^{(\omega,<)} \sim (\NN[x],\prec)$, dove $\NN[x]$ denota l'insieme dei polinomi a coefficienti in $\NN$, e definiamo:
-%	\[ p \prec q \Mydef \exists N \in \NN \; \forall x \in \NN \; x > N \rightarrow p(x) < q(x)
-%		\]
-%	ossia $p \prec q$ se $p(x)<q(x)$ definitivamente.
-%\end{exercise}
-%
-%\begin{soln}
-%	Possiamo scrivere esplicitamente l'isomorfismo come segue:
-%	\[ (\omega,<)^{(\omega,<)} \to (\NN[x],\prec) : f \mapsto \sum_{i = 0}^{\infty}f(i)x^i
-%		\]
-%	osserviamo in primis che la sommatoria \`e in realt\`a una somma di un numero finito di termini in quanto $f$ ha supporto finito,
-%	dunque ci\`o che otteniamo \`e un polinomio e quindi la mappa \`e ben definita. Si vede facilmente che \`e surgettiva, infatti, dato $p(x) = \sum_{i = 0}^n a_i x^i$, 
-%	\`e sufficiente considerare:
-%	\[ f : \omega \to \omega : i \mapsto \begin{cases}
-%		a_i &\text{se $0 \leq i \leq n$} \\
-%		0 &\text{altrimenti}
-%	\end{cases}
-%		\] 
-%	che \`e naturalmente una funzione a supporto finito dai naturali ai naturali. Infine, verifichiamo la stretta crescenza, date $f < g$, abbiamo $f(m) < g(m)$, 
-%	per $m$ massimo valore in $\omega$ per cui sono distinte; si danno due casi, o $f(m) = 0$ e quindi $g(m) > 0$, in questo caso a $g$ corrisponde un polinomio $q(x)$ di grado 
-%	pi\`u grande strettamente, dunque, se $f$ corrisponde a $p(x)$, si ha $q(x) = \text o(p(x))$ per $x \to +\infty$, per cui $\lim_{x \to +\infty} \frac{q(x)}{p(x)} = +\infty$, che equivale alla definizione data di $p \prec q$.
-%	Nel caso in cui $f(m) > 0$, allora $p(x)$ e $q(x)$ sono polinomi dello stesso grado, ma $q(x)$ ha coefficiente di testa maggiore strettamente di quello di $p(x)$,
-%	per cui $\lim_{x \to +\infty} \frac{q(x)}{p(x)} > 0 \implies p \prec q$.
-%\end{soln}
-%
-%\begin{proposition}[Somma, prodotto ed esponenziale di buoni ordini \`e un buon ordine]
-%	Se $(A,<_A)$ e $(B,<_B)$ sono buoni ordini, allora anche:
-%	\[ (A,<_A) + (B,<_B) \qquad (A,<_A) \cdot (B,<_B) \qquad (A,<_A)^{(B,<_B)}
-%		\]
-%	sono buoni ordini.
-%\end{proposition}
-%
-%\begin{proof}
-%	Si tratta di banali verifiche, \textcolor{red}{eccetto la terza}.\\
-%	La relazione $<_{\exp}$ \`e irriflessiva per definizione richiede $f \ne g$, dunque se sono uguali non sono in relazione. Occorre quindi verificare la transitivit\`a.
-%	Assumiamo $f <_{\exp} g$ e $g <_{\exp} h$, dove naturalmente $f,g,h \in {}^B A$, e poniamo:
-%	\begin{align*}
-%		&m_1 = \max_{<_B}\{x\in B | f(x) \ne g(x)\} \\
-%		&m_2 = \max_{<_B}\{x\in B | g(x) \ne h(x)\} \\
-%		&m_3 = \max_{<_B}\{x\in B | f(x) \ne h(x)\}
-%	\end{align*}
-%	detto $m := \max(m_1,m_2)$, abbiamo $f(m) \leq_A g(m) \leq_A h(m)$, dove la prima disuguaglianza \`e stretta se $m = m_1$, e la seconda lo \`e se $m = m_2$, in ogni caso, almeno una delle due disuguaglianze \`e sempre stretta per cui abbiamo $f(m) <_A h(m)$.
-%	Osserviamo inoltre che se $x > m$ allora necessariamente $f(x) = g(x) = h(x)$ perch\'e avremmo in questo caso che $x > m_1,m_2$, che sono i massimi su cui si hanno le disuguaglianze, per cui $m = m_3$.\\
-%	Mostriamo ora che $<_{\exp}$ \`e un ordine totale, se $f \ne g$ allora \`e ben definito $m := \max_{<_B}\{x \in B | f(x) \ne g(x)\}$, infatti le funzioni sono a supporto finito per ipotesi dunque stiamo prendendo il massimo su un insieme finito e 
-%	non vuoto essendo le funzioni diverse, si conclude per la totalit\`a di $<_A$ che vale necessariamente o $f(m)<_A g(m)$ o $g(m) <_A f(m)$, nel primo caso $f <_{\exp} g$, nel secondo $g <_{\exp} f$.\\
-%	Resta da verificare che l'ordine ottenuto esponenziando \`e buono. Chiamiamo $S$ l'insieme delle funzioni a supporto finito da $B$ ad $A$ e supponiamo per assurdo che non sia bene ordinato, cio\`e:
-%	\[ \underbrace{\exists f \in S \; \exists A \subseteq S (f \in A}_{\text{c'\`e un $A \subseteq S$ non vuoto}}\land\underbrace{\forall g \in A \; \exists h \in A \; h <_{\exp} g}_{\text{che non ha minimo}})
-%		\]
-%	Da quanto appena scritto possiamo fissare una $f \in S$ tale che $\exists A \subseteq S$ etc. con queste propriet\`a:
-%	che il massimo del suo supporto sia il minimo possibile, $m:=\max_{<_B}(\supp_A(f))$, e che, a parit\`a di $m$, il valore di $f(m)$ sia minimo.
-%	Fissata $f$ come scritto, possiamo fissare ora anche $A$ nella formula in modo tale che $f \in A$ ed $A$ sia un sottoinsieme senza minimo.
-%	Il nostro obiettivo ora \`e costruire $\widetilde{A} \subseteq S$ che non abbia minimo e contenga una funzione $\widetilde{f}$ con $\widetilde{m} := \max_{<_B}(\supp_A(f)) <_B m$, in questo modo neghiamo la minimalit\`a di $m$ ed otteniamo la contraddizione voluta.
-%	Osserviamo innanzitutto che $A$ pu\`o essere ripartito in generale come:
-%	\begin{align*}
-%		&A_1 = \{g \in A |\max_{<_B}(\supp_A(g)) <_B m\} \\
-%		&A_2 = \{g \in A |\max_{<_B}(\supp_A(g)) = m \land g(m) = f(m)\} \\
-%		&A_3 = \{g \in A |\max_{<_B}(\supp_A(g)) = m \land f(m) <_A g(m)\} \\
-%		&A_4 = \{g \in A |m <_B \max_{<_B}(\supp_A(g))\}
-%	\end{align*}
-%	e segue dalla definizione che le funzioni in $A_1$, sono $<_{\exp}$ di quelle in $A_2$, che sono $<_{\exp}$ etc. fino ad $A_4$ - \`e sufficiente pensare alle definizioni che abbiamo dato -.
-%	Per\`o $A_1$ \`e vuoto, perch\'e altrimenti, presa $f' \in A_1$, abbiamo $f' \in A$ e $\max(\supp_A(f))<m$ contro la minimalit\`a di $m$.
-%	Abbiamo invece che $A_2$ non \`e vuoto perch\'e contiene $f$, e non ha minimo, infatti, se avesse minimo, questo dovrebbe essere anche minimo di $A$ - per la minimalit\`a di $m$, avremmo preso la $f$ che fa meno su $m$ e quindi necessariamente la pi\`u piccola di tutte -, che non ha minimo per ipotesi.\\
-%	Concentriamoci ora su $A_2$. Tutte le $g \in A_2$ assumono il medesimo valore su $m$, quindi, comparando due di queste funzioni con $<_{\exp}$, il valore assunto da entrambe su $m$ 
-%	\`e irrilevante perch\'e $<_{\exp}$ confronta la massima componente in cui sono diverse, per cui la funzione:
-%	\[ H : A_2 \rightarrow S : g \mapsto \widehat{g} \quad\text{con}\quad\widehat{g}(x) = \begin{cases}
-%		\min A &\text{se $x = m$}\\
-%		g(x) &\text{altrimenti}
-%	\end{cases}
-%		\]
-%	\`e strettamente crescente, poich\'e dove le funzioni sono uguali poniamo semplicemente il loro valore uguale a $\min A$, cosa ininfluente per $<_{\exp}$, mentre dove vale la disuguaglianza continua a valere nell'immagine poich\'e 
-%	non modifichiamo nulla in tal caso. Per cui $\widetilde{A} := H[A_2]$ non ha minimo, altrimenti, essendo $H$ strettamente crescente, tornando indietro anche $A$ lo avrebbe.
-%	Ora, per\`o, segue dalla definizione di $H$, che, fissata $g \in A_2$, $\supp(\widehat{g}) = \supp(g) \setminus \{m\}$ (lo abbiamo rimosso ``a mano'' con $H$), quindi, ponendo $\widetilde{f} := \widehat{g}$, abbiamo $\max(\supp(\widehat{f}))<m$ (prima $m$ era il massimo valore del supporto e non dava $\min A$, ora 
-%	che l'abbiamo rimosso dal supporto, avendolo preso come il max del precedente supporto, ci\`o che rimane \`e necessariamente strettamente minore), e questo contraddice la minimalit\`a di $m$.\footnote{Cose che andrebbero verificate per rendere precisa questa dimostrazione: perch\'e posso fissare $A$ e $f$ tali che..., in altre parole perch\'e esistono $A$ ed $f$ tali per cui...; perch\'e 
-%	si pu\`o partizionare $A$ in quei 4 insiemi; fare le verifiche delle disuguaglianze tra gli elementi dei 4 insiemi; precisare meglio i dettagli della parte finale.}
-%\end{proof}
-%
-%\begin{proposition}[Buona definizione delle operazioni tra ``classi di isomorfismo'']
-%	Le operazioni aritmetiche sui buoni ordini \vocab{passano al quoziente modulo isomorfismi}. Ossia, dati due buoni ordinamenti $\mathcal A = (B,<_A)$
-%	e $\mathcal B = (B,<_B)$, e dati $\mathcal A' = (A',<_{A'}) \sim \mathcal A$ e $\mathcal{B}' = (B',<_{B'}) \sim \mathcal B$, si ha:
-%	\[ \mathcal{A} + \mathcal{B} \sim \mathcal{A}' + \mathcal{B'} \qquad \mathcal{A} \cdot \mathcal{B} \sim \mathcal{A}' \cdot \mathcal{B'} \qquad \mathcal{A}^{\mathcal{B}} \sim \mathcal{A}'^{\mathcal{B'}}
-%		\]
-%	quindi le operazioni fra buoni ordini sono equivalenti modulo l'essere isomorfi.\footnote{In altre parole le operazioni tra buoni ordini sono definite sulle classi di equivalenza di buoni ordini isomorfi, e la proposizione mostra che queste 
-%	operazioni sono ben definite.}
-%\end{proposition}
-%
-%\begin{proof}
-%	Fissati gli isomorfismi $f : A \rightarrow A'$ e $g : B \rightarrow B'$, \`e facile scrivere esplicitamente gli isomorfismi richiesti. Per esempio, nel caso di $\mathcal{A}^{\mathcal{B}}$, si considera la restrizione alle funzioni a supporto finito di:
-%	\[ {}^{B}A \rightarrow {}^{B'}A' : h \mapsto f \circ h \circ g^{-1}
-%		\]
-%	in altre parole, l'isomorfismo richiesto per dimostrare la tesi, che \`e quello scritto sopra, \`e quello che manda $h$ nella mappa che fa commutare il seguente diagramma:
-%	\[\begin{tikzcd}
-%		B & A \\
-%		{B'} & {A'}
-%		\arrow["h", from=1-1, to=1-2]
-%		\arrow["{g^{-1}}", from=2-1, to=1-1]
-%		\arrow[from=2-1, to=2-2]
-%		\arrow["f", from=1-2, to=2-2]
-%	\end{tikzcd}\]
-%	andrebbe verificato che anche la nuova funzione $f \circ h \circ g^{-1}$ sia a supporto finito, ma questo segue dal fatto che $f$ e $g$ sono isomorfismi di ordini,
-%	in particolare vale che $g^{-1}[\supp_{A'}(f \circ h \circ g^{-1})] = \supp_A(h)$ (va verificato il doppio contenimento e pu\`o essere fatto facilmente tenendo conto e seguendo il diagramma sopra),
-%	da cui la bigezione e quindi la finitezza di $\supp_{A'}(f \circ h \circ g^{-1})$.
-%\end{proof}
-%
-%\begin{exercise}[Buona definizione delle operazioni tra buoni ordini]
-%	Fare le altre verifiche della proposizione sopra.
-%\end{exercise}
-%
-%\begin{proposition}[Propriet\`a delle operazioni sui buoni ordini]
-%	Siano $\mathcal{A} = (A,<_A)$, $\mathcal{B} = (B,<_B)$ e $\mathcal{C} = (C,<_C)$ buoni ordini. Allora:\footnote{Valgono in realt\`a anche l'esistenza e le propriet\`a degli elementi neutri per $\cdot$ e $+$.}
-%	\[\begin{split}
-%		\text{\textcolor{red}{associativit\`a:}} &\quad (\mathcal A + \mathcal B) + \mathcal C \sim \mathcal A + (\mathcal B + \mathcal C) \quad (\mathcal A \cdot \mathcal B) \cdot \mathcal C \sim \mathcal A \cdot (\mathcal B \cdot \mathcal C)\\
-%		\text{\textcolor{red}{distributivit\`a a sinistra:}} &\quad  \mathcal A \cdot (\mathcal B + \mathcal C) \sim \mathcal A \cdot \mathcal B + \mathcal A \cdot \mathcal C \\
-%		\text{\textcolor{red}{propriet\`a delle potenze:}} &\quad {\mathcal A}^{\mathcal B + \mathcal C} \sim \mathcal A^{\mathcal B} \cdot {\mathcal A}^{\mathcal C} \qquad ({\mathcal A}^{\mathcal B})^{\mathcal{C}} \sim {\mathcal A}^{\mathcal B \cdot \mathcal C}
-%	\end{split}\]
-%\end{proposition}
-%
-%\begin{proof}
-%	Facili verifiche.
-%\end{proof}
-%
-%\begin{exercise}[Propriet\`a delle operazioni tra buoni ordini]
-%	Fare qualcuna delle verifiche delle propriet\`a sopra.
-%\end{exercise}
-%
-%\textcolor{red}{Non} tutte le propriet\`a delle operazioni aritmetiche su $\omega$ valgono per i buoni ordini.
-%
-%\begin{exercise}[Propriet\`a \textcolor{red}{false} delle operazioni tra buoni ordini]
-%	Esibire controesempi alle seguenti:
-%	\textcolor{red}{\begin{align*}
-%		& \mathcal A + \mathcal B \sim \mathcal B + \mathcal A &(\mathcal A + \mathcal B) \cdot \mathcal C \sim \mathcal A \cdot \mathcal C + \mathcal B \cdot \mathcal C \\
-%		& \mathcal A \cdot \mathcal B \sim \mathcal B \cdot \mathcal A &(\mathcal A \cdot \mathcal B)^{\mathcal C} \sim \mathcal A^{\mathcal C} \cdot \mathcal B^{\mathcal C}
-%	\end{align*}}
-%	ovvero non valgono: \textcolor{red}{commutativit\`a}, \textcolor{red}{distributivit\`a a destra} e \textcolor{red}{potenza di un prodotto}.
-%\end{exercise}
-%
-%\begin{soln}
-%	Vediamo controesempi caso per caso.
-%	\begin{itemize}
-%		\item[\textcolor{red}{$\boxed{\text{commutativit\`a $+$}}$}] Basta considerare $1+\omega$ e $\omega + 1$ (sia $1$ che $\omega$ sono buoni ordini), infatti abbiamo che:
-%		\begin{align*}
-%			1+\omega = (1 \sqcup \omega, <_+) \qquad \omega + 1 = (\omega \sqcup 1, <_+) 
-%		\end{align*}
-%		dove $1 \sqcup \omega = (1,0)\cup (\omega \times \{1\}) = \{(1,0),(0,1),(1,1),(2,1),\ldots\}$, con $<_+$ che \`e l'ordine dato dalla somma di buoni ordini, dunque $(1,0)<_+(n,1)$, $\forall n \in \omega$. Si vede facilmente
-%		quindi che $1 + \omega$ (oltre ad essere un buon ordine in quanto somma di buoni ordini) \`e superiormente illimitato e vale il principio del massimo, dunque $1+\omega \sim \omega$. Viceversa, dove $\omega \sqcup 1 = (\omega \times \{0\})\cup \{(1,1)\} = \{(1,1),(0,0),(1,0),(2,0),\ldots\}$,
-%		con $<_+$ che \`e sempre l'ordine dato dalla somma di buoni ordini, ma in questo caso si ha $(n,0) <_+ (1,1)$, $\forall n \in \omega$, dunque $\omega + 1$ \`e superiormente limitato, pertanto non pu\`o essere isomorfo ad $\omega$, dunque $1 + \omega \ne \omega + 1$.
-%		\item[\textcolor{red}{$\boxed{\text{commutativit\`a $\cdot$}}$}] \`E sufficiente considerare $2 \cdot \omega$ e $\omega \cdot 2$, infatti in questo caso i buoni ordinamenti sono:
-%		\[ (2 \times \omega,<_\times) \qquad (\omega \times 2, <_\times)
-%			\]
-%		Si osserva che $(2 \times \omega,<_\times) \sim (\omega,<)$, infatti, detto $n_i$ l'$i$-esimo numero pari e $m_i = n_i+1$ l'$i$-esimo numero dispari, la mappa $(0,i) \mapsto n_i$ e $(1,i) \mapsto m_i$ \`e l'isomorfismo cercato. D'altra parte, per le propriet\`a sopra, si ha $\omega \cdot 2 = \omega \cdot (1 + 1) = \omega + \omega$,
-%		e non si pu\`o avere isomorfismo in quanto $\omega$ \`e naturalmente isomorfo al segmento iniziale proprio $(\omega,<) \prec \omega + \omega = (\omega \sqcup \omega, <_+)$.
-%	\end{itemize}
-%\end{soln}
-%
-%Un altro tranello in cui si potrebbe cadere \`e credere che le operazioni sui buoni ordini generalizzino quelle sulle cardinalit\`a. Questo \`e vero per le cardinalit\`a finite, dove le operazioni di $\omega$ coincidono con quelle cardinali e ordinali, e anche in generale 
-%per somma e prodotto - come \`e ovvio dalla definizione - ma fallisce per l'esponenziazione quando consideriamo buoni ordinamenti infiniti.
-%
-%\begin{exercise}[Cardinalit\`a dell'esponenziazione ordinale]
-%	Dimostra che se $\mathcal A = (A,<_A)$ e $\mathcal B = (B,<_B)$ sono buoni ordini con $|A| = |B| = \aleph_0$ e $(C,<_C) = \mathcal A^{\mathcal B}$ allora $|C| = \aleph_0$.\footnote{\underline{\textbf{Hint}}: ricordare che $\psf(\omega) = \aleph_0$ e pensare a come si possa identificare ci\`o con $\omega^\omega$.}
-%\end{exercise}
-%
-%\begin{soln}
-%	A meno di bigezioni, vogliamo dimostrare che $|\omega^\omega| = \aleph_0$, per fare ci\`o osserviamo che data $f \in \omega^\omega$, essa \`e a supporto finito, quindi come insieme la si pu\`o identificare univocamente come un insieme finito - cio\`e lasciando solo le coppie corrispondenti 
-%	a elementi che non danno $\min \omega = 0$ tramite $f$ - per cui si ha che $\{f \in \omega^\omega : |\supp_\omega(f)| < \aleph_0\} \hookrightarrow \psf(\omega \times \omega) : f \mapsto f_{|\supp_\omega(f)}$ \`e ben definita, e iniettiva (per tornare indietro basta estendere il dominio a tutto $\omega$ ed associare ai nuovi elementi 0).
-%	Abbiamo quindi $|\omega^\omega| \leq \aleph_0$. Viceversa \`e ovvio che $\omega \hookrightarrow \omega^\omega : n \mapsto f_n$, ovvero la funzione tale che $f_n(n) = 1$ e $f_n(m) = 0$, per ogni $m \in \omega\setminus\{n\}$, che \`e ovviamente a supporto finito, per cui abbiamo facilmente l'iniettivit\`a e quindi la disuguaglianza dal basso.
-%\end{soln}
-%
-%\newpage
-%
+\subsection{Operazioni aritmetiche fra buoni ordini}
+Per ora, non abbiamo visto molti esempi di buoni ordini. Le operazione definite in questa sezione forniscono una prima sorgente di esempi concreti.
+Nel seguito del corso, vedremo buoni ordini assai pi\`u vasti di quelli ottenibili con queste operazioni.
+
+\begin{definition}[Somma di ordini totali]
+	Dati $(A,<_A)$ e $(B,<_B)$ ordini totali. Definiamo
+	\[ {\drkblu (A,<_A) + (B,<_B)} \;\;\Mydef\;\; (A \sqcup B, <_+)
+		\]
+	dove, ricordiamo che $A \sqcup B = (A \times\{0\}) \cup (B \times \{1\})$, e $<_+$ \`e definito da:
+	\begin{align*}
+		{\drkblu (x,y) <_+ (x',y')} \;\;\Mydef&\phantom{\lor}\; (y = 0 \land y' = 1) \\
+						  &{\lor}\; (y = 0 \land y' = 0 \land x <_A x') \\
+						  &{\lor}\; (y = 1 \land y' = 1 \land x <_B x')
+	\end{align*}
+\end{definition}
+
+{\drkgrn Idea: $(A,<_A) + (B,<_B)$ si ottiene attaccando $(B,<_B)$ in coda a $(A,<_A)$}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = .7\textwidth]{immagini/somma_ordini_totali.png}
+\end{figure}
+
+Ripetiamo, per completezza, la definizione di prodotto lessicografico.
+
+\begin{definition}[Prodotto di lessicografico]
+	Siano $(A,<_A)$ e $(B,<_B)$ ordini totali. Definiamo
+	\[ {\drkblu (A,<_A) \cdot (B,<_B)} \;\;\Mydef\;\; (A \times B, <_\times)
+		\]
+	dove $<_\times$ \`e definito da:
+	\[ {\drkblu (x,y) <_\times (x',y')} \;\;\Mydef\;\; (y <_B y') \lor (y = y' \land x <_A x')
+		\]
+\end{definition}
+
+{\drkgrn Idea: confronto prima la seconda componente; a parit\`a conta la
+prima. Quindi $(A,<_A) \cdot (B,<_B)$ pu\`o essere pensato come tante
+copie di~$(A,<_A)$ messe, fra loro, nello stesso ordine degli elementi
+di~$(B,<_B)$: in breve, $(A,<_A)$ ripetuto $(B,<_B)$~volte.}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \textwidth]{immagini/ordine_lessicografico.png}
+\end{figure}
+
+Per definire l'esponenziale ci serve la nozione di supporto.
+
+\begin{definition}
+	Dato un buon ordine $(B,<)$ e $f\colon A \to B$, il \vocab{supporto} di $f$ \`e:
+	\[ {\drkblu\supp_B(f)} \;\;\Mydef\;\; \{\:x \in A\: |\: f(x) \ne \min_B\:\}
+		\]
+	Scriveremo semplicemente $\drkblu\supp(f)$ quando \`e chiaro cosa sia $B$.
+\end{definition}
+
+\begin{definition}[Potenza di ordini totali]
+	Dati $(A,<_A)$ e $(B,<_B)$ ordini totali, definiamo
+	\[ {\drkblu (A,<_A)^{(B,<_B)}} \;\;\Mydef\;\; \Big(\;\big\oldparen
+\underbrace{f \in {}^{B}A \: \big| \: |\supp(f)\,| <
+\aleph_0}_{\text{funzioni $B\to A$ a supporto finito}}\big\}\;,\;<_{\exp}\;\Big)
+		\]
+	dove $<_{\exp}$ \`e definito da:
+	\begin{align*} {\drkblu f <_{\exp} g} \;\;\Mydef\;\; f \ne
+g\;\;\text{e}\;\;&\text{detto $m=\max\{x\in B|f(x)\neq g(x)\}$}\\
+&\text{vale $f(m) < g(m)$}
+\end{align*}
+\end{definition}
+
+{\drkgrn L'idea \`e che una funzione $B \rightarrow A$ pu\`o essere vista
+come una specie di tupla con tante componenti quanti sono gli elementi di
+$B$.
+Ordinare due tuple lessicograficamente significa confrontare
+la componente corrispondente all'elemento di $B$ pi\`u
+grande su cui le funzioni siano diverse.}
+
+\begin{exercise}
+	Verifica che $(\omega,<)^{(\omega,<)} \sim (\NN[x],\prec)$, dove $\NN[x]$ denota l'insieme dei polinomi a coefficienti in $\NN$, e definiamo:
+	\[ p \prec q \;\;\Mydef\;\; \exists {N \in \NN} \; \forall {x \in
+\NN} \; x > N \rightarrow p(x) < q(x)
+		\]
+	ossia $p \prec q$ se $p(x)<q(x)$ definitivamente.
+\end{exercise}
+
+\begin{proposition}
+	Se $(A,<_A)$ e $(B,<_B)$ sono buoni ordini, allora anche:
+	\[ (A,<_A) + (B,<_B) \qquad (A,<_A) \cdot (B,<_B) \qquad (A,<_A)^{(B,<_B)}
+		\]
+	sono buoni ordini.
+\end{proposition}
+
+\begin{proof}
+	Si tratta di facili verifiche, {\drkred eccetto la terza.}
+
+	La relazione $<_{\exp}$ \`e {\drkblu irriflessiva} per definizione.
+Verifichiamo la {\drkblu transitivit\`a.}
+	Assumiamo $f <_{\exp} g$ e $g <_{\exp} h$ con
+	\begin{align*}
+		m_{fg} &= \max \{x\in B\: |\: f(x) \ne g(x)\} \\
+		m_{gh} &= \max \{x\in B\: |\: g(x) \ne h(x)\} \\
+		m_{fh} &= \max \{x\in B\: |\: f(x) \ne h(x)\}
+	\end{align*}
+	detto $m = \max(m_{fg},m_{gh})$, abbiamo $f(m) \leq g(m) \leq
+h(m)$, dove la prima disuguaglianza \`e stretta se $m = m_1$, e la seconda
+lo \`e se $m = m_2$, in ogni caso, almeno una delle due disuguaglianze \`e
+stretta, per cui abbiamo $f(m) < h(m)$.
+	D'altro canto, se $m < x$, allora $f(x) = g(x) = h(x)$, per cui $m
+= m_{fh}$, e, di conseguenza, $<_{\exp}$ \`e transitiva.
+
+La relazione $<_{\exp}$ \`e un {\drkblu ordine totale} perch\'e, se $f \ne
+g$, allora \`e ben definito
+\[m = \max\{x \in B \:|\: f(x) \ne g(x)\}\]
+per cui o $f(m)< g(m)$ o $g(m) < f(m)$: nel primo caso $f <_{\exp} g$, nel secondo $g <_{\exp} f$.
+
+	Resta da verificare che {\drkblu l'ordine $<_{\exp}$ \`e buono.}
+Procedendo per assurdo, supponiamo che l'insieme
+$S$ delle funzioni a supporto finito da $B$ ad $A$ non sia bene ordinato
+da~$<_{\exp}$. Allora
+	\[ \underbrace{\exists {f \in S} \; \exists {A \subseteq S} (f \in
+A}_{\text{c'\`e un $A \subseteq S$ non vuoto}}\land\underbrace{\forall {g
+\in A} \; \exists {h \in A} \; h <_{\exp} g}_{\text{che non ha minimo}})
+		\]
+Ora fissiamo una particolare $f \in S$ tale che $\exists A \subseteq S
+\text{\etc.}$ con queste propriet\`a:
+	che $m=\max(\supp(f))$ sia il minimo, e che, a parit\`a di $\max(\supp(f))$, il valore di $f(m)$ sia minimo.
+	Sia $A$ tale che $f \in A$ ed $A$ \`e un sottoinsieme senza minimo.
+	Il nostro scopo \`e costruire $\widetilde{A} \subseteq S$ che non
+abbia minimo e contenga una funzione $\widetilde{f}$ con $\widetilde{m} =
+\max(\supp(f)) < m$, contro la minimalit\`a di $m$.
+
+	Osserviamo innanzitutto che $A$ pu\`o essere ripartito in:
+	\begin{align*}
+		A_1 &= \{g \in A |\max(\supp(g)) < m\} \\
+		A_2 &= \{g \in A |\max(\supp(g)) = m \land g(m) = f(m)\} \\
+		A_3 &= \{g \in A |\max(\supp(g)) = m \land f(m) < g(m)\} \\
+		A_4 &= \{g \in A |m < \max(\supp(g))\}
+	\end{align*}
+	Le funzioni in $A_1$ sono $<_{\exp}$ di quelle in $A_2$, che sono
+$<_{\exp}$ \etc. fino ad $A_4$
+	Per\`o $A_1$ \`e vuoto, perch\'e altrimenti, presa $f' \in A_1$, abbiamo $f' \in A$ e $\max(\supp(f))<m$ contro la minimalit\`a di $m$.
+	Abbiamo invece che $A_2$ non \`e vuoto perch\'e contiene $f$, e
+non ha minimo, infatti, se avesse minimo, questo dovrebbe essere anche il
+minimo di $A$.
+
+	Concentriamoci su $A_2$. Tutte le $g \in A_2$ assumono il medesimo valore su $m$, quindi, comparando due di queste funzioni con $<_{\exp}$, il valore assunto da entrambe su $m$ 
+	\`e irrilevante. Per cui la funzione:
+	\begin{align*} H \colon A_2 &\to S \\
+g &\mapsto \widehat{g} \quad\text{con}\quad\widehat{g}(x) = \smash{\begin{cases}
+		\min A &\text{se $x = m$}\\
+		g(x) &\text{altrimenti}
+	\end{cases}}
+		\end{align*}
+\vskip.5\baselineskip
+	\`e strettamente crescente.
+Per cui $\widetilde{A} = H[A_2]$ non ha minimo.
+	Ora, per\`o, fissata $g \in A_2$, abbiamo $\supp(\widehat{g}) =
+\supp(g) \setminus \{m\}$, quindi, ponendo $\widetilde{f} = \widehat{g}$,
+abbiamo $\max(\supp(\widetilde{f}))<m$, e questo contraddice la
+minimalit\`a di~$m$.
+\end{proof}
+
+\begin{proposition}\label{op-bo-bd}
+	Le operazioni aritmetiche sui buoni ordini \textit{passano al
+quoziente modulo isomorfismi}. Ossia, dati due buoni ordini $\mathcal A = (B,<_A)$
+	e $\mathcal B = (B,<_B)$, e dati $\mathcal A' = (A',<_{A'}) \sim \mathcal A$ e $\mathcal{B}' = (B',<_{B'}) \sim \mathcal B$, si ha:
+	\[ \mathcal{A} + \mathcal{B} \;\sim\; \mathcal{A}' + \mathcal{B'}
+\qquad \mathcal{A} \cdot \mathcal{B} \;\sim\; \mathcal{A}' \cdot
+\mathcal{B'} \qquad \mathcal{A}^{\mathcal{B}} \;\sim\; \mathcal{A}'^{\mathcal{B'}}
+		\]
+\end{proposition}
+
+\begin{proof}
+	Fissati gli isomorfismi $f\colon A \to A'$ e $g \colon B \to B'$, \`e facile scrivere esplicitamente gli isomorfismi richiesti. Per esempio, nel caso di $\mathcal{A}^{\mathcal{B}}$, si considera la restrizione alle funzioni a supporto finito di:
+	\begin{align*}
+{}^{B}A &\to {}^{B'}A'\\
+h &\mapsto f \circ h \circ g^{-1}
+		\end{align*}
+\end{proof}
+
+\begin{exercise}
+Svolgere qualcuna delle verifiche nella dimostrazione della proposizione~\ref{op-bo-bd}.
+\end{exercise}
+
+\begin{proposition}[Propriet\`a delle operazioni sui buoni
+ordini]\label{op-bo-pro}
+	Siano $\mathcal{A} = (A,<_A)$, $\mathcal{B} = (B,<_B)$ e $\mathcal{C} = (C,<_C)$ buoni ordini. Allora:
+\begin{alignat*}{3}
+(\mathcal A + \mathcal B) + \mathcal C \;&\sim\; \mathcal A +
+(\mathcal B + \mathcal C) \quad &&\quad &(\mathcal A \cdot \mathcal B) \cdot
+\mathcal C \;&\sim\; \mathcal A \cdot (\mathcal B \cdot \mathcal C)\\
+&&&\mathclap{\mathcal A \cdot (\mathcal B + \mathcal C) \;\sim\;
+\mathcal A \cdot \mathcal B + \mathcal A \cdot \mathcal C} \\
+{\mathcal A}^{\mathcal B + \mathcal C} \;&\sim\; \mathcal A^{\mathcal
+B} \cdot {\mathcal A}^{\mathcal C} &&& ({\mathcal A}^{\mathcal
+B})^{\mathcal{C}} \;&\sim\; {\mathcal A}^{\mathcal B \cdot \mathcal C}
+\end{alignat*}
+\end{proposition}
+
+\begin{proof}
+	Facili verifiche.
+\end{proof}
+
+\begin{exercise}
+Svolgere qualcuna delle verifiche nella dimostrazione della
+proposizione~\ref{op-bo-pro}.
+\end{exercise}
+
+\`E importante notare che non tutte le propriet\`a delle operazioni aritmetiche su $\omega$ valgono per i buoni ordini.
+
+\begin{exercise}
+	Esibisci {\drkred controesempi} alle seguenti:
+	{\drkred \begin{align*}
+		\mathcal A + \mathcal B \;&\sim\; \mathcal B + \mathcal A
+&(\mathcal A + \mathcal B) \cdot \mathcal C \;&\sim\; \mathcal A \cdot \mathcal C + \mathcal B \cdot \mathcal C \\
+		\mathcal A \cdot \mathcal B \;&\sim\; \mathcal B \cdot
+\mathcal A &(\mathcal A \cdot \mathcal B)^{\mathcal C} \;&\sim\; \mathcal A^{\mathcal C} \cdot \mathcal B^{\mathcal C}
+	\end{align*}}
+
+\vskip-3\baselineskip
+\ 
+\end{exercise}
+Un altro tranello in cui si potrebbe cadere \`e credere che le operazioni
+sui buoni ordini estendano quelle sulle cardinalit\`a. Questo \`e vero per le cardinalit\`a finite, dove le operazioni di $\omega$ coincidono con quelle cardinali e ordinali, e anche in generale 
+per somma e prodotto -- come \`e chiaro dalla definizione -- ma fallisce
+per l'elevamento a potenze infinite.
+
+\begin{exercise}
+	Dimostra che se $\mathcal A = (A,<_A)$ e $\mathcal B = (B,<_B)$ sono buoni ordini con $|A| = |B| = \aleph_0$ e $(C,<_C) = \mathcal A^{\mathcal B}$ allora $|C| = \aleph_0$.
+\end{exercise}
+
 %\subsection{Gli ordinali di Von Neumann}
 %In questa sezione definiremo gli ordinali di Von Neumann. L'idea che vogliamo concretizzare \`e che, siccome abbiamo visto che, 
 %a meno di isomorfismi, due buoni ordinamenti sono sempre l'uno nell'altro, unendo fra loro tutti i buoni ordinamenti - o tutte le classe di isomorfismo 
