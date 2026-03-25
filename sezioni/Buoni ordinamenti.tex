@@ -158,7 +158,7 @@ Ragionando simmetricamente si ottiene $f \circ g = \id_B$.
 
 Possiamo finalmente passare alla dimostrazione del teorema.
 
-\begin{theorem}
+\begin{theorem}\label{bo-trico-teo}
 	Siano $(A,<)$ e $(B,<)$ insiemi ben ordinati, allora vale una e una sola delle seguenti:
 	\[ (A,<) \prec (B,<) \qquad (A,<) \sim (B,<) \qquad (B,<) \prec (A,<)
 		\]
@@ -467,232 +467,274 @@ per l'elevamento a potenze infinite.
 	Dimostra che se $\mathcal A = (A,<_A)$ e $\mathcal B = (B,<_B)$ sono buoni ordini con $|A| = |B| = \aleph_0$ e $(C,<_C) = \mathcal A^{\mathcal B}$ allora $|C| = \aleph_0$.
 \end{exercise}
 
-%\subsection{Gli ordinali di Von Neumann}
-%In questa sezione definiremo gli ordinali di Von Neumann. L'idea che vogliamo concretizzare \`e che, siccome abbiamo visto che, 
-%a meno di isomorfismi, due buoni ordinamenti sono sempre l'uno nell'altro, unendo fra loro tutti i buoni ordinamenti - o tutte le classe di isomorfismo 
-%di questi - dovrebbe potersi costruire un buon ordinamento pi\`u grande di tutti. Questa vasta struttura sar\`a inevitabilmente una classe propria:
-%la classe dei \vocab{numeri ordinali}, i cui elementi sono rappresentanti di tutte le possibili classi di isomorfismo di buoni ordini.
-%
-%\begin{definition}[Insieme transitivo]
-%	L'insieme $\alpha$ \`e \vocab{transitivo} se $\forall x \in \alpha \; x \subseteq \alpha$, o equivalentemente, se $\forall x \in \alpha \, \forall y \in x \; y \in \alpha$ (da cui il termine transitivo).
-%\end{definition}
-%
-%\textcolor{MidnightBlue}{Ossia: diciamo che $\alpha$ \`e transitivo se gli elementi degli elementi di $\alpha$ sono, a loro volta, elementi di $\alpha$, cio\`e se gli elementi sono a loro volta sottoinsiemi dell'insieme insieme (si pensi ad esempio a $\omega$).}
-%
-%\begin{definition}[Ordinali di Von Neumann]
-%	L'insieme $\alpha$ \`e un \vocab{ordinale} se \`e \textcolor{red}{transitivo e bene ordinato dalla relazione di appartenenza}. Formalmente, l'insieme transitivo $\alpha$
-%	\`e un ordinale se $(\alpha, <_\alpha)$ \`e un buon ordine, con:
-%	\[ <_\alpha \Mydef \{(x,y) \in \alpha \times \alpha | x \in y\}\,\footnote{Esattamente come accade su $\omega$: $x < y \leftrightarrow x \in y \leftrightarrow (x,y) \in <$.}
-%		\]
-%	Denotiamo con \vocab{$\Ord$} la classe degli ordinali\footnote{Tale classe contiene un elemento per ciascun buon ordinamento, ad esempio, preso $(\omega,<)$, come rappresentante della sua classe
-%	di isomorfismo, prendiamo $\omega$ stesso - inteso come buon ordinamento transitivo e ordinato dall'appartenenza - come rappresentante della ``classe di equivalenza'' nella classe dei buoni ordini (attenzione a non confondere i due significati del termine classe).}, per cui:
-%	\[ \alpha \in \Ord \Mydef \; \text{``$\alpha$ \`e transitivo e ben ordinato da $\in$''}
-%		\]
-%\end{definition}
-%
-%\begin{example}[Esempi di ordinali]
-%	Alcuni esempi di ordinali gi\`a incontrati:
-%	\begin{itemize}
-%		\item $\omega$ \`e un ordinale
-%		\item gli elementi di $\omega$ sono ordinali
-%		\item $s(\omega) = \omega \cup \{\omega\}$ \`e un ordinale
-%	\end{itemize}
-%\end{example}
-%
-%\begin{remark}[$\Ord$ \`e una classe transitiva]
-%	\label{Ord_trans}
-%	Se $\alpha \in \Ord$ e $\beta \in \alpha$, allora $\beta \in \Ord$ e $\beta = \alpha_\beta$, ovvero $\beta$ \`e un ordinale ed \`e il segmento iniziale principale di $\alpha$, determinato da $\beta$.
-%	In particolare la classe degli ordinali $\Ord$ \`e transitiva.\footnote{Cio\`e tutti gli ordinali sono a loro volta insiemi di ordinali di pi\`u piccoli.}
-%\end{remark}
-%
-%\begin{proof}
-%	Siccome $\beta \in \alpha$, per la transitivit\`a di $\alpha$, $\beta \subseteq \alpha$, quindi $\beta$ \`e un sottoinsieme bene ordinato dalla restrizione di $<_\alpha$, ovvero sempre l'appartenenza $\in$.
-%	La transitivit\`a di $\beta$ segue dalla transitivit\`a della relazione di ordine $<_{\alpha}$. Prendiamo, infatti, $\delta \in \gamma \in \beta$, vogliamo verificare che $\delta \in \beta$, per fare ci\`o osserviamo che per la transitivit\`a di $\alpha$ si ha:
-%	\[ \gamma \in \beta \in \alpha \implies \gamma \in \alpha \qquad \delta \in \gamma \in \alpha \implies \delta \in \alpha
-%		\]
-%	ora abbiamo quindi $\delta,\gamma,\beta \in \alpha$ e sappiamo che $\delta <_\alpha \gamma \land \gamma <_\alpha \beta$, per cui, essendo $<_\alpha$ transitivo, si ottiene $\delta <_\alpha \beta \equiv \delta \in \beta$, per cui $\beta$ \`e transitivo.
-%	Resta da dire che $\beta = \alpha_\beta$:
-%	\[ x \in \alpha_\beta \overset{\text{def. s.i.}}{\iff} x \in \alpha \land x <_\alpha \beta \overset{\text{def. $<_\alpha$}}{\iff} x \in \alpha \land x \in \beta
-%		\]
-%	Ora, essendo che per transitivit\`a vale $x \in \beta \rightarrow x \in \alpha$, possiamo quindi eliminare dall'AND il primo termine e ottenere:
-%	\[ x \in \alpha \land x \in \beta \iff x \in \beta
-%		\]
-%	ovvero $x \in \alpha_\beta \leftrightarrow x \in \beta$, dunque per estensionalit\`a $\alpha_\beta = \beta$.
-%\end{proof}
-%
-%La proposizione che stiamo per vedere ci dice che due ordinali non possono essere nella stessa classe di isomorfismo di buoni ordini, cio\`e \textcolor{purple}{per ogni classe di isomorfismo di buoni ordinamenti c'\`e \textbf{al pi\`u} un ordinale}.
-%Vorremmo poi dimostrare che ogni classe di isomorfismo contiene almeno un ordinale, in modo da poter dire che in ogni classe ce n'\`e esattamente uno. Vediamo prima della proposizione una semplice osservazione.
-%
-%\begin{remark}[Gli isomorfismi tra ordini totali mantengono i s.i. principali]
-%	Se $f : A \rightarrow B$ \`e un isomorfismo fra $(A,<_A)$ e $(B,<_B)$, allora preso un qualunque $a \in A$ abbiamo $f[A_a] = B_{f(a)}$.
-%\end{remark}
-%
-%\begin{proof}
-%	Basta semplicemente osservare che:
-%	\[\begin{split}
-%		x \in B_{f(a)} &\iff x <_B f(a) \\
-%					   &\iff f^{-1}(x) <_A a \\
-%					   &\iff f^{-1}(x) \in A_a \\
-%					   &\iff x \in f[A_a]
-%	\end{split}
-%		\]
-%	e si conclude per estensionalit\`a.
-%\end{proof}
-%
-%\begin{proposition}[Gli ordinali isomorfi sono proprio uguali]
-%	Dati $\alpha,\beta \in \Ord$, se $(\alpha,<_\alpha) \sim (\beta,<_\beta)$, cio\`e \textcolor{orange}{$\alpha \sim \beta$}, allora \textcolor{orange}{$\alpha = \beta$}.\footnote{La proposizione ha come conseguenza che per ogni classe di isomorfismo di buoni ordinamenti, c'\`e \textbf{al pi\`u} un ordinale, perch\'e se ce ne fosse pi\`u di uno - posto che per ora non sappiamo nemmeno se ce ne sia uno - sarebbero esattamente uguali.}
-%\end{proposition}
-%
-%\begin{proof}
-%	Sia $f : \alpha \rightarrow \beta$ un isomorfismo, ci basta dimostrare che $\forall \gamma \in \alpha \; f(\gamma) = \gamma$, cio\`e che $f = \id_\alpha$. Sia, per assurdo,
-%	$\gamma$ il minimo elemento di $\alpha$ tale che $f(\gamma) \ne \gamma$, allora:
-%	\[ \gamma \overset{\text{\hyperref[Ord_trans]{Oss.}}}{=} \alpha_\gamma \overset{(\star)}{=} f[\alpha_\gamma] \overset{\text{Oss. sopra}}{=} \beta_{f(\gamma)} \overset{\text{\hyperref[Ord_trans]{Oss.}}}{=} f(\gamma)\;\textcolor{red}{\lightning}
-%		\]
-%	dove $(\star)$ \`e vero in quanto, abbiamo preso $\gamma$ come il pi\`u piccolo ordinale per cui $f$ non \`e l'identit\`a, e $\alpha_\gamma$ \`e fatto da cose strettamente pi\`u piccole di $\gamma$, dunque $f[\alpha_\gamma] = \alpha_\gamma$.
-%\end{proof}
-%
-%Possiamo ora chiederci come si rifletta l'ordinamento totale delle classi di isomorfismo di buoni ordini, dato dalla relazione 
-%``essere segmento iniziale di'', sugli ordinali. La risposta \`e che diventa la relazione di appartenenza.
-%
-%\begin{theorem}[Gli ordinali sono totalmente ordinati dalla ``relazione'' di appartenenza]
-%	Dati $\alpha,\beta \in\Ord$, vale \textcolor{red}{una e una sola} delle seguenti:\footnote{Essendo gli ordinali una classe propria, come stiamo per vedere, questo teorema ci dice che tale classe \`e totalmente ordinata.}
-%	\begin{alignat*}{3}
-%		\textcolor{purple}{\alpha < \beta =} &\; \alpha \in \beta \;\text{che vale \textcolor{orange}{se e solo se} $(\alpha,<_\alpha) \prec (\beta,<_\beta)$} \\
-%										     &\; \alpha = \beta \;\text{che vale \textcolor{orange}{se e solo se} $(\alpha,<_\alpha) \sim (\beta,<_\beta)$} \\
-%		\textcolor{purple}{\alpha < \beta =} &\; \beta \in \alpha \;\text{che vale \textcolor{orange}{se e solo se} $(\beta,<_\beta) \prec (\alpha,<_\alpha)$}
-%	\end{alignat*}
-%\end{theorem}
-%
-%\textcolor{MidnightBlue}{\underline{Notazione}: nella dimostrazione porremo per comodit\`a $\alpha \prec \beta \Mydef (\alpha,<_\alpha) \prec (\beta,<_\beta)$, e analogamente $\alpha \sim \beta$ e $\beta \prec \alpha$.}
-%
-%\begin{proof}
-%	La tricotomia vale gi\`a sull'ordinamento $\preceq$ per il teorema visto sui buoni ordinamenti, per cui verificando i se e solo se la si ottiene anche su $<$, in tal modo otteniamo che tutti gli ordinali sono totalmente ordinati da $<$. Inoltre,
-%	nella proposizione precedente abbiamo gi\`a verificato che se due ordinali sono isomorfi allora sono proprio uguali - ed il viceversa \`e triviale -, per cui ora vediamo solo la prima equivalenza essendo la terza perfettamente simmetrica.
-%	\begin{itemize}
-%		\item[$\boxed{\Longleftarrow}$] Se $\alpha \prec \beta$, allora per definizione $\alpha$ \`e isomorfo ad un segmento iniziale proprio - cio\`e principale -  di $\beta$, $\alpha \sim \beta_\gamma$, per qualche $\gamma \in \beta$, e, per l'\hyperref[Ord_trans]{osservazione} fatta prima, $\beta_\gamma = \gamma$.
-%		Per cui $\alpha \sim \gamma$ e dalla proposizione precedente otteniamo proprio che $\alpha = \gamma$, quindi si conclude che $\alpha \in \beta$.
-%		\item[$\boxed{\Longrightarrow}$] Se $\alpha \in \beta$, allora, per l'\hyperref[Ord_trans]{osservazione} solita, sappiamo che $\alpha = \beta_\alpha$, e quindi banalmente, cio\`e via $\id_\alpha$, si ha $\alpha \prec \beta$.
-%	\end{itemize}
-%\end{proof}
-%
-%\begin{notation}[Ordine della classe degli ordinali]
-%	Dati $\alpha,\beta \in \Ord$, avendo dimostrato che l'appartenenza \`e una ``relazione di ordine totale'' per gli ordinali, quando si parla di ordinali useremo la notazione:
-%	\[ \alpha < \beta \Mydef \alpha \in \beta
-%		\]
-%	Infatti il teorema precedente ci dice che la relazione $<$ gode delle propriet\`a di un ordine totale stretto sulla classe degli ordinali.
-%\end{notation}
-%
-%\begin{exercise}[Gli ordinali finiti sono tutti e soli quelli di $\omega$]
-%	Dimostra che $\alpha$ \`e un ordinale finito se e solo se $\alpha \in \omega$.
-%\end{exercise}
-%
-%\begin{soln}
-%	Sappiamo gi\`a che dato $n \in \omega$, $(n,<_{|n})$ \`e un buon ordinamento transitivo con l'ordine dato dall'appartenenza, e per definizione \`e finito, pertanto \`e banale osservare che tutti gli elementi di $\omega$ sono ordinali finiti.\\
-%	Viceversa, dato $\alpha$ ordinale finito, poich\'e \`e finito \`e in bigezione con un certo naturale $n \in \omega$, che, come ricordato sopra, \`e un ordinale a sua volta con l'ordinamento indotto, otteniamo che $n \sim \alpha$. Infatti essendo $n$ ed $\alpha$
-%	buoni ordinamenti esiste un unico isomorfismo tra loro - ed \`e dato da $f(i) = \min(\alpha \setminus f[i])$ per $i = 0,\ldots,n-1$, che \`e surgettivo poich\'e gli insiemi sono equipotenti e finiti\footnote{Per la precisione stiamo usando il fatto che se $|A| = |B| = n \in \omega$, allora 
-%	$f : A \to B$ (o viceversa) \`e iniettiva se e solo se \`e surgettiva.} -, quindi per la proposizione vista, essendo $\alpha$ ed $n$ ordinali,
-%	$\alpha \sim n \implies \alpha = n \implies \alpha \in \omega$.
-%\end{soln}
-%
-%\begin{proposition}[Ordine largo sulla classe degli ordinali]
-%	Siano $\alpha,\beta \in \Ord$, allora:
-%	\[ \alpha \leq \beta \leftrightarrow \alpha \subseteq \beta
-%		\]
-%	con $\alpha \leq \beta \Mydef \alpha < \beta \lor \alpha = \beta$.
-%\end{proposition}
-%
-%\begin{proof}
-%	Vediamo le due implicazioni:
-%	\begin{itemize}
-%		\item[$\boxed{\longrightarrow}$] Si danno due casi, se $\alpha = \beta$, allora naturalmente ci\`o vale anche come insiemi per estensionalit\`a. Se $\alpha < \beta$, per definizione $\alpha \in \beta$,
-%		e poich\'e $\beta$ \`e transitivo $\alpha \subseteq \beta$.
-%		\item[$\boxed{\longleftarrow}$] Dato $\alpha \subseteq \beta$, supponiamo per assurdo che $\beta < \alpha$, allora $\beta \in \alpha \subseteq \beta$, per cui $\beta \in \beta \;\textcolor{red}{\lightning}$,
-%		infatti $\beta \in \beta \equiv \beta < \beta$, ed avendo dimostrato che $<$ corrisponde a $\prec$, che \`e un ordine totale, allora naturalmente lo \`e anche $<$, e quindi in particolare \`e una relazione d'ordine irriflessiva.\footnote{Segnalo l'osservazione ironica di Mamino nelle dispense originali che fa riferimento a buona fondazione.}
-%	\end{itemize}
-%\end{proof}
-%
-%Ricordiamo che $s(\alpha) \Mydef \alpha \cup \{\alpha\}$. La proposizione seguente ci dice che $s(\alpha)$ \`e, a buon diritto, il successore di $\alpha$, anche quando $\alpha$
-%\`e un ordinale.
-%
-%\begin{proposition}[Il successore \`e un ordinale]
-%	Dato $\alpha \in \Ord$, $s(\alpha)$ \`e il minimo ordinale $> \alpha$.
-%\end{proposition}
-%
-%\begin{proof}
-%	Occorre inizialmente verificare che $s(\alpha)$ \`e un ordinale.
-%	\begin{itemize}
-%		\item[$\boxed{\text{transitivit\`a}}$] Se $\beta \in s(\alpha)$, allora per definizione di successore o $\beta \in \alpha$ o $\beta = \alpha$. Abbiamo naturalmente che $\alpha \subseteq s(\alpha)$,
-%		dunque nel primo caso la transitivit\`a segue da quella di $\alpha$, infatti $\gamma \in \beta = \alpha \implies \gamma \in \alpha \subseteq s(\alpha)$, ovvero $\gamma \in s(\alpha)$.
-%		Nel secondo caso \`e proprio banale perch\'e per costruzione appunto $\alpha \subseteq s(\alpha)$.
-%		\item[$\boxed{\text{buon ordine}}$] Siccome $s(\alpha)$ \`e un insieme di ordinali, $\in$ \`e un ordine totale su $s(\alpha)$, per quanto gi\`a visto. Dato $X \subseteq s(\alpha) = \alpha \cup \{\alpha\}$, con $X \ne \emptyset$,
-%		abbiamo due casi, o $X = \alpha$ o $X \cap \alpha \ne \emptyset$. Nel primo caso naturalmente sappiamo che $\alpha$ \`e bene ordinato e si conclude, nel secondo caso $\min(X) = \min(X \cap \alpha)$,
-%		infatti il minimo al RHS \`e ben definito perch\'e $\alpha$ \`e ben ordinato ed \`e minimo anche per $X \setminus (X \cap \alpha) = \{\alpha\}$, in quanto appartiene ad $\alpha$.
-%	\end{itemize}
-%	Supponiamo ora per assurdo che $s(\alpha)$ non sia il minimo ordinale $> \alpha$, allora esiste $\gamma$ tale che $\alpha < \gamma < s(\alpha)$, dalla prima disuguaglianza segue, per transitivit\`a, che $\alpha \subseteq \gamma$,
-%	inoltre $\alpha \in \gamma \implies {\alpha} \subseteq \alpha$, per cui $s(\alpha) \subseteq \gamma \leftrightarrow s(\alpha) \leq \gamma \; \textcolor{red}{\lightning}$.
-%\end{proof}
-%
-%\begin{corollary}[Successore del primo termine in una disuguaglianza tra ordinali]
-%	$\forall \alpha,\beta \in\Ord \; \beta \leq \alpha \leftrightarrow \beta < s(\alpha)$.
-%\end{corollary}
-%
-%\begin{proof}
-%	Sono due facili verifiche.
-%	\begin{itemize}
-%		\item[$\boxed{\longleftarrow}$] Da $\beta < s(\alpha)$, deduciamo per la definizione dell'ordinamento sugli ordinali che $\beta \in s(\alpha) = \alpha \cup \{\alpha\}$,
-%		che equivale a $\beta \in \alpha$ o $\beta = \alpha$, e, di nuovo per la definizione di ordinamento sugli ordinali, la prima cosa equivale a $\beta < \alpha$, pertanto abbiamo proprio che $\beta \leq \alpha$.
-%		\item[$\boxed{\longrightarrow}$] Per quanto visto $\beta \leq \alpha \leftrightarrow \beta < \alpha \lor \beta = \alpha$, nel primo caso, per transitivit\`a, essendo $\beta < \alpha < s(\alpha)$, si ha $\beta < s(\alpha)$, nel secondo $\beta = \alpha < s(\alpha)$,
-%		e la seconda disuguaglianza \`e vera per la proposizione precedente.
-%	\end{itemize}
-%\end{proof}
-%
-%\begin{proposition}[Propriet\`a degli insiemi di ordinali]
-%	Dato un insieme di ordinali $X$:
-%	\begin{enumerate}[1.]
-%		\item Se $X \ne \emptyset$, allora esiste il minimo di $X$, detto \vocab{$\min X$}, inoltre $\min X = \bigcap X$.\footnote{Da cui si deduce anche che la classe $\Ord$ \`e bene ordinata usando la stessa idea di questa dimostrazione.}
-%		\item Esiste il minimo dei maggioranti di $X$ \textcolor{MidnightBlue}{- gli $\alpha \in \Ord$ tali che $\forall \beta \in X \; \beta \leq \alpha$ -}, detto \vocab{$\sup X$}, inoltre $\sup X = \bigcup X$.
-%		\item C'\`e almeno un ordinale che non appartiene a $X$.
-%	\end{enumerate}
-%\end{proposition}
-%
-%\begin{proof}
-%	Vediamo singolarmente i vari punti.
-%	\begin{enumerate}[1.]
-%		\item \textcolor{purple}{Dimostriamo che il minimo esiste.} Essendo $X \ne \emptyset$ possiamo fissare $\alpha \in X$. Consideriamo $\mu := \min_{<_{s(\alpha)}}(X \cap s(\alpha))$.
-%		Questo esiste perch\'e $X \cap s(\alpha) \ne \emptyset$ in quanto $\alpha$ vi appartiene, ed \`e ben definito perch\'e $s(\alpha)$ \`e un ordinale. Osserviamo ora che \`e minimo anche per $X\setminus s(\alpha)$ \textcolor{MidnightBlue}{- di fatto abbiamo tolto da $X$ tutti gli ordinali $\leq \alpha$-},
-%		preso $\beta \in X \setminus s(\alpha)$ si ha necessariamente che $\beta \geq s(\alpha)$ (altrimenti $\beta < \alpha \equiv \beta \in s(\alpha)$), e poich\'e $\mu \in s(\alpha)$, si ha $\mu < s(\alpha) \leq \beta$.\\
-%		\textcolor{purple}{Ora verifichiamo che il minimo $\mu$ sia uguale a $\bigcap X$.} Per definizione di minimo $\forall \gamma \in X \; \mu \leq \gamma \leftrightarrow \mu \subseteq \gamma$, pertanto $\mu \leq \bigcap X$.
-%		D'altro canto $\mu \in X$, quindi $\bigcap X \subseteq \mu \leftrightarrow \bigcap X \leq \mu$.
-%		\item Dimostriamo in primis che $\bigcup X$ \`e un ordinale.
-%		\begin{itemize}
-%			\item[$\boxed{\text{transitivit\`a}}$] Dato $\alpha \in \bigcup X$, per definizione, esiste $\beta \in X$ tale che $\alpha \in \beta$. Per transitivit\`a di $\beta$ si ha $\gamma \in \alpha \in \beta \to \gamma \in \beta$, da cui $\gamma \in \bigcup X$, che quindi \`e transitivo.
-%			\item[$\boxed{\text{buon ordine}}$] Ogni $\alpha \in \bigcup X$ appartiene a qualche ordinale $\beta \in X$, pertanto, per la solita \hyperref[Ord_trans]{osservazione sulla transitivit\`a di Ord}, $\alpha$ \`e un ordinale, quindi $\bigcup X$ \`e un insieme di ordinali - in particolare $\bigcup X \subseteq \Ord$ ed \`e un insieme per l'assioma dell'unione - ed
-%			\`e bene ordinato per il punto 1. della proposizione.\footnote{Questa cosa poteva anche essere dimostrata alternativamente, senza usare il punto 1. facendo invece leva sull'esercizio visto in precedenza dell'unione di buoni ordinamenti che sono uno segmento iniziale dell'altro.}
-%		\end{itemize}
-%		Per ogni $\alpha \in X$ si ha, per definizione di unione, $\alpha \subseteq \bigcup X$, che equivale, per quanto visto, a dire $\alpha \leq \bigcup X$, pertanto $\bigcup X$ \`e un maggiorante di $X$. Osserviamo ora che \`e il pi\`u piccolo maggiorante, infatti, dato $\sigma$ maggiorante di $X$,
-%		per definizione, $\forall \alpha \in X \; \alpha \leq \sigma \leftrightarrow \alpha \subseteq \sigma$, cio\`e contiene tutti gli $\alpha \in X$, e quindi in particolare contiene la loro unione, $\bigcup X \subseteq \sigma \leftrightarrow \bigcup X \leq \sigma$.
-%		\item Basta considerare $s(\sup X)$, per il 2. sappiamo che l'estremo superiore di $X$ esiste, e dalle propriet\`a viste sugli ordinali, sappiamo che il successore di un ordinale \`e il minimo ordinale pi\`u grande, dunque, in questo caso, $s(\sup X)$ \`e un maggiorante stretto per $X$, pertanto non sta nell'insieme.
-%	\end{enumerate}
-%\end{proof}
-%
-%\begin{corollary}[Gli insiemi di ordinali transitivi sono ordinali]
-%	Un insieme di ordinali \`e un ordinale se e solo se \`e transitivo.
-%\end{corollary}
-%
-%\begin{proof}
-%	Per il 2. della proposizione precedente sappiamo che ogni insieme di ordinali \`e ben ordinato - dall'appartenenza naturalmente -, dunque la definizione di ordinale in questo caso si riduce al richiedere la transitivit\`a dell'insieme.
-%\end{proof}
-%
-%\begin{corollary}[Paradosso di Burali-Forti]
-%	$\Ord$ \`e una classe propria.
-%\end{corollary}
-%
-%\textcolor{MidnightBlue}{Ossia non esiste l'insieme di tutti gli ordinali.}
-%
-%\begin{proof}
-%	Per il punto 3. della proposizione sulle propriet\`a degli insiemi di ordinali, se $\Ord$ fosse un insieme, esisterebbe un ordinale che non vi appartiene, che \`e assurdo.
-%\end{proof}
-%
+\vfill\pagebreak
+
+\subsection{Gli ordinali di Von Neumann}
+In questa sezione definiremo gli ordinali di Von Neumann. L'idea che vogliamo concretizzare \`e che, siccome abbiamo visto che, 
+a meno di isomorfismi, due buoni ordini sono sempre l'uno nell'altro;
+unendo fra loro tutti i buoni ordini -- o tutte le classe di isomorfismo 
+di buoni ordini -- dovrebbe potersi costruire un buon ordine pi\`u grande di tutti. Questa vasta struttura sar\`a inevitabilmente una classe propria:
+la classe dei \vocab{numeri ordinali,} i cui elementi sono rappresentanti di tutte le possibili classi di isomorfismo di buoni ordini.
+
+\begin{definition}
+	L'insieme $\alpha$ \`e \vocab{transitivo} se $\forall {x \in
+\alpha} \; x \subseteq \alpha$, o, equivalentemente, se $\forall {x \in
+\alpha} \, \forall {y \in x} \; y \in \alpha$.
+
+{\drkgrn Ossia: diciamo che $\alpha$ \`e transitivo se gli elementi degli
+elementi di $\alpha$ sono, a loro volta, elementi di $\alpha$.}
+\end{definition}
+
+\begin{definition}[Ordinali di Von Neumann]
+	L'insieme $\alpha$ \`e un \vocab{ordinale} se \`e {\drkred
+transitivo e bene ordinato dalla relazione di appartenenza.}
+
+Formalmente, l'insieme transitivo $\alpha$
+	\`e un ordinale se $(\alpha, <_\alpha)$ \`e un buon ordine, con
+	\[ {\drkblu <_\alpha} \;\;\Mydef\;\; \{(x,y) \in \alpha \times \alpha \:|\: x \in y\}
+		\]
+
+	Denotiamo con \vocab{$\Ord$} la classe degli ordinali, per cui:
+	\[ {\drkblu \alpha \in \Ord} \;\;\Mydef\;\; \text{``$\alpha$ \`e transitivo
+e bene ordinato da $\in$''}
+		\]
+\end{definition}
+
+\begin{example}
+\ 
+
+\vskip-\parskip
+\vskip-2\baselineskip
+\ 
+	\begin{itemize}
+		\item $\omega$ \`e un ordinale
+		\item gli elementi di $\omega$ sono ordinali
+		\item $s(\omega) = \omega \cup \{\omega\}$ \`e un ordinale
+	\end{itemize}
+\end{example}
+
+\begin{remark}
+	\label{Ord_trans}
+	Se $\alpha \in \Ord$ e $\beta \in \alpha$, allora $\beta \in \Ord$
+e $\beta = \alpha_\beta$.\\
+	{\drkgrn Nota: in particolare, la classe degli ordinali \`e
+transitiva.}
+\end{remark}
+
+\begin{proof}
+	Siccome $\beta \in \alpha$, per la transitivit\`a di $\alpha$,
+$\beta \subseteq \alpha$, quindi $\beta$ \`e un sottoinsieme bene ordinato
+dalla restrizione di $<_\alpha$, ovvero da~$\in$.
+	La transitivit\`a di $\beta$ segue dalla transitivit\`a della relazione di ordine $<_{\alpha}$. Prendiamo, infatti, $\delta \in \gamma \in \beta$, vogliamo verificare che $\delta \in \beta$, per fare ci\`o osserviamo che per la transitivit\`a di $\alpha$ si ha:
+	\[ \gamma \in \beta \in \alpha \implies \gamma \in \alpha \qquad \delta \in \gamma \in \alpha \implies \delta \in \alpha
+		\]
+	ora abbiamo quindi $\delta,\gamma,\beta \in \alpha$ e sappiamo che $\delta <_\alpha \gamma \land \gamma <_\alpha \beta$, per cui, essendo $<_\alpha$ transitivo, si ottiene $\delta <_\alpha \beta \equiv \delta \in \beta$, per cui $\beta$ \`e transitivo.
+	Resta da dire che $\beta = \alpha_\beta$:
+	\[ x \in \alpha_\beta \;\;\iff\;\; x \in \alpha \land x <_\alpha
+\beta \;\;\iff\;\; x \in \alpha \land x \in \beta
+		\]
+	Per la transitivit\`a di~$\alpha$ vale $x \in \beta \rightarrow x
+\in \alpha$, quindi
+	$x \in \alpha \land x \in \beta \iff x \in \beta$ da cui
+l'asserto.
+\end{proof}
+
+Dimostriamo ora che due ordinali non possono essere nella stessa classe di
+isomorfismo.
+Vorremmo poi dire che ogni classe di isomorfismo contiene almeno un
+ordinale.
+Ci servir\`a la seguente osservazione.
+
+\begin{remark}
+	Se $f\colon A \to B$ \`e un isomorfismo fra $(A,<_A)$ e $(B,<_B)$, allora preso un qualunque $a \in A$ abbiamo $f[A_a] = B_{f(a)}$.
+\end{remark}
+
+\begin{proof}
+	Basta semplicemente osservare che:
+	\[\begin{split}
+		x \in B_{f(a)} &\iff x <_B f(a) \\
+					   &\iff f^{-1}(x) <_A a \\
+					   &\iff f^{-1}(x) \in A_a \\
+					   &\iff x \in f[A_a]
+	\end{split}
+		\]
+	e si conclude per estensionalit\`a.
+\end{proof}
+
+\begin{proposition}\label{ord-iso-equ}
+	Dati $\alpha,\beta \in \Ord$, se $(\alpha,<_\alpha) \sim (\beta,<_\beta)$, allora $\alpha = \beta$.
+\end{proposition}
+
+\begin{proof}
+	Sia $f \colon \alpha \to \beta$ un isomorfismo, ci basta
+dimostrare che $\forall {\gamma \in \alpha} \; f(\gamma) = \gamma$, cio\`e che $f = \id_\alpha$. Sia, per assurdo,
+	$\gamma$ il minimo elemento di $\alpha$ tale che $f(\gamma) \ne \gamma$, allora:
+	\[ \gamma = \alpha_\gamma = f[\alpha_\gamma] = \beta_{f(\gamma)} =
+f(\gamma)\;\;{\drkred\lightning}
+		\]
+\end{proof}
+
+Possiamo ora chiederci come si rifletta l'ordinamento totale delle classi di isomorfismo di buoni ordini, dato dalla relazione 
+``essere segmento iniziale di'', sugli ordinali. La risposta \`e che diventa la relazione di appartenenza.
+
+\begin{theorem}
+	Dati $\alpha,\beta \in\Ord$, vale {\drkred una e una sola} delle seguenti:
+	\begin{align*}
+		\alpha \in \beta \;\text{che vale se e solo se}\; & (\alpha,<_\alpha) \prec (\beta,<_\beta) \\
+		\alpha = \beta \;\phantom{\text{che vale se e solo
+se}}\mathllap{\text{---\!---\!--- '' ---\!---\!---}\quad}\; & (\alpha,<_\alpha) \sim (\beta,<_\beta) \\
+		\beta \in \alpha \;\phantom{\text{che vale se e solo se}}\mathllap{\text{---\!---\!--- '' ---\!---\!---}\quad}\; & (\beta,<_\beta) \prec (\alpha,<_\alpha)
+	\end{align*}
+\end{theorem}
+
+{\drkgrn \underline{Notazione}: nella dimostrazione porremo per comodit\`a
+$\alpha \prec \beta \Mydef (\alpha,<_\alpha) \prec (\beta,<_\beta)$, e
+analogamente per $\alpha \sim \beta$ e $\beta \prec \alpha$.}
+
+\begin{proof}
+Per il teorema~\ref{bo-trico-teo}, i tre casi $\alpha\prec\beta$,
+$\alpha\sim\beta$ e~$\beta\prec\alpha$ sono alternativi. Resta da
+verificare che corrispondono rispettivamente a $\alpha\in\beta$,
+$\alpha=\beta$ e~$\beta\in\alpha$.
+
+{\drkblu Se $\alpha \prec \beta$.} Per definizione, $\alpha \sim \beta_\gamma$, per qualche $\gamma \in \beta$, e, per l'\hyperref[Ord_trans]{osservazione}, $\beta_\gamma = \gamma$.
+		Per cui $\alpha \sim \gamma$, quindi $\alpha = \gamma$, e,
+in particolare, $\alpha \in \beta$. D'altro canto, assumendo
+$\alpha\in\beta$, abbiamo $\alpha=\beta_\alpha$, da cui~$\alpha \prec
+\beta$.
+
+{\drkblu Se $\alpha \sim \beta$.} Per la proposizione~\ref{ord-iso-equ},
+$\alpha = \beta$. Il viceversa \`e immediato.
+
+{\drkblu Il caso $\beta\prec\alpha$} \`e come~$\alpha\prec\beta$.
+\end{proof}
+
+\begin{notation}
+	Dati $\alpha,\beta \in \Ord$ scriviamo
+	\[ {\drkblu \alpha < \beta} \;\;\Mydef\;\; \alpha \in \beta
+		\]
+	{\drkgrn Il teorema precedente ci dice che la relazione $<$ gode
+delle propriet\`a di un ordine totale stretto sulla classe degli
+ordinali.}
+\end{notation}
+
+\begin{exercise}
+	Dimostra che $\alpha$ \`e un ordinale finito se e solo se $\alpha \in \omega$.
+\end{exercise}
+
+\begin{proposition}\label{or-le-su}
+	Siano $\alpha,\beta \in \Ord$, allora:
+	\[ {\drkgrn\qquad\overbrace{\color{black}\alpha \leq \beta}^{\smash{\mathclap{\text{\drkgrn Per def.\
+$\alpha<\beta \lor \alpha=\beta$}}}}} \;\;\leftrightarrow\;\; \alpha \subseteq \beta
+		\]
+\end{proposition}
+
+\begin{proof}
+	{\drkblu $\Longrightarrow$} Si danno due casi, se $\alpha =
+\beta$, allora $\alpha\subseteq\beta$. Se $\alpha < \beta$, per definizione $\alpha \in \beta$,
+		e, poich\'e $\beta$ \`e transitivo, $\alpha \subseteq \beta$.
+
+{\drkblu $\Longleftarrow$} Dato $\alpha \subseteq \beta$, supponiamo per
+assurdo che valga $\beta < \alpha$, allora $\beta \in \alpha \subseteq
+\beta$, per cui $\beta \in \beta \;{\drkred\lightning}$
+(\underline{Esercizio:} perch\'e $\beta\in\beta$ \`e contraddittorio?)
+\end{proof}
+
+Ricordiamo che $s(\alpha) \Mydef \alpha \cup \{\alpha\}$. La proposizione seguente ci dice che $s(\alpha)$ \`e, a buon diritto, il successore di $\alpha$, anche quando $\alpha$
+\`e un ordinale.
+
+\begin{proposition}
+	Dato $\alpha \in \Ord$, $s(\alpha)$ \`e il minimo ordinale $> \alpha$.
+\end{proposition}
+
+\begin{proof}
+	Occorre inizialmente verificare che $s(\alpha)$ \`e un ordinale.
+
+{\drkblu Transitivit\`a.} Se $\beta \in s(\alpha)$, allora $\beta \in
+\alpha$ o $\beta = \alpha$. Nel primo caso, siccome $\alpha$ \`e
+transitivo, $\beta\subseteq\alpha\subseteq s(\alpha)$. Nel secondo
+$\beta \subseteq \beta \cup \{\beta\} = s(\beta)=s(\alpha)$.
+
+{\drkblu Buon ordine.} Siccome $s(\alpha)$ \`e un insieme di ordinali,
+$\in$ \`e un ordine totale su $s(\alpha)$. Dato $X \subseteq s(\alpha)$, con $X \ne \emptyset$,
+		abbiamo due casi, o $X = \{\alpha\}$ o $X \cap \alpha \ne
+\emptyset$. Nel primo caso $\alpha$ \`e il minimo di~$X$. Nel secondo
+caso, $\min(X) = \min(X \cap \alpha)$.
+
+{\drkblu Resta da dimostrare} che $s(\alpha)$ \`e il minimo
+ordinale~$>\alpha$. Sia $\alpha < \gamma$, allora $\alpha\in\gamma$ e, per
+transitivit\`a, $\alpha\subseteq\gamma$, quindi
+$\alpha\cup\{\alpha\}\subseteq\gamma$, vale a dire $s(\alpha)\le\gamma$.
+\end{proof}
+
+\begin{corollary}
+	$\forall {\alpha,\beta \in\Ord} \; \beta \leq \alpha \leftrightarrow \beta < s(\alpha)$.
+\end{corollary}
+
+\begin{proposition}
+	Dato un insieme di ordinali $X$:
+	\begin{enumerate}[1.]
+		\item Se $X \ne \emptyset$, allora esiste il minimo di $X$, detto \vocab{$\min X$}, inoltre $\min X = \bigcap X$.
+		\item Esiste il minimo dei maggioranti di $X$, detto \vocab{$\sup X$}, inoltre $\sup X = \bigcup X$.
+		\item C'\`e almeno un ordinale che non appartiene a $X$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proof}[Dimostrazione di 1.]
+Dimostriamo innanzitutto che il minimo esiste.
+Fissiamo $\alpha \in X$. Consideriamo $\mu = \min_{<_{s(\alpha)}}(X \cap s(\alpha))$.
+		Questo esiste in quanto $\alpha \in X \cap s(\alpha)$, per
+cui questo inisieme non \`e vuoto. 
+Osserviamo ora che $\mu = \min X$, infatti, preso $\beta \in X$, o
+$\mu\le\alpha<\beta$, oppure $\beta\le\alpha$ da cui $\beta\in X\cap
+s(\alpha)$.
+
+Ora verifichiamo che $\mu=\bigcap X$. Per la proposizione~\ref{or-le-su}, $\forall {\gamma
+\in X} \; \mu \subseteq \gamma$, quindi $\mu \subseteq \bigcap X$.
+		D'altro canto $\mu \in X$, quindi $\bigcap X \subseteq
+\mu$.
+\end{proof}
+
+\begin{proof}[Dimostrazione di 2.]
+\item Dimostriamo che $\bigcup X$ \`e un ordinale.
+
+{\drkblu Transitivit\`a.} Dato $\alpha \in \bigcup X$, esiste $\beta \in
+X$ tale che $\alpha \in \beta$. Per la transitivit\`a di $\beta$ si ha
+$\alpha\subseteq \beta$, da cui $\alpha\subseteq \bigcup X$.
+	
+{\drkblu Buon ordine.} Ogni $\alpha \in \bigcup X$ appartiene a qualche
+ordinale $\beta \in X$, pertanto \`e un ordinale. Quindi $\bigcup X$ \`e
+un insieme di ordinali, ed \`e bene ordinato per il punto 1. della proposizione.
+
+Dimostriamo ora che $\sigma\in\Ord$ \`e un maggiorante di $X$ se e solo
+se $\bigcup X \le \sigma$.
+\[ \forall {\alpha \in X}\; \alpha\le\sigma \;\;\Leftrightarrow\;\;
+\forall {\alpha\in X}\; \alpha\subseteq\sigma \;\;\Leftrightarrow\;\;
+\bigcup X\subseteq \sigma \;\;\Leftrightarrow\;\; \bigcup X \le \sigma \]
+\end{proof}
+
+\begin{proof}[Dimostrazione di 3.]
+Basta considerare $s(\sup X)$.
+\end{proof}
+
+\begin{corollary}
+	Un insieme di ordinali \`e un ordinale se e solo se \`e transitivo.
+\end{corollary}
+
+\begin{proof}
+	Il buon ordinamento vale per il punto 2. della proposizione.
+\end{proof}
+
+\begin{corollary}
+	$\Ord$ \`e una classe propria.
+{\drkgrn Ossia non esiste l'insieme di tutti gli ordinali.}
+\end{corollary}
+
+\begin{proof}
+	Per il punto 3.\ della proposizione, se $\Ord$ fosse un insieme,
+esisterebbe un ordinale che non vi appartiene.
+\end{proof}
+
 %\begin{note}[Cosa c'\`e di paradossale nel paradosso di Burali-Forti?]
 %	Nel 1897, \href{https://it.wikipedia.org/wiki/Cesare_Burali-Forti}{\textcolor{purple}{Cesare Burali-Forti}} era assolutamente convinto della esistenza dell'insieme
 %	di tutti gli ordinali - definiti allora come le classi di isomorfismo dei buoni ordini - quello che non sapeva \`e se la relazione $\prec$ fosse un ordine totale su queste classi.
