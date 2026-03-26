@@ -231,7 +231,7 @@ B_b$, per cui $(a,b)\in f\;\lightning$
 \end{exercise}
 
 \begin{exercise}
-	Sia $(A,<)$ un ordine totale con $A = \bigcup S$. Supponiamo che:
+	Sia $(A,<)$ un ordine totale con $A = \union S$. Supponiamo che:
 	\begin{enumerate}[1.]
 		\item ogni $X \in S$ \`e bene ordinato dalla restrizione
 di~$<$ a~$X$
@@ -675,7 +675,8 @@ $\alpha\cup\{\alpha\}\subseteq\gamma$, vale a dire $s(\alpha)\le\gamma$.
 	Dato un insieme di ordinali $X$:
 	\begin{enumerate}[1.]
 		\item Se $X \ne \emptyset$, allora esiste il minimo di $X$, detto \vocab{$\min X$}, inoltre $\min X = \bigcap X$.
-		\item Esiste il minimo dei maggioranti di $X$, detto \vocab{$\sup X$}, inoltre $\sup X = \bigcup X$.
+		\item Esiste il minimo dei maggioranti di $X$, detto
+\vocab{$\sup X$}, inoltre $\sup X = \union X$.
 		\item C'\`e almeno un ordinale che non appartiene a $X$.
 	\end{enumerate}
 \end{proposition}
@@ -696,25 +697,37 @@ Ora verifichiamo che $\mu=\bigcap X$. Per la proposizione~\ref{or-le-su}, $\fora
 \end{proof}
 
 \begin{proof}[Dimostrazione di 2.]
-\item Dimostriamo che $\bigcup X$ \`e un ordinale.
+\item Dimostriamo che $\union X$ \`e un ordinale.
 
-{\drkblu Transitivit\`a.} Dato $\alpha \in \bigcup X$, esiste $\beta \in
+{\drkblu Transitivit\`a.} Dato $\alpha \in \union X$, esiste $\beta \in
 X$ tale che $\alpha \in \beta$. Per la transitivit\`a di $\beta$ si ha
-$\alpha\subseteq \beta$, da cui $\alpha\subseteq \bigcup X$.
+$\alpha\subseteq \beta$, da cui $\alpha\subseteq \union X$.
 	
-{\drkblu Buon ordine.} Ogni $\alpha \in \bigcup X$ appartiene a qualche
-ordinale $\beta \in X$, pertanto \`e un ordinale. Quindi $\bigcup X$ \`e
+{\drkblu Buon ordine.} Ogni $\alpha \in \union X$ appartiene a qualche
+ordinale $\beta \in X$, pertanto \`e un ordinale. Quindi $\union X$ \`e
 un insieme di ordinali, ed \`e bene ordinato per il punto 1. della proposizione.
 
 Dimostriamo ora che $\sigma\in\Ord$ \`e un maggiorante di $X$ se e solo
-se $\bigcup X \le \sigma$.
+se $\union X \le \sigma$.
 \[ \forall {\alpha \in X}\; \alpha\le\sigma \;\;\Leftrightarrow\;\;
 \forall {\alpha\in X}\; \alpha\subseteq\sigma \;\;\Leftrightarrow\;\;
-\bigcup X\subseteq \sigma \;\;\Leftrightarrow\;\; \bigcup X \le \sigma \]
+\union X\subseteq \sigma \;\;\Leftrightarrow\;\; \union X \le \sigma \]
 \end{proof}
 
 \begin{proof}[Dimostrazione di 3.]
 Basta considerare $s(\sup X)$.
+\end{proof}
+
+\begin{corollary}
+Ogni classe di ordinali non vuota ha un minimo elemeto.
+\end{corollary}
+
+\begin{proof}
+	Consideriamo una classe di ordinali~$C$ e fissiamo $\alpha\in C$, allora $S = s(\alpha)\cap C$ \`e un insieme,
+e non \`e vuoto perch\'e contiene $\alpha$. Detto $\mu=\min S$, questo
+deve essere anche il minimo di~$C$, perch\'e, preso $\beta\in C$, o
+$\beta\le\alpha$, quindi $\beta\in S$, per cui $\mu\le\beta$. Oppure
+$\mu\le\alpha<\beta$.
 \end{proof}
 
 \begin{corollary}
@@ -725,8 +738,8 @@ Basta considerare $s(\sup X)$.
 	Il buon ordinamento vale per il punto 2. della proposizione.
 \end{proof}
 
-\begin{corollary}
-	$\Ord$ \`e una classe propria.
+\begin{corollary}[Paradosso di Burali-Forti]
+	$\Ord$ \`e una classe propria.\\
 {\drkgrn Ossia non esiste l'insieme di tutti gli ordinali.}
 \end{corollary}
 
@@ -735,341 +748,370 @@ Basta considerare $s(\sup X)$.
 esisterebbe un ordinale che non vi appartiene.
 \end{proof}
 
-%\begin{note}[Cosa c'\`e di paradossale nel paradosso di Burali-Forti?]
-%	Nel 1897, \href{https://it.wikipedia.org/wiki/Cesare_Burali-Forti}{\textcolor{purple}{Cesare Burali-Forti}} era assolutamente convinto della esistenza dell'insieme
-%	di tutti gli ordinali - definiti allora come le classi di isomorfismo dei buoni ordini - quello che non sapeva \`e se la relazione $\prec$ fosse un ordine totale su queste classi.
-%	\begin{figure}[H]
-%		\centering
-%		\includegraphics[width = 7.5cm]{immagini/Burali_Forti.png}
-%	\end{figure}
-%	Burali-Forti credette di poter negare la totalit\`a dell'ordine $\prec$ ragionando per assurdo. Se $\prec$ fosse un ordine totale, si pu\`o dimostrare che \`e buono esattamente come abbiamo visto sopra, ma 
-%	allora $\Omega \Mydef [(\Ord,\prec)]$, la classe di isomorfismo di $(\Ord,\prec)$\footnote{Per la precisione stiamo prendendo l'ordinale associato, cosa che non sappiamo ancora fare ma che si pu\`o fare come vedremo a breve.},
-%	sarebbe a sua volta una classe di isomorfismo di un buon ordinamento e quindi uno dei membri della classe $\Ord$ stessa,
-%	e, considerando il suo successore $s(\Omega)$, avremmo $\Omega \prec s(\Omega)$, ma anche ovviamente $s(\Omega) \prec \Omega$, perch\'e $s(\Omega) \in \Ord\;\textcolor{red}\lightning$.\\
-%	Il guaio \`e che, nello stesso anno, Cantor pubblic\`o una dimostrazione del fatto che la relazione $\prec$ \`e totale - esattamente l'argomento dei segmenti iniziali isomorfi che abbiamo illustrato 
-%	nel corso. Come \`e stata risolta la contraddizione? Concludendo che l'insieme di tutti gli ordinali esiste? \textcolor{red}{No}. Sfortunatamente Burali-Forti 
-%	aveva capito male la definizione di buon ordinamento, e ancora cos\`i, forse, nessuno se ne sarebbe accorto, ma, quel che \`e peggio, aveva tentato di correggerla, facendo, in realt\`a un pasticcio.
-%	La contraddizione \`e stata quindi imputata, da Burali-Forti e da Cantor, al bisticcio di definizioni ed il paradosso \`e stato dimenticato. Cinque anni dopo, \href{https://en.wikipedia.org/wiki/Bertrand_Russell}{\textcolor{purple}{Russell}}
-%	si rese conto del fatto che l'assurdo sussiste anche se si usa la definizione corretta di buon ordinamento, e fu cos\`i che il paradosso di Burali-Forti acquis\`i il suo nome. E tutti vissero felici e contenti.
+\begin{breakingnote}[Cosa c'\`e di paradossale nel paradosso di Burali-Forti?]
+	Nel 1897, Cesare Burali-Forti era assolutamente convinto della esistenza dell'insieme
+	di tutti gli ordinali -- definiti allora come le classi di
+isomorfismo di buoni ordini -- quello che non sapeva \`e se la relazione
+$\prec$ fosse un ordine totale.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = .8\textwidth]{immagini/Burali_Forti.png}
+	\end{figure}
+	Burali-Forti credette di poter negare la totalit\`a dell'ordine
+$\prec$ ragionando per assurdo. Se $\prec$ fosse un ordine totale, \`e
+facile vedere che sarebbe buono, ma 
+	allora la classe di isomorfismo~$\Omega$ di $(\Ord,\prec)$,
+	sarebbe, a sua volta, uno dei membri di $\Ord$. Considerando il suo
+successore $s(\Omega)$, avremmo $\Omega \prec s(\Omega)$, ma anche
+$s(\Omega) \prec \Omega$ perch\'e $s(\Omega) \in \Ord\;\drkred\lightning.$
+
+	Il guaio \`e che, nello stesso anno, Cantor pubblic\`o una
+dimostrazione del fatto che la relazione $\prec$ \`e totale -- esattamente
+l'argomento dei segmenti iniziali isomorfi nella dimostrazione del
+teorema~\ref{bo-trico-teo}. Come \`e stata risolta la
+contraddizione? Concludendo che l'insieme di tutti gli ordinali non esiste?
+{\drkred No!} Sfortunatamente, Burali-Forti 
+	aveva capito male la definizione di buon ordine. Anche cos\`i, forse, nessuno se ne sarebbe accorto, ma, quel che \`e peggio, aveva tentato di correggerla, facendo in realt\`a un pasticcio.
+	La contraddizione \`e stata quindi imputata, da Burali-Forti
+stesso e da Cantor, al bisticcio di definizioni, e il paradosso \`e stato dimenticato. Cinque anni dopo, Russell
+	not\`o che l'assurdo sussiste anche se si usa la definizione corretta, e fu cos\`i che il paradosso di Burali-Forti acquis\`i il suo nome. E tutti vissero felici e contenti.
+\end{breakingnote}
+
+\subsection{L'assioma del rimpiazzamento}
+Gli ordinali di Von Neumann sono eleganti, ma quanti ne abbiamo? Si pu\`o
+dimostrare che, assumendo i soli assiomi 1--7, il gran totale degli ordinali potrebbe essere:
+\[ \textcolor{purple}{\Ord \;\;\overset{?}{=}}\;\; {\drkgrn
+\underbrace{\color{purple}\{\emptyset,
+s(\emptyset),\ldots,s^n(\emptyset),\ldots,\omega,s(\omega),\ldots,s^n(\omega),\ldots\}}_{\text{{in realt\`a, questo si chiamer\`a $\omega + \omega$}}}}
+	\]
+ossia la classe degli ordinali raggiungibili a partire da $\emptyset$ o da $\omega$ con un numero finito di applicazioni della mappa successore.
+
+\begin{exercise}
+	Dimostra che la classe descritta sopra \`e effettivamente una classe, ossia \`e definita da una formula.
+\end{exercise}
+
+Se vogliamo poter rispondere alla domanda ``quanti ordinali esistono?'' occorre un nuovo assioma: l'assioma del rimpiazzamento. Sotto questa ipotesi addizionale, la risposta sar\`a
+``tutti quelli che potrebbero esistere'', ossia avremo un ordinale per ogni classe di isomorfismo di buoni ordini. Per formulare l'assioma, ci avvarremo dell concetto di funzione classe.
+
+\begin{definition}
+	Date due classi $A$ e $B$ una \vocab{funzione classe} da $A$ a $B$ \`e una formula insiemistica $\varphi(x,y)$ tale che:
+	\[ \forall {x \in A} \;\existrun {y \in B} \; \varphi(x,y) \]
+{\drkgrn Ossia, una funzione classe \`e una propriet\`a, espressa nel
+linguaggio della teoria degli insiemi, che ad ogni $x \in A$ associa un
+{\drkred unico} $y \in B$.}
+\end{definition}
+
+\begin{notation}[Funzione classe]
+	Possiamo denotare una funzione classe $\varphi(x,y)$ da $A$ a $B$
+mediante la notazione:
+	\[ \drkblu F \colon A \to B \]
+	In questo caso, la scrittura $y = F(x)$ \`e una semplice abbreviazione:
+	\[ {\drkblu y = F(x)} \;\;\Mydef\;\; y \in B \land \varphi(x,y)
+		\]
+\end{notation}
+
+\begin{example}[Esempi di funzioni classe]
+	Le seguenti sono funzioni classe $V \to V$:
+	\[ F_1(x) = x \qquad F_2(x) = \{x\} \qquad F_3(x) = \ps(x) \qquad F_4(x) = s(x)
+		\]
+\end{example}
+
+\begin{axiom}[Assioma del rimpiazzamento]
+	\label{ax8}
+	Sia $F \colon V \to V$ una funzione classe, e sia $A$ \`e un
+insieme\\
+allora la classe ${\drkblu F[A]} \;\Mydef\; \{F(x) | x \in A\}$ \`e un insieme.
+		\[ \forall A \; \exists B \; \forall y \; y \in B
+\leftrightarrow \exists {x \in A} \; y = F(x)
+		\]
+\end{axiom}
+
+\begin{remark}
+Come per l'\href{ax3}{assioma di separazione} -- nota~\ref{se-sche}, anche questo \`e uno schema di
+assiomi: uno per ogni possibile funzione classe $F$.
+\end{remark}
+
+\begin{proposition}
+	Data una funzione classe $F\colon V \to V$
+	\[ \forall A \; \existrun B \; \forall y \; y \in B
+\leftrightarrow \exists {x \in A} \; y = F(x)
+		\]
+quindi l'insieme $f[A]$ \`e univocamente determinato.
+\end{proposition}
+
+\begin{proof}
+	Estensionalit\`a.
+\end{proof}
+
+\begin{remark}
+	Dato un insieme $A$ e una funzione classe $G \colon {\drkred A} \rightarrow V$, esiste ed \`e unico l'insieme $G[A]$ tale che:
+	\[ \forall y \; y \in G[A] \leftrightarrow \exists {x \in A} \; y = G(x)
+		\]
+\end{remark}
+
+\begin{proof}
+	Ci basta semplicemente applicare l'\hyperref[ax8]{assioma del
+rimpiazzamento} alla funzione classe $F \colon V \rightarrow V$ definita come:
+	\[ y = F(x) \;\;\Mydef\;\; (x \in A \land y = G(x)) \lor (x \not \in A \land y = \emptyset)
+		\]
+	ossia:
+	\[ F(x) \;\;\Mydef\;\; \begin{cases}
+		G(x) &\text{se $x \in A$} \\
+		\emptyset &\text{altrimenti}
+	\end{cases}
+		\]
+	infatti $x \in A$ implica $G(x) = F(x)$, per cui $G[A] = F[A]$.
+\end{proof}
+
+\begin{exercise}
+	Dimostra che, dati due insiemi $A$ e $B$, esiste il loro prodotto cartesiano $A \times B$, usando l'assioma del rimpiazzamento ma senza usare l'assioma delle parti.
+\end{exercise}
+
+\begin{theorem}
+	Dato un buon ordine $(A,<)$, esiste un unico ordinale $\alpha$ tale che $(A,<)\sim\alpha$.
+\end{theorem}
+
+\begin{proof}
+	L'unicit\`a segue pech\'e $\alpha \sim \alpha' \rightarrow \alpha
+= \alpha'$. Resta quindi da dimostrare l'esistenza di $\alpha$. Sia
+	\[ A' \;\;=\;\; \{x \in A | \exists\begingroup\gamma \in
+\Ord\endgroup \; A_x \sim \gamma\}
+		\]
+	Consideriamo la funzione classe $F \colon A' \to \Ord$ data da
+	\[ F(x) \;\;=\;\; \text{l'unico $\gamma \in \Ord$ tale che $A_x \sim \gamma$}
+		\]
+	l'unicit\`a segue perch\'e se $A_x\sim\gamma$ e $A_x\sim\gamma'$,
+allora $\gamma\sim\gamma'$ quindi $\gamma=\gamma'$.
+	Vogliamo dimostrare che l'insieme $\drkblu \alpha = F[A'] \sim (A,<)$ --
+che esiste per rimpiazzamento -- \`e un ordinale isomorfo a $(A,<)$.
+	Dimostreremo che $\alpha$ \`e un ordinale, $A'$ \`e un segmento iniziale di $A$, $\alpha \sim A'$, e infine che $A' = A$.
+
+{\drkblu $\alpha$ \`e un ordinale.} Siccome $\alpha$ \`e un insieme di
+ordinali, ci basta dimostrare la transitivit\`a.
+		Sia $\beta \in \gamma \in \alpha$. Fissiamo un isomorfismo
+$f \colon \gamma \to A_x$, per un opportuno segmento iniziale $A_x$
+di~$A$. Allora $f_{|\beta} \colon \beta \to f[A_\beta] =
+A_{f(\beta)}$ \`e un isomorfismo che testimonia che $f(\beta)\in A'$ e
+$\beta=F(f(\beta))\in\alpha$.
+
+{\drkblu $A'$ \`e segmento iniziale di $A$.} Sia $y < x \in A'$. Allora
+esiste un isomorfismo $f \colon A_x \to \gamma$, per un
+opportuno~$\gamma$. La restrizione $f_{|A_y}\colon A_y \to
+\gamma_{f(y)}=f(y)$
+\`e un isomorfismo, quindi $y\in A'$.
+
+{\drkblu $A' \sim \alpha$} Sia $f \colon A' \to \alpha$ la funzione
+definita da $f(x)=F(x)$, che esiste per l'assioma di separazione.
+Dimostriamo che $f$ \`e un isomorfismo di ordini.
+		La surgettivit\`a \`e immediata perch\'e, per costruzione,
+abbiamo che $\alpha = F[A'] = f[A']$. La monotonia segue da
+		\[ x < y \;\;\implies\;\; A_x \prec A_y \;\;\implies\;\; f(x) \prec f(y)
+\;\;\implies\;\; x < y
+			\]
+
+{\drkblu $A' = A$} Se cos\`i non fosse, per il punto 2., $A'$ sarebbe un segmento iniziale
+proprio di~$A$, quindi $A' = A_k$ per un opportuno $k \in A$. Ma allora
+$A_k \sim \alpha \in \Ord$ per i punti 1.\ e 3., per cui $k \in A' = A_k
+\;{\drkred\lightning}$.
+\end{proof}
+
+Una conseguenza del risultato precedente \`e che possiamo definire le
+operazioni sugli ordinali come semplice riflesso di quelle sui buoni
+ordini.
+
+\begin{definition}[Operazioni sugli ordinali -- v.1]
+	Dati $\alpha,\beta \in\Ord$, definiamo \vocab{$\alpha + \beta$}, \vocab{$\alpha\cdot\beta$}, \vocab{$\alpha^\beta$} come, rispettivamente, l'unico ordinale tale che:
+	\[ {\drkblu\alpha + \beta} \;\sim\;
+(\alpha,<_\alpha)+(\beta,<_\beta) \qquad {\drkblu\alpha \cdot \beta}
+\;\sim\; (\alpha,<_\alpha) \cdot (\beta,<_\beta)
+		\]\[ {\drkblu\alpha^\beta} \;\sim\; (\alpha,<_\alpha)^{(\beta,<_\beta)}
+			\]
+\end{definition}
+
+\begin{exercise}
+	Dimostra che l'insieme introdotto all'inizio della sezione \`e effettivamente $\omega + \omega$, ossia, pi\`u precisamente:
+	\[ \forall x \;\; x \in \omega + \omega \;\; \leftrightarrow
+\;\;(\exists {m \in \omega} \; x = m) \lor (\exists {n \in \omega} \; x = \omega +n)
+		\]
+\end{exercise}
+
+\subsection{Induzione e ricorsione transfinite}
+
+Il piatto forte di questa sezione \`e una seconda applicazione dell'assioma del rimpiazzamento: il teorema di ricorsione transfinita. Questo risultato sar\`a pi\`u chiaro a chi ha, in precedenza, risolto il seguente esercizio.
+
+\begin{exercise}
+	Dimostra che esiste un insieme $A$ tale che:
+	\[ \forall x \; x \in A \leftrightarrow x = \emptyset \lor \exists y \in A \; x = \{y\}
+		\]
+	{\drkgrn Ossia, in sostanza, dimostra che esiste:}
+	\[
+{\drkgrn\big\oldparen\emptyset,\,\{\emptyset\},\,\{\{\emptyset\}\},\,\{\{\{\emptyset\}\}\},\,\ldots\big\}}
+		\]
+\end{exercise}
+
+L'idea per risolvere questo esercizio \`e contenuta nella dimostrazione del teorema di ricorsione numerabile. Attenzione, per\`o,
+che questo teorema non si pu\`o applicare direttamente alla situazione dell'esercizio.
+
+\begin{soln}
+	Vorremmo definire la funzione classe $F \colon \omega \to V$ data da:
+	\[ F(n) \;\;=\;\; \text{singoletto $n$ volte di $\emptyset$}
+		\]
+	fatto questo, non sar\`a difficile verificare che $A = F[\omega]$ soddisfa la richiesta. Occorre quindi dimostrare che la definizione informale di $F$ data sopra \`e esprimibile nel linguaggio formale della teoria degli insiemi.
+
+Consideriamo le formule seguenti, che ci interessano per $n\in\omega$
+\begin{align*}
+	{\drkblu \phi(n,f)} \;\;&\Mydef\;\; \begin{cases}
+		\phantom{\land}\;\text{$f$ \`e una funzione} \\
+		\land\; \Dom(f) = n+1 \\
+		\land\; f(0) = \emptyset \\
+		\land\; \forall {i \in n} \; f(i+1) =
+\big\oldparen f(i)\big\} 
+	\end{cases}\\
+	{\drkblu y = F(n)} \;\;&\Mydef\;\; \exists f\;\phi(n,f)\land
+y=f(n)
+\end{align*}
+Per dire che la $F$ cos\`i definita \`e una funzione classe, ci
+basta dimostrare che
+\[ {\drkred \forall{n\in\omega}\;\existsun f\;\phi(n,f)} \]
+
+{\drkblu Esistenza.} Procediamo per induzione. Il caso $n = 0$ \`e
+immediato: basta considerare $f = \{(0,\emptyset)\}$.
+		Nel caso $n = m+1$, per ipotesi induttiva, abbiamo una
+funzione $g$ tale che $\phi(m,g)$. \`E facile verificare che
+$f=g\cup\{(n,\{m\})\}$ soddisfa~$\phi(n,f)$.
+
+{\drkblu Unicit\`a.} Date $f_1$ e $f_2$ che soddisfano
+$\phi(n,f_1)$ e $\phi(n,f_2)$, dimostriamo per induzione su~$i$ che
+$\forall {i \in \omega} \; i \leq n \to f_1(i) = f_2(i)$. Il caso $i = 0$
+\`e immediato perch\'e $f_1(0) = \emptyset = f_2(0)$. Per il caso $i =
+j+1 \leq n$, abbiamo l'ipotesi induttiva $f_1(j)=f_2(j)$, quindi
+\[f_1(i)
+= \{f_1(j)\} = \{f_2(j)\} = f_2(i)\]
+
+	Ora abbiamo la funzione classe $F$. \`E immediato verificare che
+$F(0) = \emptyset$. Inoltre, dato $n \in \omega$, $F(n+1) = \{F(n)\}$,
+infatti, detta $f$ l'unica funzione che soddisfa $\phi(n+1,f)$, \`e
+facile verificare che vale $\phi(n,f_{|n+1})$. Per cui
+	\[ F(n+1) = f(n+1) = \{f(n)\} = \{f_{|n+1}(n)\}= \{F(n)\}
+		\]
+
+Possiamo finalmente dimostrare che $A=F[\omega]$ soddisfa la richiesta
+dell'esercizio. Infatti $\emptyset = F(0) \in A$, e, preso $y \in A = F[\omega]$
+con $y\neq\emptyset$, abbiamo $y = F(n)$, con $n \ne 0$, per cui $n = m+1$
+	per qualche $m \in \omega$, allora, detto $x = F(m) \in A$, si ha
+\[y = F(m+1) = \{F(m)\} = \{x\}\]
+\end{soln}
+
+\begin{proposition}[Induzione transfinita -- v.1]
+	\label{induz_transf1}
+	Data una formula insiemistica $\varphi(x)$.\\
+ Se vale $\drkred \forall {\alpha \in \Ord} \;(\forall {\beta < \alpha} \;
+\varphi(\beta)) \rightarrow \varphi(\alpha)$,\\
+allora vale $\drkblu \forall {\alpha \in \Ord} \; \varphi(\alpha)$.
+\end{proposition}
+
+\begin{proof}
+	Procedendo per assurdo, consideriamo il minimo $\alpha$ tale
+che~$\neg\phi(\alpha)$. Allora $\neg \forall {\beta < \alpha} \;
+\phi(\beta)$, ossia $\exists {\beta < \alpha}\; \neg\phi(\beta)$, contro la
+minimalit\`a di~$\alpha$.
+\end{proof}
+
+\begin{note}[L'induzione transfinita \`e uno schema di teoremi]
+	Il principio di induzione transfinita non \`e, letteralmente, un
+teorema della teoria degli insiemi, quanto piuttosto uno scherma di
+teoremi che ci permette 
+	di costruire un diverso teorema per ogni possibile formula
+$\varphi$.
+\end{note}
+
+C'\`e una chiara analogia fra la forma precedente del principio di induzione transfinita e la forma forte dell'induzione aritmetica.
+A volte, per\`o, \`e comodo esprimere l'induzione transfinita in una forma che meglio ricorda il principio di induzione di Peano.
+
+\begin{definition}
+Un ordinale $\alpha$ \`e detto \vocab{ordinale successore}
+se $\exists \begingroup\beta \in \Ord\endgroup \; \alpha = s(\beta)$. Un ordinale
+$\alpha\;{\drkred > 0}$ che non \`e successore \`e detto \vocab{ordinale limite.}
+\end{definition}
+
+\begin{remark}
+	Un ordinale $\alpha$ \`e successore se e solo se ha un massimo.
+\end{remark}
+
+\begin{proof}
+	Basta osservare che $\beta$ \`e il massimo di~$\alpha$ se e solo
+se $\alpha = s(\beta)$.
+\end{proof}
+
+\begin{proposition}[Induzione transfinita -- v.2]
+	\label{induz_transf2}
+	Sia $\varphi(x)$ una formula insiemistica, se vale:
+	\begin{enumerate}[(i)]
+		\item $\varphi(0)$ \kern1em\vocab{caso base}
+		\item $\forall {\gamma \in \Ord} \; \varphi(\gamma)
+\rightarrow \varphi(s(\gamma))$ \kern1em\vocab{caso successore}
+		\item Per ogni ordinale limite $\lambda$ si ha $(\forall
+{\beta < \lambda} \; \varphi(\beta)) \rightarrow \varphi(\lambda)$ \kern1em\vocab{caso limite}
+	\end{enumerate}
+	allora $\forall {\alpha \in \Ord} \; \varphi(\alpha)$.
+\end{proposition}
+
+\begin{proof}
+	Basta verificare l'ipotesi della v.1, ossia che per ogni~$\alpha$
+	\[ (\forall {\beta < \alpha} \; \varphi(\beta)) \rightarrow \varphi(\alpha)
+		\]
+	Se $\alpha$ \`e limite o $0$ abbiamo questa formula tout court.
+	Se $\alpha = s(\gamma)$ abbiamo
+	\[ \forall {\beta < \alpha} \; \varphi(\beta) \;\iff\;
+	   \forall {\beta < s(\gamma)} \; \varphi(\beta) \;\implies\;
+\varphi(\gamma) \;\implies\; \varphi(s(\gamma)) \;\iff\;
+\varphi(\alpha)
+		\]
+\end{proof}
+
+%Possiamo finalmente dimostrare il teorema di ricorsione transfinita, dopo
+%questa nota.
+%
+%\begin{note}
+%	Data una funzione classe $F \colon A \to B$ e un sottoinsieme~$X$
+%della classe~$A$, esiste la funzione (insieme)
+%\begin{align*}
+%	 F_{|X} \colon X &\to F[X]\\
+%	 a &\mapsto F[a]
+%\end{align*}
 %\end{note}
 %
-%\subsection{L'assioma del rimpiazzamento}
-%Gli ordinali di Von Neumann sono eleganti, ma quanti ne abbiamo di questi arnesi? Si pu\`o dimostrare che, assumendo i soli assiomi 1-7, il gran totale degli ordinali potrebbe essere:
-%\[ \textcolor{purple}{\Ord \overset{?}{=} \underbrace{\{\emptyset, s(\emptyset),\ldots,s^n(\emptyset),\ldots,\omega,s(\omega),\ldots,s^n(\omega),\ldots\}}_{\textnormal{\textcolor{MidnightBlue}{in realt\`a, questo si chiamer\`a $\omega + \omega$}}}}
-%	\]
-%la classe degli ordinali raggiungibili a partire da $\emptyset$ o da $\omega$ con un numero finito di applicazioni della mappa successore.
-%
-%\begin{exercise}
-%	Dimostra che la classe descritta sopra \`e effettivamente una classe, ossia \`e definita da una formula.
-%\end{exercise}
-%
-%\begin{soln}
-%	Chiamiamo $O = \{\emptyset, s(\emptyset),\ldots,s^n(\emptyset),\ldots,\omega,s(\omega),\ldots,s^n(\omega),\ldots\}$, allora la formula insiemistica che descrive $O$ \`e:
-%	\[ x \in O \Mydef (x = \emptyset) \lor (x = \omega) \lor (\exists n \in \omega \; (\underbrace{x = s^n(\emptyset)}_{x = n} \lor \underbrace{x = s^n(\omega)}_{x = \omega + n}))
-%		\]
-%	avendo una formula insiemistica ben posta, abbiamo che $O$ \`e una classe.
-%\end{soln}
-%
-%Se vogliamo poter rispondere alla domanda ``quanti ordinali esistono?'' occorre un nuovo assioma: l'assioma del rimpiazzamento. Sotto questa ipotesi addizionale, la risposta sar\`a
-%``tutti quelli che potrebbero esistere'', ossia avremo un ordinale per ogni classe di isomorfismo di buoni ordini. Per formulare l'assioma, ci avvarremo dell concetto di funzione classe.
-%
-%\begin{definition}[Funzione classe]
-%	Date due classi $A$ e $B$ una \vocab{funzione classe} da $A$ a $B$ \`e una formula insiemistica $\varphi(x,y)$ tale che:
-%	\[ \forall x \in A \;\exists \textcolor{red}{!}\,y \in B \; \varphi(x,y)
-%		\]
-%\end{definition}
-%
-%\textcolor{MidnightBlue}{Ossia, una funzione classe \`e una propriet\`a, espressa nel linguaggio della teoria degli insiemi, che ad ogni $x \in A$ associa un \textcolor{red}{unico} $y \in B$.}
-%
-%\begin{notation}[Funzione classe]
-%	Possiamo denotare una funzione classe $\varphi(x,y)$ da $A$ a $B$ mediante la notazione pi\`u familiare:
-%	\[ F : A \rightarrow B
-%		\]
-%	In questo caso, la scrittura $y = F(x)$ \`e una semplice abbreviazione:
-%	\[ y = F(x) \Mydef y \in B \land \varphi(x,y)
-%		\]
-%\end{notation}
-%
-%\begin{example}[Esempi di funzioni classe]
-%	Le seguenti sono funzioni classe $V \rightarrow V$:
-%	\[ F_1(x) = x \qquad F_2(x) = \{x\} \qquad F_3(x) = \ps(x) \qquad F_4(x) = s(x)
-%		\]
-%	La funzione classe $F_5(x) = \sup(x \cap \Ord)$, con $x \cap \Ord \Mydef \{\alpha \in x | \alpha \in \Ord\}$, \`e $V \rightarrow \Ord$.
-%\end{example}
-%
-%\begin{axiom}[Assioma del rimpiazzamento]
-%	\label{ax8}
-%	Se $A$ \`e un \textcolor{LimeGreen}{insieme} e $F : V \rightarrow V$ \`e una funzione classe, allora $F[A] \Mydef \{F(x) | x \in A\}$ \`e un \textcolor{LimeGreen}{insieme}.\footnote{Come per la separazione, anche questo \`e uno \vocab{schema di assiomi}, uno per ogni possibile (formula insiemistica) funzione classe $F$.}
-%	\[ \forall A \; \exists B \; \forall y \; y \in B \leftrightarrow \exists x \in A \; y = F(x)
-%		\]
-%	cio\`e per ogni insieme esiste un insieme i cui elementi sono immagini di quelli di $A$ per mezzo della funzione classe $F$.
-%\end{axiom}
-%
-%\begin{proposition}[Unicit\`a del rimpiazzo]
-%	Data una funzione classe $F : V \rightarrow V$ vale che:
-%	\[ \forall A \; \exists\textcolor{red}{!} B \; \forall y \; y \in B \leftrightarrow \exists x \in A \; y = F[x]
-%		\]
-%\end{proposition}
-%
-%\begin{proof}
-%	Estensionalit\`a.
-%\end{proof}
-%
-%\begin{remark}[Rimpiazzamento da insieme a classe]
-%	Dato un \textcolor{red}{insieme} $A$ e una funzione classe $G : \textcolor{red}{A} \rightarrow V$, esiste ed \`e unico l'\textcolor{red}{insieme} $G[A]$ tale che:
-%	\[ \forall y \; y \in G[A] \leftrightarrow \exists x \in A \; y = G(x)
-%		\]
-%	in altre parole, l'assioma del rimpiazzamento vale anche con una funzione classe che va da un insieme ad una classe.
-%\end{remark}
-%
-%\begin{proof}
-%	Ci basta semplicemente applicare l'\hyperref[ax8]{assioma del rimpiazzamento} appena enunciato, applicato alla funzione classe $F : V \rightarrow V$ definita come:
-%	\[ y = F(x) \Mydef (x \in A \land y = G(x)) \lor (x \not \in A \land y = \emptyset)
-%		\]
-%	ossia:
-%	\[ F(x) \Mydef \begin{cases}
-%		G(x) &\text{se $x \in A$} \\
-%		\emptyset &\text{altrimenti}
-%	\end{cases}
-%		\]
-%	infatti se $x \in A$ si ha $G(x) = F(x)$, altrimenti c'\`e il vuoto, per cui $G[A] = F[A]$ \`e un insieme grazie al rimpiazzamento.
-%\end{proof}
-%
-%\begin{exercise}[Esistenza del prodotto cartesiano via rimpiazzamento]
-%	Dimostra che, dati due insiemi $A$ e $B$, esiste il loro prodotto cartesiano $A \times B$, usando l'assioma del rimpiazzamento ma \textcolor{red}{senza usare l'assioma delle parti}.
-%\end{exercise}
-%
-%\begin{soln}
-%	L'idea \`e quella di creare l'insieme di tutti gli insiemi del tipo $\{\{a\},\{a,b\}\}$, per tutti gli $a \in A$ e $b \in B$. Per fare questo, fissato $b \in B$ definiamo la funzione classe:
-%	\[ H : V \to V : x \mapsto \{x,b\}
-%		\]
-%	che \`e ben definita per l'assioma del paio. Ora per rimpiazzamento $H[A] = A_b$ \`e un insieme \textcolor{MidnightBlue}{- ed \`e in particolare l'insieme di tutte le coppie $\{a,b\}$ al variare di $a \in A$ -},
-%	ora possiamo definire la funzione classe:
-%	\[ G : A_b \to V : \{a,b\} \mapsto \{\{a\},\{a,b\}\}
-%		\]
-%	che \`e ben definita perch\'e di fatto stiamo facendo $\{\{a,b\}\cap A\} \cup \{\{a,b\}\}$, che \`e ancora un insieme per gli assiomi di singoletto e unione. A questo punto $E_b = G[A_b]$ 
-%	\`e un insieme per rimpiazzamento \textcolor{MidnightBlue}{- ed \`e proprio l'insieme di tutti gli insiemi $\{\{a\},\{a,b\}\}$ per $b$ fissato e $a$ che varia in $A$, cio\`e \`e proprio $A \times \{b\}$ -}.
-%	A questo punto possiamo definire la funzione classe:
-%	\[ F : B \to V : b \mapsto E_b
-%		\]
-%	che \`e ben definita per quanto osservato e $F[B] = C$ che ci d\`a l'insieme $\{E_b\}_{b \in B} = \{\{A \times \{b\}\}\}_{b \in B}$ , da cui:
-%	\[ \bigcup C
-%		\]
-%	\`e l'insieme, per l'assioma dell'unione, di tutte le coppie ordinate $(a,b)$ per $a \in A$ e $b \in B$, ed \`e quindi proprio $A \times B$.
-%\end{soln}
-%
-%\begin{theorem}[Ogni buon ordine \`e isomorfo ad un unico ordianle]
-%	Dato un buon ordine $(A,<)$, esiste un unico ordinale $\alpha$ tale che $(A,<)\sim\alpha$.
-%\end{theorem}
-%
-%\begin{proof}
-%	L'unicit\`a segue per quanto abbiamo gi\`a visto, cio\`e $\alpha \sim \alpha' \rightarrow \alpha = \alpha'$. Basta quindi da dimostrare l'esistenza di almeno un ordinale $\alpha$ per ogni classe di isomorfismo di un buon ordinamento. Sia:
-%	\[ A' = \{x \in A | \exists \gamma \in \Ord \; A_x \sim \gamma\}
-%		\]
-%	ovvero l'insieme degli elementi nel buon ordinamento che determinano segmenti iniziali isomorfi ad un qualche ordinale.
-%	Consideriamo la funzione classe $F : A' \rightarrow \Ord$:
-%	\[ F(x) = \text{l'unico $\gamma \in \Ord$ tale che $A_x \sim \gamma$}
-%		\]
-%	l'unicit\`a segue dalla solita proposizione e ci garantisce che la funzione classe sia ben definita:
-%	\[ A_x \sim \gamma \land A_x \sim \gamma' \implies \gamma \sim \gamma' \implies \gamma = \gamma'
-%		\]
-%	Vogliamo dimostrare che l'insieme $\alpha := F[A'] \sim (A,<)$ - che esiste per rimpiazzamento - \`e proprio un ordinale isomorfo a $(A,<)$.
-%	Dimostriamo dunque che $\alpha$ \`e un ordinale, $A'$ \`e un segmento iniziale di $A$, $\alpha \sim A'$, e infine che $A' = A$.
-%	\begin{itemize}
-%		\item[$\boxed{\text{$\alpha$ \`e un ordinale}}$] $\alpha$ \`e definito come l'insieme degli ordinali isomorfi ai segmenti iniziali corrispondenti agli elementi di $A'$, dunque, per un fatto visto, ci basta dimostrare che \`e transitivo affinch\'e sia un ordinale a sua volta.\\
-%		Sia $\gamma \in \beta \in \alpha$, con $\beta$ che \`e per definizione un ordinale isomorfo ad un qualche segmento iniziale principale di $A$, $\beta \sim A_a$, vediamo che anche $\gamma$ \`e isomorfo ad un segmento iniziale principale di $A$ e quindi $\gamma \in \alpha$.
-%		Fissato un isomorfismo $f : \beta \to A_a$, possiamo considerarne la restrizione a $\gamma$, che \`e ancora un isomorfismo, $f_{|\gamma} : \gamma \to (A_a)_{f(\gamma)} = A_{f(\gamma)}$, dove abbiamo usato che gli isomorfismi mandano s.i. in s.i., $f[\gamma] = f[\beta_\gamma] = (A_a)_{f(\gamma)}$, abbiamo quindi ottenuto che $\gamma = F(f(\gamma))$.
-%		\item[$\boxed{\text{$A'$ s.i. di $A$}}$] Sia $y < x \in A'$, vogliamo verificare che $y \in A'$, poich\'e $x \in A'$ esiste $\gamma \in \Ord$ tale che $A_x \sim \gamma$, e naturalmente $A_y \subsetneq A_x$. Fissato $f : A_x \to \gamma$ isomorfismo, se verifichiamo che $f[A_y]$ \`e un ordinale abbiamo concluso poich\'e si avrebbe $A_y \sim f[A_y] \in \Ord$ e quindi $y \in A'$.
-%		A questo punto dati $\beta \in \alpha \in f[A_y]$, poich\'e $A_y$ \`e un isomorfismo, tornando indietro si ha $f^{-1}(\beta) < f^{-1}(\alpha) \in A_y$, ma poich\'e $A_y$ \`e un segmento iniziale, allora $f^{-1}(\beta) \in A_y \iff \beta \in f[A_y]$.\\
-%		\textcolor{MidnightBlue}{\underline{Alternativa}: Fissato $f : A_x \to \gamma$ isomorfismo, allora $f_{|A_y} : A_y \to \gamma_{f(y)}$ \`e un isomorfismo perch\'e restrizione di un isomorfismo e sappiamo che gli isomorfismi mandano segmenti iniziali principali in segmenti iniziali principali per un'osservazione vista in precedenza, dunque l'immagine \`e proprio $\gamma_{f(y)}$, inoltre
-%		$\gamma_{f(y)} = f(y) \in \Ord$, quindi evitiamo la verifica diretta che l'immagine sia un ordinale.}
-%		\item[$\boxed{A' \sim \alpha}$] Sia $f : A' \rightarrow \alpha = F[A'] : x \mapsto F(x)$ la funzione tra insiemi, definita per separazione in $A' \times \alpha = A' \times F[A']$ - quindi abbiamo prima ottenuto l'insieme di arrivo con rimpiazzamento e poi ci siamo ristretti a quest'ultimo per avere una funzione -. Dimostriamo che $f$ \`e un isomorfismo di ordini.\\
-%		La surgettivit\`a \`e immediata perch\'e, per costruzione, abbiamo che $\alpha = F[A'] \overset{\text{def. $f$}}{=} f[A']$. Osserviamo ora che la stretta crescenza deriva dall'ordinamento dei segmenti iniziali:
-%		\[ x <_A y \implies f(x) \sim A_x \prec A_y \sim f(y)
-%			\]
-%		dove gli isomorfismi sono per definizione di $f$, e la disuguaglianza tra i segmenti iniziali come buoni ordinamenti deriva banalmente da $x < y$. Segue quindi che $f(x) \prec f(y)$, ed essendo ordinali ci\`o significa proprio che $f(x) \in f(y) \equiv f(x) < f(y)$.
-%		\item[$\boxed{A' = A}$] Se $A' \ne A$, cio\`e se $A' \subsetneq A$, avendo visto che $A'$ \`e un segmento iniziale, abbiamo che \`e principale, quindi $A' = A_k$, per $k \in A$.		Ma allora $A_k \sim \alpha \in \Ord$ per i punti 1. e 3., per cui $k \in A' = A_k \;\textcolor{red}\lightning$.
-%	\end{itemize}
-%\end{proof}
-%
-%Una conseguenza del risultato precedente \`e che possiamo definire le operazioni sugli ordinali come semplice riflesso di quelle sui buoni ordini - avendo a questo punto una corrispondenza esatta tra classi di isomorfismo di buoni ordini e ordinali -.
-%
-%\begin{definition}[Operazioni sugli ordinali - v.1]
-%	Dati $\alpha,\beta \in\Ord$, definiamo \vocab{$\alpha + \beta$}, \vocab{$\alpha\cdot\beta$}, \vocab{$\alpha^\beta$} come, rispettivamente, l'unico ordinale tale che:
-%	\[ \textcolor{purple}{\alpha + \beta} \sim (\alpha,<_\alpha)+(\beta,<_\beta) \qquad \textcolor{purple}{\alpha \cdot \beta} \sim (\alpha,<_\alpha) \cdot (\beta,<_\beta)
-%		\]\[ \textcolor{purple}{\alpha^\beta} \sim (\alpha,<_\alpha)^{(\beta,<_\beta)}
-%			\]
-%\end{definition}
-%
-%\begin{exercise}
-%	Dimostra che l'insieme introdotto all'inizio della sezione \`e effettivamente $\omega + \omega$, ossia, pi\`u precisamente:
-%	\[ \forall x \; x \in \omega + \omega \leftrightarrow (\exists m \in \omega \; x = m) \lor (\exists n \in \omega \; x = \omega +n)
-%		\]
-%\end{exercise}
-%
-%\begin{soln}
-%		
-%\end{soln}
-%
-%
-%\pagebreak
-%\subsection{Induzione e ricorsione transfinite}
-%Il piatto forte di questa sezione \`e una seconda applicazione dell'assioma del rimpiazzamento: il teorema di ricorsione transfinita. Questo risultato sar\`a pi\`u chiaro a chi ha, in precedenza, risolto il seguente esercizio.
-%
-%\begin{exercise}
-%	Dimostra che esiste un insieme $A$ tale che:
-%	\[ \forall x \; x \in A \leftrightarrow x = \emptyset \lor \exists y \in A \; x = \{y\}
-%		\]
-%	\textcolor{MidnightBlue}{ossia, in sostanza dimostra che esiste:}
-%	\[ \textcolor{MidnightBlue}{\{\emptyset,\{\emptyset\},\{\{\emptyset\}\},\{\{\{\emptyset\}\}\},\ldots\}}
-%		\]
-%	\textcolor{MidnightBlue}{ovvero un insieme che contiene $\emptyset$ e tale per cui qualsiasi altro elemento diverso dal vuoto che contiene \`e il singoletto di un altro suo elemento.}
-%\end{exercise}
-%
-%L'idea per risolvere questo esercizio \`e contenuta nella dimostrazione del teorema di ricorsione \textcolor{red}{numerabile}, che abbiamo gi\`a visto. Attenzione, per\`o,
-%che questo teorema non si pu\`o applicare dire alla situazione dell'esercizio - perch\'e non abbiamo un insieme in arrivo -.
-%
-%\begin{soln}
-%	Vorremmo definire la funzione classe $F : \omega \to V$ data da:
-%	\[ \text{$F(n) =$ singoletto $n$ volte di $\emptyset$}
-%		\]
-%	a questo punto potremmo verificare che $A = F[\omega]$ soddisfa la richiesta. Occorre quindi dimostrare che la definizione informale di $F$ data sopra \`e esprimibile nel linguaggio formale della teoria degli insiemi.
-%	Diamo la seguente definizione per $n \in \omega$ abbiamo:
-%	\[ y = F(n) := \exists f \;\text{tale che } \begin{cases}
-%		\text{$f$ \`e una funzione} \\
-%		\Dom(f) = s(n) \\
-%		f(0) = \emptyset \\
-%		\forall i \in n \; f(s(i)) = \{f(i)\} \\
-%		f(n) = y
-%	\end{cases}
-%		\]	
-%	\textcolor{MidnightBlue}{(notare che le tre richieste nel mezzo sono identiche alla definizione di $n$-approssimazione, nonch\'e $f(n) = y$ \`e proprio il modo in cui dalle approssimazioni passiamo alla ricorsione nel teorema di ricorsione numerabile)}
-%	cio\`e fissato $n \in \omega$, dire $y = F(n)$, vuol dire che esiste una funzione $f$ con le propriet\`a richieste sopra, che calcolata in $n$ d\`a appunto $y$ (cio\`e il vuoto con $n$ parentesi).\\
-%	Proprio come nel teorema di ricorsione numerabile, per dimostrare che $F$ \`e una funzione classe, ci basta dimostrare che $\forall n \in \omega \; \exists\textcolor{red}!f$ che soddisfa le tre richieste centrali, fatto ci\`o
-%	$f$ sar\`a ben definita ed unica - per cui sar\`a ben definito anche $f(n) = y$ -, e quindi anche $F$ \`e ben posta \textcolor{MidnightBlue}{- in pratica esistono e sono uniche le approssimazioni finite anche in questo caso, e come nel teorema di ricorsione numerabile possiamo costruire una funzione (classe in questo caso) che unisce le approssimazioni finite}.
-%	\begin{itemize}
-%		\item[$\boxed{\text{esistenza}}$] Procediamo per induzione numerabile. Il caso $n = 0$ \`e immediato, basta considerare $f = \{(0,\emptyset)\}$ e tale $f$ rispetta tutte le richieste.\\
-%		Nel caso $n = s(m)$, per ipotesi induttiva, abbiamo una funzione $f'$ con $\Dom(f') = n$, $f'(0) = \emptyset$ e $\forall i < n \; f'(s(i)) = \{f'(i)\}$.
-%		Poniamo quindi $f = f' \cup \{(n,\{f'(m)\})\}$ ed otteniamo che $\Dom(f) = \Dom(f') \cup \{n\} = s(n)$, $f(0) = f'(0) = \emptyset$ e, preso $i < n = s(m)$, o $i < m$ o $i = n$;
-%		nel primo caso abbiamo che $f(s(i)) = f'(s(i)) = \{f'(i)\} = \{f(i)\}$, nel secondo $f(s(i)) = f(n) = \{f'(m)\} = \{f(m)\} = \{f(i)\}$.
-%		\item[$\boxed{\text{unicit\`a}}$] Date $f_1$ e $f_2$ che soddisfano le condizioni: $\Dom(f_*) = s(n)$, $f_*(0) = \emptyset$ e $\forall i < n \; f_*(s(i)) = \{f_*(i)\}$, dimostriamo per induzione su $i$ che $\forall i \in \omega \; i \leq n \to f_1(i) = f_2(i)$.
-%		\begin{itemize}
-%			\item \underline{Caso $i = 0$}: $f_1(0) = \emptyset = f_2(0)$.
-%			\item \underline{Caso $i = s(j)$}: $f_1(i) = \{f_1(j)\} \overset{\text{Hp. indutt.}}{=} \{f_2(j)\} = f_2(i)$.
-%		\end{itemize}
-%	\end{itemize}
-%	Ora che abbiamo la funzione classe $F$ - abbiamo verificato che l'immagine della formula insiemistica data esiste ed \`e unica - \`e immediato verificare che $F(0) = \emptyset$. Inoltre, dato $n \in \omega$, $F(s(n)) = \{F(n)\}$, infatti, detto $y = F(s(n))$,
-%	per definizione esiste ed \`e unica $f$ la funzione con $\Dom(f) = s(s(n)),\ldots$ tale che $F(s(n)) = f(s(n))$, osserviamo che $f_{|s(n)}(n) = F(n)$ (si verifica facilmente che $f_{|s(n)}$ rispetta tutte le richieste della definizione di $y = F(n)$, e quindi \`e proprio l'unica funzione che esiste per tale definizione). Abbiamo quindi:
-%	\[ F(s(n)) = f(s(n)) \overset{\text{def. $f$}}{=} \{f(n)\} = \{F(n)\}
-%		\]
-%	Abbiamo quindi che $F$ - oltre ad essere ben definita ed unica - soddisfa anche le richieste che volevamo per poter dire ``singoletto di $\emptyset$ $n$ volte'', a questo punto possiamo quindi considerare
-%	$A:=F[\omega]$ ed osservare che \`e proprio l'insieme che stavamo cercando. Infatti $\emptyset = F(0) \in A$, e, preso $y \in A = F[\omega]$ che non sia il vuoto, abbiamo $y = F(n)$, con $n \ne 0$, per cui $n = s(m)$,
-%	per qualche $m \in \omega$, allora detto $x = F(m) \in A$, si ha $y = F(s(m)) \overset{\text{oss. prima}}{=} \{F(m)\} = \{x\}$, pertanto qualsiasi elemento non sia il vuoto 
-%	\`e il singoletto di qualche altro elemento dell'insieme, proprio come richiesto dalla formula nella richiesta.
-%\end{soln}
-%
-%\begin{proposition}[Induzione transfinita - v.1]
-%	\label{induz_transf1}
-%	Data una formula insiemistica $\varphi(x)$. Se vale [l'ipotesi dell'induzione]\footnote{Come nell'induzione normale, il difficile sta nel mostrare che vale il passo induttivo, rappresentato dall'implicazione nell'ipotesi, poi il teorema assicura la veridicit\`a dell'enunciato.}:
-%	\[ \forall \alpha \in \Ord(\forall \beta < \alpha \; \varphi(\beta))\rightarrow \varphi(\alpha)
-%		\]
-%	ovvero se per ogni ordinale, sapere che la formula \`e vera per gli ordinali pi\`u piccoli, rende vera la formula per l'ordinale stesso, allora la formula vale per tutti gli ordinali $\forall \alpha \in \Ord \; \varphi(\alpha)$.
-%\end{proposition}
-%
-%\textcolor{MidnightBlue}{In termini di classi, rappresentando con $C$ la classe definita dalla formula $\varphi(x)$, abbiamo che se vale $\forall\alpha\in\Ord \;(\forall \beta < \alpha \; \varphi(\beta))\rightarrow \alpha \in C$,
-%allora $\forall \alpha \in \Ord \; \alpha \in C$, cio\`e $\Ord \subseteq C$.}
-%
-%\begin{proof}
-%	Per assurdo, neghiamo la tesi $\neg(\forall \alpha \in\Ord\;\varphi(\alpha)) \equiv \exists \alpha \in \Ord \;\neg\varphi(\alpha)$. Possiamo quindi fissare un $\alpha$ per cui la formula $\varphi(\alpha)$ \`e falsa,
-%	a questo punto, applicando l'ipotesi ad $\alpha$, dovendo essere l'implicazione sempre vera, ed avendo conseguente falso - ovvero $\varphi(\alpha)$ -, allora anche l'antecedente deve essere falso, ovvero deve necessariamente valere che $\neg(\forall \beta < \alpha \; \varphi(\beta)) \equiv \exists \beta < \alpha \; \neg \varphi(\beta)$.\\
-%	Reiterando lo stesso identico ragionamento con $\beta$, otteniamo che esiste almeno un $\gamma < \beta$ tale che \`e vera $\neg \varphi(\gamma)$, per cui possiamo considerare $\beta_0 := \min\{\gamma \in \beta | \neg \varphi(\gamma)\}$\footnote{Ora possiamo scrivere un insieme per separazione in $\beta$ - prima non potevamo essendo $\alpha \in \Ord$ - non vuoto per quanto visto, e quindi con un minimo per le propriet\`a degli insiemi di ordinali.}
-%	Reiterando di nuovo il ragionamento iniziale con $\beta_0$ otteniamo che esiste almeno un $\delta < \beta_0$ tale che \`e vera $\neg\varphi(\delta)$, contro la minimalit\`a di $\beta_0 \; \textcolor{red}\lightning$.
-%\end{proof}
-%
-%\begin{note}[L'induzione transfinita \`e uno schema di teoremi]
-%	Il principio di induzione transfinita non \`e, letteralmente, un teorema della teoria degli insiemi, quanto piuttosto uno scherma di teoremi - o metateorema - che ci permette 
-%	di costruire un diverso teorema per ogni possibile formula $\varphi$ nel linguaggio della teoria degli insiemi - non essendo le classi oggetti della teoria degli insiemi, esse non possono essere quantificate con i quantificatori soliti, quindi l'induzione pu\`o
-%	essere enunciata solo per una formula fissata ogni volta, e non per tutte le formule -.
-%\end{note}
-%
-%C'\`e una chiara analogia fra la forma precedente del principio di induzione transfinita e la forma forte dell'induzione aritmetica.
-%A volte, per\`o, \`e comodo esprimere l'induzione transfinita in una forma che meglio ricorda il principio di induzione di Peano.
-%
-%\begin{definition}[Ordinali successori e limiti]
-%	Diciamo che $\alpha \in \Ord$ \`e un \vocab{ordinale successore} se $\exists \beta \in \Ord \; \alpha = s(\beta)$. Un ordinale $\alpha\;\textcolor{red}{> 0}$ che non \`e successore \`e detto \vocab{ordinale limite}.
-%\end{definition}
-%
-%\begin{remark}[Caratterizzazione degli ordinali successori]
-%	Un ordinale $\alpha$ \`e successore se e solo se ha un massimo.\footnote{Pi\`u precisamente, un insieme di ordinali \`e un ordinale successore se e solo se \`e transitivo ed ha un massimo. Equivalentemente un ordinale che non ha massimo \`e limite.}
-%\end{remark}
-%
-%\begin{proof}
-%	Ci basta osservare che vale la seguente catena di equivalenze:
-%	\[ \text{$\beta$ \`e il massimo di $\alpha$} \iff \text{$\alpha$ \`e il minimo ordinale $> \beta$} \iff s(\beta) = \alpha
-%		\]
-%	la seconda equivalenza l'abbiamo gi\`a vista in precedenza, dimostriamo quindi la prima.
-%	\begin{itemize}
-%		\item[$\boxed{\Longleftarrow}$] Se $\beta$ non fosse il massimo di $\alpha$, allora esisterebbe un ordinale $\gamma$ tale che $\alpha > \gamma > \beta$, che \`e contro la minimalit\`a di $\alpha$.
-%		\item[$\boxed{\Longrightarrow}$] Se esistesse un ordinale $\gamma$ pi\`u grande di $\beta$ e pi\`u piccolo di $\alpha$, $\beta < \gamma < \alpha$, si avrebbe che $\gamma \in \alpha$ supera $\beta$ che quindi non pu\`o essere il massimo di $\alpha$.
-%	\end{itemize}
-%\end{proof}
-%
-%\begin{proposition}[Induzione transfinita - v.2]
-%	\label{induz_transf2}
-%	Sia $\varphi(x)$ una formula insiemistica, se vale:
-%	\begin{enumerate}[(i)]
-%		\item $\varphi(0)$ \textcolor{orange}{(caso base)}
-%		\item $\forall \gamma \in \Ord \; \varphi(\gamma) \rightarrow \varphi(s(\gamma))$ \textcolor{orange}{(caso successore)}
-%		\item per ogni ordinale limite $\lambda$ si ha $(\forall \beta < \lambda \; \varphi(\beta)) \rightarrow \varphi(\lambda)$\footnote{Cio\`e vale anche un passo induttivo - forte - per gli ordinali che non sono successori.} \textcolor{orange}{(caso limite)}
-%	\end{enumerate}
-%	allora $\forall \alpha \in \Ord \; \varphi(\alpha)$.
-%\end{proposition}
-%
-%\begin{proof}
-%	Basta verificare l'ipotesi della prima forma dell'\hyperref[induz_transf1]{induzione transfinita}, per avere in automatico la veridicit\`a della formula in generale. Fissato quindi $\alpha \in \Ord$ bisogna mostrare che vale la formula:
-%	\[ (\forall \beta < \alpha \; \varphi(\beta)) \rightarrow \varphi(\alpha)
-%		\]
-%	Se $\alpha$ \`e limite o $0$ abbiamo questa formula tout court - nel caso di 0 la formula sopra \`e vera a vuoto, nel caso degli ordinali limite abbiamo assunto che la formula sopra \`e vera come ipotesi -. Verifichiamo che la formula sopra \`e vera anche
-%	nel caso in cui $\alpha = s(\gamma)$:
-%	\[ \forall \beta < \alpha \;\textcolor{LimeGreen}{= s(\gamma)} \; \varphi(\beta) \overset{\textcolor{purple}{\gamma < s(\gamma)}}{\implies} \varphi(\gamma) \overset{\text{Hp. (ii)}}{\rightarrow} \varphi(s(\gamma)) = \varphi(\alpha)
-%		\]
-%	dunque anche in questo caso vale l'ipotesi della prima forma dell'induzione transfinita, che quindi vale proprio $\forall \alpha \in \Ord$. Pertanto la prima forma dell'induzione transfinita ci garantisce che $\varphi(\alpha)$ vale per tutti gli $\alpha \in \Ord$.
-%\end{proof}
-%
-%Ora possiamo finalmente dimostrare il teorema di ricorsione transfinita.
-%
-%\begin{notation}[Restrizione di una funzione classe a funzione]
-%	Data una funzione classe $F : A \rightarrow B$ e un insieme $X \subseteq A$ esiste la funzione tra insiemi:
-%	\[ f = F_{|X} : X \rightarrow F[X] : a \mapsto F[a]
-%		\]
-%	che \`e ottenuta per separazione in $X \times F[X]$ - il secondo \`e un insieme per rimpiazzamento -, ed \`e in automatico una funzione surgettiva.
-%\end{notation}
-%
-%
-%\begin{theorem}[Ricorsione transfinita - v.1]
+%\begin{theorem}[Ricorsione transfinita -- v.1]
 %	\label{ric_transf1}
-%	Data una funzione classe $G : V \rightarrow V$ esiste un'unica\footnote{Dove l'unicit\`a va intesa nel senso seguente: date $F_1,F_2$ come sopra, vale $\forall \alpha \in \Ord \; F_1(\alpha) = F_2 (\alpha)$.} funzione $F : \Ord \rightarrow V$ tale che:
-%	\[ \forall \alpha \in \Ord \; F(\alpha) = G(F_{|\alpha})
+%	Data una funzione classe $G \colon V \to V$ esiste
+%un'unica
+%funzione classe $F \colon \Ord \to V$ tale che
+%	\[ \forall {\alpha \in \Ord} \; F(\alpha) = G(F_{|\alpha})
 %		\]
+%{\drkgrn Dove l'unicita di $F$ va intesa nel senso seguente: che date
+%$F_1, F_2$ come sopra, vale $\forall {\alpha\in\Ord}\; F_1(\alpha)=F_2(\alpha)$.}
 %\end{theorem}
 %
-%\textcolor{MidnightBlue}{L'idea \`e di costruire una funzione classe $H : \Ord \to V$ - la successione delle troncate di $G$ - in maniera tale che, a posteriori, avremo $F_{|\alpha} = H(\alpha)$. Poi semplicemente porremo $F(\alpha) := H(s(\alpha))(\alpha)$.
-%$H(\alpha)$ \`e l'analogo transfinito di una $\alpha$-approssimazione nella dimostrazione del teorema di ricorsione numerabile -nel senso della seconda forma pi\`u che della prima\footnote{Anzi, di fatto, questa dimostrazione rimaneggiata ci d\`a una dimostrazione del secondo teorema di ricorsione numerabile usando le approssimazioni finite.} -.}
-%
 %\begin{proof}
-%	Definiamo la funzione classe $H : \Ord \to V$ con:
-%	\[ f = H(\alpha) := \begin{cases}
+%{\drkgrn Per dimostrare il teorema di ricorsione numerabile, abbiamo
+%costruito le $n$-approssimazioni, ossia la funzione $n\mapsto f_{|n}$.
+%Allo stesso modo, ora costruiremo una funzione classe $H\colon \Ord \to V$
+%in modo tale che $H(\alpha)$ sia $F_{|\alpha}$.}
+%
+%Definiamo la funzione classe $H\colon \Ord \to V$ con:
+%	\[ f = H(\alpha) \;\;\Mydef\;\; \begin{cases}
 %		\text{$f$ \`e una funzione} \\
 %		\Dom(f) = \alpha \\
-%		\forall \beta \in \alpha \; f(\beta) = G(f_{|\beta})
+%		\forall {\beta < \alpha} \; f(\beta) = G(f_{|\beta})
 %	\end{cases}
 %		\]
-%	Verifichiamo, per induzione  transfinita su $\alpha$, che $H$ sia realmente una funzione classe $\Ord \to V$, ossia che sia effettivamente una funzione:
-%	\[ \forall \alpha \in \Ord \; \exists\textcolor{red}{!}f \; f = H(\alpha)
+%	Verifichiamo, per induzione transfinita su $\alpha$, che $H$ sia realmente una funzione classe $\Ord \to V$, ossia che
+%	\[ \forall {\alpha \in \Ord} \; \existrun f \; f = H(\alpha)
 %		\]
-%	\begin{itemize}
-%		\item[$\boxed{\text{caso 0}}$] $f = H(0) \iff f = \emptyset$, quindi $f$ esiste ed \`e unica quando si valuta $H$ in 0.
-%		\item[$\boxed{\text{caso $\alpha = s(\gamma)$}}$] Per ipotesi induttiva esiste ed \`e unica $f = H(\gamma)$, dunque possiamo definire $f' = f \cup \{(\gamma,G(f))\}$ e verificare che $f'$ rispetta le condizioni ed \`e unica.
+%
+%{\drkred Caso $\alpha = 0$.} Immediato: $f = H(0) \iff f = \emptyset$.
+%
+%{\drkred Caso $\alpha = s(\gamma)$.} Per ipotesi induttiva esiste ed \`e unica $f = H(\gamma)$, dunque possiamo definire $f' = f \cup \{(\gamma,G(f))\}$ e verificare che $f'$ rispetta le condizioni ed \`e unica.
 %		Si vede immediatamente che $\Dom(f') = \Dom(f) \cup \{\gamma\} = \gamma \cup \{\gamma\} = s(\gamma) = \alpha$, inoltre, preso $\beta \in \alpha = s(\gamma)$ si hanno due casi:
 %		\begin{itemize}
 %			\item[$\diamondsuit$] \underline{se $\beta \in \gamma$}: allora $f'(\beta) \overset{\text{def.}}{=} f(\beta) \overset{\text{Hp. indutt.}}{=} G(f_{|\beta}) \overset{\text{def.}}{=} G(f'_{|\beta})$

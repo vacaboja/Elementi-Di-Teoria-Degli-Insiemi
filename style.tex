@@ -136,6 +136,23 @@
   postheadspace={0pt},
 ]{thmgreenbox}
 
+\mdfdefinestyle{breakmdgreenbox}{
+  linewidth=2pt,
+  rightline=false,
+  leftline=true,
+  topline=false,
+  bottomline=false,
+  linecolor=ForestGreen,
+  backgroundcolor=green!40!black!5,
+  nobreak=false
+}
+\declaretheoremstyle[
+  headfont=\bfseries\color{green!40!black!95},
+  mdframed={style=breakmdgreenbox},
+  headpunct={\\},
+  postheadspace={0pt},
+]{breakthmgreenbox}
+
 \mdfdefinestyle{mdpurplebox}{
   skipabove=\baselineskip,
   roundcorner=10pt,
@@ -177,7 +194,7 @@
 
 % box rounded
 
-\declaretheorem[style=thmbluebox,name=Teorema,numberwithin=section]{theorem}
+\declaretheorem[style=thmbluebox,name=Teorema,numberwithin=subsection]{theorem}
 \declaretheorem[style=thmbluebox,name=Teorema,numbered=no]{theorem*}
 \declaretheorem[style=thmbluebox,name=Lemma,sibling=theorem]{lemma}
 \declaretheorem[style=thmbluebox,name=Lemma,numbered=no]{lemma*}
@@ -212,6 +229,10 @@
 \declaretheorem[style=thmgreenbox,name=Osservazione,sibling=theorem]{remark}
 \declaretheorem[style=thmgreenbox,name=Osservazione,numbered=no]{remark*}
 \declaretheorem[style=thmgreenbox,name=Nota,sibling=theorem,numbered=no]{note}
+
+% as above but can straddle pages
+
+\declaretheorem[style=breakthmgreenbox,name=Nota,sibling=theorem,numbered=no]{breakingnote}
 
 % left line only
 
@@ -301,6 +322,8 @@
 \let\lightning\Lightning
 \def\etc{\&c}
 \def\union{{\textstyle\bigcup}\,}
+\let\subsetneq\varsubsetneq
+\let\phi\varphi
 
 \def\mouse{\raisebox{0pt}[0pt][0pt]{%
 \begin{tikzpicture}[scale=.1, baseline=-.5ex]
